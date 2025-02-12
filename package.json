@@ -1,0 +1,14 @@
+{
+  "name": "t9a-data",
+  "description": "The Ninth Age - Data Project",
+  "version": "0.0.1",
+  "dependencies": {
+    "yargs": "^17",
+    "superagent": "^10"
+  },
+  "scripts": {
+    "start": "node ./main.js -e -p --minParticipants=16 --type=all",
+    "dev": "node ./main.js --type=all -r"
+  }
+}
+
