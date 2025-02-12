@@ -13,52 +13,76 @@
 
 const superagent = require('superagent');
 const args = require('yargs').argv;
+const specialItemNames = require('./specialItems.js').allItems;
 
 const date = new Date();
 const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 
 // Results
-let r = {
-  "bh" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "de" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "dh" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "dl" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "eos" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "he" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "id" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "koe" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "ok" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "ong" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "sa" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "se" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "ud" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "vc" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "vs" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
-  "wdg" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", },
+let resultData = {
+  "bh" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "de" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "dh" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "dl" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "eos" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "he" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "id" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "koe" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "ok" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "ong" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "sa" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "se" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "ud" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "vc" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "vs" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
+  "wdg" : { "all" : { "count" : "   0", "avg": "----"}, "bh" : { "count" : "   0", "avg": "----"}, "de" : { "count" : "   0", "avg": "----"}, "dh" : { "count" : "   0", "avg": "----"}, "dl" : { "count" : "   0", "avg": "----"}, "eos" : { "count" : "   0", "avg": "----"}, "he" : { "count" : "   0", "avg": "----"}, "id" : { "count" : "   0", "avg": "----"}, "koe" : { "count" : "   0", "avg": "----"}, "ok" : { "count" : "   0", "avg": "----"}, "ong" : { "count" : "   0", "avg": "----"}, "sa" : { "count" : "   0", "avg": "----"}, "se" : { "count" : "   0", "avg": "----"}, "ud" : { "count" : "   0", "avg": "----"}, "vc" : { "count" : "   0", "avg": "----"}, "vs" : { "count" : "   0", "avg": "----"}, "wdg" : { "count" : "   0", "avg": "----"}, },
 };
 
-// Games
-let g = {
-  "bh" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "de" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "dh" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "dl" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "eos" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "he" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "id" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "koe" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "ok" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "ong" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "sa" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "se" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "ud" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "vc" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "vs" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
-  "wdg" : { "bh" : "----", "de" : "----", "dh" : "----", "dl" : "----", "eos" : "----", "he" : "----", "id" : "----", "koe" : "----", "ok" : "----", "ong" : "----", "sa" : "----", "se" : "----", "ud" : "----", "vc" : "----", "vs" : "----", "wdg" : "----", "missingLists" : 0, "availableLists": 0 },
+// Raw Data
+/*
+    {
+      "$army" : {
+        "games" : {
+          "missingLists" : int,
+          "availableLists" : int,
+          "totalGames" : int
+        },
+        "picks" : {
+          "$entry" : {
+            "base" : [ int ],
+            "models" : [ int ],    // only for units which are not single model units
+            "$option1" : [ int ],
+            (…)
+            "$optionN" : [ int], 
+          }
+        }
+      }
+    }
+
+*/
+
+
+let rawData = {
+  "bh" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "de" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "dh" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "dl" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "eos" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "he" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "id" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "koe" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "ok" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "ong" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "sa" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "se" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "ud" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "vc" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "vs" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
+  "wdg" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
 };
 
-// Unit Pick Rates
-let p = {
+// Pick Rates
+let pickRates = {
   "bh" : {},
   "de" : {},
   "dh" : {},
@@ -157,28 +181,37 @@ function getArmyStringForId(id, uppercase) {
   }
 }
 
-
+/**
+ * Based on the raw data directly from New Recruit fills two data structures. The Army Results based on the outcomes of the games for external balance
+ * and amount of games played as well as the rawData structure to use the games played for later pickRate calculations.
+ * @param {*} armyResults 
+ */
 function calculateArmyResults(armyResults) {
     
   for(let armyId in armyResults) {
-    // console.log(`Army ID: ${armyId}`);
     let armyString = getArmyStringForId(armyId, false);
-    // console.log(armyResults[armyId]);
+
     let allGames = Object.values(armyResults[armyId]).flat();
     let allGamesCount = allGames.length;
-    let allGamesAvg = (allGames.reduce((a,b) => a+b, 0) / allGamesCount).toFixed(1).padStart(4, " ");
-    // console.log(`All games stats for ${armyString}: #${allGamesCount} / Ø${allGamesAvg}`);
-    r[armyString].all = allGamesAvg;
-    g[armyString].all = `${allGamesCount}`.padStart(4, " ");
-    
+    let allGamesAvg = (allGames.reduce((a,b) => a+b, 0) / allGamesCount).toFixed(1).padStart(4, " ");
+
+    resultData[armyString].all.avg = allGamesAvg;
+    resultData[armyString].all.count = `${allGamesCount}`.padStart(4, " ");
+
+    // Raw Data stuff
+    rawData[armyString].games.playedGames = allGamesCount;
+
     for (let oppoArmyId in armyResults[armyId]) {
       let oppoArmyString = getArmyStringForId(oppoArmyId, false);
+
       let vsArmyGames = Object.values(armyResults[armyId][oppoArmyId]);
       let vsArmyCount = vsArmyGames.length;
-      let vsArmyAvg = (vsArmyGames.reduce((a,b) => a+b, 0) / vsArmyCount).toFixed(1).padStart(4, " ");
-      // console.log(`Games stats for ${armyString} vs ${oppoArmyString}: #${vsArmyCount} / Ø${vsArmyAvg}`);
-      r[armyString][oppoArmyString] = vsArmyAvg;
-      g[armyString][oppoArmyString] = `${vsArmyCount}`.padStart(4, " ");
+      let vsArmyAvg = (vsArmyGames.reduce((a,b) => a+b, 0) / vsArmyCount).toFixed(1).padStart(4, " ");
+
+      resultData[armyString][oppoArmyString].avg = vsArmyAvg || "----";
+      resultData[armyString][oppoArmyString].count = `${vsArmyCount}`.padStart(4, " ") || "   0";
+
+      // Possibly add the opponent data to rawData here, if needed
     }
   }
 
@@ -186,49 +219,49 @@ function calculateArmyResults(armyResults) {
 
 function printArmyResults() {
   console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
-  console.log(`┃ Tournament Type: ${(args.type || 'Single').padEnd(43, " ") }                                                                ┃`);
+  console.log(`┃ Tournament Type: ${(args.type || 'Single').padEnd(43, " ") } – Average Points                                               ┃`);
   console.log(`┣━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┳━━━━━━┫`);
   console.log(`┃POINTS┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃ Total┃`);
   console.log(`┣━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━╋━━━━━━┫`);
-  console.log(`┃ BH   ┃ ${r.bh.bh} │ ${r.bh.de} │ ${r.bh.dh} │ ${r.bh.dl} │ ${r.bh.eos} │ ${r.bh.he} │ ${r.bh.id} │ ${r.bh.koe} │ ${r.bh.ok} │ ${r.bh.ong} │ ${r.bh.sa} │ ${r.bh.se} │ ${r.bh.ud} │ ${r.bh.vc} │ ${r.bh.vs} │ ${r.bh.wdg} ┃ ${r.bh.all} ┃`);
-  console.log(`┃ DE   ┃ ${r.de.bh} │ ${r.de.de} │ ${r.de.dh} │ ${r.de.dl} │ ${r.de.eos} │ ${r.de.he} │ ${r.de.id} │ ${r.de.koe} │ ${r.de.ok} │ ${r.de.ong} │ ${r.de.sa} │ ${r.de.se} │ ${r.de.ud} │ ${r.de.vc} │ ${r.de.vs} │ ${r.de.wdg} ┃ ${r.de.all} ┃`);
-  console.log(`┃ DH   ┃ ${r.dh.bh} │ ${r.dh.de} │ ${r.dh.dh} │ ${r.dh.dl} │ ${r.dh.eos} │ ${r.dh.he} │ ${r.dh.id} │ ${r.dh.koe} │ ${r.dh.ok} │ ${r.dh.ong} │ ${r.dh.sa} │ ${r.dh.se} │ ${r.dh.ud} │ ${r.dh.vc} │ ${r.dh.vs} │ ${r.dh.wdg} ┃ ${r.dh.all} ┃`);
-  console.log(`┃ DL   ┃ ${r.dl.bh} │ ${r.dl.de} │ ${r.dl.dh} │ ${r.dl.dl} │ ${r.dl.eos} │ ${r.dl.he} │ ${r.dl.id} │ ${r.dl.koe} │ ${r.dl.ok} │ ${r.dl.ong} │ ${r.dl.sa} │ ${r.dl.se} │ ${r.dl.ud} │ ${r.dl.vc} │ ${r.dl.vs} │ ${r.dl.wdg} ┃ ${r.dl.all} ┃`);
-  console.log(`┃ EoS  ┃ ${r.eos.bh} │ ${r.eos.de} │ ${r.eos.dh} │ ${r.eos.dl} │ ${r.eos.eos} │ ${r.eos.he} │ ${r.eos.id} │ ${r.eos.koe} │ ${r.eos.ok} │ ${r.eos.ong} │ ${r.eos.sa} │ ${r.eos.se} │ ${r.eos.ud} │ ${r.eos.vc} │ ${r.eos.vs} │ ${r.eos.wdg} ┃ ${r.eos.all} ┃`);
-  console.log(`┃ HE   ┃ ${r.he.bh} │ ${r.he.de} │ ${r.he.dh} │ ${r.he.dl} │ ${r.he.eos} │ ${r.he.he} │ ${r.he.id} │ ${r.he.koe} │ ${r.he.ok} │ ${r.he.ong} │ ${r.he.sa} │ ${r.he.se} │ ${r.he.ud} │ ${r.he.vc} │ ${r.he.vs} │ ${r.he.wdg} ┃ ${r.he.all} ┃`);
-  console.log(`┃ ID   ┃ ${r.id.bh} │ ${r.id.de} │ ${r.id.dh} │ ${r.id.dl} │ ${r.id.eos} │ ${r.id.he} │ ${r.id.id} │ ${r.id.koe} │ ${r.id.ok} │ ${r.id.ong} │ ${r.id.sa} │ ${r.id.se} │ ${r.id.ud} │ ${r.id.vc} │ ${r.id.vs} │ ${r.id.wdg} ┃ ${r.id.all} ┃`);
-  console.log(`┃ KoE  ┃ ${r.koe.bh} │ ${r.koe.de} │ ${r.koe.dh} │ ${r.koe.dl} │ ${r.koe.eos} │ ${r.koe.he} │ ${r.koe.id} │ ${r.koe.koe} │ ${r.koe.ok} │ ${r.koe.ong} │ ${r.koe.sa} │ ${r.koe.se} │ ${r.koe.ud} │ ${r.koe.vc} │ ${r.koe.vs} │ ${r.koe.wdg} ┃ ${r.koe.all} ┃`);
-  console.log(`┃ OK   ┃ ${r.ok.bh} │ ${r.ok.de} │ ${r.ok.dh} │ ${r.ok.dl} │ ${r.ok.eos} │ ${r.ok.he} │ ${r.ok.id} │ ${r.ok.koe} │ ${r.ok.ok} │ ${r.ok.ong} │ ${r.ok.sa} │ ${r.ok.se} │ ${r.ok.ud} │ ${r.ok.vc} │ ${r.ok.vs} │ ${r.ok.wdg} ┃ ${r.ok.all} ┃`);
-  console.log(`┃ OnG  ┃ ${r.ong.bh} │ ${r.ong.de} │ ${r.ong.dh} │ ${r.ong.dl} │ ${r.ong.eos} │ ${r.ong.he} │ ${r.ong.id} │ ${r.ong.koe} │ ${r.ong.ok} │ ${r.ong.ong} │ ${r.ong.sa} │ ${r.ong.se} │ ${r.ong.ud} │ ${r.ong.vc} │ ${r.ong.vs} │ ${r.ong.wdg} ┃ ${r.ong.all} ┃`);
-  console.log(`┃ SA   ┃ ${r.sa.bh} │ ${r.sa.de} │ ${r.sa.dh} │ ${r.sa.dl} │ ${r.sa.eos} │ ${r.sa.he} │ ${r.sa.id} │ ${r.sa.koe} │ ${r.sa.ok} │ ${r.sa.ong} │ ${r.sa.sa} │ ${r.sa.se} │ ${r.sa.ud} │ ${r.sa.vc} │ ${r.sa.vs} │ ${r.sa.wdg} ┃ ${r.sa.all} ┃`);
-  console.log(`┃ SE   ┃ ${r.se.bh} │ ${r.se.de} │ ${r.se.dh} │ ${r.se.dl} │ ${r.se.eos} │ ${r.se.he} │ ${r.se.id} │ ${r.se.koe} │ ${r.se.ok} │ ${r.se.ong} │ ${r.se.sa} │ ${r.se.se} │ ${r.se.ud} │ ${r.se.vc} │ ${r.se.vs} │ ${r.se.wdg} ┃ ${r.se.all} ┃`);
-  console.log(`┃ UD   ┃ ${r.ud.bh} │ ${r.ud.de} │ ${r.ud.dh} │ ${r.ud.dl} │ ${r.ud.eos} │ ${r.ud.he} │ ${r.ud.id} │ ${r.ud.koe} │ ${r.ud.ok} │ ${r.ud.ong} │ ${r.ud.sa} │ ${r.ud.se} │ ${r.ud.ud} │ ${r.ud.vc} │ ${r.ud.vs} │ ${r.ud.wdg} ┃ ${r.ud.all} ┃`);
-  console.log(`┃ VC   ┃ ${r.vc.bh} │ ${r.vc.de} │ ${r.vc.dh} │ ${r.vc.dl} │ ${r.vc.eos} │ ${r.vc.he} │ ${r.vc.id} │ ${r.vc.koe} │ ${r.vc.ok} │ ${r.vc.ong} │ ${r.vc.sa} │ ${r.vc.se} │ ${r.vc.ud} │ ${r.vc.vc} │ ${r.vc.vs} │ ${r.vc.wdg} ┃ ${r.vc.all} ┃`);
-  console.log(`┃ VS   ┃ ${r.vs.bh} │ ${r.vs.de} │ ${r.vs.dh} │ ${r.vs.dl} │ ${r.vs.eos} │ ${r.vs.he} │ ${r.vs.id} │ ${r.vs.koe} │ ${r.vs.ok} │ ${r.vs.ong} │ ${r.vs.sa} │ ${r.vs.se} │ ${r.vs.ud} │ ${r.vs.vc} │ ${r.vs.vs} │ ${r.vs.wdg} ┃ ${r.vs.all} ┃`);
-  console.log(`┃ WDG  ┃ ${r.wdg.bh} │ ${r.wdg.de} │ ${r.wdg.dh} │ ${r.wdg.dl} │ ${r.wdg.eos} │ ${r.wdg.he} │ ${r.wdg.id} │ ${r.wdg.koe} │ ${r.wdg.ok} │ ${r.wdg.ong} │ ${r.wdg.sa} │ ${r.wdg.se} │ ${r.wdg.ud} │ ${r.wdg.vc} │ ${r.wdg.vs} │ ${r.wdg.wdg} ┃ ${r.wdg.all} ┃`);
+  console.log(`┃ BH   ┃ ${resultData.bh.bh.avg} │ ${resultData.bh.de.avg} │ ${resultData.bh.dh.avg} │ ${resultData.bh.dl.avg} │ ${resultData.bh.eos.avg} │ ${resultData.bh.he.avg} │ ${resultData.bh.id.avg} │ ${resultData.bh.koe.avg} │ ${resultData.bh.ok.avg} │ ${resultData.bh.ong.avg} │ ${resultData.bh.sa.avg} │ ${resultData.bh.se.avg} │ ${resultData.bh.ud.avg} │ ${resultData.bh.vc.avg} │ ${resultData.bh.vs.avg} │ ${resultData.bh.wdg.avg} ┃ ${resultData.bh.all.avg} ┃`);
+  console.log(`┃ DE   ┃ ${resultData.de.bh.avg} │ ${resultData.de.de.avg} │ ${resultData.de.dh.avg} │ ${resultData.de.dl.avg} │ ${resultData.de.eos.avg} │ ${resultData.de.he.avg} │ ${resultData.de.id.avg} │ ${resultData.de.koe.avg} │ ${resultData.de.ok.avg} │ ${resultData.de.ong.avg} │ ${resultData.de.sa.avg} │ ${resultData.de.se.avg} │ ${resultData.de.ud.avg} │ ${resultData.de.vc.avg} │ ${resultData.de.vs.avg} │ ${resultData.de.wdg.avg} ┃ ${resultData.de.all.avg} ┃`);
+  console.log(`┃ DH   ┃ ${resultData.dh.bh.avg} │ ${resultData.dh.de.avg} │ ${resultData.dh.dh.avg} │ ${resultData.dh.dl.avg} │ ${resultData.dh.eos.avg} │ ${resultData.dh.he.avg} │ ${resultData.dh.id.avg} │ ${resultData.dh.koe.avg} │ ${resultData.dh.ok.avg} │ ${resultData.dh.ong.avg} │ ${resultData.dh.sa.avg} │ ${resultData.dh.se.avg} │ ${resultData.dh.ud.avg} │ ${resultData.dh.vc.avg} │ ${resultData.dh.vs.avg} │ ${resultData.dh.wdg.avg} ┃ ${resultData.dh.all.avg} ┃`);
+  console.log(`┃ DL   ┃ ${resultData.dl.bh.avg} │ ${resultData.dl.de.avg} │ ${resultData.dl.dh.avg} │ ${resultData.dl.dl.avg} │ ${resultData.dl.eos.avg} │ ${resultData.dl.he.avg} │ ${resultData.dl.id.avg} │ ${resultData.dl.koe.avg} │ ${resultData.dl.ok.avg} │ ${resultData.dl.ong.avg} │ ${resultData.dl.sa.avg} │ ${resultData.dl.se.avg} │ ${resultData.dl.ud.avg} │ ${resultData.dl.vc.avg} │ ${resultData.dl.vs.avg} │ ${resultData.dl.wdg.avg} ┃ ${resultData.dl.all.avg} ┃`);
+  console.log(`┃ EoS  ┃ ${resultData.eos.bh.avg} │ ${resultData.eos.de.avg} │ ${resultData.eos.dh.avg} │ ${resultData.eos.dl.avg} │ ${resultData.eos.eos.avg} │ ${resultData.eos.he.avg} │ ${resultData.eos.id.avg} │ ${resultData.eos.koe.avg} │ ${resultData.eos.ok.avg} │ ${resultData.eos.ong.avg} │ ${resultData.eos.sa.avg} │ ${resultData.eos.se.avg} │ ${resultData.eos.ud.avg} │ ${resultData.eos.vc.avg} │ ${resultData.eos.vs.avg} │ ${resultData.eos.wdg.avg} ┃ ${resultData.eos.all.avg} ┃`);
+  console.log(`┃ HE   ┃ ${resultData.he.bh.avg} │ ${resultData.he.de.avg} │ ${resultData.he.dh.avg} │ ${resultData.he.dl.avg} │ ${resultData.he.eos.avg} │ ${resultData.he.he.avg} │ ${resultData.he.id.avg} │ ${resultData.he.koe.avg} │ ${resultData.he.ok.avg} │ ${resultData.he.ong.avg} │ ${resultData.he.sa.avg} │ ${resultData.he.se.avg} │ ${resultData.he.ud.avg} │ ${resultData.he.vc.avg} │ ${resultData.he.vs.avg} │ ${resultData.he.wdg.avg} ┃ ${resultData.he.all.avg} ┃`);
+  console.log(`┃ ID   ┃ ${resultData.id.bh.avg} │ ${resultData.id.de.avg} │ ${resultData.id.dh.avg} │ ${resultData.id.dl.avg} │ ${resultData.id.eos.avg} │ ${resultData.id.he.avg} │ ${resultData.id.id.avg} │ ${resultData.id.koe.avg} │ ${resultData.id.ok.avg} │ ${resultData.id.ong.avg} │ ${resultData.id.sa.avg} │ ${resultData.id.se.avg} │ ${resultData.id.ud.avg} │ ${resultData.id.vc.avg} │ ${resultData.id.vs.avg} │ ${resultData.id.wdg.avg} ┃ ${resultData.id.all.avg} ┃`);
+  console.log(`┃ KoE  ┃ ${resultData.koe.bh.avg} │ ${resultData.koe.de.avg} │ ${resultData.koe.dh.avg} │ ${resultData.koe.dl.avg} │ ${resultData.koe.eos.avg} │ ${resultData.koe.he.avg} │ ${resultData.koe.id.avg} │ ${resultData.koe.koe.avg} │ ${resultData.koe.ok.avg} │ ${resultData.koe.ong.avg} │ ${resultData.koe.sa.avg} │ ${resultData.koe.se.avg} │ ${resultData.koe.ud.avg} │ ${resultData.koe.vc.avg} │ ${resultData.koe.vs.avg} │ ${resultData.koe.wdg.avg} ┃ ${resultData.koe.all.avg} ┃`);
+  console.log(`┃ OK   ┃ ${resultData.ok.bh.avg} │ ${resultData.ok.de.avg} │ ${resultData.ok.dh.avg} │ ${resultData.ok.dl.avg} │ ${resultData.ok.eos.avg} │ ${resultData.ok.he.avg} │ ${resultData.ok.id.avg} │ ${resultData.ok.koe.avg} │ ${resultData.ok.ok.avg} │ ${resultData.ok.ong.avg} │ ${resultData.ok.sa.avg} │ ${resultData.ok.se.avg} │ ${resultData.ok.ud.avg} │ ${resultData.ok.vc.avg} │ ${resultData.ok.vs.avg} │ ${resultData.ok.wdg.avg} ┃ ${resultData.ok.all.avg} ┃`);
+  console.log(`┃ OnG  ┃ ${resultData.ong.bh.avg} │ ${resultData.ong.de.avg} │ ${resultData.ong.dh.avg} │ ${resultData.ong.dl.avg} │ ${resultData.ong.eos.avg} │ ${resultData.ong.he.avg} │ ${resultData.ong.id.avg} │ ${resultData.ong.koe.avg} │ ${resultData.ong.ok.avg} │ ${resultData.ong.ong.avg} │ ${resultData.ong.sa.avg} │ ${resultData.ong.se.avg} │ ${resultData.ong.ud.avg} │ ${resultData.ong.vc.avg} │ ${resultData.ong.vs.avg} │ ${resultData.ong.wdg.avg} ┃ ${resultData.ong.all.avg} ┃`);
+  console.log(`┃ SA   ┃ ${resultData.sa.bh.avg} │ ${resultData.sa.de.avg} │ ${resultData.sa.dh.avg} │ ${resultData.sa.dl.avg} │ ${resultData.sa.eos.avg} │ ${resultData.sa.he.avg} │ ${resultData.sa.id.avg} │ ${resultData.sa.koe.avg} │ ${resultData.sa.ok.avg} │ ${resultData.sa.ong.avg} │ ${resultData.sa.sa.avg} │ ${resultData.sa.se.avg} │ ${resultData.sa.ud.avg} │ ${resultData.sa.vc.avg} │ ${resultData.sa.vs.avg} │ ${resultData.sa.wdg.avg} ┃ ${resultData.sa.all.avg} ┃`);
+  console.log(`┃ SE   ┃ ${resultData.se.bh.avg} │ ${resultData.se.de.avg} │ ${resultData.se.dh.avg} │ ${resultData.se.dl.avg} │ ${resultData.se.eos.avg} │ ${resultData.se.he.avg} │ ${resultData.se.id.avg} │ ${resultData.se.koe.avg} │ ${resultData.se.ok.avg} │ ${resultData.se.ong.avg} │ ${resultData.se.sa.avg} │ ${resultData.se.se.avg} │ ${resultData.se.ud.avg} │ ${resultData.se.vc.avg} │ ${resultData.se.vs.avg} │ ${resultData.se.wdg.avg} ┃ ${resultData.se.all.avg} ┃`);
+  console.log(`┃ UD   ┃ ${resultData.ud.bh.avg} │ ${resultData.ud.de.avg} │ ${resultData.ud.dh.avg} │ ${resultData.ud.dl.avg} │ ${resultData.ud.eos.avg} │ ${resultData.ud.he.avg} │ ${resultData.ud.id.avg} │ ${resultData.ud.koe.avg} │ ${resultData.ud.ok.avg} │ ${resultData.ud.ong.avg} │ ${resultData.ud.sa.avg} │ ${resultData.ud.se.avg} │ ${resultData.ud.ud.avg} │ ${resultData.ud.vc.avg} │ ${resultData.ud.vs.avg} │ ${resultData.ud.wdg.avg} ┃ ${resultData.ud.all.avg} ┃`);
+  console.log(`┃ VC   ┃ ${resultData.vc.bh.avg} │ ${resultData.vc.de.avg} │ ${resultData.vc.dh.avg} │ ${resultData.vc.dl.avg} │ ${resultData.vc.eos.avg} │ ${resultData.vc.he.avg} │ ${resultData.vc.id.avg} │ ${resultData.vc.koe.avg} │ ${resultData.vc.ok.avg} │ ${resultData.vc.ong.avg} │ ${resultData.vc.sa.avg} │ ${resultData.vc.se.avg} │ ${resultData.vc.ud.avg} │ ${resultData.vc.vc.avg} │ ${resultData.vc.vs.avg} │ ${resultData.vc.wdg.avg} ┃ ${resultData.vc.all.avg} ┃`);
+  console.log(`┃ VS   ┃ ${resultData.vs.bh.avg} │ ${resultData.vs.de.avg} │ ${resultData.vs.dh.avg} │ ${resultData.vs.dl.avg} │ ${resultData.vs.eos.avg} │ ${resultData.vs.he.avg} │ ${resultData.vs.id.avg} │ ${resultData.vs.koe.avg} │ ${resultData.vs.ok.avg} │ ${resultData.vs.ong.avg} │ ${resultData.vs.sa.avg} │ ${resultData.vs.se.avg} │ ${resultData.vs.ud.avg} │ ${resultData.vs.vc.avg} │ ${resultData.vs.vs.avg} │ ${resultData.vs.wdg.avg} ┃ ${resultData.vs.all.avg} ┃`);
+  console.log(`┃ WDG  ┃ ${resultData.wdg.bh.avg} │ ${resultData.wdg.de.avg} │ ${resultData.wdg.dh.avg} │ ${resultData.wdg.dl.avg} │ ${resultData.wdg.eos.avg} │ ${resultData.wdg.he.avg} │ ${resultData.wdg.id.avg} │ ${resultData.wdg.koe.avg} │ ${resultData.wdg.ok.avg} │ ${resultData.wdg.ong.avg} │ ${resultData.wdg.sa.avg} │ ${resultData.wdg.se.avg} │ ${resultData.wdg.ud.avg} │ ${resultData.wdg.vc.avg} │ ${resultData.wdg.vs.avg} │ ${resultData.wdg.wdg.avg} ┃ ${resultData.wdg.all.avg} ┃`);
   console.log(`┗━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┻━━━━━━┛`);
 
   console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
-  console.log(`┃ Tournament Type: ${(args.type || 'Single').padEnd(43, " ") }                                                                ┃`);
+  console.log(`┃ Tournament Type: ${(args.type || 'Single').padEnd(43, " ") } – Number of Games                                              ┃`);
   console.log(`┣━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┳━━━━━━┫`);
   console.log(`┃GAMES ┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃ Total┃`);
   console.log(`┣━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━╋━━━━━━┫`);
-  console.log(`┃ BH   ┃ ${g.bh.bh} │ ${g.bh.de} │ ${g.bh.dh} │ ${g.bh.dl} │ ${g.bh.eos} │ ${g.bh.he} │ ${g.bh.id} │ ${g.bh.koe} │ ${g.bh.ok} │ ${g.bh.ong} │ ${g.bh.sa} │ ${g.bh.se} │ ${g.bh.ud} │ ${g.bh.vc} │ ${g.bh.vs} │ ${g.bh.wdg} ┃ ${g.bh.all} ┃`);
-  console.log(`┃ DE   ┃ ${g.de.bh} │ ${g.de.de} │ ${g.de.dh} │ ${g.de.dl} │ ${g.de.eos} │ ${g.de.he} │ ${g.de.id} │ ${g.de.koe} │ ${g.de.ok} │ ${g.de.ong} │ ${g.de.sa} │ ${g.de.se} │ ${g.de.ud} │ ${g.de.vc} │ ${g.de.vs} │ ${g.de.wdg} ┃ ${g.de.all} ┃`);
-  console.log(`┃ DH   ┃ ${g.dh.bh} │ ${g.dh.de} │ ${g.dh.dh} │ ${g.dh.dl} │ ${g.dh.eos} │ ${g.dh.he} │ ${g.dh.id} │ ${g.dh.koe} │ ${g.dh.ok} │ ${g.dh.ong} │ ${g.dh.sa} │ ${g.dh.se} │ ${g.dh.ud} │ ${g.dh.vc} │ ${g.dh.vs} │ ${g.dh.wdg} ┃ ${g.dh.all} ┃`);
-  console.log(`┃ DL   ┃ ${g.dl.bh} │ ${g.dl.de} │ ${g.dl.dh} │ ${g.dl.dl} │ ${g.dl.eos} │ ${g.dl.he} │ ${g.dl.id} │ ${g.dl.koe} │ ${g.dl.ok} │ ${g.dl.ong} │ ${g.dl.sa} │ ${g.dl.se} │ ${g.dl.ud} │ ${g.dl.vc} │ ${g.dl.vs} │ ${g.dl.wdg} ┃ ${g.dl.all} ┃`);
-  console.log(`┃ EoS  ┃ ${g.eos.bh} │ ${g.eos.de} │ ${g.eos.dh} │ ${g.eos.dl} │ ${g.eos.eos} │ ${g.eos.he} │ ${g.eos.id} │ ${g.eos.koe} │ ${g.eos.ok} │ ${g.eos.ong} │ ${g.eos.sa} │ ${g.eos.se} │ ${g.eos.ud} │ ${g.eos.vc} │ ${g.eos.vs} │ ${g.eos.wdg} ┃ ${g.eos.all} ┃`);
-  console.log(`┃ HE   ┃ ${g.he.bh} │ ${g.he.de} │ ${g.he.dh} │ ${g.he.dl} │ ${g.he.eos} │ ${g.he.he} │ ${g.he.id} │ ${g.he.koe} │ ${g.he.ok} │ ${g.he.ong} │ ${g.he.sa} │ ${g.he.se} │ ${g.he.ud} │ ${g.he.vc} │ ${g.he.vs} │ ${g.he.wdg} ┃ ${g.he.all} ┃`);
-  console.log(`┃ ID   ┃ ${g.id.bh} │ ${g.id.de} │ ${g.id.dh} │ ${g.id.dl} │ ${g.id.eos} │ ${g.id.he} │ ${g.id.id} │ ${g.id.koe} │ ${g.id.ok} │ ${g.id.ong} │ ${g.id.sa} │ ${g.id.se} │ ${g.id.ud} │ ${g.id.vc} │ ${g.id.vs} │ ${g.id.wdg} ┃ ${g.id.all} ┃`);
-  console.log(`┃ KoE  ┃ ${g.koe.bh} │ ${g.koe.de} │ ${g.koe.dh} │ ${g.koe.dl} │ ${g.koe.eos} │ ${g.koe.he} │ ${g.koe.id} │ ${g.koe.koe} │ ${g.koe.ok} │ ${g.koe.ong} │ ${g.koe.sa} │ ${g.koe.se} │ ${g.koe.ud} │ ${g.koe.vc} │ ${g.koe.vs} │ ${g.koe.wdg} ┃ ${g.koe.all} ┃`);
-  console.log(`┃ OK   ┃ ${g.ok.bh} │ ${g.ok.de} │ ${g.ok.dh} │ ${g.ok.dl} │ ${g.ok.eos} │ ${g.ok.he} │ ${g.ok.id} │ ${g.ok.koe} │ ${g.ok.ok} │ ${g.ok.ong} │ ${g.ok.sa} │ ${g.ok.se} │ ${g.ok.ud} │ ${g.ok.vc} │ ${g.ok.vs} │ ${g.ok.wdg} ┃ ${g.ok.all} ┃`);
-  console.log(`┃ OnG  ┃ ${g.ong.bh} │ ${g.ong.de} │ ${g.ong.dh} │ ${g.ong.dl} │ ${g.ong.eos} │ ${g.ong.he} │ ${g.ong.id} │ ${g.ong.koe} │ ${g.ong.ok} │ ${g.ong.ong} │ ${g.ong.sa} │ ${g.ong.se} │ ${g.ong.ud} │ ${g.ong.vc} │ ${g.ong.vs} │ ${g.ong.wdg} ┃ ${g.ong.all} ┃`);
-  console.log(`┃ SA   ┃ ${g.sa.bh} │ ${g.sa.de} │ ${g.sa.dh} │ ${g.sa.dl} │ ${g.sa.eos} │ ${g.sa.he} │ ${g.sa.id} │ ${g.sa.koe} │ ${g.sa.ok} │ ${g.sa.ong} │ ${g.sa.sa} │ ${g.sa.se} │ ${g.sa.ud} │ ${g.sa.vc} │ ${g.sa.vs} │ ${g.sa.wdg} ┃ ${g.sa.all} ┃`);
-  console.log(`┃ SE   ┃ ${g.se.bh} │ ${g.se.de} │ ${g.se.dh} │ ${g.se.dl} │ ${g.se.eos} │ ${g.se.he} │ ${g.se.id} │ ${g.se.koe} │ ${g.se.ok} │ ${g.se.ong} │ ${g.se.sa} │ ${g.se.se} │ ${g.se.ud} │ ${g.se.vc} │ ${g.se.vs} │ ${g.se.wdg} ┃ ${g.se.all} ┃`);
-  console.log(`┃ UD   ┃ ${g.ud.bh} │ ${g.ud.de} │ ${g.ud.dh} │ ${g.ud.dl} │ ${g.ud.eos} │ ${g.ud.he} │ ${g.ud.id} │ ${g.ud.koe} │ ${g.ud.ok} │ ${g.ud.ong} │ ${g.ud.sa} │ ${g.ud.se} │ ${g.ud.ud} │ ${g.ud.vc} │ ${g.ud.vs} │ ${g.ud.wdg} ┃ ${g.ud.all} ┃`);
-  console.log(`┃ VC   ┃ ${g.vc.bh} │ ${g.vc.de} │ ${g.vc.dh} │ ${g.vc.dl} │ ${g.vc.eos} │ ${g.vc.he} │ ${g.vc.id} │ ${g.vc.koe} │ ${g.vc.ok} │ ${g.vc.ong} │ ${g.vc.sa} │ ${g.vc.se} │ ${g.vc.ud} │ ${g.vc.vc} │ ${g.vc.vs} │ ${g.vc.wdg} ┃ ${g.vc.all} ┃`);
-  console.log(`┃ VS   ┃ ${g.vs.bh} │ ${g.vs.de} │ ${g.vs.dh} │ ${g.vs.dl} │ ${g.vs.eos} │ ${g.vs.he} │ ${g.vs.id} │ ${g.vs.koe} │ ${g.vs.ok} │ ${g.vs.ong} │ ${g.vs.sa} │ ${g.vs.se} │ ${g.vs.ud} │ ${g.vs.vc} │ ${g.vs.vs} │ ${g.vs.wdg} ┃ ${g.vs.all} ┃`);
-  console.log(`┃ WDG  ┃ ${g.wdg.bh} │ ${g.wdg.de} │ ${g.wdg.dh} │ ${g.wdg.dl} │ ${g.wdg.eos} │ ${g.wdg.he} │ ${g.wdg.id} │ ${g.wdg.koe} │ ${g.wdg.ok} │ ${g.wdg.ong} │ ${g.wdg.sa} │ ${g.wdg.se} │ ${g.wdg.ud} │ ${g.wdg.vc} │ ${g.wdg.vs} │ ${g.wdg.wdg} ┃ ${g.wdg.all} ┃`);
+  console.log(`┃ BH   ┃ ${resultData.bh.bh.count} │ ${resultData.bh.de.count} │ ${resultData.bh.dh.count} │ ${resultData.bh.dl.count} │ ${resultData.bh.eos.count} │ ${resultData.bh.he.count} │ ${resultData.bh.id.count} │ ${resultData.bh.koe.count} │ ${resultData.bh.ok.count} │ ${resultData.bh.ong.count} │ ${resultData.bh.sa.count} │ ${resultData.bh.se.count} │ ${resultData.bh.ud.count} │ ${resultData.bh.vc.count} │ ${resultData.bh.vs.count} │ ${resultData.bh.wdg.count} ┃ ${resultData.bh.all.count} ┃`);
+  console.log(`┃ DE   ┃ ${resultData.de.bh.count} │ ${resultData.de.de.count} │ ${resultData.de.dh.count} │ ${resultData.de.dl.count} │ ${resultData.de.eos.count} │ ${resultData.de.he.count} │ ${resultData.de.id.count} │ ${resultData.de.koe.count} │ ${resultData.de.ok.count} │ ${resultData.de.ong.count} │ ${resultData.de.sa.count} │ ${resultData.de.se.count} │ ${resultData.de.ud.count} │ ${resultData.de.vc.count} │ ${resultData.de.vs.count} │ ${resultData.de.wdg.count} ┃ ${resultData.de.all.count} ┃`);
+  console.log(`┃ DH   ┃ ${resultData.dh.bh.count} │ ${resultData.dh.de.count} │ ${resultData.dh.dh.count} │ ${resultData.dh.dl.count} │ ${resultData.dh.eos.count} │ ${resultData.dh.he.count} │ ${resultData.dh.id.count} │ ${resultData.dh.koe.count} │ ${resultData.dh.ok.count} │ ${resultData.dh.ong.count} │ ${resultData.dh.sa.count} │ ${resultData.dh.se.count} │ ${resultData.dh.ud.count} │ ${resultData.dh.vc.count} │ ${resultData.dh.vs.count} │ ${resultData.dh.wdg.count} ┃ ${resultData.dh.all.count} ┃`);
+  console.log(`┃ DL   ┃ ${resultData.dl.bh.count} │ ${resultData.dl.de.count} │ ${resultData.dl.dh.count} │ ${resultData.dl.dl.count} │ ${resultData.dl.eos.count} │ ${resultData.dl.he.count} │ ${resultData.dl.id.count} │ ${resultData.dl.koe.count} │ ${resultData.dl.ok.count} │ ${resultData.dl.ong.count} │ ${resultData.dl.sa.count} │ ${resultData.dl.se.count} │ ${resultData.dl.ud.count} │ ${resultData.dl.vc.count} │ ${resultData.dl.vs.count} │ ${resultData.dl.wdg.count} ┃ ${resultData.dl.all.count} ┃`);
+  console.log(`┃ EoS  ┃ ${resultData.eos.bh.count} │ ${resultData.eos.de.count} │ ${resultData.eos.dh.count} │ ${resultData.eos.dl.count} │ ${resultData.eos.eos.count} │ ${resultData.eos.he.count} │ ${resultData.eos.id.count} │ ${resultData.eos.koe.count} │ ${resultData.eos.ok.count} │ ${resultData.eos.ong.count} │ ${resultData.eos.sa.count} │ ${resultData.eos.se.count} │ ${resultData.eos.ud.count} │ ${resultData.eos.vc.count} │ ${resultData.eos.vs.count} │ ${resultData.eos.wdg.count} ┃ ${resultData.eos.all.count} ┃`);
+  console.log(`┃ HE   ┃ ${resultData.he.bh.count} │ ${resultData.he.de.count} │ ${resultData.he.dh.count} │ ${resultData.he.dl.count} │ ${resultData.he.eos.count} │ ${resultData.he.he.count} │ ${resultData.he.id.count} │ ${resultData.he.koe.count} │ ${resultData.he.ok.count} │ ${resultData.he.ong.count} │ ${resultData.he.sa.count} │ ${resultData.he.se.count} │ ${resultData.he.ud.count} │ ${resultData.he.vc.count} │ ${resultData.he.vs.count} │ ${resultData.he.wdg.count} ┃ ${resultData.he.all.count} ┃`);
+  console.log(`┃ ID   ┃ ${resultData.id.bh.count} │ ${resultData.id.de.count} │ ${resultData.id.dh.count} │ ${resultData.id.dl.count} │ ${resultData.id.eos.count} │ ${resultData.id.he.count} │ ${resultData.id.id.count} │ ${resultData.id.koe.count} │ ${resultData.id.ok.count} │ ${resultData.id.ong.count} │ ${resultData.id.sa.count} │ ${resultData.id.se.count} │ ${resultData.id.ud.count} │ ${resultData.id.vc.count} │ ${resultData.id.vs.count} │ ${resultData.id.wdg.count} ┃ ${resultData.id.all.count} ┃`);
+  console.log(`┃ KoE  ┃ ${resultData.koe.bh.count} │ ${resultData.koe.de.count} │ ${resultData.koe.dh.count} │ ${resultData.koe.dl.count} │ ${resultData.koe.eos.count} │ ${resultData.koe.he.count} │ ${resultData.koe.id.count} │ ${resultData.koe.koe.count} │ ${resultData.koe.ok.count} │ ${resultData.koe.ong.count} │ ${resultData.koe.sa.count} │ ${resultData.koe.se.count} │ ${resultData.koe.ud.count} │ ${resultData.koe.vc.count} │ ${resultData.koe.vs.count} │ ${resultData.koe.wdg.count} ┃ ${resultData.koe.all.count} ┃`);
+  console.log(`┃ OK   ┃ ${resultData.ok.bh.count} │ ${resultData.ok.de.count} │ ${resultData.ok.dh.count} │ ${resultData.ok.dl.count} │ ${resultData.ok.eos.count} │ ${resultData.ok.he.count} │ ${resultData.ok.id.count} │ ${resultData.ok.koe.count} │ ${resultData.ok.ok.count} │ ${resultData.ok.ong.count} │ ${resultData.ok.sa.count} │ ${resultData.ok.se.count} │ ${resultData.ok.ud.count} │ ${resultData.ok.vc.count} │ ${resultData.ok.vs.count} │ ${resultData.ok.wdg.count} ┃ ${resultData.ok.all.count} ┃`);
+  console.log(`┃ OnG  ┃ ${resultData.ong.bh.count} │ ${resultData.ong.de.count} │ ${resultData.ong.dh.count} │ ${resultData.ong.dl.count} │ ${resultData.ong.eos.count} │ ${resultData.ong.he.count} │ ${resultData.ong.id.count} │ ${resultData.ong.koe.count} │ ${resultData.ong.ok.count} │ ${resultData.ong.ong.count} │ ${resultData.ong.sa.count} │ ${resultData.ong.se.count} │ ${resultData.ong.ud.count} │ ${resultData.ong.vc.count} │ ${resultData.ong.vs.count} │ ${resultData.ong.wdg.count} ┃ ${resultData.ong.all.count} ┃`);
+  console.log(`┃ SA   ┃ ${resultData.sa.bh.count} │ ${resultData.sa.de.count} │ ${resultData.sa.dh.count} │ ${resultData.sa.dl.count} │ ${resultData.sa.eos.count} │ ${resultData.sa.he.count} │ ${resultData.sa.id.count} │ ${resultData.sa.koe.count} │ ${resultData.sa.ok.count} │ ${resultData.sa.ong.count} │ ${resultData.sa.sa.count} │ ${resultData.sa.se.count} │ ${resultData.sa.ud.count} │ ${resultData.sa.vc.count} │ ${resultData.sa.vs.count} │ ${resultData.sa.wdg.count} ┃ ${resultData.sa.all.count} ┃`);
+  console.log(`┃ SE   ┃ ${resultData.se.bh.count} │ ${resultData.se.de.count} │ ${resultData.se.dh.count} │ ${resultData.se.dl.count} │ ${resultData.se.eos.count} │ ${resultData.se.he.count} │ ${resultData.se.id.count} │ ${resultData.se.koe.count} │ ${resultData.se.ok.count} │ ${resultData.se.ong.count} │ ${resultData.se.sa.count} │ ${resultData.se.se.count} │ ${resultData.se.ud.count} │ ${resultData.se.vc.count} │ ${resultData.se.vs.count} │ ${resultData.se.wdg.count} ┃ ${resultData.se.all.count} ┃`);
+  console.log(`┃ UD   ┃ ${resultData.ud.bh.count} │ ${resultData.ud.de.count} │ ${resultData.ud.dh.count} │ ${resultData.ud.dl.count} │ ${resultData.ud.eos.count} │ ${resultData.ud.he.count} │ ${resultData.ud.id.count} │ ${resultData.ud.koe.count} │ ${resultData.ud.ok.count} │ ${resultData.ud.ong.count} │ ${resultData.ud.sa.count} │ ${resultData.ud.se.count} │ ${resultData.ud.ud.count} │ ${resultData.ud.vc.count} │ ${resultData.ud.vs.count} │ ${resultData.ud.wdg.count} ┃ ${resultData.ud.all.count} ┃`);
+  console.log(`┃ VC   ┃ ${resultData.vc.bh.count} │ ${resultData.vc.de.count} │ ${resultData.vc.dh.count} │ ${resultData.vc.dl.count} │ ${resultData.vc.eos.count} │ ${resultData.vc.he.count} │ ${resultData.vc.id.count} │ ${resultData.vc.koe.count} │ ${resultData.vc.ok.count} │ ${resultData.vc.ong.count} │ ${resultData.vc.sa.count} │ ${resultData.vc.se.count} │ ${resultData.vc.ud.count} │ ${resultData.vc.vc.count} │ ${resultData.vc.vs.count} │ ${resultData.vc.wdg.count} ┃ ${resultData.vc.all.count} ┃`);
+  console.log(`┃ VS   ┃ ${resultData.vs.bh.count} │ ${resultData.vs.de.count} │ ${resultData.vs.dh.count} │ ${resultData.vs.dl.count} │ ${resultData.vs.eos.count} │ ${resultData.vs.he.count} │ ${resultData.vs.id.count} │ ${resultData.vs.koe.count} │ ${resultData.vs.ok.count} │ ${resultData.vs.ong.count} │ ${resultData.vs.sa.count} │ ${resultData.vs.se.count} │ ${resultData.vs.ud.count} │ ${resultData.vs.vc.count} │ ${resultData.vs.vs.count} │ ${resultData.vs.wdg.count} ┃ ${resultData.vs.all.count} ┃`);
+  console.log(`┃ WDG  ┃ ${resultData.wdg.bh.count} │ ${resultData.wdg.de.count} │ ${resultData.wdg.dh.count} │ ${resultData.wdg.dl.count} │ ${resultData.wdg.eos.count} │ ${resultData.wdg.he.count} │ ${resultData.wdg.id.count} │ ${resultData.wdg.koe.count} │ ${resultData.wdg.ok.count} │ ${resultData.wdg.ong.count} │ ${resultData.wdg.sa.count} │ ${resultData.wdg.se.count} │ ${resultData.wdg.ud.count} │ ${resultData.wdg.vc.count} │ ${resultData.wdg.vs.count} │ ${resultData.wdg.wdg.count} ┃ ${resultData.wdg.all.count} ┃`);
   console.log(`┗━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┻━━━━━━┛`);
 
 }
@@ -241,19 +274,21 @@ function addListsToAnalysis(result) {
       // TODO Implement parsing of the exported list and try to ingest the data this way
       // console.log(`Missing 'report_list' property. Implement exported list parsing to still be able to add this list for analysis.`)
       // Add a missing list for one game to this army, to prevent wrong pick rate calculation.
-      g[getArmyStringForId(player.id_book, false)].missingLists++;
+      let armyString = getArmyStringForId(player.id_book, false);
+      rawData[armyString] = rawData[armyString] || {};
+      rawData[armyString].games.missingLists++;
     } else {
       let armyString = getArmyStringForId(player.id_book, null);
       // Count the number of lists we have data for
-      g[armyString].availableLists++;
+      rawData[armyString].games.availableLists++;
       
       // Add pick rates of units to overall result object
       for(let entry in player.report_list.units) {
         // Create if missing
-        g[armyString].picks = g[armyString].picks || {};
-        g[armyString].picks[entry.toLowerCase()] = g[armyString].picks[entry.toLowerCase()] || {};
-        g[armyString].picks[entry.toLowerCase()].base = g[armyString].picks[entry.toLowerCase()].base || [];
-        g[armyString].picks[entry.toLowerCase()].base.push(player.report_list.units[entry].length);
+        rawData[armyString].picks = rawData[armyString].picks || {};
+        rawData[armyString].picks[entry.toLowerCase()] = rawData[armyString].picks[entry.toLowerCase()] || {};
+        rawData[armyString].picks[entry.toLowerCase()].base = rawData[armyString].picks[entry.toLowerCase()].base || [];
+        rawData[armyString].picks[entry.toLowerCase()].base.push(player.report_list.units[entry].length);
       }
 
       // Parse Options
@@ -266,8 +301,8 @@ function addListsToAnalysis(result) {
             if(optionEntry.parentUnit.toLowerCase() === option.toLowerCase()) {
               option = `models`;
             }
-            g[armyString].picks[optionEntry.parentUnit.toLowerCase()][option.toLowerCase()] = g[armyString].picks[optionEntry.parentUnit.toLowerCase()][option.toLowerCase()] || [];
-            g[armyString].picks[optionEntry.parentUnit.toLowerCase()][option.toLowerCase()].push(optionEntry.amount);
+            rawData[armyString].picks[optionEntry.parentUnit.toLowerCase()][option.toLowerCase()] = rawData[armyString].picks[optionEntry.parentUnit.toLowerCase()][option.toLowerCase()] || [];
+            rawData[armyString].picks[optionEntry.parentUnit.toLowerCase()][option.toLowerCase()].push(optionEntry.amount);
           }
         }
       }
@@ -277,44 +312,53 @@ function addListsToAnalysis(result) {
 
 function calculatePickRates() {
   // Iterate per army
-  for(let army in g) {
+  for(let army in rawData) {
+    // Create data structure for special items, if not already there
+    pickRates[army].specialItems = pickRates[army].specialItems || {};
     // Iterate per unit
-    for(let unit in g[army].picks) {
+    for(let unit in rawData[army].picks) {
       // Pick Rate for unit
       // TODO For all pick rates => convert into an object with count and percentage
-      let sum = g[army].picks[unit].base.reduce((a, b) => a + b, 0);
-      let pickRate = `${(sum * 100 / g[army].availableLists).toFixed(0)}%`.padStart(4, " ");
+      let pickSum = rawData[army].picks[unit].base.reduce((a, b) => a + b, 0);
+      let pickPercent = `${(pickSum * 100 / rawData[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
       let pickRateOnce = 0;
       let pickRateTwice = 0;
       let pickRateThrice = 0;
       let pickRateFourOrMore = 0;
-      for(let value of g[army].picks[unit].base) {
+      for(let value of rawData[army].picks[unit].base) {
         if(value === 1) pickRateOnce++;
         if(value === 2) pickRateTwice++;
         if(value === 3) pickRateThrice++;
         if(value > 3) pickRateFourOrMore++;
       }
-      pickRateOnce = `${(pickRateOnce * 100 / g[army].availableLists).toFixed(0)}%`.padStart(4, " ");
-      pickRateTwice = `${(pickRateTwice * 100 / g[army].availableLists).toFixed(0)}%`.padStart(4, " ");
-      pickRateThrice = `${(pickRateThrice * 100 / g[army].availableLists).toFixed(0)}%`.padStart(4, " ");
-      pickRateFourOrMore = `${(pickRateFourOrMore * 100 / g[army].availableLists).toFixed(0)}%`.padStart(4, " ");
-      p[army][unit] = p[army][unit] || {};
-      p[army][unit].pickTimes = sum;
-      p[army][unit].pickRate = pickRate;
-      p[army][unit].pickRate1 = pickRateOnce;
-      p[army][unit].pickRate2 = pickRateTwice;
-      p[army][unit].pickRate3 = pickRateThrice;
-      p[army][unit].pickRate4 = pickRateFourOrMore;
+      pickRateOnce = `${(pickRateOnce * 100 / rawData[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
+      pickRateTwice = `${(pickRateTwice * 100 / rawData[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
+      pickRateThrice = `${(pickRateThrice * 100 / rawData[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
+      pickRateFourOrMore = `${(pickRateFourOrMore * 100 / rawData[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
+      pickRates[army][unit] = pickRates[army][unit] || {};
+      pickRates[army][unit].pickTimes = pickSum;
+      pickRates[army][unit].pickPercent = pickPercent;
+      pickRates[army][unit].pickRate1 = pickRateOnce;
+      pickRates[army][unit].pickRate2 = pickRateTwice;
+      pickRates[army][unit].pickRate3 = pickRateThrice;
+      pickRates[army][unit].pickRate4 = pickRateFourOrMore;
 
       // Pick Rate for Options
-      for(let option in g[army].picks[unit]) {
+      for(let option in rawData[army].picks[unit]) {
         if(option === 'base') {
           continue;
         }
         else if(option === 'models') {
-          p[army][unit][option] = `Ø ${(g[army].picks[unit][option].reduce((a,b)=>a+b,0) / sum).toFixed(1)}`;
+          pickRates[army][unit][option] = `Ø ${(rawData[army].picks[unit][option].reduce((a,b)=>a+b,0) / pickSum).toFixed(1)}`;
         } else {
-          p[army][unit][option] = `${(g[army].picks[unit][option].length * 100 / sum).toFixed(0)}%`;
+          pickRates[army][unit][option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+        }
+
+        // Handle Special Items
+        if(specialItemNames.includes(option)) {
+          pickRates[army].specialItems[option] = pickRates[army].specialItems[option] || {};
+          pickRates[army].specialItems[option].count = rawData[army].picks[unit][option].reduce((a,b)=>a+b,0);
+          pickRates[army].specialItems[option].pickPercent = `${(pickRates[army].specialItems[option].count * 100 / rawData[army].games.availableLists).toFixed(1)}`;
         }
         
         
@@ -327,18 +371,28 @@ function calculatePickRates() {
 
 function printUnitPickRates() {
 
-  for(let army in p) {
+  for(let army in pickRates) {
 
     console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
     console.log(`┃ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+  ┃`);
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
 
-    for(let unit in p[army]) {
-      console.log(`┃ ${unit.padEnd(34, " ")} ┃   ${p[army][unit].pickRate}   ┃ ${p[army][unit].pickRate1} │ ${p[army][unit].pickRate2} │ ${p[army][unit].pickRate3} │ ${p[army][unit].pickRate4} ┃`);
+    for(let unit in pickRates[army]) {
+      console.log(`┃ ${unit.padEnd(34, " ")} ┃   ${pickRates[army][unit].pickPercent}   ┃ ${pickRates[army][unit].pickRate1} │ ${pickRates[army][unit].pickRate2} │ ${pickRates[army][unit].pickRate3} │ ${pickRates[army][unit].pickRate4} ┃`);
     }
  
     console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
     console.log(`\n`);
+
+    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
+    console.log(`┃ ${army.padEnd(3, " ")} - Special Items                ┃    #     ┃  %   ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
+    for(let item in pickRates[army].specialItems) {
+      console.log(`┃ ${item(34, " ")} ┃   ${pickRates[army].specialItems[item].count}   ┃ ${pickRates[army].specialItems[item].pickPercent}% ┃`);
+    }
+    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
+    console.log(`\n`);
+
   }
 }
 
@@ -350,7 +404,7 @@ function printUnitPickRates() {
     const tournamentType = args.type || 'single';
     const showExternalBalance = args.e ? true : false;
     const showPickRates = args.p ? true : false;
-    const rawData = args.r ? true : false;
+    const showRawData = args.r ? true : false;
     const minParticipants = args.minParticipants ? args.minParticipants : 0;
     
     const tournamentsResponse = await superagent
@@ -410,9 +464,9 @@ function printUnitPickRates() {
     if(showExternalBalance) printArmyResults();
     calculatePickRates();
     if(showPickRates) printUnitPickRates();
-    if(rawData) {
-      console.log(JSON.stringify(g, null, 4));
-      console.log(JSON.stringify(p, null, 4));
+    if(showRawData) {
+      console.log(JSON.stringify(rawData, null, 4));
+      console.log(JSON.stringify(pickRates, null, 4));
     }
     // console.log(JSON.stringify(armyResults));
     // console.log(response.body);
