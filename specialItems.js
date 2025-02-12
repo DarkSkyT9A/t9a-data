@@ -33,9 +33,20 @@ const arcCompAll = commonWeapon.concat(sharedWeapon, commonArmour, sharedArmour,
 // VC
 // VS
 // WDG
+const wdgItems = [ 
+    "burning portent", "symbol of slaughter", 
+    "thrice-forged", "gladiator's spirit", 
+    "zealot's banner", "icon of the infinite", "wasteland torch",
+    "veilgate orb", "dark familiar", "immortal gauntlets", "lord of the damned", 
+    "wyrd stone"
+];
+
+const allItems = arcCompAll.concat(wdgItems);
+
 
 // exports
 module.exports = {
     "arcCompAll" : arcCompAll,
+    "allItems" : allItems
 };
 
