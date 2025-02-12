@@ -281,6 +281,7 @@ function calculatePickRates() {
     // Iterate per unit
     for(let unit in g[army].picks) {
       // Pick Rate for unit
+      // TODO For all pick rates => convert into an object with count and percentage
       let sum = g[army].picks[unit].base.reduce((a, b) => a + b, 0);
       let pickRate = `${(sum * 100 / g[army].availableLists).toFixed(0)}%`.padStart(4, " ");
       let pickRateOnce = 0;
@@ -318,6 +319,8 @@ function calculatePickRates() {
         
         
       }
+
+	  // TODO With specialItems.js go over all special items and count them in separate data structure by army and overall
     }
   }
 }
