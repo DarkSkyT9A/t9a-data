@@ -315,6 +315,7 @@ function calculatePickRates() {
   for(let army in rawData) {
     // Create data structure for special items, if not already there
     pickRates[army].specialItems = pickRates[army].specialItems || {};
+    pickRates[army].units = pickRates[army].units || {};
     // Iterate per unit
     for(let unit in rawData[army].picks) {
       // Pick Rate for unit
@@ -335,13 +336,13 @@ function calculatePickRates() {
       pickRateTwice = `${(pickRateTwice * 100 / rawData[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
       pickRateThrice = `${(pickRateThrice * 100 / rawData[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
       pickRateFourOrMore = `${(pickRateFourOrMore * 100 / rawData[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
-      pickRates[army][unit] = pickRates[army][unit] || {};
-      pickRates[army][unit].pickTimes = pickSum;
-      pickRates[army][unit].pickPercent = pickPercent;
-      pickRates[army][unit].pickRate1 = pickRateOnce;
-      pickRates[army][unit].pickRate2 = pickRateTwice;
-      pickRates[army][unit].pickRate3 = pickRateThrice;
-      pickRates[army][unit].pickRate4 = pickRateFourOrMore;
+      pickRates[army].units[unit] = pickRates[army][unit] || {};
+      pickRates[army].units[unit].pickTimes = pickSum;
+      pickRates[army].units[unit].pickPercent = pickPercent;
+      pickRates[army].units[unit].pickRate1 = pickRateOnce;
+      pickRates[army].units[unit].pickRate2 = pickRateTwice;
+      pickRates[army].units[unit].pickRate3 = pickRateThrice;
+      pickRates[army].units[unit].pickRate4 = pickRateFourOrMore;
 
       // Pick Rate for Options
       for(let option in rawData[army].picks[unit]) {
@@ -349,15 +350,15 @@ function calculatePickRates() {
           continue;
         }
         else if(option === 'models') {
-          pickRates[army][unit][option] = `Ø ${(rawData[army].picks[unit][option].reduce((a,b)=>a+b,0) / pickSum).toFixed(1)}`;
+          pickRates[army].units[unit][option] = `Ø ${(rawData[army].picks[unit][option].reduce((a,b)=>a+b,0) / pickSum).toFixed(1)}`;
         } else {
-          pickRates[army][unit][option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          pickRates[army].units[unit][option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
         }
 
         // Handle Special Items
         if(specialItemNames.includes(option)) {
-          pickRates[army].specialItems[option] = pickRates[army].specialItems[option] || {};
-          pickRates[army].specialItems[option].count = rawData[army].picks[unit][option].reduce((a,b)=>a+b,0);
+          pickRates[army].specialItems[option] = pickRates[army].specialItems[option] || { "count" : 0, "pickPercent" : "" };
+          pickRates[army].specialItems[option].count = pickRates[army].specialItems[option].count + rawData[army].picks[unit][option].reduce((a,b)=>a+b,0);
           pickRates[army].specialItems[option].pickPercent = `${(pickRates[army].specialItems[option].count * 100 / rawData[army].games.availableLists).toFixed(1)}`;
         }
         
@@ -377,20 +378,23 @@ function printUnitPickRates() {
     console.log(`┃ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+  ┃`);
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
 
-    for(let unit in pickRates[army]) {
-      console.log(`┃ ${unit.padEnd(34, " ")} ┃   ${pickRates[army][unit].pickPercent}   ┃ ${pickRates[army][unit].pickRate1} │ ${pickRates[army][unit].pickRate2} │ ${pickRates[army][unit].pickRate3} │ ${pickRates[army][unit].pickRate4} ┃`);
+    for(let unit in pickRates[army].units) {
+      console.log(`┃ ${unit.padEnd(34, " ")} ┃   ${pickRates[army].units[unit].pickPercent}   ┃ ${pickRates[army].units[unit].pickRate1} │ ${pickRates[army].units[unit].pickRate2} │ ${pickRates[army].units[unit].pickRate3} │ ${pickRates[army].units[unit].pickRate4} ┃`);
     }
  
     console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
     console.log(`\n`);
 
-    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
-    console.log(`┃ ${army.padEnd(3, " ")} - Special Items                ┃    #     ┃  %   ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
+    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┓`);
+    console.log(`┃ ${army.padEnd(3, " ")} - Special Items                ┃   #   ┃   %   ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━╋━━━━━━━┫`);
     for(let item in pickRates[army].specialItems) {
-      console.log(`┃ ${item(34, " ")} ┃   ${pickRates[army].specialItems[item].count}   ┃ ${pickRates[army].specialItems[item].pickPercent}% ┃`);
+      let name = `${item.padEnd(34, " ")}`;
+      let count = `${pickRates[army].specialItems[item].count}`.padStart(3, " ");
+      let percent = `${pickRates[army].specialItems[item].pickPercent.padStart(4, " ")}%`;
+      console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
     }
-    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
+    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┛`);
     console.log(`\n`);
 
   }
