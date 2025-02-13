@@ -17,6 +17,7 @@ const specialItemNames = require('./specialItems.js').allItems;
 const commonItemNames = require('./specialItems.js').arcCompCommon;
 const sharedItemNames = require('./specialItems.js').arcCompShared;
 const armyItemNames = require('./specialItems.js').armyItems;
+const wdgUnits = require('./units.js').wdg;
 
 const date = new Date();
 const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
@@ -101,7 +102,36 @@ let pickRates = {
   "ud" : {},
   "vc" : {},
   "vs" : {},
-  "wdg" : {},
+  "wdg" : {
+    // "units" : {
+    //   "exalted herald" : {},
+    //   "chosen lord" : {},
+    //   "doomlord" : {},
+    //   "sorcerer" : {},
+    //   "barbarian chief" : {},
+    //   "feldrak ancestor" : {},
+    //   "warriors" : {},
+    //   "fallen" : {},
+    //   "barbarians" : {},
+    //   "barbarian horsemen" : {},
+    //   "warhounds" : {},
+    //   "warrior knights" : {},
+    //   "warrior chariot" : {},
+    //   "chosen" : {},
+    //   "chosen knights" : {},
+    //   "chosen chariot" : {},
+    //   "chimera" : {},
+    //   "wretched ones" : {},
+    //   "forsworn" : {},
+    //   "feldraks" : {},
+    //   "battleshrine" : {},
+    //   "flayers" : {},
+    //   "hellmaw" : {},
+    //   "forsaken one" : {},
+    //   "marauding giant" : {},
+    //   "feldrak elder" : {},
+    // }
+  },
 
 };
 
@@ -362,13 +392,9 @@ function calculatePickRates() {
         if(specialItemNames.includes(option)) {
           pickRates[army].specialItems[option] = pickRates[army].specialItems[option] || { "count" : 0, "pickPercent" : "" };
           pickRates[army].specialItems[option].count = pickRates[army].specialItems[option].count + rawData[army].picks[unit][option].reduce((a,b)=>a+b,0);
-          pickRates[army].specialItems[option].pickPercent = `${(pickRates[army].specialItems[option].count * 100 / rawData[army].games.availableLists).toFixed(1)}`;
+          pickRates[army].specialItems[option].pickPercent = `${(pickRates[army].specialItems[option].count * 100 / rawData[army].games.availableLists).toFixed(0)}`;
         }
-
-
       }
-
-	  // TODO With specialItems.js go over all special items and count them in separate data structure by army and overall
     }
   }
 }
@@ -376,16 +402,18 @@ function calculatePickRates() {
 function printUnitPickRates() {
 
   for(let army in pickRates) {
+    const armyUnits = require("./units.js")[army];
+    // console.log(JSON.stringify(armyUnits, null, 4));
 
-    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
-    console.log(`┃ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+  ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
+    console.log(`┏━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
+    console.log(`┃ Category        │ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+  ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
 
-    for(let unit in pickRates[army].units) {
-      console.log(`┃ ${unit.padEnd(34, " ")} ┃   ${pickRates[army].units[unit].pickPercent}   ┃ ${pickRates[army].units[unit].pickRate1} │ ${pickRates[army].units[unit].pickRate2} │ ${pickRates[army].units[unit].pickRate3} │ ${pickRates[army].units[unit].pickRate4} ┃`);
+    for(let unitDefinition of armyUnits) {
+      console.log(`┃ ${unitDefinition.category.padEnd(15, " ")} │ ${unitDefinition.name.padEnd(34, " ")} ┃   ${pickRates[army].units?.[unitDefinition.name]?.pickPercent || "  0%"}   ┃ ${pickRates[army].units?.[unitDefinition.name]?.pickRate1 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate2 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate3 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate4 || "  0%"} ┃`);
     }
 
-    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
+    console.log(`┗━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
     console.log(`\n`);
 
     console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┓`);
