@@ -1,4 +1,123 @@
 "use strict";
+// SA
+const sa = [
+  {
+    "name" : "anurarch archmage",
+    "category" : "character",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "caiman mentor",
+    "category" : "character",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "tegu veteran",
+    "category" : "character",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "skink veteran",
+    "category" : "character",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "tegu warriors",
+    "category" : "core",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "skink warriors",
+    "category" : "core",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "skink hunters",
+    "category" : "core",
+    "saurianShooting" : 1,
+  },
+  {
+    "name" : "caiman warriors",
+    "category" : "core",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "tegu guards",
+    "category" : "special",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "tegu mystics",
+    "category" : "special",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "raptor pack",
+    "category" : "special",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "raptor riders",
+    "category" : "special",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "caiman elders",
+    "category" : "special",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "thyroscutus herd",
+    "category" : "special",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "rhamphodon riders",
+    "category" : "special",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "saurian swarms",
+    "category" : "special",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "skink guerrillas",
+    "category" : "special",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "weapon beasts",
+    "category" : "special",
+    "saurianShooting" : 2,
+  },
+  {
+    "name" : "pteradon riders",
+    "category" : "special",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "stygiosaur pack",
+    "category" : "magna sauria",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "carnosaur",
+    "category" : "magna sauria",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "taurosaur",
+    "category" : "magna sauria",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "titanopod",
+    "category" : "magna sauria",
+    "saurianShooting" : 0,
+  },
+];
+
 
 // SE
 const se = [
@@ -128,7 +247,6 @@ const se = [
     "sylvanShooting" : 2,
     "sylvanBeasts" : 0
   },
-
 ];
 
 // UD
@@ -655,7 +773,7 @@ module.exports = {
   "koe" : wdg,
   "ok" : wdg,
   "ong" : wdg,
-  "sa" : wdg,
+  "sa" : sa,
   "se" : se,
   "ud" : ud,
   "vc" : vc,
