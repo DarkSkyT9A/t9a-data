@@ -403,17 +403,22 @@ function printUnitPickRates() {
 
   for(let army in pickRates) {
     const armyUnits = require("./units.js")[army];
+    let lastCategory = armyUnits[0].category;
     // console.log(JSON.stringify(armyUnits, null, 4));
 
-    console.log(`┏━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
-    console.log(`┃ Category        │ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+  ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
+    console.log(`┏━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
+    console.log(`┃ Category          │ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+  ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
 
     for(let unitDefinition of armyUnits) {
-      console.log(`┃ ${unitDefinition.category.padEnd(15, " ")} │ ${unitDefinition.name.padEnd(34, " ")} ┃   ${pickRates[army].units?.[unitDefinition.name]?.pickPercent || "  0%"}   ┃ ${pickRates[army].units?.[unitDefinition.name]?.pickRate1 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate2 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate3 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate4 || "  0%"} ┃`);
+      if(unitDefinition.category !== lastCategory) {
+        console.log(`┃                   │                                    ┃          ┃      │      │      │      ┃`);
+      }
+      console.log(`┃ ${unitDefinition.category.padEnd(17, " ")} │ ${unitDefinition.name.padEnd(34, " ")} ┃   ${pickRates[army].units?.[unitDefinition.name]?.pickPercent || "  0%"}   ┃ ${pickRates[army].units?.[unitDefinition.name]?.pickRate1 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate2 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate3 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate4 || "  0%"} ┃`);
+      lastCategory = unitDefinition.category;
     }
 
-    console.log(`┗━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
+    console.log(`┗━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
     console.log(`\n`);
 
     console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┓`);
@@ -421,36 +426,39 @@ function printUnitPickRates() {
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┫`);
     console.log(`┃ Common Items                                       ┃`);
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
-    for(let item in pickRates[army].specialItems) {
-      if(commonItemNames.includes(item)) {
-        let name = `${item.padEnd(34, " ")}`;
-        let count = `${pickRates[army].specialItems[item].count}`.padStart(3, " ");
-        let percent = `${pickRates[army].specialItems[item].pickPercent.padStart(4, " ")}%`;
-        console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
-      }
+
+    for(let item of commonItemNames) {
+      let name = `${item.padEnd(34, " ")}`;
+      let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
+      let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
+      console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
     }
+
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┫`);
     console.log(`┃ Shared Items                                       ┃`);
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
-    for(let item in pickRates[army].specialItems) {
-      if(sharedItemNames.includes(item)) {
-        let name = `${item.padEnd(34, " ")}`;
-        let count = `${pickRates[army].specialItems[item].count}`.padStart(3, " ");
-        let percent = `${pickRates[army].specialItems[item].pickPercent.padStart(4, " ")}%`;
-        console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
-      }
+
+    // TODO Improve: Setup army specific shared items data structures in specialItems and use them
+
+    for(let item of sharedItemNames) {
+      let name = `${item.padEnd(34, " ")}`;
+      let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
+      let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
+      console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
     }
+
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┫`);
     console.log(`┃ Army Specific Items                                ┃`);
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
-    for(let item in pickRates[army].specialItems) {
-      if(armyItemNames.includes(item)) {
-        let name = `${item.padEnd(34, " ")}`;
-        let count = `${pickRates[army].specialItems[item].count}`.padStart(3, " ");
-        let percent = `${pickRates[army].specialItems[item].pickPercent.padStart(4, " ")}%`;
-        console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
-      }
+
+    const armyItems = require("./specialItems.js")[army];
+    for(let item of armyItems) {
+      let name = `${item.padEnd(34, " ")}`;
+      let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
+      let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
+      console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
     }
+
     console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┛`);
     console.log(`\n`);
 
