@@ -14,6 +14,9 @@
 const superagent = require('superagent');
 const args = require('yargs').argv;
 const specialItemNames = require('./specialItems.js').allItems;
+const commonItemNames = require('./specialItems.js').arcCompCommon;
+const sharedItemNames = require('./specialItems.js').arcCompShared;
+const armyItemNames = require('./specialItems.js').armyItems;
 
 const date = new Date();
 const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
@@ -53,7 +56,7 @@ let resultData = {
             "models" : [ int ],    // only for units which are not single model units
             "$option1" : [ int ],
             (…)
-            "$optionN" : [ int], 
+            "$optionN" : [ int],
           }
         }
       }
@@ -177,17 +180,17 @@ function getArmyStringForId(id, uppercase) {
     case 18:
     return uppercase ? "WDG" : "wdg";
     default:
-    return "n/a";    
+    return "n/a";
   }
 }
 
 /**
  * Based on the raw data directly from New Recruit fills two data structures. The Army Results based on the outcomes of the games for external balance
  * and amount of games played as well as the rawData structure to use the games played for later pickRate calculations.
- * @param {*} armyResults 
+ * @param {*} armyResults
  */
 function calculateArmyResults(armyResults) {
-    
+
   for(let armyId in armyResults) {
     let armyString = getArmyStringForId(armyId, false);
 
@@ -281,7 +284,7 @@ function addListsToAnalysis(result) {
       let armyString = getArmyStringForId(player.id_book, null);
       // Count the number of lists we have data for
       rawData[armyString].games.availableLists++;
-      
+
       // Add pick rates of units to overall result object
       for(let entry in player.report_list.units) {
         // Create if missing
@@ -361,8 +364,8 @@ function calculatePickRates() {
           pickRates[army].specialItems[option].count = pickRates[army].specialItems[option].count + rawData[army].picks[unit][option].reduce((a,b)=>a+b,0);
           pickRates[army].specialItems[option].pickPercent = `${(pickRates[army].specialItems[option].count * 100 / rawData[army].games.availableLists).toFixed(1)}`;
         }
-        
-        
+
+
       }
 
 	  // TODO With specialItems.js go over all special items and count them in separate data structure by army and overall
@@ -381,18 +384,44 @@ function printUnitPickRates() {
     for(let unit in pickRates[army].units) {
       console.log(`┃ ${unit.padEnd(34, " ")} ┃   ${pickRates[army].units[unit].pickPercent}   ┃ ${pickRates[army].units[unit].pickRate1} │ ${pickRates[army].units[unit].pickRate2} │ ${pickRates[army].units[unit].pickRate3} │ ${pickRates[army].units[unit].pickRate4} ┃`);
     }
- 
+
     console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
     console.log(`\n`);
 
     console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┓`);
     console.log(`┃ ${army.padEnd(3, " ")} - Special Items                ┃   #   ┃   %   ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━╋━━━━━━━┫`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┫`);
+    console.log(`┃ Common Items                                       ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
     for(let item in pickRates[army].specialItems) {
-      let name = `${item.padEnd(34, " ")}`;
-      let count = `${pickRates[army].specialItems[item].count}`.padStart(3, " ");
-      let percent = `${pickRates[army].specialItems[item].pickPercent.padStart(4, " ")}%`;
-      console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
+      if(commonItemNames.includes(item)) {
+        let name = `${item.padEnd(34, " ")}`;
+        let count = `${pickRates[army].specialItems[item].count}`.padStart(3, " ");
+        let percent = `${pickRates[army].specialItems[item].pickPercent.padStart(4, " ")}%`;
+        console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
+      }
+    }
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┫`);
+    console.log(`┃ Shared Items                                       ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
+    for(let item in pickRates[army].specialItems) {
+      if(sharedItemNames.includes(item)) {
+        let name = `${item.padEnd(34, " ")}`;
+        let count = `${pickRates[army].specialItems[item].count}`.padStart(3, " ");
+        let percent = `${pickRates[army].specialItems[item].pickPercent.padStart(4, " ")}%`;
+        console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
+      }
+    }
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┫`);
+    console.log(`┃ Army Specific Items                                ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
+    for(let item in pickRates[army].specialItems) {
+      if(armyItemNames.includes(item)) {
+        let name = `${item.padEnd(34, " ")}`;
+        let count = `${pickRates[army].specialItems[item].count}`.padStart(3, " ");
+        let percent = `${pickRates[army].specialItems[item].pickPercent.padStart(4, " ")}%`;
+        console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
+      }
     }
     console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┛`);
     console.log(`\n`);
@@ -410,13 +439,15 @@ function printUnitPickRates() {
     const showPickRates = args.p ? true : false;
     const showRawData = args.r ? true : false;
     const minParticipants = args.minParticipants ? args.minParticipants : 0;
-    
+    const start = args.start || '2025-01-01';
+    const end = args.end || today;
+
     const tournamentsResponse = await superagent
     .post('https://www.newrecruit.eu/api/tournaments')
-    .send({ "start": "2025-01-01", "end": today })
+    .send({ "start": start, "end": end })
     .set("accept", "json")
     .set("user-agent", "t9a-data/0.0.1")
-    
+
     let data;
 
     if(tournamentType === 'single') {
@@ -432,30 +463,30 @@ function printUnitPickRates() {
 
     console.log(`Tournaments in Calculation: ${data.length}`);
     let armyResults = { };
-    
+
     for(let t of data) {
       const reportsResponse = await superagent
       .post('https://www.newrecruit.eu/api/reports')
       .send({ "id_tournament": t._id })
       .set("accept", "json")
       .set("user-agent", "t9a-data/0.0.1");
-      
+
       const validResults = reportsResponse.body.filter((r) => r.handshake === false && typeof r.players[0].id_book === "number" && typeof r.players[1].id_book === "number");
       // console.log(`Filtered out ${reportsResponse.body.length - validResults.length} invalid reports`);
-      
+
       for(let result of validResults) {
         // console.log(`Game Result: Army '${result.players[0].id_book}' vs Army '${result.players[1].id_book}' → ${result.score[0].BPObj} : ${result.score[1].BPObj}`);
         // console.log(`Game Result: List ${result.players[0].exported_list} vs Army ${result.players[1].exported_list}`);
         // console.log(`Game Result: Score ${JSON.stringify(result.score, null, 4)}`);
         // console.log(`Game Result: ${JSON.stringify(result.players[0].report_list, null, 4)}`);
-        
+
         /** GAME RESULT **/
         // Add new entries, if they do not exist yet
         armyResults[result.players[0].id_book] = armyResults[result.players[0].id_book] || {};
         armyResults[result.players[1].id_book] = armyResults[result.players[1].id_book] || {};
         armyResults[result.players[0].id_book][result.players[1].id_book] = armyResults[result.players[0].id_book][result.players[1].id_book] || [];
         armyResults[result.players[1].id_book][result.players[0].id_book] = armyResults[result.players[1].id_book][result.players[0].id_book] || [];
-        
+
         // Push actual result
         armyResults[result.players[0].id_book][result.players[1].id_book].push(result.score[0].BPObj);
         armyResults[result.players[1].id_book][result.players[0].id_book].push(result.score[1].BPObj);

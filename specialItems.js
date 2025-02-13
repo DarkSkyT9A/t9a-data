@@ -15,18 +15,45 @@ const commonBanner = [ "stalker's standard", "sheltering standard", "flaming sta
 const sharedBanner = [ "banner of courage", "banner of speed", "distortion emblem", "rending banner" ];
 
 const arcCompAll = commonWeapon.concat(sharedWeapon, commonArmour, sharedArmour, commonShield, sharedShield, commonArtefact, sharedArtefact, commonPotion, sharedPotion, commonBanner, sharedBanner);
+const arcCompCommon = commonWeapon.concat(commonArmour, commonShield, commonArtefact, commonPotion, commonBanner);
+const arcCompShared = sharedWeapon.concat(sharedArmour, sharedShield, sharedArtefact, sharedPotion, sharedBanner);
 
-// TODO Add items per army
 // BH
+const bhItems = [
+    "hawthorne curse", "ancestral carvings", "fatal folly", "twin hungers",
+    "aaghor's affliction", "trickster's cunning", "wild form",
+    "obscuring fog",
+    "banner of the wild herd",
+    "pillager icon", "crown of madness", "horn of bragh", "eye of dominance",
+    "rain augur brew", "seed of the dark forest",
+];
+
 // DE
+const deItems = [
+    "mastery of slaughter", "height of hubris", "lacerating touch", "transcendence", "pride of gar daecos",
+    "seal of the republic",
+    "caedhren's pennon", "banner of urlain", "eye of the gorgon",
+    "ceinran's scales", "moithir's mirror", "ring of the obsidian thrones", "beastmaster's vial",
+];
+
 // DH
+const dhItems = [
+    "rune of destruction", "rune of smashing", "rune of quickening", "rune of might", "rune of penetration",
+    "rune of anger", "rune of precision", "rune of craftmanship", "rune of lightning", "rune of fire", "rune of returning",
+    "rune of steel", "rune of resistance", "rune of iron", "rune of retribution", "rune of the forge",
+    "runic standard of the hold", "runic standard of swiftness", "runic standard of grudges", "runic standard of wisdom",
+    "runic standard of dismay", "runic standard of steadiness", "runic standard of the anvil",
+    "rune of denial", "rune of devouring", "rune of grounding", "rune of harnessing", "rune of channelling",
+    "rune of dragon's breath", "rune of readiness", "rune of shielding", "rune of the courage", "rune of storms",
+    "rune of kinship", "rune of mining",
+];
 // DL
 // EoS
 const eosItems = [
     "the light of sonnstahl", "hammer of witches", "death warrant",
-    "imperial seal", "blacksteel", 
+    "imperial seal", "blacksteel",
     "witchfire guard", "shield of volund",
-    "war college banner", "banner of unity", "marksman's pennant", 
+    "war college banner", "banner of unity", "marksman's pennant",
     "locket of sunna", "winter cloak", "exemplar's flame", "ullor's horn",
     "scroll of conquest",
 ];
@@ -36,8 +63,8 @@ const heItems = [
     "sliver of the blazing dawn", "nova flare", "cadaron's heartwood", "elemental blade",
     "star metal alloy", "gleaming robe", "protection of dorac", "daemon's bane",
     "war banner of rymâ", "navigator's banner", "banner of becalming",
-    "diadem of protection", "amethyst crystal", "book of meladys", 
-    "scroll of the pearl throne", 
+    "diadem of protection", "amethyst crystal", "book of meladys",
+    "scroll of the pearl throne",
 ];
 
 // ID
@@ -55,7 +82,7 @@ const koeItems = [
     "prayer etched", "percival's panoply",
     "fortress of faith",
     "relic shroud", "oriflamme", "banner of roland", "castellan's crest", "lady's favour",
-    "sacred chalice", 
+    "sacred chalice",
     "black knight's tonic",
 ];
 
@@ -69,7 +96,7 @@ const okItems = [
 
 // OnG
 const ongItems = [
-    "omen of the apocalypse", "attack gnasher", 
+    "omen of the apocalypse", "attack gnasher",
     "tazrek's guard",
     "goga cauldron",
     "skull fetish", "monster munch", "pan of protection pinchin'", "troll hide",
@@ -77,9 +104,9 @@ const ongItems = [
 ];
 // SA
 const saItems = [
-    "glory of the dawn age", "alchemical arrows", "serpent's nest charm", 
-    "vital essence", 
-    "koru stone", "obelisk of collaboration", 
+    "glory of the dawn age", "alchemical arrows", "serpent's nest charm",
+    "vital essence",
+    "koru stone", "obelisk of collaboration",
     "ancient plaque", "imbued jade", "starfall lodestone", "carved tablet",
     "stampede resonator crystal", "te aupouri smokestone",
 ]
@@ -88,7 +115,7 @@ const saItems = [
 const seItems = [
     "bough of wyscan", "hunter's honour", "oaken might", "spirit of the whirlwind", "spirit arrows",
     "shielding bark",
-    "banner of deception", "predator pennant", "banner of silent mist", 
+    "banner of deception", "predator pennant", "banner of silent mist",
     "hail shot", "mist walker's mirror", "horn of the wild hunt", "glpyh of amryl",
     "sacred seeds", "song of cenryn",
 ];
@@ -105,7 +132,7 @@ const udItems = [
 
 // VC
 const vcItems = [
-    "reaper's harvest", "true thirst", 
+    "reaper's harvest", "true thirst",
     "legend of the black king",
     "black standard of zagvozd", "banner of eldritch might",
     "necromantic staff", "night's crown", "hypnotic pendant", "eternity gem", "cursed medallion",
@@ -114,27 +141,29 @@ const vcItems = [
 // VS
 const vsItems = [
     "secrets of the doom blade", "storm rocket", "rodentium bullets", "swarm master",
-    "plague-hermit's blessing", 
-    "sacred aquila", "bell of the deep roads", 
+    "plague-hermit's blessing",
+    "sacred aquila", "bell of the deep roads",
     "crown of hubris", "crown of the usurper", "darkstone detonator", "tome of the ratking", "tarina's lyre",
     "favanite powder", "potion of rat form",
 ];
 
 // WDG
-const wdgItems = [ 
-    "burning portent", "symbol of slaughter", 
-    "thrice-forged", "gladiator's spirit", 
+const wdgItems = [
+    "burning portent", "symbol of slaughter",
+    "thrice-forged", "gladiator's spirit",
     "zealot's banner", "icon of the infinite", "wasteland torch",
-    "veilgate orb", "dark familiar", "immortal gauntlets", "lord of the damned", 
+    "veilgate orb", "dark familiar", "immortal gauntlets", "lord of the damned",
     "wyrd stone"
 ];
 
-const allItems = arcCompAll.concat(eosItems, heItems, idItems, koeItems, okItems, ongItems, saItems, seItems, udItems, vcItems, vsItems, wdgItems);
-
+const allItems = arcCompAll.concat(bhItems, deItems, dhItems, eosItems, heItems, idItems, koeItems, okItems, ongItems, saItems, seItems, udItems, vcItems, vsItems, wdgItems);
+const armyItems = bhItems.concat(deItems, dhItems, eosItems, heItems, idItems, koeItems, okItems, ongItems, saItems, seItems, udItems, vcItems, vsItems, wdgItems);
 
 // exports
 module.exports = {
     "arcCompAll" : arcCompAll,
-    "allItems" : allItems
+    "arcCompCommon" : arcCompCommon,
+    "arcCompShared" : arcCompShared,
+    "allItems" : allItems,
+    "armyItems" : armyItems,
 };
-
