@@ -16,8 +16,6 @@ const args = require('yargs').argv;
 const specialItemNames = require('./specialItems.js').allItems;
 const commonItemNames = require('./specialItems.js').arcCompCommon;
 const sharedItemNames = require('./specialItems.js').arcCompShared;
-const armyItemNames = require('./specialItems.js').armyItems;
-const wdgUnits = require('./units.js').wdg;
 
 const date = new Date();
 const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
@@ -102,37 +100,7 @@ let pickRates = {
   "ud" : {},
   "vc" : {},
   "vs" : {},
-  "wdg" : {
-    // "units" : {
-    //   "exalted herald" : {},
-    //   "chosen lord" : {},
-    //   "doomlord" : {},
-    //   "sorcerer" : {},
-    //   "barbarian chief" : {},
-    //   "feldrak ancestor" : {},
-    //   "warriors" : {},
-    //   "fallen" : {},
-    //   "barbarians" : {},
-    //   "barbarian horsemen" : {},
-    //   "warhounds" : {},
-    //   "warrior knights" : {},
-    //   "warrior chariot" : {},
-    //   "chosen" : {},
-    //   "chosen knights" : {},
-    //   "chosen chariot" : {},
-    //   "chimera" : {},
-    //   "wretched ones" : {},
-    //   "forsworn" : {},
-    //   "feldraks" : {},
-    //   "battleshrine" : {},
-    //   "flayers" : {},
-    //   "hellmaw" : {},
-    //   "forsaken one" : {},
-    //   "marauding giant" : {},
-    //   "feldrak elder" : {},
-    // }
-  },
-
+  "wdg" : {},
 };
 
 /*
@@ -485,6 +453,7 @@ function printUnitPickRates() {
     .set("user-agent", "t9a-data/0.0.1")
 
     let data;
+    let totalAmountOfGames = 0;
 
     if(tournamentType === 'single') {
       data = tournamentsResponse.body.filter((tournament) => tournament.id_game_system === 6 && tournament.status === 3 && tournament.type === 0 && tournament.scoring_system === 11 && tournament.participants >= minParticipants);
@@ -497,7 +466,11 @@ function printUnitPickRates() {
       process.exit(1);
     }
 
-    console.log(`Tournaments in Calculation: ${data.length}`);
+    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+    console.log(`┃ T9A Data Tool Meta Data                                                     ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
+    console.log(`┃ Tournaments in Calculation: ${(""+data.length).padEnd(6, " ")}                                          ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
     let armyResults = { };
 
     for(let t of data) {
@@ -511,6 +484,7 @@ function printUnitPickRates() {
       // console.log(`Filtered out ${reportsResponse.body.length - validResults.length} invalid reports`);
 
       for(let result of validResults) {
+        totalAmountOfGames++;
         // console.log(`Game Result: Army '${result.players[0].id_book}' vs Army '${result.players[1].id_book}' → ${result.score[0].BPObj} : ${result.score[1].BPObj}`);
         // console.log(`Game Result: List ${result.players[0].exported_list} vs Army ${result.players[1].exported_list}`);
         // console.log(`Game Result: Score ${JSON.stringify(result.score, null, 4)}`);
@@ -531,6 +505,10 @@ function printUnitPickRates() {
         addListsToAnalysis(result);
       }
     }
+    console.log(`┃ Total amount of games: ${(""+totalAmountOfGames).padEnd(5, " ")}                                                ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
+    console.log(`┃ Time frame from ${start} until ${end}                                  ┃`);
+    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
     calculateArmyResults(armyResults);
     if(showExternalBalance) printArmyResults();
     calculatePickRates();
