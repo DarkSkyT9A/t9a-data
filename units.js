@@ -1,5 +1,283 @@
 "use strict";
 
+// DE
+const de = [
+  {
+    "name" : "dread prince",
+    "category" : "character",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "silexian officer",
+    "category" : "character",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "temple exarch",
+    "category" : "character",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "sanctioned warlock",
+    "category" : "character",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "silent assassin",
+    "category" : "character",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "silexian spears",
+    "category" : "core",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "silexian auxiliaries",
+    "category" : "core",
+    "raiders" : 1,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "temple militants",
+    "category" : "core",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "corsairs",
+    "category" : "core",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "shadow riders",
+    "category" : "core",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "dread acolytes",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "dread knights",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "obsidian guard",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "judicators",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "harpies",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "gorgons",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "thunder pack",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "raptor chariot",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "divine altar",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "hunting chariot",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 1,
+  },
+  {
+    "name" : "repeater battery",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 1,
+  },
+  {
+    "name" : "black cloaks",
+    "category" : "special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "kraken",
+    "category" : "the menagerie",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "hydra",
+    "category" : "the menagerie",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "mist leviathan",
+    "category" : "the menagerie",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+];
+
+// DH
+const dh = [
+  {
+    "name" : "king",
+    "category" : "character",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "thane",
+    "category" : "character",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "runic smith",
+    "category" : "character",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "engineer",
+    "category" : "character",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "dragon seeker",
+    "category" : "character",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "clan warriors",
+    "category" : "core",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "greybeards",
+    "category" : "core",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "clan marksman",
+    "category" : "core",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "king's guard",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "deep watch",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "seekers",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "vengeance seeker",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "hold guardians",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "grudge buster",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "miners",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "anvil of power",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "rangers",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "forge wardens",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "steam copters",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "field artillery",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 1,
+  },
+];
+
 // DL
 const dl = [
   {
@@ -1810,8 +2088,8 @@ const wdg = [
 // exports
 module.exports = {
   "bh" : wdg,
-  "de" : wdg,
-  "dh" : wdg,
+  "de" : de,
+  "dh" : dh,
   "dl" : dl,
   "eos" : eos,
   "he" : he,
