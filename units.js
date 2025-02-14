@@ -1,5 +1,141 @@
 "use strict";
 
+//BH
+const bh = [
+  {
+    "name" : "wildhorn lord",
+    "category" : "character",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "wildhorn chieftain",
+    "category" : "character",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "soothsayer",
+    "category" : "character",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "centaur chieftain",
+    "category" : "character",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "minotaur warlord",
+    "category" : "character",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "minotaur chieftain",
+    "category" : "character",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "wildhorn herd",
+    "category" : "core",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "mongrel herd",
+    "category" : "core",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "mongrel raiders",
+    "category" : "core",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "feral hounds",
+    "category" : "special",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "longhorn herd",
+    "category" : "special",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "minotaurs",
+    "category" : "special",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "centaurs",
+    "category" : "special",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "raiding chariots",
+    "category" : "special",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "razortusk herd",
+    "category" : "special",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "razortusk chariot",
+    "category" : "special",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "briar beast",
+    "category" : "special",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "gargoyles",
+    "category" : "special",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "cyclops",
+    "category" : "terrors of the wild",
+    "sticksandstones" : 0,
+    "bigrocks" : 1,
+  },
+  {
+    "name" : "gortach",
+    "category" : "terrors of the wild",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "jabberwock",
+    "category" : "terrors of the wild",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "beast giant",
+    "category" : "terrors of the wild",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+];
+
 // DE
 const de = [
   {
@@ -2087,7 +2223,7 @@ const wdg = [
 
 // exports
 module.exports = {
-  "bh" : wdg,
+  "bh" : bh,
   "de" : de,
   "dh" : dh,
   "dl" : dl,

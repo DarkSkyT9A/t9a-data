@@ -374,19 +374,19 @@ function printUnitPickRates() {
     let lastCategory = armyUnits[0].category;
     // console.log(JSON.stringify(armyUnits, null, 4));
 
-    console.log(`┏━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
-    console.log(`┃ Category          │ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+  ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
+    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
+    console.log(`┃ Category             │ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+  ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
 
     for(let unitDefinition of armyUnits) {
       if(unitDefinition.category !== lastCategory) {
-        console.log(`┃                   │                                    ┃          ┃      │      │      │      ┃`);
+        console.log(`┃                      │                                    ┃          ┃      │      │      │      ┃`);
       }
-      console.log(`┃ ${unitDefinition.category.padEnd(17, " ")} │ ${unitDefinition.name.padEnd(34, " ")} ┃   ${pickRates[army].units?.[unitDefinition.name]?.pickPercent || "  0%"}   ┃ ${pickRates[army].units?.[unitDefinition.name]?.pickRate1 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate2 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate3 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate4 || "  0%"} ┃`);
+      console.log(`┃ ${unitDefinition.category.padEnd(20, " ")} │ ${unitDefinition.name.padEnd(34, " ")} ┃   ${pickRates[army].units?.[unitDefinition.name]?.pickPercent || "  0%"}   ┃ ${pickRates[army].units?.[unitDefinition.name]?.pickRate1 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate2 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate3 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.pickRate4 || "  0%"} ┃`);
       lastCategory = unitDefinition.category;
     }
 
-    console.log(`┗━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
+    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
     console.log(`\n`);
 
     console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┓`);
