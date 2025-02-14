@@ -7,8 +7,8 @@ const commonArmour = [ "destiny's call", "basalt infusion", "warding of unity" ]
 const sharedArmour = [ "death cheater", "ghostly guard", ];
 const commonShield = [ "wild warding", ];
 const sharedShield = [ "dusk forged", "sigil of protection", ];
-const commonArtefact = [ "talisman of shielding", "talisman of the void", "magic heirloom", "crown of the wizard king", "mimic cloak", ];
-const sharedArtefact = [ "essence of a free mind", "mask of mindless violence", "obsidian rock", ];
+const commonArtefact = [ "talisman of shielding", "talisman of the void", "magical heirloom", "crown of the wizard king", "mimic cloak", ];
+const sharedArtefact = [ "essence of a free mind", "mask of mindless violence", "obsidian rock", "rod of battle", ];
 const commonPotion = [ "binding scroll", "potion of power preservation", "dragon's brew", "potion of swiftness", ];
 const sharedPotion = [ "potion of healing", "scroll of draining", "scroll of power", "spell scroll", ];
 const commonBanner = [ "stalker's standard", "sheltering standard", "flaming standard", "aether icon", ];
@@ -17,6 +17,28 @@ const sharedBanner = [ "banner of courage", "banner of speed", "distortion emble
 const arcCompAll = commonWeapon.concat(sharedWeapon, commonArmour, sharedArmour, commonShield, sharedShield, commonArtefact, sharedArtefact, commonPotion, sharedPotion, commonBanner, sharedBanner);
 const arcCompCommon = commonWeapon.concat(commonArmour, commonShield, commonArtefact, commonPotion, commonBanner);
 const arcCompShared = sharedWeapon.concat(sharedArmour, sharedShield, sharedArtefact, sharedPotion, sharedBanner);
+
+const sharedItems = {
+    "bh" : [ "hero's heart", "supernatural dexterity", "death cheater", "mask of mindless violence", "potion of healing", "scroll of power", "spell scroll", "banner of courage", "banner of speed", "distortion emblem", ],
+    "de" : [ "hero's heart", "shield breaker", "supernatural dexterity", "death cheater", "mask of mindless violence", "potion of healing", "scroll of power", "spell scroll", "banner of courage", "banner of speed", ],
+    "dh" : [],
+    "dl" : [], // DL doesn't have items. Provide empty array to prevent "undefined" situations when looping over all armies
+    "eos" : [ "hero's heart", "ghostly guard", "dusk forged", "sigil of protection", "essence of a free mind", "scroll of draining", "scroll of power", "spell scroll", "distortion emblem", "rending banner", ],
+    "he" : [ "eldritch inscriptions", "supernatural dexterity", "ghostly guard", "dusk forged", "sigil of protection", "essence of a free mind", "obsidian rock", "rod of battle", "scroll of power", "distortion emblem", ],
+    "id" : [ "hero's heart", "shield breaker", "ghostly guard", "dusk forged", "sigil of protection", "essence of a free mind", "obsidian rock", "spell scroll", "banner of courage", "rending banner", ],
+    "koe" : [ "hero's heart", "shield breaker", "ghostly guard", "dusk forged", "sigil of protection", "potion of healing", "scroll of draining", "banner of courage", "banner of speed", "distortion emblem", ],
+    "ok" : [ "eldritch inscriptions", "hero's heart", "shield breaker", "death cheater", "rod of battle", "potion of healing", "scroll of draining", "scroll of power", "banner of courage", "banner of speed", ],
+    "ong" : [ "eldritch inscriptions", "shield breaker", "death cheater", "mask of mindless violence", "potion of healing", "scroll of draining", "spell scroll", "banner of courage", "banner of speed", "distortion emblem", ],
+    "sa" : [ "eldritch inscriptions", "shield breaker", "death cheater", "ghostly guard", "dusk forged", "essence of a free mind", "mask of mindless violence", "obsidian rock", "scroll of power", "rending banner", ],
+    "se" : [ "eldritch inscriptions", "supernatural dexterity", "ghostly guard", "essence of a free mind", "rod of battle", "obsidian rock", "potion of healing", "scroll of draining", "spell scroll", "rending banner", ],
+    "ud" : [ "hero's heart", "ghostly guard", "essence of a free mind", "obsidian rock", "scroll of draining", "scroll of power", "spell scroll", "banner of speed", "distortion emblem", ],
+    "vc" : [ "eldritch inscriptions", "supernatural dexterity", "death cheater", "ghostly guard", "dusk forged", "essence of a free mind", "mask of mindless violence", "obsidian rock", "rod of battle", "banner of speed", ],
+    "vs" : [ "eldritch inscriptions", "death cheater", "obsidian rock", "rod of battle", "potion of healing", "scroll of power", "spell scroll", "banner of courage", "banner of speed", "distortion emblem", ],
+    "wdg" : [ "hero's heart", "shield breaker", "supernatural dexterity", "death cheater", "dusk forged", "sigil of protection", "mask of mindless violence", "rod of battle", "spell scroll", "banner of speed", ],
+};
+
+
+
 
 // BH
 const bhItems = [
@@ -166,6 +188,7 @@ module.exports = {
     "arcCompShared" : arcCompShared,
     "allItems" : allItems,
     "armyItems" : armyItems,
+    "sharedItems": sharedItems,
     "bh" : bhItems,
     "de" : deItems,
     "dh" : dhItems,

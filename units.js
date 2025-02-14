@@ -880,18 +880,6 @@ const id = [
     "blackPowder" : 0,
   },
   {
-    "name" : "",
-    "category" : "special",
-    "firesOfIndustry" : 0,
-    "blackPowder" : 0,
-  },
-  {
-    "name" : "",
-    "category" : "special",
-    "firesOfIndustry" : 0,
-    "blackPowder" : 0,
-  },
-  {
     "name" : "kadim incarnates",
     "category" : "special",
     "firesOfIndustry" : 0,
