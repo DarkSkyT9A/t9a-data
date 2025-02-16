@@ -335,7 +335,7 @@ const dh = [
     "enginesOfWar" : 0,
   },
   {
-    "name" : "clan marksman",
+    "name" : "clan marksmen",
     "category" : "core",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
@@ -354,6 +354,12 @@ const dh = [
   },
   {
     "name" : "seekers",
+    "category" : "special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "brothers of vengeance",
     "category" : "special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
@@ -2109,32 +2115,50 @@ const wdg = [
   {
     "name" : "warriors",
     "category" : "core",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 10,
+    "max" : 25,
+
   },
   {
     "name" : "fallen",
     "category" : "core",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 5,
+    "max" : 15,
+
   },
   {
     "name" : "barbarians",
     "category" : "core",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 15,
+    "max" : 40,
+
   },
   {
     "name" : "barbarian horsemen",
     "category" : "core",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 5,
+    "max" : 15,
+
   },
   {
     "name" : "warhounds",
     "category" : "core",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 5,
+    "max" : 15,
+
   },
   {
     "name" : "warrior knights",
     "category" : "special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 5,
+    "max" : 10,
+
   },
   {
     "name" : "warrior chariot",
@@ -2144,12 +2168,18 @@ const wdg = [
   {
     "name" : "chosen",
     "category" : "special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 5,
+    "max" : 10,
+
   },
   {
     "name" : "chosen knights",
     "category" : "special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 3,
+    "max" : 4,
+
   },
   {
     "name" : "chosen chariot",
@@ -2164,17 +2194,25 @@ const wdg = [
   {
     "name" : "wretched ones",
     "category" : "special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 1,
+    "max" : 6,
+
   },
   {
     "name" : "forsworn",
     "category" : "special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 3,
+    "max" : 9,
+
   },
   {
     "name" : "feldraks",
     "category" : "special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 3,
+    "max" : 5,
   },
   {
     "name" : "battleshrine",
@@ -2184,7 +2222,9 @@ const wdg = [
   {
     "name" : "flayers",
     "category" : "special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "min" : 5,
+    "max" : 10,
   },
   {
     "name" : "hellmaw",

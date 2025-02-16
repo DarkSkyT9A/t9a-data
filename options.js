@@ -15,10 +15,14 @@ const spells = [
     "evil eye", "soured luck", "illusory paths", "cauldron's curse", "clouded sight", "mists of invisibility",
 ];
 const meleeWeapons = [ "great weapon", "great weapon and elven finesse", "halberd", "lance", "light lance", "paired weapons", "spear", "spear and shield" ];
-const shootingWeapons = [ "bow", "crossbow", "handgun", "longbow", "pistol", "throwing weapons", "breath attack" ];
+const shootingWeapons = [ "bow", "crossbow", "handgun", "longbow", "pistol", "throwing weapons", "breath attack", 
+    "repeater crossbow", "repeater handbow", 
+    "canister launcher", "deepfire thrower", "rotary gun", "jezail", "jezail and shield",
+    "skinning lash",  ];
 const commandGroup = [ "standard bearer", "musician",  ];
+
 const leadership = [ "general", "battle standard bearer", "captain and attached", "general, orders, and +1 cou", "battle standard bearer and orders", 
-    "general and the dead arise", "general, disciplined, and the dead arise", 
+    "general and the dead arise", "general, disciplined, and the dead arise", "general, orders, +1 cou", "exclusive",  
 ];
 const mounts = [ "light troops", "light troops and ambush",
     "raiding chariot", "razortusk chariot", 
@@ -38,9 +42,23 @@ const mounts = [ "light troops", "light troops and ambush",
     "senatorial litter", "praetorian brute", "triumphal platform", "sacred platform", 
     "black steed", "shadow chaser", "scythed skywheel", "war dais", "dark chariot", "battleshrine", "karkadan", "chimera", "wasteland behemoth", "wasteland dragon",
 ];
-const specialistSkills = [ "trusted adviser", "glory hunter", "curse of lycanthropy", ];
+const specialistSkills = [ "trusted adviser", "glory hunter", "curse of lycanthropy", "battleline hero", "innovative leader"];
+
 // TODO Still to implement
-const armour = [ "shield", "shields", "spiked shield", ];
+const armour = [ "shield", "spiked shield", ];
+
+
+/** Army Specific */
+// VS
+const mortalOrigin = [ "pontifex maximus", "i am the senate", "lord of the legion", ];
+const patronDeity = [ "girded by acratos", "fortified by udius", "enlightened by favana", ];
+const house = [ "fetthis fleshmaster", "rakachit technocrat", "skorchit alchemist", "stygian overseer", ];
+
+
+// WDG
+const favour = [ "envy", "gluttony", "greed", "lust", "pride", "sloth", "wrath", ];
+const darkGodGift = [ "daemonic wings", "dark prelate", "entropic aura", "idol of spite", "luck of the dark gods", ];
+
 
 // exports
 module.exports = {
@@ -53,5 +71,13 @@ module.exports = {
     leadership,
     mounts,
     specialistSkills,
+    armour,
+  
+    mortalOrigin,
+    patronDeity,
+    house,
+    darkGodGift,
+    favour,
+  
 };
   

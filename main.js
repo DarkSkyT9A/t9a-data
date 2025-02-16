@@ -305,10 +305,21 @@ function calculatePickRates() {
           continue;
         }
         else if(option === 'models') {
+          const armyUnits = require("./units.js")[army];
           pickRates[army].units[unit].options.models = pickRates[army].units[unit].options.models || {};
-          pickRates[army].units[unit].options.models.average = `Ø ${(rawData[army].picks[unit][option].reduce((a,b)=>a+b,0) / pickSum).toFixed(1)}`;
-          // TODO units[army].filter/findFirst((e)=> e.name = unit).minSize & .maxSize bzw direct SML berechnen
+          pickRates[army].units[unit].options.models.Ø = `${(rawData[army].picks[unit][option].reduce((a,b)=>a+b,0) / pickSum).toFixed(1).padStart(4, " ")}`;
+          console.log(`unit ${unit}`);
+          // TODO Remove conditional chaining here, to find all missing or problematic unit entries
+          let min = armyUnits.find((e) => e.name === unit)?.min;
+          let max = armyUnits.find((e) => e.name === unit)?.max;
+          if(min && max) {
+            let smallUntil = Math.floor(min + (max-min)/4);
+            let mediumUntil = Math.floor(min + (max-min)*2/3);
 
+            pickRates[army].units[unit].options.models.small = `${(rawData[army].picks[unit][option].filter((a)=>a<=smallUntil).length * 100 / pickSum).toFixed(0).padStart(3, " ")}%`;
+            pickRates[army].units[unit].options.models.medium = `${(rawData[army].picks[unit][option].filter((a)=>a>smallUntil && a<=mediumUntil).length * 100 / pickSum).toFixed(0).padStart(3, " ")}%`;
+            pickRates[army].units[unit].options.models.large = `${(rawData[army].picks[unit][option].filter((a)=>a>mediumUntil).length * 100 / pickSum).toFixed(0).padStart(3, " ")}%`;
+          }
         } else {
           // Sort the options into the appropriate category
           if(options.meleeWeapons.includes(option)) {
@@ -331,9 +342,27 @@ function calculatePickRates() {
           } else if(options.leadership.includes(option)) {
             pickRates[army].units[unit].options.leadership = pickRates[army].units[unit].options.leadership || {};
             pickRates[army].units[unit].options.leadership[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.armour.includes(option)) {
+            pickRates[army].units[unit].options.armour = pickRates[army].units[unit].options.armour || {};
+            pickRates[army].units[unit].options.armour[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
           } else if(options.specialistSkills.includes(option)) {
             pickRates[army].units[unit].options.specialistSkills = pickRates[army].units[unit].options.specialistSkills || {};
             pickRates[army].units[unit].options.specialistSkills[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.patronDeity.includes(option)) {
+            pickRates[army].units[unit].options.patronDeity = pickRates[army].units[unit].options.patronDeity || {};
+            pickRates[army].units[unit].options.patronDeity[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.house.includes(option)) {
+            pickRates[army].units[unit].options.house = pickRates[army].units[unit].options.house || {};
+            pickRates[army].units[unit].options.house[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.mortalOrigin.includes(option)) {
+            pickRates[army].units[unit].options.mortalOrigin = pickRates[army].units[unit].options.mortalOrigin || {};
+            pickRates[army].units[unit].options.mortalOrigin[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.favour.includes(option)) {
+            pickRates[army].units[unit].options.favour = pickRates[army].units[unit].options.favour || {};
+            pickRates[army].units[unit].options.favour[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.darkGodGift.includes(option)) {
+            pickRates[army].units[unit].options.darkGodGift = pickRates[army].units[unit].options.darkGodGift || {};
+            pickRates[army].units[unit].options.darkGodGift[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
           } else if(options.mounts.includes(option)) {
             pickRates[army].units[unit].options.mounts = pickRates[army].units[unit].options.mounts || {};
             pickRates[army].units[unit].options.mounts[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
