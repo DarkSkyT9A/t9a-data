@@ -13,23 +13,32 @@ Prerequisites: `git` and Node.js need to be installed. Recommendation is to use 
 ## Parameters
 
 Instead of npm start you can use `node ./main.js -e -p -o -r --minParticipants=12 --type=all --start=5-5-2024 --end=5-5-2024`
+
 Everything after node ./main.js tells this tool what to show, and you can use this to better filter your results.
+
 As an example: `node ./main.js -e --minParticipants=20 --type=teams` will show only the external balance (-e) of tournaments with at least 20 participants (--minParticipants=20) and only team tournaments (--type=teams)
 
 ### --minParticipants=X
 
 Can be used to let out tournaments with less participants than desired.
 
+
 X here can be any number.
+
 Example: `--minParticipants=12`
+
 That will show only tournaments with at least 12 participants.
+
 **Note:** When filtering team tournaments this will show tournaments with X or more _teams_.
+
 
 ### --type=X
 
 Can be used to filter only singles, teams or all tournaments.
 
+
 X can be single, teams or all
+
 Example: `--type=teams`
 
 ### -e
