@@ -308,7 +308,7 @@ function calculatePickRates() {
           const armyUnits = require("./units.js")[army];
           pickRates[army].units[unit].options.models = pickRates[army].units[unit].options.models || {};
           pickRates[army].units[unit].options.models.Ø = `${(rawData[army].picks[unit][option].reduce((a,b)=>a+b,0) / pickSum).toFixed(1).padStart(4, " ")}`;
-          console.log(`unit ${unit}`);
+          // console.log(`unit ${unit}`);
           // TODO Remove conditional chaining here, to find all missing or problematic unit entries
           let min = armyUnits.find((e) => e.name === unit)?.min;
           let max = armyUnits.find((e) => e.name === unit)?.max;
@@ -395,7 +395,8 @@ function calculatePickRates() {
 (async () => {
   try {
     // Evaluate Command Line Arguments
-    // console.log(args);
+    const debug = args.d ? true : false;
+    if(debug) console.log(args);
     const tournamentType = args.type || 'single';
     const showExternalBalance = args.e ? true : false;
     const showPickRates = args.p ? true : false;
@@ -429,7 +430,7 @@ function calculatePickRates() {
     let armyResults = { };
 
     for(let t of data) {
-      console.log(`Assessing tournament: ${t.name}`);
+      if(debug) console.log(`Assessing tournament: ${t.name}`);
       const reportsResponse = await superagent
       .post('https://www.newrecruit.eu/api/reports')
       .send({ "id_tournament": t._id })
@@ -437,14 +438,16 @@ function calculatePickRates() {
       .set("user-agent", "t9a-data/0.0.1");
 
       const validResults = reportsResponse.body.filter((r) => r.handshake === false && typeof r.players[0].id_book === "number" && typeof r.players[1].id_book === "number");
-      // console.log(`Filtered out ${reportsResponse.body.length - validResults.length} invalid reports`);
+      if(debug) console.log(`Filtered out ${reportsResponse.body.length - validResults.length} invalid reports`);
 
       for(let result of validResults) {
         totalAmountOfGames++;
-        // console.log(`Game Result: Army '${result.players[0].id_book}' vs Army '${result.players[1].id_book}' → ${result.score[0].BPObj} : ${result.score[1].BPObj}`);
-        // console.log(`Game Result: List ${result.players[0].exported_list} vs Army ${result.players[1].exported_list}`);
-        // console.log(`Game Result: Score ${JSON.stringify(result.score, null, 4)}`);
-        // console.log(`Game Result: ${JSON.stringify(result.players[0].report_list, null, 4)}`);
+        if(debug) {
+          console.log(`Game Result: Army '${result.players[0].id_book}' vs Army '${result.players[1].id_book}' → ${result.score[0].BPObj} : ${result.score[1].BPObj}`);
+          console.log(`Game Result: List ${result.players[0].exported_list} vs Army ${result.players[1].exported_list}`);
+          console.log(`Game Result: Score ${JSON.stringify(result.score, null, 4)}`);
+          // console.log(`Game Result: ${JSON.stringify(result.players[0].report_list, null, 4)}`);
+        }
 
         /** GAME RESULT **/
         // Add new entries, if they do not exist yet
