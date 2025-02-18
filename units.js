@@ -1890,72 +1890,96 @@ const ud = [
     "category" : "core",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "min" : 20,
+    "max" : 60,
   },
   {
     "name" : "skeleton archers",
     "category" : "core",
     "aspisArrows" : 1,
     "deathFromAfar" : 0,
+    "min" : 15,
+    "max" : 30,
   },
   {
     "name" : "skeleton cavalry",
     "category" : "core",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "min" : 10,
+    "max" : 24,
   },
   {
     "name" : "skeleton scouts",
     "category" : "core",
     "aspisArrows" : 1,
     "deathFromAfar" : 0,
+    "min" : 5,
+    "max" : 10,
   },
   {
     "name" : "skeleton chariots",
     "category" : "core",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "min" : 3,
+    "max" : 7,
   },
   {
     "name" : "necropolis guard",
     "category" : "special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "min" : 15,
+    "max" : 40,
   },
   {
     "name" : "tomb cataphracts",
     "category" : "special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "min" : 3,
+    "max" : 5,
   },
   {
     "name" : "shabtis",
     "category" : "special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "min" : 3,
+    "max" : 8,
   },
   {
     "name" : "shabti archers",
     "category" : "special",
     "aspisArrows" : 2,
     "deathFromAfar" : 0,
+    "min" : 3,
+    "max" : 6,
   },
   {
     "name" : "great vultures",
     "category" : "special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "min" : 3,
+    "max" : 9,
   },
   {
     "name" : "scarab swarms",
     "category" : "special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "min" : 3,
+    "max" : 6,
   },
   {
     "name" : "sand stalkers",
     "category" : "special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "min" : 3,
+    "max" : 4,
   },
   {
     "name" : "casket of phatep",
@@ -1992,6 +2016,8 @@ const ud = [
     "category" : "mason's menagerie",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "min" : 2,
+    "max" : 4,
   },
   {
     "name" : "colossus",
@@ -2026,38 +2052,56 @@ const vc = [
   {
     "name" : "zombies",
     "category" : "core",
+    "min" : 20,
+    "max" : 80,
   },
   {
     "name" : "skeletons",
     "category" : "core",
+    "min" : 20,
+    "max" : 60,
   },
   {
     "name" : "ghouls",
     "category" : "core",
+    "min" : 15,
+    "max" : 40,
   },
   {
     "name" : "bat swarms",
     "category" : "core",
+    "min" : 3,
+    "max" : 6,
   },
   {
     "name" : "dire wolves",
     "category" : "core",
+    "min" : 8,
+    "max" : 15,
   },
   {
     "name" : "great bats",
     "category" : "special",
+    "min" : 2,
+    "max" : 9,
   },
   {
     "name" : "ghasts",
     "category" : "special",
+    "min" : 3,
+    "max" : 8,
   },
   {
     "name" : "barrow guard",
     "category" : "special",
+    "min" : 15,
+    "max" : 40,
   },
   {
     "name" : "barrow knights",
     "category" : "special",
+    "min" : 5,
+    "max" : 15,
   },
   {
     "name" : "cadaver wagon",
@@ -2078,22 +2122,32 @@ const vc = [
   {
     "name" : "phantom hosts",
     "category" : "the suffering",
+    "min" : 3,
+    "max" : 6,
   },
   {
     "name" : "wraiths",
     "category" : "the suffering",
+    "min" : 5,
+    "max" : 10,
   },
   {
     "name" : "spectral hunters",
     "category" : "the suffering",
+    "min" : 5,
+    "max" : 10,
   },
   {
     "name" : "vampire knights",
     "category" : "swift death",
+    "min" : 3,
+    "max" : 6,
   },
   {
     "name" : "vampire spawn",
     "category" : "swift death",
+    "min" : 3,
+    "max" : 6,
   },
   {
     "name" : "varkolak",
@@ -2102,6 +2156,8 @@ const vc = [
   {
     "name" : "winged reapers",
     "category" : "swift death",
+    "min" : 2,
+    "max" : 4,
   },
   {
     "name" : "shrieking horror",
@@ -2144,49 +2200,74 @@ const vs = [
   {
     "name" : "vermin slingers",
     "category" : "core",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "min" : 20,
+    "max" : 30,
   },
   {
     "name" : "vermin legionaries",
     "category" : "core",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "min" : 25,
+    "max" : 60,
   },
   {
     "name" : "blackfur veterans",
     "category" : "core",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "min" : 20,
+    "max" : 40,
   },
   {
     "name" : "vermin slaves",
     "category" : "core",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "min" : 30,
+    "max" : 60,
   },
   {
     "name" : "plague cultists",
     "category" : "core",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "min" : 20,
+    "max" : 40,
+  },
+  {
+    "name" : "plague disciples",
+    "category" : "core",
+    "experimentalWeapon" : 0,
+    "min" : 15,
+    "max" : 40,
   },
   {
     "name" : "giant rats",
     "category" : "core",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "min" : 10,
+    "max" : 30,
   },
   {
     "name" : "rat swarm",
     "category" : "special",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "min" : 3,
+    "max" : 6,
   },
   {
     "name" : "vermin brutes",
     "category" : "special",
     "experimentalWeapon" : 0,
     "bruteForce" : 1,
+    "min" : 6,
+    "max" : 12,
   },
   {
     "name" : "gladiator brutes",
     "category" : "special",
     "experimentalWeapon" : 0,
     "bruteForce" : 1,
+    "min" : 3,
+    "max" : 6,
   },
   {
     "name" : "legionary drill team",
@@ -2196,7 +2277,9 @@ const vs = [
   {
     "name" : "shadowfur stalkers",
     "category" : "special",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "min" : 10,
+    "max" : 15,
   },
   {
     "name" : "doomspark device",
@@ -2208,6 +2291,8 @@ const vs = [
     "category" : "special",
     "experimentalWeapon" : 0,
     "bruteForce" : 1,
+    "min" : 3,
+    "max" : 6,
   },
   {
     "name" : "ignifier grenadiers",
@@ -2217,7 +2302,9 @@ const vs = [
   {
     "name" : "experimental weapon teams",
     "category" : "special",
-    "experimentalWeapon" : 1
+    "experimentalWeapon" : 1,
+    "min" : 3,
+    "max" : 6,
   },
   {
     "name" : "vermin artillery",
@@ -2232,7 +2319,9 @@ const vs = [
   {
     "name" : "dreadmill chariots",
     "category" : "bread and games",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "min" : 1,
+    "max" : 3,
   },
   {
     "name" : "arena beast",
@@ -2280,7 +2369,6 @@ const wdg = [
     "legendaryBeast" : 0,
     "min" : 10,
     "max" : 25,
-
   },
   {
     "name" : "fallen",
