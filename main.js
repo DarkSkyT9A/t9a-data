@@ -338,7 +338,7 @@ function calculatePickRates() {
             pickRates[army].units[unit].options.paths = pickRates[army].units[unit].options.paths || {};
             pickRates[army].units[unit].options.paths[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
           } else if(options.spells.includes(option)) {
-            // Skip, tracking spells is useless            
+            // Skip, tracking spells is useless
           } else if(options.leadership.includes(option)) {
             pickRates[army].units[unit].options.leadership = pickRates[army].units[unit].options.leadership || {};
             pickRates[army].units[unit].options.leadership[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
@@ -374,7 +374,7 @@ function calculatePickRates() {
           else {
             pickRates[army].units[unit].options.other = pickRates[army].units[unit].options.other || {};
             pickRates[army].units[unit].options.other[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
-            
+
           }
           // pickRates[army].units[unit].options[option] = `${(rawData[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
         }
@@ -429,6 +429,7 @@ function calculatePickRates() {
     let armyResults = { };
 
     for(let t of data) {
+      console.log(`Assessing tournament: ${t.name}`);
       const reportsResponse = await superagent
       .post('https://www.newrecruit.eu/api/reports')
       .send({ "id_tournament": t._id })
@@ -487,7 +488,7 @@ function printMetaData(tournaments, games, start, end) {
   console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
   console.log(`┃ Time frame from ${start} until ${end}                                  ┃`);
   console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
-  
+
 }
 
 function printArmyResults() {
