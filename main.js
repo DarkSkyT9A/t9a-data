@@ -316,9 +316,9 @@ function calculatePickRates() {
             let smallUntil = Math.floor(min + (max-min)/4);
             let mediumUntil = Math.floor(min + (max-min)*2/3);
 
-            pickRates[army].units[unit].options.models.small = `${(rawData[army].picks[unit][option].filter((a)=>a<=smallUntil).length * 100 / pickSum).toFixed(0).padStart(3, " ")}%`;
-            pickRates[army].units[unit].options.models.medium = `${(rawData[army].picks[unit][option].filter((a)=>a>smallUntil && a<=mediumUntil).length * 100 / pickSum).toFixed(0).padStart(3, " ")}%`;
-            pickRates[army].units[unit].options.models.large = `${(rawData[army].picks[unit][option].filter((a)=>a>mediumUntil).length * 100 / pickSum).toFixed(0).padStart(3, " ")}%`;
+            pickRates[army].units[unit].options.models[`small  (${min}-${smallUntil})`] = `${(rawData[army].picks[unit][option].filter((a)=>a<=smallUntil).length * 100 / pickSum).toFixed(0).padStart(3, " ")}%`;
+            pickRates[army].units[unit].options.models[`medium (${smallUntil+1}-${mediumUntil})`] = `${(rawData[army].picks[unit][option].filter((a)=>a>smallUntil && a<=mediumUntil).length * 100 / pickSum).toFixed(0).padStart(3, " ")}%`;
+            pickRates[army].units[unit].options.models[`large  (${mediumUntil+1}-${max})`] = `${(rawData[army].picks[unit][option].filter((a)=>a>mediumUntil).length * 100 / pickSum).toFixed(0).padStart(3, " ")}%`;
           }
         } else {
           // Sort the options into the appropriate category
