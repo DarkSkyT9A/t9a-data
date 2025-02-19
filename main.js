@@ -408,7 +408,11 @@ function calculatePickRates() {
 
     const tournamentsResponse = await superagent
     .post('https://www.newrecruit.eu/api/tournaments')
-    .send({ "start": start, "end": end })
+    .send({
+      "start": start,
+      "end": end,
+      "status" : 3,
+      "id_game_system" : 6 })
     .set("accept", "json")
     .set("user-agent", "t9a-data/0.0.1")
 
@@ -416,11 +420,14 @@ function calculatePickRates() {
     let totalAmountOfGames = 0;
 
     if(tournamentType === 'single') {
-      data = tournamentsResponse.body.filter((tournament) => tournament.id_game_system === 6 && tournament.status === 3 && tournament.type === 0 && tournament.scoring_system === 11 && tournament.participants >= minParticipants);
+      data = tournamentsResponse.body.filter((tournament) => tournament.type === 0 && tournament.scoring_system === 11 && tournament.participants >= minParticipants);
     } else if(tournamentType === 'teams') {
-      data = tournamentsResponse.body.filter((tournament) => tournament.id_game_system === 6 && tournament.status === 3 && tournament.type === 1 && tournament.scoring_system === 11 && tournament.participants >= minParticipants);
+      data = tournamentsResponse.body.filter((tournament) => tournament.type === 1 && tournament.scoring_system === 11 && (tournament.participants * tournament.participants_per_team) >= minParticipants);
     } else if(tournamentType === 'all') {
-      data = tournamentsResponse.body.filter((tournament) => tournament.id_game_system === 6 && tournament.status === 3 && tournament.scoring_system === 11 && tournament.participants >= minParticipants);
+      data = tournamentsResponse.body.filter((tournament) => {
+        let players = tournament.type === 0 ? tournament.participants : tournament.participants * tournament.participants_per_team;
+        return tournament.scoring_system === 11 && players >= minParticipants;
+      });
     } else {
       console.log(`Error: Tournament Type of ${tournamentType} is not supported. Use 'single', 'teams', or 'all'`);
       process.exit(1);
