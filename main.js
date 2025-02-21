@@ -18,7 +18,7 @@ const commonItemNames = require('./specialItems.js').arcCompCommon;
 const options = require('./options.js');
 
 const date = new Date();
-const today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+const today = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
 
 // Results
 let resultData = {
@@ -83,6 +83,14 @@ let rawData = {
     "vs" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
     "wdg" : { "games" : { "missingLists" : 0, "availableLists": 0, "playedGames": 0 } },
   },
+  "global" : {
+    "amountOfTournaments" : 0,
+    "gamesCount" : 0,
+    "pointsByTurn" : {
+      "first" : [],
+      "second" : [],
+    },
+  }
 };
 
 // Pick Rates
@@ -226,6 +234,16 @@ function calculateArmyResults(armyResults) {
     }
   }
 
+  // Calculate rank
+  const allAverages = [
+    parseFloat(resultData.bh.all.avg),    parseFloat(resultData.de.all.avg),    parseFloat(resultData.dh.all.avg),    parseFloat(resultData.dl.all.avg),
+    parseFloat(resultData.eos.all.avg),    parseFloat(resultData.he.all.avg),    parseFloat(resultData.id.all.avg),    parseFloat(resultData.koe.all.avg),
+    parseFloat(resultData.ok.all.avg),    parseFloat(resultData.ong.all.avg),    parseFloat(resultData.sa.all.avg),    parseFloat(resultData.se.all.avg),
+    parseFloat(resultData.ud.all.avg),    parseFloat(resultData.vc.all.avg),    parseFloat(resultData.vs.all.avg),    parseFloat(resultData.wdg.all.avg),
+  ]
+  for(let armyString in resultData) {
+    resultData[armyString].all.rank = (allAverages.filter(x => x > parseFloat(resultData[armyString].all.avg)).length + 1).toString().padStart(2, " ");
+  }
 }
 
 
@@ -430,7 +448,6 @@ function calculatePickRates() {
     .set("user-agent", "t9a-data/0.0.1")
 
     let data;
-    let totalAmountOfGames = 0;
 
     if(tournamentType === 'single') {
       data = tournamentsResponse.body.filter((tournament) => tournament.type === 0 && tournament.scoring_system === 11 && tournament.participants >= minParticipants);
@@ -446,10 +463,8 @@ function calculatePickRates() {
       process.exit(1);
     }
 
-    let amountOfTournaments = data.length;
+    rawData.global.amountOfTournaments = data.length;
     let armyResults = { };
-    let firstData = [];
-    let secondData = [];
 
     for(let t of data) {
       if(debug) console.log(`Assessing tournament: ${t.name}`);
@@ -463,7 +478,7 @@ function calculatePickRates() {
       if(debug) console.log(`Filtered out ${reportsResponse.body.length - validResults.length} invalid reports`);
 
       for(let result of validResults) {
-        totalAmountOfGames++;
+        rawData.global.gamesCount++
         
         if(debug) {
           console.log(`Game Result: Army '${result.players[0].id_book}' vs Army '${result.players[1].id_book}' → ${result.score[0].BPObj} : ${result.score[1].BPObj}`);
@@ -496,11 +511,11 @@ function calculatePickRates() {
 
         // Push result to global counters
         if(result.first_turn === 0) {
-          firstData.push(result.score[0].BPObj);
-          secondData.push(result.score[1].BPObj)
+          rawData.global.pointsByTurn.first.push(result.score[0].BPObj);
+          rawData.global.pointsByTurn.second.push(result.score[1].BPObj);
         } else if(result.first_turn === 1) {
-          firstData.push(result.score[1].BPObj);
-          secondData.push(result.score[0].BPObj)
+          rawData.global.pointsByTurn.first.push(result.score[1].BPObj);
+          rawData.global.pointsByTurn.second.push(result.score[0].BPObj);
         } else {
           console.log(`\nERROR: First turn is neither 0 nor 1.\n`);
         }
@@ -509,8 +524,8 @@ function calculatePickRates() {
         addListsToAnalysis(result);
       }
     }
-    printMetaData(`${amountOfTournaments}`, `${totalAmountOfGames}`, start, end);
-    printGlobalData(firstData, secondData);
+    printMetaData(start, end);
+    printGlobalData();
     calculateArmyResults(armyResults);
     if(showExternalBalance) printArmyResults();
     calculatePickRates();
@@ -527,119 +542,102 @@ function calculatePickRates() {
   }
 })();
 
-function printMetaData(tournaments, games, start, end) {
+function printMetaData(start, end) {
   console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
-  console.log(`┃ T9A Data Tool Meta Data                                                     ┃`);
+  console.log(`┃ \x1b[1mT9A Data Tool Meta Data\x1b[0m                                                     ┃`);
   console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
-  console.log(`┃ Tournaments in Calculation: ${tournaments.padEnd(6, " ")}                                          ┃`);
+  console.log(`┃ Tournaments in Calculation: ${rawData.global.amountOfTournaments.toString().padEnd(6, " ")}                                          ┃`);
   console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
-  console.log(`┃ Total amount of games: ${games.padEnd(5, " ")}                                                ┃`);
+  console.log(`┃ Total amount of games: ${rawData.global.gamesCount.toString().padEnd(5, " ")}                                                ┃`);
   console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
-  console.log(`┃ Time frame from ${start} until ${end}                                  ┃`);
+  console.log(`┃ Time frame from ${start} until ${end}                                 ┃`);
   console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
 
 }
 
-function printGlobalData(firstData, secondData) {
-  let firstCount = firstData.length;
-  let secondCount = secondData.length;
-  let firstAvg = (firstData.reduce((a,b)=>a+b, 0) / firstCount).toFixed(1).padStart(4, " ");
-  let secondAvg = (secondData.reduce((a,b)=>a+b, 0) / secondCount).toFixed(1).padStart(4, " ");
+function printGlobalData() {
+  let firstCount = rawData.global.pointsByTurn.first.length;
+  let secondCount = rawData.global.pointsByTurn.second.length;
+  if(firstCount !== secondCount) {
+    console.log(`\n~~~~ ERROR - Inconsistent data, first turns and second turns are not counting equal.\n~~~~~~~~~~~~~~~~~~~~~~\n\n\n`);
+  }
+  let firstAvg = (rawData.global.pointsByTurn.first.reduce((a,b)=>a+b, 0) / firstCount).toFixed(1).padStart(4, " ");
+  let secondAvg = (rawData.global.pointsByTurn.second.reduce((a,b)=>a+b, 0) / secondCount).toFixed(1).padStart(4, " ");
 
-  let decisive = firstData.filter(a => a>=18 || a<=2).length;
-  let normal = firstData.filter(a => (a>2 && a<7) || (a>13 && a<18)).length;
-  let close = firstData.filter(a => a>6 && a<14).length;
+  let decisive = rawData.global.pointsByTurn.first.filter(a => a>=18 || a<=2).length.toString().padStart(5, " ");
+  let normal = rawData.global.pointsByTurn.first.filter(a => (a>2 && a<7) || (a>13 && a<18)).length.toString().padStart(5, " ");
+  let close = rawData.global.pointsByTurn.first.filter(a => a>6 && a<14).length.toString().padStart(5, " ");
 
   console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
-  console.log(`┃ Game Wide Data                                                              ┃`);
+  console.log(`┃ \x1b[1mGame Wide Data\x1b[0m                                                              ┃`);
   console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
   console.log(`┃ Average points going first:  ${firstAvg}                                           ┃`);
   console.log(`┃ Average points going second: ${secondAvg}                                           ┃`);
   console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
-  console.log(`┃ Decisive Games (18-20): ${decisive} / ${(decisive*100/firstCount).toFixed(0).padStart(3, " ")}%                                          ┃`);
-  console.log(`┃ 'Normal' Games (14-17): ${normal} / ${(normal*100/firstCount).toFixed(0).padStart(3, " ")}%                                          ┃`);
-  console.log(`┃ Close    Games (10-13): ${close} / ${(close*100/firstCount).toFixed(0).padStart(3, " ")}%                                          ┃`);
+  console.log(`┃ Decisive Games (18-20): ${decisive} / ${(decisive*100/firstCount).toFixed(0).padStart(3, " ")}%                                        ┃`);
+  console.log(`┃ 'Normal' Games (14-17): ${normal} / ${(normal*100/firstCount).toFixed(0).padStart(3, " ")}%                                        ┃`);
+  console.log(`┃ Close    Games (10-13): ${close} / ${(close*100/firstCount).toFixed(0).padStart(3, " ")}%                                        ┃`);
   console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
 
 }
 
 function printArmyResults() {
-  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
-  console.log(`┃ Tournament Type: ${(args.type || 'Single').padEnd(43, " ") } – Average Points                                                              ┃`);
-  console.log(`┣━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┳━━━━━━━┯━━━━━━┯━━━━━━┫`);
-  console.log(`┃POINTS┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃ Total │  1st │  2nd ┃`);
-  console.log(`┣━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━╋━━━━━━━┿━━━━━━┿━━━━━━┫`);
-  console.log(`┃ BH   ┃ ${resultData.bh.bh.avg} │ ${resultData.bh.de.avg} │ ${resultData.bh.dh.avg} │ ${resultData.bh.dl.avg} │ ${resultData.bh.eos.avg} │ ${resultData.bh.he.avg} │ ${resultData.bh.id.avg} │ ${resultData.bh.koe.avg} │ ${resultData.bh.ok.avg} │ ${resultData.bh.ong.avg} │ ${resultData.bh.sa.avg} │ ${resultData.bh.se.avg} │ ${resultData.bh.ud.avg} │ ${resultData.bh.vc.avg} │ ${resultData.bh.vs.avg} │ ${resultData.bh.wdg.avg} ┃  ${resultData.bh.all.avg} │ ${resultData.bh.all.first} │ ${resultData.bh.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ DE   ┃ ${resultData.de.bh.avg} │ ${resultData.de.de.avg} │ ${resultData.de.dh.avg} │ ${resultData.de.dl.avg} │ ${resultData.de.eos.avg} │ ${resultData.de.he.avg} │ ${resultData.de.id.avg} │ ${resultData.de.koe.avg} │ ${resultData.de.ok.avg} │ ${resultData.de.ong.avg} │ ${resultData.de.sa.avg} │ ${resultData.de.se.avg} │ ${resultData.de.ud.avg} │ ${resultData.de.vc.avg} │ ${resultData.de.vs.avg} │ ${resultData.de.wdg.avg} ┃  ${resultData.de.all.avg} │ ${resultData.de.all.first} │ ${resultData.de.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ DH   ┃ ${resultData.dh.bh.avg} │ ${resultData.dh.de.avg} │ ${resultData.dh.dh.avg} │ ${resultData.dh.dl.avg} │ ${resultData.dh.eos.avg} │ ${resultData.dh.he.avg} │ ${resultData.dh.id.avg} │ ${resultData.dh.koe.avg} │ ${resultData.dh.ok.avg} │ ${resultData.dh.ong.avg} │ ${resultData.dh.sa.avg} │ ${resultData.dh.se.avg} │ ${resultData.dh.ud.avg} │ ${resultData.dh.vc.avg} │ ${resultData.dh.vs.avg} │ ${resultData.dh.wdg.avg} ┃  ${resultData.dh.all.avg} │ ${resultData.dh.all.first} │ ${resultData.dh.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ DL   ┃ ${resultData.dl.bh.avg} │ ${resultData.dl.de.avg} │ ${resultData.dl.dh.avg} │ ${resultData.dl.dl.avg} │ ${resultData.dl.eos.avg} │ ${resultData.dl.he.avg} │ ${resultData.dl.id.avg} │ ${resultData.dl.koe.avg} │ ${resultData.dl.ok.avg} │ ${resultData.dl.ong.avg} │ ${resultData.dl.sa.avg} │ ${resultData.dl.se.avg} │ ${resultData.dl.ud.avg} │ ${resultData.dl.vc.avg} │ ${resultData.dl.vs.avg} │ ${resultData.dl.wdg.avg} ┃  ${resultData.dl.all.avg} │ ${resultData.dl.all.first} │ ${resultData.dl.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ EoS  ┃ ${resultData.eos.bh.avg} │ ${resultData.eos.de.avg} │ ${resultData.eos.dh.avg} │ ${resultData.eos.dl.avg} │ ${resultData.eos.eos.avg} │ ${resultData.eos.he.avg} │ ${resultData.eos.id.avg} │ ${resultData.eos.koe.avg} │ ${resultData.eos.ok.avg} │ ${resultData.eos.ong.avg} │ ${resultData.eos.sa.avg} │ ${resultData.eos.se.avg} │ ${resultData.eos.ud.avg} │ ${resultData.eos.vc.avg} │ ${resultData.eos.vs.avg} │ ${resultData.eos.wdg.avg} ┃  ${resultData.eos.all.avg} │ ${resultData.eos.all.first} │ ${resultData.eos.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ HE   ┃ ${resultData.he.bh.avg} │ ${resultData.he.de.avg} │ ${resultData.he.dh.avg} │ ${resultData.he.dl.avg} │ ${resultData.he.eos.avg} │ ${resultData.he.he.avg} │ ${resultData.he.id.avg} │ ${resultData.he.koe.avg} │ ${resultData.he.ok.avg} │ ${resultData.he.ong.avg} │ ${resultData.he.sa.avg} │ ${resultData.he.se.avg} │ ${resultData.he.ud.avg} │ ${resultData.he.vc.avg} │ ${resultData.he.vs.avg} │ ${resultData.he.wdg.avg} ┃  ${resultData.he.all.avg} │ ${resultData.he.all.first} │ ${resultData.he.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ ID   ┃ ${resultData.id.bh.avg} │ ${resultData.id.de.avg} │ ${resultData.id.dh.avg} │ ${resultData.id.dl.avg} │ ${resultData.id.eos.avg} │ ${resultData.id.he.avg} │ ${resultData.id.id.avg} │ ${resultData.id.koe.avg} │ ${resultData.id.ok.avg} │ ${resultData.id.ong.avg} │ ${resultData.id.sa.avg} │ ${resultData.id.se.avg} │ ${resultData.id.ud.avg} │ ${resultData.id.vc.avg} │ ${resultData.id.vs.avg} │ ${resultData.id.wdg.avg} ┃  ${resultData.id.all.avg} │ ${resultData.id.all.first} │ ${resultData.id.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ KoE  ┃ ${resultData.koe.bh.avg} │ ${resultData.koe.de.avg} │ ${resultData.koe.dh.avg} │ ${resultData.koe.dl.avg} │ ${resultData.koe.eos.avg} │ ${resultData.koe.he.avg} │ ${resultData.koe.id.avg} │ ${resultData.koe.koe.avg} │ ${resultData.koe.ok.avg} │ ${resultData.koe.ong.avg} │ ${resultData.koe.sa.avg} │ ${resultData.koe.se.avg} │ ${resultData.koe.ud.avg} │ ${resultData.koe.vc.avg} │ ${resultData.koe.vs.avg} │ ${resultData.koe.wdg.avg} ┃  ${resultData.koe.all.avg} │ ${resultData.koe.all.first} │ ${resultData.koe.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ OK   ┃ ${resultData.ok.bh.avg} │ ${resultData.ok.de.avg} │ ${resultData.ok.dh.avg} │ ${resultData.ok.dl.avg} │ ${resultData.ok.eos.avg} │ ${resultData.ok.he.avg} │ ${resultData.ok.id.avg} │ ${resultData.ok.koe.avg} │ ${resultData.ok.ok.avg} │ ${resultData.ok.ong.avg} │ ${resultData.ok.sa.avg} │ ${resultData.ok.se.avg} │ ${resultData.ok.ud.avg} │ ${resultData.ok.vc.avg} │ ${resultData.ok.vs.avg} │ ${resultData.ok.wdg.avg} ┃  ${resultData.ok.all.avg} │ ${resultData.ok.all.first} │ ${resultData.ok.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ OnG  ┃ ${resultData.ong.bh.avg} │ ${resultData.ong.de.avg} │ ${resultData.ong.dh.avg} │ ${resultData.ong.dl.avg} │ ${resultData.ong.eos.avg} │ ${resultData.ong.he.avg} │ ${resultData.ong.id.avg} │ ${resultData.ong.koe.avg} │ ${resultData.ong.ok.avg} │ ${resultData.ong.ong.avg} │ ${resultData.ong.sa.avg} │ ${resultData.ong.se.avg} │ ${resultData.ong.ud.avg} │ ${resultData.ong.vc.avg} │ ${resultData.ong.vs.avg} │ ${resultData.ong.wdg.avg} ┃  ${resultData.ong.all.avg} │ ${resultData.ong.all.first} │ ${resultData.ong.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ SA   ┃ ${resultData.sa.bh.avg} │ ${resultData.sa.de.avg} │ ${resultData.sa.dh.avg} │ ${resultData.sa.dl.avg} │ ${resultData.sa.eos.avg} │ ${resultData.sa.he.avg} │ ${resultData.sa.id.avg} │ ${resultData.sa.koe.avg} │ ${resultData.sa.ok.avg} │ ${resultData.sa.ong.avg} │ ${resultData.sa.sa.avg} │ ${resultData.sa.se.avg} │ ${resultData.sa.ud.avg} │ ${resultData.sa.vc.avg} │ ${resultData.sa.vs.avg} │ ${resultData.sa.wdg.avg} ┃  ${resultData.sa.all.avg} │ ${resultData.sa.all.first} │ ${resultData.sa.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ SE   ┃ ${resultData.se.bh.avg} │ ${resultData.se.de.avg} │ ${resultData.se.dh.avg} │ ${resultData.se.dl.avg} │ ${resultData.se.eos.avg} │ ${resultData.se.he.avg} │ ${resultData.se.id.avg} │ ${resultData.se.koe.avg} │ ${resultData.se.ok.avg} │ ${resultData.se.ong.avg} │ ${resultData.se.sa.avg} │ ${resultData.se.se.avg} │ ${resultData.se.ud.avg} │ ${resultData.se.vc.avg} │ ${resultData.se.vs.avg} │ ${resultData.se.wdg.avg} ┃  ${resultData.se.all.avg} │ ${resultData.se.all.first} │ ${resultData.se.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ UD   ┃ ${resultData.ud.bh.avg} │ ${resultData.ud.de.avg} │ ${resultData.ud.dh.avg} │ ${resultData.ud.dl.avg} │ ${resultData.ud.eos.avg} │ ${resultData.ud.he.avg} │ ${resultData.ud.id.avg} │ ${resultData.ud.koe.avg} │ ${resultData.ud.ok.avg} │ ${resultData.ud.ong.avg} │ ${resultData.ud.sa.avg} │ ${resultData.ud.se.avg} │ ${resultData.ud.ud.avg} │ ${resultData.ud.vc.avg} │ ${resultData.ud.vs.avg} │ ${resultData.ud.wdg.avg} ┃  ${resultData.ud.all.avg} │ ${resultData.ud.all.first} │ ${resultData.ud.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ VC   ┃ ${resultData.vc.bh.avg} │ ${resultData.vc.de.avg} │ ${resultData.vc.dh.avg} │ ${resultData.vc.dl.avg} │ ${resultData.vc.eos.avg} │ ${resultData.vc.he.avg} │ ${resultData.vc.id.avg} │ ${resultData.vc.koe.avg} │ ${resultData.vc.ok.avg} │ ${resultData.vc.ong.avg} │ ${resultData.vc.sa.avg} │ ${resultData.vc.se.avg} │ ${resultData.vc.ud.avg} │ ${resultData.vc.vc.avg} │ ${resultData.vc.vs.avg} │ ${resultData.vc.wdg.avg} ┃  ${resultData.vc.all.avg} │ ${resultData.vc.all.first} │ ${resultData.vc.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ VS   ┃ ${resultData.vs.bh.avg} │ ${resultData.vs.de.avg} │ ${resultData.vs.dh.avg} │ ${resultData.vs.dl.avg} │ ${resultData.vs.eos.avg} │ ${resultData.vs.he.avg} │ ${resultData.vs.id.avg} │ ${resultData.vs.koe.avg} │ ${resultData.vs.ok.avg} │ ${resultData.vs.ong.avg} │ ${resultData.vs.sa.avg} │ ${resultData.vs.se.avg} │ ${resultData.vs.ud.avg} │ ${resultData.vs.vc.avg} │ ${resultData.vs.vs.avg} │ ${resultData.vs.wdg.avg} ┃  ${resultData.vs.all.avg} │ ${resultData.vs.all.first} │ ${resultData.vs.all.second} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃       │      │      ┃`);
-  console.log(`┃ WDG  ┃ ${resultData.wdg.bh.avg} │ ${resultData.wdg.de.avg} │ ${resultData.wdg.dh.avg} │ ${resultData.wdg.dl.avg} │ ${resultData.wdg.eos.avg} │ ${resultData.wdg.he.avg} │ ${resultData.wdg.id.avg} │ ${resultData.wdg.koe.avg} │ ${resultData.wdg.ok.avg} │ ${resultData.wdg.ong.avg} │ ${resultData.wdg.sa.avg} │ ${resultData.wdg.se.avg} │ ${resultData.wdg.ud.avg} │ ${resultData.wdg.vc.avg} │ ${resultData.wdg.vs.avg} │ ${resultData.wdg.wdg.avg} ┃  ${resultData.wdg.all.avg} │ ${resultData.wdg.all.first} │ ${resultData.wdg.all.second} ┃`);
-  console.log(`┗━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┻━━━━━━━┷━━━━━━┷━━━━━━┛`);
+
+  const emptyLine = `┃\x1b[47m      ┃       │      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      │      \x1b[0m┃`;
+
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1m Tournament Type: ${(args.type || 'Single').padEnd(43, " ") } – Average Points \x1b[0m                                                                   ┃`);
+  console.log(`┣━━━━━━┳━━━━━━━┯━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┳━━━━━━┯━━━━━━┫`);
+  console.log(`┃POINTS┃\x1b[1;106m TOTAL \x1b[0m│ RANK ┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃ 1st  │ 2nd  ┃`);
+  console.log(`┣━━━━━━╋━━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┫`);
+  console.log(`┃ BH   ┃\x1b[1;106m  ${resultData.bh.all.avg} \x1b[0m│  ${resultData.bh.all.rank}  ┃ \x1b[47m${resultData.bh.bh.avg}\x1b[0m │ ${resultData.bh.de.avg} │ ${resultData.bh.dh.avg} │ ${resultData.bh.dl.avg} │ ${resultData.bh.eos.avg} │ ${resultData.bh.he.avg} │ ${resultData.bh.id.avg} │ ${resultData.bh.koe.avg} │ ${resultData.bh.ok.avg} │ ${resultData.bh.ong.avg} │ ${resultData.bh.sa.avg} │ ${resultData.bh.se.avg} │ ${resultData.bh.ud.avg} │ ${resultData.bh.vc.avg} │ ${resultData.bh.vs.avg} │ ${resultData.bh.wdg.avg} ┃ ${resultData.bh.all.first} │ ${resultData.bh.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ DE   ┃\x1b[1;106m  ${resultData.de.all.avg} \x1b[0m│  ${resultData.de.all.rank}  ┃ ${resultData.de.bh.avg} │ \x1b[47m${resultData.de.de.avg}\x1b[0m │ ${resultData.de.dh.avg} │ ${resultData.de.dl.avg} │ ${resultData.de.eos.avg} │ ${resultData.de.he.avg} │ ${resultData.de.id.avg} │ ${resultData.de.koe.avg} │ ${resultData.de.ok.avg} │ ${resultData.de.ong.avg} │ ${resultData.de.sa.avg} │ ${resultData.de.se.avg} │ ${resultData.de.ud.avg} │ ${resultData.de.vc.avg} │ ${resultData.de.vs.avg} │ ${resultData.de.wdg.avg} ┃ ${resultData.de.all.first} │ ${resultData.de.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ DH   ┃\x1b[1;106m  ${resultData.dh.all.avg} \x1b[0m│  ${resultData.dh.all.rank}  ┃ ${resultData.dh.bh.avg} │ ${resultData.dh.de.avg} │ \x1b[47m${resultData.dh.dh.avg}\x1b[0m │ ${resultData.dh.dl.avg} │ ${resultData.dh.eos.avg} │ ${resultData.dh.he.avg} │ ${resultData.dh.id.avg} │ ${resultData.dh.koe.avg} │ ${resultData.dh.ok.avg} │ ${resultData.dh.ong.avg} │ ${resultData.dh.sa.avg} │ ${resultData.dh.se.avg} │ ${resultData.dh.ud.avg} │ ${resultData.dh.vc.avg} │ ${resultData.dh.vs.avg} │ ${resultData.dh.wdg.avg} ┃ ${resultData.dh.all.first} │ ${resultData.dh.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ DL   ┃\x1b[1;106m  ${resultData.dl.all.avg} \x1b[0m│  ${resultData.dl.all.rank}  ┃ ${resultData.dl.bh.avg} │ ${resultData.dl.de.avg} │ ${resultData.dl.dh.avg} │ \x1b[47m${resultData.dl.dl.avg}\x1b[0m │ ${resultData.dl.eos.avg} │ ${resultData.dl.he.avg} │ ${resultData.dl.id.avg} │ ${resultData.dl.koe.avg} │ ${resultData.dl.ok.avg} │ ${resultData.dl.ong.avg} │ ${resultData.dl.sa.avg} │ ${resultData.dl.se.avg} │ ${resultData.dl.ud.avg} │ ${resultData.dl.vc.avg} │ ${resultData.dl.vs.avg} │ ${resultData.dl.wdg.avg} ┃ ${resultData.dl.all.first} │ ${resultData.dl.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ EoS  ┃\x1b[1;106m  ${resultData.eos.all.avg} \x1b[0m│  ${resultData.eos.all.rank}  ┃ ${resultData.eos.bh.avg} │ ${resultData.eos.de.avg} │ ${resultData.eos.dh.avg} │ ${resultData.eos.dl.avg} │ \x1b[47m${resultData.eos.eos.avg}\x1b[0m │ ${resultData.eos.he.avg} │ ${resultData.eos.id.avg} │ ${resultData.eos.koe.avg} │ ${resultData.eos.ok.avg} │ ${resultData.eos.ong.avg} │ ${resultData.eos.sa.avg} │ ${resultData.eos.se.avg} │ ${resultData.eos.ud.avg} │ ${resultData.eos.vc.avg} │ ${resultData.eos.vs.avg} │ ${resultData.eos.wdg.avg} ┃ ${resultData.eos.all.first} │ ${resultData.eos.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ HE   ┃\x1b[1;106m  ${resultData.he.all.avg} \x1b[0m│  ${resultData.he.all.rank}  ┃ ${resultData.he.bh.avg} │ ${resultData.he.de.avg} │ ${resultData.he.dh.avg} │ ${resultData.he.dl.avg} │ ${resultData.he.eos.avg} │ \x1b[47m${resultData.he.he.avg}\x1b[0m │ ${resultData.he.id.avg} │ ${resultData.he.koe.avg} │ ${resultData.he.ok.avg} │ ${resultData.he.ong.avg} │ ${resultData.he.sa.avg} │ ${resultData.he.se.avg} │ ${resultData.he.ud.avg} │ ${resultData.he.vc.avg} │ ${resultData.he.vs.avg} │ ${resultData.he.wdg.avg} ┃ ${resultData.he.all.first} │ ${resultData.he.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ ID   ┃\x1b[1;106m  ${resultData.id.all.avg} \x1b[0m│  ${resultData.id.all.rank}  ┃ ${resultData.id.bh.avg} │ ${resultData.id.de.avg} │ ${resultData.id.dh.avg} │ ${resultData.id.dl.avg} │ ${resultData.id.eos.avg} │ ${resultData.id.he.avg} │ \x1b[47m${resultData.id.id.avg}\x1b[0m │ ${resultData.id.koe.avg} │ ${resultData.id.ok.avg} │ ${resultData.id.ong.avg} │ ${resultData.id.sa.avg} │ ${resultData.id.se.avg} │ ${resultData.id.ud.avg} │ ${resultData.id.vc.avg} │ ${resultData.id.vs.avg} │ ${resultData.id.wdg.avg} ┃ ${resultData.id.all.first} │ ${resultData.id.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ KoE  ┃\x1b[1;106m  ${resultData.koe.all.avg} \x1b[0m│  ${resultData.koe.all.rank}  ┃ ${resultData.koe.bh.avg} │ ${resultData.koe.de.avg} │ ${resultData.koe.dh.avg} │ ${resultData.koe.dl.avg} │ ${resultData.koe.eos.avg} │ ${resultData.koe.he.avg} │ ${resultData.koe.id.avg} │ \x1b[47m${resultData.koe.koe.avg}\x1b[0m │ ${resultData.koe.ok.avg} │ ${resultData.koe.ong.avg} │ ${resultData.koe.sa.avg} │ ${resultData.koe.se.avg} │ ${resultData.koe.ud.avg} │ ${resultData.koe.vc.avg} │ ${resultData.koe.vs.avg} │ ${resultData.koe.wdg.avg} ┃ ${resultData.koe.all.first} │ ${resultData.koe.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ OK   ┃\x1b[1;106m  ${resultData.ok.all.avg} \x1b[0m│  ${resultData.ok.all.rank}  ┃ ${resultData.ok.bh.avg} │ ${resultData.ok.de.avg} │ ${resultData.ok.dh.avg} │ ${resultData.ok.dl.avg} │ ${resultData.ok.eos.avg} │ ${resultData.ok.he.avg} │ ${resultData.ok.id.avg} │ ${resultData.ok.koe.avg} │ \x1b[47m${resultData.ok.ok.avg}\x1b[0m │ ${resultData.ok.ong.avg} │ ${resultData.ok.sa.avg} │ ${resultData.ok.se.avg} │ ${resultData.ok.ud.avg} │ ${resultData.ok.vc.avg} │ ${resultData.ok.vs.avg} │ ${resultData.ok.wdg.avg} ┃ ${resultData.ok.all.first} │ ${resultData.ok.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ OnG  ┃\x1b[1;106m  ${resultData.ong.all.avg} \x1b[0m│  ${resultData.ong.all.rank}  ┃ ${resultData.ong.bh.avg} │ ${resultData.ong.de.avg} │ ${resultData.ong.dh.avg} │ ${resultData.ong.dl.avg} │ ${resultData.ong.eos.avg} │ ${resultData.ong.he.avg} │ ${resultData.ong.id.avg} │ ${resultData.ong.koe.avg} │ ${resultData.ong.ok.avg} │ \x1b[47m${resultData.ong.ong.avg}\x1b[0m │ ${resultData.ong.sa.avg} │ ${resultData.ong.se.avg} │ ${resultData.ong.ud.avg} │ ${resultData.ong.vc.avg} │ ${resultData.ong.vs.avg} │ ${resultData.ong.wdg.avg} ┃ ${resultData.ong.all.first} │ ${resultData.ong.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ SA   ┃\x1b[1;106m  ${resultData.sa.all.avg} \x1b[0m│  ${resultData.sa.all.rank}  ┃ ${resultData.sa.bh.avg} │ ${resultData.sa.de.avg} │ ${resultData.sa.dh.avg} │ ${resultData.sa.dl.avg} │ ${resultData.sa.eos.avg} │ ${resultData.sa.he.avg} │ ${resultData.sa.id.avg} │ ${resultData.sa.koe.avg} │ ${resultData.sa.ok.avg} │ ${resultData.sa.ong.avg} │ \x1b[47m${resultData.sa.sa.avg}\x1b[0m │ ${resultData.sa.se.avg} │ ${resultData.sa.ud.avg} │ ${resultData.sa.vc.avg} │ ${resultData.sa.vs.avg} │ ${resultData.sa.wdg.avg} ┃ ${resultData.sa.all.first} │ ${resultData.sa.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ SE   ┃\x1b[1;106m  ${resultData.se.all.avg} \x1b[0m│  ${resultData.se.all.rank}  ┃ ${resultData.se.bh.avg} │ ${resultData.se.de.avg} │ ${resultData.se.dh.avg} │ ${resultData.se.dl.avg} │ ${resultData.se.eos.avg} │ ${resultData.se.he.avg} │ ${resultData.se.id.avg} │ ${resultData.se.koe.avg} │ ${resultData.se.ok.avg} │ ${resultData.se.ong.avg} │ ${resultData.se.sa.avg} │ \x1b[47m${resultData.se.se.avg}\x1b[0m │ ${resultData.se.ud.avg} │ ${resultData.se.vc.avg} │ ${resultData.se.vs.avg} │ ${resultData.se.wdg.avg} ┃ ${resultData.se.all.first} │ ${resultData.se.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ UD   ┃\x1b[1;106m  ${resultData.ud.all.avg} \x1b[0m│  ${resultData.ud.all.rank}  ┃ ${resultData.ud.bh.avg} │ ${resultData.ud.de.avg} │ ${resultData.ud.dh.avg} │ ${resultData.ud.dl.avg} │ ${resultData.ud.eos.avg} │ ${resultData.ud.he.avg} │ ${resultData.ud.id.avg} │ ${resultData.ud.koe.avg} │ ${resultData.ud.ok.avg} │ ${resultData.ud.ong.avg} │ ${resultData.ud.sa.avg} │ ${resultData.ud.se.avg} │ \x1b[47m${resultData.ud.ud.avg}\x1b[0m │ ${resultData.ud.vc.avg} │ ${resultData.ud.vs.avg} │ ${resultData.ud.wdg.avg} ┃ ${resultData.ud.all.first} │ ${resultData.ud.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ VC   ┃\x1b[1;106m  ${resultData.vc.all.avg} \x1b[0m│  ${resultData.vc.all.rank}  ┃ ${resultData.vc.bh.avg} │ ${resultData.vc.de.avg} │ ${resultData.vc.dh.avg} │ ${resultData.vc.dl.avg} │ ${resultData.vc.eos.avg} │ ${resultData.vc.he.avg} │ ${resultData.vc.id.avg} │ ${resultData.vc.koe.avg} │ ${resultData.vc.ok.avg} │ ${resultData.vc.ong.avg} │ ${resultData.vc.sa.avg} │ ${resultData.vc.se.avg} │ ${resultData.vc.ud.avg} │ \x1b[47m${resultData.vc.vc.avg}\x1b[0m │ ${resultData.vc.vs.avg} │ ${resultData.vc.wdg.avg} ┃ ${resultData.vc.all.first} │ ${resultData.vc.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ VS   ┃\x1b[1;106m  ${resultData.vs.all.avg} \x1b[0m│  ${resultData.vs.all.rank}  ┃ ${resultData.vs.bh.avg} │ ${resultData.vs.de.avg} │ ${resultData.vs.dh.avg} │ ${resultData.vs.dl.avg} │ ${resultData.vs.eos.avg} │ ${resultData.vs.he.avg} │ ${resultData.vs.id.avg} │ ${resultData.vs.koe.avg} │ ${resultData.vs.ok.avg} │ ${resultData.vs.ong.avg} │ ${resultData.vs.sa.avg} │ ${resultData.vs.se.avg} │ ${resultData.vs.ud.avg} │ ${resultData.vs.vc.avg} │ \x1b[47m${resultData.vs.vs.avg}\x1b[0m │ ${resultData.vs.wdg.avg} ┃ ${resultData.vs.all.first} │ ${resultData.vs.all.second} ┃`);
+  console.log(emptyLine);
+  console.log(`┃ WDG  ┃\x1b[1;106m  ${resultData.wdg.all.avg} \x1b[0m│  ${resultData.wdg.all.rank}  ┃ ${resultData.wdg.bh.avg} │ ${resultData.wdg.de.avg} │ ${resultData.wdg.dh.avg} │ ${resultData.wdg.dl.avg} │ ${resultData.wdg.eos.avg} │ ${resultData.wdg.he.avg} │ ${resultData.wdg.id.avg} │ ${resultData.wdg.koe.avg} │ ${resultData.wdg.ok.avg} │ ${resultData.wdg.ong.avg} │ ${resultData.wdg.sa.avg} │ ${resultData.wdg.se.avg} │ ${resultData.wdg.ud.avg} │ ${resultData.wdg.vc.avg} │ ${resultData.wdg.vs.avg} │ \x1b[47m${resultData.wdg.wdg.avg}\x1b[0m ┃ ${resultData.wdg.all.first} │ ${resultData.wdg.all.second} ┃`);
+  console.log(`┗━━━━━━┻━━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┛`);
 
   console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
-  console.log(`┃ Tournament Type: ${(args.type || 'Single').padEnd(43, " ") } – Number of Games                                              ┃`);
-  console.log(`┣━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┳━━━━━━┫`);
-  console.log(`┃GAMES ┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃ Total┃`);
-  console.log(`┣━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━╋━━━━━━┫`);
-  console.log(`┃ BH   ┃ ${resultData.bh.bh.count} │ ${resultData.bh.de.count} │ ${resultData.bh.dh.count} │ ${resultData.bh.dl.count} │ ${resultData.bh.eos.count} │ ${resultData.bh.he.count} │ ${resultData.bh.id.count} │ ${resultData.bh.koe.count} │ ${resultData.bh.ok.count} │ ${resultData.bh.ong.count} │ ${resultData.bh.sa.count} │ ${resultData.bh.se.count} │ ${resultData.bh.ud.count} │ ${resultData.bh.vc.count} │ ${resultData.bh.vs.count} │ ${resultData.bh.wdg.count} ┃ ${resultData.bh.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ DE   ┃ ${resultData.de.bh.count} │ ${resultData.de.de.count} │ ${resultData.de.dh.count} │ ${resultData.de.dl.count} │ ${resultData.de.eos.count} │ ${resultData.de.he.count} │ ${resultData.de.id.count} │ ${resultData.de.koe.count} │ ${resultData.de.ok.count} │ ${resultData.de.ong.count} │ ${resultData.de.sa.count} │ ${resultData.de.se.count} │ ${resultData.de.ud.count} │ ${resultData.de.vc.count} │ ${resultData.de.vs.count} │ ${resultData.de.wdg.count} ┃ ${resultData.de.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ DH   ┃ ${resultData.dh.bh.count} │ ${resultData.dh.de.count} │ ${resultData.dh.dh.count} │ ${resultData.dh.dl.count} │ ${resultData.dh.eos.count} │ ${resultData.dh.he.count} │ ${resultData.dh.id.count} │ ${resultData.dh.koe.count} │ ${resultData.dh.ok.count} │ ${resultData.dh.ong.count} │ ${resultData.dh.sa.count} │ ${resultData.dh.se.count} │ ${resultData.dh.ud.count} │ ${resultData.dh.vc.count} │ ${resultData.dh.vs.count} │ ${resultData.dh.wdg.count} ┃ ${resultData.dh.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ DL   ┃ ${resultData.dl.bh.count} │ ${resultData.dl.de.count} │ ${resultData.dl.dh.count} │ ${resultData.dl.dl.count} │ ${resultData.dl.eos.count} │ ${resultData.dl.he.count} │ ${resultData.dl.id.count} │ ${resultData.dl.koe.count} │ ${resultData.dl.ok.count} │ ${resultData.dl.ong.count} │ ${resultData.dl.sa.count} │ ${resultData.dl.se.count} │ ${resultData.dl.ud.count} │ ${resultData.dl.vc.count} │ ${resultData.dl.vs.count} │ ${resultData.dl.wdg.count} ┃ ${resultData.dl.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ EoS  ┃ ${resultData.eos.bh.count} │ ${resultData.eos.de.count} │ ${resultData.eos.dh.count} │ ${resultData.eos.dl.count} │ ${resultData.eos.eos.count} │ ${resultData.eos.he.count} │ ${resultData.eos.id.count} │ ${resultData.eos.koe.count} │ ${resultData.eos.ok.count} │ ${resultData.eos.ong.count} │ ${resultData.eos.sa.count} │ ${resultData.eos.se.count} │ ${resultData.eos.ud.count} │ ${resultData.eos.vc.count} │ ${resultData.eos.vs.count} │ ${resultData.eos.wdg.count} ┃ ${resultData.eos.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ HE   ┃ ${resultData.he.bh.count} │ ${resultData.he.de.count} │ ${resultData.he.dh.count} │ ${resultData.he.dl.count} │ ${resultData.he.eos.count} │ ${resultData.he.he.count} │ ${resultData.he.id.count} │ ${resultData.he.koe.count} │ ${resultData.he.ok.count} │ ${resultData.he.ong.count} │ ${resultData.he.sa.count} │ ${resultData.he.se.count} │ ${resultData.he.ud.count} │ ${resultData.he.vc.count} │ ${resultData.he.vs.count} │ ${resultData.he.wdg.count} ┃ ${resultData.he.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ ID   ┃ ${resultData.id.bh.count} │ ${resultData.id.de.count} │ ${resultData.id.dh.count} │ ${resultData.id.dl.count} │ ${resultData.id.eos.count} │ ${resultData.id.he.count} │ ${resultData.id.id.count} │ ${resultData.id.koe.count} │ ${resultData.id.ok.count} │ ${resultData.id.ong.count} │ ${resultData.id.sa.count} │ ${resultData.id.se.count} │ ${resultData.id.ud.count} │ ${resultData.id.vc.count} │ ${resultData.id.vs.count} │ ${resultData.id.wdg.count} ┃ ${resultData.id.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ KoE  ┃ ${resultData.koe.bh.count} │ ${resultData.koe.de.count} │ ${resultData.koe.dh.count} │ ${resultData.koe.dl.count} │ ${resultData.koe.eos.count} │ ${resultData.koe.he.count} │ ${resultData.koe.id.count} │ ${resultData.koe.koe.count} │ ${resultData.koe.ok.count} │ ${resultData.koe.ong.count} │ ${resultData.koe.sa.count} │ ${resultData.koe.se.count} │ ${resultData.koe.ud.count} │ ${resultData.koe.vc.count} │ ${resultData.koe.vs.count} │ ${resultData.koe.wdg.count} ┃ ${resultData.koe.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ OK   ┃ ${resultData.ok.bh.count} │ ${resultData.ok.de.count} │ ${resultData.ok.dh.count} │ ${resultData.ok.dl.count} │ ${resultData.ok.eos.count} │ ${resultData.ok.he.count} │ ${resultData.ok.id.count} │ ${resultData.ok.koe.count} │ ${resultData.ok.ok.count} │ ${resultData.ok.ong.count} │ ${resultData.ok.sa.count} │ ${resultData.ok.se.count} │ ${resultData.ok.ud.count} │ ${resultData.ok.vc.count} │ ${resultData.ok.vs.count} │ ${resultData.ok.wdg.count} ┃ ${resultData.ok.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ OnG  ┃ ${resultData.ong.bh.count} │ ${resultData.ong.de.count} │ ${resultData.ong.dh.count} │ ${resultData.ong.dl.count} │ ${resultData.ong.eos.count} │ ${resultData.ong.he.count} │ ${resultData.ong.id.count} │ ${resultData.ong.koe.count} │ ${resultData.ong.ok.count} │ ${resultData.ong.ong.count} │ ${resultData.ong.sa.count} │ ${resultData.ong.se.count} │ ${resultData.ong.ud.count} │ ${resultData.ong.vc.count} │ ${resultData.ong.vs.count} │ ${resultData.ong.wdg.count} ┃ ${resultData.ong.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ SA   ┃ ${resultData.sa.bh.count} │ ${resultData.sa.de.count} │ ${resultData.sa.dh.count} │ ${resultData.sa.dl.count} │ ${resultData.sa.eos.count} │ ${resultData.sa.he.count} │ ${resultData.sa.id.count} │ ${resultData.sa.koe.count} │ ${resultData.sa.ok.count} │ ${resultData.sa.ong.count} │ ${resultData.sa.sa.count} │ ${resultData.sa.se.count} │ ${resultData.sa.ud.count} │ ${resultData.sa.vc.count} │ ${resultData.sa.vs.count} │ ${resultData.sa.wdg.count} ┃ ${resultData.sa.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ SE   ┃ ${resultData.se.bh.count} │ ${resultData.se.de.count} │ ${resultData.se.dh.count} │ ${resultData.se.dl.count} │ ${resultData.se.eos.count} │ ${resultData.se.he.count} │ ${resultData.se.id.count} │ ${resultData.se.koe.count} │ ${resultData.se.ok.count} │ ${resultData.se.ong.count} │ ${resultData.se.sa.count} │ ${resultData.se.se.count} │ ${resultData.se.ud.count} │ ${resultData.se.vc.count} │ ${resultData.se.vs.count} │ ${resultData.se.wdg.count} ┃ ${resultData.se.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ UD   ┃ ${resultData.ud.bh.count} │ ${resultData.ud.de.count} │ ${resultData.ud.dh.count} │ ${resultData.ud.dl.count} │ ${resultData.ud.eos.count} │ ${resultData.ud.he.count} │ ${resultData.ud.id.count} │ ${resultData.ud.koe.count} │ ${resultData.ud.ok.count} │ ${resultData.ud.ong.count} │ ${resultData.ud.sa.count} │ ${resultData.ud.se.count} │ ${resultData.ud.ud.count} │ ${resultData.ud.vc.count} │ ${resultData.ud.vs.count} │ ${resultData.ud.wdg.count} ┃ ${resultData.ud.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ VC   ┃ ${resultData.vc.bh.count} │ ${resultData.vc.de.count} │ ${resultData.vc.dh.count} │ ${resultData.vc.dl.count} │ ${resultData.vc.eos.count} │ ${resultData.vc.he.count} │ ${resultData.vc.id.count} │ ${resultData.vc.koe.count} │ ${resultData.vc.ok.count} │ ${resultData.vc.ong.count} │ ${resultData.vc.sa.count} │ ${resultData.vc.se.count} │ ${resultData.vc.ud.count} │ ${resultData.vc.vc.count} │ ${resultData.vc.vs.count} │ ${resultData.vc.wdg.count} ┃ ${resultData.vc.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ VS   ┃ ${resultData.vs.bh.count} │ ${resultData.vs.de.count} │ ${resultData.vs.dh.count} │ ${resultData.vs.dl.count} │ ${resultData.vs.eos.count} │ ${resultData.vs.he.count} │ ${resultData.vs.id.count} │ ${resultData.vs.koe.count} │ ${resultData.vs.ok.count} │ ${resultData.vs.ong.count} │ ${resultData.vs.sa.count} │ ${resultData.vs.se.count} │ ${resultData.vs.ud.count} │ ${resultData.vs.vc.count} │ ${resultData.vs.vs.count} │ ${resultData.vs.wdg.count} ┃ ${resultData.vs.all.count} ┃`);
-  console.log(`┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      ┃`);
-  console.log(`┃ WDG  ┃ ${resultData.wdg.bh.count} │ ${resultData.wdg.de.count} │ ${resultData.wdg.dh.count} │ ${resultData.wdg.dl.count} │ ${resultData.wdg.eos.count} │ ${resultData.wdg.he.count} │ ${resultData.wdg.id.count} │ ${resultData.wdg.koe.count} │ ${resultData.wdg.ok.count} │ ${resultData.wdg.ong.count} │ ${resultData.wdg.sa.count} │ ${resultData.wdg.se.count} │ ${resultData.wdg.ud.count} │ ${resultData.wdg.vc.count} │ ${resultData.wdg.vs.count} │ ${resultData.wdg.wdg.count} ┃ ${resultData.wdg.all.count} ┃`);
+  console.log(`┃ \x1b[1mTournament Type: ${(args.type || 'Single').padEnd(43, " ") } – Number of Games\x1b[0m                                              ┃`);
+  console.log(`┣━━━━━━┳━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┫`);
+  console.log(`┃GAMES ┃ Total┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃`);
+  console.log(`┣━━━━━━╋━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
+  let toggle = false;
+  for(let army in resultData) {
+    if(toggle) {
+      console.log(`┃  ${army.toUpperCase().padEnd(3, " ")} ┃ ${resultData[army].all.count} ┃ ${resultData[army][army].count} │ ${resultData[army].de.count} │ ${resultData[army].dh.count} │ ${resultData[army].dl.count} │ ${resultData[army].eos.count} │ ${resultData[army].he.count} │ ${resultData[army].id.count} │ ${resultData[army].koe.count} │ ${resultData[army].ok.count} │ ${resultData[army].ong.count} │ ${resultData[army].sa.count} │ ${resultData[army].se.count} │ ${resultData[army].ud.count} │ ${resultData[army].vc.count} │ ${resultData[army].vs.count} │ ${resultData[army].wdg.count} ┃`);
+    } else {
+      console.log(`┃\x1b[47m  ${army.toUpperCase().padEnd(3, " ")} ┃ ${resultData[army].all.count} ┃ ${resultData[army][army].count} │ ${resultData[army].de.count} │ ${resultData[army].dh.count} │ ${resultData[army].dl.count} │ ${resultData[army].eos.count} │ ${resultData[army].he.count} │ ${resultData[army].id.count} │ ${resultData[army].koe.count} │ ${resultData[army].ok.count} │ ${resultData[army].ong.count} │ ${resultData[army].sa.count} │ ${resultData[army].se.count} │ ${resultData[army].ud.count} │ ${resultData[army].vc.count} │ ${resultData[army].vs.count} │ ${resultData[army].wdg.count} \x1b[0m┃`);
+    }
+    toggle = !toggle;
+  }
   console.log(`┗━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┻━━━━━━┛`);
-
 }
 
 
@@ -651,7 +649,7 @@ function printUnitPickRates() {
     // console.log(JSON.stringify(armyUnits, null, 4));
 
     console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
-    console.log(`┃ Category                   │ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+  ┃`);
+    console.log(`┃ \x1b[1mCategory                   │ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+\x1b[0m  ┃`);
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
 
     for(let unitDefinition of armyUnits) {
@@ -666,7 +664,7 @@ function printUnitPickRates() {
     console.log(`\n`);
 
     console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┓`);
-    console.log(`┃ ${army.padEnd(3, " ")} - Special Items                ┃   #   ┃   %   ┃`);
+    console.log(`┃ \x1b[1m${army.padEnd(3, " ")} - Special Items                ┃   #   ┃   %\x1b[0m   ┃`);
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┫`);
     console.log(`┃ Common Items                                       ┃`);
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
@@ -715,7 +713,7 @@ function printUnitOptionRates() {
   for(let army in pickRates) {
     for(let unit in pickRates[army].units) {
       console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
-      console.log(`┃ Options: ${unit.padEnd(44, " ")} ┃`);
+      console.log(`┃ \x1b[1mOptions: ${unit.padEnd(44, " ")}\x1b[0m ┃`);
       console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
 
       for(let category in pickRates[army].units[unit].options) {
