@@ -13,12 +13,12 @@
 
 const superagent = require('superagent');
 const args = require('yargs').argv;
-const specialItemNames = require('./specialItems.js').allItems;
-const commonItemNames = require('./specialItems.js').arcCompCommon;
 const options = require('./options.js');
+const { arcCompAll, allItems, arcCompCommon, commonArmour, commonArtefact, commonBanner, commonPotion, commonShield, commonWeapon, sharedArmour, sharedArtefact, sharedBanner, sharedPotion, sharedShield, sharedWeapon } = require('./specialItems.js');
 
 const date = new Date();
 const today = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
+let debug = false;
 
 // Results
 let resultData = {
@@ -90,6 +90,7 @@ let rawData = {
       "first" : [],
       "second" : [],
     },
+    "specialItems" : {},
   }
 };
 
@@ -352,6 +353,13 @@ function calculatePickRates() {
             pickRates[army].units[unit].options.models[`large  (${mediumUntil+1}-${max})`] = `${(rawData.byArmy[army].picks[unit][option].filter((a)=>a>mediumUntil).length * 100 / pickSum).toFixed(0).padStart(3, " ")}%`;
           }
         } else {
+          // If it is a special items from Arcane Compendium, then add it to global counters as well
+          if(arcCompAll.includes(option)) {
+            if(debug) console.log(`Option '${option}' identified as a Arc Comp Special Item`);
+            rawData.global.specialItems[option] = rawData.global.specialItems[option] || 0;
+            rawData.global.specialItems[option] += rawData.byArmy[army].picks[unit][option].reduce((a,b)=>a+b,0);
+          }
+
           // Sort the options into the appropriate category
           if(options.meleeWeapons.includes(option)) {
             pickRates[army].units[unit].options.meleeWeapons = pickRates[army].units[unit].options.meleeWeapons || {};
@@ -397,7 +405,7 @@ function calculatePickRates() {
           } else if(options.mounts.includes(option)) {
             pickRates[army].units[unit].options.mounts = pickRates[army].units[unit].options.mounts || {};
             pickRates[army].units[unit].options.mounts[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
-          } else if(specialItemNames.includes(option)) {
+          } else if(allItems.includes(option)) {
             pickRates[army].units[unit].options.specialItems = pickRates[army].units[unit].options.specialItems || {};
             pickRates[army].units[unit].options.specialItems[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
           }
@@ -411,7 +419,7 @@ function calculatePickRates() {
         }
 
         // Handle Special Items
-        if(specialItemNames.includes(option)) {
+        if(allItems.includes(option)) {
           pickRates[army].specialItems[option] = pickRates[army].specialItems[option] || { "count" : 0, "pickPercent" : "" };
           pickRates[army].specialItems[option].count = pickRates[army].specialItems[option].count + rawData.byArmy[army].picks[unit][option].reduce((a,b)=>a+b,0);
           pickRates[army].specialItems[option].pickPercent = `${(pickRates[army].specialItems[option].count * 100 / rawData.byArmy[army].games.availableLists).toFixed(0)}`;
@@ -426,7 +434,7 @@ function calculatePickRates() {
 (async () => {
   try {
     // Evaluate Command Line Arguments
-    const debug = args.d ? true : false;
+    debug = args.d ? true : false;
     if(debug) console.log(args);
     const tournamentType = args.type || 'single';
     const showExternalBalance = args.e ? true : false;
@@ -637,11 +645,78 @@ function printArmyResults() {
     }
     toggle = !toggle;
   }
-  console.log(`┗━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┻━━━━━━┛`);
+  console.log(`┗━━━━━━┻━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
 }
 
 
 function printUnitPickRates() {
+
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1mSpecial Items – Global Pick Counts                                 \x1b[0m  ┃`);
+  console.log(`┣━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━┯━━━━━━━━┫`);
+  console.log(`┃ Category            │ Item Name                    │   #    │   %    ┃`);
+  console.log(`┣━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━┿━━━━━━━━┫`);
+  
+  for(let item of commonWeapon) {
+    console.log(`┃ Common Weapon       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of sharedWeapon) {
+    console.log(`┃ Shared Weapon       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of commonArmour) {
+    console.log(`┃ Common Armour       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of sharedArmour) {
+    console.log(`┃ Shared Armour       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of commonShield) {
+    console.log(`┃ Common Shield       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of sharedShield) {
+    console.log(`┃ Shared Shield       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of commonArtefact) {
+    console.log(`┃ Common Artefact     │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of sharedArtefact) {
+    console.log(`┃ Shared Artefact     │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of commonPotion) {
+    console.log(`┃ Common Potion       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of sharedPotion) {
+    console.log(`┃ Shared Potion       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of commonBanner) {
+    console.log(`┃ Common Banner       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┃                     │                              │        │        ┃`);
+
+  for(let item of sharedBanner) {
+    console.log(`┃ Shared Banner       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
+  }
+  console.log(`┗━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━┷━━━━━━━━┛`);
+
 
   for(let army in pickRates) {
     const armyUnits = require("./units.js")[army];
@@ -669,7 +744,7 @@ function printUnitPickRates() {
     console.log(`┃ Common Items                                       ┃`);
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
 
-    for(let item of commonItemNames) {
+    for(let item of arcCompCommon) {
       let name = `${item.padEnd(34, " ")}`;
       let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
       let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
