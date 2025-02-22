@@ -392,6 +392,9 @@ function calculatePickRates() {
           } else if(options.specialistSkills.includes(option)) {
             pickRates[army].units[unit].options.specialistSkills = pickRates[army].units[unit].options.specialistSkills || {};
             pickRates[army].units[unit].options.specialistSkills[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.honour.includes(option)) {
+            pickRates[army].units[unit].options.honour = pickRates[army].units[unit].options.honour || {};
+            pickRates[army].units[unit].options.honour[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
           } else if(options.knightlyPrinciple.includes(option)) {
             pickRates[army].units[unit].options.knightlyPrinciple = pickRates[army].units[unit].options.knightlyPrinciple || {};
             pickRates[army].units[unit].options.knightlyPrinciple[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;

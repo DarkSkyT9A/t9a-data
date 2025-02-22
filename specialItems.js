@@ -82,7 +82,7 @@ const eosItems = [
 
 // HE
 const heItems = [
-    "sliver of the blazing dawn", "nova flare", "cadaron's heartwood", "elemental blade",
+    "sliver of the blazing dawn", "nova flare", "cadaron's heartwood", /* TODO report this to NR */ "cadaron’s heartwood", "elemental blade",
     "star metal alloy", "gleaming robe", "protection of dorac", "daemon's bane",
     "war banner of rymâ", "navigator's banner", "banner of becalming",
     "diadem of protection", "amethyst crystal", "book of meladys",

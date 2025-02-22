@@ -15,6 +15,7 @@ const spells = [
     "evil eye", "soured luck", "illusory paths", "cauldron's curse", "clouded sight", "mists of invisibility",
 ];
 const meleeWeapons = [ "great weapon", "great weapon and elven finesse", "halberd", "halberd and shield", "lance", "lance and shield", "light lance", "light lance and shield", "paired weapons", "spear", "spear and shield", 
+    "cavalry pick",
     "infernal weapon",
     "bastard sword",
     "iron fist",
@@ -24,6 +25,7 @@ const meleeWeapons = [ "great weapon", "great weapon and elven finesse", "halber
     "gladius and weapon master",  ];
 const shootingWeapons = [ "bow", "crossbow", "handgun", "longbow", "pistol", "throwing weapons", "breath attack", 
     "repeater crossbow", "repeater handbow", 
+    "repeater pistol", "repeater gun", "brace of pistols and fire on impact", "long rifle", 
     "blunderbuss", "flintlock axe", "pistol and spear",
     "ogre crossbow", "hunting spear", "brace of ogre pistols",
     "poisoned javelin", "magnetic short bow", "blowpipe",
@@ -32,6 +34,7 @@ const shootingWeapons = [ "bow", "crossbow", "handgun", "longbow", "pistol", "th
     "canister launcher", "deepfire thrower", "rotary gun", "jezail", "jezail and shield",
     "skinning lash",  ];
 const artilleryWeapons = [ 
+    "volley gun", "cannon", "imperial rocketeer", "mortar",
     "naphtha thrower", "rocket battery", "titan mortar",
     "trebuchet and change its height to 3", "scorpion",
     "splatterer", "git launcher", "skewerer",
@@ -68,6 +71,10 @@ const armour = [ "shield", "spiked shield", "elven cloak", ];
 
 
 /** Army Specific */
+
+// HE
+const honour = [ "master of canreig tower", "high warden of the flame", "fleet officer", "queen's cavalier", "royal huntsman", 
+    "grandmaster of the sword", "queen's companion", "asfad scholar", "order of the fiery heart", ];
 
 // KoE
 const knightlyPrinciple = [ "valour", "justice", "honour", "generosity", "forbearance", "faith", "excellence", ];
@@ -121,6 +128,8 @@ module.exports = {
     mounts,
     specialistSkills,
     armour,
+
+    honour, 
 
     knightlyPrinciple,
     heroicTraits,
