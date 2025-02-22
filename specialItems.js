@@ -94,8 +94,8 @@ const idItems = [
     "onyx core", "flame of the east", "eye of the bull",
     "blaze of protection",
     "kadim binding",
-    "banner of shamut", "their master's banner",
-    "breath of the brass bull", "ring of desiccation", "tablet of vezodinesh", "mask of ages", "golden idol of shamut", "lugar's dice",
+    "banner of shamut", "banner of the twice-branded", "their master's banner",
+    "breath of the brass bull", "ring of desiccation", "tablet of vezodinezh", "mask of ages", "golden idol of shamut", "lugar's dice",
 ];
 
 // KoE
@@ -149,7 +149,7 @@ const udItems = [
     "sun's embrace",
     "icon of reflection", "sigil of the closed gates", "banner of the entombed",
     "sacred hourglass", "crown of the pharaohs", "death mask of teput", "book of the dead", "kherp sceptre", "blessed wrappings",
-    "scroll of dessication",
+    "scroll of desiccation",
 ];
 
 // VC

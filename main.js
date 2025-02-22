@@ -367,6 +367,9 @@ function calculatePickRates() {
           } else if(options.shootingWeapons.includes(option)) {
             pickRates[army].units[unit].options.shootingWeapons = pickRates[army].units[unit].options.shootingWeapons || {};
             pickRates[army].units[unit].options.shootingWeapons[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.artilleryWeapons.includes(option)) {
+            pickRates[army].units[unit].options.artilleryWeapons = pickRates[army].units[unit].options.artilleryWeapons || {};
+            pickRates[army].units[unit].options.artilleryWeapons[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
           } else if(options.commandGroup.includes(option)) {
             pickRates[army].units[unit].options.commandGroup = pickRates[army].units[unit].options.commandGroup || {};
             pickRates[army].units[unit].options.commandGroup[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
@@ -387,6 +390,45 @@ function calculatePickRates() {
           } else if(options.specialistSkills.includes(option)) {
             pickRates[army].units[unit].options.specialistSkills = pickRates[army].units[unit].options.specialistSkills || {};
             pickRates[army].units[unit].options.specialistSkills[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.knightlyPrinciple.includes(option)) {
+            pickRates[army].units[unit].options.knightlyPrinciple = pickRates[army].units[unit].options.knightlyPrinciple || {};
+            pickRates[army].units[unit].options.knightlyPrinciple[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.heroicTraits.includes(option)) {
+            pickRates[army].units[unit].options.heroicTraits = pickRates[army].units[unit].options.heroicTraits || {};
+            pickRates[army].units[unit].options.heroicTraits[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.bigName.includes(option)) {
+            pickRates[army].units[unit].options.bigName = pickRates[army].units[unit].options.bigName || {};
+            pickRates[army].units[unit].options.bigName[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.trollRace.includes(option)) {
+            pickRates[army].units[unit].options.trollRace = pickRates[army].units[unit].options.trollRace || {};
+            pickRates[army].units[unit].options.trollRace[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.howdah.includes(option)) {
+            pickRates[army].units[unit].options.howdah = pickRates[army].units[unit].options.howdah || {};
+            pickRates[army].units[unit].options.howdah[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.arcaneMastery.includes(option)) {
+            pickRates[army].units[unit].options.arcaneMastery = pickRates[army].units[unit].options.arcaneMastery || {};
+            pickRates[army].units[unit].options.arcaneMastery[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.telepathicMastery.includes(option)) {
+            pickRates[army].units[unit].options.telepathicMastery = pickRates[army].units[unit].options.telepathicMastery || {};
+            pickRates[army].units[unit].options.telepathicMastery[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.kindred.includes(option)) {
+            pickRates[army].units[unit].options.kindred = pickRates[army].units[unit].options.kindred || {};
+            pickRates[army].units[unit].options.kindred[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.aspectOfNature.includes(option)) {
+            pickRates[army].units[unit].options.aspectOfNature = pickRates[army].units[unit].options.aspectOfNature || {};
+            pickRates[army].units[unit].options.aspectOfNature[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.lordOfUndeath.includes(option)) {
+            pickRates[army].units[unit].options.lordOfUndeath = pickRates[army].units[unit].options.lordOfUndeath || {};
+            pickRates[army].units[unit].options.lordOfUndeath[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.occupation.includes(option)) {
+            pickRates[army].units[unit].options.occupation = pickRates[army].units[unit].options.occupation || {};
+            pickRates[army].units[unit].options.occupation[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.ancestralBloodPower.includes(option)) {
+            pickRates[army].units[unit].options.ancestralBloodPower = pickRates[army].units[unit].options.ancestralBloodPower || {};
+            pickRates[army].units[unit].options.ancestralBloodPower[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.bloodPowers.includes(option)) {
+            pickRates[army].units[unit].options.bloodPowers = pickRates[army].units[unit].options.bloodPowers || {};
+            pickRates[army].units[unit].options.bloodPowers[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
           } else if(options.patronDeity.includes(option)) {
             pickRates[army].units[unit].options.patronDeity = pickRates[army].units[unit].options.patronDeity || {};
             pickRates[army].units[unit].options.patronDeity[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
@@ -755,7 +797,6 @@ function printUnitPickRates() {
     console.log(`┃ Shared Items                                       ┃`);
     console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
 
-    // TODO Improve: Setup army specific shared items data structures in specialItems and use them
     const armySharedItems = require("./specialItems.js").sharedItems[army];
 
     for(let item of armySharedItems) {
