@@ -15,7 +15,7 @@ const spells = [
     "evil eye", "soured luck", "illusory paths", "cauldron's curse", "clouded sight", "mists of invisibility",
 ];
 const meleeWeapons = [ "great weapon", "great weapon and elven finesse", "halberd", "halberd and shield", "lance", "lance and shield", "light lance", "light lance and shield", "paired weapons", "spear", "spear and shield", 
-    "infernal weapon", "pistol and spear",
+    "infernal weapon",
     "bastard sword",
     "iron fist",
     "poisoned spear and shield",
@@ -24,7 +24,7 @@ const meleeWeapons = [ "great weapon", "great weapon and elven finesse", "halber
     "gladius and weapon master",  ];
 const shootingWeapons = [ "bow", "crossbow", "handgun", "longbow", "pistol", "throwing weapons", "breath attack", 
     "repeater crossbow", "repeater handbow", 
-    "blunderbuss", "flintlock axe",
+    "blunderbuss", "flintlock axe", "pistol and spear",
     "ogre crossbow", "hunting spear", "brace of ogre pistols",
     "poisoned javelin", "magnetic short bow", "blowpipe",
     "sylvan bow", 

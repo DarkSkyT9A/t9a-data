@@ -338,6 +338,8 @@ function calculatePickRates() {
         }
         else if(option === 'models') {
           const armyUnits = require("./units.js")[army];
+          // TODO Array with unit size (models) may be smaller than the picked units. Make sure to calculate avg unit size correctly on the real amount
+          //      of units with a model count. Same for percentages of small, medium, large
           pickRates[army].units[unit].options.models = pickRates[army].units[unit].options.models || {};
           pickRates[army].units[unit].options.models.Ø = `${(rawData.byArmy[army].picks[unit][option].reduce((a,b)=>a+b,0) / pickSum).toFixed(1).padStart(4, " ")}`;
           // console.log(`unit ${unit}`);
