@@ -392,6 +392,15 @@ function calculatePickRates() {
           } else if(options.specialistSkills.includes(option)) {
             pickRates[army].units[unit].options.specialistSkills = pickRates[army].units[unit].options.specialistSkills || {};
             pickRates[army].units[unit].options.specialistSkills[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.totem.includes(option)) {
+            pickRates[army].units[unit].options.totem = pickRates[army].units[unit].options.totem || {};
+            pickRates[army].units[unit].options.totem[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.battleRunes.includes(option)) {
+            pickRates[army].units[unit].options.battleRunes = pickRates[army].units[unit].options.battleRunes || {};
+            pickRates[army].units[unit].options.battleRunes[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
+          } else if(options.manifestations.includes(option)) {
+            pickRates[army].units[unit].options.manifestations = pickRates[army].units[unit].options.manifestations || {};
+            pickRates[army].units[unit].options.manifestations[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
           } else if(options.honour.includes(option)) {
             pickRates[army].units[unit].options.honour = pickRates[army].units[unit].options.honour || {};
             pickRates[army].units[unit].options.honour[option] = `${(rawData.byArmy[army].picks[unit][option].length * 100 / pickSum).toFixed(0)}%`;
@@ -638,7 +647,7 @@ function printGlobalData() {
 
 function printArmyResults() {
 
-  const emptyLine = `┃\x1b[47m      ┃       │      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      │      \x1b[0m┃`;
+  const emptyLine = `┃\x1b[0m      ┃       │      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      │      \x1b[0m┃`;
 
   console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
   console.log(`┃ \x1b[1m Tournament Type: ${(args.type || 'Single').padEnd(43, " ") } – Average Points \x1b[0m                                                                   ┃`);
@@ -684,13 +693,18 @@ function printArmyResults() {
   console.log(`┃GAMES ┃ Total┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃`);
   console.log(`┣━━━━━━╋━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
   let toggle = false;
+  const emptyLineGames = `┃      ┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃`;
+
   for(let army in resultData) {
-    if(toggle) {
+    // if(toggle) {
       console.log(`┃  ${army.toUpperCase().padEnd(3, " ")} ┃ ${resultData[army].all.count} ┃ ${resultData[army][army].count} │ ${resultData[army].de.count} │ ${resultData[army].dh.count} │ ${resultData[army].dl.count} │ ${resultData[army].eos.count} │ ${resultData[army].he.count} │ ${resultData[army].id.count} │ ${resultData[army].koe.count} │ ${resultData[army].ok.count} │ ${resultData[army].ong.count} │ ${resultData[army].sa.count} │ ${resultData[army].se.count} │ ${resultData[army].ud.count} │ ${resultData[army].vc.count} │ ${resultData[army].vs.count} │ ${resultData[army].wdg.count} ┃`);
-    } else {
-      console.log(`┃\x1b[47m  ${army.toUpperCase().padEnd(3, " ")} ┃ ${resultData[army].all.count} ┃ ${resultData[army][army].count} │ ${resultData[army].de.count} │ ${resultData[army].dh.count} │ ${resultData[army].dl.count} │ ${resultData[army].eos.count} │ ${resultData[army].he.count} │ ${resultData[army].id.count} │ ${resultData[army].koe.count} │ ${resultData[army].ok.count} │ ${resultData[army].ong.count} │ ${resultData[army].sa.count} │ ${resultData[army].se.count} │ ${resultData[army].ud.count} │ ${resultData[army].vc.count} │ ${resultData[army].vs.count} │ ${resultData[army].wdg.count} \x1b[0m┃`);
+    // } else {
+    //   console.log(`┃\x1b[47m  ${army.toUpperCase().padEnd(3, " ")} ┃ ${resultData[army].all.count} ┃ ${resultData[army][army].count} │ ${resultData[army].de.count} │ ${resultData[army].dh.count} │ ${resultData[army].dl.count} │ ${resultData[army].eos.count} │ ${resultData[army].he.count} │ ${resultData[army].id.count} │ ${resultData[army].koe.count} │ ${resultData[army].ok.count} │ ${resultData[army].ong.count} │ ${resultData[army].sa.count} │ ${resultData[army].se.count} │ ${resultData[army].ud.count} │ ${resultData[army].vc.count} │ ${resultData[army].vs.count} │ ${resultData[army].wdg.count} \x1b[0m┃`);
+    // }
+    // toggle = !toggle;
+    if(army !== "wdg") {
+      console.log(emptyLineGames);
     }
-    toggle = !toggle;
   }
   console.log(`┗━━━━━━┻━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
 }
@@ -838,7 +852,7 @@ function printUnitOptionRates() {
       console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
 
       for(let category in pickRates[army].units[unit].options) {
-        console.log(`┃ ${category.padEnd(45, " ")}         ┃`);
+        console.log(`┃\x1b[34m ${category.padEnd(45, " ")}         \x1b[0m┃`);
         console.log(`┠───────────────────────────────────────────────────────┨`);
 
         for(let option in pickRates[army].units[unit].options[category]) {

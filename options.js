@@ -13,8 +13,11 @@ const spells = [
     "predator's instinct", "savage fury", "awaken the beast", "swarm of insects", "wild spikes", "totemic summon",
     "smite the unbeliever", "light of faith", "weight of judgement", "holy affliction", "wrath of god", "rain of fire",
     "evil eye", "soured luck", "illusory paths", "cauldron's curse", "clouded sight", "mists of invisibility",
+    "spear of infinity", "astral union", "arise!", "hellfire", "favour of meladys", "forest embrace", "children of umi",
+    "curse of the phantom queen",
 ];
 const meleeWeapons = [ "great weapon", "great weapon and elven finesse", "halberd", "halberd and shield", "lance", "lance and shield", "light lance", "light lance and shield", "paired weapons", "spear", "spear and shield", 
+    "beast axe",
     "cavalry pick",
     "infernal weapon",
     "bastard sword",
@@ -24,7 +27,8 @@ const meleeWeapons = [ "great weapon", "great weapon and elven finesse", "halber
     "sylvan blades",
     "gladius and weapon master",  ];
 const shootingWeapons = [ "bow", "crossbow", "handgun", "longbow", "pistol", "throwing weapons", "breath attack", 
-    "repeater crossbow", "repeater handbow", 
+    "repeater crossbow", "repeater handbow", "repeater handbow and poison attacks", "light lance and repeater crossbow",
+    "forge repeater", "guild-crafted handgun", "wyrm-slayer rocket", "crossbow and great weapon",
     "repeater pistol", "repeater gun", "brace of pistols and fire on impact", "long rifle", 
     "blunderbuss", "flintlock axe", "pistol and spear",
     "ogre crossbow", "hunting spear", "brace of ogre pistols",
@@ -34,6 +38,7 @@ const shootingWeapons = [ "bow", "crossbow", "handgun", "longbow", "pistol", "th
     "canister launcher", "deepfire thrower", "rotary gun", "jezail", "jezail and shield",
     "skinning lash",  ];
 const artilleryWeapons = [ 
+    "dwarf ballista", "dwarf catapult", "dwarf cannon", "flame cannon", "organ gun",
     "volley gun", "cannon", "imperial rocketeer", "mortar",
     "naphtha thrower", "rocket battery", "titan mortar",
     "trebuchet and change its height to 3", "scorpion",
@@ -71,7 +76,23 @@ const armour = [ "shield", "spiked shield", "elven cloak", ];
 
 
 /** Army Specific */
+// BH
+const totem = [ "gnarled hide totem", "blooded horn totem", "clouded eye totem", "black wing totem", ];
 
+// DH
+const battleRunes = [ "rune of revocation", "rune of reckoning", "rune of oaths", "rune of resolve", "rune of gleaming", "rune of resilience", ];
+
+// DL
+const manifestations = [ "kaleidoscopic flesh", "hellish larynx", "mark of the eternal champion", "mirrored scales", "horrifying visage", 
+    "trampling hooves", "centipede legs", "hammer hand", "unnatural roots", "brimstone secretions", "chitinous scales", "dark hide", "hell can wait",
+    "charged tendrils", "piercing spike", "venom sacs",
+    "digestive vomit", "unhinging jaw", "unholy appetite",
+    "smothering coils", "clinging ichor", "segmented shell",
+    "hidden knives", "mesmerising plumage", "hot blood",
+    "golden helm", "bronze backbone", "horns of hubris", 
+    "torporous tendrils", "sorcerous antennae", "all-seeing eye",
+    "curved tusks", "whipcrack tail", "incendiary ichor", 
+];
 // HE
 const honour = [ "master of canreig tower", "high warden of the flame", "fleet officer", "queen's cavalier", "royal huntsman", 
     "grandmaster of the sword", "queen's companion", "asfad scholar", "order of the fiery heart", ];
@@ -129,28 +150,23 @@ module.exports = {
     specialistSkills,
     armour,
 
+    totem, 
+    battleRunes,
+    manifestations, 
     honour, 
-
     knightlyPrinciple,
     heroicTraits,
-
     bigName,
-
     trollRace, 
-
     howdah,
     arcaneMastery,
     telepathicMastery,
-
     kindred,
     aspectOfNature,
-
     lordOfUndeath,
     occupation,
-  
     ancestralBloodPower,
     bloodPowers,
-
     mortalOrigin,
     patronDeity,
     house,
