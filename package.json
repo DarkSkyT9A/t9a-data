@@ -3,8 +3,9 @@
   "description": "The Ninth Age - Data Project",
   "version": "1.0.0",
   "dependencies": {
-    "yargs": "^17",
-    "superagent": "^10"
+    "strip-ansi-cli": "^4.0.0",
+    "superagent": "^10",
+    "yargs": "^17"
   },
   "scripts": {
     "start": "node ./main.js -e -p -o --minParticipants=12 --type=all",
@@ -12,4 +13,3 @@
     "debug": "node ./main.js -d -e -p -o --minParticipants=12 --type=all"
   }
 }
-

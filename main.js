@@ -542,6 +542,10 @@ function calculatePickRates() {
       if(debug) console.log(`Filtered out ${reportsResponse.body.length - validResults.length} invalid reports`);
 
       for(let result of validResults) {
+        if(typeof result.score[0].BPObj !== "number" || typeof result.score[1].BPObj !== "number") {
+          if(debug) console.log(`Filtering out game result due to missing score.`);
+          continue;
+        }
         rawData.global.gamesCount++
         
         if(debug) {
@@ -692,16 +696,10 @@ function printArmyResults() {
   console.log(`┣━━━━━━┳━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┫`);
   console.log(`┃GAMES ┃ Total┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃`);
   console.log(`┣━━━━━━╋━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
-  let toggle = false;
-  const emptyLineGames = `┃      ┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃`;
 
+  const emptyLineGames = `┃      ┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃`;
   for(let army in resultData) {
-    // if(toggle) {
-      console.log(`┃  ${army.toUpperCase().padEnd(3, " ")} ┃ ${resultData[army].all.count} ┃ ${resultData[army][army].count} │ ${resultData[army].de.count} │ ${resultData[army].dh.count} │ ${resultData[army].dl.count} │ ${resultData[army].eos.count} │ ${resultData[army].he.count} │ ${resultData[army].id.count} │ ${resultData[army].koe.count} │ ${resultData[army].ok.count} │ ${resultData[army].ong.count} │ ${resultData[army].sa.count} │ ${resultData[army].se.count} │ ${resultData[army].ud.count} │ ${resultData[army].vc.count} │ ${resultData[army].vs.count} │ ${resultData[army].wdg.count} ┃`);
-    // } else {
-    //   console.log(`┃\x1b[47m  ${army.toUpperCase().padEnd(3, " ")} ┃ ${resultData[army].all.count} ┃ ${resultData[army][army].count} │ ${resultData[army].de.count} │ ${resultData[army].dh.count} │ ${resultData[army].dl.count} │ ${resultData[army].eos.count} │ ${resultData[army].he.count} │ ${resultData[army].id.count} │ ${resultData[army].koe.count} │ ${resultData[army].ok.count} │ ${resultData[army].ong.count} │ ${resultData[army].sa.count} │ ${resultData[army].se.count} │ ${resultData[army].ud.count} │ ${resultData[army].vc.count} │ ${resultData[army].vs.count} │ ${resultData[army].wdg.count} \x1b[0m┃`);
-    // }
-    // toggle = !toggle;
+    console.log(`┃  ${army.toUpperCase().padEnd(3, " ")} ┃ ${resultData[army].all.count} ┃ ${resultData[army][army].count} │ ${resultData[army].de.count} │ ${resultData[army].dh.count} │ ${resultData[army].dl.count} │ ${resultData[army].eos.count} │ ${resultData[army].he.count} │ ${resultData[army].id.count} │ ${resultData[army].koe.count} │ ${resultData[army].ok.count} │ ${resultData[army].ong.count} │ ${resultData[army].sa.count} │ ${resultData[army].se.count} │ ${resultData[army].ud.count} │ ${resultData[army].vc.count} │ ${resultData[army].vs.count} │ ${resultData[army].wdg.count} ┃`);
     if(army !== "wdg") {
       console.log(emptyLineGames);
     }
@@ -847,20 +845,20 @@ function printUnitOptionRates() {
 
   for(let army in pickRates) {
     for(let unit in pickRates[army].units) {
-      console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
-      console.log(`┃ \x1b[1mOptions: ${unit.padEnd(44, " ")}\x1b[0m ┃`);
-      console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
+      console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+      console.log(`┃ \x1b[1mOptions: ${unit.padEnd(48, " ")}\x1b[0m ┃`);
+      console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
 
       for(let category in pickRates[army].units[unit].options) {
-        console.log(`┃\x1b[34m ${category.padEnd(45, " ")}         \x1b[0m┃`);
-        console.log(`┠───────────────────────────────────────────────────────┨`);
+        console.log(`┃\x1b[34m ${category.padEnd(49, " ")}         \x1b[0m┃`);
+        console.log(`┠───────────────────────────────────────────────────────────┨`);
 
         for(let option in pickRates[army].units[unit].options[category]) {
-          console.log(`┃ ${option.padEnd(40, " ")} - ${pickRates[army].units[unit].options[category][option].padEnd(10, " ")} ┃`);
+          console.log(`┃ ${option.padEnd(44, " ")} - ${pickRates[army].units[unit].options[category][option].padEnd(10, " ")} ┃`);
         }
-        console.log(`┠───────────────────────────────────────────────────────┨`);
+        console.log(`┠───────────────────────────────────────────────────────────┨`);
       }
-      console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
+      console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
     }
   }
 }
