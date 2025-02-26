@@ -10,6 +10,7 @@
   "scripts": {
     "start": "node ./main.js -e -p -o --minParticipants=12 --type=all",
     "dev": "node ./main.js --type=all -r",
-    "debug": "node ./main.js -d -e -p -o --minParticipants=12 --type=all"
+    "debug": "node ./main.js -d -e -p -o --minParticipants=12 --type=all",
+	"nocolour" : "npm run start | ./node_modules/strip-ansi-cli/cli.js"
   }
 }
