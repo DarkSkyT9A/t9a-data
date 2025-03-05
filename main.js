@@ -16,6 +16,7 @@ const args = require('yargs').argv;
 const options = require('./options.js');
 const { arcCompAll, allItems, arcCompCommon, commonArmour, commonArtefact, commonBanner, commonPotion, commonShield, commonWeapon, sharedArmour, sharedArtefact, sharedBanner, sharedPotion, sharedShield, sharedWeapon } = require('./specialItems.js');
 
+const defaultStartDate = "2025-03-05";
 const date = new Date();
 const today = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
 let debug = false;
@@ -498,7 +499,7 @@ function calculatePickRates() {
     const showRawData = args.r ? true : false;
     const showOptionRates = args.o ? true : false;
     const minParticipants = args.minParticipants ? args.minParticipants : 0;
-    const start = args.start || '2025-01-22';
+    const start = args.start || defaultStartDate;
     const end = args.end || today;
 
     const tournamentsResponse = await superagent
