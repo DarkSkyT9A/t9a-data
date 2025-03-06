@@ -1684,7 +1684,7 @@ const ong = [
     "max" : 6,
   },
   {
-    "name" : "grotlin scrap wagon",
+    "name" : "grotling scrap wagon",
     "category" : "special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
