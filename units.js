@@ -708,15 +708,6 @@ const eos = [
     "min" : 15,
     "max" : 20,
   },
-  // Workaround for NR bug
-  {
-    "name" : "state detatchment",
-    "category" : "core",
-    "imperialAuxiliaries" : 0,
-    "imperialArmory" : 0,
-    "min" : 15,
-    "max" : 20,
-  },
   {
     "name" : "state marksmen",
     "category" : "core",
@@ -724,31 +715,6 @@ const eos = [
     "imperialArmory" : 0,
     "min" : 15,
     "max" : 20,
-  },
-  // Workaround for older EoS lists
-  {
-    "name" : "light infantry",
-    "category" : "core",
-    "imperialAuxiliaries" : 1,
-    "imperialArmory" : 0,
-    "min" : 15,
-    "max" : 20,
-  },
-  {
-    "name" : "heavy infantry",
-    "category" : "core",
-    "imperialAuxiliaries" : 0,
-    "imperialArmory" : 0,
-    "min" : 20,
-    "max" : 40,
-  },
-  {
-    "name" : "state militia",
-    "category" : "core",
-    "imperialAuxiliaries" : 1,
-    "imperialArmory" : 0,
-    "min" : 15,
-    "max" : 25,
   },
   {
     "name" : "local militia",
