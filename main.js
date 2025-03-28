@@ -16,7 +16,7 @@ const args = require('yargs').argv;
 const options = require('./options.js');
 const { arcCompAll, allItems, arcCompCommon, arcCompShared, sharedArmour, sharedArtefact, sharedBanner, sharedPotion, sharedShield, sharedWeapon, allArmour, allWeapon, allShield, allArtefact, allPotion, allBanner } = require('./specialItems.js');
 
-const defaultStartDate = "2025-03-15";
+const defaultStartDate = "2025-03-05";
 const date = new Date();
 const today = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
 let debug = false;
