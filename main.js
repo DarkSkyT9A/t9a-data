@@ -14,9 +14,9 @@
 const superagent = require('superagent');
 const args = require('yargs').argv;
 const options = require('./options.js');
-const { arcCompAll, allItems, arcCompCommon, sharedArmour, sharedArtefact, sharedBanner, sharedPotion, sharedShield, sharedWeapon, arcCompShared } = require('./specialItems.js');
+const { arcCompAll, allItems, arcCompCommon, arcCompShared, sharedArmour, sharedArtefact, sharedBanner, sharedPotion, sharedShield, sharedWeapon, allArmour, allWeapon, allShield, allArtefact, allPotion, allBanner } = require('./specialItems.js');
 
-const defaultStartDate = "2025-03-05";
+const defaultStartDate = "2025-03-15";
 const date = new Date();
 const today = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
 let debug = false;
@@ -477,22 +477,54 @@ function calculatePickRates() {
 
         // Handle Special Items
         if(allItems.includes(option)) {
-          pickRates[army].specialItems[option] = pickRates[army].specialItems[option] || { "count" : 0, "pickPercent" : "", "type" : "", "source" : "" };
+          pickRates[army].specialItems[option] = pickRates[army].specialItems[option] || { "name" : option, "count" : 0, "pickPercent" : "", "type" : "", "source" : "" };
           pickRates[army].specialItems[option].count = pickRates[army].specialItems[option].count + rawData.byArmy[army].picks[unit][option].reduce((a,b)=>a+b,0);
           pickRates[army].specialItems[option].pickPercent = `${(pickRates[army].specialItems[option].count * 100 / rawData.byArmy[army].games.availableLists).toFixed(0)}`;
-          // if(arcCompCommon.includes(option)) {
-          //   pickRates[army].specialItems[option].source = "common";
-          // } else if(arcCompShared.includes(option)) {
-          //   pickRates[army].specialItems[option].source = "shared";
-          // } else {
-          //   pickRates[army].specialItems[option].source = "army";
-          // }
+          if(Object.values(arcCompCommon).flat().includes(option)) {
+            pickRates[army].specialItems[option].source = "common";
+          } else if(arcCompShared.includes(option)) {
+            pickRates[army].specialItems[option].source = "shared";
+          } else {
+            pickRates[army].specialItems[option].source = "army";
+          }
 
-          // if()
-
-
+          if(allWeapon.includes(option)) {
+            pickRates[army].specialItems[option].type = "weapon";
+          } else if(allArmour.includes(option)) {
+            pickRates[army].specialItems[option].type = "armour";
+          } else if(allShield.includes(option)) {
+            pickRates[army].specialItems[option].type = "shield";
+          } else if(allArtefact.includes(option)) {
+            pickRates[army].specialItems[option].type = "artefact";
+          } else if(allPotion.includes(option)) {
+            pickRates[army].specialItems[option].type = "potion";
+          } else if(allBanner.includes(option)) {
+            pickRates[army].specialItems[option].type = "banner";
+          } 
         }
       }
+
+      // Calculate Pricing Relevant Global Metrics
+      let values = Object.values(pickRates[army].specialItems);
+      const armyItems = require("./specialItems.js")[army];
+      pickRates[army].pricing =  pickRates[army].pricing || {};
+      pickRates[army].pricing.items = pickRates[army].pricing.items || {};
+      pickRates[army].pricing.items.count = pickRates[army].pricing.items.count || {};
+      pickRates[army].pricing.items.count.army = values.filter(option => option.source === "army").reduce((a,b)=>a+b.count,0);
+      pickRates[army].pricing.items.count.global = values.filter(option => option.source !== "army").reduce((a,b)=>a+b.count,0);
+      pickRates[army].pricing.items.count.factor = (pickRates[army].pricing.items.count.army / Object.values(armyItems).flat().length)/ (pickRates[army].pricing.items.count.global / (Object.values(arcCompCommon).flat().length + arcCompShared.length));
+      let highestArmyWeaponCount = values.filter(o => o.source === "army" && o.type === "weapon").reduce((a, b) => Math.max(a, b.count), -Infinity);
+      let highestArmyArmourShieldCount = values.filter(o => o.source === "army" && (o.type === "armour" || o.type === "shield")).reduce((a, b) => Math.max(a, b.count), -Infinity);
+      let highestArmyArtefactCount = values.filter(o => o.source === "army" && o.type === "artefact").reduce((a, b) => Math.max(a, b.count), -Infinity);
+      let highestArmyPotionCount = values.filter(o => o.source === "army" && o.type === "potion").reduce((a, b) => Math.max(a, b.count), -Infinity);
+      let highestArmyBannerCount = values.filter(o => o.source === "army" && o.type === "banner").reduce((a, b) => Math.max(a, b.count), -Infinity);
+
+      pickRates[army].pricing.items.problems = pickRates[army].pricing.items.problems || {};
+      pickRates[army].pricing.items.problems.weapon = values.filter(o => o.source !== "army" && o.type === "weapon" && o.count > highestArmyWeaponCount);
+      pickRates[army].pricing.items.problems.armourShield = values.filter(o => o.source !== "army" && (o.type === "armour" || o.type === "shield") && o.count > highestArmyArmourShieldCount);
+      pickRates[army].pricing.items.problems.artefact = values.filter(o => o.source !== "army" && o.type === "artefact" && o.count > highestArmyArtefactCount);
+      pickRates[army].pricing.items.problems.potion = values.filter(o => o.source !== "army" && o.type === "potion" && o.count > highestArmyPotionCount);
+      pickRates[army].pricing.items.problems.banner = values.filter(o => o.source !== "army" && o.type === "banner" && o.count > highestArmyBannerCount);
     }
   }
 }
@@ -839,10 +871,10 @@ function printUnitPickRates() {
           let cat = `${category.padEnd(8, " ")}`;
           let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
           let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
-          console.log(`┃ ${cat} │${name} ┃  ${count}  │ ${percent} ┃`);
+          console.log(`┃ ${cat} │ ${name} ┃  ${count}  │ ${percent} ┃`);
         }
       }
-      console.log(`┃          │                                    ┃       │       ┃`)
+      if(category !== "banner" ) console.log(`┃          │                                    ┃       │       ┃`)
     }
 
     console.log(`┣━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┫`);
@@ -858,7 +890,7 @@ function printUnitPickRates() {
         let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
         console.log(`┃ ${cat} │ ${name} ┃  ${count}  │ ${percent} ┃`);
       }
-      console.log(`┃          │                                    ┃       │       ┃`)
+      if(category !== "banner" ) console.log(`┃          │                                    ┃       │       ┃`)
     }
     console.log(`┗━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┛`);
     console.log(`\n`);
@@ -881,7 +913,7 @@ function printUnitOptionRates() {
         for(let option in pickRates[army].units[unit].options[category]) {
           console.log(`┃ ${option.padEnd(44, " ")} - ${pickRates[army].units[unit].options[category][option].padEnd(10, " ")} ┃`);
         }
-        console.log(`┠───────────────────────────────────────────────────────────┨`);
+        if(category !== "banner" ) console.log(`┠───────────────────────────────────────────────────────────┨`);
       }
       console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
     }

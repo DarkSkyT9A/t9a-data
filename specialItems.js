@@ -169,7 +169,7 @@ const seItems = {
 const udItems = {
     "weapon" : [ "godslayer", "scourge of kings", ],
     "armour" : [ "jackal's blessing", "sandstorm cloak", ],
-    "weapon" : [ "sun's embrace", ],
+    "shield" : [ "sun's embrace", ],
     "artefact" : [ "sacred hourglass", "crown of the pharaohs", "death mask of teput", "book of the dead", "kherp sceptre", "blessed wrappings", ],
     "potion" : [ "scroll of desiccation", ],
     "banner" : [ "icon of reflection", "sigil of the closed gates", "banner of the entombed", ],
@@ -202,7 +202,13 @@ const wdgItems = {
 };
 
 const allItems = arcCompAll.concat(Object.values(bhItems).flat(), Object.values(deItems).flat(), Object.values(dhItems).flat(), Object.values(eosItems).flat(), Object.values(heItems).flat(), Object.values(idItems).flat(), Object.values(koeItems).flat(), Object.values(okItems).flat(), Object.values(ongItems).flat(), Object.values(saItems).flat(), Object.values(seItems).flat(), Object.values(udItems).flat(), Object.values(vcItems).flat(), Object.values(vsItems).flat(), Object.values(wdgItems).flat());
-const armyItems = Object.values(bhItems).flat().concat(Object.values(deItems).flat(), Object.values(dhItems).flat(), Object.values(eosItems).flat(), Object.values(heItems).flat(), Object.values(idItems).flat(), Object.values(koeItems).flat(), Object.values(okItems).flat(), Object.values(ongItems).flat(), Object.values(saItems).flat(), Object.values(seItems).flat(), Object.values(udItems).flat(), Object.values(vcItems).flat(), Object.values(vsItems).flat(), Object.values(wdgItems).flat());
+
+const allWeapon = arcCompCommon.weapon.concat(sharedWeapon, bhItems.weapon, deItems.weapon, dhItems.weapon, eosItems.weapon, heItems.weapon, idItems.weapon, koeItems.weapon, okItems.weapon, ongItems.weapon, saItems.weapon, seItems.weapon, udItems.weapon, vcItems.weapon, vsItems.weapon, wdgItems.weapon);
+const allArmour = arcCompCommon.armour.concat(sharedArmour, bhItems.armour, deItems.armour, dhItems.armour, eosItems.armour, heItems.armour, idItems.armour, koeItems.armour, okItems.armour, ongItems.armour, saItems.armour, seItems.armour, udItems.armour, vcItems.armour, vsItems.armour, wdgItems.armour);
+const allShield = arcCompCommon.shield.concat(sharedShield, bhItems.shield, deItems.shield, dhItems.shield, eosItems.shield, heItems.shield, idItems.shield, koeItems.shield, okItems.shield, ongItems.shield, saItems.shield, seItems.shield, udItems.shield, vcItems.shield, vsItems.shield, wdgItems.shield);
+const allArtefact = arcCompCommon.artefact.concat(sharedArtefact, bhItems.artefact, deItems.artefact, dhItems.artefact, eosItems.artefact, heItems.artefact, idItems.artefact, koeItems.artefact, okItems.artefact, ongItems.artefact, saItems.artefact, seItems.artefact, udItems.artefact, vcItems.artefact, vsItems.artefact, wdgItems.artefact);
+const allPotion = arcCompCommon.potion.concat(sharedPotion, bhItems.potion, deItems.potion, dhItems.potion, eosItems.potion, heItems.potion, idItems.potion, koeItems.potion, okItems.potion, ongItems.potion, saItems.potion, seItems.potion, udItems.potion, vcItems.potion, vsItems.potion, wdgItems.potion);
+const allBanner = arcCompCommon.banner.concat(sharedBanner, bhItems.banner, deItems.banner, dhItems.banner, eosItems.banner, heItems.banner, idItems.banner, koeItems.banner, okItems.banner, ongItems.banner, saItems.banner, seItems.banner, udItems.banner, vcItems.banner, vsItems.banner, wdgItems.banner);
 
 // exports
 module.exports = {
@@ -210,7 +216,6 @@ module.exports = {
     "arcCompCommon" : arcCompCommon,
     "arcCompShared" : arcCompShared,
     "allItems" : allItems,
-    "armyItems" : armyItems,
     "sharedItems": sharedItems,
     "bh" : bhItems,
     "de" : deItems,
@@ -234,4 +239,10 @@ module.exports = {
     sharedArtefact, 
     sharedPotion, 
     sharedBanner,
+    allWeapon,
+    allArmour,
+    allShield,
+    allArtefact,
+    allBanner,
+    allPotion
 };
