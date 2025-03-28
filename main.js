@@ -14,7 +14,7 @@
 const superagent = require('superagent');
 const args = require('yargs').argv;
 const options = require('./options.js');
-const { arcCompAll, allItems, arcCompCommon, commonArmour, commonArtefact, commonBanner, commonPotion, commonShield, commonWeapon, sharedArmour, sharedArtefact, sharedBanner, sharedPotion, sharedShield, sharedWeapon } = require('./specialItems.js');
+const { arcCompAll, allItems, arcCompCommon, sharedArmour, sharedArtefact, sharedBanner, sharedPotion, sharedShield, sharedWeapon, arcCompShared } = require('./specialItems.js');
 
 const defaultStartDate = "2025-03-05";
 const date = new Date();
@@ -477,9 +477,20 @@ function calculatePickRates() {
 
         // Handle Special Items
         if(allItems.includes(option)) {
-          pickRates[army].specialItems[option] = pickRates[army].specialItems[option] || { "count" : 0, "pickPercent" : "" };
+          pickRates[army].specialItems[option] = pickRates[army].specialItems[option] || { "count" : 0, "pickPercent" : "", "type" : "", "source" : "" };
           pickRates[army].specialItems[option].count = pickRates[army].specialItems[option].count + rawData.byArmy[army].picks[unit][option].reduce((a,b)=>a+b,0);
           pickRates[army].specialItems[option].pickPercent = `${(pickRates[army].specialItems[option].count * 100 / rawData.byArmy[army].games.availableLists).toFixed(0)}`;
+          // if(arcCompCommon.includes(option)) {
+          //   pickRates[army].specialItems[option].source = "common";
+          // } else if(arcCompShared.includes(option)) {
+          //   pickRates[army].specialItems[option].source = "shared";
+          // } else {
+          //   pickRates[army].specialItems[option].source = "army";
+          // }
+
+          // if()
+
+
         }
       }
     }
@@ -717,7 +728,7 @@ function printUnitPickRates() {
   console.log(`┃ Category            │ Item Name                    │   #    │   %    ┃`);
   console.log(`┣━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━┿━━━━━━━━┫`);
   
-  for(let item of commonWeapon) {
+  for(let item of arcCompCommon.weapon) {
     console.log(`┃ Common Weapon       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
   }
   console.log(`┃                     │                              │        │        ┃`);
@@ -727,7 +738,7 @@ function printUnitPickRates() {
   }
   console.log(`┃                     │                              │        │        ┃`);
 
-  for(let item of commonArmour) {
+  for(let item of arcCompCommon.armour) {
     console.log(`┃ Common Armour       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
   }
   console.log(`┃                     │                              │        │        ┃`);
@@ -737,7 +748,7 @@ function printUnitPickRates() {
   }
   console.log(`┃                     │                              │        │        ┃`);
 
-  for(let item of commonShield) {
+  for(let item of arcCompCommon.shield) {
     console.log(`┃ Common Shield       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
   }
   console.log(`┃                     │                              │        │        ┃`);
@@ -747,7 +758,7 @@ function printUnitPickRates() {
   }
   console.log(`┃                     │                              │        │        ┃`);
 
-  for(let item of commonArtefact) {
+  for(let item of arcCompCommon.artefact) {
     console.log(`┃ Common Artefact     │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
   }
   console.log(`┃                     │                              │        │        ┃`);
@@ -757,7 +768,7 @@ function printUnitPickRates() {
   }
   console.log(`┃                     │                              │        │        ┃`);
 
-  for(let item of commonPotion) {
+  for(let item of arcCompCommon.potion) {
     console.log(`┃ Common Potion       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
   }
   console.log(`┃                     │                              │        │        ┃`);
@@ -767,7 +778,7 @@ function printUnitPickRates() {
   }
   console.log(`┃                     │                              │        │        ┃`);
 
-  for(let item of commonBanner) {
+  for(let item of arcCompCommon.banner) {
     console.log(`┃ Common Banner       │ ${item.padEnd(28, " ")} │  ${(rawData.global.specialItems[item] || 0).toString().padStart(4, " ")}  │  ${((rawData.global.specialItems[item] || 0)*50/rawData.global.gamesCount).toFixed(0).padStart(3, " ")}%  ┃`);
   }
   console.log(`┃                     │                              │        │        ┃`);
@@ -798,45 +809,58 @@ function printUnitPickRates() {
     console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
     console.log(`\n`);
 
-    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┓`);
-    console.log(`┃ \x1b[1m${army.padEnd(3, " ")} - Special Items                ┃   #   ┃   %\x1b[0m   ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┫`);
-    console.log(`┃ Common Items                                       ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
+    console.log(`┏━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┓`);
+    console.log(`┃ \x1b[1mCategory │ ${army.padEnd(3, " ")} - Special Items                ┃   #   │   %\x1b[0m   ┃`);
+    console.log(`┣━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┫`);
+    console.log(`┃ Common Items                                                  ┃`);
+    console.log(`┣━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┫`);
 
-    for(let item of arcCompCommon) {
-      let name = `${item.padEnd(34, " ")}`;
-      let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
-      let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
-      console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
+    for(let category in arcCompCommon) {
+      for(let item of arcCompCommon[category]) {
+        let name = `${item.padEnd(34, " ")}`;
+        let cat = `${category.padEnd(8, " ")}`;
+        let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
+        let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
+        console.log(`┃ ${cat} │ ${name} ┃  ${count}  │ ${percent} ┃`);
+      }
+      console.log(`┃          │                                    ┃       │       ┃`)
     }
 
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┫`);
-    console.log(`┃ Shared Items                                       ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
+    console.log(`┣━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┫`);
+    console.log(`┃ Shared Items                                                  ┃`);
+    console.log(`┣━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┫`);
 
-    const armySharedItems = require("./specialItems.js").sharedItems[army];
-
-    for(let item of armySharedItems) {
-      let name = `${item.padEnd(34, " ")}`;
-      let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
-      let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
-      console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
+    const sharedItems = require("./specialItems.js").sharedItems;
+    // console.log(JSON.stringify(sharedItems, null, 4));
+    for(let category in sharedItems) {
+      for(let item in sharedItems[category]) {
+        if(sharedItems[category][item].includes(army)) {
+          let name = `${item.padEnd(34, " ")}`;
+          let cat = `${category.padEnd(8, " ")}`;
+          let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
+          let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
+          console.log(`┃ ${cat} │${name} ┃  ${count}  │ ${percent} ┃`);
+        }
+      }
+      console.log(`┃          │                                    ┃       │       ┃`)
     }
 
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┫`);
-    console.log(`┃ Army Specific Items                                ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━┫`);
+    console.log(`┣━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┫`);
+    console.log(`┃ Army Specific Items                                           ┃`);
+    console.log(`┣━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┫`);
 
     const armyItems = require("./specialItems.js")[army];
-    for(let item of armyItems) {
-      let name = `${item.padEnd(34, " ")}`;
-      let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
-      let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
-      console.log(`┃ ${name} ┃  ${count}  ┃ ${percent} ┃`);
+    for(let category in armyItems) {
+      for(let item of armyItems[category]) {
+        let name = `${item.padEnd(34, " ")}`;
+        let cat = `${category.padEnd(8, " ")}`;
+        let count = `${pickRates[army].specialItems?.[item]?.count || 0}`.padStart(3, " ");
+        let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
+        console.log(`┃ ${cat} │ ${name} ┃  ${count}  │ ${percent} ┃`);
+      }
+      console.log(`┃          │                                    ┃       │       ┃`)
     }
-
-    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┻━━━━━━━┛`);
+    console.log(`┗━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┛`);
     console.log(`\n`);
 
   }
