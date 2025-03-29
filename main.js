@@ -20,6 +20,7 @@ const defaultStartDate = "2025-03-05";
 const date = new Date();
 const today = `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`;
 let debug = false;
+const armies = [ "bh", "de", "dh", "dl", "eos", "he", "id", "koe", "ok", "ong", "sa", "se", "ud", "vc", "vs", "wdg" ];
 
 // Results
 let resultData = {
@@ -541,6 +542,7 @@ function calculatePickRates() {
     const showPickRates = args.p ? true : false;
     const showRawData = args.r ? true : false;
     const showOptionRates = args.o ? true : false;
+    const showPricingActions = args.z ? true : false;
     const minParticipants = args.minParticipants ? args.minParticipants : 0;
     const start = args.start || defaultStartDate;
     const end = args.end || today;
@@ -643,6 +645,7 @@ function calculatePickRates() {
     calculatePickRates();
     if(showPickRates) printUnitPickRates();
     if(showOptionRates) printUnitOptionRates();
+    if(showPricingActions) printPricingActions();
     if(showRawData) {
       console.log(JSON.stringify(rawData, null, 4));
       console.log(JSON.stringify(pickRates, null, 4));
@@ -918,4 +921,41 @@ function printUnitOptionRates() {
       console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
     }
   }
+}
+
+function printPricingActions() {
+  for(let army of armies) {
+    // console.log(JSON.stringify(pickRates[army].pricing, null, 4));
+
+    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+    console.log(`┃\x1b[101m Pricing Relevant Metrics: ${army.padEnd(3, " ")} - Items                             \x1b[0m┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
+    console.log(`┃ Army wide counts                                                  ┃`);
+    console.log(`┠───────────────────────────────────────────────────────────────────┨`);
+    console.log(`┃ Army specific items ${pickRates[army].pricing.items.count.army.toString().padStart(40, " ")}      ┃`);
+    console.log(`┃ Arcane compendium items ${pickRates[army].pricing.items.count.global.toString().padStart(36, " ")}      ┃`);
+    console.log(`┃ Absolute army:global factor ${(pickRates[army].pricing.items.count.army / pickRates[army].pricing.items.count.global).toFixed(1).padStart(34, " ")}    ┃`);
+    console.log(`┃ Adjusted army:global factor ${pickRates[army].pricing.items.count.factor.toFixed(1).padStart(34, " ")}    ┃`);
+
+    let problems = Object.values(pickRates[army].pricing.items.problems).flat();
+
+    if(problems.length > 0) {
+      console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
+      console.log(`┃ Problematic items (overshadowing army items)                      ┃`);
+      console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━┯━━━━━━━━━━┯━━━━━━━━━┯━━━━━━━┫`);
+      console.log(`┃ Name                        │ Source │   Type   │    #    │   %   ┃`); 
+      console.log(`┠─────────────────────────────┼────────┼──────────┼─────────┼───────┨`);
+      for(let problem of problems) {
+        console.log(`┃ ${problem.name.padEnd(27, " ")} │ ${problem.source.padEnd(6, " ")} │ ${problem.type.padEnd(8, " ")} │ ${problem.count.toString().padStart(5, " ")}   │  ${problem.pickPercent.toString().padStart(3, " ")}% ┃`);
+        
+      }
+      console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━┷━━━━━━━┛`);
+    } else {
+      console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
+    }
+    
+
+
+  }
+
 }
