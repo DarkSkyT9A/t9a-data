@@ -11,6 +11,7 @@
 * 9. …
 */
 
+const fs = require('node:fs');
 const superagent = require('superagent');
 const args = require('yargs').argv;
 const options = require('./options.js');
@@ -546,25 +547,36 @@ function calculatePickRates() {
     const minParticipants = args.minParticipants ? args.minParticipants : 0;
     const start = args.start || defaultStartDate;
     const end = args.end || today;
+    const tournamentsFileName = `${start}-${end}-tournaments-data.json`;
+    let tournamentsData;
 
-    const tournamentsResponse = await superagent
-    .post('https://www.newrecruit.eu/api/tournaments')
-    .send({
-      "start": start,
-      "end": end,
-      "status" : 3,
-      "id_game_system" : 6 })
-    .set("accept", "json")
-    .set("user-agent", "t9a-data/0.0.1")
+    if(fs.existsSync(tournamentsFileName)) {
+      if(debug) console.log(`DEBUG: Reading file from disc. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`);
+      tournamentsData = JSON.parse(JSON.parse(fs.readFileSync(tournamentsFileName)).text);
+    } else {
+      if(debug) console.log(`DEBUG: Reading data from New Recruit. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`);
+      const tournamentsResponse = await superagent
+      .post('https://www.newrecruit.eu/api/tournaments')
+      .send({
+        "start": start,
+        "end": end,
+        "status" : 3,
+        "id_game_system" : 6 })
+      .set("accept", "json")
+      .set("user-agent", "t9a-data/0.0.1");
+      tournamentsData = tournamentsResponse.body;
+
+      if(debug) console.log(`DEBUG: Writing data to disc. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`);
+      fs.writeFileSync(tournamentsFileName, JSON.stringify(tournamentsResponse, null, 4));
+    }
 
     let data;
-
     if(tournamentType === 'single') {
-      data = tournamentsResponse.body.filter((tournament) => tournament.type === 0 && tournament.scoring_system === 11 && tournament.participants >= minParticipants);
+      data = tournamentsData.filter((tournament) => tournament.type === 0 && tournament.scoring_system === 11 && tournament.participants >= minParticipants);
     } else if(tournamentType === 'teams') {
-      data = tournamentsResponse.body.filter((tournament) => tournament.type === 1 && tournament.scoring_system === 11 && (tournament.participants * tournament.participants_per_team) >= minParticipants);
+      data = tournamentsData.filter((tournament) => tournament.type === 1 && tournament.scoring_system === 11 && (tournament.participants * tournament.participants_per_team) >= minParticipants);
     } else if(tournamentType === 'all') {
-      data = tournamentsResponse.body.filter((tournament) => {
+      data = tournamentsData.filter((tournament) => {
         let players = tournament.type === 0 ? tournament.participants : tournament.participants * tournament.participants_per_team;
         return tournament.scoring_system === 11 && players >= minParticipants;
       });
@@ -578,14 +590,22 @@ function calculatePickRates() {
 
     for(let t of data) {
       if(debug) console.log(`Assessing tournament: ${t.name}`);
-      const reportsResponse = await superagent
-      .post('https://www.newrecruit.eu/api/reports')
-      .send({ "id_tournament": t._id })
-      .set("accept", "json")
-      .set("user-agent", "t9a-data/0.0.1");
+      const singleTournamentFileName = `./data/${t._id}.json`;
+      let singleTournamentData;
+      if(fs.existsSync(singleTournamentFileName)) {
+        singleTournamentData = JSON.parse(JSON.parse(fs.readFileSync(singleTournamentFileName)).text);
+      } else {
+        const reportsResponse = await superagent
+        .post('https://www.newrecruit.eu/api/reports')
+        .send({ "id_tournament": t._id })
+        .set("accept", "json")
+        .set("user-agent", "t9a-data/0.0.1");
+        singleTournamentData = reportsResponse.body;
+        fs.writeFileSync(singleTournamentFileName, JSON.stringify(reportsResponse, null, 4));
+      }
 
-      const validResults = reportsResponse.body.filter((r) => r.handshake === false && typeof r.players[0].id_book === "number" && typeof r.players[1].id_book === "number");
-      if(debug) console.log(`Filtered out ${reportsResponse.body.length - validResults.length} invalid reports`);
+      const validResults = singleTournamentData.filter((r) => r.handshake === false && typeof r.players[0].id_book === "number" && typeof r.players[1].id_book === "number");
+      if(debug) console.log(`Filtered out ${singleTournamentData.length - validResults.length} invalid reports`);
 
       for(let result of validResults) {
         if(typeof result.score[0].BPObj !== "number" || typeof result.score[1].BPObj !== "number") {
