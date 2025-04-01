@@ -262,10 +262,18 @@ function addListsToAnalysis(result) {
       let armyString = getArmyStringForId(player.id_book, false);
       rawData.byArmy[armyString] = rawData.byArmy[armyString] || {};
       rawData.byArmy[armyString].games.missingLists++;
+      
     } else {
+      // console.log(JSON.stringify(player.report_list, null, 4));
       let armyString = getArmyStringForId(player.id_book, null);
+      const armyUnits = require("./units.js")[armyString];
       // Count the number of lists we have data for
       rawData.byArmy[armyString].games.availableLists++;
+
+      // Prepare counting core points
+      rawData.byArmy[armyString].core = rawData.byArmy[armyString].core || [];
+      let thisListCorePoints = 0;
+
 
       // Add pick rates of units to overall result object
       for(let entry in player.report_list.units) {
@@ -273,8 +281,36 @@ function addListsToAnalysis(result) {
         rawData.byArmy[armyString].picks = rawData.byArmy[armyString].picks || {};
         rawData.byArmy[armyString].picks[entry.toLowerCase()] = rawData.byArmy[armyString].picks[entry.toLowerCase()] || {};
         rawData.byArmy[armyString].picks[entry.toLowerCase()].base = rawData.byArmy[armyString].picks[entry.toLowerCase()].base || [];
-        rawData.byArmy[armyString].picks[entry.toLowerCase()].base.push(player.report_list.units[entry].length);
+
+        // console.log(`${entry} ${entry.toLowerCase()}`);
+        // console.log(`Models for ${entry} are: ${JSON.stringify(player.report_list.options[entry])}`);
+        if(armyUnits.find(u => u.name === entry.toLowerCase())?.category === "core") {
+          // console.log(`Unit ${entry} of army ${armyString} identified as a core unit`);
+          thisListCorePoints += player.report_list.units[entry].reduce((a,b)=>a+b.totalCost,0);
+          // console.log(`This lists core points are now: ${thisListCorePoints}`);
+        } else if(armyUnits.find(u => u.name === entry.toLowerCase())?.conditionalCore) {
+          let condition = armyUnits.find(u => u.name === entry.toLowerCase()).conditionalCore;
+          // console.log(`${entry} - Found condition for core as ${condition} of type ${typeof condition}`);
+          for(let i = 0; i < player.report_list.units[entry].length; i++) {
+            if(typeof condition === "number" && player.report_list.options[entry][i]?.amount >= condition) {
+              if(debug) console.log(`Counting ${entry} with ${player.report_list.options[entry][i]?.amount} models as core`);
+              // console.log(`Adding ${player.report_list.units[entry][i].totalCost} points.`);
+              thisListCorePoints += player.report_list.units[entry][i].totalCost;
+            } else if(typeof condition === "string") {
+              // TODO Implement this
+              console.log(`TODO Conditional core based on other options than model numbers not implemented yet.`);
+            }
+          }
+        }
+        // Instead of pushing amount and counting, push the point values
+        // console.log(`${armyString} - ${entry} : ${JSON.stringify(player.report_list.units[entry], null, 4)}`);
+        rawData.byArmy[armyString].picks[entry.toLowerCase()].base.push(player.report_list.units[entry].map(e => e.totalCost));
       }
+      if(debug) console.log(player.exported_list);
+      if(debug) console.log(`This list's core points are: ${thisListCorePoints}`);
+
+      // Flatten the core array and add it
+      rawData.byArmy[armyString].core.push(thisListCorePoints);
 
       // Parse Options
       for(let option in player.report_list.options) {
@@ -288,9 +324,6 @@ function addListsToAnalysis(result) {
             }
             rawData.byArmy[armyString].picks[optionEntry.parentUnit.toLowerCase()][option.toLowerCase()] = rawData.byArmy[armyString].picks[optionEntry.parentUnit.toLowerCase()][option.toLowerCase()] || [];
             rawData.byArmy[armyString].picks[optionEntry.parentUnit.toLowerCase()][option.toLowerCase()].push(optionEntry.amount);
-
-            // Add special items to global counters
-
           }
         }
       }
@@ -308,22 +341,28 @@ function calculatePickRates() {
     for(let unit in rawData.byArmy[army].picks) {
       // Pick Rate for unit
       // TODO For all pick rates => convert into an object with count and percentage
-      let pickSum = rawData.byArmy[army].picks[unit].base.reduce((a, b) => a + b, 0);
-      let pickPercent = `${(pickSum * 100 / rawData.byArmy[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
+      // console.log(`Checking .base for ${unit}: ${JSON.stringify(rawData.byArmy[army].picks[unit].base, null, 4)}`);
       let pickRateOnce = 0;
       let pickRateTwice = 0;
       let pickRateThrice = 0;
       let pickRateFourOrMore = 0;
       for(let value of rawData.byArmy[army].picks[unit].base) {
-        if(value === 1) pickRateOnce++;
-        if(value === 2) pickRateTwice++;
-        if(value === 3) pickRateThrice++;
-        if(value > 3) pickRateFourOrMore++;
+        if(value.length === 1) pickRateOnce++;
+        if(value.length === 2) pickRateTwice++;
+        if(value.length === 3) pickRateThrice++;
+        if(value.length > 3) pickRateFourOrMore++;
       }
       pickRateOnce = `${(pickRateOnce * 100 / rawData.byArmy[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
       pickRateTwice = `${(pickRateTwice * 100 / rawData.byArmy[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
       pickRateThrice = `${(pickRateThrice * 100 / rawData.byArmy[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
       pickRateFourOrMore = `${(pickRateFourOrMore * 100 / rawData.byArmy[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
+      
+      let flatArray = rawData.byArmy[army].picks[unit].base.flat();
+      let pickSum = flatArray.length;
+      let pickPercent = `${(pickSum * 100 / rawData.byArmy[army].games.availableLists).toFixed(0)}%`.padStart(4, " ");
+      let pickPointsSum = flatArray.reduce((a, b) => a + b, 0);
+      let pickPointsAverage = (pickPointsSum / rawData.byArmy[army].games.availableLists).toFixed(0).padStart(4, " ");
+     
       pickRates[army].units[unit] = pickRates[army][unit] || {};
       pickRates[army].units[unit].picks = pickRates[army].units[unit].picks || {};
       pickRates[army].units[unit].options = pickRates[army].units[unit].options || {};
@@ -333,6 +372,7 @@ function calculatePickRates() {
       pickRates[army].units[unit].picks.rate2 = pickRateTwice;
       pickRates[army].units[unit].picks.rate3 = pickRateThrice;
       pickRates[army].units[unit].picks.rate4 = pickRateFourOrMore;
+      pickRates[army].units[unit].picks.points = pickPointsAverage;
 
       // Pick Rate for Options
       for(let option in rawData.byArmy[army].picks[unit]) {
@@ -777,6 +817,23 @@ function printArmyResults() {
 
 function printUnitPickRates() {
 
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1mAmount of Core by Army                       \x1b[0m┃`);
+  console.log(`┣━━━━━━━━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┫`);
+  console.log(`┃ Army         │ Error │  Min  │ 5-15% │  >15% ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┫`);
+  
+  for(let army in rawData.byArmy) {
+    let minCore = army === "bh" || army === "wdg" ? 800 : 1000;
+    let erroneous = rawData.byArmy[army].core.filter(c => c < minCore).length.toString().padStart(5, " ");
+    let minimum = rawData.byArmy[army].core.filter(c => c >= minCore && c < minCore*1.05).length.toString().padStart(5, " ");
+    let more = rawData.byArmy[army].core.filter(c => c >= minCore*1.05 && c < minCore*1.15).length.toString().padStart(5, " ");
+    let muchMore = rawData.byArmy[army].core.filter(c => c >= minCore*1.15).length.toString().padStart(5, " ");
+    // console.log(`${army} - ${JSON.stringify(rawData.byArmy[army].core, null, 4)}`);
+    console.log(`┃ ${army.toUpperCase().padEnd(3, " ")}          │ ${erroneous} │ ${minimum} │ ${more} │ ${muchMore} ┃`);
+  }
+  console.log(`┗━━━━━━━━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┛`);
+
   console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
   console.log(`┃ \x1b[1mSpecial Items – Global Pick Counts                                 \x1b[0m  ┃`);
   console.log(`┣━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━┯━━━━━━━━┫`);
@@ -849,19 +906,19 @@ function printUnitPickRates() {
     let lastCategory = armyUnits[0].category;
     // console.log(JSON.stringify(armyUnits, null, 4));
 
-    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
-    console.log(`┃ \x1b[1mCategory                   │ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+\x1b[0m  ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
+    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┓`);
+    console.log(`┃ \x1b[1mCategory                   │ ${army.padEnd(3, " ")} - Units                        ┃    Ø     ┃  1   │  2   │  3   │  4+  │ ØPts \x1b[0m┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
 
     for(let unitDefinition of armyUnits) {
       if(unitDefinition.category !== lastCategory) {
-        console.log(`┃                            │                                    ┃          ┃      │      │      │      ┃`);
+        console.log(`┃                            │                                    ┃          ┃      │      │      │      │      ┃`);
       }
-      console.log(`┃ ${unitDefinition.category.padEnd(26, " ")} │ ${unitDefinition.name.padEnd(34, " ")} ┃   ${pickRates[army].units?.[unitDefinition.name]?.picks.percent || "  0%"}   ┃ ${pickRates[army].units?.[unitDefinition.name]?.picks.rate1 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.picks.rate2 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.picks.rate3 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.picks.rate4 || "  0%"} ┃`);
+      console.log(`┃ ${unitDefinition.category.padEnd(26, " ")} │ ${unitDefinition.name.padEnd(34, " ")} ┃   ${pickRates[army].units?.[unitDefinition.name]?.picks.percent || "  0%"}   ┃ ${pickRates[army].units?.[unitDefinition.name]?.picks.rate1 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.picks.rate2 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.picks.rate3 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.picks.rate4 || "  0%"} │ ${pickRates[army].units?.[unitDefinition.name]?.picks.points || "   0"} ┃`);
       lastCategory = unitDefinition.category;
     }
 
-    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
+    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
     console.log(`\n`);
 
     console.log(`┏━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┓`);

@@ -65,6 +65,7 @@ const bh = [
   {
     "name" : "feral hounds",
     "category" : "special",
+    "conditionalCore" : 8,
     "sticksandstones" : 0,
     "bigrocks" : 0,
     "min" : 5,
@@ -97,6 +98,7 @@ const bh = [
   {
     "name" : "raiding chariots",
     "category" : "special",
+    "conditionalCore" : 3,
     "sticksandstones" : 0,
     "bigrocks" : 0,
     "min" : 1,
@@ -709,7 +711,23 @@ const eos = [
     "max" : 20,
   },
   {
+    "name" : "state detatchment",
+    "category" : "core",
+    "imperialAuxiliaries" : 0,
+    "imperialArmory" : 0,
+    "min" : 15,
+    "max" : 20,
+  },
+  {
     "name" : "state marksmen",
+    "category" : "core",
+    "imperialAuxiliaries" : 1,
+    "imperialArmory" : 0,
+    "min" : 15,
+    "max" : 20,
+  },
+  {
+    "name" : "light infantry",
     "category" : "core",
     "imperialAuxiliaries" : 1,
     "imperialArmory" : 0,
@@ -1006,7 +1024,7 @@ const id = [
     "blackPowder" : 0,
   },
   {
-    "name" : "taurukh commissionary",
+    "name" : "taurukh commissioner",
     "category" : "character",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
@@ -1402,6 +1420,7 @@ const ok = [
   {
     "name" : "sabretooth tigers",
     "category" : "special",
+    "conditionalCore" : 5,
     "hiredGuns" : 0,
     "powderKeg" : 0,
     "min" : 3,
@@ -2573,7 +2592,8 @@ const wdg = [
   },
   {
     "name" : "warhounds",
-    "category" : "core",
+    "category" : "special",
+    "conditionalCore" : 8,
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 15,
