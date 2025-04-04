@@ -273,7 +273,7 @@ function addListsToAnalysis(result) {
       // Prepare counting core points
       rawData.byArmy[armyString].core = rawData.byArmy[armyString].core || [];
       let thisListCorePoints = 0;
-
+      let coreFactor = 1.00;
 
       // Add pick rates of units to overall result object
       for(let entry in player.report_list.units) {
@@ -282,14 +282,60 @@ function addListsToAnalysis(result) {
         rawData.byArmy[armyString].picks[entry.toLowerCase()] = rawData.byArmy[armyString].picks[entry.toLowerCase()] || {};
         rawData.byArmy[armyString].picks[entry.toLowerCase()].base = rawData.byArmy[armyString].picks[entry.toLowerCase()].base || [];
 
+        /**
+         * Calculating Core
+         */
         // console.log(`${entry} ${entry.toLowerCase()}`);
         // console.log(`Models for ${entry} are: ${JSON.stringify(player.report_list.options[entry])}`);
-        if(armyUnits.find(u => u.name === entry.toLowerCase())?.category === "core") {
+        let unitEntry = armyUnits.find(u => u.name === entry.toLowerCase());
+
+        // Wildheart
+        if(entry.toLowerCase() === `mammoth hunter`) {
+          if(player.report_list.options["General, Disciplined and Wildheart"].find(a => a.amount > 0)) {
+            coreFactor = 1.25;
+          }
+        }
+        // Shadow Riders
+        else if(entry.toLowerCase() === `shadow riders`) {
+          for(let i = 0; i < player.report_list.units[entry].length; i++) {
+            if(player.report_list.options["Light Lance and Repeater Crossbow"][i].amount === 0) {
+                thisListCorePoints += player.report_list.units[entry][i].totalCost;
+              }
+          }
+        }
+        // Dancers of Yema
+        else if(entry.toLowerCase() === `temple militants`) {
+          for(let i = 0; i < player.report_list.units[entry].length; i++) {
+            if(player.report_list.options["Dancers of Yema"][i].amount === 0) {
+                thisListCorePoints += player.report_list.units[entry][i].totalCost;
+              }
+          }
+        }
+        // Raptor Pack
+        else if(entry.toLowerCase() === `raptor pack`) {
+          for(let i = 0; i < player.report_list.units[entry].length; i++) {
+            if(player.report_list.options["Corrosive Spitter"][i].amount === 0 &&
+              player.report_list.options["Ambush"].filter(a => a.parentUnit.toLowerCase() === entry.toLowerCase())[i].amount === 0) {
+                thisListCorePoints += player.report_list.units[entry][i].totalCost;
+              }
+          }
+        }
+        // Headbashers
+        else if(["feral orcs", "feral orc marauders", "veteran orcs", "veteran orc marauders"].includes(entry.toLowerCase())) {
+          for(let i = 0; i < player.report_list.units[entry].length; i++) {
+            if(player.report_list.options["Headbashers"].filter(a => a.parentUnit.toLowerCase() === entry.toLowerCase())[i].amount === 0) {
+                thisListCorePoints += player.report_list.units[entry][i].totalCost;
+            }
+          }
+        }
+
+        // Generic stuff only after special cases have been handled
+        else if(unitEntry?.category === "core") {
           // console.log(`Unit ${entry} of army ${armyString} identified as a core unit`);
           thisListCorePoints += player.report_list.units[entry].reduce((a,b)=>a+b.totalCost,0);
           // console.log(`This lists core points are now: ${thisListCorePoints}`);
-        } else if(armyUnits.find(u => u.name === entry.toLowerCase())?.conditionalCore) {
-          let condition = armyUnits.find(u => u.name === entry.toLowerCase()).conditionalCore;
+        } else if(unitEntry?.conditionalCore) {
+          let condition = unitEntry.conditionalCore;
           // console.log(`${entry} - Found condition for core as ${condition} of type ${typeof condition}`);
           for(let i = 0; i < player.report_list.units[entry].length; i++) {
             if(typeof condition === "number" && player.report_list.options[entry][i]?.amount >= condition) {
@@ -307,7 +353,16 @@ function addListsToAnalysis(result) {
         rawData.byArmy[armyString].picks[entry.toLowerCase()].base.push(player.report_list.units[entry].map(e => e.totalCost));
       }
       if(debug) console.log(player.exported_list);
+      thisListCorePoints = thisListCorePoints * coreFactor;
       if(debug) console.log(`This list's core points are: ${thisListCorePoints}`);
+
+      // Print out potentially wrong lists
+      // if(thisListCorePoints > 920 && player.id_book === 18) {
+      //   console.log(`\n\n\nERROR LIST (${thisListCorePoints})\n\n\n`);
+      //   console.log(player.exported_list);
+      //   // console.log(JSON.stringify(player.report_list, null, 4));
+      //   console.log(`\n\n\nERROR LIST\n\n\n`);
+      // }
 
       // Flatten the core array and add it
       rawData.byArmy[armyString].core.push(thisListCorePoints);
