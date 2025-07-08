@@ -11,6 +11,11 @@
     "start": "node ./main.js -e -p -o -z --minParticipants=12 --type=all",
     "dev": "node ./main.js --type=all -r",
     "debug": "node ./main.js -d -e -p -o -z --minParticipants=12 --type=all",
-	"nocolour" : "npm run start | ./node_modules/strip-ansi-cli/cli.js"
+    "nocolour": "npm run start | ./node_modules/strip-ansi-cli/cli.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.1",
+    "eslint": "^9.30.1",
+    "globals": "^16.3.0"
   }
 }

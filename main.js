@@ -244,7 +244,7 @@ function calculateArmyResults(armyResults) {
     parseFloat(resultData.eos.all.avg),    parseFloat(resultData.he.all.avg),    parseFloat(resultData.id.all.avg),    parseFloat(resultData.koe.all.avg),
     parseFloat(resultData.ok.all.avg),    parseFloat(resultData.ong.all.avg),    parseFloat(resultData.sa.all.avg),    parseFloat(resultData.se.all.avg),
     parseFloat(resultData.ud.all.avg),    parseFloat(resultData.vc.all.avg),    parseFloat(resultData.vs.all.avg),    parseFloat(resultData.wdg.all.avg),
-  ]
+  ];
   for(let armyString in resultData) {
     resultData[armyString].all.rank = (allAverages.filter(x => x > parseFloat(resultData[armyString].all.avg)).length + 1).toString().padStart(2, " ");
   }
@@ -707,7 +707,7 @@ function calculatePickRates() {
           if(debug) console.log(`Filtering out game result due to missing score.`);
           continue;
         }
-        rawData.global.gamesCount++
+        rawData.global.gamesCount++;
         
         if(debug) {
           console.log(`Game Result: Army '${result.players[0].id_book}' vs Army '${result.players[1].id_book}' → ${result.score[0].BPObj} : ${result.score[1].BPObj}`);
@@ -990,7 +990,7 @@ function printUnitPickRates() {
         let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
         console.log(`┃ ${cat} │ ${name} ┃  ${count}  │ ${percent} ┃`);
       }
-      console.log(`┃          │                                    ┃       │       ┃`)
+      console.log(`┃          │                                    ┃       │       ┃`);
     }
 
     console.log(`┣━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┫`);
@@ -1009,7 +1009,7 @@ function printUnitPickRates() {
           console.log(`┃ ${cat} │ ${name} ┃  ${count}  │ ${percent} ┃`);
         }
       }
-      if(category !== "banner" ) console.log(`┃          │                                    ┃       │       ┃`)
+      if(category !== "banner" ) console.log(`┃          │                                    ┃       │       ┃`);
     }
 
     console.log(`┣━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┫`);
@@ -1025,7 +1025,7 @@ function printUnitPickRates() {
         let percent = `${(pickRates[army].specialItems?.[item]?.pickPercent || "0").padStart(4, " ")}%`;
         console.log(`┃ ${cat} │ ${name} ┃  ${count}  │ ${percent} ┃`);
       }
-      if(category !== "banner" ) console.log(`┃          │                                    ┃       │       ┃`)
+      if(category !== "banner" ) console.log(`┃          │                                    ┃       │       ┃`);
     }
     console.log(`┗━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┛`);
     console.log(`\n`);
