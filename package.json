@@ -9,7 +9,7 @@
   },
   "scripts": {
     "collect": "node ./collector.js",
-    "dev": "node ./main.js --type=all -r",
+    "present": "node ./presenter.js --minParticipants=12 --type=all",
     "debug": "node ./main.js -d -e -p -o -z --minParticipants=12 --type=all",
     "nocolour": "npm run start | ./node_modules/strip-ansi-cli/cli.js"
   },

@@ -11,7 +11,8 @@ export default defineConfig([
     },
     rules: {
 			semi: ["error"],
-      "no-undef": ["error"]
+      "no-undef": ["error"],
+      "no-console": ["warn"]
 		}, 
   },
   { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: { ...globals.browser, ...globals.node } } },
