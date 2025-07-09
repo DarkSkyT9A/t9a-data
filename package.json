@@ -8,7 +8,7 @@
     "yargs": "^17"
   },
   "scripts": {
-    "start": "node ./main.js -e -p -o -z --minParticipants=12 --type=all",
+    "collect": "node ./collector.js",
     "dev": "node ./main.js --type=all -r",
     "debug": "node ./main.js -d -e -p -o -z --minParticipants=12 --type=all",
     "nocolour": "npm run start | ./node_modules/strip-ansi-cli/cli.js"
