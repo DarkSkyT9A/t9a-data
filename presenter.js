@@ -29,6 +29,7 @@ const showPricingActions = args.z ? true : false;
 let globalStats = {
   "tournamentsWithReports": [],
   "pointsFirstTurn": [],
+  "pointsSecondTurn": [],
   "turns": [],
   "games": 0,
 
@@ -39,6 +40,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -95,6 +97,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -151,6 +154,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -207,6 +211,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -263,6 +268,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -319,6 +325,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -375,6 +382,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -431,6 +439,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -487,6 +496,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -543,6 +553,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -599,6 +610,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -655,6 +667,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -711,6 +724,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -767,6 +781,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -823,6 +838,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -879,6 +895,7 @@ let armies = {
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
+    "pointsUnknown": [],
     "vs": {
       "BH": {
         "results": []
@@ -933,7 +950,6 @@ let armies = {
 };
 
 
-
 fs.readdirSync("data").forEach(folder => {
   // Read metadata and decide whether to go on or not with this tournament
   if (fs.existsSync(`./data/${folder}/metaData.json`)) {
@@ -952,19 +968,17 @@ fs.readdirSync("data").forEach(folder => {
 
     let report = JSON.parse(fs.readFileSync(`./data/${folder}/${reportFile}`));
 
-    // console.log(JSON.stringify(armies, null, 4));
-    // console.log(JSON.stringify(report, null, 4));
-    // Games player versus specific enemy for each army
-    armies[report.armyOne].vs[report.armyTwo].results.push(report.scoreOne);
-    armies[report.armyTwo].vs[report.armyOne].results.push(report.scoreTwo);
-
     // Points overall
     if(typeof report.scoreOne !== "number" || typeof report.scoreTwo !== "number") {
       console.error(`Result is unreadable of ${folder}/${reportFile} !`);
     }
+
+    // General points
     armies[report.armyOne].points.push(report.scoreOne);
     armies[report.armyTwo].points.push(report.scoreTwo);
-
+    // Games player versus specific enemy for each army
+    armies[report.armyOne].vs[report.armyTwo].results.push(report.scoreOne);
+    armies[report.armyTwo].vs[report.armyOne].results.push(report.scoreTwo);
     // Point with first turn or second turn
     if (report.firstTurn === 0) {
       armies[report.armyOne].pointsFirst.push(report.scoreOne);
@@ -972,15 +986,24 @@ fs.readdirSync("data").forEach(folder => {
     } else if (report.firstTurn === 1) {
       armies[report.armyOne].pointsSecond.push(report.scoreOne);
       armies[report.armyTwo].pointsFirst.push(report.scoreTwo);
+    } else {
+      // console.log(`First turn is unknown: ${report.firstTurn}`);
+      armies[report.armyOne].pointsUnknown.push(report.scoreOne);
+      armies[report.armyTwo].pointsUnknown.push(report.scoreTwo);
     }
 
     // Global:
     globalStats.tournamentsWithReports.push(folder);
     globalStats.games++;
-    if (report.turns && report.turns > 0 && report.turns < 7) {
-      globalStats.turns.push(report.turns);
+    // if (report.turns && report.turns > 0 && report.turns < 7) {
+    //   globalStats.turns.push(report.turns);
+    // }
+    if(report.firstTurn !== -1) {
+      globalStats.pointsFirstTurn.push(report.firstTurn === 0 ? report.scoreOne : report.scoreTwo);
+      globalStats.pointsSecondTurn.push(report.firstTurn === 0 ? report.scoreTwo : report.scoreOne);
+    } else {
+      console.log(`Not posting this game to first/second turn counts`);
     }
-    globalStats.pointsFirstTurn.push(report.firstTurn === 0 ? report.scoreOne : report.scoreTwo);
   });
 });
 
@@ -992,8 +1015,9 @@ globalStats.tournamentsWithReports = new Set(globalStats.tournamentsWithReports)
 for (let army in armies) {
   let firstCount = armies[army].pointsFirst.length;
   let secondCount = armies[army].pointsSecond.length;
+  let unknownCount = armies[army].pointsUnknown.length;
   let totalCount = armies[army].points.length;
-  console.log(`${army} - 1st: ${firstCount} - 2nd: ${secondCount} - Total: ${totalCount}`);
+  // console.log(`${army} - 1st: ${firstCount} - 2nd: ${secondCount} - Unk: ${unknownCount} - Total: ${totalCount}`);
   // console.log(JSON.stringify(armies[army].points, null, 4));
   // console.log(armies[army].points.reduce((a, b) => a + b, 0));
   armies[army].avg = (armies[army].points.reduce((a, b) => a + b, 0) / totalCount).toFixed(1).padStart(4, " ");
@@ -1060,8 +1084,11 @@ function displayMetaData() {
 }
 
 function displayGlobalStats() {
-  let firstAvg = (globalStats.pointsFirstTurn.reduce((a, b) => a + b, 0) / globalStats.games).toFixed(1).padStart(4, " ");
-  let secondAvg = (20 - firstAvg).toFixed(1).padStart(4, " ");
+  console.log(`First and second turn stats: ${globalStats.pointsFirstTurn.length} == ${globalStats.pointsSecondTurn.length}`);
+  let globalWithTurnKnown = globalStats.pointsFirstTurn.length;
+  console.log(`Games total: ${globalStats.games} vs Games with turn known: ${globalWithTurnKnown}`);
+  let firstAvg = (globalStats.pointsFirstTurn.reduce((a, b) => a + b, 0) / globalWithTurnKnown).toFixed(1).padStart(4, " ");
+  let secondAvg = (globalStats.pointsSecondTurn.reduce((a, b) => a + b, 0) / globalWithTurnKnown).toFixed(1).padStart(4, " ");
 
   let decisive = globalStats.pointsFirstTurn.filter(a => a >= 18 || a <= 2).length.toString().padStart(5, " ");
   let normal = globalStats.pointsFirstTurn.filter(a => (a > 2 && a < 7) || (a > 13 && a < 18)).length.toString().padStart(5, " ");

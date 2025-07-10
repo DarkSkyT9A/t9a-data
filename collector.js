@@ -145,14 +145,14 @@ function transformReport(report, tournamentId) {
 
   // One of the armies is not identifyable
   if(!report.players[0].id_book || !report.players[1].id_book) {
-    console.error(`${tournamentId}/${report.id_match} - Report does not contain armies: ${report.players[0].id_book} // ${report.players[1].id_book} `);
+    console.error(`${tournamentId}/report_${report.id_match}.json - Report does not contain armies: ${report.players[0].id_book} // ${report.players[1].id_book} `);
     skippedGames++;
     return undefined;
   }
 
   // No score
   if(typeof report.score[0]?.BPObj !== "number" || typeof report.score[1].BPObj !== "number") {
-    console.error(`${tournamentId}/${report.id_match} - Report does not contain a result: ${report.score[0]?.BPObj} // ${report.score[1].BPObj} `);
+    console.error(`${tournamentId}/report_${report.id_match}.json - Report does not contain a result: ${report.score[0]?.BPObj} // ${report.score[1].BPObj} `);
     skippedGames++;
     return undefined;
   }
@@ -160,8 +160,8 @@ function transformReport(report, tournamentId) {
   // ID
   r.id_match = report.id_match;
   // First turn
-  // console.log(JSON.stringify(report, [ "first_turn", "type", "score", "setup", "scoring"], 4));
-  r.firstTurn = report.first_turn || -1;
+  // console.log(`${tournamentId}/report_${report.id_match}.json - First turn: ${report.first_turn}`);
+  r.firstTurn = undefined !== report.first_turn ? report.first_turn : -1;
   // Type (what is type?)
   r.type = report.type;
   // ID
