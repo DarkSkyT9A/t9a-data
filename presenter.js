@@ -1001,9 +1001,10 @@ fs.readdirSync("data").forEach(folder => {
     if(report.firstTurn !== -1) {
       globalStats.pointsFirstTurn.push(report.firstTurn === 0 ? report.scoreOne : report.scoreTwo);
       globalStats.pointsSecondTurn.push(report.firstTurn === 0 ? report.scoreTwo : report.scoreOne);
-    } else {
-      console.log(`Not posting this game to first/second turn counts`);
-    }
+    } 
+    // else {
+    //   console.log(`Not posting this game to first/second turn counts`);
+    // }
   });
 });
 
@@ -1023,11 +1024,23 @@ for (let army in armies) {
   armies[army].avg = (armies[army].points.reduce((a, b) => a + b, 0) / totalCount).toFixed(1).padStart(4, " ");
   armies[army].first = (armies[army].pointsFirst.reduce((a, b) => a + b, 0) / firstCount).toFixed(1).padStart(4, " ");
   armies[army].second = (armies[army].pointsSecond.reduce((a, b) => a + b, 0) / secondCount).toFixed(1).padStart(4, " ");
+  armies[army].games = `${totalCount}`.padStart(4, " ");
 
   for (let opponent in armies[army].vs) {
     // console.log(`${army} - ${opponent} - ${JSON.stringify(armies[army].vs)}`);
-    armies[army].vs[opponent].games = armies[army].vs[opponent].results.length;
+    armies[army].vs[opponent].games = `${armies[army].vs[opponent].results.length}`.padStart(4, " ");
     armies[army].vs[opponent].avg = (armies[army].vs[opponent].results.reduce((a, b) => a + b, 0) / armies[army].vs[opponent].games).toFixed(1).padStart(4, " ");
+  }
+
+  // Calculate rank
+  const allAverages = [
+    parseFloat(armies.BH.avg),    parseFloat(armies.DE.avg),    parseFloat(armies.DH.avg),    parseFloat(armies.DL.avg),
+    parseFloat(armies.EoS.avg),    parseFloat(armies.HE.avg),    parseFloat(armies.ID.avg),    parseFloat(armies.KoE.avg),
+    parseFloat(armies.OK.avg),    parseFloat(armies.OnG.avg),    parseFloat(armies.SA.avg),    parseFloat(armies.SE.avg),
+    parseFloat(armies.UD.avg),    parseFloat(armies.VC.avg),    parseFloat(armies.VS.avg),    parseFloat(armies.WDG.avg),
+  ];
+  for(let armyString in armies) {
+    armies[armyString].rank = (allAverages.filter(x => x > parseFloat(armies[armyString].avg)).length + 1).toString().padStart(2, " ");
   }
 }
 
@@ -1046,6 +1059,10 @@ displayArmyStats();
 
 
 
+
+// #################################################################################################################
+//      Helper Functions
+// #################################################################################################################
 
 function evaluateTournamentInclusion(metaData) {
   // Too small
@@ -1084,9 +1101,9 @@ function displayMetaData() {
 }
 
 function displayGlobalStats() {
-  console.log(`First and second turn stats: ${globalStats.pointsFirstTurn.length} == ${globalStats.pointsSecondTurn.length}`);
+  // console.log(`First and second turn stats: ${globalStats.pointsFirstTurn.length} == ${globalStats.pointsSecondTurn.length}`);
   let globalWithTurnKnown = globalStats.pointsFirstTurn.length;
-  console.log(`Games total: ${globalStats.games} vs Games with turn known: ${globalWithTurnKnown}`);
+  // console.log(`Games total: ${globalStats.games} vs Games with turn known: ${globalWithTurnKnown}`);
   let firstAvg = (globalStats.pointsFirstTurn.reduce((a, b) => a + b, 0) / globalWithTurnKnown).toFixed(1).padStart(4, " ");
   let secondAvg = (globalStats.pointsSecondTurn.reduce((a, b) => a + b, 0) / globalWithTurnKnown).toFixed(1).padStart(4, " ");
 
@@ -1117,25 +1134,28 @@ function displayArmyStats() {
   console.log(`┣━━━━━━╋━━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┫`);
 
   for (let a in armies) {
-    console.log(`┃ ${a.padEnd(3, " ")}  ┃\x1b[1;106m  ${armies[a].avg} \x1b[0m│  TBD ┃ ${armies[a].vs.BH.avg} │ ${armies[a].vs.DE.avg} │ ${armies[a].vs.DH.avg} │ ${armies[a].vs.DL.avg} │ ${armies[a].vs.EoS.avg} │ ${armies[a].vs.HE.avg} │ ${armies[a].vs.ID.avg} │ ${armies[a].vs.KoE.avg} │ ${armies[a].vs.OK.avg} │ ${armies[a].vs.OnG.avg} │ ${armies[a].vs.SA.avg} │ ${armies[a].vs.SE.avg} │ ${armies[a].vs.UD.avg} │ ${armies[a].vs.VC.avg} │ ${armies[a].vs.VS.avg} │ ${armies[a].vs.WDG.avg} ┃ ${armies[a].first} │ ${armies[a].second} ┃`);
-    console.log(emptyLine);
+    console.log(`┃ ${a.padEnd(3, " ")}  ┃\x1b[1;106m  ${armies[a].avg} \x1b[0m│  ${armies[a].rank}  ┃ ${armies[a].vs.BH.avg} │ ${armies[a].vs.DE.avg} │ ${armies[a].vs.DH.avg} │ ${armies[a].vs.DL.avg} │ ${armies[a].vs.EoS.avg} │ ${armies[a].vs.HE.avg} │ ${armies[a].vs.ID.avg} │ ${armies[a].vs.KoE.avg} │ ${armies[a].vs.OK.avg} │ ${armies[a].vs.OnG.avg} │ ${armies[a].vs.SA.avg} │ ${armies[a].vs.SE.avg} │ ${armies[a].vs.UD.avg} │ ${armies[a].vs.VC.avg} │ ${armies[a].vs.VS.avg} │ ${armies[a].vs.WDG.avg} ┃ ${armies[a].first} │ ${armies[a].second} ┃`);
+    
+    if(a === "WDG") {
+      console.log(`┗━━━━━━┻━━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┛`);
+    }
+    else {
+      console.log(emptyLine);
+    }
   }
 
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1m Army Results – Number of Games\x1b[0m                                                                                                ┃`);
+  console.log(`┣━━━━━━━┳━━━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┫`);
+  console.log(`┃ GAMES ┃ TOTAL  ┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃`);
+  console.log(`┣━━━━━━━╋━━━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
 
-  // console.log(`┗━━━━━━┻━━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┛`);
-
-  // console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
-  // console.log(`┃ \x1b[1mTournament Type: ${(args.type || 'Single').padEnd(43, " ") } – Number of Games\x1b[0m                                              ┃`);
-  // console.log(`┣━━━━━━┳━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┫`);
-  // console.log(`┃GAMES ┃ Total┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃`);
-  // console.log(`┣━━━━━━╋━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┫`);
-
-  // const emptyLineGames = `┃      ┃      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃`;
-  // for(let a in armies) {
-  //   console.log(`┃  ${army.toUpperCase().padEnd(3, " ")} ┃ ${resultData[army].all.count} ┃ ${resultData[army][army].count} │ ${resultData[army].de.count} │ ${resultData[army].dh.count} │ ${resultData[army].dl.count} │ ${resultData[army].eos.count} │ ${resultData[army].he.count} │ ${resultData[army].id.count} │ ${resultData[army].koe.count} │ ${resultData[army].ok.count} │ ${resultData[army].ong.count} │ ${resultData[army].sa.count} │ ${resultData[army].se.count} │ ${resultData[army].ud.count} │ ${resultData[army].vc.count} │ ${resultData[army].vs.count} │ ${resultData[army].wdg.count} ┃`);
-  //   if(army !== "wdg") {
-  //     console.log(emptyLineGames);
-  //   }
-  // }
-  // console.log(`┗━━━━━━┻━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
+  const emptyLineGames = `┃       ┃        ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃`;
+  for(let a in armies) {
+    console.log(`┃  ${a.padEnd(3, " ")}  ┃  ${armies[a].games}  ┃ ${armies[a].vs.BH.games} │ ${armies[a].vs.DE.games} │ ${armies[a].vs.DH.games} │ ${armies[a].vs.DL.games} │ ${armies[a].vs.EoS.games} │ ${armies[a].vs.HE.games} │ ${armies[a].vs.ID.games} │ ${armies[a].vs.KoE.games} │ ${armies[a].vs.OK.games} │ ${armies[a].vs.OnG.games} │ ${armies[a].vs.SA.games} │ ${armies[a].vs.SE.games} │ ${armies[a].vs.UD.games} │ ${armies[a].vs.VC.games} │ ${armies[a].vs.VS.games} │ ${armies[a].vs.WDG.games} ┃`);
+    if(a !== "WDG") {
+      console.log(emptyLineGames);
+    }
+  }
+  console.log(`┗━━━━━━━┻━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
 }
