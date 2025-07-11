@@ -1,46 +1,46 @@
 "use strict";
 
 //BH
-const bh = [
+const BH = [
   {
-    "name" : "wildhorn lord",
-    "category" : "character",
+    "name" : "Wildhorn Lord",
+    "category" : "Characters",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
   {
     "name" : "wildhorn chieftain",
-    "category" : "character",
+    "category" : "Characters",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
   {
     "name" : "soothsayer",
-    "category" : "character",
+    "category" : "Characters",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
   {
     "name" : "centaur chieftain",
-    "category" : "character",
+    "category" : "Characters",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
   {
     "name" : "minotaur warlord",
-    "category" : "character",
+    "category" : "Characters",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
   {
     "name" : "minotaur chieftain",
-    "category" : "character",
+    "category" : "Characters",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
   {
     "name" : "wildhorn herd",
-    "category" : "core",
+    "category" : "Core",
     "sticksandstones" : 0,
     "bigrocks" : 0,
     "min" : 15,
@@ -48,7 +48,7 @@ const bh = [
   },
   {
     "name" : "mongrel herd",
-    "category" : "core",
+    "category" : "Core",
     "sticksandstones" : 0,
     "bigrocks" : 0,
     "min" : 25,
@@ -56,7 +56,7 @@ const bh = [
   },
   {
     "name" : "mongrel raiders",
-    "category" : "core",
+    "category" : "Core",
     "sticksandstones" : 0,
     "bigrocks" : 0,
     "min" : 10,
@@ -64,7 +64,7 @@ const bh = [
   },
   {
     "name" : "feral hounds",
-    "category" : "special",
+    "category" : "Special",
     "conditionalCore" : 8,
     "sticksandstones" : 0,
     "bigrocks" : 0,
@@ -73,7 +73,7 @@ const bh = [
   },
   {
     "name" : "longhorn herd",
-    "category" : "special",
+    "category" : "Special",
     "sticksandstones" : 0,
     "bigrocks" : 0,
     "min" : 10,
@@ -81,7 +81,7 @@ const bh = [
   },
   {
     "name" : "minotaurs",
-    "category" : "special",
+    "category" : "Special",
     "sticksandstones" : 0,
     "bigrocks" : 0,
     "min" : 3,
@@ -89,7 +89,7 @@ const bh = [
   },
   {
     "name" : "centaurs",
-    "category" : "special",
+    "category" : "Special",
     "sticksandstones" : 0,
     "bigrocks" : 0,
     "min" : 5,
@@ -97,7 +97,7 @@ const bh = [
   },
   {
     "name" : "raiding chariots",
-    "category" : "special",
+    "category" : "Special",
     "conditionalCore" : 3,
     "sticksandstones" : 0,
     "bigrocks" : 0,
@@ -106,7 +106,7 @@ const bh = [
   },
   {
     "name" : "razortusk herd",
-    "category" : "special",
+    "category" : "Special",
     "sticksandstones" : 0,
     "bigrocks" : 0,
     "min" : 3,
@@ -114,19 +114,19 @@ const bh = [
   },
   {
     "name" : "razortusk chariot",
-    "category" : "special",
+    "category" : "Special",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
   {
     "name" : "briar beast",
-    "category" : "special",
+    "category" : "Special",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
   {
     "name" : "gargoyles",
-    "category" : "special",
+    "category" : "Special",
     "sticksandstones" : 0,
     "bigrocks" : 0,
     "min" : 5,
@@ -159,179 +159,179 @@ const bh = [
 ];
 
 // DE
-const de = [
+const DE = [
   {
-    "name" : "dread prince",
-    "category" : "character",
+    "name" : "Dread Prince",
+    "category" : "Characters",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
-    "name" : "silexian officer",
-    "category" : "character",
+    "name" : "Silexian Officer",
+    "category" : "Characters",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
-    "name" : "temple exarch",
-    "category" : "character",
+    "name" : "Temple Exarch",
+    "category" : "Characters",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
-    "name" : "sanctioned warlock",
-    "category" : "character",
+    "name" : "Sanctioned Warlock",
+    "category" : "Characters",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
-    "name" : "silent assassin",
-    "category" : "character",
+    "name" : "Silent Assassin",
+    "category" : "Characters",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
-    "name" : "silexian spears",
-    "category" : "core",
+    "name" : "Silexian Spears",
+    "category" : "Core",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 15,
     "max" : 35,
   },
   {
-    "name" : "silexian auxiliaries",
-    "category" : "core",
+    "name" : "Silexian Auxiliaries",
+    "category" : "Core",
     "raiders" : 1,
     "boltThrowers" : 0,
     "min" : 10,
     "max" : 25,
   },
   {
-    "name" : "temple militants",
-    "category" : "core",
+    "name" : "Temple Militants",
+    "category" : "Core",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 10,
     "max" : 25,
   },
   {
-    "name" : "corsairs",
-    "category" : "core",
+    "name" : "Corsairs",
+    "category" : "Core",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 10,
     "max" : 30,
   },
   {
-    "name" : "shadow riders",
-    "category" : "core",
+    "name" : "Shadow Riders",
+    "category" : "Core",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 5,
     "max" : 10,
   },
   {
-    "name" : "dread acolytes",
-    "category" : "special",
+    "name" : "Dread Acolytes",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 5,
     "max" : 12,
   },
   {
-    "name" : "dread knights",
-    "category" : "special",
+    "name" : "Dread Knights",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 5,
     "max" : 10,
   },
   {
-    "name" : "obsidian guard",
-    "category" : "special",
+    "name" : "Obsidian Guard",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 10,
     "max" : 25,
   },
   {
-    "name" : "judicators",
-    "category" : "special",
+    "name" : "Judicators",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 10,
     "max" : 25,
   },
   {
-    "name" : "harpies",
-    "category" : "special",
+    "name" : "Harpies",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 5,
     "max" : 12,
   },
   {
-    "name" : "gorgons",
-    "category" : "special",
+    "name" : "Gorgons",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 2,
     "max" : 4,
   },
   {
-    "name" : "thunder pack",
-    "category" : "special",
+    "name" : "Thunder Pack",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 3,
     "max" : 6,
   },
   {
-    "name" : "raptor chariot",
-    "category" : "special",
+    "name" : "Raptor Chariot",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
-    "name" : "divine altar",
-    "category" : "special",
+    "name" : "Divine Altar",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
-    "name" : "hunting chariot",
-    "category" : "special",
+    "name" : "Hunting Chariot",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 1,
   },
   {
-    "name" : "repeater battery",
-    "category" : "special",
+    "name" : "Repeater Battery",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 1,
   },
   {
-    "name" : "black cloaks",
-    "category" : "special",
+    "name" : "Black Cloaks",
+    "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 5,
     "max" : 10,
   },
   {
-    "name" : "kraken",
+    "name" : "Kraken",
     "category" : "the menagerie",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
-    "name" : "hydra",
+    "name" : "Hydra",
     "category" : "the menagerie",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
-    "name" : "mist leviathan",
+    "name" : "Mist Leviathan",
     "category" : "the menagerie",
     "raiders" : 0,
     "boltThrowers" : 0,
@@ -339,40 +339,40 @@ const de = [
 ];
 
 // DH
-const dh = [
+const DH = [
   {
     "name" : "king",
-    "category" : "character",
+    "category" : "Characters",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
   },
   {
     "name" : "thane",
-    "category" : "character",
+    "category" : "Characters",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
   },
   {
     "name" : "runic smith",
-    "category" : "character",
+    "category" : "Characters",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
   },
   {
     "name" : "engineer",
-    "category" : "character",
+    "category" : "Characters",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
   },
   {
     "name" : "dragon seeker",
-    "category" : "character",
+    "category" : "Characters",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
   },
   {
     "name" : "clan warriors",
-    "category" : "core",
+    "category" : "Core",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 15,
@@ -380,7 +380,7 @@ const dh = [
   },
   {
     "name" : "greybeards",
-    "category" : "core",
+    "category" : "Core",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 10,
@@ -388,7 +388,7 @@ const dh = [
   },
   {
     "name" : "clan marksmen",
-    "category" : "core",
+    "category" : "Core",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 10,
@@ -396,7 +396,7 @@ const dh = [
   },
   {
     "name" : "king's guard",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 15,
@@ -404,7 +404,7 @@ const dh = [
   },
   {
     "name" : "deep watch",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 15,
@@ -412,7 +412,7 @@ const dh = [
   },
   {
     "name" : "seekers",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 8,
@@ -420,7 +420,7 @@ const dh = [
   },
   {
     "name" : "brothers of vengeance",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 8,
@@ -428,13 +428,13 @@ const dh = [
   },
   {
     "name" : "vengeance seeker",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
   },
   {
     "name" : "hold guardians",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 3,
@@ -442,13 +442,13 @@ const dh = [
   },
   {
     "name" : "grudge buster",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
   },
   {
     "name" : "miners",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 10,
@@ -456,13 +456,13 @@ const dh = [
   },
   {
     "name" : "anvil of power",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
   },
   {
     "name" : "rangers",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 10,
@@ -470,7 +470,7 @@ const dh = [
   },
   {
     "name" : "forge wardens",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 10,
@@ -478,7 +478,7 @@ const dh = [
   },
   {
     "name" : "steam copters",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
     "min" : 1,
@@ -486,149 +486,149 @@ const dh = [
   },
   {
     "name" : "field artillery",
-    "category" : "special",
+    "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 1,
   },
 ];
 
 // DL
-const dl = [
+const DL = [
   {
     "name" : "harbinger of father chaos",
-    "category" : "character",
+    "category" : "Characters",
     "magicShooting" : 0,
   },
   {
     "name" : "kuulima's deceiver",
-    "category" : "character",
+    "category" : "Characters",
     "magicShooting" : 0,
   },
   {
     "name" : "maw of akaan",
-    "category" : "character",
+    "category" : "Characters",
     "magicShooting" : 0,
   },
   {
     "name" : "miser of sugulag",
-    "category" : "character",
+    "category" : "Characters",
     "magicShooting" : 0,
   },
   {
     "name" : "courtesan of cibaresh",
-    "category" : "character",
+    "category" : "Characters",
     "magicShooting" : 0,
   },
   {
     "name" : "omen of savar",
-    "category" : "character",
+    "category" : "Characters",
     "magicShooting" : 0,
   },
   {
     "name" : "sentinel of nukuja",
-    "category" : "character",
+    "category" : "Characters",
     "magicShooting" : 0,
   },
   {
     "name" : "vanadra's scourge",
-    "category" : "character",
+    "category" : "Characters",
     "magicShooting" : 0,
   },
   {
     "name" : "imps",
-    "category" : "core",
+    "category" : "Core",
     "magicShooting" : 1,
     "min" : 10,
     "max" : 25,
   },
   {
     "name" : "succubi",
-    "category" : "core",
+    "category" : "Core",
     "magicShooting" : 0,
     "min" : 10,
     "max" : 25,
   },
   {
     "name" : "lemures",
-    "category" : "core",
+    "category" : "Core",
     "magicShooting" : 0,
     "min" : 10,
     "max" : 25,
   },
   {
     "name" : "myrmidons",
-    "category" : "core",
+    "category" : "Core",
     "magicShooting" : 0,
     "min" : 10,
     "max" : 25,
   },
   {
     "name" : "eidolons",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 3,
     "min" : 5,
     "max" : 10,
   },
   {
     "name" : "hellhounds",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 0,
     "min" : 5,
     "max" : 15,
   },
   {
     "name" : "threshing engine",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 0,
     "min" : 1,
     "max" : 3,
   },
   {
     "name" : "titanslayer chariot",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 0,
   },
   {
     "name" : "mageblight gremlins",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 0,
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "clawed fiends",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 0,
     "min" : 3,
     "max" : 8,
   },
   {
     "name" : "hoarders",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 0,
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "succubi tempters",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 0,
     "min" : 5,
     "max" : 10,
   },
   {
     "name" : "blazing glory",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 0,
   },
   {
     "name" : "hope harvester",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 5,
   },
   {
     "name" : "brazen beasts",
-    "category" : "special",
+    "category" : "Special",
     "magicShooting" : 0,
     "min" : 3,
     "max" : 5,
@@ -657,46 +657,46 @@ const dl = [
 ];
 
 // EoS
-const eos = [
+const EoS = [
   {
     "name" : "marshal",
-    "category" : "character",
+    "category" : "Characters",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
   },
   {
     "name" : "knight commander",
-    "category" : "character",
+    "category" : "Characters",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
   },
   {
     "name" : "battlefield wizard",
-    "category" : "character",
+    "category" : "Characters",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
   },
   {
     "name" : "prelate",
-    "category" : "character",
+    "category" : "Characters",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
   },
   {
     "name" : "artificer",
-    "category" : "character",
+    "category" : "Characters",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
   },
   {
     "name" : "inquisitor",
-    "category" : "character",
+    "category" : "Characters",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
   },
   {
     "name" : "state infantry",
-    "category" : "core",
+    "category" : "Core",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
     "min" : 20,
@@ -704,7 +704,7 @@ const eos = [
   },
   {
     "name" : "state detachment",
-    "category" : "core",
+    "category" : "Core",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
     "min" : 15,
@@ -712,7 +712,7 @@ const eos = [
   },
   {
     "name" : "state detatchment",
-    "category" : "core",
+    "category" : "Core",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
     "min" : 15,
@@ -720,7 +720,7 @@ const eos = [
   },
   {
     "name" : "state marksmen",
-    "category" : "core",
+    "category" : "Core",
     "imperialAuxiliaries" : 1,
     "imperialArmory" : 0,
     "min" : 15,
@@ -728,7 +728,7 @@ const eos = [
   },
   {
     "name" : "light infantry",
-    "category" : "core",
+    "category" : "Core",
     "imperialAuxiliaries" : 1,
     "imperialArmory" : 0,
     "min" : 15,
@@ -736,7 +736,7 @@ const eos = [
   },
   {
     "name" : "local militia",
-    "category" : "core",
+    "category" : "Core",
     "imperialAuxiliaries" : 1,
     "imperialArmory" : 0,
     "min" : 15,
@@ -744,7 +744,7 @@ const eos = [
   },
   {
     "name" : "electoral cavalry",
-    "category" : "core",
+    "category" : "Core",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
     "min" : 8,
@@ -752,7 +752,7 @@ const eos = [
   },
   {
     "name" : "knightly orders",
-    "category" : "core",
+    "category" : "Core",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
     "min" : 5,
@@ -760,7 +760,7 @@ const eos = [
   },
   {
     "name" : "imperial guard",
-    "category" : "special",
+    "category" : "Special",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
     "min" : 15,
@@ -768,7 +768,7 @@ const eos = [
   },
   {
     "name" : "imperial detachment",
-    "category" : "special",
+    "category" : "Special",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
     "min" : 15,
@@ -776,7 +776,7 @@ const eos = [
   },
   {
     "name" : "knights of the sun griffon",
-    "category" : "special",
+    "category" : "Special",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
     "min" : 3,
@@ -784,13 +784,13 @@ const eos = [
   },
   {
     "name" : "arcane engine",
-    "category" : "special",
+    "category" : "Special",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
   },
   {
     "name" : "imperial rangers",
-    "category" : "special",
+    "category" : "Special",
     "imperialAuxiliaries" : 1,
     "imperialArmory" : 0,
     "min" : 8,
@@ -798,7 +798,7 @@ const eos = [
   },
   {
     "name" : "reiters",
-    "category" : "special",
+    "category" : "Special",
     "imperialAuxiliaries" : 1,
     "imperialArmory" : 0,
     "min" : 5,
@@ -806,7 +806,7 @@ const eos = [
   },
   {
     "name" : "blackpowder artillery",
-    "category" : "special",
+    "category" : "Special",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 1,
   },
@@ -827,31 +827,31 @@ const eos = [
 ];
 
 // HE
-const he = [
+const HE = [
   {
     "name" : "high prince",
-    "category" : "character",
+    "category" : "Characters",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
   },
   {
     "name" : "commander",
-    "category" : "character",
+    "category" : "Characters",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
   },
   {
     "name" : "mage",
-    "category" : "character",
+    "category" : "Characters",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
   },
   {
     "name" : "citizen archers",
-    "category" : "core",
+    "category" : "Core",
     "queensBows" : 1,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -860,7 +860,7 @@ const he = [
   },
   {
     "name" : "citizen spears",
-    "category" : "core",
+    "category" : "Core",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -869,7 +869,7 @@ const he = [
   },
   {
     "name" : "sea guard",
-    "category" : "core",
+    "category" : "Core",
     "queensBows" : 1,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -878,7 +878,7 @@ const he = [
   },
   {
     "name" : "highborn lancers",
-    "category" : "core",
+    "category" : "Core",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -887,7 +887,7 @@ const he = [
   },
   {
     "name" : "erlein reavers",
-    "category" : "core",
+    "category" : "Core",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -896,7 +896,7 @@ const he = [
   },
   {
     "name" : "sword masters",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -905,7 +905,7 @@ const he = [
   },
   {
     "name" : "lion guard",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -914,7 +914,7 @@ const he = [
   },
   {
     "name" : "flame wardens",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -923,7 +923,7 @@ const he = [
   },
   {
     "name" : "knights of rymâ",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -932,7 +932,7 @@ const he = [
   },
   {
     "name" : "reaver chariots",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -941,14 +941,14 @@ const he = [
   },
   {
     "name" : "lion chariot",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
   },
   {
     "name" : "giant eagles",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -957,35 +957,35 @@ const he = [
   },
   {
     "name" : "initiate of the fiery heart",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 1,
   },
   {
     "name" : "phoenix",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 1,
   },
   {
     "name" : "sea guard reaper",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 1,
     "ancientAllies" : 0,
   },
   {
     "name" : "sky sloop",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 0,
     "navalOrdnance" : 1,
     "ancientAllies" : 0,
   },
   {
     "name" : "queen's guard",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 1,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -994,7 +994,7 @@ const he = [
   },
   {
     "name" : "grey watchers",
-    "category" : "special",
+    "category" : "Special",
     "queensBows" : 1,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
@@ -1004,46 +1004,46 @@ const he = [
 ];
 
 // ID
-const id = [
+const ID = [
   {
     "name" : "overlord",
-    "category" : "character",
+    "category" : "Characters",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "prophet",
-    "category" : "character",
+    "category" : "Characters",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "vizier",
-    "category" : "character",
+    "category" : "Characters",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "taurukh commissioner",
-    "category" : "character",
+    "category" : "Characters",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "vassal conjurer",
-    "category" : "character",
+    "category" : "Characters",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "lamassu scholar",
-    "category" : "character",
+    "category" : "Characters",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "infernal warriors",
-    "category" : "core",
+    "category" : "Core",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
     "min" : 20,
@@ -1051,7 +1051,7 @@ const id = [
   },
   {
     "name" : "citadel guard",
-    "category" : "core",
+    "category" : "Core",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
     "min" : 15,
@@ -1059,7 +1059,7 @@ const id = [
   },
   {
     "name" : "vassal levies",
-    "category" : "core",
+    "category" : "Core",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
     "min" : 20,
@@ -1067,7 +1067,7 @@ const id = [
   },
   {
     "name" : "shackled slaves",
-    "category" : "core",
+    "category" : "Core",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
     "min" : 20,
@@ -1075,7 +1075,7 @@ const id = [
   },
   {
     "name" : "kadim incarnates",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
     "min" : 3,
@@ -1083,13 +1083,13 @@ const id = [
   },
   {
     "name" : "kadim chariot",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "immortals",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
     "min" : 15,
@@ -1097,7 +1097,7 @@ const id = [
   },
   {
     "name" : "disciples of lugar",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
     "min" : 15,
@@ -1105,7 +1105,7 @@ const id = [
   },
   {
     "name" : "taurukh enforcers",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
     "min" : 5,
@@ -1113,7 +1113,7 @@ const id = [
   },
   {
     "name" : "taurukh anointed",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
     "min" : 3,
@@ -1121,7 +1121,7 @@ const id = [
   },
   {
     "name" : "vassal cavalry",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
     "min" : 5,
@@ -1129,25 +1129,25 @@ const id = [
   },
   {
     "name" : "vassal slingshot",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "gunnery team",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "infernal artillery",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "infernal bastion",
-    "category" : "special",
+    "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
@@ -1172,49 +1172,47 @@ const id = [
 ];
 
 // KoE
-const koe = [
+const KoE = [
   {
-    "name" : "damsel",
-    "category" : "character",
+    "name" : "Damsel",
+    "category" : "Characters",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
   },
   {
-    "name" : "duke",
-    "category" : "character",
+    "name" : "Duke",
+    "category" : "Characters",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
   },
   {
-    "name" : "paladin",
-    "category" : "character",
+    "name" : "Paladin",
+    "category" : "Characters",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
   },
   {
-    "name" : "folk hero",
-    "category" : "character",
+    "name" : "Folk Hero",
+    "category" : "Characters",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
   },
   {
-    "name" : "knights of the realm",
-    "category" : "core",
+    "name" : "Knights of the Realm",
+    "category" : "Core",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
-    "min" : 10,
-    "max" : 20,
     "min" : 6,
     "max" : 12,
   },
   {
-    "name" : "hedge knights",
-    "category" : "core",
+    "name" : "Hedge Knights",
+    "category" : "Core",
     "gallantry" : 2,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1222,8 +1220,8 @@ const koe = [
     "max" : 9,
   },
   {
-    "name" : "mounted serjeants",
-    "category" : "core",
+    "name" : "Mounted Serjeants",
+    "category" : "Core",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1231,8 +1229,8 @@ const koe = [
     "max" : 15,
   },
   {
-    "name" : "lowborn levies",
-    "category" : "core",
+    "name" : "Lowborn Levies",
+    "category" : "Core",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1240,8 +1238,8 @@ const koe = [
     "max" : 50,
   },
   {
-    "name" : "lowborn archers",
-    "category" : "core",
+    "name" : "Lowborn Archers",
+    "category" : "Core",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1249,8 +1247,8 @@ const koe = [
     "max" : 30,
   },
   {
-    "name" : "men-at-arms",
-    "category" : "special",
+    "name" : "Men-at-Arms",
+    "category" : "Special",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1258,15 +1256,15 @@ const koe = [
     "max" : 30,
   },
   {
-    "name" : "sacred reliquary",
-    "category" : "special",
+    "name" : "Sacred Reliquary",
+    "category" : "Special",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
   },
   {
-    "name" : "knights of the court",
-    "category" : "special",
+    "name" : "Knights of the Court",
+    "category" : "Special",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1274,8 +1272,8 @@ const koe = [
     "max" : 12,
   },
   {
-    "name" : "knights penitent",
-    "category" : "special",
+    "name" : "Knights Penitent",
+    "category" : "Special",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1283,8 +1281,8 @@ const koe = [
     "max" : 9,
   },
   {
-    "name" : "knights of the quest",
-    "category" : "special",
+    "name" : "Knights of the Quest",
+    "category" : "Special",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1292,8 +1290,8 @@ const koe = [
     "max" : 9,
   },
   {
-    "name" : "yeoman outriders",
-    "category" : "special",
+    "name" : "Yeoman Outriders",
+    "category" : "Special",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1301,8 +1299,8 @@ const koe = [
     "max" : 15,
   },
   {
-    "name" : "enlisted outlaws",
-    "category" : "special",
+    "name" : "Enlisted Outlaws",
+    "category" : "Special",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1310,15 +1308,15 @@ const koe = [
     "max" : 15,
   },
   {
-    "name" : "siege weapon",
-    "category" : "special",
+    "name" : "Siege Weapon",
+    "category" : "Special",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 1,
   },
   {
-    "name" : "pegasus knights",
-    "category" : "special",
+    "name" : "Pegasus Knights",
+    "category" : "Special",
     "gallantry" : 2,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1326,8 +1324,8 @@ const koe = [
     "max" : 5,
   },
   {
-    "name" : "sky heralds",
-    "category" : "special",
+    "name" : "Sky Heralds",
+    "category" : "Special",
     "gallantry" : 1,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1335,8 +1333,8 @@ const koe = [
     "max" : 6,
   },
   {
-    "name" : "naiads",
-    "category" : "fey",
+    "name" : "Naiads",
+    "category" : "Fey",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
@@ -1344,58 +1342,57 @@ const koe = [
     "max" : 10,
   },
   {
-    "name" : "friar's lantern",
-    "category" : "fey",
+    "name" : "Friar's Lantern",
+    "category" : "Fey",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
   },
   {
-    "name" : "the lady's courtier",
-    "category" : "fey",
+    "name" : "The Lady's Courtier",
+    "category" : "Fey",
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
   },
   {
-    "name" : "fey knight",
-    "category" : "fey",
+    "name" : "Fey Knight",
+    "category" : "Fey",
     "gallantry" : 1,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
   },
 ];
 
-
 // OK
-const ok = [
+const OK = [
   {
     "name" : "great khan",
-    "category" : "character",
+    "category" : "Characters",
     "hiredGuns" : 0,
     "powderKeg" : 0,
   },
   {
     "name" : "khan",
-    "category" : "character",
+    "category" : "Characters",
     "hiredGuns" : 0,
     "powderKeg" : 0,
   },
   {
     "name" : "shaman",
-    "category" : "character",
+    "category" : "Characters",
     "hiredGuns" : 0,
     "powderKeg" : 0,
   },
   {
     "name" : "mammoth hunter",
-    "category" : "character",
+    "category" : "Characters",
     "hiredGuns" : 0,
     "powderKeg" : 0,
   },
   {
     "name" : "tribesmen",
-    "category" : "core",
+    "category" : "Core",
     "hiredGuns" : 0,
     "powderKeg" : 0,
     "min" : 4,
@@ -1403,7 +1400,7 @@ const ok = [
   },
   {
     "name" : "bruisers",
-    "category" : "core",
+    "category" : "Core",
     "hiredGuns" : 0,
     "powderKeg" : 0,
     "min" : 3,
@@ -1411,7 +1408,7 @@ const ok = [
   },
   {
     "name" : "scraplings",
-    "category" : "core",
+    "category" : "Core",
     "hiredGuns" : 0,
     "powderKeg" : 0,
     "min" : 20,
@@ -1419,7 +1416,7 @@ const ok = [
   },
   {
     "name" : "sabretooth tigers",
-    "category" : "special",
+    "category" : "Special",
     "conditionalCore" : 5,
     "hiredGuns" : 0,
     "powderKeg" : 0,
@@ -1428,7 +1425,7 @@ const ok = [
   },
   {
     "name" : "scrapling trappers",
-    "category" : "special",
+    "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 0,
     "min" : 8,
@@ -1436,7 +1433,7 @@ const ok = [
   },
   {
     "name" : "yetis",
-    "category" : "special",
+    "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 0,
     "min" : 2,
@@ -1444,13 +1441,13 @@ const ok = [
   },
   {
     "name" : "kin-eater",
-    "category" : "special",
+    "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 0,
   },
   {
     "name" : "tusker cavalry",
-    "category" : "special",
+    "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 0,
     "min" : 3,
@@ -1458,7 +1455,7 @@ const ok = [
   },
   {
     "name" : "mercenary veterans",
-    "category" : "special",
+    "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 0,
     "min" : 3,
@@ -1466,7 +1463,7 @@ const ok = [
   },
   {
     "name" : "mercenary gunners",
-    "category" : "special",
+    "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 0,
     "min" : 3,
@@ -1474,7 +1471,7 @@ const ok = [
   },
   {
     "name" : "bombardiers",
-    "category" : "special",
+    "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 0,
     "min" : 3,
@@ -1482,13 +1479,13 @@ const ok = [
   },
   {
     "name" : "thunder cannon",
-    "category" : "special",
+    "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 1,
   },
   {
     "name" : "scratapult",
-    "category" : "special",
+    "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 1,
   },
@@ -1510,68 +1507,68 @@ const ok = [
     "hiredGuns" : 0,
     "powderKeg" : 0,
   },
-]
+];
 // OnG
-const ong = [
+const OnG = [
   {
-    "name" : "orc warlord",
-    "category" : "character",
+    "name" : "Orc Warlord",
+    "category" : "Characters",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "iron orc loner",
-    "category" : "character",
+    "name" : "Iron Orc Loner",
+    "category" : "Characters",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "brood alpha",
-    "category" : "character",
+    "name" : "Brood Alpha",
+    "category" : "Characters",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "orc shaman",
-    "category" : "character",
+    "name" : "Orc Shaman",
+    "category" : "Characters",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "goblin demagogue",
-    "category" : "character",
+    "name" : "Goblin Demagogue",
+    "category" : "Characters",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "goblin witch",
-    "category" : "character",
+    "name" : "Goblin Witch",
+    "category" : "Characters",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "gogtuk initiate",
-    "category" : "character",
+    "name" : "Gogtuk Initiate",
+    "category" : "Characters",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "mad git",
-    "category" : "character",
+    "name" : "Mad Git",
+    "category" : "Characters",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "goblin rabble",
-    "category" : "core",
+    "name" : "Goblin Rabble",
+    "category" : "Core",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1579,8 +1576,8 @@ const ong = [
     "max" : 60,
   },
   {
-    "name" : "goblin reavers",
-    "category" : "core",
+    "name" : "Goblin Reavers",
+    "category" : "Core",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1588,8 +1585,8 @@ const ong = [
     "max" : 25,
   },
   {
-    "name" : "feral orcs",
-    "category" : "core",
+    "name" : "Feral Orcs",
+    "category" : "Core",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1597,8 +1594,8 @@ const ong = [
     "max" : 50,
   },
   {
-    "name" : "feral orc marauders",
-    "category" : "core",
+    "name" : "Feral Orc Marauders",
+    "category" : "Core",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1606,8 +1603,8 @@ const ong = [
     "max" : 25,
   },
   {
-    "name" : "veteran orcs",
-    "category" : "core",
+    "name" : "Veteran Orcs",
+    "category" : "Core",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1615,8 +1612,8 @@ const ong = [
     "max" : 40,
   },
   {
-    "name" : "veteran orc marauders",
-    "category" : "core",
+    "name" : "Veteran Orc Marauders",
+    "category" : "Core",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1624,8 +1621,8 @@ const ong = [
     "max" : 15,
   },
   {
-    "name" : "iron orcs",
-    "category" : "special",
+    "name" : "Iron Orcs",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1633,8 +1630,8 @@ const ong = [
     "max" : 30,
   },
   {
-    "name" : "iron orc chariots",
-    "category" : "special",
+    "name" : "Iron Orc Chariots",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1642,8 +1639,8 @@ const ong = [
     "max" : 2,
   },
   {
-    "name" : "gogtuk neophytes",
-    "category" : "special",
+    "name" : "Gogtuk Neophytes",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1651,8 +1648,8 @@ const ong = [
     "max" : 20,
   },
   {
-    "name" : "goblin chariots",
-    "category" : "special",
+    "name" : "Goblin Chariots",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1660,8 +1657,8 @@ const ong = [
     "max" : 3,
   },
   {
-    "name" : "grotlings",
-    "category" : "special",
+    "name" : "Grotlings",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1669,15 +1666,15 @@ const ong = [
     "max" : 6,
   },
   {
-    "name" : "grotling scrap wagon",
-    "category" : "special",
+    "name" : "Grotling Scrap Wagon",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "gnashers",
-    "category" : "special",
+    "name" : "Gnashers",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1685,8 +1682,8 @@ const ong = [
     "max" : 40,
   },
   {
-    "name" : "gnasher dashers",
-    "category" : "special",
+    "name" : "Gnasher Dashers",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1694,15 +1691,15 @@ const ong = [
     "max" : 15,
   },
   {
-    "name" : "wrecking team",
-    "category" : "special",
+    "name" : "Wrecking Team",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "trolls",
-    "category" : "special",
+    "name" : "Trolls",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1710,29 +1707,29 @@ const ong = [
     "max" : 9,
   },
   {
-    "name" : "goblin artillery",
-    "category" : "special",
+    "name" : "Goblin Artillery",
+    "category" : "Special",
     "bigAndNasty" : 0,
     "deathFromAbove" : 1,
     "archerBroods" : 0,
   },
   {
-    "name" : "giant",
-    "category" : "special",
+    "name" : "Giant",
+    "category" : "Special",
     "bigAndNasty" : 1,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "guardian behemoth",
-    "category" : "special",
+    "name" : "Guardian Behemoth",
+    "category" : "Special",
     "bigAndNasty" : 1,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
   },
   {
-    "name" : "great green idol",
-    "category" : "special",
+    "name" : "Great Green Idol",
+    "category" : "Special",
     "bigAndNasty" : 1,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
@@ -1740,128 +1737,128 @@ const ong = [
 ];
 
 // SA
-const sa = [
+const SA = [
   {
     "name" : "anurarch archmage",
-    "category" : "character",
+    "category" : "Characters",
     "saurianShooting" : 0,
   },
   {
     "name" : "caiman mentor",
-    "category" : "character",
+    "category" : "Characters",
     "saurianShooting" : 0,
   },
   {
     "name" : "tegu veteran",
-    "category" : "character",
+    "category" : "Characters",
     "saurianShooting" : 0,
   },
   {
     "name" : "skink veteran",
-    "category" : "character",
+    "category" : "Characters",
     "saurianShooting" : 0,
   },
   {
     "name" : "tegu warriors",
-    "category" : "core",
+    "category" : "Core",
     "saurianShooting" : 0,
     "min" : 15,
     "max" : 30,
   },
   {
     "name" : "skink warriors",
-    "category" : "core",
+    "category" : "Core",
     "saurianShooting" : 0,
     "min" : 20,
     "max" : 40,
   },
   {
     "name" : "skink hunters",
-    "category" : "core",
+    "category" : "Core",
     "saurianShooting" : 1,
     "min" : 12,
     "max" : 20,
   },
   {
     "name" : "caiman warriors",
-    "category" : "core",
+    "category" : "Core",
     "saurianShooting" : 0,
     "min" : 4,
     "max" : 8,
   },
   {
     "name" : "tegu guards",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 0,
     "min" : 15,
     "max" : 25,
   },
   {
     "name" : "tegu mystics",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 0,
     "min" : 10,
     "max" : 20,
   },
   {
     "name" : "raptor pack",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 0,
     "min" : 6,
     "max" : 15,
   },
   {
     "name" : "raptor riders",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 0,
     "min" : 8,
     "max" : 15,
   },
   {
     "name" : "caiman elders",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 0,
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "thyroscutus herd",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 0,
     "min" : 1,
     "max" : 3,
   },
   {
     "name" : "rhamphodon riders",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 0,
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "saurian swarms",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 0,
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "skink guerrillas",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 0,
     "min" : 8,
     "max" : 15,
   },
   {
     "name" : "weapon beasts",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 2,
     "min" : 2,
     "max" : 4,
   },
   {
     "name" : "pteradon riders",
-    "category" : "special",
+    "category" : "Special",
     "saurianShooting" : 0,
     "min" : 3,
     "max" : 6,
@@ -1890,54 +1887,53 @@ const sa = [
   },
 ];
 
-
 // SE
-const se = [
+const SE = [
   {
     "name" : "forest prince",
-    "category" : "characters",
+    "category" : "Characters",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0
   },
   {
     "name" : "chieftain",
-    "category" : "characters",
+    "category" : "Characters",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0
   },
   {
     "name" : "druid",
-    "category" : "characters",
+    "category" : "Characters",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0
   },
   {
     "name" : "dryad ancient",
-    "category" : "characters",
+    "category" : "Characters",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0
   },
   {
     "name" : "avatar of nature",
-    "category" : "characters",
+    "category" : "Characters",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 2,
   },
   {
     "name" : "treefather ancient",
-    "category" : "characters",
+    "category" : "Characters",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 1,
   },
   {
     "name" : "thicket shepherd",
-    "category" : "characters",
+    "category" : "Characters",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0,
   },
   {
     "name" : "forest guard",
-    "category" : "core",
+    "category" : "Core",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0,
     "min" : 15,
@@ -1945,7 +1941,7 @@ const se = [
   },
   {
     "name" : "sylvan archers",
-    "category" : "core",
+    "category" : "Core",
     "sylvanShooting" : 1,
     "sylvanBeasts" : 0,
     "min" : 10,
@@ -1953,7 +1949,7 @@ const se = [
   },
   {
     "name" : "heath riders",
-    "category" : "core",
+    "category" : "Core",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0,
     "min" : 5,
@@ -1961,7 +1957,7 @@ const se = [
   },
   {
     "name" : "dryads",
-    "category" : "core",
+    "category" : "Core",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0,
     "min" : 10,
@@ -1969,7 +1965,7 @@ const se = [
   },
   {
     "name" : "forest rangers",
-    "category" : "special",
+    "category" : "Special",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0,
     "min" : 10,
@@ -1977,7 +1973,7 @@ const se = [
   },
   {
     "name" : "thicket beasts",
-    "category" : "special",
+    "category" : "Special",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0,
     "min" : 4,
@@ -1985,7 +1981,7 @@ const se = [
   },
   {
     "name" : "forest eagles",
-    "category" : "special",
+    "category" : "Special",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0,
     "min" : 1,
@@ -1993,7 +1989,7 @@ const se = [
   },
   {
     "name" : "blade dancers",
-    "category" : "special",
+    "category" : "Special",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0,
     "min" : 7,
@@ -2001,13 +1997,13 @@ const se = [
   },
   {
     "name" : "treefather",
-    "category" : "special",
+    "category" : "Special",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 1,
   },
   {
     "name" : "wild huntsmen",
-    "category" : "special",
+    "category" : "Special",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0,
     "min" : 5,
@@ -2015,7 +2011,7 @@ const se = [
   },
   {
     "name" : "kestrel knights",
-    "category" : "special",
+    "category" : "Special",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0,
     "min" : 3,
@@ -2048,28 +2044,28 @@ const se = [
 ];
 
 // UD
-const ud = [
+const UD = [
   {
     "name" : "pharaoh",
-    "category" : "characters",
+    "category" : "Characters",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
   },
   {
     "name" : "nomarch",
-    "category" : "characters",
+    "category" : "Characters",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
   },
   {
     "name" : "death cult hierarch",
-    "category" : "characters",
+    "category" : "Characters",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
   },
   {
     "name" : "skeleton warriors",
-    "category" : "core",
+    "category" : "Core",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
     "min" : 20,
@@ -2077,7 +2073,7 @@ const ud = [
   },
   {
     "name" : "skeleton archers",
-    "category" : "core",
+    "category" : "Core",
     "aspisArrows" : 1,
     "deathFromAfar" : 0,
     "min" : 15,
@@ -2085,7 +2081,7 @@ const ud = [
   },
   {
     "name" : "skeleton cavalry",
-    "category" : "core",
+    "category" : "Core",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
     "min" : 10,
@@ -2093,7 +2089,7 @@ const ud = [
   },
   {
     "name" : "skeleton scouts",
-    "category" : "core",
+    "category" : "Core",
     "aspisArrows" : 1,
     "deathFromAfar" : 0,
     "min" : 5,
@@ -2101,7 +2097,7 @@ const ud = [
   },
   {
     "name" : "skeleton chariots",
-    "category" : "core",
+    "category" : "Core",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
     "min" : 3,
@@ -2109,7 +2105,7 @@ const ud = [
   },
   {
     "name" : "necropolis guard",
-    "category" : "special",
+    "category" : "Special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
     "min" : 15,
@@ -2117,7 +2113,7 @@ const ud = [
   },
   {
     "name" : "tomb cataphracts",
-    "category" : "special",
+    "category" : "Special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
     "min" : 3,
@@ -2125,7 +2121,7 @@ const ud = [
   },
   {
     "name" : "shabtis",
-    "category" : "special",
+    "category" : "Special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
     "min" : 3,
@@ -2133,7 +2129,7 @@ const ud = [
   },
   {
     "name" : "shabti archers",
-    "category" : "special",
+    "category" : "Special",
     "aspisArrows" : 2,
     "deathFromAfar" : 0,
     "min" : 3,
@@ -2141,7 +2137,7 @@ const ud = [
   },
   {
     "name" : "great vultures",
-    "category" : "special",
+    "category" : "Special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
     "min" : 3,
@@ -2149,7 +2145,7 @@ const ud = [
   },
   {
     "name" : "scarab swarms",
-    "category" : "special",
+    "category" : "Special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
     "min" : 3,
@@ -2157,7 +2153,7 @@ const ud = [
   },
   {
     "name" : "sand stalkers",
-    "category" : "special",
+    "category" : "Special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
     "min" : 3,
@@ -2165,13 +2161,13 @@ const ud = [
   },
   {
     "name" : "casket of phatep",
-    "category" : "special",
+    "category" : "Special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
   },
   {
     "name" : "charnel catapult",
-    "category" : "special",
+    "category" : "Special",
     "aspisArrows" : 0,
     "deathFromAfar" : 1,
   },
@@ -2210,96 +2206,96 @@ const ud = [
 ];
 
 // VC
-const vc = [
+const VC = [
   {
     "name" : "vampire count",
-    "category" : "characters",
+    "category" : "Characters",
   },
   {
     "name" : "vampire courtier",
-    "category" : "characters",
+    "category" : "Characters",
   },
   {
     "name" : "necromancer",
-    "category" : "characters",
+    "category" : "Characters",
   },
   {
     "name" : "barrow king",
-    "category" : "characters",
+    "category" : "Characters",
   },
   {
     "name" : "banshee",
-    "category" : "characters",
+    "category" : "Characters",
   },
   {
     "name" : "zombies",
-    "category" : "core",
+    "category" : "Core",
     "min" : 20,
     "max" : 80,
   },
   {
     "name" : "skeletons",
-    "category" : "core",
+    "category" : "Core",
     "min" : 20,
     "max" : 60,
   },
   {
     "name" : "ghouls",
-    "category" : "core",
+    "category" : "Core",
     "min" : 15,
     "max" : 40,
   },
   {
     "name" : "bat swarms",
-    "category" : "core",
+    "category" : "Core",
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "dire wolves",
-    "category" : "core",
+    "category" : "Core",
     "min" : 8,
     "max" : 15,
   },
   {
     "name" : "great bats",
-    "category" : "special",
+    "category" : "Special",
     "min" : 2,
     "max" : 9,
   },
   {
     "name" : "ghasts",
-    "category" : "special",
+    "category" : "Special",
     "min" : 3,
     "max" : 8,
   },
   {
     "name" : "barrow guard",
-    "category" : "special",
+    "category" : "Special",
     "min" : 15,
     "max" : 40,
   },
   {
     "name" : "barrow knights",
-    "category" : "special",
+    "category" : "Special",
     "min" : 5,
     "max" : 15,
   },
   {
     "name" : "cadaver wagon",
-    "category" : "special",
+    "category" : "Special",
   },
   {
     "name" : "dark coach",
-    "category" : "special",
+    "category" : "Special",
   },
   {
     "name" : "court of the damned",
-    "category" : "special",
+    "category" : "Special",
   },
   {
     "name" : "altar of undeath",
-    "category" : "special",
+    "category" : "Special",
   },
   {
     "name" : "phantom hosts",
@@ -2348,110 +2344,110 @@ const vc = [
 ];
 
 // VS
-const vs = [
+const VS = [
   {
     "name" : "ruinous dictator",
-    "category" : "characters",
+    "category" : "Characters",
     "experimentalWeapon" : 0,
   },
   {
     "name" : "vermin senator",
-    "category" : "characters",
+    "category" : "Characters",
     "experimentalWeapon" : 0
   },
   {
     "name" : "bloodfur legate",
-    "category" : "characters",
+    "category" : "Characters",
     "experimentalWeapon" : 0
   },
   {
     "name" : "house prefect",
-    "category" : "characters",
+    "category" : "Characters",
     "experimentalWeapon" : 0
   },
   {
     "name" : "swarm priest",
-    "category" : "characters",
+    "category" : "Characters",
     "experimentalWeapon" : 0
   },
   {
     "name" : "duskblade assassin",
-    "category" : "characters",
+    "category" : "Characters",
     "experimentalWeapon" : 0
   },
   {
     "name" : "vermin slingers",
-    "category" : "core",
+    "category" : "Core",
     "experimentalWeapon" : 0,
     "min" : 20,
     "max" : 30,
   },
   {
     "name" : "vermin legionaries",
-    "category" : "core",
+    "category" : "Core",
     "experimentalWeapon" : 0,
     "min" : 25,
     "max" : 60,
   },
   {
     "name" : "blackfur veterans",
-    "category" : "core",
+    "category" : "Core",
     "experimentalWeapon" : 0,
     "min" : 20,
     "max" : 40,
   },
   {
     "name" : "vermin slaves",
-    "category" : "core",
+    "category" : "Core",
     "experimentalWeapon" : 0,
     "min" : 30,
     "max" : 60,
   },
   {
     "name" : "plague cultists",
-    "category" : "core",
+    "category" : "Core",
     "experimentalWeapon" : 0,
     "min" : 20,
     "max" : 40,
   },
   {
     "name" : "plague disciples",
-    "category" : "core",
+    "category" : "Core",
     "experimentalWeapon" : 0,
     "min" : 15,
     "max" : 40,
   },
   {
     "name" : "giant rats",
-    "category" : "core",
+    "category" : "Core",
     "experimentalWeapon" : 0,
     "min" : 10,
     "max" : 30,
   },
   {
     "name" : "fire rats",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0,
     "min" : 10,
     "max" : 20,
   },
   {
     "name" : "bloodfur praetorians",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0,
     "min" : 20,
     "max" : 40,
   },
   {
     "name" : "rat swarm",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0,
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "vermin brutes",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0,
     "bruteForce" : 1,
     "min" : 6,
@@ -2459,7 +2455,7 @@ const vs = [
   },
   {
     "name" : "gladiator brutes",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0,
     "bruteForce" : 1,
     "min" : 3,
@@ -2467,24 +2463,24 @@ const vs = [
   },
   {
     "name" : "legionary drill team",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0
   },
   {
     "name" : "shadowfur stalkers",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0,
     "min" : 10,
     "max" : 15,
   },
   {
     "name" : "doomspark device",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0
   },
   {
     "name" : "thunder brutes",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0,
     "bruteForce" : 1,
     "min" : 3,
@@ -2492,19 +2488,19 @@ const vs = [
   },
   {
     "name" : "ignifier grenadiers",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0
   },
   {
     "name" : "experimental weapon teams",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 1,
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "vermin artillery",
-    "category" : "special",
+    "category" : "Special",
     "experimentalWeapon" : 0
   },
   {
@@ -2528,71 +2524,71 @@ const vs = [
 ];
 
 // WDG
-const wdg = [
+const WDG = [
   {
-    "name" : "exalted herald",
-    "category" : "characters",
+    "name" : "Exalted Herald",
+    "category" : "Characters",
     "legendaryBeast" : 3,
   },
   {
-    "name" : "chosen lord",
-    "category" : "characters",
+    "name" : "Chosen Lord",
+    "category" : "Characters",
     "legendaryBeast" : 0
   },
   {
-    "name" : "doomlord",
-    "category" : "characters",
+    "name" : "Doomlord",
+    "category" : "Characters",
     "legendaryBeast" : 0
   },
   {
-    "name" : "sorcerer",
-    "category" : "characters",
+    "name" : "Sorcerer",
+    "category" : "Characters",
     "legendaryBeast" : 0
   },
   {
-    "name" : "barbarian chief",
-    "category" : "characters",
+    "name" : "Barbarian Chief",
+    "category" : "Characters",
     "legendaryBeast" : 0
   },
   {
-    "name" : "feldrak ancestor",
-    "category" : "characters",
+    "name" : "Feldrak ancestor",
+    "category" : "Characters",
     "legendaryBeast" : 2
   },
   {
-    "name" : "warriors",
-    "category" : "core",
+    "name" : "Warriors",
+    "category" : "Core",
     "legendaryBeast" : 0,
     "min" : 10,
     "max" : 25,
   },
   {
-    "name" : "fallen",
-    "category" : "core",
+    "name" : "Fallen",
+    "category" : "Core",
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 15,
 
   },
   {
-    "name" : "barbarians",
-    "category" : "core",
+    "name" : "Barbarians",
+    "category" : "Core",
     "legendaryBeast" : 0,
     "min" : 15,
     "max" : 40,
 
   },
   {
-    "name" : "barbarian horsemen",
-    "category" : "core",
+    "name" : "Barbarian Horsemen",
+    "category" : "Core",
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 15,
 
   },
   {
-    "name" : "warhounds",
-    "category" : "special",
+    "name" : "Warhounds",
+    "category" : "Special",
     "conditionalCore" : 8,
     "legendaryBeast" : 0,
     "min" : 5,
@@ -2600,97 +2596,97 @@ const wdg = [
 
   },
   {
-    "name" : "warrior knights",
-    "category" : "special",
+    "name" : "Warrior Knights",
+    "category" : "Special",
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 10,
 
   },
   {
-    "name" : "warrior chariot",
-    "category" : "special",
+    "name" : "Warrior Chariot",
+    "category" : "Special",
     "legendaryBeast" : 0
   },
   {
-    "name" : "chosen",
-    "category" : "special",
+    "name" : "Chosen",
+    "category" : "Special",
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 10,
 
   },
   {
-    "name" : "chosen knights",
-    "category" : "special",
+    "name" : "Chosen Knights",
+    "category" : "Special",
     "legendaryBeast" : 0,
     "min" : 3,
     "max" : 4,
 
   },
   {
-    "name" : "chosen chariot",
-    "category" : "special",
+    "name" : "Chosen Chariot",
+    "category" : "Special",
     "legendaryBeast" : 0
   },
   {
-    "name" : "chimera",
-    "category" : "special",
+    "name" : "Chimera",
+    "category" : "Special",
     "legendaryBeast" : 1
   },
   {
-    "name" : "wretched ones",
-    "category" : "special",
+    "name" : "Wretched Ones",
+    "category" : "Special",
     "legendaryBeast" : 0,
     "min" : 1,
     "max" : 6,
 
   },
   {
-    "name" : "forsworn",
-    "category" : "special",
+    "name" : "Forsworn",
+    "category" : "Special",
     "legendaryBeast" : 0,
     "min" : 3,
     "max" : 9,
 
   },
   {
-    "name" : "feldraks",
-    "category" : "special",
+    "name" : "Feldraks",
+    "category" : "Special",
     "legendaryBeast" : 0,
     "min" : 3,
     "max" : 5,
   },
   {
-    "name" : "battleshrine",
-    "category" : "special",
+    "name" : "Battleshrine",
+    "category" : "Special",
     "legendaryBeast" : 0
   },
   {
-    "name" : "flayers",
-    "category" : "special",
+    "name" : "Flayers",
+    "category" : "Special",
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 10,
   },
   {
-    "name" : "hellmaw",
-    "category" : "special",
+    "name" : "Hellmaw",
+    "category" : "Special",
     "legendaryBeast" : 0
   },
   {
-    "name" : "forsaken one",
-    "category" : "special",
+    "name" : "Forsaken One",
+    "category" : "Special",
     "legendaryBeast" : 2
   },
   {
-    "name" : "marauding giant",
-    "category" : "special",
+    "name" : "Marauding Giant",
+    "category" : "Special",
     "legendaryBeast" : 1
   },
   {
-    "name" : "feldrak elder",
-    "category" : "special",
+    "name" : "Feldrak Elder",
+    "category" : "Special",
     "legendaryBeast" : 2
   },
 
@@ -2698,20 +2694,20 @@ const wdg = [
 
 // exports
 module.exports = {
-  "bh" : bh,
-  "de" : de,
-  "dh" : dh,
-  "dl" : dl,
-  "eos" : eos,
-  "he" : he,
-  "id" : id,
-  "koe" : koe,
-  "ok" : ok,
-  "ong" : ong,
-  "sa" : sa,
-  "se" : se,
-  "ud" : ud,
-  "vc" : vc,
-  "vs" : vs,
-  "wdg" : wdg,
+  BH,
+  DE,
+  DH,
+  DL,
+  EoS,
+  HE,
+  ID,
+  KoE,
+  OK,
+  OnG,
+  SA,
+  SE,
+  UD,
+  VC,
+  VS,
+  WDG
 };
