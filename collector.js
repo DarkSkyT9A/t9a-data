@@ -3,8 +3,10 @@
 // Imports
 const superagent = require('superagent');
 const fs = require("node:fs");
+const { transformArmyList } = require("./transformer.js");
 // Secrets
 const { user, password } = require("./secrets.json");
+
 
 // Constants
 const DEFAULT_START_DATE = "2025-03-05";
@@ -123,6 +125,11 @@ let skippedGames = 0;
   }
 })();
 
+
+/** #################################################################################################################
+ *          Transformation
+ * #################################################################################################################
+ */ 
 function transformReport(report, tournamentId) {
   // console.log(Object.keys(report));
   // console.log(JSON.stringify(report.score, null, 4));
@@ -177,12 +184,21 @@ function transformReport(report, tournamentId) {
   r.armyOne = getArmyStringForId(report.players[0].id_book, true);
   r.armyTwo = getArmyStringForId(report.players[1].id_book, true);
 
-  // r.armyListOne = {};
-  // r.armyListTwo = {};
+  // console.log(report.players[0].report_list.exported_list);
+  if(report.players[0].report_list) {
+    r.armyListOne = transformArmyList(report.players[0].report_list, r.armyOne);
+  } else {
+    // console.log(`${tournamentId}/${report.id_match} - has no report list for player one`);
+  }
+  // console.log(report.players[1].report_list.exported_list);
+  if(report.players[1].report_list) {
+    r.armyListTwo = transformArmyList(report.players[1].report_list, r.armyTwo);
+  } else {
+    // console.log(`${tournamentId}/${report.id_match} - has no report list for player two`);
+  }
 
   return r;
 }
-
 
 function getArmyStringForId(id, uppercase) {
   id = parseInt(id);
@@ -241,5 +257,4 @@ function getArmyStringForId(id, uppercase) {
 //   process.exit();
 // });
 // console.log(JSON.stringify(tournamentsData, null, 4));
-
 
