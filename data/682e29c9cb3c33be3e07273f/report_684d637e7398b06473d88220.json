@@ -13,18 +13,54 @@
                 "name": "Anurarch Archmage",
                 "cost": 615,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Touch of the Reaper",
-                    "Carved Tablet",
-                    "Scroll of Power",
-                    "Farseeing Mastery",
-                    "Mystifying Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Carved Tablet",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Farseeing Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Mystifying Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -33,8 +69,14 @@
                 "name": "Tegu Warriors",
                 "cost": 515,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -44,9 +86,18 @@
                 "name": "Tegu Warriors",
                 "cost": 495,
                 "options": [
-                    "Wizard Conclave",
-                    "Awaken the Beast",
-                    "Standard Bearer"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 30,
@@ -56,7 +107,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 595,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -66,8 +120,14 @@
                 "name": "Thyroscutus Herd",
                 "cost": 250,
                 "options": [
-                    "Great Protector",
-                    "Lodestone Shield"
+                    {
+                        "name": "Great Protector",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lodestone Shield",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 1,
                 "models": 1,
@@ -77,8 +137,14 @@
                 "name": "Raptor Riders",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer",
-                    "Koru Stone"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -88,7 +154,10 @@
                 "name": "Raptor Riders",
                 "cost": 380,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 9,
@@ -98,7 +167,10 @@
                 "name": "Weapon Beasts",
                 "cost": 470,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -108,7 +180,10 @@
                 "name": "Weapon Beasts",
                 "cost": 210,
                 "options": [
-                    "Salamander"
+                    {
+                        "name": "Salamander",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 2,
@@ -128,17 +203,50 @@
                 "name": "Sanctioned Warlock",
                 "cost": 520,
                 "options": [
-                    "General",
-                    "Curse of Lycanthropy",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Evocation",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Scroll of Power"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Curse of Lycanthropy",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -147,14 +255,38 @@
                 "name": "Temple Exarch",
                 "cost": 355,
                 "options": [
-                    "Supernatural Dexterity",
-                    "Spell Scroll",
-                    "Ceinran's Scales",
-                    "Battle Standard Bearer",
-                    "Wizard Apprentice",
-                    "Divination",
-                    "Foresight",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spell Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Ceinran's Scales",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -163,8 +295,14 @@
                 "name": "Silexian Spears",
                 "cost": 446,
                 "options": [
-                    "Caedhren's Pennon",
-                    "Standard Bearer"
+                    {
+                        "name": "Caedhren's Pennon",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -174,7 +312,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -184,8 +325,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -195,9 +342,18 @@
                 "name": "Temple Militants",
                 "cost": 446,
                 "options": [
-                    "Sheltering Standard",
-                    "Standard Bearer",
-                    "Dancers of Yema"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -207,8 +363,14 @@
                 "name": "Judicators",
                 "cost": 365,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -218,8 +380,14 @@
                 "name": "Judicators",
                 "cost": 365,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -229,8 +397,14 @@
                 "name": "Dread Acolytes",
                 "cost": 289,
                 "options": [
-                    "Standard Bearer",
-                    "Temple Acolytes"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Temple Acolytes",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -240,7 +414,10 @@
                 "name": "Divine Altar",
                 "cost": 230,
                 "options": [
-                    "Altar of Tila"
+                    {
+                        "name": "Altar of Tila",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

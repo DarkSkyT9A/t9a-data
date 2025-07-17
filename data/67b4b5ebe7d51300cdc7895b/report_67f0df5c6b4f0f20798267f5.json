@@ -13,14 +13,38 @@
                 "name": "Anurarch Archmage",
                 "cost": 560,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Veil Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Veil Mastery",
+                        "type": "arcaneMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,8 +53,14 @@
                 "name": "Caiman Mentor",
                 "cost": 395,
                 "options": [
-                    "Vital Essence",
-                    "Combat Legend"
+                    {
+                        "name": "Vital Essence",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Combat Legend",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -39,11 +69,26 @@
                 "name": "Skink Veteran",
                 "cost": 320,
                 "options": [
-                    "Serpent's Nest Charm",
-                    "Dragon's Brew",
-                    "Pouakai Sky Tyrant",
-                    "Poisoned Javelin",
-                    "Paired Weapons"
+                    {
+                        "name": "Serpent's Nest Charm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Pouakai Sky Tyrant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -52,11 +97,26 @@
                 "name": "Tegu Warriors",
                 "cost": 580,
                 "options": [
-                    "Awaken the Beast",
-                    "Flaming Standard",
-                    "Spear",
-                    "Wizard Conclave",
-                    "Standard Bearer"
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -66,11 +126,26 @@
                 "name": "Skink Warriors",
                 "cost": 425,
                 "options": [
-                    "Entwining Roots",
-                    "Rending Banner",
-                    "Wizard Conclave",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -80,8 +155,14 @@
                 "name": "Tegu Guards",
                 "cost": 570,
                 "options": [
-                    "Koru Stone",
-                    "Standard Bearer"
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -91,8 +172,14 @@
                 "name": "Thyroscutus Herd",
                 "cost": 245,
                 "options": [
-                    "Great Protector",
-                    "Venomous Fortress"
+                    {
+                        "name": "Great Protector",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Venomous Fortress",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -102,7 +189,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 225,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 1,
                 "models": 1,
@@ -112,7 +202,10 @@
                 "name": "Weapon Beasts",
                 "cost": 210,
                 "options": [
-                    "Salamander"
+                    {
+                        "name": "Salamander",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -122,7 +215,10 @@
                 "name": "Weapon Beasts",
                 "cost": 470,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -142,19 +238,58 @@
                 "name": "Sorcerer",
                 "cost": 745,
                 "options": [
-                    "Battleshrine",
-                    "Molten Copper",
-                    "Wizard Master",
-                    "Occultism",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Pentagram of Pain",
-                    "Umbral Majesty",
-                    "The Grave Calls",
-                    "Aether Icon",
-                    "Gladiator's Spirit",
-                    "Paired Weapons",
-                    "Dark Familiar"
+                    {
+                        "name": "Battleshrine",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pentagram of Pain",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Umbral Majesty",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gladiator's Spirit",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -163,15 +298,42 @@
                 "name": "Doomlord",
                 "cost": 625,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Basalt Infusion",
-                    "Supernatural Dexterity",
-                    "Immortal Gauntlets",
-                    "Trophy Rack",
-                    "Spiked Shield",
-                    "Dusk Forged",
-                    "Great Weapon"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spiked Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dusk Forged",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -180,9 +342,18 @@
                 "name": "Warriors",
                 "cost": 570,
                 "options": [
-                    "Standard Bearer",
-                    "Aether Icon",
-                    "Spiked Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spiked Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -192,8 +363,14 @@
                 "name": "Barbarians",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer",
-                    "Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -203,8 +380,14 @@
                 "name": "Forsworn",
                 "cost": 570,
                 "options": [
-                    "Standard Bearer",
-                    "Great Weapon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -214,8 +397,14 @@
                 "name": "Chosen Knights",
                 "cost": 405,
                 "options": [
-                    "Standard Bearer",
-                    "Greed"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -225,8 +414,14 @@
                 "name": "Chosen Knights",
                 "cost": 405,
                 "options": [
-                    "Standard Bearer",
-                    "Greed"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -236,8 +431,14 @@
                 "name": "Marauding Giant",
                 "cost": 350,
                 "options": [
-                    "Tribal Warspear",
-                    "Big Brother"
+                    {
+                        "name": "Tribal Warspear",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Big Brother",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

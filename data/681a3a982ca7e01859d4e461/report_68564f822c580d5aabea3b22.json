@@ -13,13 +13,34 @@
                 "name": "Paladin",
                 "cost": 530,
                 "options": [
-                    "General",
-                    "Fey Steed",
-                    "Lance",
-                    "Uther's Mettle",
-                    "Percival's Panoply",
-                    "Fortress of Faith",
-                    "Sainted and Gallantry"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Fey Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Uther's Mettle",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Percival's Panoply",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Fortress of Faith",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sainted and Gallantry",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,10 +49,22 @@
                 "name": "Duke",
                 "cost": 480,
                 "options": [
-                    "Hippogriff",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Hippogriff",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -40,12 +73,30 @@
                 "name": "Damsel",
                 "cost": 290,
                 "options": [
-                    "Heraldic Steed",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Savage Fury",
-                    "Awaken the Beast",
-                    "Swarm of Insects"
+                    {
+                        "name": "Heraldic Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -54,10 +105,22 @@
                 "name": "Folk Hero",
                 "cost": 175,
                 "options": [
-                    "Destrier",
-                    "Shield",
-                    "Attached",
-                    "Cleric"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -66,9 +129,18 @@
                 "name": "Lowborn Levies",
                 "cost": 400,
                 "options": [
-                    "Halberd and Shield",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 50,
@@ -78,8 +150,14 @@
                 "name": "Mounted Serjeants",
                 "cost": 300,
                 "options": [
-                    "Light Lance",
-                    "Standard Bearer"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -89,8 +167,14 @@
                 "name": "Mounted Serjeants",
                 "cost": 300,
                 "options": [
-                    "Light Lance",
-                    "Standard Bearer"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -100,9 +184,18 @@
                 "name": "Knights of the Quest",
                 "cost": 560,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -119,9 +212,18 @@
                 "name": "The Lady's Courtier",
                 "cost": 425,
                 "options": [
-                    "Fountain of Youth",
-                    "Stone Skin",
-                    "Courtier of the Dusk"
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Stone Skin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Courtier of the Dusk",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"
@@ -130,7 +232,10 @@
                 "name": "Fey Knight",
                 "cost": 360,
                 "options": [
-                    "Warden of the Hooded Man"
+                    {
+                        "name": "Warden of the Hooded Man",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"

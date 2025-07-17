@@ -13,7 +13,10 @@
                 "name": "Exalted Herald",
                 "cost": 700,
                 "options": [
-                    "General"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -22,14 +25,38 @@
                 "name": "Barbarian Chief",
                 "cost": 200,
                 "options": [
-                    "Trusted Adviser",
-                    "Captain and Attached",
-                    "Light Troops",
-                    "Trophy Rack",
-                    "Aether Icon",
-                    "Shield",
-                    "Wild Warding",
-                    "Binding Scroll"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -38,10 +65,22 @@
                 "name": "Warriors",
                 "cost": 540,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -67,10 +106,22 @@
                 "name": "Chosen",
                 "cost": 569,
                 "options": [
-                    "Halberd",
-                    "Wrath",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -80,10 +131,22 @@
                 "name": "Forsworn",
                 "cost": 530,
                 "options": [
-                    "Icon of the Infinite",
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Icon of the Infinite",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -93,9 +156,18 @@
                 "name": "Chosen Knights",
                 "cost": 540,
                 "options": [
-                    "Lust",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -105,8 +177,14 @@
                 "name": "Battleshrine",
                 "cost": 320,
                 "options": [
-                    "Whispers of the Veil",
-                    "Hellfire"
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hellfire",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -132,16 +210,46 @@
                 "name": "Sorcerer",
                 "cost": 490,
                 "options": [
-                    "Recruiting Officer",
-                    "Light Troops",
-                    "Danse Macabre",
-                    "Wizard Master",
-                    "Evocation",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Talisman of the Void"
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -150,9 +258,18 @@
                 "name": "Warriors",
                 "cost": 586,
                 "options": [
-                    "Standard Bearer",
-                    "Spiked Shield",
-                    "Lust"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spiked Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -170,8 +287,14 @@
                 "name": "Chosen",
                 "cost": 590,
                 "options": [
-                    "Standard Bearer",
-                    "Greed"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -181,9 +304,18 @@
                 "name": "Chosen",
                 "cost": 559,
                 "options": [
-                    "Standard Bearer",
-                    "Halberd",
-                    "Wrath"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    }
                 ],
                 "index": 1,
                 "models": 9,
@@ -193,9 +325,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer",
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -205,8 +346,14 @@
                 "name": "Forsworn",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer",
-                    "Great Weapon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -223,9 +370,18 @@
                 "name": "Battleshrine",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer",
-                    "Molten Copper",
-                    "Whispers of the Veil"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

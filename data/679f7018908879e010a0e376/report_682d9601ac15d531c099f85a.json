@@ -13,18 +13,54 @@
                 "name": "Prophet",
                 "cost": 500,
                 "options": [
-                    "General",
-                    "Trusted Adviser",
-                    "Prophet of Nezibkesh",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Fireball",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Cage of Embers",
-                    "Flintlock Axe"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Prophet of Nezibkesh",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fireball",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cage of Embers",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flintlock Axe",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -33,12 +69,30 @@
                 "name": "Vizier",
                 "cost": 405,
                 "options": [
-                    "Bull of Shamut",
-                    "Blunderbuss",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "Obsidian Rock",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Bull of Shamut",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blunderbuss",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -47,9 +101,18 @@
                 "name": "Citadel Guard",
                 "cost": 360,
                 "options": [
-                    "Flintlock Axe",
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flintlock Axe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -59,9 +122,18 @@
                 "name": "Vassal Levies",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer",
-                    "Spear and Shield",
-                    "Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -71,9 +143,18 @@
                 "name": "Vassal Levies",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer",
-                    "Spear and Shield",
-                    "Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -83,8 +164,14 @@
                 "name": "Immortals",
                 "cost": 325,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -94,8 +181,14 @@
                 "name": "Immortals",
                 "cost": 325,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -105,8 +198,14 @@
                 "name": "Immortals",
                 "cost": 325,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 15,
@@ -116,7 +215,10 @@
                 "name": "Gunnery Team",
                 "cost": 200,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -125,7 +227,10 @@
                 "name": "Gunnery Team",
                 "cost": 200,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -134,7 +239,10 @@
                 "name": "Infernal Artillery",
                 "cost": 170,
                 "options": [
-                    "Naphtha Thrower"
+                    {
+                        "name": "Naphtha Thrower",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -143,7 +251,10 @@
                 "name": "Infernal Artillery",
                 "cost": 170,
                 "options": [
-                    "Naphtha Thrower"
+                    {
+                        "name": "Naphtha Thrower",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -162,13 +273,34 @@
                 "name": "Orc Shaman",
                 "cost": 520,
                 "options": [
-                    "Wyvern",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Talisman of Shielding"
+                    {
+                        "name": "Wyvern",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -177,14 +309,38 @@
                 "name": "Orc Shaman",
                 "cost": 345,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Fireball",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Attack Gnasher",
-                    "Skull Fetish"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fireball",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Attack Gnasher",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Skull Fetish",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -193,11 +349,26 @@
                 "name": "Orc Warlord",
                 "cost": 390,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Omen of the Apocalypse",
-                    "Destiny's Call",
-                    "Tribe Leader and Orc Horde"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Omen of the Apocalypse",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Tribe Leader and Orc Horde",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -206,8 +377,14 @@
                 "name": "Brood Alpha",
                 "cost": 120,
                 "options": [
-                    "Light Troops",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -216,8 +393,14 @@
                 "name": "Veteran Orc Marauders",
                 "cost": 520,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -227,7 +410,10 @@
                 "name": "Feral Orc Marauders",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 16,
@@ -237,7 +423,10 @@
                 "name": "Iron Orcs",
                 "cost": 337,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -247,8 +436,14 @@
                 "name": "Iron Orcs",
                 "cost": 310,
                 "options": [
-                    "Standard Bearer",
-                    "Crossbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -258,8 +453,14 @@
                 "name": "Iron Orcs",
                 "cost": 310,
                 "options": [
-                    "Standard Bearer",
-                    "Crossbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 2,
                 "models": 15,
@@ -269,7 +470,10 @@
                 "name": "Goblin Artillery",
                 "cost": 170,
                 "options": [
-                    "Git Launcher"
+                    {
+                        "name": "Git Launcher",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

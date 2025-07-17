@@ -13,14 +13,38 @@
                 "name": "Doomlord",
                 "cost": 560,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Trophy Rack",
-                    "Basalt Infusion",
-                    "Dusk Forged",
-                    "Paired Weapons",
-                    "Symbol of Slaughter",
-                    "Immortal Gauntlets"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Dusk Forged",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Symbol of Slaughter",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,11 +53,26 @@
                 "name": "Doomlord",
                 "cost": 510,
                 "options": [
-                    "Recruiting Officer",
-                    "Light Troops",
-                    "Death Cheater",
-                    "Great Weapon",
-                    "Mask of Mindless Violence"
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mask of Mindless Violence",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -42,11 +81,26 @@
                 "name": "Doomlord",
                 "cost": 460,
                 "options": [
-                    "Light Troops",
-                    "Sigil of Protection",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Talisman of Shielding"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -55,7 +109,10 @@
                 "name": "Fallen",
                 "cost": 290,
                 "options": [
-                    "Fresh Meat"
+                    {
+                        "name": "Fresh Meat",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -81,9 +138,18 @@
                 "name": "Forsworn",
                 "cost": 580,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -93,9 +159,18 @@
                 "name": "Forsworn",
                 "cost": 580,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -105,9 +180,18 @@
                 "name": "Forsworn",
                 "cost": 510,
                 "options": [
-                    "Spiked Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Spiked Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 7,
@@ -127,20 +211,62 @@
                 "name": "Vampire Count",
                 "cost": 685,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Battleline Hero",
-                    "Lahmia",
-                    "Commandment",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Eldritch Inscriptions",
-                    "Great Weapon",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -149,17 +275,50 @@
                 "name": "Vampire Courtier",
                 "cost": 440,
                 "options": [
-                    "Strigoi",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Mysteries of the Night",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Halberd",
-                    "Hypnotic Pendant",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Strigoi",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mysteries of the Night",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -168,9 +327,18 @@
                 "name": "Barrow King",
                 "cost": 85,
                 "options": [
-                    "Skeletal Steed",
-                    "Lance",
-                    "Captain"
+                    {
+                        "name": "Skeletal Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -179,8 +347,14 @@
                 "name": "Ghouls",
                 "cost": 560,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 39,
@@ -190,10 +364,22 @@
                 "name": "Skeletons",
                 "cost": 440,
                 "options": [
-                    "Halberd",
-                    "Banner of Eldritch Might",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 45,
@@ -203,9 +389,18 @@
                 "name": "Barrow Guard",
                 "cost": 535,
                 "options": [
-                    "Great Weapon",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -215,9 +410,18 @@
                 "name": "Barrow Knights",
                 "cost": 495,
                 "options": [
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,

@@ -13,17 +13,50 @@
                 "name": "Necromancer",
                 "cost": 510,
                 "options": [
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Lich",
-                    "Evocation",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Mimic Cloak"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,19 +65,58 @@
                 "name": "Vampire Courtier",
                 "cost": 470,
                 "options": [
-                    "General and The Dead Arise",
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Talisman of the Void",
-                    "Strigoi",
-                    "Strigoi General",
-                    "Witchcraft",
-                    "Evil Eye",
-                    "Soured Luck",
-                    "Illusory Paths",
-                    "Mysteries of the Night",
-                    "Halberd"
+                    {
+                        "name": "General and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Strigoi",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Strigoi General",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Witchcraft",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Evil Eye",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soured Luck",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mysteries of the Night",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -74,9 +146,18 @@
                 "name": "Barrow King",
                 "cost": 85,
                 "options": [
-                    "Skeletal Steed",
-                    "Lance",
-                    "Captain"
+                    {
+                        "name": "Skeletal Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -85,8 +166,14 @@
                 "name": "Ghouls",
                 "cost": 500,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 35,
@@ -96,10 +183,22 @@
                 "name": "Skeletons",
                 "cost": 328,
                 "options": [
-                    "Banner of Eldritch Might",
-                    "Standard Bearer",
-                    "Musician",
-                    "Spear and Shield"
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -109,8 +208,14 @@
                 "name": "Skeletons",
                 "cost": 180,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -120,10 +225,22 @@
                 "name": "Barrow Guard",
                 "cost": 495,
                 "options": [
-                    "Shield",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -133,8 +250,14 @@
                 "name": "Barrow Knights",
                 "cost": 450,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -169,16 +292,46 @@
                 "name": "Chosen Lord",
                 "cost": 870,
                 "options": [
-                    "General",
-                    "Wasteland Dragon",
-                    "Trophy Rack",
-                    "Banner of Speed",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Immortal Gauntlets",
-                    "Wyrd Stone",
-                    "Lust",
-                    "Dark Prelate"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wasteland Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Dark Prelate",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -187,16 +340,46 @@
                 "name": "Sorcerer",
                 "cost": 550,
                 "options": [
-                    "Light Troops",
-                    "Thrice-Forged",
-                    "Talisman of the Void",
-                    "Molten Copper",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Word of Iron",
-                    "Quicksilver Lash"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -205,9 +388,18 @@
                 "name": "Warriors",
                 "cost": 530,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -233,9 +425,18 @@
                 "name": "Chosen Knights",
                 "cost": 570,
                 "options": [
-                    "Stalker's Standard",
-                    "Wrath",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -245,9 +446,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -257,9 +467,18 @@
                 "name": "Forsworn",
                 "cost": 250,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -269,7 +488,10 @@
                 "name": "Feldrak Elder",
                 "cost": 460,
                 "options": [
-                    "Great Weapon"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

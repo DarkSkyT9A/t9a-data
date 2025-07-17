@@ -13,14 +13,38 @@
                 "name": "Commander",
                 "cost": 550,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Fleet Officer",
-                    "Griffon",
-                    "Longbow",
-                    "Dragonforged Armour",
-                    "Destiny's Call",
-                    "Touch of Greatness",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Fleet Officer",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,18 +53,54 @@
                 "name": "Mage",
                 "cost": 520,
                 "options": [
-                    "General",
-                    "Living Steel",
-                    "Light Troops",
-                    "Mimic Cloak",
-                    "Scroll of Power",
-                    "Order of the Fiery Heart",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Order of the Fiery Heart",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -49,9 +109,18 @@
                 "name": "Sea Guard",
                 "cost": 570,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -61,8 +130,14 @@
                 "name": "Sea Guard",
                 "cost": 434,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 23,
@@ -72,7 +147,10 @@
                 "name": "Lion Guard",
                 "cost": 450,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -82,8 +160,14 @@
                 "name": "Phoenix",
                 "cost": 440,
                 "options": [
-                    "Fire Phoenix",
-                    "Warden's Bond"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warden's Bond",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -113,7 +197,10 @@
                 "name": "Sword Masters",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -141,17 +228,50 @@
                 "name": "Prophet",
                 "cost": 535,
                 "options": [
-                    "Prophet of Nezibkesh",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Wall of Lead",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Shield",
-                    "Tablet of Vezodinezh"
+                    {
+                        "name": "Prophet of Nezibkesh",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Tablet of Vezodinezh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -160,12 +280,30 @@
                 "name": "Vizier",
                 "cost": 185,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Blunderbuss",
-                    "Golden Idol of Shamut",
-                    "Battle Standard Bearer",
-                    "Spear"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Blunderbuss",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Golden Idol of Shamut",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -174,10 +312,22 @@
                 "name": "Infernal Warriors",
                 "cost": 550,
                 "options": [
-                    "Blunderbuss",
-                    "Great Weapon",
-                    "Banner of the Twice-Branded",
-                    "Standard Bearer"
+                    {
+                        "name": "Blunderbuss",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -187,9 +337,18 @@
                 "name": "Citadel Guard",
                 "cost": 470,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Pistol and Spear"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Pistol and Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -207,10 +366,22 @@
                 "name": "Taurukh Enforcers",
                 "cost": 415,
                 "options": [
-                    "Shield",
-                    "Blunderbuss",
-                    "Infernal Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Blunderbuss",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Infernal Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -220,8 +391,14 @@
                 "name": "Taurukh Anointed",
                 "cost": 325,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -231,8 +408,14 @@
                 "name": "Taurukh Anointed",
                 "cost": 325,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -242,7 +425,10 @@
                 "name": "Infernal Artillery",
                 "cost": 285,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -251,7 +437,10 @@
                 "name": "Infernal Artillery",
                 "cost": 170,
                 "options": [
-                    "Naphtha Thrower"
+                    {
+                        "name": "Naphtha Thrower",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -260,7 +449,10 @@
                 "name": "Gunnery Team",
                 "cost": 200,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

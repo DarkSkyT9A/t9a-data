@@ -13,9 +13,18 @@
                 "name": "Miser of Sugulag",
                 "cost": 800,
                 "options": [
-                    "General",
-                    "Wizard Master",
-                    "Evocation"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -24,9 +33,18 @@
                 "name": "Sentinel of Nukuja",
                 "cost": 675,
                 "options": [
-                    "Trusted Adviser",
-                    "Thaumaturgy",
-                    "Dark Pulpit"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Dark Pulpit",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -35,7 +53,10 @@
                 "name": "Succubi",
                 "cost": 446,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -45,7 +66,10 @@
                 "name": "Myrmidons",
                 "cost": 300,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -55,9 +79,18 @@
                 "name": "Imps",
                 "cost": 255,
                 "options": [
-                    "All-Seeing Eye",
-                    "Standard Bearer",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -67,8 +100,14 @@
                 "name": "Hoarders",
                 "cost": 538,
                 "options": [
-                    "Clinging Ichor",
-                    "Standard Bearer"
+                    {
+                        "name": "Clinging Ichor",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -78,8 +117,14 @@
                 "name": "Clawed Fiends",
                 "cost": 537,
                 "options": [
-                    "Standard Bearer",
-                    "Unholy Appetite"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Unholy Appetite",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -89,8 +134,14 @@
                 "name": "Bloat Flies",
                 "cost": 448,
                 "options": [
-                    "Standard Bearer",
-                    "Unhinging Jaw"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -110,16 +161,46 @@
                 "name": "Death Cult Hierarch",
                 "cost": 485,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Cosmology",
-                    "Altered Sight",
-                    "Truth of Time",
-                    "Weal and Woe",
-                    "Ice and Fire",
-                    "Thunder and Lightning",
-                    "Mimic Cloak",
-                    "Soul Conduit"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Altered Sight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Thunder and Lightning",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Soul Conduit",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -128,12 +209,30 @@
                 "name": "Pharaoh",
                 "cost": 365,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Destiny's Call",
-                    "King Slayer",
-                    "Blessed Wrappings",
-                    "Paired Weapons"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Blessed Wrappings",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -142,9 +241,18 @@
                 "name": "Skeleton Warriors",
                 "cost": 419,
                 "options": [
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Sheltering Standard"
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 41,
@@ -154,11 +262,26 @@
                 "name": "Skeleton Chariots",
                 "cost": 375,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer",
-                    "Distortion Emblem",
-                    "Aspis Arrows and Bow",
-                    "Legion Charioteers"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Aspis Arrows and Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Legion Charioteers",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -168,8 +291,14 @@
                 "name": "Skeleton Cavalry",
                 "cost": 215,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of the Entombed"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of the Entombed",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -179,7 +308,10 @@
                 "name": "Tomb Cataphracts",
                 "cost": 510,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -189,8 +321,14 @@
                 "name": "Tomb Cataphracts",
                 "cost": 300,
                 "options": [
-                    "Standard Bearer",
-                    "Ambush"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -222,7 +360,10 @@
                 "name": "Tomb Reapers",
                 "cost": 460,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -232,7 +373,10 @@
                 "name": "Tomb Reapers",
                 "cost": 460,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 3,

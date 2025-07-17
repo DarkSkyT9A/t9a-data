@@ -13,11 +13,26 @@
                 "name": "Forest Prince",
                 "cost": 670,
                 "options": [
-                    "General",
-                    "Forest Dragon",
-                    "Eldritch Inscriptions",
-                    "Great Weapon and Elven Finesse",
-                    "Rod of Battle"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Forest Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,11 +41,26 @@
                 "name": "Dryad Ancient",
                 "cost": 280,
                 "options": [
-                    "Captain and Attached",
-                    "Wizard",
-                    "Wizard Adept",
-                    "Divination",
-                    "Toxic Spores"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Toxic Spores",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -39,10 +69,22 @@
                 "name": "Forest Guard",
                 "cost": 448,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Rending Banner",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -52,7 +94,10 @@
                 "name": "Dryads",
                 "cost": 315,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -62,7 +107,10 @@
                 "name": "Sylvan Archers",
                 "cost": 250,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -72,7 +120,10 @@
                 "name": "Thicket Beasts",
                 "cost": 510,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -82,10 +133,22 @@
                 "name": "Wild Huntsmen",
                 "cost": 495,
                 "options": [
-                    "Shield",
-                    "Lance",
-                    "Standard Bearer",
-                    "Banner of Silent Mist"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Silent Mist",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -111,7 +174,10 @@
                 "name": "Briar Maidens",
                 "cost": 352,
                 "options": [
-                    "Wizard Conclave"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -131,16 +197,46 @@
                 "name": "Orc Shaman",
                 "cost": 625,
                 "options": [
-                    "Wyvern",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Wild Spikes",
-                    "Totemic Summon",
-                    "Paired Weapons",
-                    "Talisman of the Void"
+                    {
+                        "name": "Wyvern",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -149,7 +245,10 @@
                 "name": "Iron Orc Loner",
                 "cost": 410,
                 "options": [
-                    "Wyvern"
+                    {
+                        "name": "Wyvern",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -158,13 +257,34 @@
                 "name": "Orc Warlord",
                 "cost": 360,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Attack Gnasher",
-                    "Destiny's Call",
-                    "Potion of Swiftness",
-                    "Tribe Leader and Orc Horde"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Attack Gnasher",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Swiftness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Tribe Leader and Orc Horde",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -173,9 +293,18 @@
                 "name": "Brood Alpha",
                 "cost": 160,
                 "options": [
-                    "Light Troops",
-                    "Crown of the Wizard King",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Crown of the Wizard King",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -184,10 +313,22 @@
                 "name": "Veteran Orcs",
                 "cost": 598,
                 "options": [
-                    "Shield",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 38,
@@ -197,9 +338,18 @@
                 "name": "Veteran Orc Marauders",
                 "cost": 502,
                 "options": [
-                    "Stalker's Standard",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -209,8 +359,14 @@
                 "name": "Iron Orcs",
                 "cost": 575,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -227,7 +383,10 @@
                 "name": "Giant",
                 "cost": 280,
                 "options": [
-                    "Giant Club"
+                    {
+                        "name": "Giant Club",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

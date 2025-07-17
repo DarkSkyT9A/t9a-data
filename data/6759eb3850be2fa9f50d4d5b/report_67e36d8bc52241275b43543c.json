@@ -13,17 +13,50 @@
                 "name": "Vampire Count",
                 "cost": 690,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Battleline Hero",
-                    "Trusted Adviser",
-                    "Lahmia",
-                    "Commandment",
-                    "Occultism",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Paired Weapons",
-                    "King Slayer"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,10 +65,22 @@
                 "name": "Necromancer",
                 "cost": 655,
                 "options": [
-                    "Evocation",
-                    "Wizard Master",
-                    "Cadaver Wagon",
-                    "Lich"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cadaver Wagon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,12 +89,30 @@
                 "name": "Barrow King",
                 "cost": 195,
                 "options": [
-                    "Light Troops",
-                    "Wild Warding",
-                    "Warding of Unity",
-                    "Great Weapon",
-                    "Hypnotic Pendant",
-                    "Captain"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -58,7 +121,10 @@
                 "name": "Ghouls",
                 "cost": 535,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 38,
@@ -68,9 +134,18 @@
                 "name": "Skeletons",
                 "cost": 316,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 32,
@@ -80,7 +155,10 @@
                 "name": "Zombies",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -90,7 +168,10 @@
                 "name": "Ghasts",
                 "cost": 580,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -100,9 +181,18 @@
                 "name": "Barrow Guard",
                 "cost": 469,
                 "options": [
-                    "Halberd",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 26,
@@ -137,13 +227,34 @@
                 "name": "High Prince",
                 "cost": 660,
                 "options": [
-                    "General",
-                    "Griffon",
-                    "Longbow",
-                    "Dragonforged Armour",
-                    "Elemental Blade",
-                    "Great Weapon and Elven Finesse",
-                    "Diadem of Protection"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Elemental Blade",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Diadem of Protection",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -152,17 +263,50 @@
                 "name": "Commander",
                 "cost": 535,
                 "options": [
-                    "Master of Canreig Tower",
-                    "Living Steel",
-                    "Fountain of Youth",
-                    "Whispers of the Veil",
-                    "Giant Eagle",
-                    "Shield",
-                    "Dragonforged Armour",
-                    "Ghostly Guard",
-                    "Supernatural Dexterity",
-                    "Great Weapon and Elven Finesse",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Master of Canreig Tower",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Giant Eagle",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -171,7 +315,10 @@
                 "name": "Citizen Archers",
                 "cost": 282,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -181,7 +328,10 @@
                 "name": "Sea Guard",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -191,7 +341,10 @@
                 "name": "Citizen Spears",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -209,9 +362,18 @@
                 "name": "Initiate of the Fiery Heart",
                 "cost": 400,
                 "options": [
-                    "Wizard Conclave",
-                    "Flaming Swords",
-                    "Pyroclastic Flow"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -220,7 +382,10 @@
                 "name": "Phoenix",
                 "cost": 400,
                 "options": [
-                    "Fire Phoenix"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -229,7 +394,10 @@
                 "name": "Queen's Guard",
                 "cost": 390,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 17,

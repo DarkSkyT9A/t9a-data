@@ -13,15 +13,42 @@
                 "name": "Swarm Priest",
                 "cost": 520,
                 "options": [
-                    "Sacred Platform",
-                    "Whispering Bell",
-                    "Wizard Adept",
-                    "Witchcraft",
-                    "Soured Luck",
-                    "Cauldron's Curse",
-                    "Magical Heirloom",
-                    "Spell Scroll",
-                    "Caelysian Pantheon"
+                    {
+                        "name": "Sacred Platform",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Whispering Bell",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Witchcraft",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Soured Luck",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cauldron's Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Magical Heirloom",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spell Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Caelysian Pantheon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,10 +57,22 @@
                 "name": "Bloodfur Legate",
                 "cost": 490,
                 "options": [
-                    "Eldritch Inscriptions",
-                    "Battle Standard Bearer",
-                    "Triumphal Platform",
-                    "Halberd"
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Triumphal Platform",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,11 +81,26 @@
                 "name": "House Prefect",
                 "cost": 240,
                 "options": [
-                    "Plague-Hermit's Blessing",
-                    "Swarm Master",
-                    "Captain and Attached",
-                    "Skorchit Alchemist",
-                    "Deepfire Thrower"
+                    {
+                        "name": "Plague-Hermit's Blessing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Swarm Master",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Skorchit Alchemist",
+                        "type": "house"
+                    },
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -55,9 +109,18 @@
                 "name": "Vermin Senator",
                 "cost": 150,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Rod of Battle"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -66,10 +129,22 @@
                 "name": "Vermin Legionaries",
                 "cost": 464,
                 "options": [
-                    "Sheltering Standard",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 57,
@@ -79,9 +154,18 @@
                 "name": "Blackfur Veterans",
                 "cost": 386,
                 "options": [
-                    "Distortion Emblem",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -107,8 +191,14 @@
                 "name": "Thunder Brutes",
                 "cost": 280,
                 "options": [
-                    "Canister Launcher",
-                    "Standard Bearer"
+                    {
+                        "name": "Canister Launcher",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -118,8 +208,14 @@
                 "name": "Thunder Brutes",
                 "cost": 280,
                 "options": [
-                    "Canister Launcher",
-                    "Standard Bearer"
+                    {
+                        "name": "Canister Launcher",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -129,7 +225,10 @@
                 "name": "Vermin Artillery",
                 "cost": 195,
                 "options": [
-                    "Rakachit Mauss Rifle"
+                    {
+                        "name": "Rakachit Mauss Rifle",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -138,7 +237,10 @@
                 "name": "Experimental Weapon Teams",
                 "cost": 165,
                 "options": [
-                    "Deepfire Thrower"
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -173,18 +275,54 @@
                 "name": "Vampire Count",
                 "cost": 610,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Lahmia",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Supernatural Dexterity",
-                    "Great Weapon",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -193,19 +331,58 @@
                 "name": "Vampire Courtier",
                 "cost": 540,
                 "options": [
-                    "Strigoi",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Savage Fury",
-                    "Awaken the Beast",
-                    "Mysteries of the Night",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Great Weapon",
-                    "Hypnotic Pendant",
-                    "Binding Scroll",
-                    "Gates of the Netherworld",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Strigoi",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mysteries of the Night",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -214,8 +391,14 @@
                 "name": "Ghouls",
                 "cost": 485,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 34,
@@ -225,9 +408,18 @@
                 "name": "Skeletons",
                 "cost": 374,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 43,
@@ -237,7 +429,10 @@
                 "name": "Zombies",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -247,10 +442,22 @@
                 "name": "Barrow Guard",
                 "cost": 393,
                 "options": [
-                    "Shield",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -275,7 +482,10 @@
                 "name": "Winged Reapers",
                 "cost": 440,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -285,8 +495,14 @@
                 "name": "Vampire Knights",
                 "cost": 300,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -296,8 +512,14 @@
                 "name": "Vampire Knights",
                 "cost": 300,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,

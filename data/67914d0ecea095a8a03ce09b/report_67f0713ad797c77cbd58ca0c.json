@@ -13,17 +13,50 @@
                 "name": "Anurarch Archmage",
                 "cost": 640,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Divination",
-                    "Foresight",
-                    "Chance of Redemption",
-                    "The Stars Align",
-                    "Augury of Despair",
-                    "Inescapable Doom",
-                    "Ancient Plaque",
-                    "Scroll of Power",
-                    "Farseeing Mastery",
-                    "Mystifying Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Augury of Despair",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Inescapable Doom",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ancient Plaque",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Farseeing Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Mystifying Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,10 +65,22 @@
                 "name": "Tegu Warriors",
                 "cost": 555,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Awaken the Beast",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -45,8 +90,14 @@
                 "name": "Tegu Warriors",
                 "cost": 515,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 30,
@@ -56,7 +107,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 595,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -66,8 +120,14 @@
                 "name": "Thyroscutus Herd",
                 "cost": 250,
                 "options": [
-                    "Great Protector",
-                    "Lodestone Shield"
+                    {
+                        "name": "Great Protector",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lodestone Shield",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 1,
                 "models": 1,
@@ -77,8 +137,14 @@
                 "name": "Raptor Riders",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer",
-                    "Koru Stone"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -88,7 +154,10 @@
                 "name": "Raptor Riders",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -98,10 +167,22 @@
                 "name": "Pteradon Riders",
                 "cost": 340,
                 "options": [
-                    "Swarm of Insects",
-                    "Wizard Conclave",
-                    "Poisoned Javelin",
-                    "Predator's Instinct"
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -111,7 +192,10 @@
                 "name": "Weapon Beasts",
                 "cost": 210,
                 "options": [
-                    "Salamander"
+                    {
+                        "name": "Salamander",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -131,13 +215,34 @@
                 "name": "Orc Shaman",
                 "cost": 590,
                 "options": [
-                    "Grunter Chariot",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Paired Weapons",
-                    "Shield Breaker",
-                    "Basalt Infusion",
-                    "Pan of Protection Pinchin'"
+                    {
+                        "name": "Grunter Chariot",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Shield Breaker",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Pan of Protection Pinchin'",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -146,14 +251,38 @@
                 "name": "Orc Shaman",
                 "cost": 425,
                 "options": [
-                    "General",
-                    "Curse of Lycanthropy",
-                    "Grunter",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Paired Weapons",
-                    "Talisman of the Void",
-                    "Gnasher Bait"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Curse of Lycanthropy",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Grunter",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gnasher Bait",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -162,11 +291,26 @@
                 "name": "Brood Alpha",
                 "cost": 290,
                 "options": [
-                    "Grunter Chariot",
-                    "Battle Standard Bearer",
-                    "Shield",
-                    "Lance",
-                    "Banner of Speed"
+                    {
+                        "name": "Grunter Chariot",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -175,11 +319,26 @@
                 "name": "Brood Alpha",
                 "cost": 105,
                 "options": [
-                    "Light Troops",
-                    "Attack Gnasher",
-                    "Eldritch Inscriptions",
-                    "Captain and Attached",
-                    "Shield"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Attack Gnasher",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -188,10 +347,22 @@
                 "name": "Veteran Orcs",
                 "cost": 598,
                 "options": [
-                    "Shield",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 38,
@@ -201,9 +372,18 @@
                 "name": "Veteran Orc Marauders",
                 "cost": 418,
                 "options": [
-                    "Stalker's Standard",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -213,8 +393,14 @@
                 "name": "Iron Orc Chariots",
                 "cost": 410,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -224,7 +410,10 @@
                 "name": "Giant",
                 "cost": 280,
                 "options": [
-                    "Giant Club"
+                    {
+                        "name": "Giant Club",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -233,7 +422,10 @@
                 "name": "Gogtuk Neophytes",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,

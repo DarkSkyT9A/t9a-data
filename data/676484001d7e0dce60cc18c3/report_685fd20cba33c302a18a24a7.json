@@ -13,18 +13,54 @@
                 "name": "King",
                 "cost": 535,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Resistance",
-                    "Rune of Iron",
-                    "Rune of Destruction",
-                    "Rune of Smashing",
-                    "Rune of Returning",
-                    "Rune of Kinship",
-                    "Battle Rune",
-                    "Rune of Resilience"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resistance",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Destruction",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Smashing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Returning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Kinship",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Rune",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -33,15 +69,42 @@
                 "name": "Thane",
                 "cost": 290,
                 "options": [
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Iron",
-                    "Rune of the Forge",
-                    "Rune of Lightning",
-                    "Rune of Returning",
-                    "Rune of Kinship",
-                    "Rune of Mining",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of the Forge",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Returning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Kinship",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Mining",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -50,9 +113,18 @@
                 "name": "Greybeards",
                 "cost": 261,
                 "options": [
-                    "Shield Wall",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -62,10 +134,22 @@
                 "name": "Greybeards",
                 "cost": 260,
                 "options": [
-                    "Shield Wall",
-                    "Vanguard",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -75,9 +159,18 @@
                 "name": "Greybeards",
                 "cost": 240,
                 "options": [
-                    "Shield Wall",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 10,
@@ -87,8 +180,14 @@
                 "name": "Clan Marksmen",
                 "cost": 240,
                 "options": [
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -98,8 +197,14 @@
                 "name": "Deep Watch",
                 "cost": 400,
                 "options": [
-                    "Runic Standard of Grudges",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Grudges",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -109,7 +214,10 @@
                 "name": "Deep Watch",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -119,7 +227,10 @@
                 "name": "Deep Watch",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 20,
@@ -129,10 +240,22 @@
                 "name": "Miners",
                 "cost": 256,
                 "options": [
-                    "Great Weapon",
-                    "Throwing Weapons",
-                    "Standard Bearer",
-                    "Paired Weapons"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -142,7 +265,10 @@
                 "name": "Forge Wardens",
                 "cost": 228,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -152,7 +278,10 @@
                 "name": "Forge Wardens",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -162,9 +291,18 @@
                 "name": "Anvil of Power",
                 "cost": 200,
                 "options": [
-                    "Rune of Oaths",
-                    "Rune of Gleaming",
-                    "Rune of Resilience"
+                    {
+                        "name": "Rune of Oaths",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -173,9 +311,18 @@
                 "name": "Rangers",
                 "cost": 160,
                 "options": [
-                    "Throwing Weapons",
-                    "Paired Weapons",
-                    "Crag Warden"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Crag Warden",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -195,16 +342,46 @@
                 "name": "Miser of Sugulag",
                 "cost": 880,
                 "options": [
-                    "General",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Unnatural Roots",
-                    "Mirrored Scales"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -213,9 +390,18 @@
                 "name": "Courtesan of Cibaresh",
                 "cost": 625,
                 "options": [
-                    "Trusted Adviser",
-                    "Divination",
-                    "Wizard Apprentice"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -224,8 +410,14 @@
                 "name": "Succubi",
                 "cost": 506,
                 "options": [
-                    "Dark Hide",
-                    "Standard Bearer"
+                    {
+                        "name": "Dark Hide",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -235,8 +427,14 @@
                 "name": "Succubi",
                 "cost": 506,
                 "options": [
-                    "Dark Hide",
-                    "Standard Bearer"
+                    {
+                        "name": "Dark Hide",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -246,9 +444,18 @@
                 "name": "Hoarders",
                 "cost": 450,
                 "options": [
-                    "Chitinous Scales",
-                    "Standard Bearer",
-                    "Favoured of Greed"
+                    {
+                        "name": "Chitinous Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Favoured of Greed",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -258,8 +465,14 @@
                 "name": "Brazen Beasts",
                 "cost": 382,
                 "options": [
-                    "Standard Bearer",
-                    "Incendiary Ichor"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Incendiary Ichor",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -269,7 +482,10 @@
                 "name": "Hellhounds",
                 "cost": 170,
                 "options": [
-                    "Dark Hide"
+                    {
+                        "name": "Dark Hide",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -279,9 +495,18 @@
                 "name": "Veil Serpents",
                 "cost": 480,
                 "options": [
-                    "Light of Faith",
-                    "Illusory Paths",
-                    "Wizard Conclave"
+                    {
+                        "name": "Light of Faith",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 6,

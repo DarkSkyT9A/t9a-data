@@ -13,18 +13,54 @@
                 "name": "Vampire Count",
                 "cost": 610,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Lahmia",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Supernatural Dexterity",
-                    "Great Weapon",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -33,19 +69,58 @@
                 "name": "Vampire Courtier",
                 "cost": 540,
                 "options": [
-                    "Strigoi",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Savage Fury",
-                    "Awaken the Beast",
-                    "Mysteries of the Night",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Great Weapon",
-                    "Hypnotic Pendant",
-                    "Binding Scroll",
-                    "Gates of the Netherworld",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Strigoi",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mysteries of the Night",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -54,8 +129,14 @@
                 "name": "Ghouls",
                 "cost": 485,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 34,
@@ -65,9 +146,18 @@
                 "name": "Skeletons",
                 "cost": 374,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 43,
@@ -77,7 +167,10 @@
                 "name": "Zombies",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -87,10 +180,22 @@
                 "name": "Barrow Guard",
                 "cost": 393,
                 "options": [
-                    "Shield",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -115,7 +220,10 @@
                 "name": "Winged Reapers",
                 "cost": 440,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -125,8 +233,14 @@
                 "name": "Vampire Knights",
                 "cost": 300,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -136,8 +250,14 @@
                 "name": "Vampire Knights",
                 "cost": 300,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,

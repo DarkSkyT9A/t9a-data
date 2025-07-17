@@ -13,13 +13,34 @@
                 "name": "Anurarch Archmage",
                 "cost": 560,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Veil Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Veil Mastery",
+                        "type": "arcaneMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,10 +49,22 @@
                 "name": "Skink Veteran",
                 "cost": 280,
                 "options": [
-                    "Serpent's Nest Charm",
-                    "Pouakai Sky Tyrant",
-                    "Poisoned Javelin",
-                    "Paired Weapons"
+                    {
+                        "name": "Serpent's Nest Charm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Pouakai Sky Tyrant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -40,10 +73,22 @@
                 "name": "Tegu Warriors",
                 "cost": 415,
                 "options": [
-                    "Awaken the Beast",
-                    "Wizard Conclave",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -53,10 +98,22 @@
                 "name": "Tegu Warriors",
                 "cost": 415,
                 "options": [
-                    "Awaken the Beast",
-                    "Wizard Conclave",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -66,7 +123,10 @@
                 "name": "Skink Hunters",
                 "cost": 177,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -76,9 +136,18 @@
                 "name": "Tegu Guards",
                 "cost": 527,
                 "options": [
-                    "Koru Stone",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -88,8 +157,14 @@
                 "name": "Raptor Riders",
                 "cost": 440,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -107,7 +182,10 @@
                 "name": "Weapon Beasts",
                 "cost": 470,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -117,7 +195,10 @@
                 "name": "Carnosaur",
                 "cost": 345,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"
@@ -136,11 +217,26 @@
                 "name": "Silexian Officer",
                 "cost": 465,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Manticore",
-                    "Supernatural Dexterity",
-                    "Great Weapon and Elven Finesse",
-                    "Talisman of Shielding"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Manticore",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -149,13 +245,34 @@
                 "name": "Dread Prince",
                 "cost": 400,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Seal of the Republic",
-                    "Paired Weapons",
-                    "Lacerating Touch",
-                    "Moithir's Mirror",
-                    "Beastmaster"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lacerating Touch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Moithir's Mirror",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Beastmaster",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -164,13 +281,34 @@
                 "name": "Sanctioned Warlock",
                 "cost": 330,
                 "options": [
-                    "Light Troops",
-                    "Ceinran's Scales",
-                    "Wizard Adept",
-                    "Witchcraft",
-                    "Soured Luck",
-                    "Illusory Paths",
-                    "Cauldron's Curse"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Ceinran's Scales",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Witchcraft",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Soured Luck",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cauldron's Curse",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -179,7 +317,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 285,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -189,7 +330,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 285,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -199,8 +343,14 @@
                 "name": "Silexian Spears",
                 "cost": 257,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -210,7 +360,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -228,7 +381,10 @@
                 "name": "Dread Acolytes",
                 "cost": 390,
                 "options": [
-                    "Temple Acolytes"
+                    {
+                        "name": "Temple Acolytes",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -238,7 +394,10 @@
                 "name": "Divine Altar",
                 "cost": 230,
                 "options": [
-                    "Altar of Tila"
+                    {
+                        "name": "Altar of Tila",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

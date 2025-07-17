@@ -13,13 +13,34 @@
                 "name": "Duke",
                 "cost": 360,
                 "options": [
-                    "General",
-                    "Destrier",
-                    "Shield",
-                    "Tristan's Resolve",
-                    "Bastard Sword",
-                    "Ghostly Guard",
-                    "Generosity"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Tristan's Resolve",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Generosity",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,13 +49,34 @@
                 "name": "Damsel",
                 "cost": 340,
                 "options": [
-                    "Binding Scroll",
-                    "Heraldic Steed",
-                    "Wizard Adept",
-                    "Druidism",
-                    "Fountain of Youth",
-                    "Entwining Roots",
-                    "Nature's Venom"
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Heraldic Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Nature's Venom",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -43,11 +85,26 @@
                 "name": "Paladin",
                 "cost": 310,
                 "options": [
-                    "Destrier",
-                    "Shield",
-                    "Shield Breaker",
-                    "Bastard Sword",
-                    "Basalt Infusion"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield Breaker",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -56,13 +113,34 @@
                 "name": "Folk Hero",
                 "cost": 290,
                 "options": [
-                    "Destrier",
-                    "Shield",
-                    "Sigil of Protection",
-                    "Giant Slayer",
-                    "Attached",
-                    "Bannerman",
-                    "Cleric"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -71,10 +149,22 @@
                 "name": "Knights of the Realm",
                 "cost": 525,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Knight Banneret"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -84,9 +174,18 @@
                 "name": "Knights of the Realm",
                 "cost": 495,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 11,
@@ -96,11 +195,26 @@
                 "name": "Knights of the Quest",
                 "cost": 575,
                 "options": [
-                    "Relic Shroud",
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Knight Banneret"
+                    {
+                        "name": "Relic Shroud",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -110,7 +224,10 @@
                 "name": "Knights of the Court",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -120,8 +237,14 @@
                 "name": "Yeoman Outriders",
                 "cost": 164,
                 "options": [
-                    "Shield",
-                    "Throwing Weapons"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -131,7 +254,10 @@
                 "name": "Yeoman Outriders",
                 "cost": 150,
                 "options": [
-                    "Throwing Weapons"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -141,7 +267,10 @@
                 "name": "Siege Weapon",
                 "cost": 115,
                 "options": [
-                    "Scorpion"
+                    {
+                        "name": "Scorpion",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -150,7 +279,10 @@
                 "name": "Siege Weapon",
                 "cost": 115,
                 "options": [
-                    "Scorpion"
+                    {
+                        "name": "Scorpion",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -159,9 +291,18 @@
                 "name": "Naiads",
                 "cost": 245,
                 "options": [
-                    "Fountain of Youth",
-                    "Illusory Paths",
-                    "Wizard Conclave"
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -181,15 +322,42 @@
                 "name": "Sanctioned Warlock",
                 "cost": 480,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Evocation",
-                    "Touch of the Reaper",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Ceinran's Scales"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ceinran's Scales",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -198,8 +366,14 @@
                 "name": "Temple Militants",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer",
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -209,8 +383,14 @@
                 "name": "Temple Militants",
                 "cost": 216,
                 "options": [
-                    "Standard Bearer",
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 14,
@@ -220,8 +400,14 @@
                 "name": "Temple Militants",
                 "cost": 240,
                 "options": [
-                    "Dancers of Yema",
-                    "Standard Bearer"
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 10,
@@ -231,7 +417,10 @@
                 "name": "Temple Militants",
                 "cost": 240,
                 "options": [
-                    "Dancers of Yema"
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 3,
                 "models": 10,
@@ -241,7 +430,10 @@
                 "name": "Temple Militants",
                 "cost": 240,
                 "options": [
-                    "Dancers of Yema"
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 4,
                 "models": 10,
@@ -251,8 +443,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -262,8 +460,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -273,8 +477,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 2,
                 "models": 10,
@@ -284,7 +494,10 @@
                 "name": "Dread Acolytes",
                 "cost": 279,
                 "options": [
-                    "Temple Acolytes"
+                    {
+                        "name": "Temple Acolytes",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -294,7 +507,10 @@
                 "name": "Divine Altar",
                 "cost": 260,
                 "options": [
-                    "Altar of Yema"
+                    {
+                        "name": "Altar of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -303,7 +519,10 @@
                 "name": "Obsidian Guard",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,

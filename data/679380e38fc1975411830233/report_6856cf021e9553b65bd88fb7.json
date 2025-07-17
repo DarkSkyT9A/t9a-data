@@ -13,15 +13,42 @@
                 "name": "Damsel",
                 "cost": 520,
                 "options": [
-                    "Destrier",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Savage Fury",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Wild Spikes",
-                    "Totemic Summon",
-                    "Talisman of the Void"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,10 +57,22 @@
                 "name": "Duke",
                 "cost": 430,
                 "options": [
-                    "General",
-                    "Potion of Healing",
-                    "Hippogriff",
-                    "Halberd"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Potion of Healing",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Hippogriff",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,12 +81,30 @@
                 "name": "Folk Hero",
                 "cost": 245,
                 "options": [
-                    "Pegasus Charger",
-                    "Dragon's Brew",
-                    "Sainted",
-                    "Lance",
-                    "Shield",
-                    "Castellan"
+                    {
+                        "name": "Pegasus Charger",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sainted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Castellan",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -56,12 +113,30 @@
                 "name": "Folk Hero",
                 "cost": 235,
                 "options": [
-                    "Destrier",
-                    "Uther's Mettle",
-                    "Shield",
-                    "Attached",
-                    "Bannerman",
-                    "Cleric"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Uther's Mettle",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -70,8 +145,14 @@
                 "name": "Knights of the Realm",
                 "cost": 510,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -81,8 +162,14 @@
                 "name": "Mounted Serjeants",
                 "cost": 260,
                 "options": [
-                    "Light Lance",
-                    "Standard Bearer"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -92,8 +179,14 @@
                 "name": "Lowborn Levies",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer",
-                    "Halberd and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Halberd and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -103,8 +196,14 @@
                 "name": "Knights of the Quest",
                 "cost": 595,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -114,7 +213,10 @@
                 "name": "Knights of the Court",
                 "cost": 465,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -124,7 +226,10 @@
                 "name": "Yeoman Outriders",
                 "cost": 150,
                 "options": [
-                    "Throwing Weapons"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -134,7 +239,10 @@
                 "name": "Fey Knight",
                 "cost": 360,
                 "options": [
-                    "Champion of the Green Knight"
+                    {
+                        "name": "Champion of the Green Knight",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"

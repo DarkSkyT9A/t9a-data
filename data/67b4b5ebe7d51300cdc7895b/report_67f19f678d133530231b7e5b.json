@@ -13,10 +13,22 @@
                 "name": "Forest Prince",
                 "cost": 640,
                 "options": [
-                    "General",
-                    "Forest Dragon",
-                    "Great Weapon and Elven Finesse",
-                    "Rod of Battle"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Forest Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -25,14 +37,38 @@
                 "name": "Druid",
                 "cost": 345,
                 "options": [
-                    "Light Troops",
-                    "Obsidian Rock",
-                    "Binding Scroll",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -41,14 +77,38 @@
                 "name": "Dryad Ancient",
                 "cost": 280,
                 "options": [
-                    "Wizard Adept",
-                    "Druidism",
-                    "Fountain of Youth",
-                    "Entwining Roots",
-                    "Gravel Storm",
-                    "Captain and Attached",
-                    "Wizard",
-                    "Scarred Bark"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gravel Storm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scarred Bark",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -57,12 +117,30 @@
                 "name": "Chieftain",
                 "cost": 245,
                 "options": [
-                    "Light Troops",
-                    "Sylvan Blades",
-                    "Spirit of the Whirlwind",
-                    "Talisman of the Void",
-                    "Blade Dancer",
-                    "Captain and Attached"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Blades",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Spirit of the Whirlwind",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Blade Dancer",
+                        "type": "kindred"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -71,8 +149,14 @@
                 "name": "Dryads",
                 "cost": 400,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -82,8 +166,14 @@
                 "name": "Sylvan Archers",
                 "cost": 377,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 16,
@@ -93,8 +183,14 @@
                 "name": "Heath Riders",
                 "cost": 229,
                 "options": [
-                    "Standard Bearer",
-                    "Heath Hunters"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -104,8 +200,14 @@
                 "name": "Forest Rangers",
                 "cost": 385,
                 "options": [
-                    "Banner of Silent Mist",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Silent Mist",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -115,7 +217,10 @@
                 "name": "Forest Rangers",
                 "cost": 200,
                 "options": [
-                    "Vanguard"
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -125,7 +230,10 @@
                 "name": "Wild Huntsmen",
                 "cost": 220,
                 "options": [
-                    "Sylvan Blades"
+                    {
+                        "name": "Sylvan Blades",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -169,20 +277,62 @@
                 "name": "Vampire Count",
                 "cost": 690,
                 "options": [
-                    "Vetala",
-                    "Evocation",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Unbreakable Will",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Destiny's Call",
-                    "Halberd",
-                    "Talisman of the Void",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Unbreakable Will",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -191,15 +341,42 @@
                 "name": "Vampire Courtier",
                 "cost": 485,
                 "options": [
-                    "Strigoi",
-                    "Strigoi General",
-                    "Mysteries of the Night",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Warding of Unity",
-                    "True Thirst",
-                    "Gates of the Netherworld",
-                    "General and The Dead Arise"
+                    {
+                        "name": "Strigoi",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Strigoi General",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Mysteries of the Night",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "True Thirst",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General and The Dead Arise",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -208,17 +385,50 @@
                 "name": "Vampire Courtier",
                 "cost": 370,
                 "options": [
-                    "Strigoi",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Unbreakable Will",
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Hypnotic Pendant",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Strigoi",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Unbreakable Will",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -227,8 +437,14 @@
                 "name": "Ghouls",
                 "cost": 560,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 39,
@@ -238,10 +454,22 @@
                 "name": "Skeletons",
                 "cost": 440,
                 "options": [
-                    "Banner of Eldritch Might",
-                    "Standard Bearer",
-                    "Musician",
-                    "Spear and Shield"
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 45,
@@ -251,9 +479,18 @@
                 "name": "Barrow Guard",
                 "cost": 383,
                 "options": [
-                    "Shield",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -270,7 +507,10 @@
                 "name": "Ghasts",
                 "cost": 180,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -280,7 +520,10 @@
                 "name": "Vampire Knights",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,

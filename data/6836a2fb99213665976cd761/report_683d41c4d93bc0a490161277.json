@@ -13,15 +13,42 @@
                 "name": "Sanctioned Warlock",
                 "cost": 480,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Ceinran's Scales"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ceinran's Scales",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,14 +57,38 @@
                 "name": "Temple Exarch",
                 "cost": 390,
                 "options": [
-                    "Wizard Adept",
-                    "Supernatural Dexterity",
-                    "Talisman of the Void",
-                    "Divination",
-                    "Chance of Redemption",
-                    "The Stars Align",
-                    "Fate's Judgement",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Fate's Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -46,11 +97,26 @@
                 "name": "Dread Prince",
                 "cost": 320,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Lacerating Touch",
-                    "Seal of the Republic"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lacerating Touch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -59,8 +125,14 @@
                 "name": "Temple Militants",
                 "cost": 395,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -78,8 +150,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -89,8 +167,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -100,8 +184,14 @@
                 "name": "Judicators",
                 "cost": 344,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -111,8 +201,14 @@
                 "name": "Judicators",
                 "cost": 323,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 13,
@@ -122,7 +218,10 @@
                 "name": "Divine Altar",
                 "cost": 240,
                 "options": [
-                    "Altar of Nabh"
+                    {
+                        "name": "Altar of Nabh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -131,7 +230,10 @@
                 "name": "Obsidian Guard",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -141,7 +243,10 @@
                 "name": "Obsidian Guard",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -151,8 +256,14 @@
                 "name": "Black Cloaks",
                 "cost": 165,
                 "options": [
-                    "Repeater Handbow and Poison Attacks",
-                    "Covert Operatives"
+                    {
+                        "name": "Repeater Handbow and Poison Attacks",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Covert Operatives",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -179,13 +290,34 @@
                 "name": "Battlefield Wizard",
                 "cost": 400,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Cosmology",
-                    "Truth of Time",
-                    "Weal and Woe",
-                    "Cosmic Scales",
-                    "Thunder and Lightning"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cosmic Scales",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Thunder and Lightning",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -194,14 +326,38 @@
                 "name": "Battlefield Wizard",
                 "cost": 290,
                 "options": [
-                    "Light Troops",
-                    "Ice and Fire",
-                    "Wizard Adept",
-                    "Alchemy",
-                    "Corruption of Tin",
-                    "Wall of Lead",
-                    "Molten Copper",
-                    "Dragon's Brew"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -210,12 +366,30 @@
                 "name": "Marshal",
                 "cost": 190,
                 "options": [
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Talisman of the Void",
-                    "General, Imperial Authority, and +1 Cou",
-                    "Great Weapon",
-                    "Repeater Pistol"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -224,10 +398,22 @@
                 "name": "Marshal",
                 "cost": 125,
                 "options": [
-                    "Light Troops",
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Great Weapon",
-                    "Repeater Pistol"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -236,8 +422,14 @@
                 "name": "Artificer",
                 "cost": 95,
                 "options": [
-                    "Light Troops",
-                    "Long Rifle"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Long Rifle",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -246,8 +438,14 @@
                 "name": "Artificer",
                 "cost": 95,
                 "options": [
-                    "Light Troops",
-                    "Long Rifle"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Long Rifle",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -256,8 +454,14 @@
                 "name": "State Marksmen",
                 "cost": 230,
                 "options": [
-                    "Crossbow",
-                    "Standard Bearer"
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -267,8 +471,14 @@
                 "name": "State Marksmen",
                 "cost": 230,
                 "options": [
-                    "Crossbow",
-                    "Standard Bearer"
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -278,7 +488,10 @@
                 "name": "State Infantry",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -304,7 +517,10 @@
                 "name": "State Detachment",
                 "cost": 145,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -314,7 +530,10 @@
                 "name": "State Detachment",
                 "cost": 145,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -324,8 +543,14 @@
                 "name": "Imperial Guard",
                 "cost": 180,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -335,8 +560,14 @@
                 "name": "Imperial Guard",
                 "cost": 180,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -346,7 +577,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -355,7 +589,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 195,
                 "options": [
-                    "Mortar"
+                    {
+                        "name": "Mortar",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -364,7 +601,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 175,
                 "options": [
-                    "Volley Gun"
+                    {
+                        "name": "Volley Gun",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Special"
@@ -373,7 +613,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 175,
                 "options": [
-                    "Volley Gun"
+                    {
+                        "name": "Volley Gun",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 3,
                 "category": "Special"
@@ -382,7 +625,10 @@
                 "name": "Reiters",
                 "cost": 180,
                 "options": [
-                    "Brace of Pistols and Fire on Impact"
+                    {
+                        "name": "Brace of Pistols and Fire on Impact",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -392,7 +638,10 @@
                 "name": "Reiters",
                 "cost": 180,
                 "options": [
-                    "Brace of Pistols and Fire on Impact"
+                    {
+                        "name": "Brace of Pistols and Fire on Impact",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 5,

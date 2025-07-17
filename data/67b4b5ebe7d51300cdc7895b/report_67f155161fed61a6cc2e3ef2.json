@@ -13,16 +13,46 @@
                 "name": "Miser of Sugulag",
                 "cost": 860,
                 "options": [
-                    "General",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Mirrored Scales",
-                    "Segmented Shell"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,8 +61,14 @@
                 "name": "Succubi",
                 "cost": 450,
                 "options": [
-                    "Mesmerising Plumage",
-                    "Standard Bearer"
+                    {
+                        "name": "Mesmerising Plumage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -50,8 +86,14 @@
                 "name": "Myrmidons",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer",
-                    "Unhinging Jaw"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -61,7 +103,10 @@
                 "name": "Clawed Fiends",
                 "cost": 495,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -71,7 +116,10 @@
                 "name": "Clawed Fiends",
                 "cost": 240,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -89,7 +137,10 @@
                 "name": "Titanslayer Chariot",
                 "cost": 225,
                 "options": [
-                    "Segmented Shell"
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -98,9 +149,18 @@
                 "name": "Veil Serpents",
                 "cost": 440,
                 "options": [
-                    "Wizard Conclave",
-                    "Soured Luck",
-                    "Illusory Paths"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Soured Luck",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -110,7 +170,10 @@
                 "name": "Bloat Flies",
                 "cost": 310,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -130,11 +193,26 @@
                 "name": "Dread Prince",
                 "cost": 580,
                 "options": [
-                    "Manticore",
-                    "Height of Hubris",
-                    "Great Weapon and Elven Finesse",
-                    "Talisman of Shielding",
-                    "Potion of Healing"
+                    {
+                        "name": "Manticore",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Height of Hubris",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Healing",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -143,14 +221,38 @@
                 "name": "Sanctioned Warlock",
                 "cost": 440,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -159,8 +261,14 @@
                 "name": "Silexian Spears",
                 "cost": 333,
                 "options": [
-                    "Standard Bearer",
-                    "Sheltering Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -170,8 +278,14 @@
                 "name": "Corsairs",
                 "cost": 255,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -181,7 +295,10 @@
                 "name": "Corsairs",
                 "cost": 200,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 11,
@@ -191,7 +308,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 220,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -201,7 +321,10 @@
                 "name": "Obsidian Guard",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -211,8 +334,14 @@
                 "name": "Judicators",
                 "cost": 365,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Urlain"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -222,9 +351,18 @@
                 "name": "Dread Acolytes",
                 "cost": 292,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Urlain",
-                    "Temple Acolytes"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Temple Acolytes",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -234,7 +372,10 @@
                 "name": "Divine Altar",
                 "cost": 240,
                 "options": [
-                    "Altar of Nabh"
+                    {
+                        "name": "Altar of Nabh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -257,8 +398,14 @@
                 "name": "Black Cloaks",
                 "cost": 165,
                 "options": [
-                    "Repeater Handbow and Poison Attacks",
-                    "Covert Operatives"
+                    {
+                        "name": "Repeater Handbow and Poison Attacks",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Covert Operatives",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

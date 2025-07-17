@@ -13,11 +13,26 @@
                 "name": "Battlefield Wizard",
                 "cost": 250,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Divination",
-                    "Foresight",
-                    "Fate's Judgement"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Fate's Judgement",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,13 +41,34 @@
                 "name": "Battlefield Wizard",
                 "cost": 250,
                 "options": [
-                    "Light Troops",
-                    "The Stars Align",
-                    "Wizard Adept",
-                    "Alchemy",
-                    "Corruption of Tin",
-                    "Wall of Lead",
-                    "Molten Copper"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -41,11 +77,26 @@
                 "name": "Marshal",
                 "cost": 165,
                 "options": [
-                    "Light Troops",
-                    "Blacksteel",
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Shield",
-                    "Repeater Pistol"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -54,11 +105,26 @@
                 "name": "Marshal",
                 "cost": 145,
                 "options": [
-                    "Light Troops",
-                    "Ghostly Guard",
-                    "General, Imperial Authority, and +1 Cou",
-                    "Shield",
-                    "Repeater Pistol"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -67,8 +133,14 @@
                 "name": "Artificer",
                 "cost": 110,
                 "options": [
-                    "Horse",
-                    "Repeater Gun"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -77,8 +149,14 @@
                 "name": "Artificer",
                 "cost": 110,
                 "options": [
-                    "Horse",
-                    "Repeater Gun"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -87,8 +165,14 @@
                 "name": "State Infantry",
                 "cost": 350,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 34,
@@ -98,8 +182,14 @@
                 "name": "State Infantry",
                 "cost": 350,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 34,
@@ -117,7 +207,10 @@
                 "name": "State Detachment",
                 "cost": 181,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -127,8 +220,14 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 210,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -138,8 +237,14 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 210,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -149,7 +254,10 @@
                 "name": "Reiters",
                 "cost": 284,
                 "options": [
-                    "Repeater Gun"
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -159,7 +267,10 @@
                 "name": "Reiters",
                 "cost": 284,
                 "options": [
-                    "Repeater Gun"
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 9,
@@ -169,7 +280,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -178,7 +292,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"

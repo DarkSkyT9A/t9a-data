@@ -13,14 +13,38 @@
                 "name": "King",
                 "cost": 525,
                 "options": [
-                    "General",
-                    "Shield Bearers",
-                    "Rune of Resistance",
-                    "Rune of Iron",
-                    "Rune of Destruction",
-                    "Rune of Might",
-                    "Rune of Craftsmanship",
-                    "Rune of Channelling"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield Bearers",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Rune of Resistance",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Destruction",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Craftsmanship",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Channelling",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,11 +53,26 @@
                 "name": "Thane",
                 "cost": 290,
                 "options": [
-                    "Shield Bearers",
-                    "Shield Wall",
-                    "Rune of Lightning",
-                    "Rune of Returning",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Shield Bearers",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Returning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,9 +81,18 @@
                 "name": "Clan Warriors",
                 "cost": 443,
                 "options": [
-                    "Great Weapon",
-                    "Aether Icon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -54,9 +102,18 @@
                 "name": "Clan Marksmen",
                 "cost": 286,
                 "options": [
-                    "Guild-Crafted Handgun",
-                    "Runic Standard of Steadiness",
-                    "Standard Bearer"
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -66,9 +123,18 @@
                 "name": "Clan Marksmen",
                 "cost": 286,
                 "options": [
-                    "Guild-Crafted Handgun",
-                    "Runic Standard of Steadiness",
-                    "Standard Bearer"
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 12,
@@ -78,7 +144,10 @@
                 "name": "Field Artillery",
                 "cost": 330,
                 "options": [
-                    "Organ Gun"
+                    {
+                        "name": "Organ Gun",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -87,8 +156,14 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Rune Crafted",
-                    "Dwarf Cannon"
+                    {
+                        "name": "Rune Crafted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -97,7 +172,10 @@
                 "name": "Forge Wardens",
                 "cost": 318,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 16,
@@ -121,7 +199,10 @@
                 "name": "Deep Watch",
                 "cost": 270,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -131,7 +212,10 @@
                 "name": "Steam Copters",
                 "cost": 225,
                 "options": [
-                    "Shrapnel Bombs"
+                    {
+                        "name": "Shrapnel Bombs",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -141,7 +225,10 @@
                 "name": "Steam Copters",
                 "cost": 225,
                 "options": [
-                    "Shrapnel Bombs"
+                    {
+                        "name": "Shrapnel Bombs",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 1,
@@ -161,15 +248,42 @@
                 "name": "Vampire Count",
                 "cost": 695,
                 "options": [
-                    "Sangreal",
-                    "Evocation",
-                    "Crimson Rage",
-                    "Spectral Steed",
-                    "Wizard Apprentice",
-                    "Shield",
-                    "Legend of the Black King",
-                    "Reaper's Harvest",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Sangreal",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Crimson Rage",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Spectral Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Legend of the Black King",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Reaper's Harvest",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -178,18 +292,54 @@
                 "name": "Necromancer",
                 "cost": 595,
                 "options": [
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Necromantic Staff",
-                    "Potion of Power Preservation",
-                    "General and The Dead Arise",
-                    "Lich"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Potion of Power Preservation",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "General and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -198,10 +348,22 @@
                 "name": "Skeletons",
                 "cost": 400,
                 "options": [
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Banner of Eldritch Might",
-                    "Musician"
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -227,7 +389,10 @@
                 "name": "Zombies",
                 "cost": 165,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -237,7 +402,10 @@
                 "name": "Dark Coach",
                 "cost": 400,
                 "options": [
-                    "Extended Chassis"
+                    {
+                        "name": "Extended Chassis",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -254,7 +422,10 @@
                 "name": "Spectral Hunters",
                 "cost": 290,
                 "options": [
-                    "Sweeping Attack"
+                    {
+                        "name": "Sweeping Attack",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -264,9 +435,18 @@
                 "name": "Spectral Hunters",
                 "cost": 285,
                 "options": [
-                    "Blood Curse",
-                    "Weal and Woe",
-                    "Wizard Conclave"
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 1,
                 "models": 5,

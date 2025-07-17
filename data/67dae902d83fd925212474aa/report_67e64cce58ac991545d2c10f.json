@@ -13,18 +13,54 @@
                 "name": "Sorcerer",
                 "cost": 735,
                 "options": [
-                    "Battleshrine",
-                    "Molten Copper",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Wizard Master",
-                    "Evocation",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Basalt Infusion",
-                    "Paired Weapons",
-                    "Dark Familiar"
+                    {
+                        "name": "Battleshrine",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -33,16 +69,46 @@
                 "name": "Chosen Lord",
                 "cost": 600,
                 "options": [
-                    "General",
-                    "Scythed Skywheel",
-                    "Banner of Speed",
-                    "Thrice-Forged",
-                    "Supernatural Dexterity",
-                    "Talisman of Shielding",
-                    "Trophy Rack",
-                    "Great Weapon",
-                    "Lust",
-                    "Luck of the Dark Gods"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Scythed Skywheel",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Luck of the Dark Gods",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -51,9 +117,18 @@
                 "name": "Barbarians",
                 "cost": 365,
                 "options": [
-                    "Standard Bearer",
-                    "Sheltering Standard",
-                    "Spear and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -79,9 +154,18 @@
                 "name": "Chosen Knights",
                 "cost": 570,
                 "options": [
-                    "Standard Bearer",
-                    "Icon of the Infinite",
-                    "Wrath"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Icon of the Infinite",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -91,9 +175,18 @@
                 "name": "Chosen",
                 "cost": 510,
                 "options": [
-                    "Standard Bearer",
-                    "Paired Weapons",
-                    "Lust"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -103,8 +196,14 @@
                 "name": "Feldraks",
                 "cost": 430,
                 "options": [
-                    "Standard Bearer",
-                    "Paired Weapons"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -114,8 +213,14 @@
                 "name": "Warrior Knights",
                 "cost": 340,
                 "options": [
-                    "Standard Bearer",
-                    "Lance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -135,15 +240,42 @@
                 "name": "Goblin Witch",
                 "cost": 495,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Fireball",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Cage of Embers",
-                    "Skull Fetish"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fireball",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cage of Embers",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Skull Fetish",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -152,11 +284,26 @@
                 "name": "Goblin Demagogue",
                 "cost": 195,
                 "options": [
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Attack Gnasher",
-                    "Monster Munch",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Attack Gnasher",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Monster Munch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -165,10 +312,22 @@
                 "name": "Goblin Demagogue",
                 "cost": 165,
                 "options": [
-                    "Beastie",
-                    "Mask of Mindless Violence",
-                    "Captain and Attached",
-                    "Great Weapon"
+                    {
+                        "name": "Beastie",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mask of Mindless Violence",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -177,9 +336,18 @@
                 "name": "Goblin Demagogue",
                 "cost": 60,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Darrmu and Goblin Gardens"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Darrmu and Goblin Gardens",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -216,8 +384,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -226,8 +400,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -236,8 +416,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -246,8 +432,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 3,
                 "category": "Characters"
@@ -256,8 +448,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 4,
                 "category": "Characters"
@@ -266,8 +464,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 5,
                 "category": "Characters"
@@ -276,8 +480,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 45,
                 "options": [
-                    "Light Troops",
-                    "Netter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Netter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 6,
                 "category": "Characters"
@@ -286,8 +496,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 45,
                 "options": [
-                    "Light Troops",
-                    "Netter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Netter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 7,
                 "category": "Characters"
@@ -296,9 +512,18 @@
                 "name": "Goblin Reavers",
                 "cost": 331,
                 "options": [
-                    "Goga Cauldron",
-                    "Lance and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -308,9 +533,18 @@
                 "name": "Goblin Reavers",
                 "cost": 323,
                 "options": [
-                    "Goga Cauldron",
-                    "Lance and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -320,9 +554,18 @@
                 "name": "Goblin Rabble",
                 "cost": 280,
                 "options": [
-                    "Goga Cauldron",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -332,9 +575,18 @@
                 "name": "Goblin Rabble",
                 "cost": 200,
                 "options": [
-                    "Banner of Courage",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 25,
@@ -344,7 +596,10 @@
                 "name": "Goblin Artillery",
                 "cost": 180,
                 "options": [
-                    "Splatterer"
+                    {
+                        "name": "Splatterer",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -353,7 +608,10 @@
                 "name": "Goblin Artillery",
                 "cost": 170,
                 "options": [
-                    "Git Launcher"
+                    {
+                        "name": "Git Launcher",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -362,7 +620,10 @@
                 "name": "Goblin Artillery",
                 "cost": 170,
                 "options": [
-                    "Git Launcher"
+                    {
+                        "name": "Git Launcher",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Special"
@@ -371,7 +632,10 @@
                 "name": "Gogtuk Neophytes",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -381,7 +645,10 @@
                 "name": "Gogtuk Neophytes",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,

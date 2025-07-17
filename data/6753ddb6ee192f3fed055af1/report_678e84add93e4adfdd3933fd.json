@@ -13,12 +13,30 @@
                 "name": "High Prince",
                 "cost": 660,
                 "options": [
-                    "General",
-                    "Griffon",
-                    "Longbow",
-                    "Dragonforged Armour",
-                    "Great Weapon and Elven Finesse",
-                    "Diadem of Protection"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Diadem of Protection",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,14 +45,38 @@
                 "name": "High Prince",
                 "cost": 475,
                 "options": [
-                    "Queen's Cavalier",
-                    "Elven Horse",
-                    "Shield",
-                    "Basalt Infusion",
-                    "Elemental Blade",
-                    "Lance",
-                    "Nova Flare",
-                    "Talisman of Shielding"
+                    {
+                        "name": "Queen's Cavalier",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Elven Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Elemental Blade",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Nova Flare",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -43,14 +85,38 @@
                 "name": "Commander",
                 "cost": 445,
                 "options": [
-                    "Master of Canreig Tower",
-                    "Elven Horse",
-                    "Shield",
-                    "Sigil of Protection",
-                    "King Slayer",
-                    "Lance",
-                    "Talisman of the Void",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Master of Canreig Tower",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Elven Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -59,8 +125,14 @@
                 "name": "Sea Guard",
                 "cost": 560,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -78,7 +150,10 @@
                 "name": "Erlein Reavers",
                 "cost": 185,
                 "options": [
-                    "Bow"
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -88,9 +163,18 @@
                 "name": "Knights of Rymâ",
                 "cost": 520,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -100,9 +184,18 @@
                 "name": "Knights of Rymâ",
                 "cost": 520,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 9,
@@ -112,7 +205,10 @@
                 "name": "Initiate of the Fiery Heart",
                 "cost": 400,
                 "options": [
-                    "Wizard Conclave"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -131,10 +227,22 @@
                 "name": "Anurarch Archmage",
                 "cost": 625,
                 "options": [
-                    "Anurarch Wardens",
-                    "Alchemy",
-                    "Veil Mastery",
-                    "Invasive Mastery"
+                    {
+                        "name": "Anurarch Wardens",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Veil Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Invasive Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -143,12 +251,30 @@
                 "name": "Tegu Veteran",
                 "cost": 405,
                 "options": [
-                    "Death Cheater",
-                    "Eldritch Inscriptions",
-                    "Te Aupouri Smokestone",
-                    "Saurian Raptor",
-                    "Shield",
-                    "Great Weapon"
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Te Aupouri Smokestone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Saurian Raptor",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -157,9 +283,18 @@
                 "name": "Skink Veteran",
                 "cost": 105,
                 "options": [
-                    "Light Troops",
-                    "Magnetic Short Bow",
-                    "Alchemical Arrows"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Alchemical Arrows",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -168,10 +303,22 @@
                 "name": "Tegu Warriors",
                 "cost": 439,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -181,9 +328,18 @@
                 "name": "Tegu Warriors",
                 "cost": 415,
                 "options": [
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 25,
@@ -193,7 +349,10 @@
                 "name": "Skink Hunters",
                 "cost": 170,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -203,7 +362,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 595,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -213,9 +375,18 @@
                 "name": "Raptor Riders",
                 "cost": 480,
                 "options": [
-                    "Aether Icon",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -225,7 +396,10 @@
                 "name": "Raptor Pack",
                 "cost": 172,
                 "options": [
-                    "Ambush"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -235,8 +409,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 220,
                 "options": [
-                    "Magnetic Short Bow",
-                    "Vanguard"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -246,8 +426,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 184,
                 "options": [
-                    "Blowpipe",
-                    "Chameleon"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -257,8 +443,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 184,
                 "options": [
-                    "Blowpipe",
-                    "Chameleon"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "models": 8,

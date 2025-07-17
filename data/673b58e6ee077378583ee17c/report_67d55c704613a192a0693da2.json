@@ -13,8 +13,14 @@
                 "name": "Silexian Spears",
                 "cost": 445,
                 "options": [
-                    "Standard Bearer",
-                    "Sheltering Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -24,7 +30,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -34,7 +43,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -44,7 +56,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 2,
                 "models": 10,
@@ -54,9 +69,18 @@
                 "name": "Temple Militants",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer",
-                    "Sheltering Standard",
-                    "Dancers of Yema"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -66,8 +90,14 @@
                 "name": "Obsidian Guard",
                 "cost": 370,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Urlain"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -77,7 +107,10 @@
                 "name": "Obsidian Guard",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -87,8 +120,14 @@
                 "name": "Judicators",
                 "cost": 365,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Urlain"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -98,8 +137,14 @@
                 "name": "Judicators",
                 "cost": 365,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Urlain"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -109,9 +154,18 @@
                 "name": "Black Cloaks",
                 "cost": 340,
                 "options": [
-                    "Musician",
-                    "Repeater Handbow and Poison Attacks",
-                    "Covert Operatives"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow and Poison Attacks",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Covert Operatives",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -160,13 +214,34 @@
                 "name": "Chosen Lord",
                 "cost": 595,
                 "options": [
-                    "General",
-                    "Chimera",
-                    "Paired Weapons",
-                    "Shield Breaker",
-                    "Talisman of Shielding",
-                    "Gluttony",
-                    "Luck of the Dark Gods"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Chimera",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Shield Breaker",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Luck of the Dark Gods",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -175,15 +250,42 @@
                 "name": "Sorcerer",
                 "cost": 545,
                 "options": [
-                    "War Dais",
-                    "Dark Familiar",
-                    "Molten Copper",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Word of Iron",
-                    "Quicksilver Lash"
+                    {
+                        "name": "War Dais",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -192,10 +294,22 @@
                 "name": "Warriors",
                 "cost": 598,
                 "options": [
-                    "Spiked Shield",
-                    "Zealots' Banner",
-                    "Gluttony",
-                    "Standard Bearer"
+                    {
+                        "name": "Spiked Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -213,10 +327,22 @@
                 "name": "Warrior Knights",
                 "cost": 600,
                 "options": [
-                    "Lance",
-                    "Gluttony",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -226,9 +352,18 @@
                 "name": "Chosen Knights",
                 "cost": 570,
                 "options": [
-                    "Banner of Speed",
-                    "Lust",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -245,9 +380,18 @@
                 "name": "Battleshrine",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer",
-                    "Whispers of the Veil",
-                    "Hellfire"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hellfire",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -256,8 +400,14 @@
                 "name": "Flayers",
                 "cost": 190,
                 "options": [
-                    "Light Lance",
-                    "Skinning Lash"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Skinning Lash",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

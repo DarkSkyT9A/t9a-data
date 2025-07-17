@@ -13,16 +13,46 @@
                 "name": "Chosen Lord",
                 "cost": 870,
                 "options": [
-                    "General",
-                    "Wasteland Dragon",
-                    "Trophy Rack",
-                    "Banner of Speed",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Immortal Gauntlets",
-                    "Wyrd Stone",
-                    "Lust",
-                    "Dark Prelate"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wasteland Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Dark Prelate",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,16 +61,46 @@
                 "name": "Sorcerer",
                 "cost": 540,
                 "options": [
-                    "Light Troops",
-                    "Talisman of the Void",
-                    "Binding Scroll",
-                    "Whispers of the Veil",
-                    "Wizard Master",
-                    "Evocation",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -49,9 +109,18 @@
                 "name": "Warriors",
                 "cost": 470,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -85,8 +154,14 @@
                 "name": "Forsworn",
                 "cost": 480,
                 "options": [
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -96,8 +171,14 @@
                 "name": "Forsworn",
                 "cost": 240,
                 "options": [
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -114,8 +195,14 @@
                 "name": "Feldraks",
                 "cost": 310,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -125,8 +212,14 @@
                 "name": "Feldraks",
                 "cost": 310,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -146,13 +239,34 @@
                 "name": "Centaur Chieftain",
                 "cost": 420,
                 "options": [
-                    "Greater Totem Bearer",
-                    "Battle Standard Bearer",
-                    "Shield",
-                    "Obscuring Fog",
-                    "Distortion Emblem",
-                    "Lance",
-                    "Pillager Icon"
+                    {
+                        "name": "Greater Totem Bearer",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Obscuring Fog",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pillager Icon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -161,16 +275,46 @@
                 "name": "Soothsayer",
                 "cost": 390,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Talisman of the Void",
-                    "Rain Augur Brew",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Savage Fury",
-                    "Awaken the Beast"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Rain Augur Brew",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -195,8 +339,14 @@
                 "name": "Wildhorn Herd",
                 "cost": 160,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -214,8 +364,14 @@
                 "name": "Centaurs",
                 "cost": 268,
                 "options": [
-                    "Standard Bearer",
-                    "Light Lance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -225,8 +381,14 @@
                 "name": "Centaurs",
                 "cost": 180,
                 "options": [
-                    "Standard Bearer",
-                    "Light Lance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -243,9 +405,18 @@
                 "name": "Longhorn Herd",
                 "cost": 170,
                 "options": [
-                    "Ambush",
-                    "Standard Bearer",
-                    "Halberd"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,

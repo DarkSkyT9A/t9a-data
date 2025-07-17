@@ -13,20 +13,62 @@
                 "name": "Vampire Count",
                 "cost": 690,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Battleline Hero",
-                    "Trusted Adviser",
-                    "Lahmia",
-                    "Commandment",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Paired Weapons",
-                    "King Slayer"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -35,15 +77,42 @@
                 "name": "Necromancer",
                 "cost": 655,
                 "options": [
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Wizard Master",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Cadaver Wagon",
-                    "Lich"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cadaver Wagon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -52,12 +121,30 @@
                 "name": "Barrow King",
                 "cost": 195,
                 "options": [
-                    "Light Troops",
-                    "Wild Warding",
-                    "Warding of Unity",
-                    "Great Weapon",
-                    "Hypnotic Pendant",
-                    "Captain"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -66,7 +153,10 @@
                 "name": "Ghouls",
                 "cost": 535,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 38,
@@ -76,10 +166,22 @@
                 "name": "Skeletons",
                 "cost": 310,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Spear and Shield"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -89,7 +191,10 @@
                 "name": "Zombies",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -99,7 +204,10 @@
                 "name": "Ghasts",
                 "cost": 580,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -109,10 +217,22 @@
                 "name": "Barrow Guard",
                 "cost": 479,
                 "options": [
-                    "Halberd",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 26,
@@ -147,16 +267,46 @@
                 "name": "Mage",
                 "cost": 500,
                 "options": [
-                    "General",
-                    "Asfad Scholar",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Divination",
-                    "Chance of Redemption",
-                    "The Stars Align",
-                    "Fate's Judgement",
-                    "Augury of Despair",
-                    "Inescapable Doom"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Asfad Scholar",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Fate's Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Augury of Despair",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Inescapable Doom",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -165,10 +315,22 @@
                 "name": "Commander",
                 "cost": 400,
                 "options": [
-                    "Griffon",
-                    "Talisman of Shielding",
-                    "Solitary",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -177,7 +339,10 @@
                 "name": "Citizen Spears",
                 "cost": 296,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -187,7 +352,10 @@
                 "name": "Citizen Spears",
                 "cost": 296,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 23,
@@ -197,7 +365,10 @@
                 "name": "Citizen Archers",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -207,7 +378,10 @@
                 "name": "Citizen Archers",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -217,8 +391,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 550,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -228,8 +408,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 535,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,

@@ -13,16 +13,46 @@
                 "name": "Druid",
                 "cost": 495,
                 "options": [
-                    "Elven Horse",
-                    "Wizard Master",
-                    "Cosmology",
-                    "Altered Sight",
-                    "Truth of Time",
-                    "Weal and Woe",
-                    "Ice and Fire",
-                    "Thunder and Lightning",
-                    "Sylvan Bow",
-                    "Mimic Cloak"
+                    {
+                        "name": "Elven Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Altered Sight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Thunder and Lightning",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,12 +61,30 @@
                 "name": "Chieftain",
                 "cost": 290,
                 "options": [
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Sylvan Bow",
-                    "Glyph of Amryl",
-                    "Battle Standard Bearer",
-                    "Forest Guardian"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Glyph of Amryl",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Forest Guardian",
+                        "type": "kindred"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -45,11 +93,26 @@
                 "name": "Chieftain",
                 "cost": 185,
                 "options": [
-                    "Light Troops",
-                    "Sylvan Bow",
-                    "Captain and Attached",
-                    "Great Weapon and Elven Finesse",
-                    "Forest Guardian"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Forest Guardian",
+                        "type": "kindred"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -58,8 +121,14 @@
                 "name": "Forest Guard",
                 "cost": 336,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 27,
@@ -69,7 +138,10 @@
                 "name": "Heath Riders",
                 "cost": 335,
                 "options": [
-                    "Heath Hunters"
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -79,7 +151,10 @@
                 "name": "Heath Riders",
                 "cost": 335,
                 "options": [
-                    "Heath Hunters"
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -89,10 +164,22 @@
                 "name": "Wild Huntsmen",
                 "cost": 420,
                 "options": [
-                    "Shield",
-                    "Lance",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -102,10 +189,22 @@
                 "name": "Wild Huntsmen",
                 "cost": 420,
                 "options": [
-                    "Shield",
-                    "Lance",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -115,7 +214,10 @@
                 "name": "Forest Rangers",
                 "cost": 390,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -125,7 +227,10 @@
                 "name": "Forest Rangers",
                 "cost": 390,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -153,15 +258,42 @@
                 "name": "Chosen Lord",
                 "cost": 850,
                 "options": [
-                    "General",
-                    "Wasteland Dragon",
-                    "Trophy Rack",
-                    "Banner of Speed",
-                    "Touch of Greatness",
-                    "Halberd",
-                    "Immortal Gauntlets",
-                    "Wyrd Stone",
-                    "Wrath"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wasteland Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -170,13 +302,34 @@
                 "name": "Sorcerer",
                 "cost": 340,
                 "options": [
-                    "Recruiting Officer",
-                    "Scythed Skywheel",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Wizard Adept",
-                    "Evocation",
-                    "Chorus of the Damned"
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Scythed Skywheel",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -185,12 +338,30 @@
                 "name": "Warriors",
                 "cost": 655,
                 "options": [
-                    "Zealots' Banner",
-                    "Great Weapon",
-                    "Wrath",
-                    "Standard Bearer",
-                    "Musician",
-                    "Fresh Meat"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Fresh Meat",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -208,10 +379,22 @@
                 "name": "Chosen",
                 "cost": 655,
                 "options": [
-                    "Halberd",
-                    "Wrath",
-                    "Standard Bearer",
-                    "Fresh Meat"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Fresh Meat",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -221,10 +404,22 @@
                 "name": "Forsworn",
                 "cost": 530,
                 "options": [
-                    "Banner of Speed",
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -234,9 +429,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -246,9 +450,18 @@
                 "name": "Battleshrine",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer",
-                    "Molten Copper",
-                    "Danse Macabre"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

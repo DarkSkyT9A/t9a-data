@@ -13,16 +13,46 @@
                 "name": "Vampire Count",
                 "cost": 575,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Recruiting Officer",
-                    "Lahmia",
-                    "Commandment",
-                    "Light Troops",
-                    "Wizard Apprentice",
-                    "Destiny's Call",
-                    "Great Weapon",
-                    "Talisman of the Void",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,19 +61,58 @@
                 "name": "Vampire Count",
                 "cost": 560,
                 "options": [
-                    "Recruiting Officer",
-                    "Strigoi",
-                    "Ghoul Lord",
-                    "Occultism",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Light Troops",
-                    "Wizard Apprentice",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Hypnotic Pendant",
-                    "Binding Scroll",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Strigoi",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Ghoul Lord",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -73,8 +142,14 @@
                 "name": "Ghouls",
                 "cost": 575,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -84,10 +159,22 @@
                 "name": "Skeletons",
                 "cost": 475,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Spear and Shield",
-                    "Banner of Speed"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 50,
@@ -97,7 +184,10 @@
                 "name": "Zombies",
                 "cost": 225,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 33,
@@ -107,7 +197,10 @@
                 "name": "Ghasts",
                 "cost": 580,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -141,15 +234,42 @@
                 "name": "Swarm Priest",
                 "cost": 395,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Occultism",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Umbral Majesty",
-                    "The Grave Calls",
-                    "Mimic Cloak",
-                    "Cult of Errahman"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Umbral Majesty",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Cult of Errahman",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -158,12 +278,30 @@
                 "name": "Swarm Priest",
                 "cost": 200,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Weight of Judgement",
-                    "Caelysian Pantheon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weight of Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Caelysian Pantheon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -172,12 +310,30 @@
                 "name": "Bloodfur Legate",
                 "cost": 340,
                 "options": [
-                    "Light Troops",
-                    "Destiny's Call",
-                    "Swarm Master",
-                    "Rod of Battle",
-                    "Battle Standard Bearer",
-                    "Banner of Courage"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Swarm Master",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -186,11 +342,26 @@
                 "name": "Vermin Senator",
                 "cost": 230,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Tarina's Lyre",
-                    "Storm Rocket"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Tarina's Lyre",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Storm Rocket",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -199,9 +370,18 @@
                 "name": "House Prefect",
                 "cost": 170,
                 "options": [
-                    "Captain and Attached",
-                    "Skorchit Alchemist",
-                    "Deepfire Thrower"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Skorchit Alchemist",
+                        "type": "house"
+                    },
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -210,9 +390,18 @@
                 "name": "House Prefect",
                 "cost": 100,
                 "options": [
-                    "Rodentium Bullets",
-                    "Captain and Attached",
-                    "Stygian Overseer"
+                    {
+                        "name": "Rodentium Bullets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Stygian Overseer",
+                        "type": "house"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -221,9 +410,18 @@
                 "name": "House Prefect",
                 "cost": 100,
                 "options": [
-                    "Rodentium Bullets",
-                    "Captain and Attached",
-                    "Stygian Overseer"
+                    {
+                        "name": "Rodentium Bullets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Stygian Overseer",
+                        "type": "house"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -232,10 +430,22 @@
                 "name": "Vermin Legionaries",
                 "cost": 383,
                 "options": [
-                    "Stalker's Standard",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 44,
@@ -245,10 +455,22 @@
                 "name": "Vermin Legionaries",
                 "cost": 342,
                 "options": [
-                    "Banner of Courage",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 41,
@@ -258,9 +480,18 @@
                 "name": "Vermin Legionaries",
                 "cost": 294,
                 "options": [
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 37,
@@ -270,7 +501,10 @@
                 "name": "Experimental Weapon Teams",
                 "cost": 165,
                 "options": [
-                    "Deepfire Thrower"
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -280,7 +514,10 @@
                 "name": "Experimental Weapon Teams",
                 "cost": 120,
                 "options": [
-                    "Jezail and Shield"
+                    {
+                        "name": "Jezail and Shield",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -290,7 +527,10 @@
                 "name": "Experimental Weapon Teams",
                 "cost": 120,
                 "options": [
-                    "Jezail and Shield"
+                    {
+                        "name": "Jezail and Shield",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 2,
                 "models": 3,
@@ -300,7 +540,10 @@
                 "name": "Shadowfur Stalkers",
                 "cost": 140,
                 "options": [
-                    "Throwing Weapons"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -310,7 +553,10 @@
                 "name": "Shadowfur Stalkers",
                 "cost": 140,
                 "options": [
-                    "Throwing Weapons"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,

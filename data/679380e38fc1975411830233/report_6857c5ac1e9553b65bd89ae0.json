@@ -13,12 +13,30 @@
                 "name": "Duke",
                 "cost": 380,
                 "options": [
-                    "Destrier",
-                    "Hero's Heart",
-                    "Fortress of Faith",
-                    "Basalt Infusion",
-                    "Sacred Chalice",
-                    "Generosity"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Fortress of Faith",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sacred Chalice",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Generosity",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,12 +45,30 @@
                 "name": "Duke",
                 "cost": 345,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Light Troops",
-                    "Shield Breaker",
-                    "Bastard Sword",
-                    "Wild Warding",
-                    "Justice"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Breaker",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Justice",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -41,15 +77,42 @@
                 "name": "Damsel",
                 "cost": 350,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Talisman of the Void",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Sainted"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Sainted",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -58,10 +121,22 @@
                 "name": "Knights of the Realm",
                 "cost": 580,
                 "options": [
-                    "Stalker's Standard",
-                    "Banner of Roland",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Banner of Roland",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -71,8 +146,14 @@
                 "name": "Lowborn Levies",
                 "cost": 422,
                 "options": [
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 48,
@@ -82,7 +163,10 @@
                 "name": "Knights Penitent",
                 "cost": 600,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -92,9 +176,18 @@
                 "name": "Men-at-Arms",
                 "cost": 425,
                 "options": [
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Ordo Wardens"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ordo Wardens",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -104,8 +197,14 @@
                 "name": "Men-at-Arms",
                 "cost": 170,
                 "options": [
-                    "Standard Bearer",
-                    "Ordo Wardens"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ordo Wardens",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -115,9 +214,18 @@
                 "name": "The Lady's Courtier",
                 "cost": 425,
                 "options": [
-                    "Fountain of Youth",
-                    "Stone Skin",
-                    "Courtier of the Dusk"
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Stone Skin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Courtier of the Dusk",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"
@@ -152,16 +260,46 @@
                 "name": "Temple Exarch",
                 "cost": 410,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Wizard Adept",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Seal of the Republic",
-                    "Supernatural Dexterity",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -170,13 +308,34 @@
                 "name": "Sanctioned Warlock",
                 "cost": 330,
                 "options": [
-                    "Wizard Adept",
-                    "Mimic Cloak",
-                    "Light Troops",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -185,8 +344,14 @@
                 "name": "Silexian Spears",
                 "cost": 455,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -196,8 +361,14 @@
                 "name": "Silexian Spears",
                 "cost": 371,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -207,7 +378,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -217,9 +391,18 @@
                 "name": "Temple Militants",
                 "cost": 600,
                 "options": [
-                    "Sheltering Standard",
-                    "Standard Bearer",
-                    "Dancers of Yema"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -229,8 +412,14 @@
                 "name": "Judicators",
                 "cost": 365,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -240,9 +429,18 @@
                 "name": "Dread Acolytes",
                 "cost": 292,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer",
-                    "Temple Acolytes"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Temple Acolytes",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -252,9 +450,18 @@
                 "name": "Dread Acolytes",
                 "cost": 292,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer",
-                    "Temple Acolytes"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Temple Acolytes",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -264,7 +471,10 @@
                 "name": "Divine Altar",
                 "cost": 240,
                 "options": [
-                    "Altar of Nabh"
+                    {
+                        "name": "Altar of Nabh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -273,7 +483,10 @@
                 "name": "Obsidian Guard",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -283,7 +496,10 @@
                 "name": "Obsidian Guard",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,

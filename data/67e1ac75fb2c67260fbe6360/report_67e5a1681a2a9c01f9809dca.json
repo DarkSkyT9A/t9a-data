@@ -13,16 +13,46 @@
                 "name": "Druid",
                 "cost": 480,
                 "options": [
-                    "Elven Horse",
-                    "Wizard Master",
-                    "Cosmology",
-                    "Altered Sight",
-                    "Weal and Woe",
-                    "Ice and Fire",
-                    "Cosmic Scales",
-                    "Thunder and Lightning",
-                    "Sylvan Bow",
-                    "Rod of Battle"
+                    {
+                        "name": "Elven Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Altered Sight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cosmic Scales",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Thunder and Lightning",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,8 +61,14 @@
                 "name": "Thicket Shepherd",
                 "cost": 300,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Scarred Bark"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Scarred Bark",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -41,11 +77,26 @@
                 "name": "Chieftain",
                 "cost": 195,
                 "options": [
-                    "General",
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Sylvan Bow",
-                    "Pathfinder"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Pathfinder",
+                        "type": "kindred"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -54,10 +105,22 @@
                 "name": "Chieftain",
                 "cost": 140,
                 "options": [
-                    "Light Troops",
-                    "Sylvan Bow",
-                    "Captain and Attached",
-                    "Pathfinder"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Pathfinder",
+                        "type": "kindred"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -66,7 +129,10 @@
                 "name": "Dryads",
                 "cost": 405,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -76,7 +142,10 @@
                 "name": "Dryads",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -86,9 +155,18 @@
                 "name": "Heath Riders",
                 "cost": 268,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer",
-                    "Heath Hunters"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -98,7 +176,10 @@
                 "name": "Thicket Beasts",
                 "cost": 410,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -108,9 +189,18 @@
                 "name": "Wild Huntsmen",
                 "cost": 260,
                 "options": [
-                    "Shield",
-                    "Lance",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -120,7 +210,10 @@
                 "name": "Forest Rangers",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -130,7 +223,10 @@
                 "name": "Blade Dancers",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -140,7 +236,10 @@
                 "name": "Blade Dancers",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 7,
@@ -176,16 +275,46 @@
                 "name": "Goblin Witch",
                 "cost": 495,
                 "options": [
-                    "Beastie",
-                    "Creepy-Crawlies",
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Pillars of Fire",
-                    "Cage of Embers",
-                    "Mimic Cloak"
+                    {
+                        "name": "Beastie",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Creepy-Crawlies",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pillars of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cage of Embers",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -194,14 +323,38 @@
                 "name": "Goblin Demagogue",
                 "cost": 300,
                 "options": [
-                    "General",
-                    "Beastie",
-                    "Creepy-Crawlies",
-                    "Tazrek's Guard",
-                    "Mask of Mindless Violence",
-                    "Dragon's Brew",
-                    "Darrmu and Goblin Gardens",
-                    "Great Weapon"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Beastie",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Creepy-Crawlies",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Tazrek's Guard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Mask of Mindless Violence",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Darrmu and Goblin Gardens",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -210,13 +363,34 @@
                 "name": "Goblin Demagogue",
                 "cost": 245,
                 "options": [
-                    "Beastie",
-                    "Creepy-Crawlies",
-                    "Attack Gnasher",
-                    "Talisman of the Void",
-                    "Battle Standard Bearer",
-                    "Shield",
-                    "Wild Warding"
+                    {
+                        "name": "Beastie",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Creepy-Crawlies",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attack Gnasher",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -239,8 +413,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -249,8 +429,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -259,8 +445,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -269,8 +461,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 3,
                 "category": "Characters"
@@ -279,8 +477,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 4,
                 "category": "Characters"
@@ -289,8 +493,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 50,
                 "options": [
-                    "Light Troops",
-                    "Headhunter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 5,
                 "category": "Characters"
@@ -299,8 +509,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 45,
                 "options": [
-                    "Light Troops",
-                    "Netter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Netter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 6,
                 "category": "Characters"
@@ -309,8 +525,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 45,
                 "options": [
-                    "Light Troops",
-                    "Netter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Netter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 7,
                 "category": "Characters"
@@ -319,11 +541,26 @@
                 "name": "Goblin Reavers",
                 "cost": 405,
                 "options": [
-                    "Creepy-Crawlies",
-                    "Goga Cauldron",
-                    "Lance and Shield",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Creepy-Crawlies",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -333,11 +570,26 @@
                 "name": "Goblin Reavers",
                 "cost": 383,
                 "options": [
-                    "Creepy-Crawlies",
-                    "Goga Cauldron",
-                    "Lance and Shield",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Creepy-Crawlies",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 22,
@@ -347,8 +599,14 @@
                 "name": "Goblin Reavers",
                 "cost": 251,
                 "options": [
-                    "Goga Cauldron",
-                    "Standard Bearer"
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 15,
@@ -358,7 +616,10 @@
                 "name": "Iron Orc Chariots",
                 "cost": 370,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -368,7 +629,10 @@
                 "name": "Goblin Artillery",
                 "cost": 180,
                 "options": [
-                    "Splatterer"
+                    {
+                        "name": "Splatterer",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -377,7 +641,10 @@
                 "name": "Goblin Artillery",
                 "cost": 180,
                 "options": [
-                    "Splatterer"
+                    {
+                        "name": "Splatterer",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -386,7 +653,10 @@
                 "name": "Gogtuk Neophytes",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -396,7 +666,10 @@
                 "name": "Gogtuk Neophytes",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,

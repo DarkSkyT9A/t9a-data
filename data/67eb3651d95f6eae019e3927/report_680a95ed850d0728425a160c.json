@@ -13,10 +13,22 @@
                 "name": "Minotaur Warlord",
                 "cost": 600,
                 "options": [
-                    "General",
-                    "Destiny's Call",
-                    "Great Weapon",
-                    "Vorpal Binding"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Vorpal Binding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -25,13 +37,34 @@
                 "name": "Wildhorn Chieftain",
                 "cost": 320,
                 "options": [
-                    "Trusted Adviser",
-                    "Shield",
-                    "Wild Warding",
-                    "Seed of the Dark Forest",
-                    "Greater Totem Bearer",
-                    "Battle Standard Bearer",
-                    "Light Troops"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Seed of the Dark Forest",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Greater Totem Bearer",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -40,10 +73,22 @@
                 "name": "Soothsayer",
                 "cost": 310,
                 "options": [
-                    "Rain Augur Brew",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Evocation"
+                    {
+                        "name": "Rain Augur Brew",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -52,12 +97,30 @@
                 "name": "Wildhorn Herd",
                 "cost": 498,
                 "options": [
-                    "Paired Weapons",
-                    "Banner of the Wild Herd",
-                    "Standard Bearer",
-                    "Musician",
-                    "Totem Bearer",
-                    "Blooded Horn Totem"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of the Wild Herd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Totem Bearer",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Blooded Horn Totem",
+                        "type": "Totems"
+                    }
                 ],
                 "index": 0,
                 "models": 42,
@@ -67,9 +130,18 @@
                 "name": "Wildhorn Herd",
                 "cost": 190,
                 "options": [
-                    "Paired Weapons",
-                    "Ambush",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -87,11 +159,26 @@
                 "name": "Minotaurs",
                 "cost": 500,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician",
-                    "Totem Bearer",
-                    "Black Wing Totem"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Totem Bearer",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Black Wing Totem",
+                        "type": "Totems"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -101,12 +188,30 @@
                 "name": "Centaurs",
                 "cost": 460,
                 "options": [
-                    "Great Weapon",
-                    "Distortion Emblem",
-                    "Standard Bearer",
-                    "Musician",
-                    "Totem Bearer",
-                    "Gnarled Hide Totem"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Totem Bearer",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gnarled Hide Totem",
+                        "type": "Totems"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -148,16 +253,46 @@
                 "name": "Shaman",
                 "cost": 660,
                 "options": [
-                    "General",
-                    "Recruiting Officer",
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Destiny's Call",
-                    "Heart-Ripper",
-                    "Iron Fist",
-                    "Talisman of the Void",
-                    "Scroll of Power",
-                    "Gut Roarer"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Heart-Ripper",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -166,11 +301,26 @@
                 "name": "Khan",
                 "cost": 350,
                 "options": [
-                    "Lygur's Tongue",
-                    "Trolleater",
-                    "Battle Standard Bearer",
-                    "Viper's Curse",
-                    "Brace of Ogre Pistols"
+                    {
+                        "name": "Lygur's Tongue",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Trolleater",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Viper's Curse",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -179,8 +329,14 @@
                 "name": "Bruisers",
                 "cost": 450,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -190,8 +346,14 @@
                 "name": "Tribesmen",
                 "cost": 267,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -217,8 +379,14 @@
                 "name": "Mercenary Gunners",
                 "cost": 480,
                 "options": [
-                    "Standard Bearer",
-                    "Ogre Crossbow and Accurate"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -228,9 +396,18 @@
                 "name": "Mercenary Gunners",
                 "cost": 445,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Brace of Ogre Pistols and Lethal Strike"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols and Lethal Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -254,7 +431,10 @@
                 "name": "Frost Mammoth",
                 "cost": 400,
                 "options": [
-                    "Ogre Crossbow"
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"

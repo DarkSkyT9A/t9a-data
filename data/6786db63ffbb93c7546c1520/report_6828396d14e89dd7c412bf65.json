@@ -13,16 +13,46 @@
                 "name": "Sorcerer",
                 "cost": 560,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Umbral Majesty",
-                    "The Grave Calls",
-                    "Thrice-Forged",
-                    "Dark Familiar"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Umbral Majesty",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,10 +61,22 @@
                 "name": "Warriors",
                 "cost": 540,
                 "options": [
-                    "Standard Bearer",
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -44,7 +86,10 @@
                 "name": "Barbarian Horsemen",
                 "cost": 170,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -70,9 +115,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer",
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -82,9 +136,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer",
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -94,9 +157,18 @@
                 "name": "Chosen Knights",
                 "cost": 445,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Speed",
-                    "Lust"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -106,8 +178,14 @@
                 "name": "Chosen Knights",
                 "cost": 405,
                 "options": [
-                    "Standard Bearer",
-                    "Lust"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -124,9 +202,18 @@
                 "name": "Battleshrine",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer",
-                    "Molten Copper",
-                    "Whispers of the Veil"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -145,18 +232,54 @@
                 "name": "Mage",
                 "cost": 670,
                 "options": [
-                    "General",
-                    "Asfad Scholar",
-                    "Griffon",
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Pillars of Fire",
-                    "Cage of Embers",
-                    "Talisman of Shielding",
-                    "Scroll of Power"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Asfad Scholar",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pillars of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cage of Embers",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -165,11 +288,26 @@
                 "name": "Commander",
                 "cost": 260,
                 "options": [
-                    "Light Troops",
-                    "Protection of Dorac",
-                    "Battle Standard Bearer",
-                    "Navigator's Banner",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Protection of Dorac",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Navigator's Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -178,9 +316,18 @@
                 "name": "Citizen Spears",
                 "cost": 535,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -190,8 +337,14 @@
                 "name": "Citizen Spears",
                 "cost": 285,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -209,8 +362,14 @@
                 "name": "Queen's Guard",
                 "cost": 470,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -220,8 +379,14 @@
                 "name": "Phoenix",
                 "cost": 440,
                 "options": [
-                    "Fire Phoenix",
-                    "Warden's Bond"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warden's Bond",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -230,8 +395,14 @@
                 "name": "Phoenix",
                 "cost": 440,
                 "options": [
-                    "Fire Phoenix",
-                    "Warden's Bond"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warden's Bond",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -240,7 +411,10 @@
                 "name": "Reaver Chariots",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,

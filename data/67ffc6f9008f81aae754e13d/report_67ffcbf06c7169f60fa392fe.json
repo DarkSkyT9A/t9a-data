@@ -13,17 +13,50 @@
                 "name": "Death Cult Hierarch",
                 "cost": 490,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Cosmology",
-                    "Altered Sight",
-                    "Truth of Time",
-                    "Weal and Woe",
-                    "Ice and Fire",
-                    "Cosmic Scales",
-                    "Magical Heirloom",
-                    "Soul Conduit"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Altered Sight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cosmic Scales",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Magical Heirloom",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Soul Conduit",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,13 +65,34 @@
                 "name": "Nomarch",
                 "cost": 255,
                 "options": [
-                    "Light Troops",
-                    "Warding of Unity",
-                    "Giant Slayer",
-                    "Battle Standard Bearer",
-                    "Deathless Noble",
-                    "Shield",
-                    "Sun's Embrace"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Deathless Noble",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sun's Embrace",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -47,9 +101,18 @@
                 "name": "Skeleton Warriors",
                 "cost": 600,
                 "options": [
-                    "Stalker's Standard",
-                    "Spear and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 60,
@@ -59,8 +122,14 @@
                 "name": "Skeleton Warriors",
                 "cost": 225,
                 "options": [
-                    "Banner of the Entombed",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of the Entombed",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -70,7 +139,10 @@
                 "name": "Skeleton Warriors",
                 "cost": 180,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 20,
@@ -80,7 +152,10 @@
                 "name": "Sand Stalkers",
                 "cost": 390,
                 "options": [
-                    "Ambush"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -90,7 +165,10 @@
                 "name": "Sand Stalkers",
                 "cost": 390,
                 "options": [
-                    "Ambush"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -100,8 +178,14 @@
                 "name": "Casket of Phatep",
                 "cost": 230,
                 "options": [
-                    "Thunder and Lightning",
-                    "Soul Blight"
+                    {
+                        "name": "Thunder and Lightning",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -110,7 +194,10 @@
                 "name": "Shabti Archers",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -152,15 +239,42 @@
                 "name": "Mage",
                 "cost": 480,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Pillars of Fire",
-                    "Cage of Embers",
-                    "Mimic Cloak"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pillars of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cage of Embers",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -169,10 +283,22 @@
                 "name": "Commander",
                 "cost": 355,
                 "options": [
-                    "Shield",
-                    "Solitary",
-                    "Sky Sloop",
-                    "Lance"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sky Sloop",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -181,11 +307,26 @@
                 "name": "Commander",
                 "cost": 355,
                 "options": [
-                    "Shield",
-                    "Eldritch Inscriptions",
-                    "Solitary",
-                    "Sky Sloop",
-                    "Lance"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sky Sloop",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -194,12 +335,30 @@
                 "name": "Commander",
                 "cost": 260,
                 "options": [
-                    "Elven Horse",
-                    "Shield",
-                    "Sigil of Protection",
-                    "Battle Standard Bearer",
-                    "Queen's Cavalier",
-                    "Lance"
+                    {
+                        "name": "Elven Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Queen's Cavalier",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -208,7 +367,10 @@
                 "name": "Sea Guard",
                 "cost": 514,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -218,7 +380,10 @@
                 "name": "Sea Guard",
                 "cost": 496,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 27,
@@ -228,8 +393,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 570,
                 "options": [
-                    "War Banner of Rymâ",
-                    "Standard Bearer"
+                    {
+                        "name": "War Banner of Rymâ",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -239,8 +410,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 570,
                 "options": [
-                    "War Banner of Rymâ",
-                    "Standard Bearer"
+                    {
+                        "name": "War Banner of Rymâ",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -250,7 +427,10 @@
                 "name": "Phoenix",
                 "cost": 400,
                 "options": [
-                    "Fire Phoenix"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

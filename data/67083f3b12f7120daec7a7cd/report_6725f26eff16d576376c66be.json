@@ -13,13 +13,34 @@
                 "name": "Thane",
                 "cost": 295,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Steel",
-                    "Rune of Iron",
-                    "Rune of Lightning",
-                    "Rune of Mining"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Steel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Mining",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,9 +49,18 @@
                 "name": "Greybeards",
                 "cost": 507,
                 "options": [
-                    "Shield Wall",
-                    "Runic Standard of the Hold",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -40,9 +70,18 @@
                 "name": "Greybeards",
                 "cost": 235,
                 "options": [
-                    "Shield Wall",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -52,8 +91,14 @@
                 "name": "Clan Marksmen",
                 "cost": 271,
                 "options": [
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -63,8 +108,14 @@
                 "name": "Hold Guardians",
                 "cost": 495,
                 "options": [
-                    "Runic Standard of the Hold",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -74,7 +125,10 @@
                 "name": "Hold Guardians",
                 "cost": 265,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -84,7 +138,10 @@
                 "name": "Deep Watch",
                 "cost": 347,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -108,9 +165,18 @@
                 "name": "Miners",
                 "cost": 235,
                 "options": [
-                    "Great Weapon",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -120,7 +186,10 @@
                 "name": "Forge Wardens",
                 "cost": 215,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -138,7 +207,10 @@
                 "name": "Steam Copters",
                 "cost": 190,
                 "options": [
-                    "Shrapnel Grenades"
+                    {
+                        "name": "Shrapnel Grenades",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -158,16 +230,46 @@
                 "name": "Duke",
                 "cost": 590,
                 "options": [
-                    "General",
-                    "Revered Unicorn",
-                    "Shield",
-                    "Sigil of Protection",
-                    "Tristan's Resolve",
-                    "Bastard Sword",
-                    "Prayer Etched",
-                    "Potion of Swiftness",
-                    "Sainted and Gallantry",
-                    "Valour"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Revered Unicorn",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Tristan's Resolve",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Prayer Etched",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Potion of Swiftness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sainted and Gallantry",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Valour",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -176,11 +278,26 @@
                 "name": "Damsel",
                 "cost": 270,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Druidism",
-                    "Entwining Roots",
-                    "Nature's Venom"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Nature's Venom",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -189,15 +306,42 @@
                 "name": "Folk Hero",
                 "cost": 215,
                 "options": [
-                    "Light Troops",
-                    "Halberd",
-                    "Stalker's Standard",
-                    "Mimic Cloak",
-                    "Divination",
-                    "Foresight",
-                    "Attached",
-                    "Bannerman",
-                    "Minstrel"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Minstrel",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -206,11 +350,26 @@
                 "name": "Knights of the Realm",
                 "cost": 485,
                 "options": [
-                    "Relic Shroud",
-                    "Banner of Discipline",
-                    "Standard Bearer",
-                    "Musician",
-                    "Knight Banneret"
+                    {
+                        "name": "Relic Shroud",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Discipline",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -220,8 +379,14 @@
                 "name": "Lowborn Levies",
                 "cost": 369,
                 "options": [
-                    "Standard Bearer",
-                    "Halberd and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Halberd and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 48,
@@ -231,7 +396,10 @@
                 "name": "Hedge Knights",
                 "cost": 265,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -241,9 +409,18 @@
                 "name": "Knights of the Quest",
                 "cost": 580,
                 "options": [
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -253,10 +430,22 @@
                 "name": "Knights of the Court",
                 "cost": 525,
                 "options": [
-                    "Banner of Discipline",
-                    "Standard Bearer",
-                    "Musician",
-                    "Knight Banneret"
+                    {
+                        "name": "Banner of Discipline",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -266,10 +455,22 @@
                 "name": "Men-at-Arms",
                 "cost": 450,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Castle Guard"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Castle Guard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -279,9 +480,18 @@
                 "name": "Naiads",
                 "cost": 245,
                 "options": [
-                    "Fountain of Youth",
-                    "Swarm of Insects",
-                    "Wizard Conclave"
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

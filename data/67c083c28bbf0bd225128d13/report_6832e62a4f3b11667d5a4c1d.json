@@ -13,16 +13,46 @@
                 "name": "King",
                 "cost": 490,
                 "options": [
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Iron",
-                    "Rune of the Forge",
-                    "Rune of Destruction",
-                    "Rune of Smashing",
-                    "Rune of Returning",
-                    "Battle Rune",
-                    "Rune of Resilience"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of the Forge",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Destruction",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Smashing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Returning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Rune",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,12 +61,30 @@
                 "name": "Thane",
                 "cost": 260,
                 "options": [
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Iron",
-                    "Rune of Lightning",
-                    "Rune of Returning",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Returning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -45,11 +93,26 @@
                 "name": "Greybeards",
                 "cost": 500,
                 "options": [
-                    "Shield Wall",
-                    "Vanguard",
-                    "Throwing Weapons",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -59,9 +122,18 @@
                 "name": "Clan Marksmen",
                 "cost": 250,
                 "options": [
-                    "Guild-Crafted Handgun",
-                    "Runic Standard of Steadiness",
-                    "Standard Bearer"
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -71,9 +143,18 @@
                 "name": "Clan Marksmen",
                 "cost": 250,
                 "options": [
-                    "Guild-Crafted Handgun",
-                    "Runic Standard of Steadiness",
-                    "Standard Bearer"
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -83,7 +164,10 @@
                 "name": "King's Guard",
                 "cost": 395,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -93,8 +177,14 @@
                 "name": "Deep Watch",
                 "cost": 382,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -104,8 +194,14 @@
                 "name": "Deep Watch",
                 "cost": 382,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 19,
@@ -115,8 +211,14 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Flaming Shot",
-                    "Dwarf Cannon"
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -125,8 +227,14 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Flaming Shot",
-                    "Dwarf Cannon"
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -151,9 +259,18 @@
                 "name": "Anvil of Power",
                 "cost": 200,
                 "options": [
-                    "Rune of Resolve",
-                    "Rune of Gleaming",
-                    "Rune of Resilience"
+                    {
+                        "name": "Rune of Resolve",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -172,11 +289,26 @@
                 "name": "Mammoth Hunter",
                 "cost": 540,
                 "options": [
-                    "General, Disciplined and Wildheart",
-                    "Rock Aurochs",
-                    "Touch of Greatness",
-                    "Lance",
-                    "Hunting Spear"
+                    {
+                        "name": "General, Disciplined and Wildheart",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Rock Aurochs",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -185,11 +317,26 @@
                 "name": "Mammoth Hunter",
                 "cost": 370,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Tusker",
-                    "Great Weapon",
-                    "Hunting Spear",
-                    "Talisman of Shielding"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Tusker",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -198,13 +345,34 @@
                 "name": "Shaman",
                 "cost": 370,
                 "options": [
-                    "Mimic Cloak",
-                    "Godspeaker",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects"
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Godspeaker",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -213,12 +381,30 @@
                 "name": "Shaman",
                 "cost": 320,
                 "options": [
-                    "Gut Roarer",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow"
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -227,9 +413,18 @@
                 "name": "Tribesmen",
                 "cost": 468,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -239,8 +434,14 @@
                 "name": "Tribesmen",
                 "cost": 170,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -258,9 +459,18 @@
                 "name": "Tusker Cavalry",
                 "cost": 475,
                 "options": [
-                    "Stalker's Standard",
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -270,9 +480,18 @@
                 "name": "Tusker Cavalry",
                 "cost": 455,
                 "options": [
-                    "Banner of Courage",
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -290,7 +509,10 @@
                 "name": "Frost Mammoth",
                 "cost": 380,
                 "options": [
-                    "Hunting Spear"
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"

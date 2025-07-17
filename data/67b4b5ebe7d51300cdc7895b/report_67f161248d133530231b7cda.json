@@ -13,15 +13,42 @@
                 "name": "Swarm Priest",
                 "cost": 520,
                 "options": [
-                    "Sacred Platform",
-                    "Whispering Bell",
-                    "Wizard Adept",
-                    "Witchcraft",
-                    "Soured Luck",
-                    "Cauldron's Curse",
-                    "Magical Heirloom",
-                    "Spell Scroll",
-                    "Caelysian Pantheon"
+                    {
+                        "name": "Sacred Platform",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Whispering Bell",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Witchcraft",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Soured Luck",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cauldron's Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Magical Heirloom",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spell Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Caelysian Pantheon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,10 +57,22 @@
                 "name": "Bloodfur Legate",
                 "cost": 490,
                 "options": [
-                    "Eldritch Inscriptions",
-                    "Battle Standard Bearer",
-                    "Triumphal Platform",
-                    "Halberd"
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Triumphal Platform",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,11 +81,26 @@
                 "name": "House Prefect",
                 "cost": 240,
                 "options": [
-                    "Plague-Hermit's Blessing",
-                    "Swarm Master",
-                    "Captain and Attached",
-                    "Skorchit Alchemist",
-                    "Deepfire Thrower"
+                    {
+                        "name": "Plague-Hermit's Blessing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Swarm Master",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Skorchit Alchemist",
+                        "type": "house"
+                    },
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -55,9 +109,18 @@
                 "name": "Vermin Senator",
                 "cost": 150,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Rod of Battle"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -66,10 +129,22 @@
                 "name": "Vermin Legionaries",
                 "cost": 464,
                 "options": [
-                    "Sheltering Standard",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 57,
@@ -79,9 +154,18 @@
                 "name": "Blackfur Veterans",
                 "cost": 386,
                 "options": [
-                    "Distortion Emblem",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -107,8 +191,14 @@
                 "name": "Thunder Brutes",
                 "cost": 280,
                 "options": [
-                    "Canister Launcher",
-                    "Standard Bearer"
+                    {
+                        "name": "Canister Launcher",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -118,8 +208,14 @@
                 "name": "Thunder Brutes",
                 "cost": 280,
                 "options": [
-                    "Canister Launcher",
-                    "Standard Bearer"
+                    {
+                        "name": "Canister Launcher",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -129,7 +225,10 @@
                 "name": "Vermin Artillery",
                 "cost": 195,
                 "options": [
-                    "Rakachit Mauss Rifle"
+                    {
+                        "name": "Rakachit Mauss Rifle",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -138,7 +237,10 @@
                 "name": "Experimental Weapon Teams",
                 "cost": 165,
                 "options": [
-                    "Deepfire Thrower"
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -173,11 +275,26 @@
                 "name": "Maw of Akaan",
                 "cost": 720,
                 "options": [
-                    "Wizard Apprentice",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Mirrored Scales",
-                    "Unholy Appetite"
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Unholy Appetite",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -186,13 +303,34 @@
                 "name": "Miser of Sugulag",
                 "cost": 690,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Mirrored Scales"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -201,10 +339,22 @@
                 "name": "Harbinger of Father Chaos",
                 "cost": 190,
                 "options": [
-                    "Smothering Coils",
-                    "Guiding Smothering Coils",
-                    "Captain and Attached",
-                    "Light Troops"
+                    {
+                        "name": "Smothering Coils",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Guiding Smothering Coils",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -213,8 +363,14 @@
                 "name": "Succubi",
                 "cost": 578,
                 "options": [
-                    "Bronze Backbone",
-                    "Standard Bearer"
+                    {
+                        "name": "Bronze Backbone",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -224,8 +380,14 @@
                 "name": "Lemures",
                 "cost": 430,
                 "options": [
-                    "Centipede Legs",
-                    "Standard Bearer"
+                    {
+                        "name": "Centipede Legs",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -235,8 +397,14 @@
                 "name": "Clawed Fiends",
                 "cost": 470,
                 "options": [
-                    "Unhinging Jaw",
-                    "Standard Bearer"
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -246,8 +414,14 @@
                 "name": "Clawed Fiends",
                 "cost": 258,
                 "options": [
-                    "Mesmerising Plumage",
-                    "Standard Bearer"
+                    {
+                        "name": "Mesmerising Plumage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -257,8 +431,14 @@
                 "name": "Threshing Engine",
                 "cost": 330,
                 "options": [
-                    "Hidden Knives",
-                    "Standard Bearer"
+                    {
+                        "name": "Hidden Knives",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -268,8 +448,14 @@
                 "name": "Threshing Engine",
                 "cost": 330,
                 "options": [
-                    "Hidden Knives",
-                    "Standard Bearer"
+                    {
+                        "name": "Hidden Knives",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 2,

@@ -13,16 +13,46 @@
                 "name": "Anurarch Archmage",
                 "cost": 555,
                 "options": [
-                    "Trusted Adviser",
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Talisman of the Void",
-                    "Scroll of Power"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,8 +61,14 @@
                 "name": "Tegu Warriors",
                 "cost": 515,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -42,10 +78,22 @@
                 "name": "Tegu Warriors",
                 "cost": 487,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Awaken the Beast",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 26,
@@ -55,7 +103,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 595,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -65,8 +116,14 @@
                 "name": "Thyroscutus Herd",
                 "cost": 250,
                 "options": [
-                    "Great Protector",
-                    "Lodestone Shield"
+                    {
+                        "name": "Great Protector",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lodestone Shield",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 1,
                 "models": 1,
@@ -76,8 +133,14 @@
                 "name": "Tegu Guards",
                 "cost": 486,
                 "options": [
-                    "Standard Bearer",
-                    "Koru Stone"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -87,8 +150,14 @@
                 "name": "Raptor Riders",
                 "cost": 430,
                 "options": [
-                    "Standard Bearer",
-                    "Aether Icon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -98,7 +167,10 @@
                 "name": "Weapon Beasts",
                 "cost": 240,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -108,7 +180,10 @@
                 "name": "Weapon Beasts",
                 "cost": 240,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 2,
@@ -118,7 +193,10 @@
                 "name": "Pteradon Riders",
                 "cost": 200,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -138,11 +216,26 @@
                 "name": "Runic Smith",
                 "cost": 275,
                 "options": [
-                    "General",
-                    "Trusted Adviser",
-                    "Shield Wall",
-                    "Rune of Denial",
-                    "Rune of Mining"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Denial",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Mining",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -151,8 +244,14 @@
                 "name": "Greybeards",
                 "cost": 268,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -162,10 +261,22 @@
                 "name": "Greybeards",
                 "cost": 260,
                 "options": [
-                    "Shield Wall",
-                    "Vanguard",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -175,9 +286,18 @@
                 "name": "Greybeards",
                 "cost": 240,
                 "options": [
-                    "Shield Wall",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 10,
@@ -187,9 +307,18 @@
                 "name": "Greybeards",
                 "cost": 240,
                 "options": [
-                    "Shield Wall",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 3,
                 "models": 10,
@@ -199,8 +328,14 @@
                 "name": "Deep Watch",
                 "cost": 392,
                 "options": [
-                    "Standard Bearer",
-                    "Runic Standard of the Hold"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -210,8 +345,14 @@
                 "name": "Deep Watch",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer",
-                    "Runic Standard of the Hold"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -221,8 +362,14 @@
                 "name": "Deep Watch",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer",
-                    "Runic Standard of the Hold"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "models": 15,
@@ -232,7 +379,10 @@
                 "name": "Deep Watch",
                 "cost": 270,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 3,
                 "models": 15,
@@ -242,7 +392,10 @@
                 "name": "Hold Guardians",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -252,8 +405,14 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Flaming Shot",
-                    "Dwarf Cannon"
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -262,10 +421,22 @@
                 "name": "Miners",
                 "cost": 230,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Paired Weapons",
-                    "Pistol"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -275,10 +446,22 @@
                 "name": "Miners",
                 "cost": 230,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Paired Weapons",
-                    "Pistol"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -288,7 +471,10 @@
                 "name": "Forge Wardens",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,

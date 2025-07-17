@@ -13,22 +13,70 @@
                 "name": "Vampire Count",
                 "cost": 695,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Battleline Hero",
-                    "Arcane Knowledge",
-                    "Evocation",
-                    "Touch of the Reaper",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Pentagram of Pain",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Umbral Majesty",
-                    "The Grave Calls",
-                    "Halberd",
-                    "Talisman of Shielding",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Arcane Knowledge",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pentagram of Pain",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Umbral Majesty",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -37,10 +85,22 @@
                 "name": "Barrow King",
                 "cost": 195,
                 "options": [
-                    "Skeletal Steed",
-                    "Lance",
-                    "Talisman of the Void",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Skeletal Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -49,7 +109,10 @@
                 "name": "Ghouls",
                 "cost": 445,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 32,
@@ -59,8 +122,14 @@
                 "name": "Skeletons",
                 "cost": 196,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -86,7 +155,10 @@
                 "name": "Barrow Knights",
                 "cost": 440,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -96,9 +168,18 @@
                 "name": "Barrow Guard",
                 "cost": 419,
                 "options": [
-                    "Shield",
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 27,
@@ -115,8 +196,14 @@
                 "name": "Vampire Knights",
                 "cost": 475,
                 "options": [
-                    "Banner of Speed",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -126,8 +213,14 @@
                 "name": "Vampire Knights",
                 "cost": 475,
                 "options": [
-                    "Banner of Speed",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -147,17 +240,50 @@
                 "name": "Miser of Sugulag",
                 "cost": 895,
                 "options": [
-                    "Battleline Hero",
-                    "General",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Mirrored Scales",
-                    "Clinging Ichor"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Clinging Ichor",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -166,8 +292,14 @@
                 "name": "Succubi",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -177,8 +309,14 @@
                 "name": "Myrmidons",
                 "cost": 315,
                 "options": [
-                    "Standard Bearer",
-                    "Hot Blood"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Hot Blood",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -188,10 +326,22 @@
                 "name": "Imps",
                 "cost": 275,
                 "options": [
-                    "Mark of the Eternal Champion",
-                    "Spear of Infinity",
-                    "Standard Bearer",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Mark of the Eternal Champion",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Spear of Infinity",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -201,8 +351,14 @@
                 "name": "Clawed Fiends",
                 "cost": 555,
                 "options": [
-                    "Standard Bearer",
-                    "Piercing Spike"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Piercing Spike",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -212,8 +368,14 @@
                 "name": "Clawed Fiends",
                 "cost": 270,
                 "options": [
-                    "Standard Bearer",
-                    "Piercing Spike"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Piercing Spike",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -223,8 +385,14 @@
                 "name": "Clawed Fiends",
                 "cost": 258,
                 "options": [
-                    "Mesmerising Plumage",
-                    "Standard Bearer"
+                    {
+                        "name": "Mesmerising Plumage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 3,
@@ -234,9 +402,18 @@
                 "name": "Hoarders",
                 "cost": 538,
                 "options": [
-                    "Clinging Ichor",
-                    "Standard Bearer",
-                    "Favoured of Greed"
+                    {
+                        "name": "Clinging Ichor",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Favoured of Greed",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -246,8 +423,14 @@
                 "name": "Threshing Engine",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer",
-                    "Whipcrack Tail"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Whipcrack Tail",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 3,

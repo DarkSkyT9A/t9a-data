@@ -13,9 +13,18 @@
                 "name": "Battlefield Wizard",
                 "cost": 400,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -24,10 +33,22 @@
                 "name": "Marshal",
                 "cost": 310,
                 "options": [
-                    "Great Griffon",
-                    "Winter Cloak",
-                    "General, Imperial Authority, and +1 Cou",
-                    "Great Weapon"
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Winter Cloak",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -36,10 +57,22 @@
                 "name": "Marshal",
                 "cost": 275,
                 "options": [
-                    "Great Griffon",
-                    "Talisman of Shielding",
-                    "Solitary",
-                    "Great Weapon"
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -48,11 +81,26 @@
                 "name": "Marshal",
                 "cost": 205,
                 "options": [
-                    "Light Troops",
-                    "Blacksteel",
-                    "Talisman of the Void",
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Shield"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -61,9 +109,18 @@
                 "name": "State Infantry",
                 "cost": 425,
                 "options": [
-                    "War College Banner",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "War College Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -73,9 +130,18 @@
                 "name": "State Marksmen",
                 "cost": 240,
                 "options": [
-                    "Marksman's Pennant",
-                    "Standard Bearer",
-                    "Crossbow"
+                    {
+                        "name": "Marksman's Pennant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -101,8 +167,14 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 350,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -112,8 +184,14 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 210,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -123,8 +201,14 @@
                 "name": "Imperial Detachment",
                 "cost": 210,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -134,8 +218,14 @@
                 "name": "Imperial Detachment",
                 "cost": 210,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -145,7 +235,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -154,7 +247,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -189,12 +285,30 @@
                 "name": "Shaman",
                 "cost": 600,
                 "options": [
-                    "Wizard Master",
-                    "Thaumaturgy",
-                    "Destiny's Call",
-                    "Iron Fist",
-                    "Lygur's Tongue",
-                    "Godspeaker"
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lygur's Tongue",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Godspeaker",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -203,11 +317,26 @@
                 "name": "Shaman",
                 "cost": 340,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Iron Fist",
-                    "Talisman of the Void"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -216,10 +345,22 @@
                 "name": "Tribesmen",
                 "cost": 462,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Sheltering Standard",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -229,9 +370,18 @@
                 "name": "Tribesmen",
                 "cost": 256,
                 "options": [
-                    "Iron Fist",
-                    "Standard Bearer",
-                    "Banner of Courage"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -241,10 +391,22 @@
                 "name": "Scraplings",
                 "cost": 335,
                 "options": [
-                    "Standard Bearer",
-                    "Skull of Qenghet",
-                    "Musician",
-                    "Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Skull of Qenghet",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -254,9 +416,18 @@
                 "name": "Mercenary Gunners",
                 "cost": 500,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Courage",
-                    "Ogre Crossbow and Accurate"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -266,9 +437,18 @@
                 "name": "Mercenary Gunners",
                 "cost": 475,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of the Gyengget",
-                    "Brace of Ogre Pistols and Lethal Strike"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of the Gyengget",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols and Lethal Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 6,

@@ -13,9 +13,18 @@
                 "name": "Marshal",
                 "cost": 520,
                 "options": [
-                    "General, Imperial Authority, and +1 Cou",
-                    "Imperial Prince",
-                    "Commanding Dragon"
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Imperial Prince",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Commanding Dragon",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -24,9 +33,18 @@
                 "name": "Marshal",
                 "cost": 255,
                 "options": [
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Great Griffon",
-                    "Great Weapon"
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -35,7 +53,10 @@
                 "name": "Prelate",
                 "cost": 380,
                 "options": [
-                    "Altar of Battle"
+                    {
+                        "name": "Altar of Battle",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,10 +65,22 @@
                 "name": "Knight Commander",
                 "cost": 230,
                 "options": [
-                    "Horse",
-                    "Shield",
-                    "Touch of Greatness",
-                    "Cavalry Pick"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Cavalry Pick",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -56,10 +89,22 @@
                 "name": "Inquisitor",
                 "cost": 215,
                 "options": [
-                    "Horse",
-                    "Paired Weapons",
-                    "King Slayer",
-                    "Blacksteel"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -68,11 +113,26 @@
                 "name": "Knightly Orders",
                 "cost": 595,
                 "options": [
-                    "Shield",
-                    "Stalker's Standard",
-                    "Cavalry Pick",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Cavalry Pick",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -82,10 +142,22 @@
                 "name": "Electoral Cavalry",
                 "cost": 405,
                 "options": [
-                    "Great Weapon",
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 16,
@@ -95,8 +167,14 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 350,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -106,8 +184,14 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 350,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -117,8 +201,14 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 280,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 4,
@@ -145,17 +235,50 @@
                 "name": "Death Cult Hierarch",
                 "cost": 515,
                 "options": [
-                    "General",
-                    "Skeletal Horse",
-                    "Wizard Master",
-                    "Evocation",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Talisman of the Void",
-                    "Soul Conduit"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Skeletal Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Soul Conduit",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -164,11 +287,26 @@
                 "name": "Nomarch",
                 "cost": 170,
                 "options": [
-                    "Captain and Attached",
-                    "Deathless Noble",
-                    "Skeleton Chariot",
-                    "Longbow",
-                    "Great Weapon"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Deathless Noble",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Skeleton Chariot",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -177,11 +315,26 @@
                 "name": "Skeleton Chariots",
                 "cost": 560,
                 "options": [
-                    "Sigil of the Closed Gates",
-                    "Halberd",
-                    "Legion Charioteers",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Sigil of the Closed Gates",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Legion Charioteers",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -191,8 +344,14 @@
                 "name": "Skeleton Chariots",
                 "cost": 260,
                 "options": [
-                    "Halberd",
-                    "Musician"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -202,8 +361,14 @@
                 "name": "Skeleton Cavalry",
                 "cost": 180,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -213,7 +378,10 @@
                 "name": "Shabti Archers",
                 "cost": 445,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -223,7 +391,10 @@
                 "name": "Shabti Archers",
                 "cost": 445,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -249,7 +420,10 @@
                 "name": "Colossus",
                 "cost": 415,
                 "options": [
-                    "Giant Aspis Bow"
+                    {
+                        "name": "Giant Aspis Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "mason's menagerie"
@@ -258,7 +432,10 @@
                 "name": "Colossus",
                 "cost": 415,
                 "options": [
-                    "Giant Aspis Bow"
+                    {
+                        "name": "Giant Aspis Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "mason's menagerie"

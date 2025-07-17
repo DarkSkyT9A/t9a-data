@@ -13,16 +13,46 @@
                 "name": "Chosen Lord",
                 "cost": 870,
                 "options": [
-                    "General",
-                    "Wasteland Dragon",
-                    "Trophy Rack",
-                    "Banner of Speed",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Immortal Gauntlets",
-                    "Wyrd Stone",
-                    "Lust",
-                    "Dark Prelate"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wasteland Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Dark Prelate",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,11 +61,26 @@
                 "name": "Sorcerer",
                 "cost": 560,
                 "options": [
-                    "Light Troops",
-                    "Thrice-Forged",
-                    "Dark Familiar",
-                    "Wizard Master",
-                    "Occultism"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,9 +89,18 @@
                 "name": "Warriors",
                 "cost": 490,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -56,8 +110,14 @@
                 "name": "Warriors",
                 "cost": 210,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -75,9 +135,18 @@
                 "name": "Chosen Knights",
                 "cost": 540,
                 "options": [
-                    "Aether Icon",
-                    "Lust",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -87,9 +156,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -99,9 +177,18 @@
                 "name": "Forsworn",
                 "cost": 250,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -111,7 +198,10 @@
                 "name": "Feldrak Elder",
                 "cost": 460,
                 "options": [
-                    "Great Weapon"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -130,14 +220,38 @@
                 "name": "Centaur Chieftain",
                 "cost": 430,
                 "options": [
-                    "Greater Totem Bearer",
-                    "Battle Standard Bearer",
-                    "Shield",
-                    "Obscuring Fog",
-                    "Throwing Weapons",
-                    "Wild Form",
-                    "Lance",
-                    "Pillager Icon"
+                    {
+                        "name": "Greater Totem Bearer",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Obscuring Fog",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Wild Form",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pillager Icon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -146,13 +260,34 @@
                 "name": "Soothsayer",
                 "cost": 385,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Crown of Madness",
-                    "Rain Augur Brew",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Shamanism"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Crown of Madness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rain Augur Brew",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -161,11 +296,26 @@
                 "name": "Mongrel Herd",
                 "cost": 250,
                 "options": [
-                    "Ambush",
-                    "Banner of Courage",
-                    "Spear",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -175,10 +325,22 @@
                 "name": "Wildhorn Herd",
                 "cost": 235,
                 "options": [
-                    "Shield",
-                    "Banner of Courage",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -204,9 +366,18 @@
                 "name": "Centaurs",
                 "cost": 337,
                 "options": [
-                    "Distortion Emblem",
-                    "Standard Bearer",
-                    "Light Lance"
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -216,9 +387,18 @@
                 "name": "Centaurs",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Light Lance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 5,

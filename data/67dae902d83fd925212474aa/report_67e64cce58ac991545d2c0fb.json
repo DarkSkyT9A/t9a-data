@@ -13,14 +13,38 @@
                 "name": "Doomlord",
                 "cost": 565,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Trophy Rack",
-                    "Warding of Unity",
-                    "Dusk Forged",
-                    "Supernatural Dexterity",
-                    "Great Weapon",
-                    "Mask of Mindless Violence"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Dusk Forged",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mask of Mindless Violence",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,11 +53,26 @@
                 "name": "Sorcerer",
                 "cost": 560,
                 "options": [
-                    "Light Troops",
-                    "Thrice-Forged",
-                    "Dark Familiar",
-                    "Wizard Master",
-                    "Occultism"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,9 +81,18 @@
                 "name": "Barbarian Chief",
                 "cost": 380,
                 "options": [
-                    "Wasteland Behemoth",
-                    "Additional Limbs",
-                    "Great Weapon"
+                    {
+                        "name": "Wasteland Behemoth",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Additional Limbs",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -53,9 +101,18 @@
                 "name": "Warriors",
                 "cost": 490,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -65,7 +122,10 @@
                 "name": "Barbarian Horsemen",
                 "cost": 180,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -91,8 +151,14 @@
                 "name": "Chosen Knights",
                 "cost": 530,
                 "options": [
-                    "Standard Bearer",
-                    "Lust"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -102,9 +168,18 @@
                 "name": "Forsworn",
                 "cost": 455,
                 "options": [
-                    "Flaming Standard",
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -114,8 +189,14 @@
                 "name": "Feldraks",
                 "cost": 410,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -142,11 +223,26 @@
                 "name": "Shaman",
                 "cost": 525,
                 "options": [
-                    "Wizard Master",
-                    "Shamanism",
-                    "Paired Weapons",
-                    "Mimic Cloak",
-                    "Godspeaker"
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Godspeaker",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -155,12 +251,30 @@
                 "name": "Great Khan",
                 "cost": 435,
                 "options": [
-                    "Destiny's Call",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Rampager's Chain",
-                    "Spinesplitter",
-                    "Ogre Crossbow"
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Rampager's Chain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spinesplitter",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -169,12 +283,30 @@
                 "name": "Khan",
                 "cost": 365,
                 "options": [
-                    "Mammoth-Hide Cloak",
-                    "Great Weapon",
-                    "Rottenjaw",
-                    "Ogre Crossbow",
-                    "Battle Standard Bearer",
-                    "Banner of the Gyengget"
+                    {
+                        "name": "Mammoth-Hide Cloak",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rottenjaw",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Banner of the Gyengget",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -183,9 +315,18 @@
                 "name": "Tribesmen",
                 "cost": 575,
                 "options": [
-                    "Iron Fist",
-                    "Pennant of the Great Grass Sky",
-                    "Standard Bearer"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pennant of the Great Grass Sky",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -195,8 +336,14 @@
                 "name": "Tribesmen",
                 "cost": 242,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -206,8 +353,14 @@
                 "name": "Scraplings",
                 "cost": 188,
                 "options": [
-                    "Standard Bearer",
-                    "Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -217,10 +370,22 @@
                 "name": "Tusker Cavalry",
                 "cost": 575,
                 "options": [
-                    "Paired Weapons",
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -267,7 +432,10 @@
                 "name": "Frost Mammoth",
                 "cost": 400,
                 "options": [
-                    "Ogre Crossbow"
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"

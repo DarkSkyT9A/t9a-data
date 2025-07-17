@@ -13,17 +13,50 @@
                 "name": "Death Cult Hierarch",
                 "cost": 530,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Cosmology",
-                    "Altered Sight",
-                    "Truth of Time",
-                    "Weal and Woe",
-                    "Ice and Fire",
-                    "Cosmic Scales",
-                    "Talisman of the Void",
-                    "Scroll of Power",
-                    "Soul Conduit"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Altered Sight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cosmic Scales",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Soul Conduit",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,10 +65,22 @@
                 "name": "Nomarch",
                 "cost": 180,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Crown of the Pharaohs",
-                    "Deathless Noble"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Crown of the Pharaohs",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Deathless Noble",
+                        "type": "occupation"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,9 +89,18 @@
                 "name": "Skeleton Warriors",
                 "cost": 545,
                 "options": [
-                    "Sheltering Standard",
-                    "Spear and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 55,
@@ -56,9 +110,18 @@
                 "name": "Skeleton Archers",
                 "cost": 285,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -68,7 +131,10 @@
                 "name": "Skeleton Cavalry",
                 "cost": 170,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -78,7 +144,10 @@
                 "name": "Shabti Archers",
                 "cost": 445,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -96,7 +165,10 @@
                 "name": "Sand Stalkers",
                 "cost": 390,
                 "options": [
-                    "Ambush"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -106,8 +178,14 @@
                 "name": "Casket of Phatep",
                 "cost": 230,
                 "options": [
-                    "Thunder and Lightning",
-                    "Soul Blight"
+                    {
+                        "name": "Thunder and Lightning",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -124,7 +202,10 @@
                 "name": "Colossus",
                 "cost": 415,
                 "options": [
-                    "Giant Aspis Bow"
+                    {
+                        "name": "Giant Aspis Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "mason's menagerie"
@@ -133,7 +214,10 @@
                 "name": "Colossus",
                 "cost": 415,
                 "options": [
-                    "Giant Aspis Bow"
+                    {
+                        "name": "Giant Aspis Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "mason's menagerie"
@@ -152,15 +236,42 @@
                 "name": "Treefather Ancient",
                 "cost": 735,
                 "options": [
-                    "Wizard",
-                    "Wizard Master",
-                    "Druidism",
-                    "Fountain of Youth",
-                    "Entwining Roots",
-                    "Veil of Mist",
-                    "Gravel Storm",
-                    "Stone Skin",
-                    "Verdant Rebirth"
+                    {
+                        "name": "Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Veil of Mist",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gravel Storm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stone Skin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Verdant Rebirth",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -169,15 +280,42 @@
                 "name": "Forest Prince",
                 "cost": 440,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Elven Cloak",
-                    "Sylvan Bow",
-                    "Bough Of Wyscan",
-                    "Spear",
-                    "Mist Walker's Mirror",
-                    "Sacred Seeds"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Elven Cloak",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Bough Of Wyscan",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mist Walker's Mirror",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sacred Seeds",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -186,9 +324,18 @@
                 "name": "Sylvan Archers",
                 "cost": 565,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Deception",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Deception",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -198,9 +345,18 @@
                 "name": "Sylvan Archers",
                 "cost": 440,
                 "options": [
-                    "Standard Bearer",
-                    "Aether Icon",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -224,8 +380,14 @@
                 "name": "Kestrel Knights",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer",
-                    "Lance and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -235,8 +397,14 @@
                 "name": "Kestrel Knights",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer",
-                    "Lance and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -246,8 +414,14 @@
                 "name": "Forest Rangers",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer",
-                    "Vanguard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -257,8 +431,14 @@
                 "name": "Forest Rangers",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer",
-                    "Vanguard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 10,

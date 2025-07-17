@@ -13,14 +13,38 @@
                 "name": "Anurarch Archmage",
                 "cost": 530,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Eternal Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Eternal Mastery",
+                        "type": "arcaneMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,9 +53,18 @@
                 "name": "Tegu Veteran",
                 "cost": 355,
                 "options": [
-                    "Vital Essence",
-                    "Saurian Raptor",
-                    "Great Weapon"
+                    {
+                        "name": "Vital Essence",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Saurian Raptor",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -40,7 +73,10 @@
                 "name": "Caiman Mentor",
                 "cost": 150,
                 "options": [
-                    "Combat Master"
+                    {
+                        "name": "Combat Master",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -49,10 +85,22 @@
                 "name": "Caiman Warriors",
                 "cost": 522,
                 "options": [
-                    "Awaken the Beast",
-                    "Halberd",
-                    "Wizard Conclave",
-                    "Standard Bearer"
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -62,9 +110,18 @@
                 "name": "Tegu Warriors",
                 "cost": 487,
                 "options": [
-                    "Spear",
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 26,
@@ -74,8 +131,14 @@
                 "name": "Tegu Guards",
                 "cost": 507,
                 "options": [
-                    "Standard Bearer",
-                    "Koru Stone"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -85,7 +148,10 @@
                 "name": "Raptor Riders",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -95,7 +161,10 @@
                 "name": "Pteradon Riders",
                 "cost": 200,
                 "options": [
-                    "Magnetic Short Bow"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -105,7 +174,10 @@
                 "name": "Pteradon Riders",
                 "cost": 200,
                 "options": [
-                    "Magnetic Short Bow"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -115,8 +187,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 184,
                 "options": [
-                    "Blowpipe",
-                    "Chameleon"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -126,7 +204,10 @@
                 "name": "Stygiosaur Pack",
                 "cost": 445,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -146,10 +227,22 @@
                 "name": "Prelate",
                 "cost": 435,
                 "options": [
-                    "Trusted Adviser",
-                    "Altar of Battle",
-                    "Great Weapon",
-                    "Ullor's Horn"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Altar of Battle",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ullor's Horn",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -158,18 +251,54 @@
                 "name": "Battlefield Wizard",
                 "cost": 410,
                 "options": [
-                    "Essence of a Free Mind",
-                    "Arcane Engine",
-                    "Ice and Fire",
-                    "Wizard Adept",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Molten Copper",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow"
+                    {
+                        "name": "Essence of a Free Mind",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Arcane Engine",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -178,12 +307,30 @@
                 "name": "Marshal",
                 "cost": 335,
                 "options": [
-                    "Death Warrant",
-                    "Great Weapon",
-                    "Winter Cloak",
-                    "Great Griffon",
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Repeater Pistol"
+                    {
+                        "name": "Death Warrant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Winter Cloak",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -192,11 +339,26 @@
                 "name": "Marshal",
                 "cost": 270,
                 "options": [
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Imperial Seal",
-                    "General, Imperial Authority, and +1 Cou"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Imperial Seal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -205,11 +367,26 @@
                 "name": "Inquisitor",
                 "cost": 150,
                 "options": [
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "Repeater Pistol",
-                    "Hidden"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Hidden",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -218,8 +395,14 @@
                 "name": "State Infantry",
                 "cost": 410,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -229,8 +412,14 @@
                 "name": "State Infantry",
                 "cost": 410,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 40,
@@ -240,9 +429,18 @@
                 "name": "State Marksmen",
                 "cost": 222,
                 "options": [
-                    "Marksman's Pennant",
-                    "Standard Bearer",
-                    "Handgun"
+                    {
+                        "name": "Marksman's Pennant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Handgun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 16,
@@ -252,8 +450,14 @@
                 "name": "Imperial Detachment",
                 "cost": 210,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -263,7 +467,10 @@
                 "name": "Reiters",
                 "cost": 206,
                 "options": [
-                    "Repeater Gun"
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,

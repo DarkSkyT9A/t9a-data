@@ -13,19 +13,58 @@
                 "name": "Vampire Count",
                 "cost": 690,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Lahmia",
-                    "Commandment",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Eldritch Inscriptions",
-                    "Great Weapon",
-                    "Night's Crown"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Night's Crown",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -34,16 +73,46 @@
                 "name": "Necromancer",
                 "cost": 530,
                 "options": [
-                    "Evocation",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Necromantic Staff",
-                    "Lich"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -52,11 +121,26 @@
                 "name": "Barrow King",
                 "cost": 155,
                 "options": [
-                    "Light Troops",
-                    "Warding of Unity",
-                    "Great Weapon",
-                    "Hypnotic Pendant",
-                    "Captain"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -65,7 +149,10 @@
                 "name": "Ghouls",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 35,
@@ -75,9 +162,18 @@
                 "name": "Skeletons",
                 "cost": 342,
                 "options": [
-                    "Banner of Eldritch Might",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 34,
@@ -87,8 +183,14 @@
                 "name": "Skeletons",
                 "cost": 180,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -98,9 +200,18 @@
                 "name": "Barrow Guard",
                 "cost": 583,
                 "options": [
-                    "Halberd",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 32,
@@ -151,18 +262,54 @@
                 "name": "Sorcerer",
                 "cost": 585,
                 "options": [
-                    "General",
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Occultism",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Pentagram of Pain",
-                    "Umbral Majesty",
-                    "The Grave Calls",
-                    "Thrice-Forged",
-                    "Dark Familiar"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pentagram of Pain",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Umbral Majesty",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -171,11 +318,26 @@
                 "name": "Warriors",
                 "cost": 498,
                 "options": [
-                    "Standard Bearer",
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Pride",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pride",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -201,8 +363,14 @@
                 "name": "Chosen",
                 "cost": 590,
                 "options": [
-                    "Standard Bearer",
-                    "Greed"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -212,9 +380,18 @@
                 "name": "Warrior Knights",
                 "cost": 580,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard",
-                    "Great Weapon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -224,9 +401,18 @@
                 "name": "Chosen Knights",
                 "cost": 570,
                 "options": [
-                    "Standard Bearer",
-                    "Icon of the Infinite",
-                    "Wrath"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Icon of the Infinite",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -236,9 +422,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer",
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,

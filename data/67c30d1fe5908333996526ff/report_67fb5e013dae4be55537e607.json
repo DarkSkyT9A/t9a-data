@@ -13,15 +13,42 @@
                 "name": "Shaman",
                 "cost": 345,
                 "options": [
-                    "General",
-                    "Recruiting Officer",
-                    "Trusted Adviser",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Gut Roarer"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,10 +57,22 @@
                 "name": "Khan",
                 "cost": 260,
                 "options": [
-                    "Iron Fist",
-                    "Rod of Battle",
-                    "Battle Standard Bearer",
-                    "Ogre Crossbow"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,10 +81,22 @@
                 "name": "Tribesmen",
                 "cost": 549,
                 "options": [
-                    "Paired Weapons",
-                    "Pennant of the Great Grass Sky",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pennant of the Great Grass Sky",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -55,10 +106,22 @@
                 "name": "Tribesmen",
                 "cost": 452,
                 "options": [
-                    "Paired Weapons",
-                    "Banner of Courage",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 11,
@@ -68,9 +131,18 @@
                 "name": "Tusker Cavalry",
                 "cost": 565,
                 "options": [
-                    "Paired Weapons",
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -80,10 +152,22 @@
                 "name": "Mercenary Veterans",
                 "cost": 540,
                 "options": [
-                    "Flaming Standard",
-                    "Halberd",
-                    "Standard Bearer",
-                    "First Strike"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "First Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -93,8 +177,14 @@
                 "name": "Mercenary Gunners",
                 "cost": 480,
                 "options": [
-                    "Standard Bearer",
-                    "Ogre Crossbow and Accurate"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -128,7 +218,10 @@
                 "name": "Frost Mammoth",
                 "cost": 400,
                 "options": [
-                    "Ogre Crossbow"
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -147,17 +240,50 @@
                 "name": "Death Cult Hierarch",
                 "cost": 370,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Divination",
-                    "Foresight",
-                    "Chance of Redemption",
-                    "The Stars Align",
-                    "Mimic Cloak",
-                    "Scroll of Desiccation",
-                    "Soul Conduit"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Desiccation",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Soul Conduit",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -166,12 +292,30 @@
                 "name": "Nomarch",
                 "cost": 290,
                 "options": [
-                    "Talisman of the Void",
-                    "Captain and Attached",
-                    "Tomb Architect",
-                    "Amuut",
-                    "Shield",
-                    "Lance"
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Tomb Architect",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Amuut",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -180,12 +324,30 @@
                 "name": "Nomarch",
                 "cost": 245,
                 "options": [
-                    "Light Troops",
-                    "Book of the Dead",
-                    "Battle Standard Bearer",
-                    "Deathless Noble",
-                    "Shield",
-                    "Wild Warding"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Book of the Dead",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Deathless Noble",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -194,10 +356,22 @@
                 "name": "Nomarch",
                 "cost": 145,
                 "options": [
-                    "Light Troops",
-                    "Captain and Attached",
-                    "Tomb Architect",
-                    "Shield"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Tomb Architect",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -206,10 +380,22 @@
                 "name": "Skeleton Warriors",
                 "cost": 550,
                 "options": [
-                    "Flaming Standard",
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 55,
@@ -219,9 +405,18 @@
                 "name": "Skeleton Warriors",
                 "cost": 225,
                 "options": [
-                    "Shield",
-                    "Banner of the Entombed",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of the Entombed",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -231,9 +426,18 @@
                 "name": "Skeleton Warriors",
                 "cost": 225,
                 "options": [
-                    "Shield",
-                    "Banner of the Entombed",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of the Entombed",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 20,
@@ -243,8 +447,14 @@
                 "name": "Tomb Cataphracts",
                 "cost": 520,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -254,7 +464,10 @@
                 "name": "Tomb Cataphracts",
                 "cost": 510,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 5,

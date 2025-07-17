@@ -13,16 +13,46 @@
                 "name": "Anurarch Archmage",
                 "cost": 570,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Stampede Resonator Crystal",
-                    "Farseeing Mastery",
-                    "Guiding Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Stampede Resonator Crystal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Farseeing Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Guiding Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,10 +61,22 @@
                 "name": "Tegu Warriors",
                 "cost": 538,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Awaken the Beast",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -44,8 +86,14 @@
                 "name": "Caiman Warriors",
                 "cost": 482,
                 "options": [
-                    "Standard Bearer",
-                    "Halberd"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -55,8 +103,14 @@
                 "name": "Tegu Guards",
                 "cost": 465,
                 "options": [
-                    "Standard Bearer",
-                    "Koru Stone"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -74,7 +128,10 @@
                 "name": "Raptor Riders",
                 "cost": 340,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -84,7 +141,10 @@
                 "name": "Weapon Beasts",
                 "cost": 210,
                 "options": [
-                    "Salamander"
+                    {
+                        "name": "Salamander",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -94,7 +154,10 @@
                 "name": "Titanopod",
                 "cost": 565,
                 "options": [
-                    "Lodestone Shield"
+                    {
+                        "name": "Lodestone Shield",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"
@@ -103,7 +166,10 @@
                 "name": "Stygiosaur Pack",
                 "cost": 445,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -123,18 +189,54 @@
                 "name": "Mage",
                 "cost": 580,
                 "options": [
-                    "General",
-                    "Order of the Fiery Heart",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Gleaming Robe",
-                    "Amethyst Crystal"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Order of the Fiery Heart",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gleaming Robe",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Amethyst Crystal",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -143,8 +245,14 @@
                 "name": "Sea Guard",
                 "cost": 520,
                 "options": [
-                    "Standard Bearer",
-                    "War Banner of Rymâ"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "War Banner of Rymâ",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -154,8 +262,14 @@
                 "name": "Sea Guard",
                 "cost": 520,
                 "options": [
-                    "Standard Bearer",
-                    "War Banner of Rymâ"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "War Banner of Rymâ",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 25,
@@ -165,8 +279,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 550,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -176,8 +296,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 550,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -187,8 +313,14 @@
                 "name": "Sword Masters",
                 "cost": 480,
                 "options": [
-                    "Standard Bearer",
-                    "Navigator's Banner"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Navigator's Banner",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -198,7 +330,10 @@
                 "name": "Phoenix",
                 "cost": 400,
                 "options": [
-                    "Fire Phoenix"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -207,7 +342,10 @@
                 "name": "Phoenix",
                 "cost": 400,
                 "options": [
-                    "Fire Phoenix"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"

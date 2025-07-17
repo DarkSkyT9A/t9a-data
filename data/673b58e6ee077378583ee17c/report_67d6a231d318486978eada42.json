@@ -13,11 +13,26 @@
                 "name": "Commander",
                 "cost": 310,
                 "options": [
-                    "General",
-                    "Master of Canreig Tower",
-                    "Light Troops",
-                    "Protection of Dorac",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Master of Canreig Tower",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Protection of Dorac",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,12 +41,30 @@
                 "name": "Commander",
                 "cost": 240,
                 "options": [
-                    "Captain and Attached",
-                    "Queen's Cavalier",
-                    "Elven Horse",
-                    "Shield",
-                    "Lance",
-                    "Nova Flare"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Queen's Cavalier",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Elven Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Nova Flare",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -40,11 +73,26 @@
                 "name": "Commander",
                 "cost": 180,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Queen's Companion",
-                    "Moonlight Arrows",
-                    "Light Troops",
-                    "Longbow"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Queen's Companion",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Moonlight Arrows",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -53,7 +101,10 @@
                 "name": "Citizen Archers",
                 "cost": 378,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -63,7 +114,10 @@
                 "name": "Citizen Spears",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -73,7 +127,10 @@
                 "name": "Erlein Reavers",
                 "cost": 185,
                 "options": [
-                    "Bow"
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -83,7 +140,10 @@
                 "name": "Erlein Reavers",
                 "cost": 185,
                 "options": [
-                    "Bow"
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -93,8 +153,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 510,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -104,7 +170,10 @@
                 "name": "Lion Guard",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -114,8 +183,14 @@
                 "name": "Phoenix",
                 "cost": 440,
                 "options": [
-                    "Fire Phoenix",
-                    "Warden's Bond"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warden's Bond",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -124,8 +199,14 @@
                 "name": "Phoenix",
                 "cost": 440,
                 "options": [
-                    "Fire Phoenix",
-                    "Warden's Bond"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warden's Bond",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -134,7 +215,10 @@
                 "name": "Initiate of the Fiery Heart",
                 "cost": 400,
                 "options": [
-                    "Wizard Conclave"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -153,18 +237,54 @@
                 "name": "Prophet",
                 "cost": 540,
                 "options": [
-                    "General",
-                    "Prophet of Lugar",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Wall of Lead",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Paired Weapons",
-                    "Breath of the Brass Bull"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Prophet of Lugar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Breath of the Brass Bull",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -173,10 +293,22 @@
                 "name": "Overlord",
                 "cost": 513,
                 "options": [
-                    "Bull of Shamut",
-                    "Eye of the Bull",
-                    "Onyx Core",
-                    "Ring of Desiccation"
+                    {
+                        "name": "Bull of Shamut",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Eye of the Bull",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Onyx Core",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ring of Desiccation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -185,9 +317,18 @@
                 "name": "Taurukh Commissioner",
                 "cost": 305,
                 "options": [
-                    "Shield Breaker",
-                    "Paired Weapons",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Shield Breaker",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -196,9 +337,18 @@
                 "name": "Citadel Guard",
                 "cost": 536,
                 "options": [
-                    "Banner of Courage",
-                    "Pistol and Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Pistol and Spear",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -208,10 +358,22 @@
                 "name": "Citadel Guard",
                 "cost": 465,
                 "options": [
-                    "Flintlock Axe",
-                    "Banner of the Twice-Branded",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Flintlock Axe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -221,9 +383,18 @@
                 "name": "Taurukh Anointed",
                 "cost": 530,
                 "options": [
-                    "Paired Weapons",
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -233,9 +404,18 @@
                 "name": "Immortals",
                 "cost": 488,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Spear"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -253,7 +433,10 @@
                 "name": "Infernal Engine",
                 "cost": 440,
                 "options": [
-                    "Naphtha Thrower"
+                    {
+                        "name": "Naphtha Thrower",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "instruments of destruction"

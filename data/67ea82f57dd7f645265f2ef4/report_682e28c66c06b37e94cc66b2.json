@@ -13,15 +13,42 @@
                 "name": "Damsel",
                 "cost": 345,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Magical Heirloom",
-                    "Sainted"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Magical Heirloom",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sainted",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,10 +57,22 @@
                 "name": "Duke",
                 "cost": 310,
                 "options": [
-                    "Destrier",
-                    "Battle Standard Bearer",
-                    "Bastard Sword",
-                    "Generosity"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Generosity",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,9 +81,18 @@
                 "name": "Knights of the Realm",
                 "cost": 540,
                 "options": [
-                    "Lady's Favour",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Lady's Favour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -54,9 +102,18 @@
                 "name": "Mounted Serjeants",
                 "cost": 470,
                 "options": [
-                    "Great Weapon",
-                    "Relic Shroud",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Relic Shroud",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -66,8 +123,14 @@
                 "name": "Knights of the Quest",
                 "cost": 595,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -77,8 +140,14 @@
                 "name": "Knights of the Court",
                 "cost": 505,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -88,8 +157,14 @@
                 "name": "Men-at-Arms",
                 "cost": 336,
                 "options": [
-                    "Standard Bearer",
-                    "Castle Guard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Castle Guard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -99,7 +174,10 @@
                 "name": "Knights Penitent",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -109,7 +187,10 @@
                 "name": "Sky Heralds",
                 "cost": 210,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -119,7 +200,10 @@
                 "name": "Fey Knight",
                 "cost": 360,
                 "options": [
-                    "Champion of the Green Knight"
+                    {
+                        "name": "Champion of the Green Knight",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"
@@ -138,16 +222,46 @@
                 "name": "Swarm Priest",
                 "cost": 390,
                 "options": [
-                    "Recruiting Officer",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Thaumaturgy",
-                    "Weight of Judgement",
-                    "Holy Affliction",
-                    "Wrath of God",
-                    "Rain of Fire",
-                    "Mimic Cloak",
-                    "Caelysian Pantheon"
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Weight of Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wrath of God",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rain of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Caelysian Pantheon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -156,12 +270,30 @@
                 "name": "Bloodfur Legate",
                 "cost": 270,
                 "options": [
-                    "Light Troops",
-                    "Battle Standard Bearer",
-                    "Wild Warding",
-                    "Pistol",
-                    "Rodentium Bullets",
-                    "Spear"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Pistol",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Rodentium Bullets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -170,9 +302,18 @@
                 "name": "Vermin Senator",
                 "cost": 190,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Storm Rocket"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Storm Rocket",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -181,9 +322,18 @@
                 "name": "House Prefect",
                 "cost": 170,
                 "options": [
-                    "Captain and Attached",
-                    "Skorchit Alchemist",
-                    "Deepfire Thrower"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Skorchit Alchemist",
+                        "type": "house"
+                    },
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -192,9 +342,18 @@
                 "name": "House Prefect",
                 "cost": 170,
                 "options": [
-                    "Captain and Attached",
-                    "Skorchit Alchemist",
-                    "Deepfire Thrower"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Skorchit Alchemist",
+                        "type": "house"
+                    },
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -203,9 +362,18 @@
                 "name": "House Prefect",
                 "cost": 100,
                 "options": [
-                    "Rodentium Bullets",
-                    "Captain and Attached",
-                    "Stygian Overseer"
+                    {
+                        "name": "Rodentium Bullets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Stygian Overseer",
+                        "type": "house"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -228,10 +396,22 @@
                 "name": "Vermin Legionaries",
                 "cost": 355,
                 "options": [
-                    "Stalker's Standard",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -241,10 +421,22 @@
                 "name": "Vermin Legionaries",
                 "cost": 340,
                 "options": [
-                    "Flaming Standard",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 40,
@@ -254,10 +446,22 @@
                 "name": "Vermin Legionaries",
                 "cost": 335,
                 "options": [
-                    "Banner of Courage",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 40,
@@ -267,7 +471,10 @@
                 "name": "Vermin Artillery",
                 "cost": 195,
                 "options": [
-                    "Rakachit Mauss Rifle"
+                    {
+                        "name": "Rakachit Mauss Rifle",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -276,7 +483,10 @@
                 "name": "Vermin Artillery",
                 "cost": 195,
                 "options": [
-                    "Rakachit Mauss Rifle"
+                    {
+                        "name": "Rakachit Mauss Rifle",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -285,7 +495,10 @@
                 "name": "Shadowfur Stalkers",
                 "cost": 140,
                 "options": [
-                    "Throwing Weapons"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -295,7 +508,10 @@
                 "name": "Shadowfur Stalkers",
                 "cost": 140,
                 "options": [
-                    "Throwing Weapons"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -305,7 +521,10 @@
                 "name": "Experimental Weapon Teams",
                 "cost": 135,
                 "options": [
-                    "Canister Launcher"
+                    {
+                        "name": "Canister Launcher",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -315,7 +534,10 @@
                 "name": "Experimental Weapon Teams",
                 "cost": 135,
                 "options": [
-                    "Canister Launcher"
+                    {
+                        "name": "Canister Launcher",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 3,

@@ -20,15 +20,42 @@
                 "name": "Sorcerer",
                 "cost": 480,
                 "options": [
-                    "Light Troops",
-                    "Molten Copper",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Mimic Cloak"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -37,10 +64,22 @@
                 "name": "Doomlord",
                 "cost": 420,
                 "options": [
-                    "Light Troops",
-                    "Supernatural Dexterity",
-                    "Sigil of Protection",
-                    "Halberd"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -49,10 +88,22 @@
                 "name": "Warriors",
                 "cost": 576,
                 "options": [
-                    "Standard Bearer",
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Gluttony"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -62,11 +113,26 @@
                 "name": "Barbarians",
                 "cost": 224,
                 "options": [
-                    "Standard Bearer",
-                    "Paired Weapons",
-                    "Musician",
-                    "Shield",
-                    "Throwing Weapons"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 17,
@@ -76,7 +142,10 @@
                 "name": "Feldrak Elder",
                 "cost": 480,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -85,9 +154,18 @@
                 "name": "Forsworn",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard",
-                    "Great Weapon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -104,8 +182,14 @@
                 "name": "Feldraks",
                 "cost": 310,
                 "options": [
-                    "Standard Bearer",
-                    "Halberd"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -125,18 +209,54 @@
                 "name": "Runic Smith",
                 "cost": 395,
                 "options": [
-                    "General",
-                    "Recruiting Officer",
-                    "Shield Wall",
-                    "Rune of Retribution",
-                    "Rune of Lightning",
-                    "Rune of Harnessing",
-                    "Rune of Channelling",
-                    "Rune of Shielding",
-                    "Battle Rune",
-                    "Rune of Reckoning",
-                    "Rune of Gleaming",
-                    "Rune of Resilience"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Retribution",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Harnessing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Channelling",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Shielding",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Rune",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Reckoning",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -145,9 +265,18 @@
                 "name": "Dragon Seeker",
                 "cost": 345,
                 "options": [
-                    "Rune of Penetration",
-                    "Rune of Anger",
-                    "Grim Resolve"
+                    {
+                        "name": "Rune of Penetration",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Anger",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Grim Resolve",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -156,11 +285,26 @@
                 "name": "Thane",
                 "cost": 175,
                 "options": [
-                    "Great Weapon",
-                    "Rune of Denial",
-                    "Rune of Mining",
-                    "Captain and Attached",
-                    "Light Troops"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rune of Denial",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Mining",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -169,9 +313,18 @@
                 "name": "Greybeards",
                 "cost": 530,
                 "options": [
-                    "Shield Wall",
-                    "Runic Standard of the Hold",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -181,10 +334,22 @@
                 "name": "Clan Marksmen",
                 "cost": 470,
                 "options": [
-                    "Shield Wall",
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -194,7 +359,10 @@
                 "name": "Seekers",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -220,7 +388,10 @@
                 "name": "Deep Watch",
                 "cost": 432,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -244,9 +415,18 @@
                 "name": "Anvil of Power",
                 "cost": 200,
                 "options": [
-                    "Rune of Resolve",
-                    "Rune of Gleaming",
-                    "Rune of Resilience"
+                    {
+                        "name": "Rune of Resolve",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

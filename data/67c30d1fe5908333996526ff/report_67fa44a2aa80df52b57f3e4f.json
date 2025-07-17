@@ -13,12 +13,30 @@
                 "name": "Duke",
                 "cost": 375,
                 "options": [
-                    "General",
-                    "Revered Unicorn",
-                    "Shield Breaker",
-                    "Bastard Sword",
-                    "Sainted and Gallantry",
-                    "Faith"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Revered Unicorn",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Breaker",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Sainted and Gallantry",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Faith",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,9 +45,18 @@
                 "name": "Paladin",
                 "cost": 365,
                 "options": [
-                    "Pegasus Charger",
-                    "Lance",
-                    "Divine Judgement"
+                    {
+                        "name": "Pegasus Charger",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Divine Judgement",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -38,9 +65,18 @@
                 "name": "Paladin",
                 "cost": 330,
                 "options": [
-                    "Pegasus Charger",
-                    "Paired Weapons",
-                    "Hero's Heart"
+                    {
+                        "name": "Pegasus Charger",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -49,11 +85,26 @@
                 "name": "Folk Hero",
                 "cost": 235,
                 "options": [
-                    "Destrier",
-                    "Shield",
-                    "Attached",
-                    "Bannerman",
-                    "Cleric"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -62,11 +113,26 @@
                 "name": "Folk Hero",
                 "cost": 200,
                 "options": [
-                    "Trusted Adviser",
-                    "Destrier",
-                    "Shield",
-                    "Attached",
-                    "Cleric"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -75,10 +141,22 @@
                 "name": "Knights of the Realm",
                 "cost": 600,
                 "options": [
-                    "Flaming Standard",
-                    "Solemn Oath",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Solemn Oath",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -88,8 +166,14 @@
                 "name": "Mounted Serjeants",
                 "cost": 415,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -99,8 +183,14 @@
                 "name": "Knights of the Quest",
                 "cost": 530,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -110,7 +200,10 @@
                 "name": "Knights Penitent",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -120,7 +213,10 @@
                 "name": "Knights Penitent",
                 "cost": 250,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -130,7 +226,10 @@
                 "name": "Fey Knight",
                 "cost": 380,
                 "options": [
-                    "Chosen of the Snow Childe"
+                    {
+                        "name": "Chosen of the Snow Childe",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"

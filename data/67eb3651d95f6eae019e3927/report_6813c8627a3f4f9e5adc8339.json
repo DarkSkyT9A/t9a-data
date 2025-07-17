@@ -13,17 +13,50 @@
                 "name": "Sorcerer",
                 "cost": 730,
                 "options": [
-                    "Battleshrine",
-                    "Whispers of the Veil",
-                    "Wizard Master",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Pentagram of Pain",
-                    "The Grave Calls",
-                    "Basalt Infusion",
-                    "Dark Familiar"
+                    {
+                        "name": "Battleshrine",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pentagram of Pain",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,16 +65,46 @@
                 "name": "Chosen Lord",
                 "cost": 630,
                 "options": [
-                    "General",
-                    "Scythed Skywheel",
-                    "Stalker's Standard",
-                    "Thrice-Forged",
-                    "Talisman of Shielding",
-                    "Immortal Gauntlets",
-                    "Trophy Rack",
-                    "Lance",
-                    "Greed",
-                    "Luck of the Dark Gods"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Scythed Skywheel",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Luck of the Dark Gods",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -50,8 +113,14 @@
                 "name": "Barbarians",
                 "cost": 335,
                 "options": [
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -77,9 +146,18 @@
                 "name": "Chosen Knights",
                 "cost": 570,
                 "options": [
-                    "Standard Bearer",
-                    "Wasteland Torch",
-                    "Wrath"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Wasteland Torch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -89,9 +167,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer",
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -101,8 +188,14 @@
                 "name": "Feldraks",
                 "cost": 430,
                 "options": [
-                    "Standard Bearer",
-                    "Paired Weapons"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -112,9 +205,18 @@
                 "name": "Warrior Knights",
                 "cost": 350,
                 "options": [
-                    "Standard Bearer",
-                    "Aether Icon",
-                    "Lance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -134,14 +236,38 @@
                 "name": "Dread Prince",
                 "cost": 430,
                 "options": [
-                    "General",
-                    "Beastmaster",
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Seal of the Republic",
-                    "Paired Weapons",
-                    "Lacerating Touch",
-                    "Moithir's Mirror"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Beastmaster",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lacerating Touch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Moithir's Mirror",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -150,8 +276,14 @@
                 "name": "Temple Militants",
                 "cost": 356,
                 "options": [
-                    "Standard Bearer",
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -161,7 +293,10 @@
                 "name": "Temple Militants",
                 "cost": 526,
                 "options": [
-                    "Dancers of Yema"
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 23,
@@ -171,7 +306,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 276,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -181,7 +319,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -191,7 +332,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -201,9 +345,18 @@
                 "name": "Dread Knights",
                 "cost": 354,
                 "options": [
-                    "Lance",
-                    "Standard Bearer",
-                    "Banner of Urlain"
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -213,9 +366,18 @@
                 "name": "Dread Knights",
                 "cost": 348,
                 "options": [
-                    "Great Weapon and Elven Finesse",
-                    "Standard Bearer",
-                    "Banner of Urlain"
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 6,

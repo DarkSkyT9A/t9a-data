@@ -13,13 +13,34 @@
                 "name": "Forest Prince",
                 "cost": 770,
                 "options": [
-                    "Trusted Adviser",
-                    "Forest Dragon",
-                    "Sylvan Bow",
-                    "Sylvan Blades",
-                    "Spirit of the Whirlwind",
-                    "Obsidian Rock",
-                    "Binding Scroll"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Forest Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Sylvan Blades",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Spirit of the Whirlwind",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,16 +49,46 @@
                 "name": "Treefather Ancient",
                 "cost": 735,
                 "options": [
-                    "General",
-                    "Wizard",
-                    "Wizard Master",
-                    "Druidism",
-                    "Fountain of Youth",
-                    "Entwining Roots",
-                    "Veil of Mist",
-                    "Stone Skin",
-                    "Quicksand",
-                    "Verdant Rebirth"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Veil of Mist",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Stone Skin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksand",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Verdant Rebirth",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -46,9 +97,18 @@
                 "name": "Forest Guard",
                 "cost": 425,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Rending Banner"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -58,7 +118,10 @@
                 "name": "Sylvan Archers",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -68,7 +131,10 @@
                 "name": "Dryads",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -78,7 +144,10 @@
                 "name": "Heath Riders",
                 "cost": 190,
                 "options": [
-                    "Heath Hunters"
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -88,8 +157,14 @@
                 "name": "Forest Rangers",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer",
-                    "Sheltering Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -107,10 +182,22 @@
                 "name": "Briar Maidens",
                 "cost": 310,
                 "options": [
-                    "Standard Bearer",
-                    "Wizard Conclave",
-                    "Weal and Woe",
-                    "Swarm of Insects"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -130,11 +217,26 @@
                 "name": "Forest Prince",
                 "cost": 675,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Forest Dragon",
-                    "Eldritch Inscriptions",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Forest Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -143,14 +245,38 @@
                 "name": "Druid",
                 "cost": 370,
                 "options": [
-                    "Light Troops",
-                    "Talisman of the Void",
-                    "Binding Scroll",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -159,8 +285,14 @@
                 "name": "Thicket Shepherd",
                 "cost": 300,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Scarred Bark"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Scarred Bark",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -169,7 +301,10 @@
                 "name": "Dryads",
                 "cost": 405,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -179,7 +314,10 @@
                 "name": "Sylvan Archers",
                 "cost": 250,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -189,9 +327,18 @@
                 "name": "Heath Riders",
                 "cost": 205,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Heath Lancers"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Heath Lancers",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -201,7 +348,10 @@
                 "name": "Heath Riders",
                 "cost": 190,
                 "options": [
-                    "Heath Hunters"
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -211,7 +361,10 @@
                 "name": "Thicket Beasts",
                 "cost": 410,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -221,8 +374,14 @@
                 "name": "Kestrel Knights",
                 "cost": 340,
                 "options": [
-                    "Standard Bearer",
-                    "Lance and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -248,9 +407,18 @@
                 "name": "Briar Maidens",
                 "cost": 300,
                 "options": [
-                    "Weal and Woe",
-                    "Entwining Roots",
-                    "Wizard Conclave"
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

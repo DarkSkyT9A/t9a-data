@@ -13,15 +13,42 @@
                 "name": "Shaman",
                 "cost": 470,
                 "options": [
-                    "General",
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Fireball",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Cage of Embers",
-                    "Gut Roarer"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fireball",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cage of Embers",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,11 +57,26 @@
                 "name": "Khan",
                 "cost": 375,
                 "options": [
-                    "Destiny's Call",
-                    "Rod of Battle",
-                    "Godspeaker",
-                    "Battle Standard Bearer",
-                    "Brace of Ogre Pistols"
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Godspeaker",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -43,10 +85,22 @@
                 "name": "Tribesmen",
                 "cost": 472,
                 "options": [
-                    "Paired Weapons",
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -56,8 +110,14 @@
                 "name": "Tribesmen",
                 "cost": 206,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -67,7 +127,10 @@
                 "name": "Tribesmen",
                 "cost": 160,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 2,
                 "models": 4,
@@ -77,7 +140,10 @@
                 "name": "Bruisers",
                 "cost": 170,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -87,10 +153,22 @@
                 "name": "Mercenary Veterans",
                 "cost": 405,
                 "options": [
-                    "Banner of Courage",
-                    "Halberd",
-                    "Standard Bearer",
-                    "First Strike"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "First Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -100,10 +178,22 @@
                 "name": "Mercenary Veterans",
                 "cost": 295,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Lethal Strike",
-                    "Swiftstride"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lethal Strike",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Swiftstride",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -113,9 +203,18 @@
                 "name": "Tusker Cavalry",
                 "cost": 385,
                 "options": [
-                    "Paired Weapons",
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -140,7 +239,10 @@
                 "name": "Frost Mammoth",
                 "cost": 400,
                 "options": [
-                    "Ogre Crossbow"
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -149,8 +251,14 @@
                 "name": "Mercenary Giant",
                 "cost": 270,
                 "options": [
-                    "Iron Fist",
-                    "Devastating Charge"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Devastating Charge",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"

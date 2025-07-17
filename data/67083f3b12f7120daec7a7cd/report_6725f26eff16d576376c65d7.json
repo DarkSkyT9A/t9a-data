@@ -13,14 +13,38 @@
                 "name": "Anurarch Archmage",
                 "cost": 615,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Molten Copper",
-                    "Living Steel",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Binding Scroll",
-                    "Veil Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Veil Mastery",
+                        "type": "arcaneMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,10 +53,22 @@
                 "name": "Tegu Warriors",
                 "cost": 505,
                 "options": [
-                    "Wizard Conclave",
-                    "Awaken the Beast",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -42,8 +78,14 @@
                 "name": "Tegu Warriors",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 21,
@@ -53,7 +95,10 @@
                 "name": "Skink Hunters",
                 "cost": 170,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -63,9 +108,18 @@
                 "name": "Tegu Guards",
                 "cost": 588,
                 "options": [
-                    "Standard Bearer",
-                    "Koru Stone",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -75,8 +129,14 @@
                 "name": "Raptor Riders",
                 "cost": 588,
                 "options": [
-                    "Standard Bearer",
-                    "Obelisk of Collaboration"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Obelisk of Collaboration",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -86,7 +146,10 @@
                 "name": "Rhamphodon Riders",
                 "cost": 400,
                 "options": [
-                    "Musician"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -96,7 +159,10 @@
                 "name": "Weapon Beasts",
                 "cost": 460,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -106,7 +172,10 @@
                 "name": "Carnosaur",
                 "cost": 340,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"
@@ -125,13 +194,34 @@
                 "name": "Thane",
                 "cost": 295,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Steel",
-                    "Rune of Iron",
-                    "Rune of Lightning",
-                    "Rune of Mining"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Steel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Mining",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -140,9 +230,18 @@
                 "name": "Greybeards",
                 "cost": 507,
                 "options": [
-                    "Shield Wall",
-                    "Runic Standard of the Hold",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -152,9 +251,18 @@
                 "name": "Greybeards",
                 "cost": 235,
                 "options": [
-                    "Shield Wall",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -164,8 +272,14 @@
                 "name": "Clan Marksmen",
                 "cost": 271,
                 "options": [
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -175,8 +289,14 @@
                 "name": "Hold Guardians",
                 "cost": 495,
                 "options": [
-                    "Runic Standard of the Hold",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -186,7 +306,10 @@
                 "name": "Hold Guardians",
                 "cost": 265,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -196,7 +319,10 @@
                 "name": "Deep Watch",
                 "cost": 347,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -220,9 +346,18 @@
                 "name": "Miners",
                 "cost": 235,
                 "options": [
-                    "Great Weapon",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -232,7 +367,10 @@
                 "name": "Forge Wardens",
                 "cost": 215,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -250,7 +388,10 @@
                 "name": "Steam Copters",
                 "cost": 190,
                 "options": [
-                    "Shrapnel Grenades"
+                    {
+                        "name": "Shrapnel Grenades",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,

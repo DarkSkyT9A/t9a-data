@@ -13,15 +13,42 @@
                 "name": "Duke",
                 "cost": 625,
                 "options": [
-                    "General",
-                    "Fey Steed",
-                    "Tristan's Resolve",
-                    "Bastard Sword",
-                    "Fortress of Faith",
-                    "Percival's Panoply",
-                    "Potion of Swiftness",
-                    "Sainted and Gallantry",
-                    "Excellence"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Fey Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Tristan's Resolve",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Fortress of Faith",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Percival's Panoply",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Potion of Swiftness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sainted and Gallantry",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Excellence",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,15 +57,42 @@
                 "name": "Damsel",
                 "cost": 485,
                 "options": [
-                    "Destrier",
-                    "Sacred Chalice",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Wild Spikes",
-                    "Totemic Summon"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sacred Chalice",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -47,15 +101,42 @@
                 "name": "Folk Hero",
                 "cost": 335,
                 "options": [
-                    "Destrier",
-                    "Uther's Mettle",
-                    "Stalker's Standard",
-                    "Sigil of Protection",
-                    "Shield",
-                    "Light Lance",
-                    "Attached",
-                    "Bannerman",
-                    "Cleric"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Uther's Mettle",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -64,9 +145,18 @@
                 "name": "Mounted Serjeants",
                 "cost": 425,
                 "options": [
-                    "Great Weapon",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -76,9 +166,18 @@
                 "name": "Mounted Serjeants",
                 "cost": 310,
                 "options": [
-                    "Light Lance",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -88,8 +187,14 @@
                 "name": "Knights of the Realm",
                 "cost": 280,
                 "options": [
-                    "Banner of Courage",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -99,9 +204,18 @@
                 "name": "Knights of the Quest",
                 "cost": 595,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -111,8 +225,14 @@
                 "name": "Yeoman Outriders",
                 "cost": 155,
                 "options": [
-                    "Shield",
-                    "Throwing Weapons"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -122,9 +242,18 @@
                 "name": "The Lady's Courtier",
                 "cost": 425,
                 "options": [
-                    "Fountain of Youth",
-                    "Stone Skin",
-                    "Courtier of the Dusk"
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Stone Skin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Courtier of the Dusk",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"
@@ -133,7 +262,10 @@
                 "name": "Fey Knight",
                 "cost": 360,
                 "options": [
-                    "Champion of the Green Knight"
+                    {
+                        "name": "Champion of the Green Knight",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"
@@ -152,14 +284,38 @@
                 "name": "Maw of Akaan",
                 "cost": 830,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Mirrored Scales",
-                    "Unhinging Jaw"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -168,14 +324,38 @@
                 "name": "Miser of Sugulag",
                 "cost": 750,
                 "options": [
-                    "Wizard Adept",
-                    "Unnatural Roots",
-                    "Mirrored Scales",
-                    "Divination",
-                    "Foresight",
-                    "Chance of Redemption",
-                    "The Stars Align",
-                    "Segmented Shell"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -184,8 +364,14 @@
                 "name": "Succubi",
                 "cost": 335,
                 "options": [
-                    "Horrifying Visage",
-                    "Standard Bearer"
+                    {
+                        "name": "Horrifying Visage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -195,8 +381,14 @@
                 "name": "Succubi",
                 "cost": 335,
                 "options": [
-                    "Horrifying Visage",
-                    "Standard Bearer"
+                    {
+                        "name": "Horrifying Visage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -206,9 +398,18 @@
                 "name": "Imps",
                 "cost": 279,
                 "options": [
-                    "Standard Bearer",
-                    "All-Seeing Eye",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -218,9 +419,18 @@
                 "name": "Imps",
                 "cost": 279,
                 "options": [
-                    "Standard Bearer",
-                    "All-Seeing Eye",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 12,
@@ -230,8 +440,14 @@
                 "name": "Titanslayer Chariot",
                 "cost": 235,
                 "options": [
-                    "Standard Bearer",
-                    "Golden Helm"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Golden Helm",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -240,9 +456,18 @@
                 "name": "Threshing Engine",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Fly",
-                    "Hidden Knives"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Fly",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Hidden Knives",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -252,8 +477,14 @@
                 "name": "Threshing Engine",
                 "cost": 180,
                 "options": [
-                    "Fly",
-                    "Whipcrack Tail"
+                    {
+                        "name": "Fly",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Whipcrack Tail",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 1,
                 "models": 1,
@@ -263,10 +494,22 @@
                 "name": "Bloat Flies",
                 "cost": 580,
                 "options": [
-                    "Kaleidoscopic Flesh",
-                    "Unhinging Jaw",
-                    "Standard Bearer",
-                    "Favoured of Gluttony"
+                    {
+                        "name": "Kaleidoscopic Flesh",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Favoured of Gluttony",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

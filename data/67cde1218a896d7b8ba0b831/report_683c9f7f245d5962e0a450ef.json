@@ -13,13 +13,34 @@
                 "name": "Anurarch Archmage",
                 "cost": 675,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Carved Tablet",
-                    "Swarm of Insects",
-                    "Scroll of Power",
-                    "Veil Mastery",
-                    "Mystifying Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Carved Tablet",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Veil Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Mystifying Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,10 +49,22 @@
                 "name": "Tegu Warriors",
                 "cost": 590,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Standard Bearer",
-                    "Rending Banner"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -41,7 +74,10 @@
                 "name": "Skink Hunters",
                 "cost": 212,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -51,7 +87,10 @@
                 "name": "Skink Hunters",
                 "cost": 212,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 18,
@@ -61,8 +100,14 @@
                 "name": "Tegu Guards",
                 "cost": 528,
                 "options": [
-                    "Standard Bearer",
-                    "Koru Stone"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -72,7 +117,10 @@
                 "name": "Raptor Riders",
                 "cost": 500,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -82,7 +130,10 @@
                 "name": "Weapon Beasts",
                 "cost": 470,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -100,8 +151,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 214,
                 "options": [
-                    "Blowpipe",
-                    "Chameleon"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -111,8 +168,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 214,
                 "options": [
-                    "Blowpipe",
-                    "Chameleon"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -132,16 +195,46 @@
                 "name": "Chosen Lord",
                 "cost": 595,
                 "options": [
-                    "General",
-                    "Scythed Skywheel",
-                    "Trophy Rack",
-                    "Banner of Speed",
-                    "Thrice-Forged",
-                    "Paired Weapons",
-                    "Symbol of Slaughter",
-                    "Talisman of Shielding",
-                    "Gluttony",
-                    "Luck of the Dark Gods"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Scythed Skywheel",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Symbol of Slaughter",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Luck of the Dark Gods",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -150,11 +243,26 @@
                 "name": "Sorcerer",
                 "cost": 495,
                 "options": [
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Talisman of the Void",
-                    "Wizard Master",
-                    "Evocation"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -163,12 +271,30 @@
                 "name": "Barbarian Chief",
                 "cost": 480,
                 "options": [
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Rod of Battle",
-                    "Wyrd Stone",
-                    "Wasteland Behemoth",
-                    "Additional Limbs"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wasteland Behemoth",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Additional Limbs",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -177,9 +303,18 @@
                 "name": "Warriors",
                 "cost": 562,
                 "options": [
-                    "Spiked Shield",
-                    "Lust",
-                    "Standard Bearer"
+                    {
+                        "name": "Spiked Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -205,8 +340,14 @@
                 "name": "Forsworn",
                 "cost": 480,
                 "options": [
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -216,9 +357,18 @@
                 "name": "Chosen Knights",
                 "cost": 430,
                 "options": [
-                    "Wasteland Torch",
-                    "Gluttony",
-                    "Standard Bearer"
+                    {
+                        "name": "Wasteland Torch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -228,10 +378,22 @@
                 "name": "Warrior Knights",
                 "cost": 398,
                 "options": [
-                    "Banner of Speed",
-                    "Lance",
-                    "Envy",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Envy",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,

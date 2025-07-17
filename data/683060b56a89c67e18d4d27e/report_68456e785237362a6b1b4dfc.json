@@ -13,11 +13,26 @@
                 "name": "Overlord",
                 "cost": 595,
                 "options": [
-                    "Bull of Shamut",
-                    "Onyx Core",
-                    "Vorpal Binding",
-                    "Destiny's Call",
-                    "Ring of Desiccation"
+                    {
+                        "name": "Bull of Shamut",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Onyx Core",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Vorpal Binding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Ring of Desiccation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,16 +41,46 @@
                 "name": "Prophet",
                 "cost": 520,
                 "options": [
-                    "Light Troops",
-                    "Tablet of Vezodinezh",
-                    "Prophet of Ashuruk",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Tablet of Vezodinezh",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Prophet of Ashuruk",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,9 +89,18 @@
                 "name": "Citadel Guard",
                 "cost": 435,
                 "options": [
-                    "Flintlock Axe",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Flintlock Axe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -56,9 +110,18 @@
                 "name": "Citadel Guard",
                 "cost": 435,
                 "options": [
-                    "Flintlock Axe",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Flintlock Axe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -68,8 +131,14 @@
                 "name": "Shackled Slaves",
                 "cost": 170,
                 "options": [
-                    "Paired Weapons",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -79,7 +148,10 @@
                 "name": "Kadim Incarnates",
                 "cost": 560,
                 "options": [
-                    "Musician"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -89,10 +161,22 @@
                 "name": "Disciples of Lugar",
                 "cost": 520,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Banner of Shamut",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Shamut",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -102,7 +186,10 @@
                 "name": "Infernal Artillery",
                 "cost": 285,
                 "options": [
-                    "Titan Mortar"
+                    {
+                        "name": "Titan Mortar",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -111,7 +198,10 @@
                 "name": "Infernal Engine",
                 "cost": 470,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "instruments of destruction"
@@ -130,17 +220,50 @@
                 "name": "Shaman",
                 "cost": 555,
                 "options": [
-                    "Trusted Adviser",
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Pillars of Fire",
-                    "Cage of Embers",
-                    "Iron Fist",
-                    "Talisman of the Void",
-                    "Gut Roarer"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pillars of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cage of Embers",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -149,16 +272,46 @@
                 "name": "Mammoth Hunter",
                 "cost": 390,
                 "options": [
-                    "Touch of Greatness",
-                    "Heart-Ripper",
-                    "Iron Fist",
-                    "Rod of Battle",
-                    "Spinesplitter",
-                    "Battle Standard Bearer",
-                    "Light Troops",
-                    "Leader of the Pack",
-                    "Flaming Standard",
-                    "Ogre Crossbow"
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Heart-Ripper",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spinesplitter",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Leader of the Pack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -167,13 +320,34 @@
                 "name": "Mammoth Hunter",
                 "cost": 380,
                 "options": [
-                    "Wrestler's Belt",
-                    "Iron Fist",
-                    "Trolleater",
-                    "General, Disciplined and Wildheart",
-                    "Light Troops",
-                    "Scout and Vanguard",
-                    "Ogre Crossbow"
+                    {
+                        "name": "Wrestler's Belt",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Trolleater",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "General, Disciplined and Wildheart",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Scout and Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -190,8 +364,14 @@
                 "name": "Tribesmen",
                 "cost": 170,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -201,8 +381,14 @@
                 "name": "Tribesmen",
                 "cost": 170,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -212,8 +398,14 @@
                 "name": "Tribesmen",
                 "cost": 170,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 4,
@@ -223,9 +415,18 @@
                 "name": "Mercenary Gunners",
                 "cost": 498,
                 "options": [
-                    "Standard Bearer",
-                    "Ogre Crossbow and Accurate",
-                    "Magic Resistance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magic Resistance",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -272,7 +473,10 @@
                 "name": "Frost Mammoth",
                 "cost": 400,
                 "options": [
-                    "Ogre Crossbow"
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"

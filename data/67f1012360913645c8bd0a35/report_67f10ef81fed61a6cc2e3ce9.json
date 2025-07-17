@@ -13,20 +13,62 @@
                 "name": "Vampire Count",
                 "cost": 700,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Battleline Hero",
-                    "Vetala",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Flying Horror",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Destiny's Call",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flying Horror",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -35,13 +77,34 @@
                 "name": "Necromancer",
                 "cost": 355,
                 "options": [
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Touch of the Reaper",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Necromantic Staff"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -71,7 +134,10 @@
                 "name": "Ghouls",
                 "cost": 265,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -81,7 +147,10 @@
                 "name": "Ghouls",
                 "cost": 265,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -91,7 +160,10 @@
                 "name": "Ghouls",
                 "cost": 265,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 20,
@@ -109,8 +181,14 @@
                 "name": "Barrow Guard",
                 "cost": 220,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -120,8 +198,14 @@
                 "name": "Barrow Guard",
                 "cost": 220,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -171,19 +255,58 @@
                 "name": "Prophet",
                 "cost": 585,
                 "options": [
-                    "General",
-                    "Prophet of Nezibkesh",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Shield",
-                    "Tablet of Vezodinezh",
-                    "Binding Scroll"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Prophet of Nezibkesh",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Tablet of Vezodinezh",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -192,10 +315,22 @@
                 "name": "Lamassu Scholar",
                 "cost": 335,
                 "options": [
-                    "Dragon's Roar",
-                    "Hand of Glory",
-                    "Golden Idol of Shamut",
-                    "Curse of Nezibkesh"
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Golden Idol of Shamut",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Curse of Nezibkesh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -204,13 +339,34 @@
                 "name": "Vizier",
                 "cost": 245,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Sigil of Protection",
-                    "Flame of the East",
-                    "Obsidian Rock",
-                    "Battle Standard Bearer",
-                    "Spear"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Flame of the East",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -219,10 +375,22 @@
                 "name": "Citadel Guard",
                 "cost": 542,
                 "options": [
-                    "Banner of the Twice-Branded",
-                    "Pistol and Spear",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Pistol and Spear",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -232,10 +400,22 @@
                 "name": "Citadel Guard",
                 "cost": 465,
                 "options": [
-                    "Flintlock Axe",
-                    "Banner of the Twice-Branded",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Flintlock Axe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -245,8 +425,14 @@
                 "name": "Immortals",
                 "cost": 509,
                 "options": [
-                    "Infernal Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Infernal Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -256,8 +442,14 @@
                 "name": "Taurukh Anointed",
                 "cost": 415,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -267,8 +459,14 @@
                 "name": "Taurukh Anointed",
                 "cost": 415,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -278,7 +476,10 @@
                 "name": "Infernal Artillery",
                 "cost": 285,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -287,7 +488,10 @@
                 "name": "Gunnery Team",
                 "cost": 200,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

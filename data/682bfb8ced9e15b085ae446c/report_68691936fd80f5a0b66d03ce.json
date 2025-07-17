@@ -13,16 +13,46 @@
                 "name": "Temple Exarch",
                 "cost": 400,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Supernatural Dexterity",
-                    "Paired Weapons",
-                    "Lacerating Touch",
-                    "Spell Scroll"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lacerating Touch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spell Scroll",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,12 +61,30 @@
                 "name": "Temple Exarch",
                 "cost": 355,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Wizard Apprentice",
-                    "Divination",
-                    "Flaming Standard",
-                    "Great Weapon and Elven Finesse",
-                    "Ceinran's Scales"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ceinran's Scales",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -52,8 +100,14 @@
                 "name": "Silexian Spears",
                 "cost": 334,
                 "options": [
-                    "Caedhren's Pennon",
-                    "Standard Bearer"
+                    {
+                        "name": "Caedhren's Pennon",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -63,7 +117,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 276,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -73,8 +130,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -84,8 +147,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -95,9 +164,18 @@
                 "name": "Temple Militants",
                 "cost": 446,
                 "options": [
-                    "Sheltering Standard",
-                    "Standard Bearer",
-                    "Dancers of Yema"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -107,8 +185,14 @@
                 "name": "Judicators",
                 "cost": 365,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -118,9 +202,18 @@
                 "name": "Dread Acolytes",
                 "cost": 280,
                 "options": [
-                    "Warlock Acolytes",
-                    "Ice and Fire",
-                    "Illusory Paths"
+                    {
+                        "name": "Warlock Acolytes",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -130,7 +223,10 @@
                 "name": "Dread Acolytes",
                 "cost": 205,
                 "options": [
-                    "Temple Acolytes"
+                    {
+                        "name": "Temple Acolytes",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -140,7 +236,10 @@
                 "name": "Divine Altar",
                 "cost": 230,
                 "options": [
-                    "Altar of Tila"
+                    {
+                        "name": "Altar of Tila",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -163,8 +262,14 @@
                 "name": "Black Cloaks",
                 "cost": 165,
                 "options": [
-                    "Repeater Handbow and Poison Attacks",
-                    "Covert Operatives"
+                    {
+                        "name": "Repeater Handbow and Poison Attacks",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Covert Operatives",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -184,18 +289,54 @@
                 "name": "Sorcerer",
                 "cost": 715,
                 "options": [
-                    "Battleshrine",
-                    "Danse Macabre",
-                    "Wizard Master",
-                    "Occultism",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Pentagram of Pain",
-                    "Umbral Majesty",
-                    "The Grave Calls",
-                    "Aether Icon",
-                    "Lord of the Damned",
-                    "Wyrd Stone"
+                    {
+                        "name": "Battleshrine",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pentagram of Pain",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Umbral Majesty",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lord of the Damned",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -204,16 +345,46 @@
                 "name": "Chosen Lord",
                 "cost": 610,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Thrice-Forged",
-                    "Paired Weapons",
-                    "Symbol of Slaughter",
-                    "Veilgate Orb",
-                    "Trophy Rack",
-                    "Wrath",
-                    "Daemonic Wings"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Symbol of Slaughter",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Veilgate Orb",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Daemonic Wings",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -222,11 +393,26 @@
                 "name": "Barbarian Chief",
                 "cost": 120,
                 "options": [
-                    "Light Troops",
-                    "Banner of Speed",
-                    "Trophy Rack",
-                    "Great Weapon",
-                    "Captain and Attached"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -235,11 +421,26 @@
                 "name": "Warriors",
                 "cost": 590,
                 "options": [
-                    "Standard Bearer",
-                    "Zealots' Banner",
-                    "Halberd",
-                    "Wrath",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wrath",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 17,
@@ -249,10 +450,22 @@
                 "name": "Barbarians",
                 "cost": 307,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Speed",
-                    "Great Weapon",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -270,11 +483,26 @@
                 "name": "Warrior Knights",
                 "cost": 408,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Speed",
-                    "Lance",
-                    "Envy",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Envy",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,

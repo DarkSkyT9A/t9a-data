@@ -13,9 +13,18 @@
                 "name": "Paladin",
                 "cost": 490,
                 "options": [
-                    "Hippogriff",
-                    "Paired Weapons",
-                    "Hero's Heart"
+                    {
+                        "name": "Hippogriff",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -24,11 +33,26 @@
                 "name": "Duke",
                 "cost": 335,
                 "options": [
-                    "Destrier",
-                    "Lance",
-                    "Uther's Mettle",
-                    "Battle Standard Bearer",
-                    "Generosity"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Uther's Mettle",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Generosity",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -37,14 +61,38 @@
                 "name": "Damsel",
                 "cost": 300,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Savage Fury",
-                    "Awaken the Beast",
-                    "Sainted"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Sainted",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -53,9 +101,18 @@
                 "name": "Knights of the Realm",
                 "cost": 575,
                 "options": [
-                    "Solemn Oath",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Solemn Oath",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -65,9 +122,18 @@
                 "name": "Mounted Serjeants",
                 "cost": 425,
                 "options": [
-                    "Great Weapon",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -77,9 +143,18 @@
                 "name": "Knights of the Quest",
                 "cost": 595,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -89,10 +164,22 @@
                 "name": "Men-at-Arms",
                 "cost": 495,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Knight Banneret",
-                    "Knights Forlorn"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knights Forlorn",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -102,9 +189,18 @@
                 "name": "The Lady's Courtier",
                 "cost": 425,
                 "options": [
-                    "Stone Skin",
-                    "Courtier of the Dusk",
-                    "Soured Luck"
+                    {
+                        "name": "Stone Skin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Courtier of the Dusk",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Soured Luck",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"
@@ -113,7 +209,10 @@
                 "name": "Fey Knight",
                 "cost": 360,
                 "options": [
-                    "Champion of the Green Knight"
+                    {
+                        "name": "Champion of the Green Knight",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"
@@ -132,16 +231,46 @@
                 "name": "Necromancer",
                 "cost": 530,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Lich",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Necromantic Staff"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -150,19 +279,58 @@
                 "name": "Vampire Courtier",
                 "cost": 495,
                 "options": [
-                    "General and The Dead Arise",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "True Thirst",
-                    "Hypnotic Pendant",
-                    "Strigoi",
-                    "Strigoi General",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Mysteries of the Night",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "True Thirst",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Strigoi",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Strigoi General",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mysteries of the Night",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -171,7 +339,10 @@
                 "name": "Ghouls",
                 "cost": 415,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -181,9 +352,18 @@
                 "name": "Skeletons",
                 "cost": 350,
                 "options": [
-                    "Banner of Eldritch Might",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 35,
@@ -193,8 +373,14 @@
                 "name": "Skeletons",
                 "cost": 180,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -212,7 +398,10 @@
                 "name": "Ghasts",
                 "cost": 580,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -244,7 +433,10 @@
                 "name": "Vampire Knights",
                 "cost": 430,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

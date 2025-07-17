@@ -13,13 +13,34 @@
                 "name": "Duke",
                 "cost": 550,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Hippogriff",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Potion of Healing",
-                    "Excellence"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Hippogriff",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Healing",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Excellence",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,14 +49,38 @@
                 "name": "Damsel",
                 "cost": 470,
                 "options": [
-                    "Destrier",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Savage Fury",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Wild Spikes",
-                    "Totemic Summon"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,11 +89,26 @@
                 "name": "Folk Hero",
                 "cost": 235,
                 "options": [
-                    "Destrier",
-                    "Shield",
-                    "Attached",
-                    "Bannerman",
-                    "Cleric"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -57,8 +117,14 @@
                 "name": "Knights of the Realm",
                 "cost": 510,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -68,8 +134,14 @@
                 "name": "Mounted Serjeants",
                 "cost": 260,
                 "options": [
-                    "Light Lance",
-                    "Standard Bearer"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -79,8 +151,14 @@
                 "name": "Lowborn Levies",
                 "cost": 230,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -90,8 +168,14 @@
                 "name": "Knights of the Quest",
                 "cost": 595,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -101,7 +185,10 @@
                 "name": "Knights Penitent",
                 "cost": 530,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -111,7 +198,10 @@
                 "name": "Knights of the Court",
                 "cost": 465,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -121,7 +211,10 @@
                 "name": "Yeoman Outriders",
                 "cost": 150,
                 "options": [
-                    "Bow"
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -141,17 +234,50 @@
                 "name": "King",
                 "cost": 595,
                 "options": [
-                    "General",
-                    "Ancient Grudge",
-                    "Trusted Adviser",
-                    "Shield Bearers",
-                    "Rune of Steel",
-                    "Rune of Iron",
-                    "Rune of Destruction",
-                    "Rune of Might",
-                    "Rune of Craftsmanship",
-                    "Rune of Storms",
-                    "Rune of Mining"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Ancient Grudge",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Shield Bearers",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Rune of Steel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Destruction",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Craftsmanship",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Storms",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Mining",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -160,13 +286,34 @@
                 "name": "Thane",
                 "cost": 360,
                 "options": [
-                    "Shield Bearers",
-                    "Rune of Resistance",
-                    "Rune of Iron",
-                    "Rune of Lightning",
-                    "Rune of Craftsmanship",
-                    "Rune of Storms",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Shield Bearers",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Rune of Resistance",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Craftsmanship",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Storms",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -175,10 +322,22 @@
                 "name": "Clan Marksmen",
                 "cost": 350,
                 "options": [
-                    "Shield Wall",
-                    "Guild-Crafted Handgun",
-                    "Runic Standard of Steadiness",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -188,10 +347,22 @@
                 "name": "Clan Marksmen",
                 "cost": 330,
                 "options": [
-                    "Shield Wall",
-                    "Guild-Crafted Handgun",
-                    "Runic Standard of Steadiness",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 13,
@@ -201,9 +372,18 @@
                 "name": "Greybeards",
                 "cost": 324,
                 "options": [
-                    "Shield Wall",
-                    "Standard Bearer",
-                    "Throwing Weapons"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -213,8 +393,14 @@
                 "name": "King's Guard",
                 "cost": 435,
                 "options": [
-                    "Runic Standard of Grudges",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Grudges",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -224,8 +410,14 @@
                 "name": "Deep Watch",
                 "cost": 400,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -235,8 +427,14 @@
                 "name": "Forge Wardens",
                 "cost": 256,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -246,8 +444,14 @@
                 "name": "Field Artillery",
                 "cost": 250,
                 "options": [
-                    "Flaming Shot",
-                    "Organ Gun"
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Organ Gun",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -256,8 +460,14 @@
                 "name": "Field Artillery",
                 "cost": 250,
                 "options": [
-                    "Flaming Shot",
-                    "Organ Gun"
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Organ Gun",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -266,7 +476,10 @@
                 "name": "Steam Copters",
                 "cost": 225,
                 "options": [
-                    "Shrapnel Bombs"
+                    {
+                        "name": "Shrapnel Bombs",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -276,7 +489,10 @@
                 "name": "Steam Copters",
                 "cost": 225,
                 "options": [
-                    "Shrapnel Bombs"
+                    {
+                        "name": "Shrapnel Bombs",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 1,

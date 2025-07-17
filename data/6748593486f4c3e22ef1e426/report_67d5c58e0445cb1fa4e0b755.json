@@ -13,19 +13,58 @@
                 "name": "Vampire Count",
                 "cost": 700,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Battleline Hero",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Mysteries of the Night",
-                    "Skeletal Steed",
-                    "Wizard Adept",
-                    "Legend of the Black King",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mysteries of the Night",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Skeletal Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Legend of the Black King",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -34,13 +73,34 @@
                 "name": "Vampire Courtier",
                 "cost": 285,
                 "options": [
-                    "Flying Horror",
-                    "Bestial Bulk",
-                    "Light Troops",
-                    "Wizard Apprentice",
-                    "Halberd",
-                    "Rod of Battle",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Flying Horror",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Bestial Bulk",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -49,16 +109,46 @@
                 "name": "Vampire Courtier",
                 "cost": 255,
                 "options": [
-                    "Occultism",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "The Devouring Dark",
-                    "Flying Horror",
-                    "Bestial Bulk",
-                    "Light Troops",
-                    "Wizard Apprentice",
-                    "Halberd",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flying Horror",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Bestial Bulk",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -67,7 +157,10 @@
                 "name": "Ghouls",
                 "cost": 520,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 37,
@@ -77,9 +170,18 @@
                 "name": "Skeletons",
                 "cost": 370,
                 "options": [
-                    "Shield",
-                    "Sheltering Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -89,7 +191,10 @@
                 "name": "Zombies",
                 "cost": 165,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -99,8 +204,14 @@
                 "name": "Barrow Knights",
                 "cost": 495,
                 "options": [
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer"
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -118,8 +229,14 @@
                 "name": "Vampire Knights",
                 "cost": 540,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -147,15 +264,42 @@
                 "name": "Chosen Lord",
                 "cost": 850,
                 "options": [
-                    "General",
-                    "Wasteland Dragon",
-                    "Trophy Rack",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Immortal Gauntlets",
-                    "Wyrd Stone",
-                    "Sloth",
-                    "Dark Prelate"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wasteland Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sloth",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Dark Prelate",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -164,16 +308,46 @@
                 "name": "Sorcerer",
                 "cost": 560,
                 "options": [
-                    "Light Troops",
-                    "Thrice-Forged",
-                    "Dark Familiar",
-                    "Molten Copper",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Word of Iron",
-                    "Quicksilver Lash"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -182,10 +356,22 @@
                 "name": "Warriors",
                 "cost": 540,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -211,8 +397,14 @@
                 "name": "Chosen Knights",
                 "cost": 530,
                 "options": [
-                    "Greed",
-                    "Standard Bearer"
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -222,8 +414,14 @@
                 "name": "Chosen Knights",
                 "cost": 530,
                 "options": [
-                    "Greed",
-                    "Standard Bearer"
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -233,9 +431,18 @@
                 "name": "Forsworn",
                 "cost": 410,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -245,8 +452,14 @@
                 "name": "Battleshrine",
                 "cost": 320,
                 "options": [
-                    "Whispers of the Veil",
-                    "Danse Macabre"
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

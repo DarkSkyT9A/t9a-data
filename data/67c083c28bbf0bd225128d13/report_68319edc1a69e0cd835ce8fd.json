@@ -13,14 +13,38 @@
                 "name": "Dread Prince",
                 "cost": 640,
                 "options": [
-                    "General",
-                    "Beastmaster",
-                    "Battleline Hero",
-                    "Manticore",
-                    "Extraordinary Specimen",
-                    "Destiny's Call",
-                    "Height of Hubris",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Beastmaster",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Manticore",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Extraordinary Specimen",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Height of Hubris",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,11 +53,26 @@
                 "name": "Silexian Officer",
                 "cost": 440,
                 "options": [
-                    "Manticore",
-                    "Extraordinary Specimen",
-                    "Great Weapon and Elven Finesse",
-                    "Moithir's Mirror",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Manticore",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Extraordinary Specimen",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Moithir's Mirror",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -49,7 +88,10 @@
                 "name": "Silexian Spears",
                 "cost": 205,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -59,7 +101,10 @@
                 "name": "Silexian Spears",
                 "cost": 205,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -69,7 +114,10 @@
                 "name": "Silexian Spears",
                 "cost": 205,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 15,
@@ -79,8 +127,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -90,8 +144,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -101,9 +161,18 @@
                 "name": "Dread Knights",
                 "cost": 510,
                 "options": [
-                    "Lance",
-                    "Eye of the Gorgon",
-                    "Standard Bearer"
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Eye of the Gorgon",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -113,8 +182,14 @@
                 "name": "Shadow Riders",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer",
-                    "Light Lance and Repeater Crossbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Light Lance and Repeater Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -140,7 +215,10 @@
                 "name": "Kraken",
                 "cost": 380,
                 "options": [
-                    "Colossal Kraken"
+                    {
+                        "name": "Colossal Kraken",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "the menagerie"
@@ -166,10 +244,22 @@
                 "name": "Marshal",
                 "cost": 550,
                 "options": [
-                    "General, Imperial Authority, and +1 Cou",
-                    "Imperial Prince",
-                    "Battleline Hero",
-                    "Commanding Dragon"
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Imperial Prince",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Commanding Dragon",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -178,11 +268,26 @@
                 "name": "Marshal",
                 "cost": 355,
                 "options": [
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Great Griffon",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Winter Cloak"
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Winter Cloak",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -191,15 +296,42 @@
                 "name": "Battlefield Wizard",
                 "cost": 470,
                 "options": [
-                    "Talisman of Shielding",
-                    "Spell Scroll",
-                    "Arcane Engine",
-                    "Ice and Fire",
-                    "Ice and Fire",
-                    "Wizard Adept",
-                    "Cosmology",
-                    "Truth of Time",
-                    "Weal and Woe"
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spell Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Arcane Engine",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -208,8 +340,14 @@
                 "name": "Artificer",
                 "cost": 110,
                 "options": [
-                    "Horse",
-                    "Repeater Gun"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -218,9 +356,18 @@
                 "name": "State Infantry",
                 "cost": 540,
                 "options": [
-                    "Rending Banner",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 47,
@@ -230,9 +377,18 @@
                 "name": "State Infantry",
                 "cost": 520,
                 "options": [
-                    "Stalker's Standard",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 47,
@@ -242,9 +398,18 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 440,
                 "options": [
-                    "Lance",
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -254,7 +419,10 @@
                 "name": "Reiters",
                 "cost": 310,
                 "options": [
-                    "Brace of Pistols and Fire on Impact"
+                    {
+                        "name": "Brace of Pistols and Fire on Impact",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -264,7 +432,10 @@
                 "name": "Reiters",
                 "cost": 310,
                 "options": [
-                    "Brace of Pistols and Fire on Impact"
+                    {
+                        "name": "Brace of Pistols and Fire on Impact",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -274,7 +445,10 @@
                 "name": "Reiters",
                 "cost": 284,
                 "options": [
-                    "Repeater Gun"
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 2,
                 "models": 9,

@@ -13,16 +13,46 @@
                 "name": "Vampire Count",
                 "cost": 575,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Recruiting Officer",
-                    "Lahmia",
-                    "Commandment",
-                    "Light Troops",
-                    "Wizard Apprentice",
-                    "Destiny's Call",
-                    "Great Weapon",
-                    "Talisman of the Void",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,19 +61,58 @@
                 "name": "Vampire Count",
                 "cost": 560,
                 "options": [
-                    "Recruiting Officer",
-                    "Strigoi",
-                    "Ghoul Lord",
-                    "Occultism",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Light Troops",
-                    "Wizard Apprentice",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Hypnotic Pendant",
-                    "Binding Scroll",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Strigoi",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Ghoul Lord",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -73,8 +142,14 @@
                 "name": "Ghouls",
                 "cost": 575,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -84,10 +159,22 @@
                 "name": "Skeletons",
                 "cost": 475,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Spear and Shield",
-                    "Banner of Speed"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 50,
@@ -97,7 +184,10 @@
                 "name": "Zombies",
                 "cost": 225,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 33,
@@ -107,7 +197,10 @@
                 "name": "Ghasts",
                 "cost": 580,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -141,14 +234,38 @@
                 "name": "Miser of Sugulag",
                 "cost": 840,
                 "options": [
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Mirrored Scales"
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -157,9 +274,18 @@
                 "name": "Myrmidons",
                 "cost": 380,
                 "options": [
-                    "Unhinging Jaw",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 17,
@@ -169,9 +295,18 @@
                 "name": "Succubi",
                 "cost": 345,
                 "options": [
-                    "Horrifying Visage",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Horrifying Visage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -181,9 +316,18 @@
                 "name": "Imps",
                 "cost": 275,
                 "options": [
-                    "Mark of the Eternal Champion",
-                    "Standard Bearer",
-                    "Firestarter - Spear of Infinity"
+                    {
+                        "name": "Mark of the Eternal Champion",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Firestarter - Spear of Infinity",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -193,8 +337,14 @@
                 "name": "Clawed Fiends",
                 "cost": 505,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -204,7 +354,10 @@
                 "name": "Threshing Engine",
                 "cost": 440,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -214,7 +367,10 @@
                 "name": "Blazing Glory",
                 "cost": 335,
                 "options": [
-                    "Horns of Hubris"
+                    {
+                        "name": "Horns of Hubris",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -230,9 +386,18 @@
                 "name": "Bloat Flies",
                 "cost": 560,
                 "options": [
-                    "Unhinging Jaw",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

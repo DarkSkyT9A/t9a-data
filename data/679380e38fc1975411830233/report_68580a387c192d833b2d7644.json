@@ -13,10 +13,22 @@
                 "name": "Marshal",
                 "cost": 550,
                 "options": [
-                    "General, Imperial Authority, and +1 Cou",
-                    "Imperial Prince",
-                    "Battleline Hero",
-                    "Commanding Dragon"
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Imperial Prince",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Commanding Dragon",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -25,10 +37,22 @@
                 "name": "Marshal",
                 "cost": 325,
                 "options": [
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Great Griffon",
-                    "Halberd",
-                    "Winter Cloak"
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Winter Cloak",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -37,9 +61,18 @@
                 "name": "Marshal",
                 "cost": 225,
                 "options": [
-                    "Solitary",
-                    "Great Griffon",
-                    "Halberd"
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -48,14 +81,38 @@
                 "name": "Battlefield Wizard",
                 "cost": 300,
                 "options": [
-                    "Light Troops",
-                    "Exemplar's Flame",
-                    "Spell Scroll",
-                    "Ice and Fire",
-                    "Wizard Adept",
-                    "Cosmology",
-                    "Truth of Time",
-                    "Weal and Woe"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Exemplar's Flame",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spell Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -64,8 +121,14 @@
                 "name": "Artificer",
                 "cost": 90,
                 "options": [
-                    "Light Troops",
-                    "Repeater Gun"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -74,9 +137,18 @@
                 "name": "State Infantry",
                 "cost": 540,
                 "options": [
-                    "Stalker's Standard",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 49,
@@ -86,9 +158,18 @@
                 "name": "State Infantry",
                 "cost": 540,
                 "options": [
-                    "Rending Banner",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 47,
@@ -98,8 +179,14 @@
                 "name": "State Infantry",
                 "cost": 470,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 46,
@@ -109,7 +196,10 @@
                 "name": "State Marksmen",
                 "cost": 190,
                 "options": [
-                    "Handgun"
+                    {
+                        "name": "Handgun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -119,7 +209,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -153,15 +246,42 @@
                 "name": "Swarm Priest",
                 "cost": 390,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Weight of Judgement",
-                    "Wrath of God",
-                    "Rain of Fire",
-                    "Mimic Cloak",
-                    "Caelysian Pantheon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weight of Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wrath of God",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rain of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Caelysian Pantheon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -170,13 +290,34 @@
                 "name": "Bloodfur Legate",
                 "cost": 345,
                 "options": [
-                    "Light Troops",
-                    "Destiny's Call",
-                    "Swarm Master",
-                    "Rod of Battle",
-                    "Battle Standard Bearer",
-                    "Banner of Courage",
-                    "Pistol"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Swarm Master",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -185,11 +326,26 @@
                 "name": "Vermin Senator",
                 "cost": 230,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Tarina's Lyre",
-                    "Storm Rocket"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Tarina's Lyre",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Storm Rocket",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -198,9 +354,18 @@
                 "name": "House Prefect",
                 "cost": 170,
                 "options": [
-                    "Captain and Attached",
-                    "Skorchit Alchemist",
-                    "Deepfire Thrower"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Skorchit Alchemist",
+                        "type": "house"
+                    },
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -209,10 +374,22 @@
                 "name": "House Prefect",
                 "cost": 150,
                 "options": [
-                    "Talisman of the Void",
-                    "Rodentium Bullets",
-                    "Captain and Attached",
-                    "Stygian Overseer"
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Rodentium Bullets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Stygian Overseer",
+                        "type": "house"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -221,9 +398,18 @@
                 "name": "House Prefect",
                 "cost": 100,
                 "options": [
-                    "Rodentium Bullets",
-                    "Captain and Attached",
-                    "Stygian Overseer"
+                    {
+                        "name": "Rodentium Bullets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Stygian Overseer",
+                        "type": "house"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -232,10 +418,22 @@
                 "name": "Vermin Legionaries",
                 "cost": 383,
                 "options": [
-                    "Stalker's Standard",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 44,
@@ -245,10 +443,22 @@
                 "name": "Vermin Legionaries",
                 "cost": 342,
                 "options": [
-                    "Banner of Courage",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 41,
@@ -258,9 +468,18 @@
                 "name": "Vermin Legionaries",
                 "cost": 301,
                 "options": [
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 38,
@@ -277,7 +496,10 @@
                 "name": "Experimental Weapon Teams",
                 "cost": 188,
                 "options": [
-                    "Jezail and Shield"
+                    {
+                        "name": "Jezail and Shield",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -287,7 +509,10 @@
                 "name": "Shadowfur Stalkers",
                 "cost": 140,
                 "options": [
-                    "Throwing Weapons"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,

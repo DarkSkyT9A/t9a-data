@@ -13,9 +13,18 @@
                 "name": "King",
                 "cost": 220,
                 "options": [
-                    "Light Troops",
-                    "Great Weapon",
-                    "Rune of Mining"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rune of Mining",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -24,8 +33,14 @@
                 "name": "King",
                 "cost": 210,
                 "options": [
-                    "Light Troops",
-                    "Great Weapon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -34,8 +49,14 @@
                 "name": "King",
                 "cost": 210,
                 "options": [
-                    "Light Troops",
-                    "Great Weapon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -44,8 +65,14 @@
                 "name": "King",
                 "cost": 210,
                 "options": [
-                    "Light Troops",
-                    "Great Weapon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 3,
                 "category": "Characters"
@@ -54,10 +81,22 @@
                 "name": "Greybeards",
                 "cost": 540,
                 "options": [
-                    "Shield Wall",
-                    "Standard Bearer",
-                    "Runic Standard of the Hold",
-                    "Musician"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -67,8 +106,14 @@
                 "name": "Greybeards",
                 "cost": 200,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -78,8 +123,14 @@
                 "name": "Clan Marksmen",
                 "cost": 270,
                 "options": [
-                    "Standard Bearer",
-                    "Crossbow and Great Weapon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow and Great Weapon",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -89,7 +140,10 @@
                 "name": "King's Guard",
                 "cost": 395,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -99,7 +153,10 @@
                 "name": "King's Guard",
                 "cost": 395,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -109,7 +166,10 @@
                 "name": "King's Guard",
                 "cost": 395,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 20,
@@ -119,7 +179,10 @@
                 "name": "King's Guard",
                 "cost": 395,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 3,
                 "models": 20,
@@ -163,14 +226,38 @@
                 "name": "Battlefield Wizard",
                 "cost": 310,
                 "options": [
-                    "Curse of Lycanthropy",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Spell Scroll"
+                    {
+                        "name": "Curse of Lycanthropy",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spell Scroll",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -179,10 +266,22 @@
                 "name": "Prelate",
                 "cost": 270,
                 "options": [
-                    "Horse",
-                    "Ghostly Guard",
-                    "King Slayer",
-                    "Great Weapon"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -191,10 +290,22 @@
                 "name": "Marshal",
                 "cost": 200,
                 "options": [
-                    "Horse",
-                    "Touch of Greatness",
-                    "Shield",
-                    "Battle Standard Bearer and Imperial Authority"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -203,11 +314,26 @@
                 "name": "Marshal",
                 "cost": 190,
                 "options": [
-                    "Light Troops",
-                    "Blacksteel",
-                    "Death Warrant",
-                    "Shield",
-                    "General, Imperial Authority, and +1 Cou"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Death Warrant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -216,8 +342,14 @@
                 "name": "Artificer",
                 "cost": 110,
                 "options": [
-                    "Horse",
-                    "Repeater Gun"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -226,8 +358,14 @@
                 "name": "Artificer",
                 "cost": 95,
                 "options": [
-                    "Light Troops",
-                    "Long Rifle"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Long Rifle",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -236,10 +374,22 @@
                 "name": "Knightly Orders",
                 "cost": 564,
                 "options": [
-                    "Shield",
-                    "Lance",
-                    "Distortion Emblem",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -249,9 +399,18 @@
                 "name": "Electoral Cavalry",
                 "cost": 374,
                 "options": [
-                    "Shield",
-                    "Lance",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -261,9 +420,18 @@
                 "name": "State Infantry",
                 "cost": 320,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer",
-                    "Spear"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -273,7 +441,10 @@
                 "name": "State Marksmen",
                 "cost": 220,
                 "options": [
-                    "Crossbow"
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -283,8 +454,14 @@
                 "name": "Imperial Detachment",
                 "cost": 210,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -294,8 +471,14 @@
                 "name": "Imperial Detachment",
                 "cost": 210,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -305,7 +488,10 @@
                 "name": "Reiters",
                 "cost": 180,
                 "options": [
-                    "Repeater Gun"
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -315,7 +501,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 175,
                 "options": [
-                    "Volley Gun"
+                    {
+                        "name": "Volley Gun",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -324,7 +513,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 150,
                 "options": [
-                    "Imperial Rocketeer"
+                    {
+                        "name": "Imperial Rocketeer",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"

@@ -13,14 +13,38 @@
                 "name": "Chieftain",
                 "cost": 350,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Light Troops",
-                    "Shield",
-                    "Spear",
-                    "Hunter's Honour",
-                    "Glyph of Amryl",
-                    "Song of Cenyrn",
-                    "Forest Guardian"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hunter's Honour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Glyph of Amryl",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Song of Cenyrn",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Forest Guardian",
+                        "type": "kindred"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,21 +53,66 @@
                 "name": "Druid",
                 "cost": 340,
                 "options": [
-                    "General",
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Sylvan Bow",
-                    "Essence of a Free Mind",
-                    "Spell Scroll",
-                    "Wizard Adept",
-                    "Cosmology",
-                    "Truth of Time",
-                    "Weal and Woe",
-                    "Ice and Fire",
-                    "Druidism",
-                    "Entwining Roots",
-                    "Veil of Mist",
-                    "Gravel Storm"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Essence of a Free Mind",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spell Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Veil of Mist",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gravel Storm",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -52,7 +121,10 @@
                 "name": "Sylvan Archers",
                 "cost": 335,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -62,7 +134,10 @@
                 "name": "Sylvan Archers",
                 "cost": 335,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -72,7 +147,10 @@
                 "name": "Heath Riders",
                 "cost": 335,
                 "options": [
-                    "Heath Hunters"
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -82,7 +160,10 @@
                 "name": "Forest Guard",
                 "cost": 165,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -92,8 +173,14 @@
                 "name": "Forest Rangers",
                 "cost": 430,
                 "options": [
-                    "Standard Bearer",
-                    "Vanguard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -103,8 +190,14 @@
                 "name": "Forest Rangers",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer",
-                    "Vanguard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -114,7 +207,10 @@
                 "name": "Forest Rangers",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 10,
@@ -148,7 +244,10 @@
                 "name": "Wild Huntsmen",
                 "cost": 240,
                 "options": [
-                    "Lance"
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -158,7 +257,10 @@
                 "name": "Kestrel Knights",
                 "cost": 240,
                 "options": [
-                    "Skirmisher, Light Lance and Sylvan Bow"
+                    {
+                        "name": "Skirmisher, Light Lance and Sylvan Bow",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -168,7 +270,10 @@
                 "name": "Briar Maidens",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -188,15 +293,42 @@
                 "name": "Sanctioned Warlock",
                 "cost": 490,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Talisman of the Void"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -205,12 +337,30 @@
                 "name": "Dread Prince",
                 "cost": 370,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Seal of the Republic",
-                    "Moithir's Mirror",
-                    "Height of Hubris",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Moithir's Mirror",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Height of Hubris",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -219,7 +369,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 220,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -229,7 +382,10 @@
                 "name": "Silexian Spears",
                 "cost": 205,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -239,8 +395,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -250,8 +412,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -261,7 +429,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 2,
                 "models": 10,
@@ -271,9 +442,18 @@
                 "name": "Temple Militants",
                 "cost": 544,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard",
-                    "Dancers of Yema"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -283,8 +463,14 @@
                 "name": "Judicators",
                 "cost": 365,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Urlain"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -294,7 +480,10 @@
                 "name": "Divine Altar",
                 "cost": 240,
                 "options": [
-                    "Altar of Nabh"
+                    {
+                        "name": "Altar of Nabh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

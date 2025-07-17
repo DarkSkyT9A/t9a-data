@@ -13,16 +13,46 @@
                 "name": "Chosen Lord",
                 "cost": 870,
                 "options": [
-                    "General",
-                    "Wasteland Dragon",
-                    "Trophy Rack",
-                    "Banner of Speed",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Immortal Gauntlets",
-                    "Wyrd Stone",
-                    "Lust",
-                    "Dark Prelate"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wasteland Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Dark Prelate",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,19 +61,58 @@
                 "name": "Sorcerer",
                 "cost": 605,
                 "options": [
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Thrice-Forged",
-                    "Paired Weapons",
-                    "Giant Slayer",
-                    "Binding Scroll",
-                    "Molten Copper",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Word of Iron",
-                    "Quicksilver Lash"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -52,10 +121,22 @@
                 "name": "Warriors",
                 "cost": 598,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Lust",
-                    "Standard Bearer"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -65,10 +146,22 @@
                 "name": "Barbarians",
                 "cost": 317,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Musician",
-                    "Throwing Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 27,
@@ -78,8 +171,14 @@
                 "name": "Chosen Knights",
                 "cost": 405,
                 "options": [
-                    "Lust",
-                    "Standard Bearer"
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -96,9 +195,18 @@
                 "name": "Forsworn",
                 "cost": 330,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -108,9 +216,18 @@
                 "name": "Forsworn",
                 "cost": 330,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -146,15 +263,42 @@
                 "name": "Treefather Ancient",
                 "cost": 735,
                 "options": [
-                    "Wizard",
-                    "Wizard Master",
-                    "Druidism",
-                    "Fountain of Youth",
-                    "Veil of Mist",
-                    "Gravel Storm",
-                    "Stone Skin",
-                    "Quicksand",
-                    "Verdant Rebirth"
+                    {
+                        "name": "Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Veil of Mist",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gravel Storm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stone Skin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksand",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Verdant Rebirth",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -163,11 +307,26 @@
                 "name": "Forest Prince",
                 "cost": 670,
                 "options": [
-                    "General",
-                    "Forest Dragon",
-                    "Eldritch Inscriptions",
-                    "Great Weapon and Elven Finesse",
-                    "Obsidian Rock"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Forest Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -176,12 +335,30 @@
                 "name": "Chieftain",
                 "cost": 185,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Sylvan Bow",
-                    "Sylvan Blades",
-                    "Pathfinder",
-                    "Solitary"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Sylvan Blades",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pathfinder",
+                        "type": "kindred"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -190,8 +367,14 @@
                 "name": "Forest Guard",
                 "cost": 383,
                 "options": [
-                    "Rending Banner",
-                    "Standard Bearer"
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -201,7 +384,10 @@
                 "name": "Sylvan Archers",
                 "cost": 318,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -211,7 +397,10 @@
                 "name": "Sylvan Archers",
                 "cost": 318,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 14,
@@ -221,8 +410,14 @@
                 "name": "Kestrel Knights",
                 "cost": 250,
                 "options": [
-                    "Standard Bearer",
-                    "Skirmisher, Light Lance and Sylvan Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Skirmisher, Light Lance and Sylvan Bow",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -232,7 +427,10 @@
                 "name": "Forest Rangers",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -242,7 +440,10 @@
                 "name": "Forest Rangers",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -252,10 +453,22 @@
                 "name": "Briar Maidens",
                 "cost": 440,
                 "options": [
-                    "Standard Bearer",
-                    "Wizard Conclave",
-                    "Weal and Woe",
-                    "Swarm of Insects"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -265,7 +478,10 @@
                 "name": "Briar Maidens",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,

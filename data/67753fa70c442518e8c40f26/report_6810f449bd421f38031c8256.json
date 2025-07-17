@@ -13,16 +13,46 @@
                 "name": "Chosen Lord",
                 "cost": 870,
                 "options": [
-                    "General",
-                    "Wasteland Dragon",
-                    "Trophy Rack",
-                    "Banner of Speed",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Immortal Gauntlets",
-                    "Wyrd Stone",
-                    "Lust",
-                    "Dark Prelate"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wasteland Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Dark Prelate",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,17 +61,50 @@
                 "name": "Sorcerer",
                 "cost": 585,
                 "options": [
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Thrice-Forged",
-                    "Dark Familiar",
-                    "Molten Copper",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Word of Iron",
-                    "Quicksilver Lash"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -50,10 +113,22 @@
                 "name": "Warriors",
                 "cost": 560,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -79,9 +154,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -91,9 +175,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -103,8 +196,14 @@
                 "name": "Chosen Knights",
                 "cost": 405,
                 "options": [
-                    "Lust",
-                    "Standard Bearer"
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -131,14 +230,38 @@
                 "name": "Orc Warlord",
                 "cost": 560,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Wyvern",
-                    "Big Wing",
-                    "Destiny's Call",
-                    "Eldritch Inscriptions",
-                    "Lance",
-                    "Monster Munch"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wyvern",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Big Wing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Monster Munch",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -147,15 +270,42 @@
                 "name": "Orc Shaman",
                 "cost": 460,
                 "options": [
-                    "Light Troops",
-                    "Mimic Cloak",
-                    "Wizard Master",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Weight of Judgement",
-                    "Holy Affliction",
-                    "Wrath of God",
-                    "Rain of Fire"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weight of Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wrath of God",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rain of Fire",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -164,12 +314,30 @@
                 "name": "Goblin Demagogue",
                 "cost": 320,
                 "options": [
-                    "Death Cheater",
-                    "Shield",
-                    "Lance",
-                    "Battle Standard Bearer",
-                    "Pet Monster",
-                    "Huntsman Spider"
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Pet Monster",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Huntsman Spider",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -178,9 +346,18 @@
                 "name": "Veteran Orcs",
                 "cost": 364,
                 "options": [
-                    "Shield",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -190,9 +367,18 @@
                 "name": "Veteran Orcs",
                 "cost": 364,
                 "options": [
-                    "Shield",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -202,9 +388,18 @@
                 "name": "Goblin Rabble",
                 "cost": 290,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 45,
@@ -214,9 +409,18 @@
                 "name": "Iron Orcs",
                 "cost": 539,
                 "options": [
-                    "Stalker's Standard",
-                    "Headbashers",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Headbashers",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -233,8 +437,14 @@
                 "name": "Guardian Behemoth",
                 "cost": 350,
                 "options": [
-                    "Creepy-Crawlies",
-                    "Wicked Horns"
+                    {
+                        "name": "Creepy-Crawlies",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wicked Horns",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

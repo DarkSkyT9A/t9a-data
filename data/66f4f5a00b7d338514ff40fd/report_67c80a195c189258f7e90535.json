@@ -13,19 +13,58 @@
                 "name": "Vampire Count",
                 "cost": 685,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Battleline Hero",
-                    "Lahmia",
-                    "Commandment",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Great Weapon",
-                    "Hypnotic Pendant"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -34,13 +73,34 @@
                 "name": "Necromancer",
                 "cost": 530,
                 "options": [
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Touch of the Reaper",
-                    "Wizard Adept",
-                    "Talisman of Shielding",
-                    "Cadaver Wagon"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Cadaver Wagon",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -49,9 +109,18 @@
                 "name": "Barrow King",
                 "cost": 85,
                 "options": [
-                    "Skeletal Steed",
-                    "Lance",
-                    "Captain"
+                    {
+                        "name": "Skeletal Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -60,10 +129,22 @@
                 "name": "Skeletons",
                 "cost": 515,
                 "options": [
-                    "Banner of Speed",
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 55,
@@ -89,9 +170,18 @@
                 "name": "Barrow Guard",
                 "cost": 507,
                 "options": [
-                    "Halberd",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -101,7 +191,10 @@
                 "name": "Ghasts",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -111,8 +204,14 @@
                 "name": "Barrow Knights",
                 "cost": 300,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -140,9 +239,18 @@
                 "name": "Dread Prince",
                 "cost": 730,
                 "options": [
-                    "Imperious Dragon",
-                    "Great Weapon and Elven Finesse",
-                    "Crown of the Wizard King"
+                    {
+                        "name": "Imperious Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Crown of the Wizard King",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -151,15 +259,42 @@
                 "name": "Dread Prince",
                 "cost": 450,
                 "options": [
-                    "General",
-                    "Academy Commander",
-                    "Light Troops",
-                    "Kraken's Hide",
-                    "Death Cheater",
-                    "Paired Weapons",
-                    "Lacerating Touch",
-                    "Height of Hubris",
-                    "Ring of the Obsidian Thrones"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Academy Commander",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Kraken's Hide",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lacerating Touch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Height of Hubris",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ring of the Obsidian Thrones",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -168,14 +303,38 @@
                 "name": "Temple Exarch",
                 "cost": 400,
                 "options": [
-                    "Seal of the Republic",
-                    "Great Weapon and Elven Finesse",
-                    "Talisman of the Void",
-                    "Wizard Adept",
-                    "Divination",
-                    "Foresight",
-                    "The Stars Align",
-                    "Fate's Judgement"
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Fate's Judgement",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -184,8 +343,14 @@
                 "name": "Silexian Spears",
                 "cost": 510,
                 "options": [
-                    "Banner of Courage",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 35,
@@ -195,7 +360,10 @@
                 "name": "Corsairs",
                 "cost": 245,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -205,7 +373,10 @@
                 "name": "Corsairs",
                 "cost": 245,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 14,
@@ -215,8 +386,14 @@
                 "name": "Judicators",
                 "cost": 545,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -226,9 +403,18 @@
                 "name": "Dread Acolytes",
                 "cost": 255,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer",
-                    "Temple Acolytes"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Temple Acolytes",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -238,7 +424,10 @@
                 "name": "Divine Altar",
                 "cost": 240,
                 "options": [
-                    "Altar of Nabh"
+                    {
+                        "name": "Altar of Nabh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

@@ -13,14 +13,38 @@
                 "name": "Shaman",
                 "cost": 630,
                 "options": [
-                    "General",
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Destiny's Call",
-                    "Iron Fist",
-                    "Rod of Battle",
-                    "Binding Scroll",
-                    "Gut Roarer"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,14 +53,38 @@
                 "name": "Mammoth Hunter",
                 "cost": 360,
                 "options": [
-                    "Basalt Infusion",
-                    "Paired Weapons",
-                    "Eldritch Inscriptions",
-                    "Potion of Swiftness",
-                    "Headhunter",
-                    "Light Troops",
-                    "Scout and Vanguard",
-                    "Hunting Spear"
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Swiftness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Headhunter",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Scout and Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -45,11 +93,26 @@
                 "name": "Khan",
                 "cost": 355,
                 "options": [
-                    "Warding of Unity",
-                    "Great Weapon",
-                    "Lygur's Tongue",
-                    "Trolleater",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lygur's Tongue",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Trolleater",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -58,9 +121,18 @@
                 "name": "Bruisers",
                 "cost": 580,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -70,10 +142,22 @@
                 "name": "Tribesmen",
                 "cost": 459,
                 "options": [
-                    "Iron Fist",
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -83,12 +167,30 @@
                 "name": "Mercenary Veterans",
                 "cost": 510,
                 "options": [
-                    "Banner of the Gyengget",
-                    "Halberd",
-                    "Standard Bearer",
-                    "Musician",
-                    "First Strike",
-                    "Swiftstride"
+                    {
+                        "name": "Banner of the Gyengget",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "First Strike",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Swiftstride",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -98,11 +200,26 @@
                 "name": "Mercenary Gunners",
                 "cost": 450,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Magic Resistance",
-                    "Ogre Crossbow and Accurate"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Magic Resistance",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -112,7 +229,10 @@
                 "name": "Yetis",
                 "cost": 290,
                 "options": [
-                    "Musician"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -122,7 +242,10 @@
                 "name": "Yetis",
                 "cost": 250,
                 "options": [
-                    "Musician"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -132,7 +255,10 @@
                 "name": "Scrapling Trappers",
                 "cost": 110,
                 "options": [
-                    "Musician"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -152,10 +278,22 @@
                 "name": "Tegu Veteran",
                 "cost": 235,
                 "options": [
-                    "Light Troops",
-                    "Enclave Wizard",
-                    "Druidism",
-                    "Great Weapon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Enclave Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -164,13 +302,34 @@
                 "name": "Skink Veteran",
                 "cost": 175,
                 "options": [
-                    "Light Troops",
-                    "Enclave Wizard",
-                    "Druidism",
-                    "Shield",
-                    "Magnetic Short Bow",
-                    "Alchemical Arrows",
-                    "Chameleon and Hard Target"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Enclave Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Alchemical Arrows",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Chameleon and Hard Target",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -179,10 +338,22 @@
                 "name": "Tegu Warriors",
                 "cost": 503,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -192,10 +363,22 @@
                 "name": "Tegu Warriors",
                 "cost": 503,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 28,
@@ -205,8 +388,14 @@
                 "name": "Raptor Riders",
                 "cost": 430,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -216,8 +405,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 259,
                 "options": [
-                    "Magnetic Short Bow",
-                    "Chameleon"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -227,7 +422,10 @@
                 "name": "Pteradon Riders",
                 "cost": 200,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -237,7 +435,10 @@
                 "name": "Raptor Pack",
                 "cost": 160,
                 "options": [
-                    "Corrosive Spitter"
+                    {
+                        "name": "Corrosive Spitter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -247,7 +448,10 @@
                 "name": "Weapon Beasts",
                 "cost": 240,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -257,7 +461,10 @@
                 "name": "Taurosaur",
                 "cost": 485,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"
@@ -273,8 +480,14 @@
                 "name": "Carnosaur",
                 "cost": 370,
                 "options": [
-                    "Light Lance",
-                    "Hunt Leader"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hunt Leader",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"

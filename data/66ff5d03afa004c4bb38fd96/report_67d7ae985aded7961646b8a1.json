@@ -13,11 +13,26 @@
                 "name": "Orc Warlord",
                 "cost": 430,
                 "options": [
-                    "General",
-                    "Grunter",
-                    "Death Cheater",
-                    "King Slayer",
-                    "Lance"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Grunter",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,11 +41,26 @@
                 "name": "Orc Shaman",
                 "cost": 320,
                 "options": [
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Magical Heirloom",
-                    "Wizard Adept",
-                    "Shamanism"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Magical Heirloom",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -39,10 +69,22 @@
                 "name": "Goblin Witch",
                 "cost": 310,
                 "options": [
-                    "Light Troops",
-                    "Mimic Cloak",
-                    "Wizard Adept",
-                    "Pyromancy"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -51,11 +93,26 @@
                 "name": "Brood Alpha",
                 "cost": 255,
                 "options": [
-                    "Grunter",
-                    "Tazrek's Guard",
-                    "Great Weapon",
-                    "Mask of Mindless Violence",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Grunter",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Tazrek's Guard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mask of Mindless Violence",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -64,8 +121,14 @@
                 "name": "Veteran Orc Marauders",
                 "cost": 434,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -75,8 +138,14 @@
                 "name": "Goblin Rabble",
                 "cost": 328,
                 "options": [
-                    "Standard Bearer",
-                    "Poisoned Spear and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Poisoned Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 39,
@@ -86,7 +155,10 @@
                 "name": "Goblin Reavers",
                 "cost": 176,
                 "options": [
-                    "Bow and Spies"
+                    {
+                        "name": "Bow and Spies",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -96,7 +168,10 @@
                 "name": "Goblin Reavers",
                 "cost": 176,
                 "options": [
-                    "Bow and Spies"
+                    {
+                        "name": "Bow and Spies",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -106,7 +181,10 @@
                 "name": "Iron Orcs",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -116,9 +194,18 @@
                 "name": "Veteran Orcs",
                 "cost": 445,
                 "options": [
-                    "Paired Weapons",
-                    "Headbashers",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Headbashers",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -135,7 +222,10 @@
                 "name": "Trolls",
                 "cost": 185,
                 "options": [
-                    "Bridge Troll"
+                    {
+                        "name": "Bridge Troll",
+                        "type": "trollRace"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -145,7 +235,10 @@
                 "name": "Trolls",
                 "cost": 185,
                 "options": [
-                    "Bridge Troll"
+                    {
+                        "name": "Bridge Troll",
+                        "type": "trollRace"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -165,17 +258,50 @@
                 "name": "Anurarch Archmage",
                 "cost": 640,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Talisman of the Void",
-                    "Te Aupouri Smokestone",
-                    "Eternal Mastery",
-                    "Mystifying Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Te Aupouri Smokestone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Eternal Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Mystifying Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -184,10 +310,22 @@
                 "name": "Skink Veteran",
                 "cost": 110,
                 "options": [
-                    "Light Troops and Strider",
-                    "Magnetic Short Bow",
-                    "Alchemical Arrows",
-                    "Chameleon and Hard Target"
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Alchemical Arrows",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Chameleon and Hard Target",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -196,12 +334,30 @@
                 "name": "Tegu Warriors",
                 "cost": 583,
                 "options": [
-                    "Rending Banner",
-                    "Awaken the Beast",
-                    "Spear",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -211,9 +367,18 @@
                 "name": "Tegu Warriors",
                 "cost": 423,
                 "options": [
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -223,7 +388,10 @@
                 "name": "Weapon Beasts",
                 "cost": 470,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -233,7 +401,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 410,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -243,9 +414,18 @@
                 "name": "Raptor Riders",
                 "cost": 400,
                 "options": [
-                    "Koru Stone",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -255,8 +435,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 220,
                 "options": [
-                    "Magnetic Short Bow",
-                    "Chameleon"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -266,7 +452,10 @@
                 "name": "Pteradon Riders",
                 "cost": 200,
                 "options": [
-                    "Magnetic Short Bow"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -284,8 +473,14 @@
                 "name": "Carnosaur",
                 "cost": 370,
                 "options": [
-                    "Light Lance",
-                    "Hunt Leader"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hunt Leader",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"

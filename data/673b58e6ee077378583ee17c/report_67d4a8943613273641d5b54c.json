@@ -13,14 +13,38 @@
                 "name": "Runic Smith",
                 "cost": 320,
                 "options": [
-                    "General",
-                    "Ancient Grudge",
-                    "Shield Wall",
-                    "Rune of Harnessing",
-                    "Battle Rune",
-                    "Rune of Resolve",
-                    "Rune of Gleaming",
-                    "Rune of Resilience"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Ancient Grudge",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Harnessing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Rune",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resolve",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,12 +53,30 @@
                 "name": "Thane",
                 "cost": 250,
                 "options": [
-                    "Shield Wall",
-                    "Rune of Lightning",
-                    "Rune of Returning",
-                    "Battle Standard Bearer",
-                    "Light Troops",
-                    "Runic Standard of Grudges"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Returning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Runic Standard of Grudges",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -43,11 +85,26 @@
                 "name": "Clan Warriors",
                 "cost": 500,
                 "options": [
-                    "Great Weapon",
-                    "Stalker's Standard",
-                    "Throwing Weapons",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -57,9 +114,18 @@
                 "name": "Clan Marksmen",
                 "cost": 250,
                 "options": [
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -69,9 +135,18 @@
                 "name": "Clan Marksmen",
                 "cost": 250,
                 "options": [
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -81,7 +156,10 @@
                 "name": "King's Guard",
                 "cost": 446,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -91,7 +169,10 @@
                 "name": "King's Guard",
                 "cost": 446,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 23,
@@ -101,7 +182,10 @@
                 "name": "King's Guard",
                 "cost": 446,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 23,
@@ -111,7 +195,10 @@
                 "name": "Forge Wardens",
                 "cost": 282,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -121,7 +208,10 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Dwarf Cannon"
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -130,7 +220,10 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Dwarf Cannon"
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -139,8 +232,14 @@
                 "name": "Rangers",
                 "cost": 160,
                 "options": [
-                    "Throwing Weapons",
-                    "Crag Warden"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Crag Warden",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -150,8 +249,14 @@
                 "name": "Rangers",
                 "cost": 160,
                 "options": [
-                    "Throwing Weapons",
-                    "Crag Warden"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Crag Warden",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -171,16 +276,46 @@
                 "name": "Shaman",
                 "cost": 550,
                 "options": [
-                    "Wizard Master",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Savage Fury",
-                    "Awaken the Beast",
-                    "Wild Spikes",
-                    "Totemic Summon",
-                    "Mimic Cloak",
-                    "Scroll of Power",
-                    "Godspeaker"
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Godspeaker",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -189,12 +324,30 @@
                 "name": "Great Khan",
                 "cost": 445,
                 "options": [
-                    "General",
-                    "Destiny's Call",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Lygur's Tongue",
-                    "Spinesplitter"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lygur's Tongue",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spinesplitter",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -203,16 +356,46 @@
                 "name": "Khan",
                 "cost": 360,
                 "options": [
-                    "Aurochs Resilience",
-                    "Paired Weapons",
-                    "Iron Fist",
-                    "Great Weapon",
-                    "Rampager's Chain",
-                    "Hoardmaster",
-                    "Halberd",
-                    "Ogre Crossbow",
-                    "Battle Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Aurochs Resilience",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rampager's Chain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Hoardmaster",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -221,12 +404,30 @@
                 "name": "Khan",
                 "cost": 245,
                 "options": [
-                    "Mammoth-Hide Cloak",
-                    "Iron Fist",
-                    "Yeti Furs",
-                    "Rottenjaw",
-                    "Ogre Crossbow",
-                    "Captain and Attached"
+                    {
+                        "name": "Mammoth-Hide Cloak",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Yeti Furs",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rottenjaw",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -235,10 +436,22 @@
                 "name": "Tribesmen",
                 "cost": 585,
                 "options": [
-                    "Paired Weapons",
-                    "Pennant of the Great Grass Sky",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pennant of the Great Grass Sky",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -248,8 +461,14 @@
                 "name": "Bruisers",
                 "cost": 255,
                 "options": [
-                    "Skull of Qenghet",
-                    "Standard Bearer"
+                    {
+                        "name": "Skull of Qenghet",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -267,8 +486,14 @@
                 "name": "Mercenary Gunners",
                 "cost": 400,
                 "options": [
-                    "Standard Bearer",
-                    "Ogre Crossbow and Accurate"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -307,7 +532,10 @@
                 "name": "Frost Mammoth",
                 "cost": 400,
                 "options": [
-                    "Ogre Crossbow"
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"

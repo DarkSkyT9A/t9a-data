@@ -13,11 +13,26 @@
                 "name": "Pharaoh",
                 "cost": 645,
                 "options": [
-                    "General",
-                    "Sha Guardian",
-                    "Great Weapon",
-                    "Book of the Dead",
-                    "Dragon's Brew"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Sha Guardian",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Book of the Dead",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,15 +41,42 @@
                 "name": "Death Cult Hierarch",
                 "cost": 370,
                 "options": [
-                    "Light Troops",
-                    "Mimic Cloak",
-                    "Spell Scroll",
-                    "Wizard Adept",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Soul Conduit"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spell Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Conduit",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -43,13 +85,34 @@
                 "name": "Nomarch",
                 "cost": 170,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Talisman of the Void",
-                    "Scroll of Desiccation",
-                    "Captain and Attached",
-                    "Deathless Noble",
-                    "Longbow"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Desiccation",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Deathless Noble",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -58,11 +121,26 @@
                 "name": "Nomarch",
                 "cost": 145,
                 "options": [
-                    "Skeletal Horse",
-                    "Shield",
-                    "Scourge of Kings",
-                    "Captain and Attached",
-                    "Deathless Noble"
+                    {
+                        "name": "Skeletal Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scourge of Kings",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Deathless Noble",
+                        "type": "occupation"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -71,10 +149,22 @@
                 "name": "Skeleton Chariots",
                 "cost": 350,
                 "options": [
-                    "Halberd",
-                    "Aspis Arrows and Bow",
-                    "Legion Charioteers",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Aspis Arrows and Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Legion Charioteers",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -84,7 +174,10 @@
                 "name": "Skeleton Cavalry",
                 "cost": 326,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -94,8 +187,14 @@
                 "name": "Skeleton Archers",
                 "cost": 325,
                 "options": [
-                    "Longbow",
-                    "Standard Bearer"
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -105,8 +204,14 @@
                 "name": "Tomb Cataphracts",
                 "cost": 550,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -116,8 +221,14 @@
                 "name": "Casket of Phatep",
                 "cost": 230,
                 "options": [
-                    "Augury of Despair",
-                    "Soul Blight"
+                    {
+                        "name": "Augury of Despair",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -148,7 +259,10 @@
                 "name": "Tomb Reapers",
                 "cost": 475,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -168,14 +282,38 @@
                 "name": "Thane",
                 "cost": 405,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Trusted Adviser",
-                    "Shield Bearers",
-                    "Shield Wall",
-                    "Rune of Might",
-                    "Rune of Anger",
-                    "Rune of Channelling",
-                    "Rune of Mining"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Shield Bearers",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Anger",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Channelling",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Mining",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -184,10 +322,22 @@
                 "name": "Greybeards",
                 "cost": 500,
                 "options": [
-                    "Shield Wall",
-                    "Runic Standard of the Hold",
-                    "Vanguard",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -197,9 +347,18 @@
                 "name": "Clan Marksmen",
                 "cost": 250,
                 "options": [
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -209,9 +368,18 @@
                 "name": "Clan Marksmen",
                 "cost": 250,
                 "options": [
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -221,8 +389,14 @@
                 "name": "Hold Guardians",
                 "cost": 570,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -232,8 +406,14 @@
                 "name": "Deep Watch",
                 "cost": 410,
                 "options": [
-                    "Runic Standard of the Hold",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -243,8 +423,14 @@
                 "name": "Deep Watch",
                 "cost": 410,
                 "options": [
-                    "Runic Standard of the Hold",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -262,9 +448,18 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Flaming Shot",
-                    "Rune Crafted",
-                    "Dwarf Cannon"
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune Crafted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -273,7 +468,10 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Dwarf Cannon"
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -282,9 +480,18 @@
                 "name": "Field Artillery",
                 "cost": 220,
                 "options": [
-                    "Flaming Shot",
-                    "Flaming Shot",
-                    "Flame Cannon"
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Flame Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Special"
@@ -293,10 +500,22 @@
                 "name": "Miners",
                 "cost": 240,
                 "options": [
-                    "Great Weapon",
-                    "Throwing Weapons",
-                    "Standard Bearer",
-                    "Paired Weapons"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,

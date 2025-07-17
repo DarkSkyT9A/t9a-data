@@ -13,20 +13,62 @@
                 "name": "Mage",
                 "cost": 665,
                 "options": [
-                    "General",
-                    "Asfad Scholar",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Cosmology",
-                    "Altered Sight",
-                    "Truth of Time",
-                    "Weal and Woe",
-                    "Ice and Fire",
-                    "Cosmic Scales",
-                    "Gleaming Robe",
-                    "Giant Slayer",
-                    "Amethyst Crystal",
-                    "Scroll of Power"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Asfad Scholar",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Altered Sight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cosmic Scales",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gleaming Robe",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Amethyst Crystal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -35,15 +77,42 @@
                 "name": "Commander",
                 "cost": 325,
                 "options": [
-                    "Trusted Adviser",
-                    "Elven Horse",
-                    "Shield",
-                    "Sigil of Protection",
-                    "Scroll of the Pearl Throne",
-                    "Battle Standard Bearer",
-                    "Queen's Cavalier",
-                    "Stalker's Standard",
-                    "Lance"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Elven Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of the Pearl Throne",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Queen's Cavalier",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -52,8 +121,14 @@
                 "name": "Sea Guard",
                 "cost": 521,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 27,
@@ -63,8 +138,14 @@
                 "name": "Sea Guard",
                 "cost": 482,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -74,8 +155,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 570,
                 "options": [
-                    "War Banner of Rymâ",
-                    "Standard Bearer"
+                    {
+                        "name": "War Banner of Rymâ",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -85,8 +172,14 @@
                 "name": "Lion Guard",
                 "cost": 440,
                 "options": [
-                    "Navigator's Banner",
-                    "Standard Bearer"
+                    {
+                        "name": "Navigator's Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -96,8 +189,14 @@
                 "name": "Phoenix",
                 "cost": 380,
                 "options": [
-                    "Frost Phoenix",
-                    "Warden's Bond"
+                    {
+                        "name": "Frost Phoenix",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warden's Bond",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -120,7 +219,10 @@
                 "name": "Grey Watchers",
                 "cost": 155,
                 "options": [
-                    "Shield"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -140,14 +242,38 @@
                 "name": "Dread Prince",
                 "cost": 625,
                 "options": [
-                    "General",
-                    "Beastmaster",
-                    "Battleline Hero",
-                    "Trusted Adviser",
-                    "Manticore",
-                    "Paired Weapons",
-                    "Lacerating Touch",
-                    "Talisman of Shielding"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Beastmaster",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Manticore",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lacerating Touch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -156,15 +282,42 @@
                 "name": "Sanctioned Warlock",
                 "cost": 590,
                 "options": [
-                    "Manticore",
-                    "Talisman of the Void",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight"
+                    {
+                        "name": "Manticore",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -173,8 +326,14 @@
                 "name": "Silexian Spears",
                 "cost": 383,
                 "options": [
-                    "Standard Bearer",
-                    "Aether Icon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 27,
@@ -184,7 +343,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 220,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -194,7 +356,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 220,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -204,7 +369,10 @@
                 "name": "Shadow Riders",
                 "cost": 190,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -214,9 +382,18 @@
                 "name": "Dread Knights",
                 "cost": 500,
                 "options": [
-                    "Great Weapon and Elven Finesse",
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -234,7 +411,10 @@
                 "name": "Gorgons",
                 "cost": 310,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,

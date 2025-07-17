@@ -13,15 +13,42 @@
                 "name": "Damsel",
                 "cost": 485,
                 "options": [
-                    "Destrier",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Savage Fury",
-                    "Awaken the Beast",
-                    "Wild Spikes",
-                    "Totemic Summon",
-                    "Sacred Chalice"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Sacred Chalice",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,11 +57,26 @@
                 "name": "Duke",
                 "cost": 350,
                 "options": [
-                    "Destrier",
-                    "Shield Breaker",
-                    "Battle Standard Bearer",
-                    "Bastard Sword",
-                    "Generosity"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Breaker",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Generosity",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -43,13 +85,34 @@
                 "name": "Folk Hero",
                 "cost": 265,
                 "options": [
-                    "Heraldic Steed",
-                    "Basalt Infusion",
-                    "Sainted",
-                    "Lance",
-                    "Uther's Mettle",
-                    "Shield",
-                    "Castellan"
+                    {
+                        "name": "Heraldic Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sainted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Uther's Mettle",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Castellan",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -58,10 +121,22 @@
                 "name": "Knights of the Realm",
                 "cost": 570,
                 "options": [
-                    "Stalker's Standard",
-                    "Solemn Oath",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Solemn Oath",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -71,9 +146,18 @@
                 "name": "Mounted Serjeants",
                 "cost": 470,
                 "options": [
-                    "Great Weapon",
-                    "Relic Shroud",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Relic Shroud",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -83,7 +167,10 @@
                 "name": "Knights of the Court",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -93,8 +180,14 @@
                 "name": "Men-at-Arms",
                 "cost": 319,
                 "options": [
-                    "Standard Bearer",
-                    "Castle Guard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Castle Guard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -104,8 +197,14 @@
                 "name": "Men-at-Arms",
                 "cost": 170,
                 "options": [
-                    "Standard Bearer",
-                    "Ordo Wardens"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ordo Wardens",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -115,7 +214,10 @@
                 "name": "Sky Heralds",
                 "cost": 210,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -125,7 +227,10 @@
                 "name": "Fey Knight",
                 "cost": 380,
                 "options": [
-                    "Chosen of the Snow Childe"
+                    {
+                        "name": "Chosen of the Snow Childe",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"
@@ -134,7 +239,10 @@
                 "name": "Fey Knight",
                 "cost": 360,
                 "options": [
-                    "Champion of the Green Knight"
+                    {
+                        "name": "Champion of the Green Knight",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Fey"
@@ -153,20 +261,62 @@
                 "name": "Mage",
                 "cost": 605,
                 "options": [
-                    "General",
-                    "Order of the Fiery Heart",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Gleaming Robe",
-                    "Paired Weapons",
-                    "Amethyst Crystal",
-                    "Scroll of Power"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Order of the Fiery Heart",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gleaming Robe",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Amethyst Crystal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -175,8 +325,14 @@
                 "name": "Sea Guard",
                 "cost": 502,
                 "options": [
-                    "Standard Bearer",
-                    "War Banner of Rymâ"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "War Banner of Rymâ",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -186,8 +342,14 @@
                 "name": "Sea Guard",
                 "cost": 502,
                 "options": [
-                    "Standard Bearer",
-                    "War Banner of Rymâ"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "War Banner of Rymâ",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -197,8 +359,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 550,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -208,8 +376,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 550,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -219,9 +393,18 @@
                 "name": "Sword Masters",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer",
-                    "Navigator's Banner",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Navigator's Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -231,7 +414,10 @@
                 "name": "Phoenix",
                 "cost": 400,
                 "options": [
-                    "Fire Phoenix"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -240,7 +426,10 @@
                 "name": "Phoenix",
                 "cost": 400,
                 "options": [
-                    "Fire Phoenix"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"

@@ -13,13 +13,34 @@
                 "name": "Ruinous Dictator",
                 "cost": 590,
                 "options": [
-                    "Battleline Hero",
-                    "Wizard Apprentice",
-                    "Occultism",
-                    "Paired Weapons",
-                    "General",
-                    "Lord of the Legions",
-                    "Girded by Acratos"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Lord of the Legions",
+                        "type": "mortalOrigin"
+                    },
+                    {
+                        "name": "Girded by Acratos",
+                        "type": "patronDeity"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,14 +49,38 @@
                 "name": "Swarm Priest",
                 "cost": 510,
                 "options": [
-                    "Wizard Adept",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Pentagram of Pain",
-                    "Darkstone Detonator",
-                    "Sacred Platform",
-                    "Pestilent Pulpit",
-                    "Cult of Errahman"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pentagram of Pain",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Darkstone Detonator",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sacred Platform",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Pestilent Pulpit",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Cult of Errahman",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,15 +89,42 @@
                 "name": "Swarm Priest",
                 "cost": 390,
                 "options": [
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Weight of Judgement",
-                    "Holy Affliction",
-                    "Rain of Fire",
-                    "Mimic Cloak",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Caelysian Pantheon"
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weight of Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rain of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Caelysian Pantheon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -61,9 +133,18 @@
                 "name": "House Prefect",
                 "cost": 100,
                 "options": [
-                    "Captain and Attached",
-                    "Rakachit Technocrat",
-                    "Jezail"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Rakachit Technocrat",
+                        "type": "house"
+                    },
+                    {
+                        "name": "Jezail",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -72,8 +153,14 @@
                 "name": "Plague Cultists",
                 "cost": 460,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -83,10 +170,22 @@
                 "name": "Vermin Legionaries",
                 "cost": 398,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Banner of Courage",
-                    "Spear"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 49,
@@ -104,8 +203,14 @@
                 "name": "Bloodfur Praetorians",
                 "cost": 495,
                 "options": [
-                    "Standard Bearer",
-                    "Bell of the Deep Roads"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Bell of the Deep Roads",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -115,7 +220,10 @@
                 "name": "Experimental Weapon Teams",
                 "cost": 222,
                 "options": [
-                    "Jezail and Shield"
+                    {
+                        "name": "Jezail and Shield",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -125,7 +233,10 @@
                 "name": "Experimental Weapon Teams",
                 "cost": 222,
                 "options": [
-                    "Jezail and Shield"
+                    {
+                        "name": "Jezail and Shield",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -166,16 +277,46 @@
                 "name": "Death Cult Hierarch",
                 "cost": 485,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Evocation",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Mimic Cloak",
-                    "Soul Conduit"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Soul Conduit",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -184,15 +325,42 @@
                 "name": "Nomarch",
                 "cost": 205,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Ghostly Guard",
-                    "Scourge of Kings",
-                    "Giant Slayer",
-                    "Dragon's Brew",
-                    "Deathless Noble",
-                    "Longbow",
-                    "Shield"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scourge of Kings",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Deathless Noble",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -201,12 +369,30 @@
                 "name": "Nomarch",
                 "cost": 140,
                 "options": [
-                    "Light Troops",
-                    "Talisman of the Void",
-                    "Captain and Attached",
-                    "Tomb Harbinger",
-                    "Longbow",
-                    "Paired Weapons"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Tomb Harbinger",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -215,9 +401,18 @@
                 "name": "Skeleton Warriors",
                 "cost": 358,
                 "options": [
-                    "Sigil of the Closed Gates",
-                    "Spear and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Sigil of the Closed Gates",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 32,
@@ -227,10 +422,22 @@
                 "name": "Skeleton Warriors",
                 "cost": 235,
                 "options": [
-                    "Shield",
-                    "Banner of the Entombed",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of the Entombed",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -240,10 +447,22 @@
                 "name": "Skeleton Warriors",
                 "cost": 235,
                 "options": [
-                    "Shield",
-                    "Banner of the Entombed",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of the Entombed",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 20,
@@ -261,7 +480,10 @@
                 "name": "Shabti Archers",
                 "cost": 445,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -271,7 +493,10 @@
                 "name": "Sand Stalkers",
                 "cost": 305,
                 "options": [
-                    "Ambush"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -281,7 +506,10 @@
                 "name": "Sand Stalkers",
                 "cost": 305,
                 "options": [
-                    "Ambush"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -291,8 +519,14 @@
                 "name": "Casket of Phatep",
                 "cost": 230,
                 "options": [
-                    "Thunder and Lightning",
-                    "Soul Blight"
+                    {
+                        "name": "Thunder and Lightning",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

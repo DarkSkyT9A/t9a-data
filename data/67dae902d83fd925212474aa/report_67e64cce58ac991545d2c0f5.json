@@ -13,17 +13,50 @@
                 "name": "Damsel",
                 "cost": 550,
                 "options": [
-                    "General",
-                    "Destrier",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Wild Spikes",
-                    "Totemic Summon",
-                    "Talisman of the Void",
-                    "Sainted"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sainted",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,10 +65,22 @@
                 "name": "Paladin",
                 "cost": 365,
                 "options": [
-                    "Pegasus Charger",
-                    "Ghostly Guard",
-                    "Hero's Heart",
-                    "Paired Weapons"
+                    {
+                        "name": "Pegasus Charger",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,11 +89,26 @@
                 "name": "Folk Hero",
                 "cost": 235,
                 "options": [
-                    "Destrier",
-                    "Shield",
-                    "Attached",
-                    "Bannerman",
-                    "Cleric"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -57,8 +117,14 @@
                 "name": "Knights of the Realm",
                 "cost": 495,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -68,8 +134,14 @@
                 "name": "Mounted Serjeants",
                 "cost": 260,
                 "options": [
-                    "Light Lance",
-                    "Standard Bearer"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -79,8 +151,14 @@
                 "name": "Mounted Serjeants",
                 "cost": 260,
                 "options": [
-                    "Light Lance",
-                    "Standard Bearer"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -90,8 +168,14 @@
                 "name": "Knights of the Quest",
                 "cost": 595,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -101,9 +185,18 @@
                 "name": "Knights of the Quest",
                 "cost": 560,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -113,7 +206,10 @@
                 "name": "Knights Penitent",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -123,8 +219,14 @@
                 "name": "Enlisted Outlaws",
                 "cost": 180,
                 "options": [
-                    "Hooded Men",
-                    "Longbow"
+                    {
+                        "name": "Hooded Men",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -134,8 +236,14 @@
                 "name": "Enlisted Outlaws",
                 "cost": 180,
                 "options": [
-                    "Hooded Men",
-                    "Longbow"
+                    {
+                        "name": "Hooded Men",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -155,18 +263,54 @@
                 "name": "Sorcerer",
                 "cost": 575,
                 "options": [
-                    "General",
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Umbral Majesty",
-                    "The Grave Calls",
-                    "Dark Familiar",
-                    "Binding Scroll"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Umbral Majesty",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -175,10 +319,22 @@
                 "name": "Warriors",
                 "cost": 554,
                 "options": [
-                    "Standard Bearer",
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Gluttony"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -188,8 +344,14 @@
                 "name": "Warriors",
                 "cost": 250,
                 "options": [
-                    "Standard Bearer",
-                    "Paired Weapons"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 12,
@@ -199,9 +361,18 @@
                 "name": "Chosen Knights",
                 "cost": 570,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard",
-                    "Greed"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -211,7 +382,10 @@
                 "name": "Feldrak Elder",
                 "cost": 480,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -220,7 +394,10 @@
                 "name": "Feldrak Elder",
                 "cost": 480,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -229,10 +406,22 @@
                 "name": "Forsworn",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer",
-                    "Aether Icon",
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -242,9 +431,18 @@
                 "name": "Forsworn",
                 "cost": 250,
                 "options": [
-                    "Standard Bearer",
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -254,7 +452,10 @@
                 "name": "Warrior Chariot",
                 "cost": 220,
                 "options": [
-                    "Lust"
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

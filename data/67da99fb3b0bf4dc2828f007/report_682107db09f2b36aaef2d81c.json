@@ -13,19 +13,58 @@
                 "name": "Vampire Count",
                 "cost": 685,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Lahmia",
-                    "Commandment",
-                    "Evocation",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Eldritch Inscriptions",
-                    "Great Weapon",
-                    "Talisman of the Void"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -34,15 +73,42 @@
                 "name": "Necromancer",
                 "cost": 460,
                 "options": [
-                    "Evocation",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Mimic Cloak"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -51,10 +117,22 @@
                 "name": "Skeletons",
                 "cost": 392,
                 "options": [
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Banner of Eldritch Might",
-                    "Musician"
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 39,
@@ -80,9 +158,18 @@
                 "name": "Barrow Guard",
                 "cost": 526,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer",
-                    "Black Standard of Zagvozd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -107,8 +194,14 @@
                 "name": "Vampire Knights",
                 "cost": 545,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Speed"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -128,14 +221,38 @@
                 "name": "Battlefield Wizard",
                 "cost": 340,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Cosmology",
-                    "Altered Sight",
-                    "Truth of Time",
-                    "Weal and Woe",
-                    "Mimic Cloak",
-                    "Binding Scroll"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Altered Sight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -144,12 +261,30 @@
                 "name": "Marshal",
                 "cost": 290,
                 "options": [
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Imperial Seal",
-                    "Winter Cloak",
-                    "General, Imperial Authority, and +1 Cou",
-                    "Great Weapon"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Imperial Seal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Winter Cloak",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -158,12 +293,30 @@
                 "name": "Marshal",
                 "cost": 215,
                 "options": [
-                    "Light Troops",
-                    "Blacksteel",
-                    "Binding Scroll",
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Shield",
-                    "Aether Icon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -172,10 +325,22 @@
                 "name": "Marshal",
                 "cost": 115,
                 "options": [
-                    "Horse",
-                    "Captain and Attached",
-                    "Shield",
-                    "Lance"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -184,8 +349,14 @@
                 "name": "Artificer",
                 "cost": 95,
                 "options": [
-                    "Light Troops",
-                    "Long Rifle"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Long Rifle",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -194,11 +365,26 @@
                 "name": "Knightly Orders",
                 "cost": 425,
                 "options": [
-                    "Shield",
-                    "Stalker's Standard",
-                    "Cavalry Pick",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Cavalry Pick",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -208,9 +394,18 @@
                 "name": "State Marksmen",
                 "cost": 240,
                 "options": [
-                    "Marksman's Pennant",
-                    "Standard Bearer",
-                    "Crossbow"
+                    {
+                        "name": "Marksman's Pennant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -220,8 +415,14 @@
                 "name": "State Marksmen",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer",
-                    "Crossbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -231,9 +432,18 @@
                 "name": "Imperial Guard",
                 "cost": 422,
                 "options": [
-                    "Great Weapon",
-                    "Distortion Emblem",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 26,
@@ -243,9 +453,18 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 290,
                 "options": [
-                    "Halberd",
-                    "Aether Icon",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -255,7 +474,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -264,7 +486,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 175,
                 "options": [
-                    "Volley Gun"
+                    {
+                        "name": "Volley Gun",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"

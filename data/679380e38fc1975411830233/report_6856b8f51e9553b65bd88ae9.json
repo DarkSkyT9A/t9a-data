@@ -13,17 +13,50 @@
                 "name": "Runic Smith",
                 "cost": 400,
                 "options": [
-                    "General",
-                    "Shield Wall",
-                    "Rune of Resistance",
-                    "Rune of Retribution",
-                    "Rune of Grounding",
-                    "Rune of Harnessing",
-                    "Rune of Shielding",
-                    "Battle Rune",
-                    "Rune of Oaths",
-                    "Rune of Gleaming",
-                    "Rune of Resilience"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resistance",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Retribution",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Grounding",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Harnessing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Shielding",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Rune",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Oaths",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,9 +65,18 @@
                 "name": "Greybeards",
                 "cost": 465,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -44,10 +86,22 @@
                 "name": "Clan Marksmen",
                 "cost": 270,
                 "options": [
-                    "Shield Wall",
-                    "Standard Bearer",
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -57,10 +111,22 @@
                 "name": "Clan Marksmen",
                 "cost": 270,
                 "options": [
-                    "Shield Wall",
-                    "Standard Bearer",
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -70,8 +136,14 @@
                 "name": "Deep Watch",
                 "cost": 472,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -95,7 +167,10 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Dwarf Cannon"
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -104,7 +179,10 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Dwarf Cannon"
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -113,10 +191,22 @@
                 "name": "Miners",
                 "cost": 240,
                 "options": [
-                    "Great Weapon",
-                    "Throwing Weapons",
-                    "Standard Bearer",
-                    "Paired Weapons"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -126,7 +216,10 @@
                 "name": "Steam Copters",
                 "cost": 225,
                 "options": [
-                    "Shrapnel Bombs"
+                    {
+                        "name": "Shrapnel Bombs",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -136,9 +229,18 @@
                 "name": "Anvil of Power",
                 "cost": 200,
                 "options": [
-                    "Rune of Resolve",
-                    "Rune of Gleaming",
-                    "Rune of Resilience"
+                    {
+                        "name": "Rune of Resolve",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -173,15 +275,42 @@
                 "name": "Treefather Ancient",
                 "cost": 735,
                 "options": [
-                    "Wizard",
-                    "Wizard Master",
-                    "Druidism",
-                    "Fountain of Youth",
-                    "Veil of Mist",
-                    "Gravel Storm",
-                    "Stone Skin",
-                    "Quicksand",
-                    "Verdant Rebirth"
+                    {
+                        "name": "Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Veil of Mist",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gravel Storm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stone Skin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksand",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Verdant Rebirth",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -190,11 +319,26 @@
                 "name": "Forest Prince",
                 "cost": 670,
                 "options": [
-                    "General",
-                    "Forest Dragon",
-                    "Eldritch Inscriptions",
-                    "Great Weapon and Elven Finesse",
-                    "Obsidian Rock"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Forest Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -203,12 +347,30 @@
                 "name": "Chieftain",
                 "cost": 185,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Sylvan Bow",
-                    "Sylvan Blades",
-                    "Pathfinder",
-                    "Solitary"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Sylvan Blades",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pathfinder",
+                        "type": "kindred"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -217,8 +379,14 @@
                 "name": "Forest Guard",
                 "cost": 383,
                 "options": [
-                    "Rending Banner",
-                    "Standard Bearer"
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -228,7 +396,10 @@
                 "name": "Sylvan Archers",
                 "cost": 318,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -238,7 +409,10 @@
                 "name": "Sylvan Archers",
                 "cost": 318,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 14,
@@ -248,8 +422,14 @@
                 "name": "Kestrel Knights",
                 "cost": 250,
                 "options": [
-                    "Standard Bearer",
-                    "Skirmisher, Light Lance and Sylvan Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Skirmisher, Light Lance and Sylvan Bow",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -259,7 +439,10 @@
                 "name": "Forest Rangers",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -269,7 +452,10 @@
                 "name": "Forest Rangers",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -279,10 +465,22 @@
                 "name": "Briar Maidens",
                 "cost": 440,
                 "options": [
-                    "Standard Bearer",
-                    "Wizard Conclave",
-                    "Weal and Woe",
-                    "Swarm of Insects"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -292,7 +490,10 @@
                 "name": "Briar Maidens",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,

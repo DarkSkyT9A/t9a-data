@@ -13,13 +13,34 @@
                 "name": "Necromancer",
                 "cost": 625,
                 "options": [
-                    "Monstrous Revenant",
-                    "Great Monstrous Revenant",
-                    "Wizard Master",
-                    "Lich",
-                    "Cosmology",
-                    "Ghostly Guard",
-                    "Talisman of the Void"
+                    {
+                        "name": "Monstrous Revenant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Monstrous Revenant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,16 +49,46 @@
                 "name": "Vampire Count",
                 "cost": 545,
                 "options": [
-                    "Light Troops",
-                    "Evocation",
-                    "Warding of Unity",
-                    "Talisman of Shielding",
-                    "General, Disciplined, and The Dead Arise",
-                    "Lahmia",
-                    "Commandment",
-                    "Wizard Apprentice",
-                    "Great Weapon",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -46,7 +97,10 @@
                 "name": "Banshee",
                 "cost": 160,
                 "options": [
-                    "Sweeping Attack"
+                    {
+                        "name": "Sweeping Attack",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -55,9 +109,18 @@
                 "name": "Barrow King",
                 "cost": 65,
                 "options": [
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Captain"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -66,7 +129,10 @@
                 "name": "Ghouls",
                 "cost": 535,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 38,
@@ -76,9 +142,18 @@
                 "name": "Skeletons",
                 "cost": 469,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 53,
@@ -88,9 +163,18 @@
                 "name": "Barrow Guard",
                 "cost": 370,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -100,7 +184,10 @@
                 "name": "Barrow Knights",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -118,8 +205,14 @@
                 "name": "Vampire Knights",
                 "cost": 440,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -139,16 +232,46 @@
                 "name": "Vampire Count",
                 "cost": 820,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Vetala",
-                    "Storm Caller",
-                    "Monstrous Revenant",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Necromantic Staff",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Storm Caller",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Monstrous Revenant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -157,14 +280,38 @@
                 "name": "Vampire Count",
                 "cost": 770,
                 "options": [
-                    "Vetala",
-                    "Evocation",
-                    "Shamanism",
-                    "Mysteries of the Night",
-                    "Colossal Zombie Dragon",
-                    "Wizard Apprentice",
-                    "Halberd",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Mysteries of the Night",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Colossal Zombie Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -189,9 +336,18 @@
                 "name": "Skeletons",
                 "cost": 190,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -201,9 +357,18 @@
                 "name": "Skeletons",
                 "cost": 190,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -221,7 +386,10 @@
                 "name": "Ghasts",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -231,7 +399,10 @@
                 "name": "Spectral Hunters",
                 "cost": 390,
                 "options": [
-                    "Wizard Conclave"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -249,7 +420,10 @@
                 "name": "Vampire Knights",
                 "cost": 290,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,

@@ -13,13 +13,34 @@
                 "name": "Battlefield Wizard",
                 "cost": 280,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Exemplar's Flame"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Exemplar's Flame",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,10 +49,22 @@
                 "name": "Marshal",
                 "cost": 235,
                 "options": [
-                    "Great Griffon",
-                    "Solitary",
-                    "Great Weapon",
-                    "Repeater Pistol"
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -40,11 +73,26 @@
                 "name": "Marshal",
                 "cost": 220,
                 "options": [
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Imperial Seal",
-                    "General, Imperial Authority, and +1 Cou",
-                    "Great Weapon"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Imperial Seal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -53,10 +101,22 @@
                 "name": "Marshal",
                 "cost": 155,
                 "options": [
-                    "Light Troops",
-                    "Blacksteel",
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Shield"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -65,9 +125,18 @@
                 "name": "State Infantry",
                 "cost": 450,
                 "options": [
-                    "Stalker's Standard",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -77,7 +146,10 @@
                 "name": "State Marksmen",
                 "cost": 276,
                 "options": [
-                    "Crossbow"
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -87,7 +159,10 @@
                 "name": "State Marksmen",
                 "cost": 276,
                 "options": [
-                    "Crossbow"
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 19,
@@ -97,8 +172,14 @@
                 "name": "Imperial Guard",
                 "cost": 431,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -108,8 +189,14 @@
                 "name": "Imperial Guard",
                 "cost": 431,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 28,
@@ -119,7 +206,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -161,13 +251,34 @@
                 "name": "Dread Prince",
                 "cost": 780,
                 "options": [
-                    "General",
-                    "Beastmaster",
-                    "Battleline Hero",
-                    "Imperious Dragon",
-                    "Paired Weapons",
-                    "Lacerating Touch",
-                    "Beastmaster's Vial"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Beastmaster",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Imperious Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lacerating Touch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Beastmaster's Vial",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -176,8 +287,14 @@
                 "name": "Silexian Spears",
                 "cost": 427,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -187,8 +304,14 @@
                 "name": "Temple Militants",
                 "cost": 205,
                 "options": [
-                    "Standard Bearer",
-                    "Caedhren's Pennon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Caedhren's Pennon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -198,7 +321,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -208,7 +334,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -218,8 +347,14 @@
                 "name": "Obsidian Guard",
                 "cost": 350,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Urlain"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -229,8 +364,14 @@
                 "name": "Judicators",
                 "cost": 344,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Urlain"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -240,8 +381,14 @@
                 "name": "Judicators",
                 "cost": 344,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Urlain"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 14,
@@ -251,7 +398,10 @@
                 "name": "Divine Altar",
                 "cost": 240,
                 "options": [
-                    "Altar of Nabh"
+                    {
+                        "name": "Altar of Nabh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

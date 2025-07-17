@@ -13,17 +13,50 @@
                 "name": "Prophet",
                 "cost": 640,
                 "options": [
-                    "General",
-                    "Prophet of Shamut",
-                    "Bull of Shamut",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Tablet of Vezodinezh"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Prophet of Shamut",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bull of Shamut",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Tablet of Vezodinezh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,14 +65,38 @@
                 "name": "Vizier",
                 "cost": 290,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Flame of the East",
-                    "Ring of Desiccation",
-                    "Potion of Swiftness",
-                    "Battle Standard Bearer",
-                    "Flaming Standard",
-                    "Spear"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Flame of the East",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ring of Desiccation",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Potion of Swiftness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -48,9 +105,18 @@
                 "name": "Citadel Guard",
                 "cost": 532,
                 "options": [
-                    "Banner of the Twice-Branded",
-                    "Pistol and Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Pistol and Spear",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -60,11 +126,26 @@
                 "name": "Infernal Warriors",
                 "cost": 480,
                 "options": [
-                    "Shield",
-                    "Blunderbuss",
-                    "Great Weapon",
-                    "Banner of the Twice-Branded",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Blunderbuss",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -74,9 +155,18 @@
                 "name": "Immortals",
                 "cost": 490,
                 "options": [
-                    "Banner of Shamut",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Shamut",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -86,8 +176,14 @@
                 "name": "Taurukh Anointed",
                 "cost": 325,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -105,7 +201,10 @@
                 "name": "Kadim Chariot",
                 "cost": 220,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -114,7 +213,10 @@
                 "name": "Gunnery Team",
                 "cost": 200,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -123,7 +225,10 @@
                 "name": "Gunnery Team",
                 "cost": 200,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -132,7 +237,10 @@
                 "name": "Infernal Artillery",
                 "cost": 170,
                 "options": [
-                    "Naphtha Thrower"
+                    {
+                        "name": "Naphtha Thrower",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -141,7 +249,10 @@
                 "name": "Infernal Artillery",
                 "cost": 170,
                 "options": [
-                    "Naphtha Thrower"
+                    {
+                        "name": "Naphtha Thrower",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -160,16 +271,46 @@
                 "name": "Kuulima's Deceiver",
                 "cost": 600,
                 "options": [
-                    "Curse of Lycanthropy",
-                    "Foresight",
-                    "Whispers of the Veil",
-                    "Smite the Unbeliever",
-                    "Evil Eye",
-                    "Protean Magic [4]",
-                    "Unnatural Roots",
-                    "Venom Sacs",
-                    "Guiding Venom Sacs",
-                    "Piercing Spike"
+                    {
+                        "name": "Curse of Lycanthropy",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Evil Eye",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Protean Magic [4]",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Venom Sacs",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Guiding Venom Sacs",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Piercing Spike",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -178,8 +319,14 @@
                 "name": "Succubi",
                 "cost": 490,
                 "options": [
-                    "Bronze Backbone",
-                    "Standard Bearer"
+                    {
+                        "name": "Bronze Backbone",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -189,9 +336,18 @@
                 "name": "Imps",
                 "cost": 255,
                 "options": [
-                    "Standard Bearer",
-                    "All-Seeing Eye",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -201,9 +357,18 @@
                 "name": "Imps",
                 "cost": 255,
                 "options": [
-                    "Standard Bearer",
-                    "All-Seeing Eye",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -213,8 +378,14 @@
                 "name": "Brazen Beasts",
                 "cost": 590,
                 "options": [
-                    "Standard Bearer",
-                    "Incendiary Ichor"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Incendiary Ichor",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -224,9 +395,18 @@
                 "name": "Clawed Fiends",
                 "cost": 577,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Unhinging Jaw"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -236,8 +416,14 @@
                 "name": "Threshing Engine",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer",
-                    "Whipcrack Tail"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Whipcrack Tail",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -247,9 +433,18 @@
                 "name": "Veil Serpents",
                 "cost": 440,
                 "options": [
-                    "Wizard Conclave",
-                    "Soured Luck",
-                    "Illusory Paths"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Soured Luck",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

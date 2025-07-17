@@ -13,9 +13,18 @@
                 "name": "Thicket Shepherd",
                 "cost": 325,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Trusted Adviser",
-                    "Scarred Bark"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Scarred Bark",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -24,7 +33,10 @@
                 "name": "Dryads",
                 "cost": 405,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -34,7 +46,10 @@
                 "name": "Dryads",
                 "cost": 405,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 25,
@@ -44,7 +59,10 @@
                 "name": "Heath Riders",
                 "cost": 190,
                 "options": [
-                    "Heath Hunters"
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -54,10 +72,22 @@
                 "name": "Wild Huntsmen",
                 "cost": 555,
                 "options": [
-                    "Standard Bearer",
-                    "Predator Pennant",
-                    "Shield",
-                    "Lance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Predator Pennant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -67,10 +97,22 @@
                 "name": "Wild Huntsmen",
                 "cost": 545,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Silent Mist",
-                    "Shield",
-                    "Lance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Silent Mist",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -80,7 +122,10 @@
                 "name": "Thicket Beasts",
                 "cost": 410,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -90,8 +135,14 @@
                 "name": "Blade Dancers",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer",
-                    "Aether Icon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -127,16 +178,46 @@
                 "name": "Vampire Courtier",
                 "cost": 375,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Vetala",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Touch of the Reaper",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Shield",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -145,7 +226,10 @@
                 "name": "Banshee",
                 "cost": 160,
                 "options": [
-                    "Sweeping Attack"
+                    {
+                        "name": "Sweeping Attack",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -154,7 +238,10 @@
                 "name": "Banshee",
                 "cost": 160,
                 "options": [
-                    "Sweeping Attack"
+                    {
+                        "name": "Sweeping Attack",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -170,10 +257,22 @@
                 "name": "Barrow King",
                 "cost": 115,
                 "options": [
-                    "Light Troops",
-                    "Warding of Unity",
-                    "Great Weapon",
-                    "General"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -182,9 +281,18 @@
                 "name": "Skeletons",
                 "cost": 270,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -194,9 +302,18 @@
                 "name": "Skeletons",
                 "cost": 270,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 30,
@@ -214,8 +331,14 @@
                 "name": "Zombies",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -246,7 +369,10 @@
                 "name": "Wraiths",
                 "cost": 305,
                 "options": [
-                    "Sweeping Attack"
+                    {
+                        "name": "Sweeping Attack",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,

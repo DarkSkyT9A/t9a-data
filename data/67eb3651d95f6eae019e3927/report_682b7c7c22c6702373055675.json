@@ -13,14 +13,38 @@
                 "name": "Miser of Sugulag",
                 "cost": 745,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Trampling Hooves",
-                    "Unnatural Roots"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Trampling Hooves",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,8 +53,14 @@
                 "name": "Lemures",
                 "cost": 470,
                 "options": [
-                    "Centipede Legs",
-                    "Standard Bearer"
+                    {
+                        "name": "Centipede Legs",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -40,9 +70,18 @@
                 "name": "Imps",
                 "cost": 267,
                 "options": [
-                    "Standard Bearer",
-                    "All-Seeing Eye",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -52,9 +91,18 @@
                 "name": "Imps",
                 "cost": 267,
                 "options": [
-                    "Standard Bearer",
-                    "All-Seeing Eye",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 11,
@@ -64,7 +112,10 @@
                 "name": "Hoarders",
                 "cost": 520,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -74,8 +125,14 @@
                 "name": "Clawed Fiends",
                 "cost": 513,
                 "options": [
-                    "Standard Bearer",
-                    "Incendiary Ichor"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Incendiary Ichor",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -85,10 +142,22 @@
                 "name": "Threshing Engine",
                 "cost": 390,
                 "options": [
-                    "Mark of the Eternal Champion",
-                    "Spear of Infinity",
-                    "Standard Bearer",
-                    "Legion Thresher"
+                    {
+                        "name": "Mark of the Eternal Champion",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Spear of Infinity",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Legion Thresher",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -98,7 +167,10 @@
                 "name": "Hope Harvester",
                 "cost": 295,
                 "options": [
-                    "Sorcerous Antennae"
+                    {
+                        "name": "Sorcerous Antennae",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -107,8 +179,14 @@
                 "name": "Bloat Flies",
                 "cost": 530,
                 "options": [
-                    "Standard Bearer",
-                    "Digestive Vomit"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Digestive Vomit",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -128,19 +206,58 @@
                 "name": "King",
                 "cost": 565,
                 "options": [
-                    "General",
-                    "Ancient Grudge",
-                    "Glory Hunter",
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Resistance",
-                    "Rune of Iron",
-                    "Rune of Destruction",
-                    "Rune of Might",
-                    "Rune of Storms",
-                    "Rune of Kinship",
-                    "Battle Rune",
-                    "Rune of Resolve"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Ancient Grudge",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Glory Hunter",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resistance",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Destruction",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Storms",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Kinship",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Rune",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resolve",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -149,18 +266,54 @@
                 "name": "Runic Smith",
                 "cost": 415,
                 "options": [
-                    "Shield Wall",
-                    "Rune of Iron",
-                    "Rune of Retribution",
-                    "Rune of Lightning",
-                    "Rune of Returning",
-                    "Rune of Channelling",
-                    "Rune of the Courage",
-                    "Rune of Kinship",
-                    "Battle Rune",
-                    "Rune of Resolve",
-                    "Rune of Gleaming",
-                    "Rune of Resilience"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Retribution",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Returning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Channelling",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of the Courage",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Kinship",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Rune",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resolve",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -169,15 +322,42 @@
                 "name": "Thane",
                 "cost": 310,
                 "options": [
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Iron",
-                    "Rune of Penetration",
-                    "Rune of Anger",
-                    "Rune of Precision",
-                    "Rune of Kinship",
-                    "Battle Standard Bearer",
-                    "Flaming Standard"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Penetration",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Anger",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Precision",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Kinship",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -186,11 +366,26 @@
                 "name": "Clan Warriors",
                 "cost": 560,
                 "options": [
-                    "Great Weapon",
-                    "Stalker's Standard",
-                    "Vanguard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 32,
@@ -200,9 +395,18 @@
                 "name": "Greybeards",
                 "cost": 440,
                 "options": [
-                    "Shield Wall",
-                    "Runic Standard of the Hold",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -212,8 +416,14 @@
                 "name": "King's Guard",
                 "cost": 520,
                 "options": [
-                    "Runic Standard of Grudges",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Grudges",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -237,9 +447,18 @@
                 "name": "Anvil of Power",
                 "cost": 200,
                 "options": [
-                    "Rune of Resolve",
-                    "Rune of Gleaming",
-                    "Rune of Resilience"
+                    {
+                        "name": "Rune of Resolve",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -248,7 +467,10 @@
                 "name": "Steam Copters",
                 "cost": 190,
                 "options": [
-                    "Shrapnel Grenades"
+                    {
+                        "name": "Shrapnel Grenades",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,

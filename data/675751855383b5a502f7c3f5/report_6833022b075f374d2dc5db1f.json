@@ -13,11 +13,26 @@
                 "name": "Dread Prince",
                 "cost": 540,
                 "options": [
-                    "General",
-                    "Manticore",
-                    "Height of Hubris",
-                    "Great Weapon and Elven Finesse",
-                    "Talisman of Shielding"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Manticore",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Height of Hubris",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,12 +41,30 @@
                 "name": "Silexian Officer",
                 "cost": 465,
                 "options": [
-                    "Trusted Adviser",
-                    "Manticore",
-                    "Great Weapon and Elven Finesse",
-                    "Moithir's Mirror",
-                    "Battle Standard Bearer",
-                    "Aether Icon"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Manticore",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Moithir's Mirror",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -40,8 +73,14 @@
                 "name": "Silexian Spears",
                 "cost": 357,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -51,7 +90,10 @@
                 "name": "Silexian Spears",
                 "cost": 275,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -61,7 +103,10 @@
                 "name": "Shadow Riders",
                 "cost": 190,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -71,7 +116,10 @@
                 "name": "Shadow Riders",
                 "cost": 190,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -81,9 +129,18 @@
                 "name": "Dread Knights",
                 "cost": 354,
                 "options": [
-                    "Lance",
-                    "Banner of Urlain",
-                    "Standard Bearer"
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -93,9 +150,18 @@
                 "name": "Dread Knights",
                 "cost": 354,
                 "options": [
-                    "Lance",
-                    "Banner of Urlain",
-                    "Standard Bearer"
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -105,7 +171,10 @@
                 "name": "Gorgons",
                 "cost": 310,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -129,7 +198,10 @@
                 "name": "Raptor Chariot",
                 "cost": 190,
                 "options": [
-                    "Lance"
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -138,7 +210,10 @@
                 "name": "Raptor Chariot",
                 "cost": 190,
                 "options": [
-                    "Lance"
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -147,8 +222,14 @@
                 "name": "Black Cloaks",
                 "cost": 165,
                 "options": [
-                    "Repeater Handbow and Poison Attacks",
-                    "Covert Operatives"
+                    {
+                        "name": "Repeater Handbow and Poison Attacks",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Covert Operatives",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -168,17 +249,50 @@
                 "name": "Shaman",
                 "cost": 510,
                 "options": [
-                    "General",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Wild Spikes",
-                    "Totemic Summon",
-                    "Iron Fist",
-                    "Rod of Battle",
-                    "Gut Roarer"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -187,11 +301,26 @@
                 "name": "Khan",
                 "cost": 280,
                 "options": [
-                    "Trusted Adviser",
-                    "Iron Fist",
-                    "Rottenjaw",
-                    "Battle Standard Bearer",
-                    "Ogre Crossbow"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rottenjaw",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -200,9 +329,18 @@
                 "name": "Tribesmen",
                 "cost": 262,
                 "options": [
-                    "Paired Weapons",
-                    "Banner of Courage",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -212,9 +350,18 @@
                 "name": "Tribesmen",
                 "cost": 262,
                 "options": [
-                    "Paired Weapons",
-                    "Banner of Courage",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -224,8 +371,14 @@
                 "name": "Tribesmen",
                 "cost": 242,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 6,
@@ -235,8 +388,14 @@
                 "name": "Tribesmen",
                 "cost": 242,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 3,
                 "models": 6,
@@ -246,10 +405,22 @@
                 "name": "Mercenary Veterans",
                 "cost": 425,
                 "options": [
-                    "Stalker's Standard",
-                    "Halberd",
-                    "Standard Bearer",
-                    "First Strike"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "First Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -259,10 +430,22 @@
                 "name": "Mercenary Veterans",
                 "cost": 405,
                 "options": [
-                    "Banner of Courage",
-                    "Halberd",
-                    "Standard Bearer",
-                    "Lethal Strike"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lethal Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -301,7 +484,10 @@
                 "name": "Frost Mammoth",
                 "cost": 380,
                 "options": [
-                    "Hunting Spear"
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -310,7 +496,10 @@
                 "name": "Frost Mammoth",
                 "cost": 380,
                 "options": [
-                    "Hunting Spear"
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "chained beasts"

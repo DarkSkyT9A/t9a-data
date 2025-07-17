@@ -13,11 +13,26 @@
                 "name": "Vampire Count",
                 "cost": 760,
                 "options": [
-                    "Vetala",
-                    "Colossal Zombie Dragon",
-                    "Wizard Apprentice",
-                    "Halberd",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Colossal Zombie Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,14 +41,38 @@
                 "name": "Vampire Count",
                 "cost": 510,
                 "options": [
-                    "Vetala",
-                    "Evocation",
-                    "Evocation",
-                    "Monstrous Revenant",
-                    "Wizard Apprentice",
-                    "Halberd",
-                    "Talisman of Shielding",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Monstrous Revenant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -42,14 +81,38 @@
                 "name": "Necromancer",
                 "cost": 330,
                 "options": [
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Mimic Cloak",
-                    "General and The Dead Arise"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "General and The Dead Arise",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -58,7 +121,10 @@
                 "name": "Ghouls",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 35,
@@ -68,8 +134,14 @@
                 "name": "Skeletons",
                 "cost": 188,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -102,9 +174,18 @@
                 "name": "Spectral Hunters",
                 "cost": 460,
                 "options": [
-                    "Blood Curse",
-                    "Weal and Woe",
-                    "Wizard Conclave"
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -114,7 +195,10 @@
                 "name": "Winged Reapers",
                 "cost": 600,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -134,18 +218,54 @@
                 "name": "Mage",
                 "cost": 645,
                 "options": [
-                    "Asfad Scholar",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Cosmology",
-                    "Truth of Time",
-                    "Weal and Woe",
-                    "Ice and Fire",
-                    "Cosmic Scales",
-                    "Thunder and Lightning",
-                    "Gleaming Robe",
-                    "Giant Slayer",
-                    "Book of Meladys"
+                    {
+                        "name": "Asfad Scholar",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cosmic Scales",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Thunder and Lightning",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gleaming Robe",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Book of Meladys",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -154,12 +274,30 @@
                 "name": "High Prince",
                 "cost": 380,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Destiny's Call",
-                    "Royal Huntsman",
-                    "Elemental Blade",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Royal Huntsman",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Elemental Blade",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -168,13 +306,34 @@
                 "name": "Commander",
                 "cost": 290,
                 "options": [
-                    "Elven Horse",
-                    "Shield",
-                    "Dusk Forged",
-                    "Basalt Infusion",
-                    "Longbow",
-                    "Lance",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Elven Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dusk Forged",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -183,12 +342,30 @@
                 "name": "Commander",
                 "cost": 120,
                 "options": [
-                    "Light Troops",
-                    "Queen's Companion",
-                    "Moonlight Arrows",
-                    "Longbow",
-                    "Great Weapon and Elven Finesse",
-                    "Captain and Attached"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Queen's Companion",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Moonlight Arrows",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -197,8 +374,14 @@
                 "name": "Sea Guard",
                 "cost": 560,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -208,8 +391,14 @@
                 "name": "Sea Guard",
                 "cost": 452,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -219,7 +408,10 @@
                 "name": "Knights of Rymâ",
                 "cost": 510,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -237,7 +429,10 @@
                 "name": "Lion Guard",
                 "cost": 290,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,

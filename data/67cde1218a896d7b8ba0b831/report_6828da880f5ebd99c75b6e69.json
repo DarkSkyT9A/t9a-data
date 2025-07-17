@@ -13,15 +13,42 @@
                 "name": "Vampire Count",
                 "cost": 815,
                 "options": [
-                    "Sangreal",
-                    "Evocation",
-                    "Crimson Rage",
-                    "Monstrous Revenant",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Reaper's Harvest",
-                    "Eternity Gem",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Sangreal",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Crimson Rage",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Monstrous Revenant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Reaper's Harvest",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Eternity Gem",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,13 +57,34 @@
                 "name": "Necromancer",
                 "cost": 580,
                 "options": [
-                    "Battleline Hero",
-                    "Evocation",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Necromantic Staff",
-                    "General and The Dead Arise",
-                    "Lich"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -52,9 +100,18 @@
                 "name": "Skeletons",
                 "cost": 390,
                 "options": [
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Banner of Eldritch Might"
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -64,9 +121,18 @@
                 "name": "Skeletons",
                 "cost": 225,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Banner of Speed"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -76,7 +142,10 @@
                 "name": "Ghouls",
                 "cost": 385,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -86,7 +155,10 @@
                 "name": "Ghasts",
                 "cost": 500,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -103,7 +175,10 @@
                 "name": "Wraiths",
                 "cost": 235,
                 "options": [
-                    "Sweeping Attack"
+                    {
+                        "name": "Sweeping Attack",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -130,14 +205,38 @@
                 "name": "Centaur Chieftain",
                 "cost": 430,
                 "options": [
-                    "Greater Totem Bearer",
-                    "Battle Standard Bearer",
-                    "Shield",
-                    "Obscuring Fog",
-                    "Throwing Weapons",
-                    "Wild Form",
-                    "Lance",
-                    "Pillager Icon"
+                    {
+                        "name": "Greater Totem Bearer",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Obscuring Fog",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Wild Form",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pillager Icon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -146,13 +245,34 @@
                 "name": "Soothsayer",
                 "cost": 385,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Crown of Madness",
-                    "Rain Augur Brew",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Shamanism"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Crown of Madness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rain Augur Brew",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -161,11 +281,26 @@
                 "name": "Mongrel Herd",
                 "cost": 250,
                 "options": [
-                    "Ambush",
-                    "Banner of Courage",
-                    "Spear",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -175,10 +310,22 @@
                 "name": "Wildhorn Herd",
                 "cost": 235,
                 "options": [
-                    "Shield",
-                    "Banner of Courage",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -204,9 +351,18 @@
                 "name": "Centaurs",
                 "cost": 337,
                 "options": [
-                    "Distortion Emblem",
-                    "Standard Bearer",
-                    "Light Lance"
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -216,9 +372,18 @@
                 "name": "Centaurs",
                 "cost": 190,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Light Lance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 5,

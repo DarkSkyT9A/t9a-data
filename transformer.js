@@ -1,6 +1,8 @@
 "use strict";
 
 const units = require("./old/units.js");
+const optionsNew = require("./options.json");
+const allItems = require("./old/specialItems.js").arcCompAll;
 
 // Constants
 const SPECIAL = "Special";
@@ -6402,7 +6404,7 @@ function transformArmyList(input, army) {
     }
 
     for (let option in input.options) {
-        // console.log(JSON.stringify(option));
+        // console.log(`Option: ${JSON.stringify(option)}`);
         let unitIndex = 0;
         let previousUnit = "";
         for (let optionEntry of input.options[option]) {
@@ -6420,27 +6422,28 @@ function transformArmyList(input, army) {
                 // console.log("" + unitIndex + "/" + previousUnit + "/" + JSON.stringify(optionEntry));
                 let unitEntry = r.units.find(u => u.name === optionEntry.parentUnit && u.index === unitIndex);
                 // Exception handling for fucked up reported list
-                while(unitEntry === undefined) {
-                    // console.error(`~~ Exception Handling for fauly list ~~`);
+                while (unitEntry === undefined) {
+                    // console.error(`~~ Exception Handling for faulty list ~~`);
                     // console.log(`Could not find unit entry for ${optionEntry.parentUnit}/${unitIndex} in ${JSON.stringify(r.units)}`);
                     let unitAmount = r.units.filter(u => u.name === optionEntry.parentUnit).length;
                     unitIndex = unitIndex - unitAmount;
                     // console.log(`now checking at index ${unitIndex}`);
                     unitEntry = r.units.find(u => u.name === optionEntry.parentUnit && u.index === unitIndex);
                 }
+
                 // console.log(JSON.stringify(unitEntry, null, 4));
+                // Categorize and optimize options
                 if (option === unitEntry.name) {
                     unitEntry.models = optionEntry.amount;
                 } else {
-                    unitEntry.options.push(option);
+                    categorizeOption(unitEntry, option);
                 }
-
             }
         }
     }
 
     // Determine category after collecting options, since some units depend on them
-    for(let u of r.units) {
+    for (let u of r.units) {
         u.category = determineCategory(u, army);
     }
 
@@ -6449,50 +6452,70 @@ function transformArmyList(input, army) {
     return r;
 }
 
+function categorizeOption(unitEntry, option) {
+    // console.log("Categorize Option: " + option);
+    // console.log(JSON.stringify(optionsNew));
+    let optionLower = option.toLowerCase();
+    // Try to find it in options first
+    let type = "Other";
+    if (optionsNew.find(o => o.name.toLowerCase() === optionLower)) {
+        type = optionsNew.find(o => o.name === optionLower)?.type;
+    } else if (allItems.find(s => s.toLowerCase() === optionLower)) {
+        type = "Special Items";
+    }
+    // console.log("Type is " + type);
+
+    unitEntry.options.push(
+        {
+            "name": option,
+            "type": type
+        });
+}
 
 function determineCategory(unit, army) {
 
     let unitEntry = units[army].find(u => u.name === unit.name);
-    if(undefined === unitEntry) {
+    if (undefined === unitEntry) {
         console.error(`Could not find unit entry for ${unit.name}`);
         // console.error(JSON.stringify(input, null, 4));
     }
 
     // Shadow Riders
     if (unit.name === `Shadow Riders`) {
-        if (unit.options.includes("Light Lance and Repeater Crossbow")) {
-                return SPECIAL;
+        if (unit.options.some(o => o.name === "Light Lance and Repeater Crossbow")) {
+            return SPECIAL;
         }
-    } 
+    }
     // Dancers of Yema
-    else if(unit.name === `Temple Militants`) {
-        if(unit.options.includes("Dancers of Yema")) {
+    else if (unit.name === `Temple Militants`) {
+        if (unit.options.some(o => o.name === "Dancers of Yema")) {
             return SPECIAL;
         }
     }
     // Raptor Pack
-    else if(unit.name === `Raptor Pack`) {
-        if(!unit.options.includes("Corrosive Spitter") && !unit.options.includes("Ambush")) {
+    else if (unit.name === `Raptor Pack`) {
+        if (!unit.options.some(o => o.name === "Corrosive Spitter" || o.name === "Ambush")) {
             return CORE;
         }
     }
     // Headbashers
-    else if(["Feral Orcs", "Feral Orc Marauders", "Veteran Orcs", "Veteran Orc Marauders"].includes(unit.name)) {
-        if(unit.options.includes("Headbashers")) {
+    else if (["Feral Orcs", "Feral Orc Marauders", "Veteran Orcs", "Veteran Orc Marauders"].includes(unit.name)) {
+        console.log(JSON.stringify(unit.options));
+        if (unit.options.some(o => o.name === "Headbashers")) {
             return SPECIAL;
         }
     }
     // Conditional Core
-    else if(unitEntry.conditionalCore && unit.models >= unitEntry.conditionalCore) {
+    else if (unitEntry.conditionalCore && unit.models >= unitEntry.conditionalCore) {
         return CORE;
-    }      
+    }
 
     return units[army].find(u => u.name === unit.name).category;
 }
 
 function summarizeCategoryPoints(list, army) {
     let coreFactor = army === "WDG" ? 1.25 : 1.00;
-    if(army === "OK" && list.units.some(u => u.options.includes("Wildheart"))) {
+    if (army === "OK" && list.units.some(u => u.options?.Leadership?.includes("Wildheart"))) {
         coreFactor = 1.25;
     }
     list.pointsPerCategory = {

@@ -13,12 +13,30 @@
                 "name": "Anurarch Archmage",
                 "cost": 655,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Carved Tablet",
-                    "Touch of the Reaper",
-                    "Binding Scroll",
-                    "Veil Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Carved Tablet",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Veil Mastery",
+                        "type": "arcaneMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,10 +45,22 @@
                 "name": "Tegu Warriors",
                 "cost": 580,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Standard Bearer",
-                    "Flaming Standard"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -40,7 +70,10 @@
                 "name": "Skink Hunters",
                 "cost": 212,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -50,7 +83,10 @@
                 "name": "Skink Hunters",
                 "cost": 212,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 18,
@@ -60,8 +96,14 @@
                 "name": "Tegu Guards",
                 "cost": 465,
                 "options": [
-                    "Standard Bearer",
-                    "Koru Stone"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -71,7 +113,10 @@
                 "name": "Raptor Riders",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -81,7 +126,10 @@
                 "name": "Raptor Riders",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -91,8 +139,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 244,
                 "options": [
-                    "Blowpipe",
-                    "Chameleon"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -102,8 +156,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 244,
                 "options": [
-                    "Blowpipe",
-                    "Chameleon"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 12,
@@ -113,8 +173,14 @@
                 "name": "Stygiosaur Pack",
                 "cost": 545,
                 "options": [
-                    "Wizard Conclave",
-                    "Standard Bearer"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -134,8 +200,14 @@
                 "name": "Iron Orc Loner",
                 "cost": 460,
                 "options": [
-                    "Wyvern",
-                    "Talisman of Shielding"
+                    {
+                        "name": "Wyvern",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -144,12 +216,30 @@
                 "name": "Orc Warlord",
                 "cost": 355,
                 "options": [
-                    "Battleline Hero",
-                    "Destiny's Call",
-                    "Eldritch Inscriptions",
-                    "General",
-                    "Light Troops",
-                    "Great Weapon"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -158,10 +248,22 @@
                 "name": "Goblin Witch",
                 "cost": 345,
                 "options": [
-                    "Skull Fetish",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Pyromancy"
+                    {
+                        "name": "Skull Fetish",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -170,9 +272,18 @@
                 "name": "Orc Shaman",
                 "cost": 270,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Shamanism"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -181,9 +292,18 @@
                 "name": "Brood Alpha",
                 "cost": 125,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -192,8 +312,14 @@
                 "name": "Veteran Orc Marauders",
                 "cost": 464,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -203,7 +329,10 @@
                 "name": "Feral Orcs",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 38,
@@ -213,8 +342,14 @@
                 "name": "Goblin Rabble",
                 "cost": 185,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 26,
@@ -224,9 +359,18 @@
                 "name": "Guardian Behemoth",
                 "cost": 365,
                 "options": [
-                    "Immense Bulk",
-                    "Slithering Frame",
-                    "Scarred Carapace"
+                    {
+                        "name": "Immense Bulk",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Slithering Frame",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scarred Carapace",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -235,8 +379,14 @@
                 "name": "Iron Orcs",
                 "cost": 310,
                 "options": [
-                    "Standard Bearer",
-                    "Crossbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -254,7 +404,10 @@
                 "name": "Goblin Artillery",
                 "cost": 180,
                 "options": [
-                    "Splatterer"
+                    {
+                        "name": "Splatterer",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -263,7 +416,10 @@
                 "name": "Goblin Artillery",
                 "cost": 170,
                 "options": [
-                    "Git Launcher"
+                    {
+                        "name": "Git Launcher",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"

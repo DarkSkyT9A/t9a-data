@@ -13,16 +13,46 @@
                 "name": "Soothsayer",
                 "cost": 385,
                 "options": [
-                    "General",
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Pillager Icon",
-                    "Rain Augur Brew"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pillager Icon",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rain Augur Brew",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,14 +61,38 @@
                 "name": "Wildhorn Chieftain",
                 "cost": 320,
                 "options": [
-                    "Light Troops",
-                    "Seed of the Dark Forest",
-                    "Greater Totem Bearer",
-                    "Battle Standard Bearer",
-                    "Shield",
-                    "Wild Warding",
-                    "Throwing Weapons",
-                    "Beast Axe"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Seed of the Dark Forest",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Greater Totem Bearer",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Beast Axe",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -55,8 +109,14 @@
                 "name": "Mongrel Herd",
                 "cost": 174,
                 "options": [
-                    "Ambush",
-                    "Standard Bearer"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -66,8 +126,14 @@
                 "name": "Mongrel Herd",
                 "cost": 174,
                 "options": [
-                    "Ambush",
-                    "Standard Bearer"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 22,
@@ -77,8 +143,14 @@
                 "name": "Wildhorn Herd",
                 "cost": 160,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -88,8 +160,14 @@
                 "name": "Longhorn Herd",
                 "cost": 352,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -143,7 +221,10 @@
                 "name": "Beast Giant",
                 "cost": 295,
                 "options": [
-                    "Beer Barrel"
+                    {
+                        "name": "Beer Barrel",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "terrors of the wild"
@@ -152,7 +233,10 @@
                 "name": "Beast Giant",
                 "cost": 295,
                 "options": [
-                    "Beer Barrel"
+                    {
+                        "name": "Beer Barrel",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "terrors of the wild"
@@ -161,7 +245,10 @@
                 "name": "Beast Giant",
                 "cost": 295,
                 "options": [
-                    "Beer Barrel"
+                    {
+                        "name": "Beer Barrel",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "terrors of the wild"
@@ -180,12 +267,30 @@
                 "name": "Goblin Demagogue",
                 "cost": 210,
                 "options": [
-                    "Solitary",
-                    "Pet Monster",
-                    "Huntsman Spider",
-                    "Shield",
-                    "Lance",
-                    "Dragon's Brew"
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Pet Monster",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Huntsman Spider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -194,9 +299,18 @@
                 "name": "Goblin Demagogue",
                 "cost": 135,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Trusted Adviser",
-                    "Light Troops"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -205,10 +319,22 @@
                 "name": "Goblin Demagogue",
                 "cost": 90,
                 "options": [
-                    "General",
-                    "Darrmu and Goblin Gardens",
-                    "Battleline Hero",
-                    "Light Troops"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Darrmu and Goblin Gardens",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -259,8 +385,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 45,
                 "options": [
-                    "Light Troops",
-                    "Netter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Netter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -269,8 +401,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 45,
                 "options": [
-                    "Light Troops",
-                    "Netter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Netter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -279,9 +417,18 @@
                 "name": "Goblin Rabble",
                 "cost": 430,
                 "options": [
-                    "Goga Cauldron",
-                    "Poisoned Spear and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Poisoned Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 50,
@@ -291,9 +438,18 @@
                 "name": "Goblin Rabble",
                 "cost": 423,
                 "options": [
-                    "Goga Cauldron",
-                    "Poisoned Spear and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Poisoned Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 49,
@@ -303,9 +459,18 @@
                 "name": "Goblin Rabble",
                 "cost": 200,
                 "options": [
-                    "Banner of Courage",
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 25,
@@ -315,7 +480,10 @@
                 "name": "Trolls",
                 "cost": 545,
                 "options": [
-                    "Bridge Troll"
+                    {
+                        "name": "Bridge Troll",
+                        "type": "trollRace"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -325,7 +493,10 @@
                 "name": "Trolls",
                 "cost": 545,
                 "options": [
-                    "Bridge Troll"
+                    {
+                        "name": "Bridge Troll",
+                        "type": "trollRace"
+                    }
                 ],
                 "index": 1,
                 "models": 9,
@@ -335,7 +506,10 @@
                 "name": "Goblin Artillery",
                 "cost": 180,
                 "options": [
-                    "Splatterer"
+                    {
+                        "name": "Splatterer",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -344,7 +518,10 @@
                 "name": "Goblin Artillery",
                 "cost": 180,
                 "options": [
-                    "Splatterer"
+                    {
+                        "name": "Splatterer",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -353,7 +530,10 @@
                 "name": "Goblin Artillery",
                 "cost": 170,
                 "options": [
-                    "Git Launcher"
+                    {
+                        "name": "Git Launcher",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Special"
@@ -362,7 +542,10 @@
                 "name": "Goblin Artillery",
                 "cost": 90,
                 "options": [
-                    "Skewerer"
+                    {
+                        "name": "Skewerer",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 3,
                 "category": "Special"
@@ -371,7 +554,10 @@
                 "name": "Goblin Artillery",
                 "cost": 90,
                 "options": [
-                    "Skewerer"
+                    {
+                        "name": "Skewerer",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 4,
                 "category": "Special"
@@ -380,7 +566,10 @@
                 "name": "Goblin Artillery",
                 "cost": 90,
                 "options": [
-                    "Skewerer"
+                    {
+                        "name": "Skewerer",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 5,
                 "category": "Special"

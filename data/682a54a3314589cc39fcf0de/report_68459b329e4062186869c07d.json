@@ -13,12 +13,30 @@
                 "name": "Goblin Witch",
                 "cost": 560,
                 "options": [
-                    "Gargantula",
-                    "Wizard Adept",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Weight of Judgement",
-                    "Holy Affliction"
+                    {
+                        "name": "Gargantula",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weight of Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,13 +45,34 @@
                 "name": "Orc Warlord",
                 "cost": 535,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Eldritch Inscriptions",
-                    "Talisman of Shielding",
-                    "Moon Shrooms",
-                    "Wyvern",
-                    "Great Weapon"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Moon Shrooms",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyvern",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,13 +81,34 @@
                 "name": "Orc Shaman",
                 "cost": 310,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Mimic Cloak",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -57,10 +117,22 @@
                 "name": "Brood Alpha",
                 "cost": 195,
                 "options": [
-                    "Light Troops",
-                    "Destiny's Call",
-                    "Paired Weapons",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -69,11 +141,26 @@
                 "name": "Veteran Orcs",
                 "cost": 494,
                 "options": [
-                    "Shield",
-                    "Stalker's Standard",
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -83,8 +170,14 @@
                 "name": "Veteran Orc Marauders",
                 "cost": 350,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -94,7 +187,10 @@
                 "name": "Goblin Reavers",
                 "cost": 160,
                 "options": [
-                    "Lance and Shield"
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -104,9 +200,18 @@
                 "name": "Iron Orcs",
                 "cost": 596,
                 "options": [
-                    "Stalker's Standard",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -123,7 +228,10 @@
                 "name": "Gogtuk Neophytes",
                 "cost": 200,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -157,19 +265,58 @@
                 "name": "Mage",
                 "cost": 640,
                 "options": [
-                    "General",
-                    "Asfad Scholar",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Fireball",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Cage of Embers",
-                    "Gleaming Robe",
-                    "Amethyst Crystal",
-                    "Scroll of Power"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Asfad Scholar",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fireball",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cage of Embers",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gleaming Robe",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Amethyst Crystal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -178,14 +325,38 @@
                 "name": "Commander",
                 "cost": 300,
                 "options": [
-                    "Elven Horse",
-                    "Shield",
-                    "Sigil of Protection",
-                    "Scroll of the Pearl Throne",
-                    "Battle Standard Bearer",
-                    "Queen's Cavalier",
-                    "Stalker's Standard",
-                    "Lance"
+                    {
+                        "name": "Elven Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of the Pearl Throne",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Queen's Cavalier",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -194,7 +365,10 @@
                 "name": "Sea Guard",
                 "cost": 424,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -204,7 +378,10 @@
                 "name": "Citizen Spears",
                 "cost": 380,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -222,8 +399,14 @@
                 "name": "Lion Guard",
                 "cost": 560,
                 "options": [
-                    "Navigator's Banner",
-                    "Standard Bearer"
+                    {
+                        "name": "Navigator's Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -233,8 +416,14 @@
                 "name": "Knights of Rymâ",
                 "cost": 530,
                 "options": [
-                    "War Banner of Rymâ",
-                    "Standard Bearer"
+                    {
+                        "name": "War Banner of Rymâ",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -244,7 +433,10 @@
                 "name": "Queen's Guard",
                 "cost": 355,
                 "options": [
-                    "Shield"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 15,

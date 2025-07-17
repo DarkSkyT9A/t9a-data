@@ -13,15 +13,42 @@
                 "name": "Shaman",
                 "cost": 360,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Weight of Judgement",
-                    "Holy Affliction",
-                    "Iron Fist",
-                    "Rod of Battle",
-                    "Gut Roarer"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weight of Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,10 +57,22 @@
                 "name": "Khan",
                 "cost": 305,
                 "options": [
-                    "Talisman of the Void",
-                    "Battle Standard Bearer",
-                    "Viper's Curse",
-                    "Brace of Ogre Pistols"
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Viper's Curse",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,10 +81,22 @@
                 "name": "Scraplings",
                 "cost": 450,
                 "options": [
-                    "Stalker's Standard",
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 55,
@@ -55,10 +106,22 @@
                 "name": "Tribesmen",
                 "cost": 390,
                 "options": [
-                    "Paired Weapons",
-                    "Sheltering Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -68,7 +131,10 @@
                 "name": "Bruisers",
                 "cost": 165,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -78,11 +144,26 @@
                 "name": "Mercenary Veterans",
                 "cost": 475,
                 "options": [
-                    "Paired Weapons",
-                    "Banner of the Gyengget",
-                    "Standard Bearer",
-                    "Lethal Strike",
-                    "Vanguard"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of the Gyengget",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lethal Strike",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -92,9 +173,18 @@
                 "name": "Mercenary Gunners",
                 "cost": 445,
                 "options": [
-                    "Banner of Discipline",
-                    "Standard Bearer",
-                    "Brace of Ogre Pistols and Lethal Strike"
+                    {
+                        "name": "Banner of Discipline",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols and Lethal Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -142,8 +232,14 @@
                 "name": "Mercenary Giant",
                 "cost": 270,
                 "options": [
-                    "Iron Fist",
-                    "Devastating Charge"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Devastating Charge",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -162,15 +258,42 @@
                 "name": "Paladin",
                 "cost": 605,
                 "options": [
-                    "General",
-                    "Fey Steed",
-                    "Shield",
-                    "Touch of Greatness",
-                    "Bastard Sword",
-                    "Percival's Panoply",
-                    "Sacred Chalice",
-                    "Black Knight's Tonic",
-                    "Sainted and Gallantry"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Fey Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Percival's Panoply",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sacred Chalice",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Black Knight's Tonic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sainted and Gallantry",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -179,13 +302,34 @@
                 "name": "Damsel",
                 "cost": 390,
                 "options": [
-                    "Revered Unicorn",
-                    "Talisman of the Void",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects"
+                    {
+                        "name": "Revered Unicorn",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -194,14 +338,38 @@
                 "name": "Folk Hero",
                 "cost": 300,
                 "options": [
-                    "Destrier",
-                    "Shield",
-                    "Giant Slayer",
-                    "Warding of Unity",
-                    "Light Lance",
-                    "Attached",
-                    "Bannerman",
-                    "Cleric"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -210,11 +378,26 @@
                 "name": "Hedge Knights",
                 "cost": 445,
                 "options": [
-                    "Castellan's Crest",
-                    "Banner of Roland",
-                    "Knight Banneret",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Castellan's Crest",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Roland",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -224,10 +407,22 @@
                 "name": "Mounted Serjeants",
                 "cost": 330,
                 "options": [
-                    "Great Weapon",
-                    "Banner of Discipline",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Discipline",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -237,10 +432,22 @@
                 "name": "Mounted Serjeants",
                 "cost": 320,
                 "options": [
-                    "Banner of Discipline",
-                    "Musician",
-                    "Standard Bearer",
-                    "Light Lance and Shield"
+                    {
+                        "name": "Banner of Discipline",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Light Lance and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -250,9 +457,18 @@
                 "name": "Knights of the Realm",
                 "cost": 300,
                 "options": [
-                    "Aether Icon",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -262,11 +478,26 @@
                 "name": "Knights of the Quest",
                 "cost": 555,
                 "options": [
-                    "Castellan's Crest",
-                    "Distortion Emblem",
-                    "Knight Banneret",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Castellan's Crest",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -276,7 +507,10 @@
                 "name": "Yeoman Outriders",
                 "cost": 150,
                 "options": [
-                    "Bow"
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -286,7 +520,10 @@
                 "name": "Fey Knight",
                 "cost": 360,
                 "options": [
-                    "Chosen of the Snow Childe"
+                    {
+                        "name": "Chosen of the Snow Childe",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"
@@ -295,9 +532,18 @@
                 "name": "Naiads",
                 "cost": 245,
                 "options": [
-                    "Chance of Redemption",
-                    "Swarm of Insects",
-                    "Wizard Conclave"
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

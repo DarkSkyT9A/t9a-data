@@ -13,16 +13,46 @@
                 "name": "Temple Exarch",
                 "cost": 410,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Supernatural Dexterity",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "Ceinran's Scales"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Ceinran's Scales",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,12 +61,30 @@
                 "name": "Temple Exarch",
                 "cost": 355,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Wizard Apprentice",
-                    "Divination",
-                    "Flaming Standard",
-                    "Seal of the Republic",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -45,9 +93,18 @@
                 "name": "Silexian Spears",
                 "cost": 330,
                 "options": [
-                    "Caedhren's Pennon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Caedhren's Pennon",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -57,7 +114,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 290,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -67,8 +127,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -78,8 +144,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -89,10 +161,22 @@
                 "name": "Temple Militants",
                 "cost": 456,
                 "options": [
-                    "Sheltering Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Dancers of Yema"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -102,9 +186,18 @@
                 "name": "Judicators",
                 "cost": 375,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -114,10 +207,22 @@
                 "name": "Dread Acolytes",
                 "cost": 290,
                 "options": [
-                    "Standard Bearer",
-                    "Warlock Acolytes",
-                    "Ice and Fire",
-                    "Illusory Paths"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Warlock Acolytes",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -127,8 +232,14 @@
                 "name": "Dread Acolytes",
                 "cost": 289,
                 "options": [
-                    "Standard Bearer",
-                    "Temple Acolytes"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Temple Acolytes",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 7,
@@ -138,7 +249,10 @@
                 "name": "Divine Altar",
                 "cost": 230,
                 "options": [
-                    "Altar of Tila"
+                    {
+                        "name": "Altar of Tila",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -161,8 +275,14 @@
                 "name": "Black Cloaks",
                 "cost": 165,
                 "options": [
-                    "Repeater Handbow and Poison Attacks",
-                    "Covert Operatives"
+                    {
+                        "name": "Repeater Handbow and Poison Attacks",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Covert Operatives",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

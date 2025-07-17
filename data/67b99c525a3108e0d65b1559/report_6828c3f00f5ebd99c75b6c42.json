@@ -13,17 +13,50 @@
                 "name": "Orc Shaman",
                 "cost": 580,
                 "options": [
-                    "Curse of Lycanthropy",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Wild Spikes",
-                    "Totemic Summon",
-                    "Skull Fetish",
-                    "Potion of Power Preservation"
+                    {
+                        "name": "Curse of Lycanthropy",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Skull Fetish",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Potion of Power Preservation",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,12 +65,30 @@
                 "name": "Orc Warlord",
                 "cost": 485,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Wyvern",
-                    "Eldritch Inscriptions",
-                    "Talisman of Shielding",
-                    "Great Weapon"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wyvern",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -46,12 +97,30 @@
                 "name": "Brood Alpha",
                 "cost": 320,
                 "options": [
-                    "Grunter Chariot",
-                    "Basalt Infusion",
-                    "Monster Munch",
-                    "Shield",
-                    "Lance",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Grunter Chariot",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Monster Munch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -74,8 +143,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 45,
                 "options": [
-                    "Light Troops",
-                    "Netter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Netter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -84,8 +159,14 @@
                 "name": "Feral Orcs",
                 "cost": 365,
                 "options": [
-                    "Bow",
-                    "Standard Bearer"
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 35,
@@ -95,9 +176,18 @@
                 "name": "Goblin Rabble",
                 "cost": 360,
                 "options": [
-                    "Goga Cauldron",
-                    "Standard Bearer",
-                    "Poisoned Spear and Shield"
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Poisoned Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -107,7 +197,10 @@
                 "name": "Feral Orc Marauders",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -124,7 +217,10 @@
                 "name": "Iron Orcs",
                 "cost": 375,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -134,7 +230,10 @@
                 "name": "Iron Orc Chariots",
                 "cost": 370,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -144,7 +243,10 @@
                 "name": "Goblin Artillery",
                 "cost": 170,
                 "options": [
-                    "Git Launcher"
+                    {
+                        "name": "Git Launcher",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -153,7 +255,10 @@
                 "name": "Gogtuk Neophytes",
                 "cost": 160,
                 "options": [
-                    "Creepers"
+                    {
+                        "name": "Creepers",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -173,15 +278,42 @@
                 "name": "Damsel",
                 "cost": 550,
                 "options": [
-                    "Revered Unicorn",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Wild Spikes",
-                    "Totemic Summon",
-                    "Talisman of the Void"
+                    {
+                        "name": "Revered Unicorn",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -190,12 +322,30 @@
                 "name": "Duke",
                 "cost": 520,
                 "options": [
-                    "General",
-                    "Touch of Greatness",
-                    "Potion of Healing",
-                    "Hippogriff",
-                    "Paired Weapons",
-                    "Excellence"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Healing",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Hippogriff",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Excellence",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -204,13 +354,34 @@
                 "name": "Folk Hero",
                 "cost": 275,
                 "options": [
-                    "Destrier",
-                    "Lady's Favour",
-                    "Shield",
-                    "Light Lance",
-                    "Attached",
-                    "Bannerman",
-                    "Cleric"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lady's Favour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -219,9 +390,18 @@
                 "name": "Knights of the Realm",
                 "cost": 585,
                 "options": [
-                    "Stalker's Standard",
-                    "Solemn Oath",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Solemn Oath",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -231,8 +411,14 @@
                 "name": "Mounted Serjeants",
                 "cost": 268,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -242,8 +428,14 @@
                 "name": "Mounted Serjeants",
                 "cost": 268,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -253,9 +445,18 @@
                 "name": "Knights of the Quest",
                 "cost": 560,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -265,7 +466,10 @@
                 "name": "Sky Heralds",
                 "cost": 210,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -275,8 +479,14 @@
                 "name": "Men-at-Arms",
                 "cost": 200,
                 "options": [
-                    "Standard Bearer",
-                    "Castle Guard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Castle Guard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -286,8 +496,14 @@
                 "name": "Men-at-Arms",
                 "cost": 200,
                 "options": [
-                    "Standard Bearer",
-                    "Castle Guard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Castle Guard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -297,7 +513,10 @@
                 "name": "Fey Knight",
                 "cost": 360,
                 "options": [
-                    "Champion of the Green Knight"
+                    {
+                        "name": "Champion of the Green Knight",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"

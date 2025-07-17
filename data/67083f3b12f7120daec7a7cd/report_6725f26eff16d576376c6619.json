@@ -13,15 +13,42 @@
                 "name": "High Prince",
                 "cost": 610,
                 "options": [
-                    "General",
-                    "Royal Huntsman",
-                    "Lion Chariot",
-                    "Dragonforged Armour",
-                    "Ghostly Guard",
-                    "Elemental Blade",
-                    "Great Weapon and Elven Finesse",
-                    "Diadem of Protection",
-                    "Scroll of the Pearl Throne"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Royal Huntsman",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Lion Chariot",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Elemental Blade",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Diadem of Protection",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scroll of the Pearl Throne",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,12 +57,30 @@
                 "name": "Commander",
                 "cost": 420,
                 "options": [
-                    "Griffon",
-                    "Longbow",
-                    "Elu's Heartwood",
-                    "Dragonforged Armour",
-                    "Great Weapon and Elven Finesse",
-                    "Captain and Attached"
+                    {
+                        "name": "Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Elu's Heartwood",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,11 +89,26 @@
                 "name": "Commander",
                 "cost": 180,
                 "options": [
-                    "Queen's Companion",
-                    "Moonlight Arrows",
-                    "Light Troops",
-                    "Longbow",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Queen's Companion",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Moonlight Arrows",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -57,13 +117,34 @@
                 "name": "Mage",
                 "cost": 315,
                 "options": [
-                    "Light Troops",
-                    "Rod of Battle",
-                    "Wizard Adept",
-                    "Divination",
-                    "Fate's Judgement",
-                    "The Stars Align",
-                    "Chance of Redemption"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fate's Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -72,7 +153,10 @@
                 "name": "Citizen Archers",
                 "cost": 412,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -82,7 +166,10 @@
                 "name": "Citizen Archers",
                 "cost": 399,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 28,
@@ -100,8 +187,14 @@
                 "name": "Flame Wardens",
                 "cost": 545,
                 "options": [
-                    "Banner of Becalming",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Becalming",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -111,8 +204,14 @@
                 "name": "Sword Masters",
                 "cost": 485,
                 "options": [
-                    "Navigator's Banner",
-                    "Standard Bearer"
+                    {
+                        "name": "Navigator's Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -146,13 +245,34 @@
                 "name": "Commander",
                 "cost": 520,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Fleet Officer",
-                    "Sky Sloop",
-                    "Shield",
-                    "Dusk Forged",
-                    "Basalt Infusion",
-                    "Lance"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Fleet Officer",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Sky Sloop",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dusk Forged",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -161,15 +281,42 @@
                 "name": "Commander",
                 "cost": 450,
                 "options": [
-                    "Captain and Attached",
-                    "Fleet Officer",
-                    "Sky Sloop",
-                    "Shield",
-                    "Sigil of Protection",
-                    "Dragonforged Armour",
-                    "Daemon's Bane",
-                    "Lance",
-                    "Obsidian Rock"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Fleet Officer",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Sky Sloop",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Daemon's Bane",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -178,13 +325,34 @@
                 "name": "Commander",
                 "cost": 440,
                 "options": [
-                    "General",
-                    "Griffon",
-                    "Longbow",
-                    "Elu's Heartwood",
-                    "Dragonforged Armour",
-                    "Great Weapon and Elven Finesse",
-                    "Troll Tonic"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Elu's Heartwood",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Troll Tonic",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -193,7 +361,10 @@
                 "name": "Sea Guard",
                 "cost": 500,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -203,8 +374,14 @@
                 "name": "Highborn Lancers",
                 "cost": 327,
                 "options": [
-                    "War Banner of Rymâ",
-                    "Standard Bearer"
+                    {
+                        "name": "War Banner of Rymâ",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -222,7 +399,10 @@
                 "name": "Sword Masters",
                 "cost": 435,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -232,9 +412,18 @@
                 "name": "Initiate of the Fiery Heart",
                 "cost": 380,
                 "options": [
-                    "Wizard Conclave",
-                    "Living Steel",
-                    "Flaming Swords"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -243,9 +432,18 @@
                 "name": "Initiate of the Fiery Heart",
                 "cost": 380,
                 "options": [
-                    "Molten Copper",
-                    "Wizard Conclave",
-                    "Flaming Swords"
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -254,8 +452,14 @@
                 "name": "Queen's Guard",
                 "cost": 385,
                 "options": [
-                    "Banner of Becalming",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Becalming",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,

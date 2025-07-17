@@ -13,16 +13,46 @@
                 "name": "Shaman",
                 "cost": 510,
                 "options": [
-                    "General",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Savage Fury",
-                    "Awaken the Beast",
-                    "Wild Spikes",
-                    "Totemic Summon",
-                    "Mimic Cloak",
-                    "Gut Roarer"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,12 +61,30 @@
                 "name": "Khan",
                 "cost": 375,
                 "options": [
-                    "Warding of Unity",
-                    "Heart-Ripper",
-                    "Iron Fist",
-                    "Rod of Battle",
-                    "Godspeaker",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Heart-Ripper",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Godspeaker",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -45,9 +93,18 @@
                 "name": "Tribesmen",
                 "cost": 539,
                 "options": [
-                    "Paired Weapons",
-                    "Pennant of the Great Grass Sky",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pennant of the Great Grass Sky",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -73,10 +130,22 @@
                 "name": "Mercenary Veterans",
                 "cost": 570,
                 "options": [
-                    "Banner of the Gyengget",
-                    "Halberd",
-                    "Standard Bearer",
-                    "First Strike"
+                    {
+                        "name": "Banner of the Gyengget",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "First Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -86,8 +155,14 @@
                 "name": "Mercenary Gunners",
                 "cost": 480,
                 "options": [
-                    "Standard Bearer",
-                    "Ogre Crossbow and Accurate"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -97,7 +172,10 @@
                 "name": "Tusker Cavalry",
                 "cost": 415,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -107,8 +185,14 @@
                 "name": "Mercenary Giant",
                 "cost": 270,
                 "options": [
-                    "Iron Fist",
-                    "Lethal Strike"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lethal Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -127,10 +211,22 @@
                 "name": "Paladin",
                 "cost": 555,
                 "options": [
-                    "Hippogriff",
-                    "Lance",
-                    "Divine Judgement",
-                    "Potion of Healing"
+                    {
+                        "name": "Hippogriff",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Divine Judgement",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Potion of Healing",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -139,17 +235,50 @@
                 "name": "Damsel",
                 "cost": 480,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Destrier",
-                    "Talisman of the Void",
-                    "Binding Scroll",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Sainted"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Sainted",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -158,11 +287,26 @@
                 "name": "Duke",
                 "cost": 330,
                 "options": [
-                    "Destrier",
-                    "Bastard Sword",
-                    "Sigil of Protection",
-                    "Sacred Chalice",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sacred Chalice",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -171,8 +315,14 @@
                 "name": "Knights of the Realm",
                 "cost": 350,
                 "options": [
-                    "Banner of Courage",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -182,8 +332,14 @@
                 "name": "Knights of the Realm",
                 "cost": 305,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 7,
@@ -193,8 +349,14 @@
                 "name": "Lowborn Archers",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer",
-                    "Prepared Position"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Prepared Position",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -204,10 +366,22 @@
                 "name": "Knights of the Court",
                 "cost": 545,
                 "options": [
-                    "Oriflamme",
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Oriflamme",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -217,8 +391,14 @@
                 "name": "Knights of the Quest",
                 "cost": 400,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,

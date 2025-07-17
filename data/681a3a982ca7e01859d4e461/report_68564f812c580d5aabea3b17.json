@@ -13,17 +13,50 @@
                 "name": "Necromancer",
                 "cost": 555,
                 "options": [
-                    "General and The Dead Arise",
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Necromantic Staff"
+                    {
+                        "name": "General and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,13 +65,34 @@
                 "name": "Vampire Count",
                 "cost": 470,
                 "options": [
-                    "Light Troops",
-                    "Evocation",
-                    "Destiny's Call",
-                    "Lahmia",
-                    "Commandment",
-                    "Wizard Apprentice",
-                    "Great Weapon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -68,9 +122,18 @@
                 "name": "Barrow King",
                 "cost": 110,
                 "options": [
-                    "Light Troops",
-                    "Hypnotic Pendant",
-                    "Captain"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -79,7 +142,10 @@
                 "name": "Ghouls",
                 "cost": 445,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 32,
@@ -89,9 +155,18 @@
                 "name": "Skeletons",
                 "cost": 390,
                 "options": [
-                    "Banner of Eldritch Might",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -101,7 +176,10 @@
                 "name": "Zombies",
                 "cost": 165,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -125,8 +203,14 @@
                 "name": "Barrow Guard",
                 "cost": 220,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -161,10 +245,22 @@
                 "name": "Prelate",
                 "cost": 435,
                 "options": [
-                    "Trusted Adviser",
-                    "Altar of Battle",
-                    "Great Weapon",
-                    "Ullor's Horn"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Altar of Battle",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ullor's Horn",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -173,18 +269,54 @@
                 "name": "Battlefield Wizard",
                 "cost": 410,
                 "options": [
-                    "Essence of a Free Mind",
-                    "Arcane Engine",
-                    "Ice and Fire",
-                    "Wizard Adept",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Molten Copper",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow"
+                    {
+                        "name": "Essence of a Free Mind",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Arcane Engine",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -193,12 +325,30 @@
                 "name": "Marshal",
                 "cost": 335,
                 "options": [
-                    "Death Warrant",
-                    "Great Weapon",
-                    "Winter Cloak",
-                    "Great Griffon",
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Repeater Pistol"
+                    {
+                        "name": "Death Warrant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Winter Cloak",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -207,11 +357,26 @@
                 "name": "Marshal",
                 "cost": 270,
                 "options": [
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Imperial Seal",
-                    "General, Imperial Authority, and +1 Cou"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Imperial Seal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -220,11 +385,26 @@
                 "name": "Inquisitor",
                 "cost": 150,
                 "options": [
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "Repeater Pistol",
-                    "Hidden"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Hidden",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -233,8 +413,14 @@
                 "name": "State Infantry",
                 "cost": 410,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -244,8 +430,14 @@
                 "name": "State Infantry",
                 "cost": 410,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 40,
@@ -255,9 +447,18 @@
                 "name": "State Marksmen",
                 "cost": 222,
                 "options": [
-                    "Marksman's Pennant",
-                    "Standard Bearer",
-                    "Handgun"
+                    {
+                        "name": "Marksman's Pennant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Handgun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 16,
@@ -267,8 +468,14 @@
                 "name": "Imperial Detachment",
                 "cost": 210,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -278,7 +485,10 @@
                 "name": "Reiters",
                 "cost": 206,
                 "options": [
-                    "Repeater Gun"
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,

@@ -13,14 +13,38 @@
                 "name": "Vampire Count",
                 "cost": 875,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Sangreal",
-                    "Eternal Duellist",
-                    "Monstrous Revenant",
-                    "Wizard Adept",
-                    "Legend of the Black King",
-                    "Reaper's Harvest",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Sangreal",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Eternal Duellist",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Monstrous Revenant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Legend of the Black King",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Reaper's Harvest",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,20 +53,62 @@
                 "name": "Vampire Count",
                 "cost": 710,
                 "options": [
-                    "Sangreal",
-                    "Eternal Duellist",
-                    "Evocation",
-                    "Occultism",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Pentagram of Pain",
-                    "Monstrous Revenant",
-                    "Wizard Apprentice",
-                    "Destiny's Call",
-                    "Touch of Greatness",
-                    "Great Weapon",
-                    "Talisman of the Void",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Sangreal",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Eternal Duellist",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pentagram of Pain",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Monstrous Revenant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -51,8 +117,14 @@
                 "name": "Ghouls",
                 "cost": 575,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -62,10 +134,22 @@
                 "name": "Skeletons",
                 "cost": 431,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Spear and Shield",
-                    "Flaming Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 47,
@@ -75,9 +159,18 @@
                 "name": "Barrow Knights",
                 "cost": 535,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Black Standard of Zagvozd"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -127,13 +220,34 @@
                 "name": "Battlefield Wizard",
                 "cost": 280,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Exemplar's Flame"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Exemplar's Flame",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -142,10 +256,22 @@
                 "name": "Marshal",
                 "cost": 235,
                 "options": [
-                    "Great Griffon",
-                    "Solitary",
-                    "Great Weapon",
-                    "Repeater Pistol"
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -154,11 +280,26 @@
                 "name": "Marshal",
                 "cost": 220,
                 "options": [
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Imperial Seal",
-                    "General, Imperial Authority, and +1 Cou",
-                    "Great Weapon"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Imperial Seal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -167,10 +308,22 @@
                 "name": "Marshal",
                 "cost": 155,
                 "options": [
-                    "Light Troops",
-                    "Blacksteel",
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Shield"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -179,9 +332,18 @@
                 "name": "State Infantry",
                 "cost": 450,
                 "options": [
-                    "Stalker's Standard",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -191,7 +353,10 @@
                 "name": "State Marksmen",
                 "cost": 276,
                 "options": [
-                    "Crossbow"
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -201,7 +366,10 @@
                 "name": "State Marksmen",
                 "cost": 276,
                 "options": [
-                    "Crossbow"
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 19,
@@ -211,8 +379,14 @@
                 "name": "Imperial Guard",
                 "cost": 431,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -222,8 +396,14 @@
                 "name": "Imperial Guard",
                 "cost": 431,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 28,
@@ -233,7 +413,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

@@ -13,12 +13,30 @@
                 "name": "Commander",
                 "cost": 520,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Griffon",
-                    "Dragonforged Armour",
-                    "Destiny's Call",
-                    "Eldritch Inscriptions",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,17 +45,50 @@
                 "name": "Mage",
                 "cost": 500,
                 "options": [
-                    "General",
-                    "Living Steel",
-                    "Light Troops",
-                    "Mimic Cloak",
-                    "Order of the Fiery Heart",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Order of the Fiery Heart",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -46,7 +97,10 @@
                 "name": "Sea Guard",
                 "cost": 514,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -56,7 +110,10 @@
                 "name": "Sea Guard",
                 "cost": 514,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 28,
@@ -66,8 +123,14 @@
                 "name": "Phoenix",
                 "cost": 440,
                 "options": [
-                    "Fire Phoenix",
-                    "Warden's Bond"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warden's Bond",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -76,8 +139,14 @@
                 "name": "Phoenix",
                 "cost": 440,
                 "options": [
-                    "Fire Phoenix",
-                    "Warden's Bond"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warden's Bond",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -86,7 +155,10 @@
                 "name": "Lion Guard",
                 "cost": 410,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -127,14 +199,38 @@
                 "name": "Goblin Witch",
                 "cost": 420,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Witchcraft",
-                    "Soured Luck",
-                    "Illusory Paths",
-                    "Cauldron's Curse",
-                    "Clouded Sight",
-                    "Mists of Invisibility"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Witchcraft",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Soured Luck",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cauldron's Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Clouded Sight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mists of Invisibility",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -143,15 +239,42 @@
                 "name": "Goblin Witch",
                 "cost": 340,
                 "options": [
-                    "General",
-                    "Darrmu",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Mimic Cloak"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Darrmu",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -160,11 +283,26 @@
                 "name": "Goblin Demagogue",
                 "cost": 160,
                 "options": [
-                    "Light Troops",
-                    "Pan of Protection Pinchin'",
-                    "Battle Standard Bearer",
-                    "Bow",
-                    "Great Weapon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Pan of Protection Pinchin'",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -229,8 +367,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 45,
                 "options": [
-                    "Light Troops",
-                    "Netter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Netter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -239,8 +383,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 45,
                 "options": [
-                    "Light Troops",
-                    "Netter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Netter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -249,11 +399,26 @@
                 "name": "Goblin Rabble",
                 "cost": 413,
                 "options": [
-                    "Sheltering Standard",
-                    "Bow",
-                    "Spear and Shield",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 53,
@@ -263,9 +428,18 @@
                 "name": "Goblin Rabble",
                 "cost": 290,
                 "options": [
-                    "Goga Cauldron",
-                    "Poisoned Spear and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Poisoned Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 30,
@@ -275,9 +449,18 @@
                 "name": "Goblin Rabble",
                 "cost": 211,
                 "options": [
-                    "Shield",
-                    "Bow",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 26,
@@ -287,10 +470,22 @@
                 "name": "Goblin Reavers",
                 "cost": 241,
                 "options": [
-                    "Creepy-Crawlies",
-                    "Goga Cauldron",
-                    "Standard Bearer",
-                    "Lance and Shield"
+                    {
+                        "name": "Creepy-Crawlies",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -300,7 +495,10 @@
                 "name": "Gogtuk Neophytes",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -310,7 +508,10 @@
                 "name": "Gogtuk Neophytes",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -328,7 +529,10 @@
                 "name": "Goblin Artillery",
                 "cost": 170,
                 "options": [
-                    "Git Launcher"
+                    {
+                        "name": "Git Launcher",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -337,7 +541,10 @@
                 "name": "Goblin Artillery",
                 "cost": 170,
                 "options": [
-                    "Git Launcher"
+                    {
+                        "name": "Git Launcher",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"

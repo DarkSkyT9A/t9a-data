@@ -13,13 +13,34 @@
                 "name": "Doomlord",
                 "cost": 560,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Trophy Rack",
-                    "Death Cheater",
-                    "King Slayer",
-                    "Halberd",
-                    "Immortal Gauntlets"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,16 +49,46 @@
                 "name": "Sorcerer",
                 "cost": 555,
                 "options": [
-                    "Paired Weapons",
-                    "Dark Familiar",
-                    "Black Steed",
-                    "Wizard Master",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Umbral Majesty",
-                    "The Grave Calls"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Black Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Umbral Majesty",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -46,10 +97,22 @@
                 "name": "Warriors",
                 "cost": 576,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Lust"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -67,9 +130,18 @@
                 "name": "Warrior Knights",
                 "cost": 545,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Lance"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -79,8 +151,14 @@
                 "name": "Forsworn",
                 "cost": 500,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -90,8 +168,14 @@
                 "name": "Chosen Knights",
                 "cost": 405,
                 "options": [
-                    "Standard Bearer",
-                    "Lust"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -101,8 +185,14 @@
                 "name": "Battleshrine",
                 "cost": 320,
                 "options": [
-                    "Molten Copper",
-                    "Whispers of the Veil"
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -111,8 +201,14 @@
                 "name": "Feldraks",
                 "cost": 310,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -132,10 +228,22 @@
                 "name": "Mammoth Hunter",
                 "cost": 540,
                 "options": [
-                    "Rock Aurochs",
-                    "Lance",
-                    "Ogre Crossbow",
-                    "Rod of Battle"
+                    {
+                        "name": "Rock Aurochs",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -144,13 +252,34 @@
                 "name": "Shaman",
                 "cost": 370,
                 "options": [
-                    "Mimic Cloak",
-                    "Godspeaker",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects"
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Godspeaker",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -159,9 +288,18 @@
                 "name": "Khan",
                 "cost": 270,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Viper's Curse",
-                    "Brace of Ogre Pistols"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Viper's Curse",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -170,10 +308,22 @@
                 "name": "Tribesmen",
                 "cost": 580,
                 "options": [
-                    "Stalker's Standard",
-                    "Iron Fist",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -183,8 +333,14 @@
                 "name": "Bruisers",
                 "cost": 250,
                 "options": [
-                    "Banner of Courage",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -202,10 +358,22 @@
                 "name": "Mercenary Veterans",
                 "cost": 555,
                 "options": [
-                    "Stalker's Standard",
-                    "Halberd",
-                    "Standard Bearer",
-                    "First Strike"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "First Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -215,9 +383,18 @@
                 "name": "Mercenary Veterans",
                 "cost": 515,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer",
-                    "Lethal Strike"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lethal Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -227,8 +404,14 @@
                 "name": "Mercenary Gunners",
                 "cost": 350,
                 "options": [
-                    "Standard Bearer",
-                    "Brace of Ogre Pistols and Lethal Strike"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols and Lethal Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -238,7 +421,10 @@
                 "name": "Frost Mammoth",
                 "cost": 400,
                 "options": [
-                    "Ogre Crossbow"
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"

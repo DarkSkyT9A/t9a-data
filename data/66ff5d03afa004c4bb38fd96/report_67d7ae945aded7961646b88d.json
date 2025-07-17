@@ -20,15 +20,42 @@
                 "name": "Sorcerer",
                 "cost": 480,
                 "options": [
-                    "Light Troops",
-                    "Molten Copper",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Mimic Cloak"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -37,10 +64,22 @@
                 "name": "Doomlord",
                 "cost": 420,
                 "options": [
-                    "Light Troops",
-                    "Supernatural Dexterity",
-                    "Sigil of Protection",
-                    "Halberd"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -49,10 +88,22 @@
                 "name": "Warriors",
                 "cost": 576,
                 "options": [
-                    "Standard Bearer",
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Gluttony"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -62,11 +113,26 @@
                 "name": "Barbarians",
                 "cost": 224,
                 "options": [
-                    "Standard Bearer",
-                    "Paired Weapons",
-                    "Musician",
-                    "Shield",
-                    "Throwing Weapons"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 17,
@@ -76,7 +142,10 @@
                 "name": "Feldrak Elder",
                 "cost": 480,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -85,9 +154,18 @@
                 "name": "Forsworn",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard",
-                    "Great Weapon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -104,8 +182,14 @@
                 "name": "Feldraks",
                 "cost": 310,
                 "options": [
-                    "Standard Bearer",
-                    "Halberd"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -125,17 +209,50 @@
                 "name": "Anurarch Archmage",
                 "cost": 640,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Talisman of the Void",
-                    "Te Aupouri Smokestone",
-                    "Eternal Mastery",
-                    "Mystifying Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Te Aupouri Smokestone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Eternal Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Mystifying Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -144,10 +261,22 @@
                 "name": "Skink Veteran",
                 "cost": 110,
                 "options": [
-                    "Light Troops and Strider",
-                    "Magnetic Short Bow",
-                    "Alchemical Arrows",
-                    "Chameleon and Hard Target"
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Alchemical Arrows",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Chameleon and Hard Target",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -156,12 +285,30 @@
                 "name": "Tegu Warriors",
                 "cost": 583,
                 "options": [
-                    "Rending Banner",
-                    "Awaken the Beast",
-                    "Spear",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -171,9 +318,18 @@
                 "name": "Tegu Warriors",
                 "cost": 423,
                 "options": [
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -183,7 +339,10 @@
                 "name": "Weapon Beasts",
                 "cost": 470,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -193,7 +352,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 410,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -203,9 +365,18 @@
                 "name": "Raptor Riders",
                 "cost": 400,
                 "options": [
-                    "Koru Stone",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -215,8 +386,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 220,
                 "options": [
-                    "Magnetic Short Bow",
-                    "Chameleon"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -226,7 +403,10 @@
                 "name": "Pteradon Riders",
                 "cost": 200,
                 "options": [
-                    "Magnetic Short Bow"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -244,8 +424,14 @@
                 "name": "Carnosaur",
                 "cost": 370,
                 "options": [
-                    "Light Lance",
-                    "Hunt Leader"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hunt Leader",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"

@@ -13,10 +13,22 @@
                 "name": "Sanctioned Warlock",
                 "cost": 290,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Cosmology"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -25,9 +37,18 @@
                 "name": "Sanctioned Warlock",
                 "cost": 290,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Evocation"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -36,13 +57,34 @@
                 "name": "Silexian Officer",
                 "cost": 275,
                 "options": [
-                    "Light Troops",
-                    "Potion of Swiftness",
-                    "Battle Standard Bearer",
-                    "Shield",
-                    "Kraken's Hide",
-                    "Spear",
-                    "Mastery of Slaughter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Potion of Swiftness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Kraken's Hide",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mastery of Slaughter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -58,9 +100,18 @@
                 "name": "Silexian Spears",
                 "cost": 540,
                 "options": [
-                    "Caedhren's Pennon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Caedhren's Pennon",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 35,
@@ -70,8 +121,14 @@
                 "name": "Silexian Spears",
                 "cost": 257,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 18,
@@ -81,9 +138,18 @@
                 "name": "Shadow Riders",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Light Lance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -93,10 +159,22 @@
                 "name": "Temple Militants",
                 "cost": 598,
                 "options": [
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Musician",
-                    "Dancers of Yema"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -106,10 +184,22 @@
                 "name": "Dread Knights",
                 "cost": 510,
                 "options": [
-                    "Banner of Speed",
-                    "Great Weapon and Elven Finesse",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -119,7 +209,10 @@
                 "name": "Divine Altar",
                 "cost": 240,
                 "options": [
-                    "Altar of Nabh"
+                    {
+                        "name": "Altar of Nabh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -161,14 +254,38 @@
                 "name": "Orc Warlord",
                 "cost": 525,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Wyvern",
-                    "Big Wing",
-                    "Attack Gnasher",
-                    "Lance",
-                    "Talisman of Shielding",
-                    "Potion of Swiftness"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wyvern",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Big Wing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attack Gnasher",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Swiftness",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -177,10 +294,22 @@
                 "name": "Orc Shaman",
                 "cost": 330,
                 "options": [
-                    "Light Troops",
-                    "Monster Munch",
-                    "Wizard Adept",
-                    "Pyromancy"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Monster Munch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -189,10 +318,22 @@
                 "name": "Orc Shaman",
                 "cost": 310,
                 "options": [
-                    "Light Troops",
-                    "Mimic Cloak",
-                    "Wizard Adept",
-                    "Shamanism"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -201,11 +342,26 @@
                 "name": "Brood Alpha",
                 "cost": 225,
                 "options": [
-                    "Grunter",
-                    "Shield",
-                    "Lance",
-                    "Battle Standard Bearer",
-                    "Banner of Speed"
+                    {
+                        "name": "Grunter",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -214,11 +370,26 @@
                 "name": "Brood Alpha",
                 "cost": 110,
                 "options": [
-                    "Light Troops",
-                    "Eldritch Inscriptions",
-                    "Great Weapon",
-                    "Talisman of the Void",
-                    "Captain and Attached"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -227,8 +398,14 @@
                 "name": "Veteran Orc Marauders",
                 "cost": 492,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -238,8 +415,14 @@
                 "name": "Feral Orcs",
                 "cost": 310,
                 "options": [
-                    "Standard Bearer",
-                    "Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -249,7 +432,10 @@
                 "name": "Feral Orcs",
                 "cost": 290,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 31,
@@ -259,8 +445,14 @@
                 "name": "Iron Orcs",
                 "cost": 548,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 27,
@@ -278,7 +470,10 @@
                 "name": "Gogtuk Neophytes",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,

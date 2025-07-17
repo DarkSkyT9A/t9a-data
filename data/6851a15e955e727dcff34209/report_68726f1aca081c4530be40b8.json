@@ -13,13 +13,34 @@
                 "name": "Chosen Lord",
                 "cost": 770,
                 "options": [
-                    "General",
-                    "Wasteland Dragon",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Immortal Gauntlets",
-                    "Wyrd Stone",
-                    "Lust"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wasteland Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,14 +49,38 @@
                 "name": "Sorcerer",
                 "cost": 400,
                 "options": [
-                    "Black Steed",
-                    "Rod of Battle",
-                    "Spell Scroll",
-                    "Wizard Adept",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse"
+                    {
+                        "name": "Black Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spell Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,10 +89,22 @@
                 "name": "Warriors",
                 "cost": 554,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Lust",
-                    "Standard Bearer"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -57,9 +114,18 @@
                 "name": "Barbarian Horsemen",
                 "cost": 295,
                 "options": [
-                    "Wasteland Torch",
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Wasteland Torch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -69,9 +135,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -81,9 +156,18 @@
                 "name": "Chosen Knights",
                 "cost": 445,
                 "options": [
-                    "Icon of the Infinite",
-                    "Lust",
-                    "Standard Bearer"
+                    {
+                        "name": "Icon of the Infinite",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -100,7 +184,10 @@
                 "name": "Marauding Giant",
                 "cost": 320,
                 "options": [
-                    "Tribal Warspear"
+                    {
+                        "name": "Tribal Warspear",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -109,8 +196,14 @@
                 "name": "Flayers",
                 "cost": 285,
                 "options": [
-                    "Light Lance",
-                    "Skinning Lash"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Skinning Lash",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -138,9 +231,18 @@
                 "name": "Tegu Veteran",
                 "cost": 685,
                 "options": [
-                    "Alpha Carnosaur",
-                    "Eldritch Inscriptions",
-                    "Great Weapon"
+                    {
+                        "name": "Alpha Carnosaur",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -149,16 +251,46 @@
                 "name": "Anurarch Archmage",
                 "cost": 605,
                 "options": [
-                    "Talisman of the Void",
-                    "Molten Copper",
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Eternal Mastery",
-                    "Invasive Mastery"
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Eternal Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Invasive Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -167,11 +299,26 @@
                 "name": "Skink Veteran",
                 "cost": 145,
                 "options": [
-                    "Light Troops and Strider",
-                    "Shield",
-                    "Paired Weapons",
-                    "Imbued Jade",
-                    "Magnetic Short Bow"
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Imbued Jade",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -180,10 +327,22 @@
                 "name": "Skink Veteran",
                 "cost": 110,
                 "options": [
-                    "Light Troops and Strider",
-                    "Shield",
-                    "Magnetic Short Bow",
-                    "Alchemical Arrows"
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Alchemical Arrows",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -192,7 +351,10 @@
                 "name": "Tegu Warriors",
                 "cost": 455,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -202,8 +364,14 @@
                 "name": "Skink Warriors",
                 "cost": 230,
                 "options": [
-                    "Magnetic Short Bow",
-                    "Standard Bearer"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -213,7 +381,10 @@
                 "name": "Skink Hunters",
                 "cost": 170,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -223,7 +394,10 @@
                 "name": "Skink Hunters",
                 "cost": 170,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 12,
@@ -233,8 +407,14 @@
                 "name": "Raptor Riders",
                 "cost": 550,
                 "options": [
-                    "Koru Stone",
-                    "Standard Bearer"
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,

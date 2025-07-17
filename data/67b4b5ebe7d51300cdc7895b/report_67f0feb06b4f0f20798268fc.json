@@ -13,17 +13,50 @@
                 "name": "Death Cult Hierarch",
                 "cost": 505,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Mimic Cloak",
-                    "Scroll of Draining",
-                    "Soul Conduit"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Draining",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Soul Conduit",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,13 +65,34 @@
                 "name": "Nomarch",
                 "cost": 220,
                 "options": [
-                    "Light Troops",
-                    "Ghostly Guard",
-                    "Talisman of the Void",
-                    "Captain and Attached",
-                    "Tomb Architect",
-                    "Longbow",
-                    "Shield"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Tomb Architect",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -47,13 +101,34 @@
                 "name": "Nomarch",
                 "cost": 210,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Scourge of Kings",
-                    "Book of the Dead",
-                    "Deathless Noble",
-                    "Shield",
-                    "Sun's Embrace"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Scourge of Kings",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Book of the Dead",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Deathless Noble",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sun's Embrace",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -62,9 +137,18 @@
                 "name": "Skeleton Warriors",
                 "cost": 538,
                 "options": [
-                    "Sigil of the Closed Gates",
-                    "Spear and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Sigil of the Closed Gates",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 52,
@@ -74,9 +158,18 @@
                 "name": "Skeleton Warriors",
                 "cost": 225,
                 "options": [
-                    "Shield",
-                    "Banner of the Entombed",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of the Entombed",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -94,9 +187,18 @@
                 "name": "Shabtis",
                 "cost": 585,
                 "options": [
-                    "Aether Icon",
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -128,7 +230,10 @@
                 "name": "Colossus",
                 "cost": 415,
                 "options": [
-                    "Giant Aspis Bow"
+                    {
+                        "name": "Giant Aspis Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "mason's menagerie"
@@ -147,13 +252,34 @@
                 "name": "Orc Warlord",
                 "cost": 335,
                 "options": [
-                    "General",
-                    "Tribe Leader and Orc Horde",
-                    "Light Troops",
-                    "Destiny's Call",
-                    "Paired Weapons",
-                    "Eldritch Inscriptions",
-                    "Potion of Swiftness"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Tribe Leader and Orc Horde",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Swiftness",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -162,13 +288,34 @@
                 "name": "Orc Shaman",
                 "cost": 310,
                 "options": [
-                    "Light Troops",
-                    "Mimic Cloak",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -177,11 +324,26 @@
                 "name": "Brood Alpha",
                 "cost": 205,
                 "options": [
-                    "Grunter",
-                    "Shield",
-                    "Lance",
-                    "Binding Scroll",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Grunter",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -190,9 +352,18 @@
                 "name": "Goblin Rabble",
                 "cost": 395,
                 "options": [
-                    "Goga Cauldron",
-                    "Poisoned Spear and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Poisoned Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 45,
@@ -202,8 +373,14 @@
                 "name": "Feral Orc Marauders",
                 "cost": 330,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -213,7 +390,10 @@
                 "name": "Feral Orc Marauders",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 12,
@@ -223,9 +403,18 @@
                 "name": "Iron Orcs",
                 "cost": 593,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Headbashers"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Headbashers",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -235,8 +424,14 @@
                 "name": "Iron Orcs",
                 "cost": 290,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -246,8 +441,14 @@
                 "name": "Iron Orcs",
                 "cost": 290,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 15,

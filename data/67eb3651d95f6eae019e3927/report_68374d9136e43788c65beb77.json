@@ -13,15 +13,42 @@
                 "name": "Sentinel of Nukuja",
                 "cost": 740,
                 "options": [
-                    "General",
-                    "Strixian Spirit",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Light of Faith",
-                    "Holy Affliction",
-                    "Wrath of God",
-                    "Rain of Fire",
-                    "Sorcerous Antennae"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Strixian Spirit",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light of Faith",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wrath of God",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rain of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Sorcerous Antennae",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,13 +57,34 @@
                 "name": "Miser of Sugulag",
                 "cost": 730,
                 "options": [
-                    "Divination",
-                    "Foresight",
-                    "Chance of Redemption",
-                    "The Stars Align",
-                    "Unnatural Roots",
-                    "Mirrored Scales",
-                    "Wizard Adept"
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -45,7 +93,10 @@
                 "name": "Succubi",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -55,7 +106,10 @@
                 "name": "Succubi",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -65,9 +119,18 @@
                 "name": "Imps",
                 "cost": 267,
                 "options": [
-                    "All-Seeing Eye",
-                    "Standard Bearer",
-                    "Firestarter - Spear of Infinity"
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Firestarter - Spear of Infinity",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -77,9 +140,18 @@
                 "name": "Imps",
                 "cost": 267,
                 "options": [
-                    "All-Seeing Eye",
-                    "Standard Bearer",
-                    "Firestarter - Spear of Infinity"
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Firestarter - Spear of Infinity",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 11,
@@ -89,7 +161,10 @@
                 "name": "Clawed Fiends",
                 "cost": 495,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -125,18 +200,54 @@
                 "name": "Orc Shaman",
                 "cost": 470,
                 "options": [
-                    "General",
-                    "Tribe Leader",
-                    "Recruiting Officer",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Wild Spikes",
-                    "Totemic Summon",
-                    "Talisman of the Void"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Tribe Leader",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wild Spikes",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Totemic Summon",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -145,10 +256,22 @@
                 "name": "Iron Orc Loner",
                 "cost": 340,
                 "options": [
-                    "Attack Gnasher",
-                    "Death Cheater",
-                    "Troll Hide",
-                    "Light Troops and Hand-and-a-Half"
+                    {
+                        "name": "Attack Gnasher",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Troll Hide",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops and Hand-and-a-Half",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -157,11 +280,26 @@
                 "name": "Brood Alpha",
                 "cost": 230,
                 "options": [
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Monster Munch",
-                    "Battle Standard Bearer",
-                    "Flaming Standard"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Monster Munch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -170,8 +308,14 @@
                 "name": "Feral Orcs",
                 "cost": 355,
                 "options": [
-                    "Distortion Emblem",
-                    "Standard Bearer"
+                    {
+                        "name": "Distortion Emblem",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 35,
@@ -181,8 +325,14 @@
                 "name": "Feral Orcs",
                 "cost": 250,
                 "options": [
-                    "Banner of Courage",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 25,
@@ -192,7 +342,10 @@
                 "name": "Feral Orc Marauders",
                 "cost": 240,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -202,8 +355,14 @@
                 "name": "Goblin Reavers",
                 "cost": 200,
                 "options": [
-                    "Bow and Spies",
-                    "Creepy-Crawlies"
+                    {
+                        "name": "Bow and Spies",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Creepy-Crawlies",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -220,7 +379,10 @@
                 "name": "Iron Orc Chariots",
                 "cost": 370,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -230,8 +392,14 @@
                 "name": "Giant",
                 "cost": 325,
                 "options": [
-                    "Armed to the Teeth",
-                    "Big Brother"
+                    {
+                        "name": "Armed to the Teeth",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Big Brother",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -240,7 +408,10 @@
                 "name": "Iron Orcs",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -250,7 +421,10 @@
                 "name": "Iron Orcs",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -260,7 +434,10 @@
                 "name": "Iron Orcs",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 15,

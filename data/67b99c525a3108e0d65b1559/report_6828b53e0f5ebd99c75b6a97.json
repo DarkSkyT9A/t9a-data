@@ -13,18 +13,54 @@
                 "name": "Anurarch Archmage",
                 "cost": 645,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Talisman of the Void",
-                    "Forbidden Mastery",
-                    "Flaming Swords",
-                    "Pyroclastic Flow",
-                    "Mystifying Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Forbidden Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mystifying Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -33,8 +69,14 @@
                 "name": "Caiman Mentor",
                 "cost": 395,
                 "options": [
-                    "Vital Essence",
-                    "Combat Legend"
+                    {
+                        "name": "Vital Essence",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Combat Legend",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -43,10 +85,22 @@
                 "name": "Skink Veteran",
                 "cost": 135,
                 "options": [
-                    "Light Troops and Strider",
-                    "Magnetic Short Bow",
-                    "Alchemical Arrows",
-                    "Master Strategist"
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Alchemical Arrows",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Master Strategist",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -55,12 +109,30 @@
                 "name": "Tegu Warriors",
                 "cost": 539,
                 "options": [
-                    "Awaken the Beast",
-                    "Flaming Standard",
-                    "Spear",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 27,
@@ -70,8 +142,14 @@
                 "name": "Skink Warriors",
                 "cost": 231,
                 "options": [
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -81,7 +159,10 @@
                 "name": "Skink Hunters",
                 "cost": 230,
                 "options": [
-                    "Magnetic Short Bow"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -91,9 +172,18 @@
                 "name": "Tegu Guards",
                 "cost": 580,
                 "options": [
-                    "Koru Stone",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -103,8 +193,14 @@
                 "name": "Raptor Riders",
                 "cost": 460,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -114,7 +210,10 @@
                 "name": "Weapon Beasts",
                 "cost": 240,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -124,7 +223,10 @@
                 "name": "Pteradon Riders",
                 "cost": 200,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -134,7 +236,10 @@
                 "name": "Carnosaur",
                 "cost": 345,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"
@@ -153,14 +258,38 @@
                 "name": "Temple Exarch",
                 "cost": 380,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Great Weapon and Elven Finesse",
-                    "Ceinran's Scales"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ceinran's Scales",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -169,14 +298,38 @@
                 "name": "Temple Exarch",
                 "cost": 325,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Wizard Apprentice",
-                    "Divination",
-                    "Foresight",
-                    "Flaming Standard",
-                    "Seal of the Republic",
-                    "Supernatural Dexterity",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -185,12 +338,30 @@
                 "name": "Silexian Officer",
                 "cost": 175,
                 "options": [
-                    "Spear",
-                    "Mastery of Slaughter",
-                    "Captain and Attached",
-                    "Light Troops",
-                    "Shield",
-                    "Kraken's Hide"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mastery of Slaughter",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Kraken's Hide",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -199,8 +370,14 @@
                 "name": "Silexian Spears",
                 "cost": 348,
                 "options": [
-                    "Caedhren's Pennon",
-                    "Standard Bearer"
+                    {
+                        "name": "Caedhren's Pennon",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -210,7 +387,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 290,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -220,8 +400,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -231,8 +417,14 @@
                 "name": "Corsairs",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Repeater Handbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -242,9 +434,18 @@
                 "name": "Temple Militants",
                 "cost": 424,
                 "options": [
-                    "Sheltering Standard",
-                    "Standard Bearer",
-                    "Dancers of Yema"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 17,
@@ -254,8 +455,14 @@
                 "name": "Judicators",
                 "cost": 365,
                 "options": [
-                    "Banner of Urlain",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Urlain",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -265,9 +472,18 @@
                 "name": "Dread Acolytes",
                 "cost": 280,
                 "options": [
-                    "Warlock Acolytes",
-                    "Ice and Fire",
-                    "Illusory Paths"
+                    {
+                        "name": "Warlock Acolytes",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -277,7 +493,10 @@
                 "name": "Dread Acolytes",
                 "cost": 205,
                 "options": [
-                    "Temple Acolytes"
+                    {
+                        "name": "Temple Acolytes",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -287,7 +506,10 @@
                 "name": "Divine Altar",
                 "cost": 230,
                 "options": [
-                    "Altar of Tila"
+                    {
+                        "name": "Altar of Tila",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -310,8 +532,14 @@
                 "name": "Black Cloaks",
                 "cost": 165,
                 "options": [
-                    "Repeater Handbow and Poison Attacks",
-                    "Covert Operatives"
+                    {
+                        "name": "Repeater Handbow and Poison Attacks",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Covert Operatives",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

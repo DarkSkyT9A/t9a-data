@@ -13,17 +13,50 @@
                 "name": "Shaman",
                 "cost": 570,
                 "options": [
-                    "Wizard Master",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Light of Faith",
-                    "Holy Affliction",
-                    "Wrath of God",
-                    "Rain of Fire",
-                    "Warding of Unity",
-                    "Iron Fist",
-                    "Talisman of the Void",
-                    "Gut Roarer"
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light of Faith",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wrath of God",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rain of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,9 +65,18 @@
                 "name": "Khan",
                 "cost": 230,
                 "options": [
-                    "Iron Fist",
-                    "Battle Standard Bearer",
-                    "Ogre Crossbow"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -43,8 +85,14 @@
                 "name": "Khan",
                 "cost": 145,
                 "options": [
-                    "Iron Fist",
-                    "Ogre Crossbow"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -53,9 +101,18 @@
                 "name": "Bruisers",
                 "cost": 585,
                 "options": [
-                    "Pennant of the Great Grass Sky",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Pennant of the Great Grass Sky",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -65,10 +122,22 @@
                 "name": "Tribesmen",
                 "cost": 439,
                 "options": [
-                    "Iron Fist",
-                    "Skull of Qenghet",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Skull of Qenghet",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -78,10 +147,22 @@
                 "name": "Tusker Cavalry",
                 "cost": 530,
                 "options": [
-                    "Great Weapon",
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -91,9 +172,18 @@
                 "name": "Mercenary Gunners",
                 "cost": 498,
                 "options": [
-                    "Standard Bearer",
-                    "Ogre Crossbow and Accurate",
-                    "Magic Resistance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magic Resistance",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -143,22 +233,70 @@
                 "name": "Prophet",
                 "cost": 390,
                 "options": [
-                    "General",
-                    "Prophet of Nezibkesh",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Occultism",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Pentagram of Pain",
-                    "Shield",
-                    "Warding of Unity",
-                    "Blunderbuss",
-                    "Essence of a Free Mind"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Prophet of Nezibkesh",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pentagram of Pain",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Blunderbuss",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Essence of a Free Mind",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -167,12 +305,30 @@
                 "name": "Vassal Conjurer",
                 "cost": 300,
                 "options": [
-                    "Light Troops",
-                    "Talisman of the Void",
-                    "Witchcraft",
-                    "Evil Eye",
-                    "Illusory Paths",
-                    "Cauldron's Curse"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Witchcraft",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Evil Eye",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cauldron's Curse",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -181,15 +337,42 @@
                 "name": "Vizier",
                 "cost": 295,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Ghostly Guard",
-                    "Blunderbuss",
-                    "Flame of the East",
-                    "Golden Idol of Shamut",
-                    "Battle Standard Bearer",
-                    "Banner of the Twice-Branded",
-                    "Spear"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Blunderbuss",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Flame of the East",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Golden Idol of Shamut",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -198,10 +381,22 @@
                 "name": "Infernal Warriors",
                 "cost": 514,
                 "options": [
-                    "Blunderbuss",
-                    "Great Weapon",
-                    "Banner of the Twice-Branded",
-                    "Standard Bearer"
+                    {
+                        "name": "Blunderbuss",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -211,9 +406,18 @@
                 "name": "Vassal Levies",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer",
-                    "Spear and Shield",
-                    "Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -223,9 +427,18 @@
                 "name": "Vassal Levies",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer",
-                    "Spear and Shield",
-                    "Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -235,9 +448,18 @@
                 "name": "Immortals",
                 "cost": 580,
                 "options": [
-                    "Flaming Standard",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -247,8 +469,14 @@
                 "name": "Taurukh Enforcers",
                 "cost": 205,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -258,7 +486,10 @@
                 "name": "Gunnery Team",
                 "cost": 200,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -275,7 +506,10 @@
                 "name": "Infernal Artillery",
                 "cost": 170,
                 "options": [
-                    "Naphtha Thrower"
+                    {
+                        "name": "Naphtha Thrower",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -284,7 +518,10 @@
                 "name": "Infernal Artillery",
                 "cost": 170,
                 "options": [
-                    "Naphtha Thrower"
+                    {
+                        "name": "Naphtha Thrower",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -293,7 +530,10 @@
                 "name": "Infernal Engine",
                 "cost": 475,
                 "options": [
-                    "Rock Crusher"
+                    {
+                        "name": "Rock Crusher",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "instruments of destruction"

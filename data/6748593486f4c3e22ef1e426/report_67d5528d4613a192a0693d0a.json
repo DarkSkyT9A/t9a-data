@@ -13,15 +13,42 @@
                 "name": "Chosen Lord",
                 "cost": 850,
                 "options": [
-                    "General",
-                    "Wasteland Dragon",
-                    "Trophy Rack",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Immortal Gauntlets",
-                    "Wyrd Stone",
-                    "Sloth",
-                    "Dark Prelate"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wasteland Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sloth",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Dark Prelate",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,16 +57,46 @@
                 "name": "Sorcerer",
                 "cost": 560,
                 "options": [
-                    "Light Troops",
-                    "Thrice-Forged",
-                    "Dark Familiar",
-                    "Molten Copper",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Word of Iron",
-                    "Quicksilver Lash"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Thrice-Forged",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -48,10 +105,22 @@
                 "name": "Warriors",
                 "cost": 540,
                 "options": [
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -77,8 +146,14 @@
                 "name": "Chosen Knights",
                 "cost": 530,
                 "options": [
-                    "Greed",
-                    "Standard Bearer"
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -88,8 +163,14 @@
                 "name": "Chosen Knights",
                 "cost": 530,
                 "options": [
-                    "Greed",
-                    "Standard Bearer"
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -99,9 +180,18 @@
                 "name": "Forsworn",
                 "cost": 410,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -111,8 +201,14 @@
                 "name": "Battleshrine",
                 "cost": 320,
                 "options": [
-                    "Whispers of the Veil",
-                    "Danse Macabre"
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -131,14 +227,38 @@
                 "name": "Maw of Akaan",
                 "cost": 850,
                 "options": [
-                    "Wizard Adept",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Mirrored Scales",
-                    "Chitinous Scales",
-                    "Unholy Appetite"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Chitinous Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Unholy Appetite",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -147,14 +267,38 @@
                 "name": "Miser of Sugulag",
                 "cost": 740,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Trampling Hooves",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Light of Faith",
-                    "Holy Affliction",
-                    "Smothering Coils"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Trampling Hooves",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light of Faith",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Smothering Coils",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -163,8 +307,14 @@
                 "name": "Succubi",
                 "cost": 430,
                 "options": [
-                    "Horrifying Visage",
-                    "Standard Bearer"
+                    {
+                        "name": "Horrifying Visage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -174,8 +324,14 @@
                 "name": "Succubi",
                 "cost": 430,
                 "options": [
-                    "Horrifying Visage",
-                    "Standard Bearer"
+                    {
+                        "name": "Horrifying Visage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -185,9 +341,18 @@
                 "name": "Imps",
                 "cost": 255,
                 "options": [
-                    "Standard Bearer",
-                    "All-Seeing Eye",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -197,10 +362,22 @@
                 "name": "Hoarders",
                 "cost": 554,
                 "options": [
-                    "Chitinous Scales",
-                    "Standard Bearer",
-                    "Musician",
-                    "Favoured of Greed"
+                    {
+                        "name": "Chitinous Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Favoured of Greed",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -210,7 +387,10 @@
                 "name": "Blazing Glory",
                 "cost": 370,
                 "options": [
-                    "Trampling Hooves"
+                    {
+                        "name": "Trampling Hooves",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -219,7 +399,10 @@
                 "name": "Blazing Glory",
                 "cost": 370,
                 "options": [
-                    "Trampling Hooves"
+                    {
+                        "name": "Trampling Hooves",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"

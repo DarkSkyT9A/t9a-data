@@ -13,13 +13,34 @@
                 "name": "Vampire Count",
                 "cost": 805,
                 "options": [
-                    "Vetala",
-                    "Mysteries of the Night",
-                    "Colossal Zombie Dragon",
-                    "Wizard Apprentice",
-                    "Great Weapon",
-                    "Cursed Medallion",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Mysteries of the Night",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Colossal Zombie Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Cursed Medallion",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,20 +49,62 @@
                 "name": "Vampire Count",
                 "cost": 790,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Vetala",
-                    "Evocation",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Shamanism",
-                    "Storm Caller",
-                    "Monstrous Revenant",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Halberd",
-                    "Necromantic Staff",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Storm Caller",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Monstrous Revenant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -50,10 +113,22 @@
                 "name": "Skeletons",
                 "cost": 480,
                 "options": [
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Banner of Eldritch Might",
-                    "Musician"
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 50,
@@ -79,7 +154,10 @@
                 "name": "Zombies",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -105,7 +183,10 @@
                 "name": "Wraiths",
                 "cost": 375,
                 "options": [
-                    "Sweeping Attack"
+                    {
+                        "name": "Sweeping Attack",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -115,9 +196,18 @@
                 "name": "Spectral Hunters",
                 "cost": 320,
                 "options": [
-                    "Blood Curse",
-                    "Wizard Conclave",
-                    "Weal and Woe"
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -127,7 +217,10 @@
                 "name": "Vampire Knights",
                 "cost": 290,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -155,11 +248,26 @@
                 "name": "Prelate",
                 "cost": 490,
                 "options": [
-                    "Altar of Battle",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "Ghostly Guard",
-                    "Exemplar's Flame"
+                    {
+                        "name": "Altar of Battle",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Exemplar's Flame",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -168,12 +276,30 @@
                 "name": "Knight Commander",
                 "cost": 290,
                 "options": [
-                    "General",
-                    "Horse",
-                    "Shield",
-                    "King Slayer",
-                    "Talisman of the Void",
-                    "Cavalry Pick"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Cavalry Pick",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -182,11 +308,26 @@
                 "name": "Marshal",
                 "cost": 230,
                 "options": [
-                    "Horse",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Blacksteel",
-                    "Battle Standard Bearer and Imperial Authority"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -195,9 +336,18 @@
                 "name": "Marshal",
                 "cost": 225,
                 "options": [
-                    "Great Weapon",
-                    "Solitary",
-                    "Great Griffon"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -206,9 +356,18 @@
                 "name": "Marshal",
                 "cost": 225,
                 "options": [
-                    "Great Weapon",
-                    "Solitary",
-                    "Great Griffon"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -217,8 +376,14 @@
                 "name": "Inquisitor",
                 "cost": 140,
                 "options": [
-                    "Horse",
-                    "Paired Weapons"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -227,10 +392,22 @@
                 "name": "Knightly Orders",
                 "cost": 585,
                 "options": [
-                    "Shield",
-                    "Cavalry Pick",
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Cavalry Pick",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -240,10 +417,22 @@
                 "name": "State Infantry",
                 "cost": 560,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Spear"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 50,
@@ -253,7 +442,10 @@
                 "name": "Arcane Engine",
                 "cost": 250,
                 "options": [
-                    "The Stars Align"
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -262,8 +454,14 @@
                 "name": "Imperial Detachment",
                 "cost": 180,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -281,7 +479,10 @@
                 "name": "Reiters",
                 "cost": 180,
                 "options": [
-                    "Brace of Pistols and Fire on Impact"
+                    {
+                        "name": "Brace of Pistols and Fire on Impact",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

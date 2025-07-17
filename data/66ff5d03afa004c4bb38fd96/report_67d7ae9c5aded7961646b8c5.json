@@ -13,11 +13,26 @@
                 "name": "Orc Warlord",
                 "cost": 430,
                 "options": [
-                    "General",
-                    "Grunter",
-                    "Death Cheater",
-                    "King Slayer",
-                    "Lance"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Grunter",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,14 +41,38 @@
                 "name": "Orc Shaman",
                 "cost": 320,
                 "options": [
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Magical Heirloom",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Magical Heirloom",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,13 +81,34 @@
                 "name": "Goblin Witch",
                 "cost": 310,
                 "options": [
-                    "Light Troops",
-                    "Mimic Cloak",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -57,11 +117,26 @@
                 "name": "Brood Alpha",
                 "cost": 255,
                 "options": [
-                    "Grunter",
-                    "Tazrek's Guard",
-                    "Great Weapon",
-                    "Mask of Mindless Violence",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Grunter",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Tazrek's Guard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mask of Mindless Violence",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -70,8 +145,14 @@
                 "name": "Veteran Orc Marauders",
                 "cost": 434,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -81,8 +162,14 @@
                 "name": "Goblin Rabble",
                 "cost": 328,
                 "options": [
-                    "Standard Bearer",
-                    "Poisoned Spear and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Poisoned Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 39,
@@ -92,7 +179,10 @@
                 "name": "Goblin Reavers",
                 "cost": 176,
                 "options": [
-                    "Bow and Spies"
+                    {
+                        "name": "Bow and Spies",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -102,7 +192,10 @@
                 "name": "Goblin Reavers",
                 "cost": 176,
                 "options": [
-                    "Bow and Spies"
+                    {
+                        "name": "Bow and Spies",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -112,7 +205,10 @@
                 "name": "Iron Orcs",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -122,9 +218,18 @@
                 "name": "Veteran Orcs",
                 "cost": 445,
                 "options": [
-                    "Paired Weapons",
-                    "Headbashers",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Headbashers",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -141,7 +246,10 @@
                 "name": "Trolls",
                 "cost": 185,
                 "options": [
-                    "Bridge Troll"
+                    {
+                        "name": "Bridge Troll",
+                        "type": "trollRace"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -151,7 +259,10 @@
                 "name": "Trolls",
                 "cost": 185,
                 "options": [
-                    "Bridge Troll"
+                    {
+                        "name": "Bridge Troll",
+                        "type": "trollRace"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -171,19 +282,58 @@
                 "name": "Prophet",
                 "cost": 550,
                 "options": [
-                    "General",
-                    "Prophet of Ashuruk",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Wall of Lead",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Shield",
-                    "Sigil of Protection",
-                    "Golden Idol of Shamut"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Prophet of Ashuruk",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Golden Idol of Shamut",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -192,10 +342,22 @@
                 "name": "Taurukh Commissioner",
                 "cost": 355,
                 "options": [
-                    "Shield",
-                    "Basalt Infusion",
-                    "Infernal Weapon",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Infernal Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -204,10 +366,22 @@
                 "name": "Citadel Guard",
                 "cost": 575,
                 "options": [
-                    "Flaming Standard",
-                    "Pistol and Spear",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Pistol and Spear",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -217,11 +391,26 @@
                 "name": "Vassal Levies",
                 "cost": 430,
                 "options": [
-                    "Banner of the Twice-Branded",
-                    "Standard Bearer",
-                    "Musician",
-                    "Spear and Shield",
-                    "Bow"
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 33,
@@ -231,11 +420,26 @@
                 "name": "Taurukh Anointed",
                 "cost": 590,
                 "options": [
-                    "Shield",
-                    "Infernal Weapon",
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Infernal Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -253,7 +457,10 @@
                 "name": "Kadim Chariot",
                 "cost": 220,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -269,7 +476,10 @@
                 "name": "Kadim Titan",
                 "cost": 500,
                 "options": [
-                    "Walking Earthquake"
+                    {
+                        "name": "Walking Earthquake",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "instruments of destruction"
@@ -278,7 +488,10 @@
                 "name": "Infernal Engine",
                 "cost": 475,
                 "options": [
-                    "Rock Crusher"
+                    {
+                        "name": "Rock Crusher",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "instruments of destruction"

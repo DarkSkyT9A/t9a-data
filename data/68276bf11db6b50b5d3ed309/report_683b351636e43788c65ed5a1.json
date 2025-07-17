@@ -13,18 +13,54 @@
                 "name": "Mage",
                 "cost": 615,
                 "options": [
-                    "Order of the Fiery Heart",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Gleaming Robe",
-                    "Magical Heirloom",
-                    "Binding Scroll"
+                    {
+                        "name": "Order of the Fiery Heart",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gleaming Robe",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magical Heirloom",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -33,13 +69,34 @@
                 "name": "High Prince",
                 "cost": 450,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Destiny's Call",
-                    "Scroll of the Pearl Throne",
-                    "Fleet Officer",
-                    "Spear",
-                    "Sliver of the Blazing Dawn"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of the Pearl Throne",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Fleet Officer",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Sliver of the Blazing Dawn",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -48,13 +105,34 @@
                 "name": "Commander",
                 "cost": 240,
                 "options": [
-                    "Light Troops",
-                    "Talisman of the Void",
-                    "Queen's Companion",
-                    "Moonlight Arrows",
-                    "Longbow",
-                    "Great Weapon and Elven Finesse",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Queen's Companion",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Moonlight Arrows",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -63,7 +141,10 @@
                 "name": "Sea Guard",
                 "cost": 532,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -81,7 +162,10 @@
                 "name": "Highborn Lancers",
                 "cost": 220,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -91,7 +175,10 @@
                 "name": "Phoenix",
                 "cost": 400,
                 "options": [
-                    "Fire Phoenix"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -100,8 +187,14 @@
                 "name": "Flame Wardens",
                 "cost": 400,
                 "options": [
-                    "Banner of Becalming",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Becalming",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -111,7 +204,10 @@
                 "name": "Reaver Chariots",
                 "cost": 260,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -153,13 +249,34 @@
                 "name": "Runic Smith",
                 "cost": 350,
                 "options": [
-                    "General",
-                    "Shield Wall",
-                    "Rune of Iron",
-                    "Rune of Lightning",
-                    "Rune of Grounding",
-                    "Rune of Harnessing",
-                    "Rune of Shielding"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Grounding",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Harnessing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Shielding",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -168,11 +285,26 @@
                 "name": "Thane",
                 "cost": 180,
                 "options": [
-                    "Shield Wall",
-                    "Rune of Resistance",
-                    "Rune of Iron",
-                    "Captain and Attached",
-                    "Light Troops"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resistance",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -181,8 +313,14 @@
                 "name": "Greybeards",
                 "cost": 455,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -192,7 +330,10 @@
                 "name": "Greybeards",
                 "cost": 190,
                 "options": [
-                    "Great Weapon"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -202,9 +343,18 @@
                 "name": "Clan Marksmen",
                 "cost": 358,
                 "options": [
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 16,
@@ -214,7 +364,10 @@
                 "name": "Deep Watch",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -224,7 +377,10 @@
                 "name": "Deep Watch",
                 "cost": 342,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 19,
@@ -234,7 +390,10 @@
                 "name": "Forge Wardens",
                 "cost": 282,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -244,7 +403,10 @@
                 "name": "Forge Wardens",
                 "cost": 282,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 14,
@@ -261,9 +423,18 @@
                 "name": "Miners",
                 "cost": 230,
                 "options": [
-                    "Great Weapon",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -273,9 +444,18 @@
                 "name": "Miners",
                 "cost": 230,
                 "options": [
-                    "Great Weapon",
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -285,11 +465,26 @@
                 "name": "Field Artillery",
                 "cost": 115,
                 "options": [
-                    "Dwarf Ballista",
-                    "Rune Crafted",
-                    "Rune Crafted",
-                    "Rune Crafted",
-                    "Rune Crafted"
+                    {
+                        "name": "Dwarf Ballista",
+                        "type": "Artillery Weapons"
+                    },
+                    {
+                        "name": "Rune Crafted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune Crafted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune Crafted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune Crafted",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -298,7 +493,10 @@
                 "name": "Field Artillery",
                 "cost": 115,
                 "options": [
-                    "Dwarf Ballista"
+                    {
+                        "name": "Dwarf Ballista",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -307,7 +505,10 @@
                 "name": "Field Artillery",
                 "cost": 115,
                 "options": [
-                    "Dwarf Ballista"
+                    {
+                        "name": "Dwarf Ballista",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Special"
@@ -316,7 +517,10 @@
                 "name": "Field Artillery",
                 "cost": 115,
                 "options": [
-                    "Dwarf Ballista"
+                    {
+                        "name": "Dwarf Ballista",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 3,
                 "category": "Special"

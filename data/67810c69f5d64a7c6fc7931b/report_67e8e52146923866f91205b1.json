@@ -13,11 +13,26 @@
                 "name": "Prelate",
                 "cost": 490,
                 "options": [
-                    "Altar of Battle",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "Ghostly Guard",
-                    "Exemplar's Flame"
+                    {
+                        "name": "Altar of Battle",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Exemplar's Flame",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,12 +41,30 @@
                 "name": "Knight Commander",
                 "cost": 290,
                 "options": [
-                    "General",
-                    "Horse",
-                    "Shield",
-                    "King Slayer",
-                    "Talisman of the Void",
-                    "Cavalry Pick"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Cavalry Pick",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -40,11 +73,26 @@
                 "name": "Marshal",
                 "cost": 230,
                 "options": [
-                    "Horse",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Blacksteel",
-                    "Battle Standard Bearer and Imperial Authority"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -53,9 +101,18 @@
                 "name": "Marshal",
                 "cost": 225,
                 "options": [
-                    "Great Weapon",
-                    "Solitary",
-                    "Great Griffon"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -64,9 +121,18 @@
                 "name": "Marshal",
                 "cost": 225,
                 "options": [
-                    "Great Weapon",
-                    "Solitary",
-                    "Great Griffon"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -75,8 +141,14 @@
                 "name": "Inquisitor",
                 "cost": 140,
                 "options": [
-                    "Horse",
-                    "Paired Weapons"
+                    {
+                        "name": "Horse",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -85,10 +157,22 @@
                 "name": "Knightly Orders",
                 "cost": 585,
                 "options": [
-                    "Shield",
-                    "Cavalry Pick",
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Cavalry Pick",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -98,10 +182,22 @@
                 "name": "State Infantry",
                 "cost": 560,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Spear"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 50,
@@ -111,7 +207,10 @@
                 "name": "Arcane Engine",
                 "cost": 250,
                 "options": [
-                    "The Stars Align"
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -120,8 +219,14 @@
                 "name": "Imperial Detachment",
                 "cost": 180,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -139,7 +244,10 @@
                 "name": "Reiters",
                 "cost": 180,
                 "options": [
-                    "Brace of Pistols and Fire on Impact"
+                    {
+                        "name": "Brace of Pistols and Fire on Impact",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -166,15 +274,42 @@
                 "name": "Shaman",
                 "cost": 510,
                 "options": [
-                    "Wizard Master",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Light of Faith",
-                    "Holy Affliction",
-                    "Wrath of God",
-                    "Rain of Fire",
-                    "Mimic Cloak",
-                    "Gut Roarer"
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light of Faith",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wrath of God",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rain of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -183,15 +318,42 @@
                 "name": "Mammoth Hunter",
                 "cost": 430,
                 "options": [
-                    "Battleline Hero",
-                    "Destiny's Call",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Spinesplitter",
-                    "General, Disciplined and Wildheart",
-                    "Light Troops",
-                    "Scout and Vanguard",
-                    "Hunting Spear"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spinesplitter",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "General, Disciplined and Wildheart",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Scout and Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -200,14 +362,38 @@
                 "name": "Mammoth Hunter",
                 "cost": 405,
                 "options": [
-                    "Wrestler's Belt",
-                    "Eldritch Inscriptions",
-                    "Iron Fist",
-                    "Trolleater",
-                    "Battle Standard Bearer",
-                    "Light Troops",
-                    "Scout and Vanguard",
-                    "Hunting Spear"
+                    {
+                        "name": "Wrestler's Belt",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Trolleater",
+                        "type": "bigName"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Scout and Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -216,10 +402,22 @@
                 "name": "Tribesmen",
                 "cost": 498,
                 "options": [
-                    "Paired Weapons",
-                    "Sheltering Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -229,9 +427,18 @@
                 "name": "Scraplings",
                 "cost": 304,
                 "options": [
-                    "Skull of Qenghet",
-                    "Standard Bearer",
-                    "Spear"
+                    {
+                        "name": "Skull of Qenghet",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 37,
@@ -241,9 +448,18 @@
                 "name": "Tusker Cavalry",
                 "cost": 475,
                 "options": [
-                    "Paired Weapons",
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -253,9 +469,18 @@
                 "name": "Tusker Cavalry",
                 "cost": 475,
                 "options": [
-                    "Paired Weapons",
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -281,8 +506,14 @@
                 "name": "Mercenary Giant",
                 "cost": 310,
                 "options": [
-                    "Great Weapon",
-                    "First Strike"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "First Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -291,8 +522,14 @@
                 "name": "Mercenary Giant",
                 "cost": 270,
                 "options": [
-                    "Iron Fist",
-                    "Devastating Charge"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Devastating Charge",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "chained beasts"

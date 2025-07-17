@@ -13,13 +13,34 @@
                 "name": "Orc Shaman",
                 "cost": 600,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Shamanism",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Destiny's Call",
-                    "Skull Fetish"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Skull Fetish",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,12 +49,30 @@
                 "name": "Orc Warlord",
                 "cost": 485,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Wyvern",
-                    "Eldritch Inscriptions",
-                    "Talisman of Shielding",
-                    "Great Weapon"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wyvern",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,10 +81,22 @@
                 "name": "Brood Alpha",
                 "cost": 185,
                 "options": [
-                    "Light Troops",
-                    "Monster Munch",
-                    "Shield",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Monster Munch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -68,8 +119,14 @@
                 "name": "Gogtuk Initiate",
                 "cost": 45,
                 "options": [
-                    "Light Troops",
-                    "Netter"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Netter",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -78,9 +135,18 @@
                 "name": "Goblin Rabble",
                 "cost": 360,
                 "options": [
-                    "Goga Cauldron",
-                    "Poisoned Spear and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Goga Cauldron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Poisoned Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -90,7 +156,10 @@
                 "name": "Feral Orcs",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 38,
@@ -100,7 +169,10 @@
                 "name": "Feral Orc Marauders",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -117,7 +189,10 @@
                 "name": "Iron Orcs",
                 "cost": 375,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -127,8 +202,14 @@
                 "name": "Guardian Behemoth",
                 "cost": 345,
                 "options": [
-                    "Slithering Frame",
-                    "Wicked Horns"
+                    {
+                        "name": "Slithering Frame",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wicked Horns",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -137,7 +218,10 @@
                 "name": "Giant",
                 "cost": 305,
                 "options": [
-                    "Armed to the Teeth"
+                    {
+                        "name": "Armed to the Teeth",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -146,7 +230,10 @@
                 "name": "Goblin Artillery",
                 "cost": 170,
                 "options": [
-                    "Git Launcher"
+                    {
+                        "name": "Git Launcher",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -165,10 +252,22 @@
                 "name": "Skink Veteran",
                 "cost": 295,
                 "options": [
-                    "Pouakai Sky Tyrant",
-                    "Poisoned Javelin",
-                    "Paired Weapons",
-                    "Dragon's Brew"
+                    {
+                        "name": "Pouakai Sky Tyrant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -177,7 +276,10 @@
                 "name": "Caiman Mentor",
                 "cost": 90,
                 "options": [
-                    "Combat Artist"
+                    {
+                        "name": "Combat Artist",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -186,7 +288,10 @@
                 "name": "Caiman Mentor",
                 "cost": 90,
                 "options": [
-                    "Combat Artist"
+                    {
+                        "name": "Combat Artist",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -195,7 +300,10 @@
                 "name": "Caiman Mentor",
                 "cost": 90,
                 "options": [
-                    "Combat Artist"
+                    {
+                        "name": "Combat Artist",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -204,10 +312,22 @@
                 "name": "Skink Warriors",
                 "cost": 261,
                 "options": [
-                    "Obelisk of Collaboration",
-                    "Shield",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Obelisk of Collaboration",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 26,
@@ -217,10 +337,22 @@
                 "name": "Skink Warriors",
                 "cost": 261,
                 "options": [
-                    "Obelisk of Collaboration",
-                    "Shield",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Obelisk of Collaboration",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 26,
@@ -230,9 +362,18 @@
                 "name": "Skink Warriors",
                 "cost": 248,
                 "options": [
-                    "Shield",
-                    "Wizard Conclave",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 23,
@@ -242,9 +383,18 @@
                 "name": "Skink Warriors",
                 "cost": 230,
                 "options": [
-                    "Shield",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 3,
                 "models": 25,
@@ -254,8 +404,14 @@
                 "name": "Pteradon Riders",
                 "cost": 380,
                 "options": [
-                    "Magnetic Short Bow",
-                    "Wizard Conclave"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -281,8 +437,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 184,
                 "options": [
-                    "Blowpipe",
-                    "Chameleon"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -292,9 +454,18 @@
                 "name": "Stygiosaur Pack",
                 "cost": 460,
                 "options": [
-                    "Koru Stone",
-                    "Wizard Conclave",
-                    "Standard Bearer"
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -304,8 +475,14 @@
                 "name": "Stygiosaur Pack",
                 "cost": 410,
                 "options": [
-                    "Wizard Conclave",
-                    "Standard Bearer"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 2,
@@ -315,7 +492,10 @@
                 "name": "Carnosaur",
                 "cost": 340,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"

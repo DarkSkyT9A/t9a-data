@@ -13,15 +13,42 @@
                 "name": "Vampire Count",
                 "cost": 670,
                 "options": [
-                    "Vetala",
-                    "Occultism",
-                    "Unbreakable Will",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Destiny's Call",
-                    "Eldritch Inscriptions",
-                    "Halberd",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Unbreakable Will",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,11 +57,26 @@
                 "name": "Necromancer",
                 "cost": 375,
                 "options": [
-                    "Evocation",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Necromantic Staff",
-                    "General and The Dead Arise"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General and The Dead Arise",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -57,9 +99,18 @@
                 "name": "Skeletons",
                 "cost": 358,
                 "options": [
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 41,
@@ -69,10 +120,22 @@
                 "name": "Skeletons",
                 "cost": 356,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer",
-                    "Sheltering Standard",
-                    "Musician"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 37,
@@ -82,9 +145,18 @@
                 "name": "Skeletons",
                 "cost": 230,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 25,
@@ -109,7 +181,10 @@
                 "name": "Winged Reapers",
                 "cost": 600,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -119,7 +194,10 @@
                 "name": "Winged Reapers",
                 "cost": 600,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -139,14 +217,38 @@
                 "name": "Dread Prince",
                 "cost": 415,
                 "options": [
-                    "General",
-                    "Beastmaster",
-                    "Light Troops",
-                    "Shield",
-                    "Wild Warding",
-                    "Spear",
-                    "Mastery of Slaughter",
-                    "Moithir's Mirror"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Beastmaster",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mastery of Slaughter",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Moithir's Mirror",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -155,10 +257,22 @@
                 "name": "Silexian Officer",
                 "cost": 210,
                 "options": [
-                    "Light Troops",
-                    "Seal of the Republic",
-                    "Great Weapon and Elven Finesse",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -167,9 +281,18 @@
                 "name": "Temple Militants",
                 "cost": 410,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -179,8 +302,14 @@
                 "name": "Temple Militants",
                 "cost": 438,
                 "options": [
-                    "Dancers of Yema",
-                    "Standard Bearer"
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 19,
@@ -190,7 +319,10 @@
                 "name": "Temple Militants",
                 "cost": 438,
                 "options": [
-                    "Dancers of Yema"
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "models": 19,
@@ -200,7 +332,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 220,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -210,7 +345,10 @@
                 "name": "Shadow Riders",
                 "cost": 190,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -220,7 +358,10 @@
                 "name": "Corsairs",
                 "cost": 185,
                 "options": [
-                    "Repeater Handbow"
+                    {
+                        "name": "Repeater Handbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -230,7 +371,10 @@
                 "name": "Divine Altar",
                 "cost": 240,
                 "options": [
-                    "Altar of Nabh"
+                    {
+                        "name": "Altar of Nabh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

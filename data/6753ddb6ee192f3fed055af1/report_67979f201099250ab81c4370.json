@@ -13,9 +13,18 @@
                 "name": "Mage",
                 "cost": 440,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Pyromancy"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -24,12 +33,30 @@
                 "name": "High Prince",
                 "cost": 390,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Protection of Dorac",
-                    "King Slayer",
-                    "High Warden of the Flame",
-                    "Halberd"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Protection of Dorac",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "High Warden of the Flame",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -38,12 +65,30 @@
                 "name": "Commander",
                 "cost": 190,
                 "options": [
-                    "Light Troops",
-                    "Queen's Companion",
-                    "Moonlight Arrows",
-                    "Longbow",
-                    "Battle Standard Bearer",
-                    "Aether Icon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Queen's Companion",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Moonlight Arrows",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -52,9 +97,18 @@
                 "name": "Sea Guard",
                 "cost": 585,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -64,7 +118,10 @@
                 "name": "Highborn Lancers",
                 "cost": 246,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -74,7 +131,10 @@
                 "name": "Erlein Reavers",
                 "cost": 185,
                 "options": [
-                    "Bow"
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -84,7 +144,10 @@
                 "name": "Flame Wardens",
                 "cost": 558,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -94,7 +157,10 @@
                 "name": "Initiate of the Fiery Heart",
                 "cost": 400,
                 "options": [
-                    "Wizard Conclave"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -103,8 +169,14 @@
                 "name": "Queen's Guard",
                 "cost": 390,
                 "options": [
-                    "Banner of Becalming",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Becalming",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -114,8 +186,14 @@
                 "name": "Lion Guard",
                 "cost": 260,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -132,7 +210,10 @@
                 "name": "Grey Watchers",
                 "cost": 155,
                 "options": [
-                    "Shield"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -152,8 +233,14 @@
                 "name": "Sentinel of Nukuja",
                 "cost": 700,
                 "options": [
-                    "Strixian Spirit",
-                    "Evocation"
+                    {
+                        "name": "Strixian Spirit",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -162,11 +249,26 @@
                 "name": "Miser of Sugulag",
                 "cost": 665,
                 "options": [
-                    "General",
-                    "Thaumaturgy",
-                    "Mirrored Scales",
-                    "Wizard Adept",
-                    "Clinging Ichor"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Clinging Ichor",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -175,7 +277,10 @@
                 "name": "Myrmidons",
                 "cost": 390,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -185,7 +290,10 @@
                 "name": "Succubi",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -195,9 +303,18 @@
                 "name": "Imps",
                 "cost": 295,
                 "options": [
-                    "Sorcerous Antennae",
-                    "Standard Bearer",
-                    "Firestarter - Spear of Infinity"
+                    {
+                        "name": "Sorcerous Antennae",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Firestarter - Spear of Infinity",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -207,7 +324,10 @@
                 "name": "Brazen Beasts",
                 "cost": 370,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -217,7 +337,10 @@
                 "name": "Blazing Glory",
                 "cost": 340,
                 "options": [
-                    "Fly"
+                    {
+                        "name": "Fly",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -226,7 +349,10 @@
                 "name": "Clawed Fiends",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -244,7 +370,10 @@
                 "name": "Threshing Engine",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -254,7 +383,10 @@
                 "name": "Bloat Flies",
                 "cost": 310,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,

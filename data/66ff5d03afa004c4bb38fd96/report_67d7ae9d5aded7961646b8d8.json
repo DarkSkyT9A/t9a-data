@@ -13,12 +13,30 @@
                 "name": "Anurarch Archmage",
                 "cost": 640,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Talisman of the Void",
-                    "Te Aupouri Smokestone",
-                    "Eternal Mastery",
-                    "Mystifying Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Te Aupouri Smokestone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Eternal Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Mystifying Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,10 +45,22 @@
                 "name": "Skink Veteran",
                 "cost": 110,
                 "options": [
-                    "Light Troops and Strider",
-                    "Magnetic Short Bow",
-                    "Alchemical Arrows",
-                    "Chameleon and Hard Target"
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Alchemical Arrows",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Chameleon and Hard Target",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -39,11 +69,26 @@
                 "name": "Tegu Warriors",
                 "cost": 583,
                 "options": [
-                    "Rending Banner",
-                    "Spear",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 29,
@@ -53,9 +98,18 @@
                 "name": "Tegu Warriors",
                 "cost": 423,
                 "options": [
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -65,7 +119,10 @@
                 "name": "Weapon Beasts",
                 "cost": 470,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -75,7 +132,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 410,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -85,9 +145,18 @@
                 "name": "Raptor Riders",
                 "cost": 400,
                 "options": [
-                    "Koru Stone",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -97,8 +166,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 220,
                 "options": [
-                    "Magnetic Short Bow",
-                    "Chameleon"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -108,7 +183,10 @@
                 "name": "Pteradon Riders",
                 "cost": 200,
                 "options": [
-                    "Magnetic Short Bow"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -126,8 +204,14 @@
                 "name": "Carnosaur",
                 "cost": 370,
                 "options": [
-                    "Light Lance",
-                    "Hunt Leader"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hunt Leader",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"
@@ -146,14 +230,38 @@
                 "name": "Sentinel of Nukuja",
                 "cost": 740,
                 "options": [
-                    "Strixian Spirit",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Light of Faith",
-                    "Holy Affliction",
-                    "Wrath of God",
-                    "Rain of Fire",
-                    "Sorcerous Antennae"
+                    {
+                        "name": "Strixian Spirit",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light of Faith",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wrath of God",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rain of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Sorcerous Antennae",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -162,14 +270,38 @@
                 "name": "Miser of Sugulag",
                 "cost": 710,
                 "options": [
-                    "General",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Unnatural Roots",
-                    "Wizard Adept",
-                    "Segmented Shell"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -178,8 +310,14 @@
                 "name": "Myrmidons",
                 "cost": 555,
                 "options": [
-                    "Piercing Spike",
-                    "Standard Bearer"
+                    {
+                        "name": "Piercing Spike",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -189,8 +327,14 @@
                 "name": "Succubi",
                 "cost": 450,
                 "options": [
-                    "Standard Bearer",
-                    "Mesmerising Plumage"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Mesmerising Plumage",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -200,10 +344,22 @@
                 "name": "Hoarders",
                 "cost": 556,
                 "options": [
-                    "Clinging Ichor",
-                    "Segmented Shell",
-                    "Standard Bearer",
-                    "Favoured of Greed"
+                    {
+                        "name": "Clinging Ichor",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Favoured of Greed",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -213,8 +369,14 @@
                 "name": "Threshing Engine",
                 "cost": 470,
                 "options": [
-                    "Whipcrack Tail",
-                    "Standard Bearer"
+                    {
+                        "name": "Whipcrack Tail",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -224,8 +386,14 @@
                 "name": "Clawed Fiends",
                 "cost": 258,
                 "options": [
-                    "Standard Bearer",
-                    "Mesmerising Plumage"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Mesmerising Plumage",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -235,8 +403,14 @@
                 "name": "Clawed Fiends",
                 "cost": 258,
                 "options": [
-                    "Standard Bearer",
-                    "Mesmerising Plumage"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Mesmerising Plumage",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 1,
                 "models": 3,

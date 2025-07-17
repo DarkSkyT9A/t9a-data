@@ -13,13 +13,34 @@
                 "name": "Shaman",
                 "cost": 310,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow",
-                    "Rod of Battle"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,9 +49,18 @@
                 "name": "Khan",
                 "cost": 270,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Viper's Curse",
-                    "Brace of Ogre Pistols"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Viper's Curse",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -39,8 +69,14 @@
                 "name": "Tribesmen",
                 "cost": 422,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -50,7 +86,10 @@
                 "name": "Bruisers",
                 "cost": 410,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -68,11 +107,26 @@
                 "name": "Mercenary Veterans",
                 "cost": 595,
                 "options": [
-                    "Paired Weapons",
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "First Strike",
-                    "Vanguard"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "First Strike",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -82,9 +136,18 @@
                 "name": "Mercenary Veterans",
                 "cost": 515,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Lethal Strike"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lethal Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -94,9 +157,18 @@
                 "name": "Mercenary Gunners",
                 "cost": 360,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer",
-                    "Brace of Ogre Pistols and Lethal Strike"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols and Lethal Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -122,7 +194,10 @@
                 "name": "Frost Mammoth",
                 "cost": 380,
                 "options": [
-                    "Hunting Spear"
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -131,8 +206,14 @@
                 "name": "Mercenary Giant",
                 "cost": 270,
                 "options": [
-                    "Iron Fist",
-                    "Devastating Charge"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Devastating Charge",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -151,15 +232,42 @@
                 "name": "Battlefield Wizard",
                 "cost": 440,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Corruption of Tin",
-                    "Wall of Lead",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Mimic Cloak"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -168,11 +276,26 @@
                 "name": "Marshal",
                 "cost": 325,
                 "options": [
-                    "Great Griffon",
-                    "Touch of Greatness",
-                    "Winter Cloak",
-                    "Solitary",
-                    "Paired Weapons"
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Winter Cloak",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -181,11 +304,26 @@
                 "name": "Marshal",
                 "cost": 205,
                 "options": [
-                    "Light Troops",
-                    "Blacksteel",
-                    "Ullor's Horn",
-                    "General, Imperial Authority, and +1 Cou",
-                    "Paired Weapons"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ullor's Horn",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -194,10 +332,22 @@
                 "name": "Marshal",
                 "cost": 120,
                 "options": [
-                    "Light Troops",
-                    "Death Warrant",
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Shield"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Death Warrant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -206,7 +356,10 @@
                 "name": "Prelate",
                 "cost": 140,
                 "options": [
-                    "Light Troops"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -215,8 +368,14 @@
                 "name": "Artificer",
                 "cost": 95,
                 "options": [
-                    "Light Troops",
-                    "Long Rifle"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Long Rifle",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -225,8 +384,14 @@
                 "name": "Artificer",
                 "cost": 95,
                 "options": [
-                    "Light Troops",
-                    "Long Rifle"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Long Rifle",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -235,8 +400,14 @@
                 "name": "State Infantry",
                 "cost": 350,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 34,
@@ -246,8 +417,14 @@
                 "name": "State Infantry",
                 "cost": 340,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 33,
@@ -257,7 +434,10 @@
                 "name": "State Marksmen",
                 "cost": 220,
                 "options": [
-                    "Crossbow"
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -267,7 +447,10 @@
                 "name": "State Marksmen",
                 "cost": 220,
                 "options": [
-                    "Crossbow"
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -277,8 +460,14 @@
                 "name": "Imperial Detachment",
                 "cost": 180,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -288,7 +477,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -297,7 +489,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 175,
                 "options": [
-                    "Volley Gun"
+                    {
+                        "name": "Volley Gun",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -306,7 +501,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 175,
                 "options": [
-                    "Volley Gun"
+                    {
+                        "name": "Volley Gun",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Special"
@@ -315,7 +513,10 @@
                 "name": "Reiters",
                 "cost": 180,
                 "options": [
-                    "Brace of Pistols and Fire on Impact"
+                    {
+                        "name": "Brace of Pistols and Fire on Impact",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -325,7 +526,10 @@
                 "name": "Reiters",
                 "cost": 180,
                 "options": [
-                    "Brace of Pistols and Fire on Impact"
+                    {
+                        "name": "Brace of Pistols and Fire on Impact",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 5,

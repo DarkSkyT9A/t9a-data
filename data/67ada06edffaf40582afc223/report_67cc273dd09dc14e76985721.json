@@ -13,14 +13,38 @@
                 "name": "Vampire Count",
                 "cost": 665,
                 "options": [
-                    "Sangreal",
-                    "Eternal Duellist",
-                    "Skeletal Steed",
-                    "Wizard Apprentice",
-                    "Legend of the Black King",
-                    "Supernatural Dexterity",
-                    "Great Weapon",
-                    "Eternity Gem"
+                    {
+                        "name": "Sangreal",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Eternal Duellist",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Skeletal Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Legend of the Black King",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Eternity Gem",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,14 +53,38 @@
                 "name": "Vampire Count",
                 "cost": 640,
                 "options": [
-                    "Vetala",
-                    "Evocation",
-                    "Occultism",
-                    "Zombie Dragon",
-                    "Wizard Apprentice",
-                    "Halberd",
-                    "Obsidian Rock",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Zombie Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -45,13 +93,34 @@
                 "name": "Necromancer",
                 "cost": 290,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "General and The Dead Arise",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Wall of Lead"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "General and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wall of Lead",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -60,10 +129,22 @@
                 "name": "Skeletons",
                 "cost": 480,
                 "options": [
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Banner of Eldritch Might",
-                    "Musician"
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 50,
@@ -89,7 +170,10 @@
                 "name": "Zombies",
                 "cost": 175,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -106,9 +190,18 @@
                 "name": "Wraiths",
                 "cost": 270,
                 "options": [
-                    "Danse Macabre",
-                    "Molten Copper",
-                    "Wizard Conclave"
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -118,7 +211,10 @@
                 "name": "Vampire Knights",
                 "cost": 430,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -128,7 +224,10 @@
                 "name": "Vampire Knights",
                 "cost": 430,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -148,17 +247,50 @@
                 "name": "Prophet",
                 "cost": 485,
                 "options": [
-                    "General",
-                    "Prophet of Lugar",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Living Steel",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Shield"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Prophet of Lugar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -167,9 +299,18 @@
                 "name": "Overlord",
                 "cost": 445,
                 "options": [
-                    "Bull of Shamut",
-                    "Vorpal Binding",
-                    "Touch of Greatness"
+                    {
+                        "name": "Bull of Shamut",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Vorpal Binding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -178,11 +319,26 @@
                 "name": "Vizier",
                 "cost": 250,
                 "options": [
-                    "Light Troops",
-                    "Blaze of Protection",
-                    "Flintlock Axe",
-                    "Golden Idol of Shamut",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blaze of Protection",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Flintlock Axe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Golden Idol of Shamut",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -191,10 +347,22 @@
                 "name": "Infernal Warriors",
                 "cost": 532,
                 "options": [
-                    "Blunderbuss",
-                    "Great Weapon",
-                    "Banner of the Twice-Branded",
-                    "Standard Bearer"
+                    {
+                        "name": "Blunderbuss",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -204,10 +372,22 @@
                 "name": "Infernal Warriors",
                 "cost": 478,
                 "options": [
-                    "Blunderbuss",
-                    "Great Weapon",
-                    "Banner of the Twice-Branded",
-                    "Standard Bearer"
+                    {
+                        "name": "Blunderbuss",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of the Twice-Branded",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 21,
@@ -217,9 +397,18 @@
                 "name": "Immortals",
                 "cost": 534,
                 "options": [
-                    "Flaming Standard",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -229,8 +418,14 @@
                 "name": "Immortals",
                 "cost": 532,
                 "options": [
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -240,7 +435,10 @@
                 "name": "Infernal Artillery",
                 "cost": 285,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -249,7 +447,10 @@
                 "name": "Infernal Artillery",
                 "cost": 285,
                 "options": [
-                    "Rocket Battery"
+                    {
+                        "name": "Rocket Battery",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -258,7 +459,10 @@
                 "name": "Infernal Artillery",
                 "cost": 170,
                 "options": [
-                    "Naphtha Thrower"
+                    {
+                        "name": "Naphtha Thrower",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Special"

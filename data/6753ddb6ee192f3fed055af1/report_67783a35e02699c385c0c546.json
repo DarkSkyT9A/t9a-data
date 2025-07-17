@@ -13,10 +13,22 @@
                 "name": "Anurarch Archmage",
                 "cost": 625,
                 "options": [
-                    "Anurarch Wardens",
-                    "Alchemy",
-                    "Veil Mastery",
-                    "Invasive Mastery"
+                    {
+                        "name": "Anurarch Wardens",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Veil Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Invasive Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -25,12 +37,30 @@
                 "name": "Tegu Veteran",
                 "cost": 400,
                 "options": [
-                    "Death Cheater",
-                    "Eldritch Inscriptions",
-                    "Te Aupouri Smokestone",
-                    "Saurian Raptor",
-                    "Shield",
-                    "Great Weapon"
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Te Aupouri Smokestone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Saurian Raptor",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -39,9 +69,18 @@
                 "name": "Skink Veteran",
                 "cost": 105,
                 "options": [
-                    "Light Troops",
-                    "Magnetic Short Bow",
-                    "Alchemical Arrows"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Alchemical Arrows",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -50,10 +89,22 @@
                 "name": "Tegu Warriors",
                 "cost": 439,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -63,9 +114,18 @@
                 "name": "Tegu Warriors",
                 "cost": 415,
                 "options": [
-                    "Spear",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 25,
@@ -75,7 +135,10 @@
                 "name": "Skink Hunters",
                 "cost": 170,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -85,7 +148,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 595,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -95,9 +161,18 @@
                 "name": "Raptor Riders",
                 "cost": 490,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -107,7 +182,10 @@
                 "name": "Raptor Pack",
                 "cost": 172,
                 "options": [
-                    "Ambush"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -117,8 +195,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 220,
                 "options": [
-                    "Magnetic Short Bow",
-                    "Vanguard"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -128,8 +212,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 184,
                 "options": [
-                    "Blowpipe",
-                    "Chameleon"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -139,8 +229,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 184,
                 "options": [
-                    "Blowpipe",
-                    "Chameleon"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Chameleon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "models": 8,
@@ -160,12 +256,30 @@
                 "name": "Sanctioned Warlock",
                 "cost": 585,
                 "options": [
-                    "General",
-                    "Manticore",
-                    "Wizard Master",
-                    "Evocation",
-                    "Paired Weapons",
-                    "Ceinran's Scales"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Manticore",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ceinran's Scales",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -174,10 +288,22 @@
                 "name": "Silexian Officer",
                 "cost": 435,
                 "options": [
-                    "Manticore",
-                    "Talisman of Shielding",
-                    "Battle Standard Bearer",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Manticore",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -193,8 +319,14 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 408,
                 "options": [
-                    "Banner of Discipline",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Discipline",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -204,12 +336,30 @@
                 "name": "Temple Militants",
                 "cost": 396,
                 "options": [
-                    "Sheltering Standard",
-                    "Sheltering Standard",
-                    "Standard Bearer",
-                    "Standard Bearer",
-                    "Musician",
-                    "Musician"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -219,7 +369,10 @@
                 "name": "Temple Militants",
                 "cost": 566,
                 "options": [
-                    "Dancers of Yema"
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 23,
@@ -229,7 +382,10 @@
                 "name": "Silexian Spears",
                 "cost": 200,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -239,7 +395,10 @@
                 "name": "Gorgons",
                 "cost": 410,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -249,7 +408,10 @@
                 "name": "Divine Altar",
                 "cost": 240,
                 "options": [
-                    "Altar of Nabh"
+                    {
+                        "name": "Altar of Nabh",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

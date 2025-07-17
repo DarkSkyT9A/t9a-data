@@ -13,17 +13,50 @@
                 "name": "Vampire Count",
                 "cost": 690,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Battleline Hero",
-                    "Trusted Adviser",
-                    "Lahmia",
-                    "Commandment",
-                    "Occultism",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Destiny's Call",
-                    "Paired Weapons",
-                    "King Slayer"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,10 +65,22 @@
                 "name": "Necromancer",
                 "cost": 655,
                 "options": [
-                    "Evocation",
-                    "Wizard Master",
-                    "Cadaver Wagon",
-                    "Lich"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cadaver Wagon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,12 +89,30 @@
                 "name": "Barrow King",
                 "cost": 195,
                 "options": [
-                    "Light Troops",
-                    "Wild Warding",
-                    "Warding of Unity",
-                    "Great Weapon",
-                    "Hypnotic Pendant",
-                    "Captain"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -58,7 +121,10 @@
                 "name": "Ghouls",
                 "cost": 535,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 38,
@@ -68,9 +134,18 @@
                 "name": "Skeletons",
                 "cost": 316,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 32,
@@ -80,7 +155,10 @@
                 "name": "Zombies",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -90,7 +168,10 @@
                 "name": "Ghasts",
                 "cost": 580,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -100,9 +181,18 @@
                 "name": "Barrow Guard",
                 "cost": 469,
                 "options": [
-                    "Halberd",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 26,
@@ -137,10 +227,22 @@
                 "name": "Anurarch Archmage",
                 "cost": 550,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Alchemy",
-                    "Talisman of the Void",
-                    "Farseeing Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Farseeing Mastery",
+                        "type": "arcaneMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -149,10 +251,22 @@
                 "name": "Skink Veteran",
                 "cost": 280,
                 "options": [
-                    "Serpent's Nest Charm",
-                    "Pouakai Sky Tyrant",
-                    "Poisoned Javelin",
-                    "Paired Weapons"
+                    {
+                        "name": "Serpent's Nest Charm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Pouakai Sky Tyrant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -161,9 +275,18 @@
                 "name": "Tegu Warriors",
                 "cost": 504,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 27,
@@ -173,9 +296,18 @@
                 "name": "Skink Warriors",
                 "cost": 322,
                 "options": [
-                    "Rending Banner",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -185,7 +317,10 @@
                 "name": "Skink Hunters",
                 "cost": 177,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -195,7 +330,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 595,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -205,9 +343,18 @@
                 "name": "Thyroscutus Herd",
                 "cost": 290,
                 "options": [
-                    "Lodestone Shield",
-                    "Great Protector",
-                    "Venomous Fortress"
+                    {
+                        "name": "Lodestone Shield",
+                        "type": "howdah"
+                    },
+                    {
+                        "name": "Great Protector",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Venomous Fortress",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 1,
                 "models": 1,
@@ -217,8 +364,14 @@
                 "name": "Tegu Guards",
                 "cost": 402,
                 "options": [
-                    "Koru Stone",
-                    "Standard Bearer"
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 17,
@@ -228,8 +381,14 @@
                 "name": "Caiman Elders",
                 "cost": 370,
                 "options": [
-                    "Wizard Conclave",
-                    "Standard Bearer"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -247,7 +406,10 @@
                 "name": "Carnosaur",
                 "cost": 340,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"

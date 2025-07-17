@@ -13,11 +13,26 @@
                 "name": "Swarm Priest",
                 "cost": 365,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Occultism",
-                    "Favanite Powder",
-                    "Cult of Errahman"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Favanite Powder",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Cult of Errahman",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,10 +41,22 @@
                 "name": "Swarm Priest",
                 "cost": 200,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Thaumaturgy",
-                    "Caelysian Pantheon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Caelysian Pantheon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -38,10 +65,22 @@
                 "name": "Bloodfur Legate",
                 "cost": 275,
                 "options": [
-                    "Light Troops",
-                    "Battle Standard Bearer",
-                    "Pistol",
-                    "Storm Rocket"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Pistol",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Storm Rocket",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -50,10 +89,22 @@
                 "name": "House Prefect",
                 "cost": 215,
                 "options": [
-                    "General",
-                    "Swarm Master",
-                    "Skorchit Alchemist",
-                    "Deepfire Thrower"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Swarm Master",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Skorchit Alchemist",
+                        "type": "house"
+                    },
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -62,9 +113,18 @@
                 "name": "House Prefect",
                 "cost": 170,
                 "options": [
-                    "Captain and Attached",
-                    "Skorchit Alchemist",
-                    "Deepfire Thrower"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Skorchit Alchemist",
+                        "type": "house"
+                    },
+                    {
+                        "name": "Deepfire Thrower",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -73,9 +133,18 @@
                 "name": "House Prefect",
                 "cost": 100,
                 "options": [
-                    "Rodentium Bullets",
-                    "Captain and Attached",
-                    "Stygian Overseer"
+                    {
+                        "name": "Rodentium Bullets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Stygian Overseer",
+                        "type": "house"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -98,9 +167,18 @@
                 "name": "Vermin Legionaries",
                 "cost": 408,
                 "options": [
-                    "Stalker's Standard",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 49,
@@ -110,9 +188,18 @@
                 "name": "Vermin Legionaries",
                 "cost": 401,
                 "options": [
-                    "Stalker's Standard",
-                    "Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 48,
@@ -122,8 +209,14 @@
                 "name": "Vermin Slingers",
                 "cost": 194,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -133,7 +226,10 @@
                 "name": "Vermin Artillery",
                 "cost": 195,
                 "options": [
-                    "Rakachit Mauss Rifle"
+                    {
+                        "name": "Rakachit Mauss Rifle",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -142,7 +238,10 @@
                 "name": "Vermin Artillery",
                 "cost": 195,
                 "options": [
-                    "Rakachit Mauss Rifle"
+                    {
+                        "name": "Rakachit Mauss Rifle",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -151,7 +250,10 @@
                 "name": "Shadowfur Stalkers",
                 "cost": 140,
                 "options": [
-                    "Throwing Weapons"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -161,7 +263,10 @@
                 "name": "Shadowfur Stalkers",
                 "cost": 140,
                 "options": [
-                    "Throwing Weapons"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -217,17 +322,50 @@
                 "name": "Miser of Sugulag",
                 "cost": 900,
                 "options": [
-                    "General",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Unnatural Roots",
-                    "Mirrored Scales",
-                    "Segmented Shell"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -236,8 +374,14 @@
                 "name": "Succubi",
                 "cost": 392,
                 "options": [
-                    "Horrifying Visage",
-                    "Standard Bearer"
+                    {
+                        "name": "Horrifying Visage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -247,7 +391,10 @@
                 "name": "Succubi",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -257,7 +404,10 @@
                 "name": "Lemures",
                 "cost": 390,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -267,7 +417,10 @@
                 "name": "Clawed Fiends",
                 "cost": 495,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -277,8 +430,14 @@
                 "name": "Clawed Fiends",
                 "cost": 249,
                 "options": [
-                    "Standard Bearer",
-                    "Incendiary Ichor"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Incendiary Ichor",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -288,7 +447,10 @@
                 "name": "Clawed Fiends",
                 "cost": 240,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 3,
@@ -306,7 +468,10 @@
                 "name": "Titanslayer Chariot",
                 "cost": 225,
                 "options": [
-                    "Segmented Shell"
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -315,7 +480,10 @@
                 "name": "Titanslayer Chariot",
                 "cost": 225,
                 "options": [
-                    "Segmented Shell"
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"

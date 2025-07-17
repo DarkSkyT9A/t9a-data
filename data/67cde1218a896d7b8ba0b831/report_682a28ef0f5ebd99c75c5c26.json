@@ -13,15 +13,42 @@
                 "name": "Forest Prince",
                 "cost": 800,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Trusted Adviser",
-                    "Forest Dragon",
-                    "Sylvan Bow",
-                    "Sylvan Blades",
-                    "Spirit of the Whirlwind",
-                    "Obsidian Rock",
-                    "Binding Scroll"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Forest Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Sylvan Blades",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Spirit of the Whirlwind",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,15 +57,42 @@
                 "name": "Treefather Ancient",
                 "cost": 735,
                 "options": [
-                    "Wizard",
-                    "Wizard Master",
-                    "Druidism",
-                    "Fountain of Youth",
-                    "Veil of Mist",
-                    "Gravel Storm",
-                    "Stone Skin",
-                    "Quicksand",
-                    "Verdant Rebirth"
+                    {
+                        "name": "Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Veil of Mist",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gravel Storm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stone Skin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksand",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Verdant Rebirth",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -47,9 +101,18 @@
                 "name": "Forest Guard",
                 "cost": 425,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Rending Banner"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -59,7 +122,10 @@
                 "name": "Sylvan Archers",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -69,7 +135,10 @@
                 "name": "Dryads",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -79,7 +148,10 @@
                 "name": "Heath Riders",
                 "cost": 190,
                 "options": [
-                    "Heath Hunters"
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -89,8 +161,14 @@
                 "name": "Forest Rangers",
                 "cost": 400,
                 "options": [
-                    "Standard Bearer",
-                    "Aether Icon"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -108,9 +186,18 @@
                 "name": "Briar Maidens",
                 "cost": 300,
                 "options": [
-                    "Wizard Conclave",
-                    "Weal and Woe",
-                    "Swarm of Insects"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -130,15 +217,42 @@
                 "name": "Courtesan of Cibaresh",
                 "cost": 850,
                 "options": [
-                    "Wizard Adept",
-                    "Divination",
-                    "Foresight",
-                    "The Stars Align",
-                    "Fate's Judgement",
-                    "Kaleidoscopic Flesh",
-                    "Centipede Legs",
-                    "Dark Hide",
-                    "Chitinous Scales"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Fate's Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Kaleidoscopic Flesh",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Centipede Legs",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Dark Hide",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Chitinous Scales",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -147,16 +261,46 @@
                 "name": "Miser of Sugulag",
                 "cost": 750,
                 "options": [
-                    "Recruiting Officer",
-                    "General",
-                    "Wizard Adept",
-                    "Unnatural Roots",
-                    "Mirrored Scales",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Segmented Shell"
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -165,8 +309,14 @@
                 "name": "Lemures",
                 "cost": 440,
                 "options": [
-                    "Unnatural Roots",
-                    "Standard Bearer"
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -176,8 +326,14 @@
                 "name": "Succubi",
                 "cost": 310,
                 "options": [
-                    "Mesmerising Plumage",
-                    "Standard Bearer"
+                    {
+                        "name": "Mesmerising Plumage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -187,9 +343,18 @@
                 "name": "Imps",
                 "cost": 255,
                 "options": [
-                    "Standard Bearer",
-                    "All-Seeing Eye",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "All-Seeing Eye",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -199,11 +364,26 @@
                 "name": "Hoarders",
                 "cost": 695,
                 "options": [
-                    "Unnatural Roots",
-                    "Mirrored Scales",
-                    "Standard Bearer",
-                    "Fresh Meat",
-                    "Favoured of Greed"
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Fresh Meat",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Favoured of Greed",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -213,8 +393,14 @@
                 "name": "Threshing Engine",
                 "cost": 270,
                 "options": [
-                    "Standard Bearer",
-                    "Horde Thresher"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Horde Thresher",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -224,8 +410,14 @@
                 "name": "Threshing Engine",
                 "cost": 270,
                 "options": [
-                    "Standard Bearer",
-                    "Horde Thresher"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Horde Thresher",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 1,

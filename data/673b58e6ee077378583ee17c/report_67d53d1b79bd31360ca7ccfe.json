@@ -13,16 +13,46 @@
                 "name": "Miser of Sugulag",
                 "cost": 865,
                 "options": [
-                    "Trusted Adviser",
-                    "General",
-                    "Wizard Master",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Light of Faith",
-                    "Holy Affliction",
-                    "Wrath of God",
-                    "Rain of Fire",
-                    "Unnatural Roots"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light of Faith",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wrath of God",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rain of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,9 +61,18 @@
                 "name": "Maw of Akaan",
                 "cost": 690,
                 "options": [
-                    "Evocation",
-                    "Unnatural Roots",
-                    "Wizard Apprentice"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,9 +81,18 @@
                 "name": "Myrmidons",
                 "cost": 355,
                 "options": [
-                    "Bronze Backbone",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Bronze Backbone",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -54,9 +102,18 @@
                 "name": "Myrmidons",
                 "cost": 355,
                 "options": [
-                    "Bronze Backbone",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Bronze Backbone",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -66,9 +123,18 @@
                 "name": "Imps",
                 "cost": 295,
                 "options": [
-                    "Standard Bearer",
-                    "Sorcerous Antennae",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sorcerous Antennae",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -78,8 +144,14 @@
                 "name": "Clawed Fiends",
                 "cost": 470,
                 "options": [
-                    "Unhinging Jaw",
-                    "Standard Bearer"
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -89,7 +161,10 @@
                 "name": "Blazing Glory",
                 "cost": 370,
                 "options": [
-                    "Trampling Hooves"
+                    {
+                        "name": "Trampling Hooves",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -98,7 +173,10 @@
                 "name": "Threshing Engine",
                 "cost": 300,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -108,7 +186,10 @@
                 "name": "Threshing Engine",
                 "cost": 300,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 2,
@@ -128,15 +209,42 @@
                 "name": "Thane",
                 "cost": 330,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Iron",
-                    "Rune of Retribution",
-                    "Rune of Lightning",
-                    "Rune of Shielding",
-                    "Rune of Mining"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Retribution",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Shielding",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Mining",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -145,9 +253,18 @@
                 "name": "Clan Warriors",
                 "cost": 508,
                 "options": [
-                    "Spear",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 36,
@@ -157,9 +274,18 @@
                 "name": "Clan Marksmen",
                 "cost": 250,
                 "options": [
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -169,9 +295,18 @@
                 "name": "Clan Marksmen",
                 "cost": 250,
                 "options": [
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -181,8 +316,14 @@
                 "name": "Deep Watch",
                 "cost": 442,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -192,8 +333,14 @@
                 "name": "Deep Watch",
                 "cost": 442,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 24,
@@ -203,8 +350,14 @@
                 "name": "Deep Watch",
                 "cost": 442,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 24,
@@ -214,9 +367,18 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Rune Crafted",
-                    "Rune Crafted",
-                    "Dwarf Cannon"
+                    {
+                        "name": "Rune Crafted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune Crafted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -225,7 +387,10 @@
                 "name": "Field Artillery",
                 "cost": 210,
                 "options": [
-                    "Dwarf Catapult"
+                    {
+                        "name": "Dwarf Catapult",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -234,8 +399,14 @@
                 "name": "Field Artillery",
                 "cost": 115,
                 "options": [
-                    "Dwarf Ballista",
-                    "Flaming Shot"
+                    {
+                        "name": "Dwarf Ballista",
+                        "type": "Artillery Weapons"
+                    },
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "Special"
@@ -244,9 +415,18 @@
                 "name": "Field Artillery",
                 "cost": 115,
                 "options": [
-                    "Dwarf Ballista",
-                    "Flaming Shot",
-                    "Flaming Shot"
+                    {
+                        "name": "Dwarf Ballista",
+                        "type": "Artillery Weapons"
+                    },
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Flaming Shot",
+                        "type": "Other"
+                    }
                 ],
                 "index": 3,
                 "category": "Special"
@@ -255,8 +435,14 @@
                 "name": "Miners",
                 "cost": 230,
                 "options": [
-                    "Throwing Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -266,7 +452,10 @@
                 "name": "Forge Wardens",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -276,7 +465,10 @@
                 "name": "Forge Wardens",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,

@@ -13,16 +13,46 @@
                 "name": "Ruinous Dictator",
                 "cost": 530,
                 "options": [
-                    "Battleline Hero",
-                    "Wizard Adept",
-                    "Occultism",
-                    "The Devouring Dark",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "General",
-                    "Pontifex Maximus",
-                    "Obsidian Rock",
-                    "Enlightened by Favana"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "The Devouring Dark",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Pontifex Maximus",
+                        "type": "mortalOrigin"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Enlightened by Favana",
+                        "type": "patronDeity"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -31,14 +61,38 @@
                 "name": "Swarm Priest",
                 "cost": 240,
                 "options": [
-                    "Wizard Adept",
-                    "Witchcraft",
-                    "Evil Eye",
-                    "Soured Luck",
-                    "Illusory Paths",
-                    "Mimic Cloak",
-                    "Light Troops",
-                    "Caelysian Pantheon"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Witchcraft",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Evil Eye",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soured Luck",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Caelysian Pantheon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -47,11 +101,26 @@
                 "name": "House Prefect",
                 "cost": 150,
                 "options": [
-                    "Tarina's Lyre",
-                    "Giant Slayer",
-                    "Captain and Attached",
-                    "Fetthis Fleshmaster",
-                    "Praetorian Brute"
+                    {
+                        "name": "Tarina's Lyre",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Fetthis Fleshmaster",
+                        "type": "house"
+                    },
+                    {
+                        "name": "Praetorian Brute",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -74,9 +143,18 @@
                 "name": "Vermin Legionaries",
                 "cost": 457,
                 "options": [
-                    "Standard Bearer",
-                    "Sheltering Standard",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 56,
@@ -86,9 +164,18 @@
                 "name": "Vermin Legionaries",
                 "cost": 450,
                 "options": [
-                    "Standard Bearer",
-                    "Sheltering Standard",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 55,
@@ -122,7 +209,10 @@
                 "name": "Vermin Artillery",
                 "cost": 195,
                 "options": [
-                    "Rakachit Mauss Rifle"
+                    {
+                        "name": "Rakachit Mauss Rifle",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -131,7 +221,10 @@
                 "name": "Vermin Artillery",
                 "cost": 195,
                 "options": [
-                    "Rakachit Mauss Rifle"
+                    {
+                        "name": "Rakachit Mauss Rifle",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -165,15 +258,42 @@
                 "name": "Necromancer",
                 "cost": 530,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Lich",
-                    "Alchemy",
-                    "Molten Copper",
-                    "Living Steel",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Necromantic Staff"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -182,14 +302,38 @@
                 "name": "Vampire Count",
                 "cost": 475,
                 "options": [
-                    "Light Troops",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Lahmia",
-                    "Commandment",
-                    "Wizard Apprentice",
-                    "Destiny's Call",
-                    "Great Weapon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -198,12 +342,30 @@
                 "name": "Vampire Courtier",
                 "cost": 450,
                 "options": [
-                    "Monstrous Revenant",
-                    "Eldritch Inscriptions",
-                    "Talisman of Shielding",
-                    "Vetala",
-                    "Monster Hunter",
-                    "Lance"
+                    {
+                        "name": "Monstrous Revenant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Monster Hunter",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -212,10 +374,22 @@
                 "name": "Barrow King",
                 "cost": 135,
                 "options": [
-                    "Light Troops",
-                    "Hypnotic Pendant",
-                    "Great Weapon",
-                    "General"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -224,10 +398,22 @@
                 "name": "Skeletons",
                 "cost": 481,
                 "options": [
-                    "Halberd",
-                    "Sheltering Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 49,
@@ -253,7 +439,10 @@
                 "name": "Zombies",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -263,10 +452,22 @@
                 "name": "Barrow Guard",
                 "cost": 489,
                 "options": [
-                    "Great Weapon",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -291,7 +492,10 @@
                 "name": "Vampire Knights",
                 "cost": 295,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,

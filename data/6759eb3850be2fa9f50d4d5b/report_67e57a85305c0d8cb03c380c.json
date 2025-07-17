@@ -13,12 +13,30 @@
                 "name": "Shaman",
                 "cost": 375,
                 "options": [
-                    "General",
-                    "Trusted Adviser",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Rod of Battle",
-                    "Gut Roarer"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,10 +45,22 @@
                 "name": "Mammoth Hunter",
                 "cost": 230,
                 "options": [
-                    "Iron Fist",
-                    "Light Troops",
-                    "Scout and Vanguard",
-                    "Hunting Spear"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Scout and Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -39,10 +69,22 @@
                 "name": "Mammoth Hunter",
                 "cost": 230,
                 "options": [
-                    "Iron Fist",
-                    "Light Troops",
-                    "Scout and Vanguard",
-                    "Hunting Spear"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Scout and Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Hunting Spear",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -51,8 +93,14 @@
                 "name": "Bruisers",
                 "cost": 495,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -62,7 +110,10 @@
                 "name": "Tribesmen",
                 "cost": 170,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -88,8 +139,14 @@
                 "name": "Mercenary Gunners",
                 "cost": 480,
                 "options": [
-                    "Standard Bearer",
-                    "Ogre Crossbow and Accurate"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -99,8 +156,14 @@
                 "name": "Mercenary Gunners",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer",
-                    "Brace of Ogre Pistols and Lethal Strike"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Brace of Ogre Pistols and Lethal Strike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -131,7 +194,10 @@
                 "name": "Frost Mammoth",
                 "cost": 400,
                 "options": [
-                    "Ogre Crossbow"
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -150,13 +216,34 @@
                 "name": "Chosen Lord",
                 "cost": 510,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Warding of Unity",
-                    "Sigil of Protection",
-                    "Burning Portent",
-                    "Gluttony",
-                    "Dark Prelate"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Burning Portent",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Dark Prelate",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -165,13 +252,34 @@
                 "name": "Chosen Lord",
                 "cost": 495,
                 "options": [
-                    "Light Troops",
-                    "Destiny's Call",
-                    "Supernatural Dexterity",
-                    "Great Weapon",
-                    "Rod of Battle",
-                    "Lust",
-                    "Daemonic Wings"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Daemonic Wings",
+                        "type": "darkGodGift"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -180,10 +288,22 @@
                 "name": "Warriors",
                 "cost": 574,
                 "options": [
-                    "Spiked Shield",
-                    "Zealots' Banner",
-                    "Gluttony",
-                    "Standard Bearer"
+                    {
+                        "name": "Spiked Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -193,9 +313,18 @@
                 "name": "Warriors",
                 "cost": 230,
                 "options": [
-                    "Paired Weapons",
-                    "Lust",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Lust",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -205,8 +334,14 @@
                 "name": "Chosen",
                 "cost": 590,
                 "options": [
-                    "Greed",
-                    "Standard Bearer"
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -216,7 +351,10 @@
                 "name": "Marauding Giant",
                 "cost": 320,
                 "options": [
-                    "Tribal Warspear"
+                    {
+                        "name": "Tribal Warspear",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -225,7 +363,10 @@
                 "name": "Marauding Giant",
                 "cost": 320,
                 "options": [
-                    "Tribal Warspear"
+                    {
+                        "name": "Tribal Warspear",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -234,9 +375,18 @@
                 "name": "Forsworn",
                 "cost": 260,
                 "options": [
-                    "Icon of the Infinite",
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Icon of the Infinite",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -246,9 +396,18 @@
                 "name": "Forsworn",
                 "cost": 260,
                 "options": [
-                    "Icon of the Infinite",
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Icon of the Infinite",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -258,7 +417,10 @@
                 "name": "Warrior Chariot",
                 "cost": 220,
                 "options": [
-                    "Greed"
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -267,7 +429,10 @@
                 "name": "Warrior Chariot",
                 "cost": 220,
                 "options": [
-                    "Greed"
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"

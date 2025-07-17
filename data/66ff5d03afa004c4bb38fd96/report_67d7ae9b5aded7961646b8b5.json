@@ -13,13 +13,34 @@
                 "name": "Paladin",
                 "cost": 320,
                 "options": [
-                    "Glory Hunter",
-                    "Light Troops",
-                    "King Slayer",
-                    "Bastard Sword",
-                    "Ghostly Guard",
-                    "Fortress of Faith",
-                    "Sacred Chalice"
+                    {
+                        "name": "Glory Hunter",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Fortress of Faith",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sacred Chalice",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,14 +49,38 @@
                 "name": "Folk Hero",
                 "cost": 255,
                 "options": [
-                    "Light Troops",
-                    "Longbow with Shots 3",
-                    "Attached",
-                    "Quin",
-                    "Witchcraft",
-                    "Evil Eye",
-                    "Soured Luck",
-                    "Cauldron's Curse"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow with Shots 3",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Quin",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Witchcraft",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Evil Eye",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soured Luck",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cauldron's Curse",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -44,14 +89,38 @@
                 "name": "Folk Hero",
                 "cost": 240,
                 "options": [
-                    "Light Troops",
-                    "Giant Slayer",
-                    "Destiny's Call",
-                    "Attached",
-                    "Bannerman",
-                    "Minstrel",
-                    "Divination",
-                    "Foresight"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Minstrel",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -60,9 +129,18 @@
                 "name": "Lowborn Levies",
                 "cost": 450,
                 "options": [
-                    "Spear and Shield",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 50,
@@ -72,10 +150,22 @@
                 "name": "Mounted Serjeants",
                 "cost": 405,
                 "options": [
-                    "Light Lance",
-                    "Relic Shroud",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Relic Shroud",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -85,8 +175,14 @@
                 "name": "Lowborn Archers",
                 "cost": 247,
                 "options": [
-                    "Longbow",
-                    "Prepared Position"
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Prepared Position",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -96,10 +192,22 @@
                 "name": "Men-at-Arms",
                 "cost": 445,
                 "options": [
-                    "Banner of Roland",
-                    "Musician",
-                    "Standard Bearer",
-                    "Ordo Wardens"
+                    {
+                        "name": "Banner of Roland",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ordo Wardens",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -109,8 +217,14 @@
                 "name": "Sky Heralds",
                 "cost": 325,
                 "options": [
-                    "Light Lance",
-                    "Standard Bearer"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -120,9 +234,18 @@
                 "name": "Yeoman Outriders",
                 "cost": 228,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Bow"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -132,8 +255,14 @@
                 "name": "Enlisted Outlaws",
                 "cost": 180,
                 "options": [
-                    "Longbow",
-                    "Hooded Men"
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Hooded Men",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -143,8 +272,14 @@
                 "name": "Enlisted Outlaws",
                 "cost": 180,
                 "options": [
-                    "Longbow",
-                    "Hooded Men"
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Hooded Men",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -168,7 +303,10 @@
                 "name": "Siege Weapon",
                 "cost": 180,
                 "options": [
-                    "Trebuchet and change its Height to 3"
+                    {
+                        "name": "Trebuchet and change its Height to 3",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -177,7 +315,10 @@
                 "name": "Siege Weapon",
                 "cost": 180,
                 "options": [
-                    "Trebuchet and change its Height to 3"
+                    {
+                        "name": "Trebuchet and change its Height to 3",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -196,11 +337,26 @@
                 "name": "Orc Warlord",
                 "cost": 430,
                 "options": [
-                    "General",
-                    "Grunter",
-                    "Death Cheater",
-                    "King Slayer",
-                    "Lance"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Grunter",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -209,14 +365,38 @@
                 "name": "Orc Shaman",
                 "cost": 320,
                 "options": [
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Magical Heirloom",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Magical Heirloom",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -225,13 +405,34 @@
                 "name": "Goblin Witch",
                 "cost": 310,
                 "options": [
-                    "Light Troops",
-                    "Mimic Cloak",
-                    "Wizard Adept",
-                    "Pyromancy",
-                    "Flaming Swords",
-                    "Dragon's Roar",
-                    "Pyroclastic Flow"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Dragon's Roar",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -240,11 +441,26 @@
                 "name": "Brood Alpha",
                 "cost": 255,
                 "options": [
-                    "Grunter",
-                    "Tazrek's Guard",
-                    "Great Weapon",
-                    "Mask of Mindless Violence",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Grunter",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Tazrek's Guard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mask of Mindless Violence",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -253,8 +469,14 @@
                 "name": "Veteran Orc Marauders",
                 "cost": 434,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 13,
@@ -264,8 +486,14 @@
                 "name": "Goblin Rabble",
                 "cost": 328,
                 "options": [
-                    "Standard Bearer",
-                    "Poisoned Spear and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Poisoned Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 39,
@@ -275,7 +503,10 @@
                 "name": "Goblin Reavers",
                 "cost": 176,
                 "options": [
-                    "Bow and Spies"
+                    {
+                        "name": "Bow and Spies",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -285,7 +516,10 @@
                 "name": "Goblin Reavers",
                 "cost": 176,
                 "options": [
-                    "Bow and Spies"
+                    {
+                        "name": "Bow and Spies",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -295,7 +529,10 @@
                 "name": "Iron Orcs",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -305,9 +542,18 @@
                 "name": "Veteran Orcs",
                 "cost": 445,
                 "options": [
-                    "Paired Weapons",
-                    "Headbashers",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Headbashers",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -324,7 +570,10 @@
                 "name": "Trolls",
                 "cost": 185,
                 "options": [
-                    "Bridge Troll"
+                    {
+                        "name": "Bridge Troll",
+                        "type": "trollRace"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -334,7 +583,10 @@
                 "name": "Trolls",
                 "cost": 185,
                 "options": [
-                    "Bridge Troll"
+                    {
+                        "name": "Bridge Troll",
+                        "type": "trollRace"
+                    }
                 ],
                 "index": 1,
                 "models": 3,

@@ -13,11 +13,26 @@
                 "name": "Pharaoh",
                 "cost": 685,
                 "options": [
-                    "General",
-                    "Sha Guardian",
-                    "Vorpal Binding",
-                    "Great Weapon",
-                    "Talisman of the Void"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Sha Guardian",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Vorpal Binding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,15 +41,42 @@
                 "name": "Death Cult Hierarch",
                 "cost": 545,
                 "options": [
-                    "Ark of Ages",
-                    "Wizard Master",
-                    "Divination",
-                    "Chance of Redemption",
-                    "The Stars Align",
-                    "Fate's Judgement",
-                    "Augury of Despair",
-                    "Inescapable Doom",
-                    "Soul Conduit"
+                    {
+                        "name": "Ark of Ages",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Fate's Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Augury of Despair",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Inescapable Doom",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Conduit",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -43,12 +85,30 @@
                 "name": "Nomarch",
                 "cost": 230,
                 "options": [
-                    "Shield",
-                    "Basalt Infusion",
-                    "Lance",
-                    "Captain and Attached",
-                    "Deathless Noble",
-                    "Amuut"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Deathless Noble",
+                        "type": "occupation"
+                    },
+                    {
+                        "name": "Amuut",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -57,9 +117,18 @@
                 "name": "Nomarch",
                 "cost": 140,
                 "options": [
-                    "Light Troops",
-                    "Captain and Attached",
-                    "Tomb Architect"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Tomb Architect",
+                        "type": "occupation"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -68,9 +137,18 @@
                 "name": "Skeleton Warriors",
                 "cost": 342,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 39,
@@ -80,8 +158,14 @@
                 "name": "Skeleton Archers",
                 "cost": 195,
                 "options": [
-                    "Standard Bearer",
-                    "Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -91,8 +175,14 @@
                 "name": "Skeleton Archers",
                 "cost": 179,
                 "options": [
-                    "Standard Bearer",
-                    "Bow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 18,
@@ -118,8 +208,14 @@
                 "name": "Tomb Cataphracts",
                 "cost": 520,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -153,19 +249,58 @@
                 "name": "Anurarch Archmage",
                 "cost": 705,
                 "options": [
-                    "Recruiting Officer",
-                    "Trusted Adviser",
-                    "Light Troops and Closely Guarded",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Danse Macabre",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Soul Blight",
-                    "Talisman of the Void",
-                    "Stampede Resonator Crystal",
-                    "Eternal Mastery",
-                    "Mystifying Mastery"
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Stampede Resonator Crystal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Eternal Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Mystifying Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -174,12 +309,30 @@
                 "name": "Tegu Warriors",
                 "cost": 520,
                 "options": [
-                    "Spear",
-                    "Wizard Conclave",
-                    "Awaken the Beast",
-                    "Musician",
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -189,8 +342,14 @@
                 "name": "Tegu Warriors",
                 "cost": 255,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 16,
@@ -200,10 +359,22 @@
                 "name": "Skink Hunters",
                 "cost": 232,
                 "options": [
-                    "Entwining Roots",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Magnetic Short Bow"
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -213,9 +384,18 @@
                 "name": "Caiman Elders",
                 "cost": 405,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Koru Stone"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -225,9 +405,18 @@
                 "name": "Raptor Riders",
                 "cost": 390,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -237,7 +426,10 @@
                 "name": "Weapon Beasts",
                 "cost": 355,
                 "options": [
-                    "Spearback"
+                    {
+                        "name": "Spearback",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -247,7 +439,10 @@
                 "name": "Rhamphodon Riders",
                 "cost": 285,
                 "options": [
-                    "Musician"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -257,8 +452,14 @@
                 "name": "Pteradon Riders",
                 "cost": 250,
                 "options": [
-                    "Musician",
-                    "Poisoned Javelin"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -268,7 +469,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 225,
                 "options": [
-                    "Magnetic Great Bow"
+                    {
+                        "name": "Magnetic Great Bow",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -278,8 +482,14 @@
                 "name": "Carnosaur",
                 "cost": 375,
                 "options": [
-                    "Halberd",
-                    "Hunt Leader"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hunt Leader",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"

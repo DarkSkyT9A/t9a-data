@@ -13,17 +13,50 @@
                 "name": "Miser of Sugulag",
                 "cost": 860,
                 "options": [
-                    "Recruiting Officer",
-                    "General",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Unnatural Roots",
-                    "Segmented Shell"
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,8 +65,14 @@
                 "name": "Lemures",
                 "cost": 467,
                 "options": [
-                    "Golden Helm",
-                    "Standard Bearer"
+                    {
+                        "name": "Golden Helm",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -43,9 +82,18 @@
                 "name": "Imps",
                 "cost": 295,
                 "options": [
-                    "Standard Bearer",
-                    "Sorcerous Antennae",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Sorcerous Antennae",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -55,8 +103,14 @@
                 "name": "Succubi",
                 "cost": 250,
                 "options": [
-                    "Standard Bearer",
-                    "Mesmerising Plumage"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Mesmerising Plumage",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -66,11 +120,26 @@
                 "name": "Hoarders",
                 "cost": 657,
                 "options": [
-                    "Smothering Coils",
-                    "Clinging Ichor",
-                    "Standard Bearer",
-                    "Fresh Meat",
-                    "Favoured of Greed"
+                    {
+                        "name": "Smothering Coils",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Clinging Ichor",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Fresh Meat",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Favoured of Greed",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -80,7 +149,10 @@
                 "name": "Threshing Engine",
                 "cost": 460,
                 "options": [
-                    "Whipcrack Tail"
+                    {
+                        "name": "Whipcrack Tail",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -90,7 +162,10 @@
                 "name": "Threshing Engine",
                 "cost": 460,
                 "options": [
-                    "Whipcrack Tail"
+                    {
+                        "name": "Whipcrack Tail",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -100,8 +175,14 @@
                 "name": "Bloat Flies",
                 "cost": 550,
                 "options": [
-                    "Standard Bearer",
-                    "Unhinging Jaw"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -121,14 +202,38 @@
                 "name": "Commander",
                 "cost": 550,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Fleet Officer",
-                    "Griffon",
-                    "Longbow",
-                    "Dragonforged Armour",
-                    "Destiny's Call",
-                    "Touch of Greatness",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Fleet Officer",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -137,18 +242,54 @@
                 "name": "Mage",
                 "cost": 520,
                 "options": [
-                    "General",
-                    "Living Steel",
-                    "Light Troops",
-                    "Mimic Cloak",
-                    "Scroll of Power",
-                    "Order of the Fiery Heart",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Corruption of Tin",
-                    "Molten Copper",
-                    "Word of Iron",
-                    "Quicksilver Lash"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Order of the Fiery Heart",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -157,9 +298,18 @@
                 "name": "Sea Guard",
                 "cost": 570,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -169,8 +319,14 @@
                 "name": "Sea Guard",
                 "cost": 434,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 23,
@@ -180,7 +336,10 @@
                 "name": "Lion Guard",
                 "cost": 450,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -190,8 +349,14 @@
                 "name": "Phoenix",
                 "cost": 440,
                 "options": [
-                    "Fire Phoenix",
-                    "Warden's Bond"
+                    {
+                        "name": "Fire Phoenix",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warden's Bond",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -221,7 +386,10 @@
                 "name": "Sword Masters",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,

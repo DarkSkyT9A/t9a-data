@@ -13,13 +13,34 @@
                 "name": "Necromancer",
                 "cost": 580,
                 "options": [
-                    "General and The Dead Arise",
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Lich",
-                    "Evocation",
-                    "Necromantic Staff"
+                    {
+                        "name": "General and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,17 +49,50 @@
                 "name": "Vampire Courtier",
                 "cost": 445,
                 "options": [
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Evocation",
-                    "Touch of Greatness",
-                    "Mask of Mindless Violence",
-                    "Battle Standard Bearer",
-                    "Strigoi",
-                    "Bestial Bulk",
-                    "Wizard Apprentice",
-                    "Paired Weapons",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Mask of Mindless Violence",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Strigoi",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Bestial Bulk",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -68,10 +122,22 @@
                 "name": "Skeletons",
                 "cost": 400,
                 "options": [
-                    "Banner of Eldritch Might",
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Banner of Eldritch Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -81,10 +147,22 @@
                 "name": "Skeletons",
                 "cost": 380,
                 "options": [
-                    "Shield",
-                    "Sheltering Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 40,
@@ -94,8 +172,14 @@
                 "name": "Zombies",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 32,
@@ -105,7 +189,10 @@
                 "name": "Ghasts",
                 "cost": 500,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -115,7 +202,10 @@
                 "name": "Ghasts",
                 "cost": 420,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -158,10 +248,22 @@
                 "name": "Greybeards",
                 "cost": 510,
                 "options": [
-                    "Shield Wall",
-                    "Standard Bearer",
-                    "Runic Standard of Wisdom",
-                    "Rune of Resilience"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of Wisdom",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -171,10 +273,22 @@
                 "name": "Greybeards",
                 "cost": 510,
                 "options": [
-                    "Shield Wall",
-                    "Standard Bearer",
-                    "Runic Standard of Wisdom",
-                    "Rune of Gleaming"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of Wisdom",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 1,
                 "models": 25,
@@ -184,7 +298,10 @@
                 "name": "Steam Copters",
                 "cost": 390,
                 "options": [
-                    "Shrapnel Bombs"
+                    {
+                        "name": "Shrapnel Bombs",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -194,9 +311,18 @@
                 "name": "Rangers",
                 "cost": 292,
                 "options": [
-                    "Crag Warden",
-                    "Crossbow",
-                    "Paired Weapons"
+                    {
+                        "name": "Crag Warden",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -206,9 +332,18 @@
                 "name": "Rangers",
                 "cost": 292,
                 "options": [
-                    "Crag Warden",
-                    "Crossbow",
-                    "Paired Weapons"
+                    {
+                        "name": "Crag Warden",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 14,
@@ -218,10 +353,22 @@
                 "name": "Field Artillery",
                 "cost": 285,
                 "options": [
-                    "Rune Crafted",
-                    "Rune Crafted",
-                    "Dwarf Cannon",
-                    "Rune Crafted towards Height 5)"
+                    {
+                        "name": "Rune Crafted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune Crafted",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    },
+                    {
+                        "name": "Rune Crafted towards Height 5)",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -230,8 +377,14 @@
                 "name": "Field Artillery",
                 "cost": 285,
                 "options": [
-                    "Dwarf Cannon",
-                    "Rune Crafted towards Height 5)"
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    },
+                    {
+                        "name": "Rune Crafted towards Height 5)",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -240,7 +393,10 @@
                 "name": "Field Artillery",
                 "cost": 115,
                 "options": [
-                    "Dwarf Ballista"
+                    {
+                        "name": "Dwarf Ballista",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Special"
@@ -249,7 +405,10 @@
                 "name": "Field Artillery",
                 "cost": 115,
                 "options": [
-                    "Dwarf Ballista"
+                    {
+                        "name": "Dwarf Ballista",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 3,
                 "category": "Special"
@@ -272,7 +431,10 @@
                 "name": "Forge Wardens",
                 "cost": 246,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -282,9 +444,18 @@
                 "name": "Miners",
                 "cost": 200,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Paired Weapons"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,

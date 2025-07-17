@@ -13,17 +13,50 @@
                 "name": "Anurarch Archmage",
                 "cost": 650,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Divination",
-                    "Foresight",
-                    "Chance of Redemption",
-                    "The Stars Align",
-                    "Fate's Judgement",
-                    "Inescapable Doom",
-                    "Obsidian Rock",
-                    "Potion of Power Preservation",
-                    "Eternal Mastery",
-                    "Mystifying Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Fate's Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Inescapable Doom",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Power Preservation",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eternal Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Mystifying Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,13 +65,34 @@
                 "name": "Skink Veteran",
                 "cost": 215,
                 "options": [
-                    "Druidism",
-                    "Fountain of Youth",
-                    "Talisman of the Void",
-                    "Light Troops and Strider",
-                    "Enclave Wizard",
-                    "Magnetic Short Bow",
-                    "Alchemical Arrows"
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Enclave Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Alchemical Arrows",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -47,11 +101,26 @@
                 "name": "Skink Veteran",
                 "cost": 190,
                 "options": [
-                    "Dragon's Brew",
-                    "Mountain Pteradon",
-                    "Shield",
-                    "Poisoned Javelin",
-                    "Light Lance"
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Mountain Pteradon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -60,10 +129,22 @@
                 "name": "Skink Veteran",
                 "cost": 165,
                 "options": [
-                    "Imbued Jade",
-                    "Light Troops and Strider",
-                    "Shield",
-                    "Poisoned Javelin"
+                    {
+                        "name": "Imbued Jade",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -72,12 +153,30 @@
                 "name": "Skink Veteran",
                 "cost": 130,
                 "options": [
-                    "Touch of Greatness",
-                    "Serpent's Nest Charm",
-                    "Light Troops and Strider",
-                    "Shield",
-                    "Wild Warding",
-                    "Poisoned Javelin"
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Serpent's Nest Charm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 3,
                 "category": "Characters"
@@ -86,7 +185,10 @@
                 "name": "Caiman Warriors",
                 "cost": 344,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -96,9 +198,18 @@
                 "name": "Skink Warriors",
                 "cost": 297,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -108,9 +219,18 @@
                 "name": "Skink Warriors",
                 "cost": 297,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 31,
@@ -120,7 +240,10 @@
                 "name": "Skink Hunters",
                 "cost": 246,
                 "options": [
-                    "Magnetic Short Bow"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -130,8 +253,14 @@
                 "name": "Tegu Guards",
                 "cost": 530,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -141,8 +270,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 232,
                 "options": [
-                    "Blowpipe",
-                    "Vanguard"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -152,7 +287,10 @@
                 "name": "Weapon Beasts",
                 "cost": 210,
                 "options": [
-                    "Salamander"
+                    {
+                        "name": "Salamander",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -162,7 +300,10 @@
                 "name": "Taurosaur",
                 "cost": 490,
                 "options": [
-                    "Monolith of Vitalism"
+                    {
+                        "name": "Monolith of Vitalism",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"
@@ -181,16 +322,46 @@
                 "name": "Wildhorn Lord",
                 "cost": 480,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Glory Hunter",
-                    "Light Troops",
-                    "Shield",
-                    "Trickster's Cunning",
-                    "King Slayer",
-                    "Beast Axe",
-                    "Talisman of Shielding",
-                    "Potion of Healing"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Glory Hunter",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Trickster's Cunning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Beast Axe",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Healing",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -199,14 +370,38 @@
                 "name": "Soothsayer",
                 "cost": 360,
                 "options": [
-                    "Light Troops",
-                    "Warding of Unity",
-                    "Ancestral Carvings",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Savage Fury",
-                    "Awaken the Beast"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Ancestral Carvings",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -215,12 +410,30 @@
                 "name": "Wildhorn Chieftain",
                 "cost": 235,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Obscuring Fog",
-                    "Wild Form",
-                    "Pillager Icon",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Obscuring Fog",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Form",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Pillager Icon",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -229,9 +442,18 @@
                 "name": "Wildhorn Chieftain",
                 "cost": 70,
                 "options": [
-                    "Light Troops and Ambush",
-                    "Great Weapon",
-                    "Captain and Attached"
+                    {
+                        "name": "Light Troops and Ambush",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -240,9 +462,18 @@
                 "name": "Wildhorn Chieftain",
                 "cost": 70,
                 "options": [
-                    "Light Troops and Ambush",
-                    "Great Weapon",
-                    "Captain and Attached"
+                    {
+                        "name": "Light Troops and Ambush",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -259,11 +490,26 @@
                 "name": "Wildhorn Herd",
                 "cost": 305,
                 "options": [
-                    "Paired Weapons",
-                    "Ambush",
-                    "Banner of the Wild Herd",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of the Wild Herd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -273,11 +519,26 @@
                 "name": "Wildhorn Herd",
                 "cost": 296,
                 "options": [
-                    "Paired Weapons",
-                    "Ambush",
-                    "Banner of the Wild Herd",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of the Wild Herd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 19,
@@ -287,12 +548,30 @@
                 "name": "Longhorn Herd",
                 "cost": 540,
                 "options": [
-                    "Halberd",
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Totem Bearer",
-                    "Gnarled Hide Totem"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Totem Bearer",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gnarled Hide Totem",
+                        "type": "Totems"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -302,12 +581,30 @@
                 "name": "Minotaurs",
                 "cost": 479,
                 "options": [
-                    "Paired Weapons",
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Musician",
-                    "Totem Bearer",
-                    "Black Wing Totem"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Totem Bearer",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Black Wing Totem",
+                        "type": "Totems"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -339,7 +636,10 @@
                 "name": "Beast Giant",
                 "cost": 270,
                 "options": [
-                    "Uprooted Tree"
+                    {
+                        "name": "Uprooted Tree",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "terrors of the wild"

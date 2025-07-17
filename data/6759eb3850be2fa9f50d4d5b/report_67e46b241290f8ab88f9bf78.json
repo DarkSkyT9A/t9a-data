@@ -13,15 +13,42 @@
                 "name": "Forest Prince",
                 "cost": 800,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Trusted Adviser",
-                    "Forest Dragon",
-                    "Sylvan Bow",
-                    "Sylvan Blades",
-                    "Spirit of the Whirlwind",
-                    "Obsidian Rock",
-                    "Binding Scroll"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Forest Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Sylvan Blades",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Spirit of the Whirlwind",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,10 +57,22 @@
                 "name": "Treefather Ancient",
                 "cost": 735,
                 "options": [
-                    "Wizard",
-                    "Wizard Master",
-                    "Druidism",
-                    "Verdant Rebirth"
+                    {
+                        "name": "Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Verdant Rebirth",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,8 +81,14 @@
                 "name": "Forest Guard",
                 "cost": 407,
                 "options": [
-                    "Standard Bearer",
-                    "Rending Banner"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -53,7 +98,10 @@
                 "name": "Dryads",
                 "cost": 345,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -63,7 +111,10 @@
                 "name": "Sylvan Archers",
                 "cost": 250,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -73,8 +124,14 @@
                 "name": "Forest Rangers",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer",
-                    "Vanguard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -84,8 +141,14 @@
                 "name": "Forest Rangers",
                 "cost": 210,
                 "options": [
-                    "Standard Bearer",
-                    "Vanguard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -111,9 +174,18 @@
                 "name": "Briar Maidens",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Wizard Conclave"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -133,11 +205,26 @@
                 "name": "Swarm Priest",
                 "cost": 360,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Witchcraft",
-                    "Favanite Powder",
-                    "Caelysian Pantheon"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Witchcraft",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Favanite Powder",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Caelysian Pantheon",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -146,11 +233,26 @@
                 "name": "Swarm Priest",
                 "cost": 275,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Thaumaturgy",
-                    "Crown of Hubris",
-                    "Cult of Errahman"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Crown of Hubris",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Cult of Errahman",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -159,10 +261,22 @@
                 "name": "Bloodfur Legate",
                 "cost": 260,
                 "options": [
-                    "Light Troops",
-                    "Swarm Master",
-                    "Battle Standard Bearer",
-                    "Wild Warding"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Swarm Master",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -171,9 +285,18 @@
                 "name": "Vermin Senator",
                 "cost": 150,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Light Troops"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -196,8 +319,14 @@
                 "name": "Blackfur Veterans",
                 "cost": 449,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 39,
@@ -207,9 +336,18 @@
                 "name": "Vermin Legionaries",
                 "cost": 329,
                 "options": [
-                    "Spear",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 42,
@@ -219,8 +357,14 @@
                 "name": "Vermin Legionaries",
                 "cost": 210,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 25,
@@ -230,8 +374,14 @@
                 "name": "Vermin Slaves",
                 "cost": 211,
                 "options": [
-                    "Musician",
-                    "Tunnel Digger"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Tunnel Digger",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 37,
@@ -241,10 +391,22 @@
                 "name": "Thunder Brutes",
                 "cost": 595,
                 "options": [
-                    "Banner of Courage",
-                    "Musician",
-                    "Standard Bearer",
-                    "Rotary Gun"
+                    {
+                        "name": "Banner of Courage",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Rotary Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -278,8 +440,14 @@
                 "name": "Shadowfur Stalkers",
                 "cost": 150,
                 "options": [
-                    "Pistol",
-                    "Musician"
+                    {
+                        "name": "Pistol",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,

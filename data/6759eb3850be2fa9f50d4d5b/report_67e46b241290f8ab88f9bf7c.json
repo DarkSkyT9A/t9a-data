@@ -13,15 +13,42 @@
                 "name": "Vampire Count",
                 "cost": 825,
                 "options": [
-                    "Vetala",
-                    "Storm Caller",
-                    "Zombie Dragon",
-                    "Wizard Apprentice",
-                    "Paired Weapons",
-                    "Touch of Greatness",
-                    "Necromantic Staff",
-                    "Binding Scroll",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Storm Caller",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Zombie Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Necromantic Staff",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -30,18 +57,54 @@
                 "name": "Vampire Count",
                 "cost": 700,
                 "options": [
-                    "General, Disciplined, and The Dead Arise",
-                    "Sangreal",
-                    "Eternal Duellist",
-                    "Evocation",
-                    "Evocation",
-                    "Skeletal Steed",
-                    "Wizard Apprentice",
-                    "Shield",
-                    "Warding of Unity",
-                    "Reaper's Harvest",
-                    "Night's Crown",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Sangreal",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Eternal Duellist",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Skeletal Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Reaper's Harvest",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Night's Crown",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -50,7 +113,10 @@
                 "name": "Skeletons",
                 "cost": 220,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -60,7 +126,10 @@
                 "name": "Skeletons",
                 "cost": 180,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -70,7 +139,10 @@
                 "name": "Skeletons",
                 "cost": 180,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 20,
@@ -96,8 +168,14 @@
                 "name": "Barrow Knights",
                 "cost": 465,
                 "options": [
-                    "Standard Bearer",
-                    "Flaming Standard"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -107,9 +185,18 @@
                 "name": "Spectral Hunters",
                 "cost": 285,
                 "options": [
-                    "Blood Curse",
-                    "Wizard Conclave",
-                    "Weal and Woe"
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -119,9 +206,18 @@
                 "name": "Wraiths",
                 "cost": 270,
                 "options": [
-                    "Danse Macabre",
-                    "Wizard Conclave",
-                    "Molten Copper"
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -157,17 +253,50 @@
                 "name": "Sorcerer",
                 "cost": 580,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Whispers of the Veil",
-                    "Wizard Master",
-                    "Evocation",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Gladiator's Spirit",
-                    "Veilgate Orb"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gladiator's Spirit",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Veilgate Orb",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -176,10 +305,22 @@
                 "name": "Warriors",
                 "cost": 400,
                 "options": [
-                    "Standard Bearer",
-                    "Zealots' Banner",
-                    "Paired Weapons",
-                    "Pride"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pride",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -189,9 +330,18 @@
                 "name": "Warriors",
                 "cost": 270,
                 "options": [
-                    "Standard Bearer",
-                    "Zealots' Banner",
-                    "Paired Weapons"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -209,8 +359,14 @@
                 "name": "Chosen Knights",
                 "cost": 510,
                 "options": [
-                    "Standard Bearer",
-                    "Pride"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Pride",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -220,8 +376,14 @@
                 "name": "Chosen Knights",
                 "cost": 510,
                 "options": [
-                    "Standard Bearer",
-                    "Pride"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Pride",
+                        "type": "favour"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -231,9 +393,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Standard Bearer",
-                    "Great Weapon",
-                    "Damnation"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -258,8 +429,14 @@
                 "name": "Battleshrine",
                 "cost": 320,
                 "options": [
-                    "Molten Copper",
-                    "Whispers of the Veil"
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

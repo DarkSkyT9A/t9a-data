@@ -13,10 +13,22 @@
                 "name": "Druid",
                 "cost": 325,
                 "options": [
-                    "Sylvan Unicorn",
-                    "Wizard Adept",
-                    "Cosmology",
-                    "Sylvan Bow"
+                    {
+                        "name": "Sylvan Unicorn",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -25,8 +37,14 @@
                 "name": "Thicket Shepherd",
                 "cost": 300,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Scarred Bark"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Scarred Bark",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -35,12 +53,30 @@
                 "name": "Chieftain",
                 "cost": 180,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Sylvan Bow",
-                    "Shield",
-                    "Spear",
-                    "Pathfinder"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Pathfinder",
+                        "type": "kindred"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -49,9 +85,18 @@
                 "name": "Sylvan Archers",
                 "cost": 423,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -61,9 +106,18 @@
                 "name": "Forest Guard",
                 "cost": 320,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -73,8 +127,14 @@
                 "name": "Heath Riders",
                 "cost": 316,
                 "options": [
-                    "Standard Bearer",
-                    "Heath Hunters"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -98,7 +158,10 @@
                 "name": "Thicket Beasts",
                 "cost": 410,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -108,9 +171,18 @@
                 "name": "Kestrel Knights",
                 "cost": 305,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Lance and Shield"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -120,8 +192,14 @@
                 "name": "Kestrel Knights",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer",
-                    "Lance and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Lance and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -131,7 +209,10 @@
                 "name": "Briar Maidens",
                 "cost": 300,
                 "options": [
-                    "Wizard Conclave"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -151,17 +232,50 @@
                 "name": "King",
                 "cost": 570,
                 "options": [
-                    "General",
-                    "Ancient Grudge",
-                    "Glory Hunter",
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Resistance",
-                    "Rune of Iron",
-                    "Rune of Destruction",
-                    "Rune of Might",
-                    "Rune of Shielding",
-                    "Battle Rune"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Ancient Grudge",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Glory Hunter",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Resistance",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Destruction",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Shielding",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Rune",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -170,14 +284,38 @@
                 "name": "Runic Smith",
                 "cost": 405,
                 "options": [
-                    "Shield Wall",
-                    "Rune of Iron",
-                    "Rune of Retribution",
-                    "Rune of Lightning",
-                    "Rune of Channelling",
-                    "Rune of the Courage",
-                    "Rune of Kinship",
-                    "Battle Rune"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Retribution",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Lightning",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Channelling",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of the Courage",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Kinship",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Rune",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -186,14 +324,38 @@
                 "name": "Thane",
                 "cost": 310,
                 "options": [
-                    "Light Troops",
-                    "Shield Wall",
-                    "Rune of Iron",
-                    "Rune of Penetration",
-                    "Rune of Anger",
-                    "Rune of Precision",
-                    "Rune of Kinship",
-                    "Battle Standard Bearer"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Iron",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Penetration",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Anger",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Precision",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Kinship",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -202,10 +364,22 @@
                 "name": "Clan Warriors",
                 "cost": 565,
                 "options": [
-                    "Great Weapon",
-                    "Flaming Standard",
-                    "Vanguard",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 34,
@@ -215,9 +389,18 @@
                 "name": "Greybeards",
                 "cost": 440,
                 "options": [
-                    "Shield Wall",
-                    "Runic Standard of the Hold",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield Wall",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Runic Standard of the Hold",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -227,8 +410,14 @@
                 "name": "King's Guard",
                 "cost": 520,
                 "options": [
-                    "Runic Standard of Grudges",
-                    "Standard Bearer"
+                    {
+                        "name": "Runic Standard of Grudges",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -259,7 +448,10 @@
                 "name": "Steam Copters",
                 "cost": 190,
                 "options": [
-                    "Shrapnel Grenades"
+                    {
+                        "name": "Shrapnel Grenades",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,

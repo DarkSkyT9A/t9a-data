@@ -13,10 +13,22 @@
                 "name": "Dragon Seeker",
                 "cost": 365,
                 "options": [
-                    "Rune of Quickening",
-                    "Rune of Might",
-                    "Rune of Anger",
-                    "Grim Resolve"
+                    {
+                        "name": "Rune of Quickening",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Might",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Anger",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Grim Resolve",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -25,13 +37,34 @@
                 "name": "Runic Smith",
                 "cost": 275,
                 "options": [
-                    "General",
-                    "Shield",
-                    "Rune of Storms",
-                    "Battle Rune",
-                    "Rune of Reckoning",
-                    "Rune of Gleaming",
-                    "Rune of Resilience"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Storms",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Rune",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rune of Reckoning",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Resilience",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -40,9 +73,18 @@
                 "name": "Greybeards",
                 "cost": 490,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -52,10 +94,22 @@
                 "name": "Clan Marksmen",
                 "cost": 255,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -65,10 +119,22 @@
                 "name": "Clan Marksmen",
                 "cost": 255,
                 "options": [
-                    "Shield",
-                    "Standard Bearer",
-                    "Runic Standard of Steadiness",
-                    "Guild-Crafted Handgun"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of Steadiness",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Guild-Crafted Handgun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -78,8 +144,14 @@
                 "name": "Seekers",
                 "cost": 535,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -103,8 +175,14 @@
                 "name": "Anvil of Power",
                 "cost": 180,
                 "options": [
-                    "Rune of Reckoning",
-                    "Rune of Gleaming"
+                    {
+                        "name": "Rune of Reckoning",
+                        "type": "Battle Runes"
+                    },
+                    {
+                        "name": "Rune of Gleaming",
+                        "type": "Battle Runes"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -113,8 +191,14 @@
                 "name": "Forge Wardens",
                 "cost": 240,
                 "options": [
-                    "Standard Bearer",
-                    "Runic Standard of Dismay"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Runic Standard of Dismay",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -124,7 +208,10 @@
                 "name": "Steam Copters",
                 "cost": 185,
                 "options": [
-                    "Shrapnel Grenades"
+                    {
+                        "name": "Shrapnel Grenades",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -134,7 +221,10 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Dwarf Cannon"
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -143,7 +233,10 @@
                 "name": "Field Artillery",
                 "cost": 245,
                 "options": [
-                    "Dwarf Cannon"
+                    {
+                        "name": "Dwarf Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -152,7 +245,10 @@
                 "name": "Field Artillery",
                 "cost": 170,
                 "options": [
-                    "Flame Cannon"
+                    {
+                        "name": "Flame Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Special"
@@ -171,15 +267,42 @@
                 "name": "Sanctioned Warlock",
                 "cost": 480,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Evocation",
-                    "Touch of the Reaper",
-                    "Danse Macabre",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Ceinran's Scales"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ceinran's Scales",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -188,14 +311,38 @@
                 "name": "Temple Exarch",
                 "cost": 345,
                 "options": [
-                    "Supernatural Dexterity",
-                    "Seal of the Republic",
-                    "Talisman of the Void",
-                    "Battle Standard Bearer",
-                    "Wizard Apprentice",
-                    "Alchemy",
-                    "Molten Copper",
-                    "Great Weapon and Elven Finesse"
+                    {
+                        "name": "Supernatural Dexterity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -204,8 +351,14 @@
                 "name": "Silexian Spears",
                 "cost": 380,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -215,7 +368,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 215,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -225,7 +381,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 215,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -235,7 +394,10 @@
                 "name": "Shadow Riders",
                 "cost": 190,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -253,9 +415,18 @@
                 "name": "Temple Militants",
                 "cost": 390,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Dancers of Yema"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Dancers of Yema",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -265,7 +436,10 @@
                 "name": "Divine Altar",
                 "cost": 260,
                 "options": [
-                    "Altar of Tila"
+                    {
+                        "name": "Altar of Tila",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -295,7 +469,10 @@
                 "name": "Gorgons",
                 "cost": 150,
                 "options": [
-                    "Paired Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 1,

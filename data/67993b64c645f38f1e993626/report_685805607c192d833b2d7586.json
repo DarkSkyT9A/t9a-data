@@ -13,9 +13,18 @@
                 "name": "Maw of Akaan",
                 "cost": 650,
                 "options": [
-                    "General",
-                    "Wizard Apprentice",
-                    "Evocation"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -24,9 +33,18 @@
                 "name": "Imps",
                 "cost": 275,
                 "options": [
-                    "Mark of the Eternal Champion",
-                    "Standard Bearer",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Mark of the Eternal Champion",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -36,9 +54,18 @@
                 "name": "Imps",
                 "cost": 275,
                 "options": [
-                    "Mark of the Eternal Champion",
-                    "Standard Bearer",
-                    "Firestarter - Smite the Unbeliever"
+                    {
+                        "name": "Mark of the Eternal Champion",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Firestarter - Smite the Unbeliever",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -48,7 +75,10 @@
                 "name": "Succubi",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -58,7 +88,10 @@
                 "name": "Succubi",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -68,7 +101,10 @@
                 "name": "Hoarders",
                 "cost": 520,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -78,7 +114,10 @@
                 "name": "Clawed Fiends",
                 "cost": 240,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -88,7 +127,10 @@
                 "name": "Clawed Fiends",
                 "cost": 240,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -98,7 +140,10 @@
                 "name": "Clawed Fiends",
                 "cost": 240,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 3,
@@ -108,7 +153,10 @@
                 "name": "Titanslayer Chariot",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -117,7 +165,10 @@
                 "name": "Titanslayer Chariot",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -126,7 +177,10 @@
                 "name": "Threshing Engine",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -136,7 +190,10 @@
                 "name": "Threshing Engine",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 1,
@@ -146,7 +203,10 @@
                 "name": "Threshing Engine",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 1,
@@ -156,7 +216,10 @@
                 "name": "Threshing Engine",
                 "cost": 160,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 3,
                 "models": 1,
@@ -176,15 +239,42 @@
                 "name": "Battlefield Wizard",
                 "cost": 450,
                 "options": [
-                    "Light Troops",
-                    "The Stars Align",
-                    "Wizard Master",
-                    "Divination",
-                    "Chance of Redemption",
-                    "Fate's Judgement",
-                    "Augury of Despair",
-                    "Inescapable Doom",
-                    "Talisman of the Void"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Fate's Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Augury of Despair",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Inescapable Doom",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -193,8 +283,14 @@
                 "name": "Prelate",
                 "cost": 390,
                 "options": [
-                    "Altar of Battle",
-                    "Great Weapon"
+                    {
+                        "name": "Altar of Battle",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -203,11 +299,26 @@
                 "name": "Marshal",
                 "cost": 335,
                 "options": [
-                    "Great Griffon",
-                    "Winter Cloak",
-                    "Great Weapon",
-                    "Battle Standard Bearer and Imperial Authority",
-                    "Repeater Pistol"
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Winter Cloak",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Imperial Authority",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Repeater Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -216,11 +327,26 @@
                 "name": "Marshal",
                 "cost": 220,
                 "options": [
-                    "Battleline Hero",
-                    "Light Troops",
-                    "Imperial Seal",
-                    "Great Weapon",
-                    "General, Imperial Authority, and +1 Cou"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Imperial Seal",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "General, Imperial Authority, and +1 Cou",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -229,8 +355,14 @@
                 "name": "Artificer",
                 "cost": 90,
                 "options": [
-                    "Light Troops",
-                    "Repeater Gun"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Repeater Gun",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -239,9 +371,18 @@
                 "name": "State Infantry",
                 "cost": 500,
                 "options": [
-                    "Halberd",
-                    "Rending Banner",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rending Banner",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 43,
@@ -251,9 +392,18 @@
                 "name": "State Marksmen",
                 "cost": 310,
                 "options": [
-                    "Marksman's Pennant",
-                    "Standard Bearer",
-                    "Crossbow"
+                    {
+                        "name": "Marksman's Pennant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -263,7 +413,10 @@
                 "name": "State Detachment",
                 "cost": 145,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -273,7 +426,10 @@
                 "name": "State Detachment",
                 "cost": 145,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -283,8 +439,14 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 400,
                 "options": [
-                    "Lance",
-                    "Standard Bearer"
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -294,7 +456,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

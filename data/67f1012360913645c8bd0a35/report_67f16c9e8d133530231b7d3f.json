@@ -13,11 +13,26 @@
                 "name": "Courtesan of Cibaresh",
                 "cost": 705,
                 "options": [
-                    "Wizard Apprentice",
-                    "Divination",
-                    "Foresight",
-                    "Trampling Hooves",
-                    "Kaleidoscopic Flesh"
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Trampling Hooves",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Kaleidoscopic Flesh",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,14 +41,38 @@
                 "name": "Omen of Savar",
                 "cost": 490,
                 "options": [
-                    "Battleline Hero",
-                    "General",
-                    "Wizard Apprentice",
-                    "Divination",
-                    "Foresight",
-                    "Hammer Hand",
-                    "Bronze Backbone",
-                    "Guiding Bronze Backbone"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hammer Hand",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Bronze Backbone",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Guiding Bronze Backbone",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,10 +81,22 @@
                 "name": "Kuulima's Deceiver",
                 "cost": 400,
                 "options": [
-                    "Hammer Hand",
-                    "Smite the Unbeliever",
-                    "Protean Magic [2]",
-                    "Whispers of the Veil"
+                    {
+                        "name": "Hammer Hand",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Protean Magic [2]",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -54,9 +105,18 @@
                 "name": "Succubi",
                 "cost": 522,
                 "options": [
-                    "Torporous Tendrils",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Torporous Tendrils",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -66,9 +126,18 @@
                 "name": "Myrmidons",
                 "cost": 480,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Unhinging Jaw"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -78,9 +147,18 @@
                 "name": "Brazen Beasts",
                 "cost": 520,
                 "options": [
-                    "Standard Bearer",
-                    "Musician",
-                    "Whipcrack Tail"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Whipcrack Tail",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -90,8 +168,14 @@
                 "name": "Blazing Glory",
                 "cost": 375,
                 "options": [
-                    "Horns of Hubris",
-                    "Fly"
+                    {
+                        "name": "Horns of Hubris",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Fly",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -100,7 +184,10 @@
                 "name": "Hellhounds",
                 "cost": 324,
                 "options": [
-                    "Digestive Vomit"
+                    {
+                        "name": "Digestive Vomit",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -110,8 +197,14 @@
                 "name": "Threshing Engine",
                 "cost": 180,
                 "options": [
-                    "Standard Bearer",
-                    "Fly"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Fly",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -131,17 +224,50 @@
                 "name": "Miser of Sugulag",
                 "cost": 860,
                 "options": [
-                    "Recruiting Officer",
-                    "General",
-                    "Wizard Master",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Chorus of the Damned",
-                    "Touch of the Reaper",
-                    "Spectral Blades",
-                    "Soul Blight",
-                    "Mirrored Scales",
-                    "Segmented Shell"
+                    {
+                        "name": "Recruiting Officer",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chorus of the Damned",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Touch of the Reaper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Spectral Blades",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Soul Blight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Segmented Shell",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -150,11 +276,26 @@
                 "name": "Maw of Akaan",
                 "cost": 730,
                 "options": [
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Hammer Hand",
-                    "Mirrored Scales",
-                    "Wizard Apprentice"
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Hammer Hand",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -163,8 +304,14 @@
                 "name": "Lemures",
                 "cost": 350,
                 "options": [
-                    "Unnatural Roots",
-                    "Standard Bearer"
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -174,8 +321,14 @@
                 "name": "Lemures",
                 "cost": 350,
                 "options": [
-                    "Unnatural Roots",
-                    "Standard Bearer"
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -185,8 +338,14 @@
                 "name": "Lemures",
                 "cost": 350,
                 "options": [
-                    "Unnatural Roots",
-                    "Standard Bearer"
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 15,
@@ -196,11 +355,26 @@
                 "name": "Hoarders",
                 "cost": 729,
                 "options": [
-                    "Mirrored Scales",
-                    "Smothering Coils",
-                    "Standard Bearer",
-                    "Fresh Meat",
-                    "Favoured of Greed"
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Smothering Coils",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Fresh Meat",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Favoured of Greed",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -210,9 +384,18 @@
                 "name": "Threshing Engine",
                 "cost": 375,
                 "options": [
-                    "Standard Bearer",
-                    "Legion Thresher",
-                    "Whipcrack Tail"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Legion Thresher",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Whipcrack Tail",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 1,
@@ -222,7 +405,10 @@
                 "name": "Hellhounds",
                 "cost": 249,
                 "options": [
-                    "Hot Blood"
+                    {
+                        "name": "Hot Blood",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 9,

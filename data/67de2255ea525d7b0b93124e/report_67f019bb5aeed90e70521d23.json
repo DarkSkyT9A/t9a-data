@@ -13,18 +13,54 @@
                 "name": "Necromancer",
                 "cost": 625,
                 "options": [
-                    "Monstrous Revenant",
-                    "Great Monstrous Revenant",
-                    "Wizard Master",
-                    "Lich",
-                    "Cosmology",
-                    "Truth of Time",
-                    "Weal and Woe",
-                    "Ice and Fire",
-                    "Cosmic Scales",
-                    "Thunder and Lightning",
-                    "Ghostly Guard",
-                    "Talisman of the Void"
+                    {
+                        "name": "Monstrous Revenant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Monstrous Revenant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Lich",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Cosmology",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Truth of Time",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Weal and Woe",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ice and Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Cosmic Scales",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Thunder and Lightning",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -33,17 +69,50 @@
                 "name": "Vampire Count",
                 "cost": 545,
                 "options": [
-                    "Light Troops",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Warding of Unity",
-                    "Talisman of Shielding",
-                    "General, Disciplined, and The Dead Arise",
-                    "Lahmia",
-                    "Commandment",
-                    "Wizard Apprentice",
-                    "Great Weapon",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "General, Disciplined, and The Dead Arise",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -52,7 +121,10 @@
                 "name": "Banshee",
                 "cost": 160,
                 "options": [
-                    "Sweeping Attack"
+                    {
+                        "name": "Sweeping Attack",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -61,9 +133,18 @@
                 "name": "Barrow King",
                 "cost": 65,
                 "options": [
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Captain"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Captain",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -72,7 +153,10 @@
                 "name": "Ghouls",
                 "cost": 535,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 38,
@@ -82,9 +166,18 @@
                 "name": "Skeletons",
                 "cost": 469,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 53,
@@ -94,9 +187,18 @@
                 "name": "Barrow Guard",
                 "cost": 370,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 22,
@@ -106,7 +208,10 @@
                 "name": "Barrow Knights",
                 "cost": 320,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -124,8 +229,14 @@
                 "name": "Vampire Knights",
                 "cost": 440,
                 "options": [
-                    "Aether Icon",
-                    "Standard Bearer"
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -145,10 +256,22 @@
                 "name": "Paladin",
                 "cost": 340,
                 "options": [
-                    "Light Troops",
-                    "Great Weapon",
-                    "Ghostly Guard",
-                    "Sainted and Gallantry"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sainted and Gallantry",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -157,11 +280,26 @@
                 "name": "Paladin",
                 "cost": 210,
                 "options": [
-                    "Light Troops",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "King Slayer",
-                    "Potion of Swiftness"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Swiftness",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -170,12 +308,30 @@
                 "name": "Duke",
                 "cost": 325,
                 "options": [
-                    "Light Troops",
-                    "Shield Breaker",
-                    "Bastard Sword",
-                    "Wild Warding",
-                    "Battle Standard Bearer",
-                    "Faith"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield Breaker",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Faith",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -184,10 +340,22 @@
                 "name": "Duke",
                 "cost": 255,
                 "options": [
-                    "Light Troops",
-                    "Great Weapon",
-                    "Warding of Unity",
-                    "Justice"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Justice",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -196,11 +364,26 @@
                 "name": "Duke",
                 "cost": 235,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Bastard Sword",
-                    "Sigil of Protection",
-                    "Crown of the Wizard King"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Crown of the Wizard King",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -209,12 +392,30 @@
                 "name": "Folk Hero",
                 "cost": 120,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Attached",
-                    "Minstrel",
-                    "Divination",
-                    "Foresight"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Minstrel",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -223,14 +424,38 @@
                 "name": "Folk Hero",
                 "cost": 115,
                 "options": [
-                    "Trusted Adviser",
-                    "Light Troops",
-                    "Giant Slayer",
-                    "Longbow with Shots 3",
-                    "Attached",
-                    "Minstrel",
-                    "Divination",
-                    "Foresight"
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Giant Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Longbow with Shots 3",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Minstrel",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -239,8 +464,14 @@
                 "name": "Lowborn Levies",
                 "cost": 330,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 34,
@@ -250,8 +481,14 @@
                 "name": "Lowborn Levies",
                 "cost": 262,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 34,
@@ -261,8 +498,14 @@
                 "name": "Lowborn Levies",
                 "cost": 262,
                 "options": [
-                    "Halberd and Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 34,
@@ -272,9 +515,18 @@
                 "name": "Lowborn Archers",
                 "cost": 240,
                 "options": [
-                    "Standard Bearer",
-                    "Crossbow",
-                    "Prepared Position"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Prepared Position",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -284,9 +536,18 @@
                 "name": "Men-at-Arms",
                 "cost": 295,
                 "options": [
-                    "Oriflamme",
-                    "Standard Bearer",
-                    "Ordo Wardens"
+                    {
+                        "name": "Oriflamme",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ordo Wardens",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -296,9 +557,18 @@
                 "name": "Men-at-Arms",
                 "cost": 285,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Ordo Wardens"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ordo Wardens",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -308,9 +578,18 @@
                 "name": "Enlisted Outlaws",
                 "cost": 182,
                 "options": [
-                    "Longbow",
-                    "Prepared Position",
-                    "Hooded Men"
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Prepared Position",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Hooded Men",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -320,9 +599,18 @@
                 "name": "Enlisted Outlaws",
                 "cost": 182,
                 "options": [
-                    "Longbow",
-                    "Prepared Position",
-                    "Hooded Men"
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Prepared Position",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Hooded Men",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 12,

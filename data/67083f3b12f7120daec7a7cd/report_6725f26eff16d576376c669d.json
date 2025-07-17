@@ -13,13 +13,34 @@
                 "name": "Commander",
                 "cost": 520,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Fleet Officer",
-                    "Sky Sloop",
-                    "Shield",
-                    "Dusk Forged",
-                    "Basalt Infusion",
-                    "Lance"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Fleet Officer",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Sky Sloop",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dusk Forged",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,15 +49,42 @@
                 "name": "Commander",
                 "cost": 450,
                 "options": [
-                    "Captain and Attached",
-                    "Fleet Officer",
-                    "Sky Sloop",
-                    "Shield",
-                    "Sigil of Protection",
-                    "Dragonforged Armour",
-                    "Daemon's Bane",
-                    "Lance",
-                    "Obsidian Rock"
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Fleet Officer",
+                        "type": "honour"
+                    },
+                    {
+                        "name": "Sky Sloop",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Daemon's Bane",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -45,13 +93,34 @@
                 "name": "Commander",
                 "cost": 440,
                 "options": [
-                    "General",
-                    "Griffon",
-                    "Longbow",
-                    "Elu's Heartwood",
-                    "Dragonforged Armour",
-                    "Great Weapon and Elven Finesse",
-                    "Troll Tonic"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Elu's Heartwood",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dragonforged Armour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Troll Tonic",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -60,7 +129,10 @@
                 "name": "Sea Guard",
                 "cost": 500,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -70,8 +142,14 @@
                 "name": "Highborn Lancers",
                 "cost": 327,
                 "options": [
-                    "War Banner of Rymâ",
-                    "Standard Bearer"
+                    {
+                        "name": "War Banner of Rymâ",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 7,
@@ -89,7 +167,10 @@
                 "name": "Sword Masters",
                 "cost": 435,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 21,
@@ -99,9 +180,18 @@
                 "name": "Initiate of the Fiery Heart",
                 "cost": 380,
                 "options": [
-                    "Wizard Conclave",
-                    "Living Steel",
-                    "Flaming Swords"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -110,9 +200,18 @@
                 "name": "Initiate of the Fiery Heart",
                 "cost": 380,
                 "options": [
-                    "Molten Copper",
-                    "Wizard Conclave",
-                    "Flaming Swords"
+                    {
+                        "name": "Molten Copper",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -121,8 +220,14 @@
                 "name": "Queen's Guard",
                 "cost": 385,
                 "options": [
-                    "Banner of Becalming",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Becalming",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -142,16 +247,46 @@
                 "name": "Duke",
                 "cost": 590,
                 "options": [
-                    "General",
-                    "Revered Unicorn",
-                    "Shield",
-                    "Sigil of Protection",
-                    "Tristan's Resolve",
-                    "Bastard Sword",
-                    "Prayer Etched",
-                    "Potion of Swiftness",
-                    "Sainted and Gallantry",
-                    "Valour"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Revered Unicorn",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Sigil of Protection",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Tristan's Resolve",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Prayer Etched",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Potion of Swiftness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sainted and Gallantry",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Valour",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -160,12 +295,30 @@
                 "name": "Damsel",
                 "cost": 270,
                 "options": [
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Druidism",
-                    "Entwining Roots",
-                    "Healing Waters",
-                    "Nature's Venom"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Healing Waters",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Nature's Venom",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -174,15 +327,42 @@
                 "name": "Folk Hero",
                 "cost": 215,
                 "options": [
-                    "Light Troops",
-                    "Halberd",
-                    "Stalker's Standard",
-                    "Mimic Cloak",
-                    "Divination",
-                    "Foresight",
-                    "Attached",
-                    "Bannerman",
-                    "Minstrel"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Minstrel",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -191,11 +371,26 @@
                 "name": "Knights of the Realm",
                 "cost": 485,
                 "options": [
-                    "Relic Shroud",
-                    "Banner of Discipline",
-                    "Standard Bearer",
-                    "Musician",
-                    "Knight Banneret"
+                    {
+                        "name": "Relic Shroud",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Discipline",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -205,8 +400,14 @@
                 "name": "Lowborn Levies",
                 "cost": 369,
                 "options": [
-                    "Standard Bearer",
-                    "Halberd and Shield"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Halberd and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 48,
@@ -216,7 +417,10 @@
                 "name": "Hedge Knights",
                 "cost": 265,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -226,9 +430,18 @@
                 "name": "Knights of the Quest",
                 "cost": 580,
                 "options": [
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -238,10 +451,22 @@
                 "name": "Knights of the Court",
                 "cost": 525,
                 "options": [
-                    "Banner of Discipline",
-                    "Standard Bearer",
-                    "Musician",
-                    "Knight Banneret"
+                    {
+                        "name": "Banner of Discipline",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -251,10 +476,22 @@
                 "name": "Men-at-Arms",
                 "cost": 450,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Castle Guard"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Castle Guard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -264,9 +501,18 @@
                 "name": "Naiads",
                 "cost": 245,
                 "options": [
-                    "Fountain of Youth",
-                    "Swarm of Insects",
-                    "Wizard Conclave"
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

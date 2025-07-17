@@ -13,10 +13,22 @@
                 "name": "Shaman",
                 "cost": 520,
                 "options": [
-                    "Wizard Master",
-                    "Pyromancy",
-                    "Mimic Cloak",
-                    "Godspeaker"
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Mimic Cloak",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Godspeaker",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -25,10 +37,22 @@
                 "name": "Tribesmen",
                 "cost": 477,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Pennant of the Great Grass Sky",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Pennant of the Great Grass Sky",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -38,8 +62,14 @@
                 "name": "Bruisers",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -49,7 +79,10 @@
                 "name": "Bruisers",
                 "cost": 170,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -59,8 +92,14 @@
                 "name": "Mercenary Gunners",
                 "cost": 480,
                 "options": [
-                    "Standard Bearer",
-                    "Ogre Crossbow and Accurate"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -108,7 +147,10 @@
                 "name": "Frost Mammoth",
                 "cost": 400,
                 "options": [
-                    "Ogre Crossbow"
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -117,8 +159,14 @@
                 "name": "Mercenary Giant",
                 "cost": 270,
                 "options": [
-                    "Iron Fist",
-                    "Devastating Charge"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Devastating Charge",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "chained beasts"
@@ -127,8 +175,14 @@
                 "name": "Mercenary Giant",
                 "cost": 270,
                 "options": [
-                    "Iron Fist",
-                    "Devastating Charge"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Devastating Charge",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "chained beasts"
@@ -147,12 +201,30 @@
                 "name": "Caiman Mentor",
                 "cost": 450,
                 "options": [
-                    "Combat Legend",
-                    "Enclave Wizard",
-                    "Evocation",
-                    "Danse Macabre",
-                    "Imbued Jade",
-                    "Scroll of Power"
+                    {
+                        "name": "Combat Legend",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Enclave Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Imbued Jade",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scroll of Power",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -161,11 +233,26 @@
                 "name": "Caiman Mentor",
                 "cost": 405,
                 "options": [
-                    "Combat Legend",
-                    "Enclave Wizard",
-                    "Evocation",
-                    "Danse Macabre",
-                    "Potion of Power Preservation"
+                    {
+                        "name": "Combat Legend",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Enclave Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Potion of Power Preservation",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -174,11 +261,26 @@
                 "name": "Skink Veteran",
                 "cost": 330,
                 "options": [
-                    "Eldritch Inscriptions",
-                    "Dragon's Brew",
-                    "Pouakai Sky Tyrant",
-                    "Blowpipe",
-                    "Halberd"
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Pouakai Sky Tyrant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -187,12 +289,30 @@
                 "name": "Tegu Warriors",
                 "cost": 488,
                 "options": [
-                    "Awaken the Beast",
-                    "Obelisk of Collaboration",
-                    "Spear",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Obelisk of Collaboration",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -218,12 +338,30 @@
                 "name": "Caiman Elders",
                 "cost": 555,
                 "options": [
-                    "Predator's Instinct",
-                    "Obelisk of Collaboration",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Standard Bearer",
-                    "Astral Union"
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Obelisk of Collaboration",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Astral Union",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -233,12 +371,30 @@
                 "name": "Caiman Elders",
                 "cost": 555,
                 "options": [
-                    "Predator's Instinct",
-                    "Obelisk of Collaboration",
-                    "Wizard Conclave",
-                    "Musician",
-                    "Standard Bearer",
-                    "Astral Union"
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Obelisk of Collaboration",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Astral Union",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -248,7 +404,10 @@
                 "name": "Thyroscutus Herd",
                 "cost": 225,
                 "options": [
-                    "Lodestone Shield"
+                    {
+                        "name": "Lodestone Shield",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "models": 1,

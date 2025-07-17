@@ -13,14 +13,38 @@
                 "name": "Battlefield Wizard",
                 "cost": 435,
                 "options": [
-                    "Light Troops",
-                    "Wizard Master",
-                    "Alchemy",
-                    "Corruption of Tin",
-                    "Living Steel",
-                    "Word of Iron",
-                    "Quicksilver Lash",
-                    "Talisman of the Void"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Alchemy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Corruption of Tin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Living Steel",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Word of Iron",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Quicksilver Lash",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,11 +53,26 @@
                 "name": "Marshal",
                 "cost": 350,
                 "options": [
-                    "Battleline Hero",
-                    "Great Griffon",
-                    "Winter Cloak",
-                    "General, Orders, +1 Cou",
-                    "Great Weapon"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Great Griffon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Winter Cloak",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "General, Orders, +1 Cou",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,11 +81,26 @@
                 "name": "Marshal",
                 "cost": 215,
                 "options": [
-                    "Light Troops",
-                    "Blacksteel",
-                    "Binding Scroll",
-                    "Battle Standard Bearer and Orders",
-                    "Shield"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Blacksteel",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Battle Standard Bearer and Orders",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -55,8 +109,14 @@
                 "name": "Heavy Infantry",
                 "cost": 360,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -66,8 +126,14 @@
                 "name": "Light Infantry",
                 "cost": 225,
                 "options": [
-                    "Standard Bearer",
-                    "Crossbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -77,8 +143,14 @@
                 "name": "Light Infantry",
                 "cost": 225,
                 "options": [
-                    "Standard Bearer",
-                    "Crossbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -88,8 +160,14 @@
                 "name": "Light Infantry",
                 "cost": 200,
                 "options": [
-                    "Halberd",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 2,
                 "models": 20,
@@ -99,9 +177,18 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 495,
                 "options": [
-                    "Halberd",
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -111,9 +198,18 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 495,
                 "options": [
-                    "Halberd",
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -123,7 +219,10 @@
                 "name": "Knights of the Sun Griffon",
                 "cost": 220,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 2,
                 "models": 3,
@@ -133,7 +232,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -142,7 +244,10 @@
                 "name": "Blackpowder Artillery",
                 "cost": 240,
                 "options": [
-                    "Cannon"
+                    {
+                        "name": "Cannon",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -177,18 +282,54 @@
                 "name": "Prophet",
                 "cost": 565,
                 "options": [
-                    "General",
-                    "Prophet of Lugar",
-                    "Light Troops",
-                    "Wizard Master",
-                    "Occultism",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "The Grave Calls",
-                    "Umbral Majesty",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "Magical Heirloom"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Prophet of Lugar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Umbral Majesty",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Magical Heirloom",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -197,14 +338,38 @@
                 "name": "Vizier",
                 "cost": 320,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Warding of Unity",
-                    "Flame of the East",
-                    "Infernal Weapon",
-                    "Ring of Desiccation",
-                    "Battle Standard Bearer",
-                    "Pistol"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Flame of the East",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Infernal Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ring of Desiccation",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Pistol",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -213,11 +378,26 @@
                 "name": "Vassal Conjurer",
                 "cost": 250,
                 "options": [
-                    "Light Troops",
-                    "Pyromancy",
-                    "Fireball",
-                    "Flaming Swords",
-                    "Pyroclastic Flow"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Pyromancy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fireball",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Flaming Swords",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pyroclastic Flow",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -226,9 +406,18 @@
                 "name": "Citadel Guard",
                 "cost": 535,
                 "options": [
-                    "Flaming Standard",
-                    "Pistol and Spear",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Pistol and Spear",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -238,8 +427,14 @@
                 "name": "Vassal Levies",
                 "cost": 275,
                 "options": [
-                    "Paired Weapons",
-                    "Bow"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -249,8 +444,14 @@
                 "name": "Vassal Levies",
                 "cost": 275,
                 "options": [
-                    "Paired Weapons",
-                    "Bow"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 20,
@@ -260,9 +461,18 @@
                 "name": "Disciples of Lugar",
                 "cost": 575,
                 "options": [
-                    "Paired Weapons",
-                    "Banner of Shamut",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Shamut",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 23,
@@ -272,9 +482,18 @@
                 "name": "Taurukh Anointed",
                 "cost": 350,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -284,7 +503,10 @@
                 "name": "Infernal Artillery",
                 "cost": 295,
                 "options": [
-                    "Titan Mortar"
+                    {
+                        "name": "Titan Mortar",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -293,7 +515,10 @@
                 "name": "Kadim Titan",
                 "cost": 560,
                 "options": [
-                    "Walking Earthquake"
+                    {
+                        "name": "Walking Earthquake",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "instruments of destruction"

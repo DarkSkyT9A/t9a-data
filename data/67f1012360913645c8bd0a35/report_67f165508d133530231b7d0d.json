@@ -13,13 +13,34 @@
                 "name": "Minotaur Warlord",
                 "cost": 655,
                 "options": [
-                    "General",
-                    "Battleline Hero",
-                    "Aaghor's Affliction",
-                    "Great Weapon",
-                    "Touch of Greatness",
-                    "Eye of Dominance",
-                    "Rain Augur Brew"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Aaghor's Affliction",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eye of Dominance",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Rain Augur Brew",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -28,9 +49,18 @@
                 "name": "Minotaur Chieftain",
                 "cost": 310,
                 "options": [
-                    "Death Cheater",
-                    "Great Weapon",
-                    "Solitary"
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -39,9 +69,18 @@
                 "name": "Minotaur Chieftain",
                 "cost": 280,
                 "options": [
-                    "Destiny's Call",
-                    "Great Weapon",
-                    "Solitary"
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -50,10 +89,22 @@
                 "name": "Wildhorn Chieftain",
                 "cost": 210,
                 "options": [
-                    "Shield",
-                    "Solitary",
-                    "Raiding Chariot",
-                    "Lance"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Solitary",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Raiding Chariot",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -62,9 +113,18 @@
                 "name": "Mongrel Herd",
                 "cost": 350,
                 "options": [
-                    "Spear",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 40,
@@ -74,9 +134,18 @@
                 "name": "Mongrel Herd",
                 "cost": 350,
                 "options": [
-                    "Spear",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Spear",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 40,
@@ -86,8 +155,14 @@
                 "name": "Wildhorn Herd",
                 "cost": 180,
                 "options": [
-                    "Shield",
-                    "Ambush"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -113,7 +188,10 @@
                 "name": "Beast Giant",
                 "cost": 295,
                 "options": [
-                    "Beer Barrel"
+                    {
+                        "name": "Beer Barrel",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "terrors of the wild"
@@ -122,7 +200,10 @@
                 "name": "Beast Giant",
                 "cost": 295,
                 "options": [
-                    "Beer Barrel"
+                    {
+                        "name": "Beer Barrel",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "category": "terrors of the wild"
@@ -131,7 +212,10 @@
                 "name": "Beast Giant",
                 "cost": 295,
                 "options": [
-                    "Beer Barrel"
+                    {
+                        "name": "Beer Barrel",
+                        "type": "Other"
+                    }
                 ],
                 "index": 2,
                 "category": "terrors of the wild"
@@ -164,17 +248,50 @@
                 "name": "Shaman",
                 "cost": 570,
                 "options": [
-                    "Wizard Master",
-                    "Thaumaturgy",
-                    "Smite the Unbeliever",
-                    "Light of Faith",
-                    "Holy Affliction",
-                    "Wrath of God",
-                    "Rain of Fire",
-                    "Warding of Unity",
-                    "Iron Fist",
-                    "Talisman of the Void",
-                    "Gut Roarer"
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Thaumaturgy",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Smite the Unbeliever",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Light of Faith",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Holy Affliction",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wrath of God",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Rain of Fire",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gut Roarer",
+                        "type": "bigName"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -183,9 +300,18 @@
                 "name": "Khan",
                 "cost": 230,
                 "options": [
-                    "Iron Fist",
-                    "Battle Standard Bearer",
-                    "Ogre Crossbow"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -194,8 +320,14 @@
                 "name": "Khan",
                 "cost": 145,
                 "options": [
-                    "Iron Fist",
-                    "Ogre Crossbow"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ogre Crossbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -204,9 +336,18 @@
                 "name": "Bruisers",
                 "cost": 585,
                 "options": [
-                    "Pennant of the Great Grass Sky",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Pennant of the Great Grass Sky",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -216,10 +357,22 @@
                 "name": "Tribesmen",
                 "cost": 439,
                 "options": [
-                    "Iron Fist",
-                    "Skull of Qenghet",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Iron Fist",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Skull of Qenghet",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -229,10 +382,22 @@
                 "name": "Tusker Cavalry",
                 "cost": 530,
                 "options": [
-                    "Great Weapon",
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -242,9 +407,18 @@
                 "name": "Mercenary Gunners",
                 "cost": 498,
                 "options": [
-                    "Standard Bearer",
-                    "Ogre Crossbow and Accurate",
-                    "Magic Resistance"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Ogre Crossbow and Accurate",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magic Resistance",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,

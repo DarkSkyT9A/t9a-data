@@ -13,11 +13,26 @@
                 "name": "Courtesan of Cibaresh",
                 "cost": 775,
                 "options": [
-                    "General and Greater Dominion",
-                    "Wizard Adept",
-                    "Divination",
-                    "Iron Husk",
-                    "Chitinous Scales"
+                    {
+                        "name": "General and Greater Dominion",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Iron Husk",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Chitinous Scales",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,9 +41,18 @@
                 "name": "Succubi",
                 "cost": 390,
                 "options": [
-                    "Mesmerising Plumage",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Mesmerising Plumage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -38,7 +62,10 @@
                 "name": "Myrmidons",
                 "cost": 305,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -48,7 +75,10 @@
                 "name": "Myrmidons",
                 "cost": 305,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -58,8 +88,14 @@
                 "name": "Brazen Beasts",
                 "cost": 575,
                 "options": [
-                    "Centipede Legs",
-                    "Standard Bearer"
+                    {
+                        "name": "Centipede Legs",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -69,8 +105,14 @@
                 "name": "Brazen Beasts",
                 "cost": 371,
                 "options": [
-                    "Standard Bearer",
-                    "Incendiary Ichor"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Incendiary Ichor",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 1,
                 "models": 3,
@@ -103,7 +145,10 @@
                 "name": "Veil Serpents",
                 "cost": 442,
                 "options": [
-                    "Wizard Conclave"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -131,16 +176,46 @@
                 "name": "Vampire Count",
                 "cost": 670,
                 "options": [
-                    "General, Disciplined and The Dead Arise",
-                    "Lahmia",
-                    "Commandment",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Evocation",
-                    "Destiny's Call",
-                    "Halberd",
-                    "Magical Heirloom",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "General, Disciplined and The Dead Arise",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lahmia",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Commandment",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Destiny's Call",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Magical Heirloom",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -149,15 +224,42 @@
                 "name": "Vampire Courtier",
                 "cost": 630,
                 "options": [
-                    "Vetala",
-                    "Monster Hunter",
-                    "Monstrous Revenant",
-                    "Wizard Adept",
-                    "Occultism",
-                    "Shield",
-                    "True Thirst",
-                    "Talisman of Shielding",
-                    "Gates of the Netherworld"
+                    {
+                        "name": "Vetala",
+                        "type": "ancestralBloodPower"
+                    },
+                    {
+                        "name": "Monster Hunter",
+                        "type": "bloodPowers"
+                    },
+                    {
+                        "name": "Monstrous Revenant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "True Thirst",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of Shielding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Gates of the Netherworld",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -166,10 +268,22 @@
                 "name": "Barrow King",
                 "cost": 135,
                 "options": [
-                    "Light Troops",
-                    "Great Weapon",
-                    "Hypnotic Pendant",
-                    "Captain and Attached"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hypnotic Pendant",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -178,10 +292,22 @@
                 "name": "Skeletons",
                 "cost": 364,
                 "options": [
-                    "Sheltering Standard",
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Sheltering Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 36,
@@ -215,10 +341,22 @@
                 "name": "Barrow Guard",
                 "cost": 573,
                 "options": [
-                    "Great Weapon",
-                    "Black Standard of Zagvozd",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Black Standard of Zagvozd",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 28,
@@ -243,7 +381,10 @@
                 "name": "Vampire Knights",
                 "cost": 375,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,

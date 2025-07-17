@@ -13,17 +13,50 @@
                 "name": "Anurarch Archmage",
                 "cost": 650,
                 "options": [
-                    "Light Troops and Closely Guarded",
-                    "Divination",
-                    "Foresight",
-                    "Chance of Redemption",
-                    "The Stars Align",
-                    "Fate's Judgement",
-                    "Inescapable Doom",
-                    "Obsidian Rock",
-                    "Potion of Power Preservation",
-                    "Eternal Mastery",
-                    "Mystifying Mastery"
+                    {
+                        "name": "Light Troops and Closely Guarded",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Foresight",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Stars Align",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Fate's Judgement",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Inescapable Doom",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Potion of Power Preservation",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eternal Mastery",
+                        "type": "arcaneMastery"
+                    },
+                    {
+                        "name": "Mystifying Mastery",
+                        "type": "telepathicMastery"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -32,13 +65,34 @@
                 "name": "Skink Veteran",
                 "cost": 215,
                 "options": [
-                    "Druidism",
-                    "Fountain of Youth",
-                    "Talisman of the Void",
-                    "Light Troops and Strider",
-                    "Enclave Wizard",
-                    "Magnetic Short Bow",
-                    "Alchemical Arrows"
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Enclave Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Alchemical Arrows",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -47,11 +101,26 @@
                 "name": "Skink Veteran",
                 "cost": 190,
                 "options": [
-                    "Dragon's Brew",
-                    "Mountain Pteradon",
-                    "Shield",
-                    "Poisoned Javelin",
-                    "Light Lance"
+                    {
+                        "name": "Dragon's Brew",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Mountain Pteradon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -60,10 +129,22 @@
                 "name": "Skink Veteran",
                 "cost": 165,
                 "options": [
-                    "Imbued Jade",
-                    "Light Troops and Strider",
-                    "Shield",
-                    "Poisoned Javelin"
+                    {
+                        "name": "Imbued Jade",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 2,
                 "category": "Characters"
@@ -72,12 +153,30 @@
                 "name": "Skink Veteran",
                 "cost": 130,
                 "options": [
-                    "Touch of Greatness",
-                    "Serpent's Nest Charm",
-                    "Light Troops and Strider",
-                    "Shield",
-                    "Wild Warding",
-                    "Poisoned Javelin"
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Serpent's Nest Charm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops and Strider",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 3,
                 "category": "Characters"
@@ -86,7 +185,10 @@
                 "name": "Caiman Warriors",
                 "cost": 344,
                 "options": [
-                    "Halberd"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -96,9 +198,18 @@
                 "name": "Skink Warriors",
                 "cost": 297,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 31,
@@ -108,9 +219,18 @@
                 "name": "Skink Warriors",
                 "cost": 297,
                 "options": [
-                    "Musician",
-                    "Standard Bearer",
-                    "Spear and Shield"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 31,
@@ -120,7 +240,10 @@
                 "name": "Skink Hunters",
                 "cost": 246,
                 "options": [
-                    "Magnetic Short Bow"
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -130,8 +253,14 @@
                 "name": "Tegu Guards",
                 "cost": 530,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -141,8 +270,14 @@
                 "name": "Skink Guerrillas",
                 "cost": 232,
                 "options": [
-                    "Blowpipe",
-                    "Vanguard"
+                    {
+                        "name": "Blowpipe",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 12,
@@ -152,7 +287,10 @@
                 "name": "Weapon Beasts",
                 "cost": 210,
                 "options": [
-                    "Salamander"
+                    {
+                        "name": "Salamander",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 2,
@@ -162,7 +300,10 @@
                 "name": "Taurosaur",
                 "cost": 490,
                 "options": [
-                    "Monolith of Vitalism"
+                    {
+                        "name": "Monolith of Vitalism",
+                        "type": "howdah"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"
@@ -181,12 +322,30 @@
                 "name": "Duke",
                 "cost": 390,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Destrier",
-                    "Bastard Sword",
-                    "Fortress of Faith",
-                    "Basalt Infusion",
-                    "Generosity"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Fortress of Faith",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Generosity",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -195,14 +354,38 @@
                 "name": "Duke",
                 "cost": 385,
                 "options": [
-                    "General",
-                    "Trusted Adviser",
-                    "Destrier",
-                    "Lance",
-                    "Uther's Mettle",
-                    "Warding of Unity",
-                    "Scroll of Draining",
-                    "Faith"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Trusted Adviser",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Uther's Mettle",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Warding of Unity",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Scroll of Draining",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Faith",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -211,13 +394,34 @@
                 "name": "Damsel",
                 "cost": 370,
                 "options": [
-                    "Destrier",
-                    "Binding Scroll",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Savage Fury",
-                    "Awaken the Beast"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Savage Fury",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -226,10 +430,22 @@
                 "name": "Knights of the Realm",
                 "cost": 555,
                 "options": [
-                    "Flaming Standard",
-                    "Musician",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -239,11 +455,26 @@
                 "name": "Knights of the Realm",
                 "cost": 445,
                 "options": [
-                    "Relic Shroud",
-                    "Banner of Speed",
-                    "Banner of Roland",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Relic Shroud",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Banner of Roland",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 8,
@@ -253,10 +484,22 @@
                 "name": "Knights of the Court",
                 "cost": 585,
                 "options": [
-                    "Oriflamme",
-                    "Lady's Favour",
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Oriflamme",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Lady's Favour",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -266,8 +509,14 @@
                 "name": "Knights of the Quest",
                 "cost": 530,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -277,8 +526,14 @@
                 "name": "Yeoman Outriders",
                 "cost": 164,
                 "options": [
-                    "Bow",
-                    "Shield"
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -288,7 +543,10 @@
                 "name": "Yeoman Outriders",
                 "cost": 150,
                 "options": [
-                    "Bow"
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 1,
                 "models": 5,
@@ -298,9 +556,18 @@
                 "name": "The Lady's Courtier",
                 "cost": 425,
                 "options": [
-                    "Fountain of Youth",
-                    "Stone Skin",
-                    "Courtier of the Dusk"
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Stone Skin",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Courtier of the Dusk",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"

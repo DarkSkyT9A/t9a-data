@@ -13,12 +13,30 @@
                 "name": "Chosen Lord",
                 "cost": 800,
                 "options": [
-                    "General",
-                    "Wasteland Dragon",
-                    "Talisman of the Void",
-                    "Immortal Gauntlets",
-                    "Wyrd Stone",
-                    "Greed"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wasteland Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wyrd Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,17 +45,50 @@
                 "name": "Sorcerer",
                 "cost": 730,
                 "options": [
-                    "Gladiator's Spirit",
-                    "Dark Familiar",
-                    "Battleshrine",
-                    "Danse Macabre",
-                    "Wizard Master",
-                    "Occultism",
-                    "Hand of Glory",
-                    "Blood Curse",
-                    "Pentagram of Pain",
-                    "Umbral Majesty",
-                    "The Grave Calls"
+                    {
+                        "name": "Gladiator's Spirit",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Dark Familiar",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Battleshrine",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Danse Macabre",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Hand of Glory",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Blood Curse",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Pentagram of Pain",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Umbral Majesty",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "The Grave Calls",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -46,10 +97,22 @@
                 "name": "Warriors",
                 "cost": 580,
                 "options": [
-                    "Spiked Shield",
-                    "Zealots' Banner",
-                    "Greed",
-                    "Standard Bearer"
+                    {
+                        "name": "Spiked Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Zealots' Banner",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Greed",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 17,
@@ -59,9 +122,18 @@
                 "name": "Barbarians",
                 "cost": 230,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer",
-                    "Throwing Weapons"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Throwing Weapons",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -71,9 +143,18 @@
                 "name": "Chosen Knights",
                 "cost": 550,
                 "options": [
-                    "Wasteland Torch",
-                    "Gluttony",
-                    "Standard Bearer"
+                    {
+                        "name": "Wasteland Torch",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -83,8 +164,14 @@
                 "name": "Chosen Knights",
                 "cost": 510,
                 "options": [
-                    "Gluttony",
-                    "Standard Bearer"
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -94,9 +181,18 @@
                 "name": "Forsworn",
                 "cost": 490,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer",
-                    "Damnation"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Damnation",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -124,10 +220,22 @@
                 "name": "Forest Prince",
                 "cost": 640,
                 "options": [
-                    "General",
-                    "Forest Dragon",
-                    "Great Weapon and Elven Finesse",
-                    "Rod of Battle"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Forest Dragon",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Weapon and Elven Finesse",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Rod of Battle",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -136,14 +244,38 @@
                 "name": "Druid",
                 "cost": 345,
                 "options": [
-                    "Light Troops",
-                    "Obsidian Rock",
-                    "Binding Scroll",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Binding Scroll",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -152,14 +284,38 @@
                 "name": "Dryad Ancient",
                 "cost": 280,
                 "options": [
-                    "Wizard Adept",
-                    "Druidism",
-                    "Fountain of Youth",
-                    "Entwining Roots",
-                    "Gravel Storm",
-                    "Captain and Attached",
-                    "Wizard",
-                    "Scarred Bark"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Fountain of Youth",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Gravel Storm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Scarred Bark",
+                        "type": "aspectOfNature"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -168,12 +324,30 @@
                 "name": "Chieftain",
                 "cost": 245,
                 "options": [
-                    "Light Troops",
-                    "Sylvan Blades",
-                    "Spirit of the Whirlwind",
-                    "Talisman of the Void",
-                    "Blade Dancer",
-                    "Captain and Attached"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Sylvan Blades",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Spirit of the Whirlwind",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Blade Dancer",
+                        "type": "kindred"
+                    },
+                    {
+                        "name": "Captain and Attached",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -182,8 +356,14 @@
                 "name": "Dryads",
                 "cost": 400,
                 "options": [
-                    "Musician",
-                    "Standard Bearer"
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -193,8 +373,14 @@
                 "name": "Sylvan Archers",
                 "cost": 377,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 16,
@@ -204,8 +390,14 @@
                 "name": "Heath Riders",
                 "cost": 229,
                 "options": [
-                    "Standard Bearer",
-                    "Heath Hunters"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Heath Hunters",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -215,8 +407,14 @@
                 "name": "Forest Rangers",
                 "cost": 385,
                 "options": [
-                    "Banner of Silent Mist",
-                    "Standard Bearer"
+                    {
+                        "name": "Banner of Silent Mist",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 18,
@@ -226,7 +424,10 @@
                 "name": "Forest Rangers",
                 "cost": 200,
                 "options": [
-                    "Vanguard"
+                    {
+                        "name": "Vanguard",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -236,7 +437,10 @@
                 "name": "Wild Huntsmen",
                 "cost": 220,
                 "options": [
-                    "Sylvan Blades"
+                    {
+                        "name": "Sylvan Blades",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

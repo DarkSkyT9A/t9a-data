@@ -13,10 +13,22 @@
                 "name": "Maw of Akaan",
                 "cost": 740,
                 "options": [
-                    "General",
-                    "Wizard Adept",
-                    "Witchcraft",
-                    "Digestive Vomit"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Witchcraft",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Digestive Vomit",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -25,10 +37,22 @@
                 "name": "Miser of Sugulag",
                 "cost": 680,
                 "options": [
-                    "Wizard Adept",
-                    "Evocation",
-                    "Unnatural Roots",
-                    "Mirrored Scales"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Mirrored Scales",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -37,8 +61,14 @@
                 "name": "Myrmidons",
                 "cost": 450,
                 "options": [
-                    "Piercing Spike",
-                    "Standard Bearer"
+                    {
+                        "name": "Piercing Spike",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -48,8 +78,14 @@
                 "name": "Succubi",
                 "cost": 335,
                 "options": [
-                    "Horrifying Vissage",
-                    "Standard Bearer"
+                    {
+                        "name": "Horrifying Vissage",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -59,7 +95,10 @@
                 "name": "Succubi",
                 "cost": 230,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -69,7 +108,10 @@
                 "name": "Clawed Fiends",
                 "cost": 470,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -94,7 +136,10 @@
                 "name": "Bloat Flies",
                 "cost": 400,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -114,13 +159,34 @@
                 "name": "Sorcerer",
                 "cost": 635,
                 "options": [
-                    "Black Steed",
-                    "Wizard Master",
-                    "Occultism",
-                    "Basalt Infusion",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "Talisman of the Void"
+                    {
+                        "name": "Black Steed",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Occultism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -129,15 +195,42 @@
                 "name": "Chosen Lord",
                 "cost": 595,
                 "options": [
-                    "General",
-                    "War Dais",
-                    "Aether Icon",
-                    "Death Cheater",
-                    "Paired Weapons",
-                    "Shield Breaker",
-                    "Immortal Gauntlets",
-                    "Trophy Rack",
-                    "Gluttony"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "War Dais",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Death Cheater",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Shield Breaker",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Immortal Gauntlets",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Trophy Rack",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -146,10 +239,22 @@
                 "name": "Warriors",
                 "cost": 588,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Speed",
-                    "Spiked Shield",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Spiked Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 24,
@@ -175,10 +280,22 @@
                 "name": "Warrior Knights",
                 "cost": 555,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard",
-                    "Lance",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -188,10 +305,22 @@
                 "name": "Warrior Knights",
                 "cost": 555,
                 "options": [
-                    "Standard Bearer",
-                    "Stalker's Standard",
-                    "Lance",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 9,
@@ -201,10 +330,22 @@
                 "name": "Feldraks",
                 "cost": 480,
                 "options": [
-                    "Standard Bearer",
-                    "Banner of Speed",
-                    "Paired Weapons",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -214,7 +355,10 @@
                 "name": "Battleshrine",
                 "cost": 330,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"

@@ -13,12 +13,30 @@
                 "name": "Miser of Sugulag",
                 "cost": 900,
                 "options": [
-                    "General",
-                    "Wizard Master",
-                    "Evocation",
-                    "Unnatural Roots",
-                    "Smothering Coils",
-                    "Clinging Ichor"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Unnatural Roots",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Smothering Coils",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Clinging Ichor",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,8 +45,14 @@
                 "name": "Myrmidons",
                 "cost": 530,
                 "options": [
-                    "Unhinging Jaw",
-                    "Standard Bearer"
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -38,8 +62,14 @@
                 "name": "Myrmidons",
                 "cost": 530,
                 "options": [
-                    "Unhinging Jaw",
-                    "Standard Bearer"
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 25,
@@ -49,10 +79,22 @@
                 "name": "Hoarders",
                 "cost": 562,
                 "options": [
-                    "Chitinous Scales",
-                    "Clinging Ichor",
-                    "Standard Bearer",
-                    "Favoured of Greed"
+                    {
+                        "name": "Chitinous Scales",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Clinging Ichor",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Favoured of Greed",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -62,8 +104,14 @@
                 "name": "Clawed Fiends",
                 "cost": 537,
                 "options": [
-                    "Standard Bearer",
-                    "Unholy Appetite"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Unholy Appetite",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -73,8 +121,14 @@
                 "name": "Clawed Fiends",
                 "cost": 537,
                 "options": [
-                    "Standard Bearer",
-                    "Unholy Appetite"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Unholy Appetite",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -84,7 +138,10 @@
                 "name": "Veil Serpents",
                 "cost": 400,
                 "options": [
-                    "Wizard Conclave"
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -104,13 +161,34 @@
                 "name": "Temple Exarch",
                 "cost": 350,
                 "options": [
-                    "Battle Standard Bearer",
-                    "Wizard Apprentice",
-                    "Divination",
-                    "Aether Icon",
-                    "Seal of the Republic",
-                    "Shield Breaker",
-                    "Paired Weapons"
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Wizard Apprentice",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Seal of the Republic",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shield Breaker",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -119,11 +197,26 @@
                 "name": "Sanctioned Warlock",
                 "cost": 335,
                 "options": [
-                    "Wizard Adept",
-                    "Paired Weapons",
-                    "Ring of the Obsidian Thrones",
-                    "Light Troops",
-                    "Evocation"
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Ring of the Obsidian Thrones",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -146,8 +239,14 @@
                 "name": "Silexian Spears",
                 "cost": 497,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 33,
@@ -157,7 +256,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 276,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 14,
@@ -167,7 +269,10 @@
                 "name": "Silexian Auxiliaries",
                 "cost": 276,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 14,
@@ -177,8 +282,14 @@
                 "name": "Judicators",
                 "cost": 560,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -188,8 +299,14 @@
                 "name": "Obsidian Guard",
                 "cost": 555,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,

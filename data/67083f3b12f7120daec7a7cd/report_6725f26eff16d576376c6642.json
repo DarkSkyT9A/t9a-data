@@ -13,7 +13,10 @@
                 "name": "Exalted Herald",
                 "cost": 700,
                 "options": [
-                    "General"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -29,7 +32,10 @@
                 "name": "Warriors",
                 "cost": 335,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -39,7 +45,10 @@
                 "name": "Warriors",
                 "cost": 335,
                 "options": [
-                    "Standard Bearer"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 15,
@@ -49,8 +58,14 @@
                 "name": "Barbarian Horsemen",
                 "cost": 275,
                 "options": [
-                    "Great Weapon",
-                    "Standard Bearer"
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -60,10 +75,22 @@
                 "name": "Chosen",
                 "cost": 525,
                 "options": [
-                    "Paired Weapons",
-                    "Gluttony",
-                    "Standard Bearer",
-                    "Aether Icon"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Gluttony",
+                        "type": "favour"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -80,7 +107,10 @@
                 "name": "Chosen Chariot",
                 "cost": 290,
                 "options": [
-                    "Envy"
+                    {
+                        "name": "Envy",
+                        "type": "favour"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -89,7 +119,10 @@
                 "name": "Chosen Chariot",
                 "cost": 290,
                 "options": [
-                    "Envy"
+                    {
+                        "name": "Envy",
+                        "type": "favour"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -115,12 +148,30 @@
                 "name": "Paladin",
                 "cost": 505,
                 "options": [
-                    "Pegasus Charger",
-                    "Shield",
-                    "Halberd",
-                    "Mortal Reminder",
-                    "Ghostly Guard",
-                    "Sainted and Gallantry"
+                    {
+                        "name": "Pegasus Charger",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Mortal Reminder",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sainted and Gallantry",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -129,13 +180,34 @@
                 "name": "Duke",
                 "cost": 355,
                 "options": [
-                    "General",
-                    "Destrier",
-                    "Shield",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "Percival's Panoply",
-                    "Faith"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Percival's Panoply",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Faith",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -144,9 +216,18 @@
                 "name": "Damsel",
                 "cost": 325,
                 "options": [
-                    "Destrier",
-                    "Wizard Adept",
-                    "Druidism"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Druidism",
+                        "type": "Path"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -155,13 +236,34 @@
                 "name": "Folk Hero",
                 "cost": 285,
                 "options": [
-                    "Destrier",
-                    "Shield",
-                    "Wild Warding",
-                    "Light Lance",
-                    "Attached",
-                    "Cleric",
-                    "Bannerman"
+                    {
+                        "name": "Destrier",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Attached",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Cleric",
+                        "type": "heroicTraits"
+                    },
+                    {
+                        "name": "Bannerman",
+                        "type": "heroicTraits"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -170,10 +272,22 @@
                 "name": "Knights of the Realm",
                 "cost": 515,
                 "options": [
-                    "Banner of Speed",
-                    "Standard Bearer",
-                    "Musician",
-                    "Knight Banneret"
+                    {
+                        "name": "Banner of Speed",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 11,
@@ -183,8 +297,14 @@
                 "name": "Knights of the Realm",
                 "cost": 290,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -194,8 +314,14 @@
                 "name": "Hedge Knights",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -205,8 +331,14 @@
                 "name": "Hedge Knights",
                 "cost": 280,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -216,9 +348,18 @@
                 "name": "Knights of the Quest",
                 "cost": 400,
                 "options": [
-                    "Flaming Standard",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Flaming Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 6,
@@ -228,8 +369,14 @@
                 "name": "Knights of the Quest",
                 "cost": 380,
                 "options": [
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 6,
@@ -239,8 +386,14 @@
                 "name": "Sky Heralds",
                 "cost": 225,
                 "options": [
-                    "Paired Weapons",
-                    "Standard Bearer"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 3,
@@ -250,8 +403,14 @@
                 "name": "Yeoman Outriders",
                 "cost": 155,
                 "options": [
-                    "Shield",
-                    "Bow"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Bow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

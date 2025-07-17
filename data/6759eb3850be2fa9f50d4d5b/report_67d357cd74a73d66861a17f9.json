@@ -13,12 +13,30 @@
                 "name": "Death Cult Hierarch",
                 "cost": 595,
                 "options": [
-                    "General",
-                    "Ark of Ages",
-                    "Wizard Master",
-                    "Divination",
-                    "Talisman of the Void",
-                    "Soul Conduit"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Ark of Ages",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Master",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Divination",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Soul Conduit",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -27,11 +45,26 @@
                 "name": "Pharaoh",
                 "cost": 505,
                 "options": [
-                    "Jackal's Blessing",
-                    "Skeleton Chariot",
-                    "Great Aspis Bow",
-                    "Great Weapon",
-                    "Godslayer"
+                    {
+                        "name": "Jackal's Blessing",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Skeleton Chariot",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Great Aspis Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Great Weapon",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Godslayer",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -40,11 +73,26 @@
                 "name": "Skeleton Chariots",
                 "cost": 465,
                 "options": [
-                    "Halberd",
-                    "Aspis Arrows and Bow",
-                    "Legion Charioteers",
-                    "Standard Bearer",
-                    "Stalker's Standard"
+                    {
+                        "name": "Halberd",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Aspis Arrows and Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Legion Charioteers",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -54,8 +102,14 @@
                 "name": "Skeleton Warriors",
                 "cost": 220,
                 "options": [
-                    "Shield",
-                    "Standard Bearer"
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -65,8 +119,14 @@
                 "name": "Skeleton Archers",
                 "cost": 185,
                 "options": [
-                    "Standard Bearer",
-                    "Longbow"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Longbow",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 15,
@@ -84,7 +144,10 @@
                 "name": "Sand Stalkers",
                 "cost": 390,
                 "options": [
-                    "Ambush"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 4,
@@ -94,7 +157,10 @@
                 "name": "Sand Stalkers",
                 "cost": 390,
                 "options": [
-                    "Ambush"
+                    {
+                        "name": "Ambush",
+                        "type": "Other"
+                    }
                 ],
                 "index": 1,
                 "models": 4,
@@ -136,9 +202,18 @@
                 "name": "Sentinel of Nukuja",
                 "cost": 750,
                 "options": [
-                    "Strixian Spirit",
-                    "Evocation",
-                    "Kaleidoscopic Flesh"
+                    {
+                        "name": "Strixian Spirit",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Kaleidoscopic Flesh",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -147,14 +222,38 @@
                 "name": "Kuulima's Deceiver",
                 "cost": 535,
                 "options": [
-                    "Battleline Hero",
-                    "General",
-                    "Hell Can Wait",
-                    "Brimstone Secretions",
-                    "Protean Magic [2]",
-                    "Venom Sacs",
-                    "Piercing Spike",
-                    "Guiding Piercing Spike"
+                    {
+                        "name": "Battleline Hero",
+                        "type": "Specialist Skill"
+                    },
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Hell Can Wait",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Brimstone Secretions",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Protean Magic [2]",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Venom Sacs",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Piercing Spike",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Guiding Piercing Spike",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -163,8 +262,14 @@
                 "name": "Myrmidons",
                 "cost": 555,
                 "options": [
-                    "Bronze Backbone",
-                    "Standard Bearer"
+                    {
+                        "name": "Bronze Backbone",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 25,
@@ -174,8 +279,14 @@
                 "name": "Succubi",
                 "cost": 240,
                 "options": [
-                    "Horrifying Visage",
-                    "Standard Bearer"
+                    {
+                        "name": "Horrifying Visage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 10,
@@ -185,8 +296,14 @@
                 "name": "Succubi",
                 "cost": 240,
                 "options": [
-                    "Horrifying Visage",
-                    "Standard Bearer"
+                    {
+                        "name": "Horrifying Visage",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 10,
@@ -196,8 +313,14 @@
                 "name": "Clawed Fiends",
                 "cost": 440,
                 "options": [
-                    "Standard Bearer",
-                    "Mesmerising Plumage"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Mesmerising Plumage",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -207,7 +330,10 @@
                 "name": "Blazing Glory",
                 "cost": 345,
                 "options": [
-                    "Bronze Backbone"
+                    {
+                        "name": "Bronze Backbone",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -216,7 +342,10 @@
                 "name": "Blazing Glory",
                 "cost": 345,
                 "options": [
-                    "Bronze Backbone"
+                    {
+                        "name": "Bronze Backbone",
+                        "type": "Manifestations"
+                    }
                 ],
                 "index": 1,
                 "category": "Special"
@@ -225,8 +354,14 @@
                 "name": "Bloat Flies",
                 "cost": 550,
                 "options": [
-                    "Unhinging Jaw",
-                    "Standard Bearer"
+                    {
+                        "name": "Unhinging Jaw",
+                        "type": "Manifestations"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 5,

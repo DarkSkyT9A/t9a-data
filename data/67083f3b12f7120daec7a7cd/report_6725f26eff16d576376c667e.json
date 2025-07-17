@@ -13,11 +13,26 @@
                 "name": "Paladin",
                 "cost": 360,
                 "options": [
-                    "Pegasus Charger",
-                    "Paired Weapons",
-                    "Hero's Heart",
-                    "Ghostly Guard",
-                    "Sacred Chalice"
+                    {
+                        "name": "Pegasus Charger",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Hero's Heart",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Ghostly Guard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Sacred Chalice",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -26,14 +41,38 @@
                 "name": "Duke",
                 "cost": 345,
                 "options": [
-                    "Light Troops",
-                    "Shield",
-                    "Wild Warding",
-                    "King Slayer",
-                    "Bastard Sword",
-                    "Battle Standard Bearer",
-                    "Aether Icon",
-                    "Forbearance"
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Shield",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Wild Warding",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "King Slayer",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Bastard Sword",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Battle Standard Bearer",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Aether Icon",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Forbearance",
+                        "type": "knightlyPrinciple"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -42,14 +81,38 @@
                 "name": "Damsel",
                 "cost": 295,
                 "options": [
-                    "General",
-                    "Light Troops",
-                    "Wizard Adept",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Awaken the Beast",
-                    "Swarm of Insects",
-                    "Sainted"
+                    {
+                        "name": "General",
+                        "type": "Leadership"
+                    },
+                    {
+                        "name": "Light Troops",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Wizard Adept",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Swarm of Insects",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Sainted",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -58,9 +121,18 @@
                 "name": "Lowborn Levies",
                 "cost": 414,
                 "options": [
-                    "Spear and Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Spear and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 46,
@@ -70,9 +142,18 @@
                 "name": "Lowborn Levies",
                 "cost": 240,
                 "options": [
-                    "Halberd and Shield",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Halberd and Shield",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 1,
                 "models": 30,
@@ -82,8 +163,14 @@
                 "name": "Hedge Knights",
                 "cost": 355,
                 "options": [
-                    "Standard Bearer",
-                    "Knight Banneret"
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -93,12 +180,30 @@
                 "name": "Men-at-Arms",
                 "cost": 595,
                 "options": [
-                    "Relic Shroud",
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Knight Banneret",
-                    "Knights Forlorn"
+                    {
+                        "name": "Relic Shroud",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knights Forlorn",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "models": 30,
@@ -108,10 +213,22 @@
                 "name": "Knights of the Quest",
                 "cost": 585,
                 "options": [
-                    "Stalker's Standard",
-                    "Standard Bearer",
-                    "Musician",
-                    "Knight Banneret"
+                    {
+                        "name": "Stalker's Standard",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Knight Banneret",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -121,7 +238,10 @@
                 "name": "Siege Weapon",
                 "cost": 185,
                 "options": [
-                    "Trebuchet and change its Height to 3"
+                    {
+                        "name": "Trebuchet and change its Height to 3",
+                        "type": "Artillery Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Special"
@@ -130,7 +250,10 @@
                 "name": "Fey Knight",
                 "cost": 360,
                 "options": [
-                    "Chosen of the Snow Childe"
+                    {
+                        "name": "Chosen of the Snow Childe",
+                        "type": "Other"
+                    }
                 ],
                 "index": 0,
                 "category": "Fey"
@@ -139,9 +262,18 @@
                 "name": "Naiads",
                 "cost": 245,
                 "options": [
-                    "Chance of Redemption",
-                    "Wizard Conclave",
-                    "Illusory Paths"
+                    {
+                        "name": "Chance of Redemption",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Illusory Paths",
+                        "type": "Spell"
+                    }
                 ],
                 "index": 0,
                 "models": 5,
@@ -161,13 +293,34 @@
                 "name": "Tegu Veteran",
                 "cost": 780,
                 "options": [
-                    "Alpha Carnosaur",
-                    "Rex",
-                    "Enclave Wizard",
-                    "Shamanism",
-                    "Predator's Instinct",
-                    "Paired Weapons",
-                    "Obsidian Rock"
+                    {
+                        "name": "Alpha Carnosaur",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Rex",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Enclave Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Shamanism",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Predator's Instinct",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Obsidian Rock",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -176,15 +329,42 @@
                 "name": "Tegu Veteran",
                 "cost": 415,
                 "options": [
-                    "Saurian Raptor",
-                    "Enclave Wizard",
-                    "Evocation",
-                    "Whispers of the Veil",
-                    "Basalt Infusion",
-                    "Touch of Greatness",
-                    "Eldritch Inscriptions",
-                    "Paired Weapons",
-                    "Talisman of the Void"
+                    {
+                        "name": "Saurian Raptor",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Enclave Wizard",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Evocation",
+                        "type": "Path"
+                    },
+                    {
+                        "name": "Whispers of the Veil",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Basalt Infusion",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Touch of Greatness",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Eldritch Inscriptions",
+                        "type": "Special Items"
+                    },
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Talisman of the Void",
+                        "type": "Special Items"
+                    }
                 ],
                 "index": 1,
                 "category": "Characters"
@@ -193,10 +373,22 @@
                 "name": "Skink Veteran",
                 "cost": 280,
                 "options": [
-                    "Paired Weapons",
-                    "Serpent's Nest Charm",
-                    "Pouakai Sky Tyrant",
-                    "Poisoned Javelin"
+                    {
+                        "name": "Paired Weapons",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Serpent's Nest Charm",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Pouakai Sky Tyrant",
+                        "type": "Mount"
+                    },
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "Characters"
@@ -205,12 +397,30 @@
                 "name": "Caiman Warriors",
                 "cost": 525,
                 "options": [
-                    "Awaken the Beast",
-                    "Obelisk of Collaboration",
-                    "Tooth and Claw",
-                    "Wizard Conclave",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Awaken the Beast",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Obelisk of Collaboration",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Tooth and Claw",
+                        "type": "Melee Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 8,
@@ -220,10 +430,22 @@
                 "name": "Skink Warriors",
                 "cost": 265,
                 "options": [
-                    "Entwining Roots",
-                    "Magnetic Short Bow",
-                    "Wizard Conclave",
-                    "Standard Bearer"
+                    {
+                        "name": "Entwining Roots",
+                        "type": "Spell"
+                    },
+                    {
+                        "name": "Magnetic Short Bow",
+                        "type": "Shooting Weapons"
+                    },
+                    {
+                        "name": "Wizard Conclave",
+                        "type": "Wizard Level"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 20,
@@ -233,7 +455,10 @@
                 "name": "Skink Hunters",
                 "cost": 219,
                 "options": [
-                    "Poisoned Javelin"
+                    {
+                        "name": "Poisoned Javelin",
+                        "type": "Shooting Weapons"
+                    }
                 ],
                 "index": 0,
                 "models": 19,
@@ -243,9 +468,18 @@
                 "name": "Raptor Riders",
                 "cost": 450,
                 "options": [
-                    "Koru Stone",
-                    "Standard Bearer",
-                    "Musician"
+                    {
+                        "name": "Koru Stone",
+                        "type": "Other"
+                    },
+                    {
+                        "name": "Standard Bearer",
+                        "type": "Command Group"
+                    },
+                    {
+                        "name": "Musician",
+                        "type": "Command Group"
+                    }
                 ],
                 "index": 0,
                 "models": 9,
@@ -263,7 +497,10 @@
                 "name": "Carnosaur",
                 "cost": 340,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 0,
                 "category": "magna sauria"
@@ -272,7 +509,10 @@
                 "name": "Carnosaur",
                 "cost": 340,
                 "options": [
-                    "Light Lance"
+                    {
+                        "name": "Light Lance",
+                        "type": "Melee Weapons"
+                    }
                 ],
                 "index": 1,
                 "category": "magna sauria"
