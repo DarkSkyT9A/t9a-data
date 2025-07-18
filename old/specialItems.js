@@ -130,7 +130,7 @@ const idItems = {
 
 // KoE
 const koeItems = {
-    "Weapon": ["Divine Judgment", "Tristan's Resolve", "Mortal Reminder", "Uther's Mettle",],
+    "Weapon": ["Divine Judgement", "Tristan's Resolve", "Mortal Reminder", "Uther's Mettle",],
     "Armour": ["Prayer Etched", "Percival's Panoply",],
     "Shield": ["Fortress of Faith",],
     "Artefact": ["Sacred Chalice",],
