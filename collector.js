@@ -137,7 +137,7 @@ function transformReport(report, tournamentId) {
   // Check for whether or not to drop
   // Handshake game, do not count
   if(report.handshake) {
-    console.error(`${tournamentId}/${report.id_match} - Handshake Game, skipping…`);
+    // console.error(`${tournamentId}/${report.id_match} - Handshake Game, skipping…`);
     skippedGames++;
     return undefined;
   }
@@ -152,14 +152,14 @@ function transformReport(report, tournamentId) {
 
   // One of the armies is not identifyable
   if(!report.players[0].id_book || !report.players[1].id_book) {
-    console.error(`${tournamentId}/report_${report.id_match}.json - Report does not contain armies: ${report.players[0].id_book} // ${report.players[1].id_book} `);
+    // console.error(`${tournamentId}/report_${report.id_match}.json - Report does not contain armies: ${report.players[0].id_book} // ${report.players[1].id_book} `);
     skippedGames++;
     return undefined;
   }
 
   // No score
   if(typeof report.score[0]?.BPObj !== "number" || typeof report.score[1].BPObj !== "number") {
-    console.error(`${tournamentId}/report_${report.id_match}.json - Report does not contain a result: ${report.score[0]?.BPObj} // ${report.score[1].BPObj} `);
+    // console.error(`${tournamentId}/report_${report.id_match}.json - Report does not contain a result: ${report.score[0]?.BPObj} // ${report.score[1].BPObj} `);
     skippedGames++;
     return undefined;
   }

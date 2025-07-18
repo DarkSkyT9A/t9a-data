@@ -6500,30 +6500,39 @@ function determineCategory(unit, army) {
     }
     // Headbashers
     else if (["Feral Orcs", "Feral Orc Marauders", "Veteran Orcs", "Veteran Orc Marauders"].includes(unit.name)) {
-        console.log(JSON.stringify(unit.options));
+        // console.log(JSON.stringify(unit.options));
         if (unit.options.some(o => o.name === "Headbashers")) {
             return SPECIAL;
         }
     }
     // Conditional Core
-    else if (unitEntry.conditionalCore && unit.models >= unitEntry.conditionalCore) {
-        return CORE;
+    else if (unitEntry.conditionalCore) {
+        // console.log(`Found unit with conditional core, checking: ${JSON.stringify(unit)}`);
+        if(unit.models >= unitEntry.conditionalCore) {
+            // console.log(`Treating the following unit as core: ${JSON.stringify(unit, null, 4)}`);
+            return CORE;
+        }
     }
 
-    return units[army].find(u => u.name === unit.name).category;
+    return unitEntry.category;
 }
 
 function summarizeCategoryPoints(list, army) {
     let coreFactor = army === "WDG" ? 1.25 : 1.00;
-    if (army === "OK" && list.units.some(u => u.options?.Leadership?.includes("Wildheart"))) {
+    if (army === "OK" && list.units.some(u => u.options.some(o => o.name ==="Wildheart"))) {
+        console.log(`Found wilheart list for OK`);
         coreFactor = 1.25;
     }
     list.pointsPerCategory = {
-        "Characters": list.units.reduce((a, b) => a + (b.category === "Characters" ? b.cost : 0), 0),
-        "Core": list.units.reduce((a, b) => a + (b.category === "Core" ? b.cost : 0), 0) * coreFactor,
-        "Special": list.units.reduce((a, b) => a + (b.category === "Special" ? b.cost : 0), 0),
+        "Characters": list.units.reduce((a, b) => a + (b.category === CHARACTERS ? b.cost : 0), 0),
+        "Core": list.units.reduce((a, b) => a + (b.category === CORE ? b.cost : 0), 0) * coreFactor,
+        "Special": list.units.reduce((a, b) => a + (b.category === SPECIAL ? b.cost : 0), 0),
         "Total": list.units.reduce((a, b) => a + b.cost, 0)
     };
+
+    // if(list.pointsPerCategory.Core < 1000) {
+    //     console.error(`Core Error for ${army}: ${JSON.stringify(list, null, 4)}`);
+    // }
 }
 
 module.exports = {

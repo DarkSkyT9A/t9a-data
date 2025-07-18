@@ -11,7 +11,7 @@
     "collect": "node ./collector.js",
     "present": "node ./presenter.js --minParticipants=12 --type=all",
     "debug": "node ./main.js -d -e -p -o -z --minParticipants=12 --type=all",
-    "nocolour": "npm run start | ./node_modules/strip-ansi-cli/cli.js"
+    "nocolour": "npm run present | ./node_modules/strip-ansi-cli/cli.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
