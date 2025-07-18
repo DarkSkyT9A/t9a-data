@@ -17,206 +17,206 @@ const sharedBanner = ["Banner of Courage", "Banner of Speed", "Distortion Emblem
 
 const arcCompAll = commonWeapon.concat(sharedWeapon, commonArmour, sharedArmour, commonShield, sharedShield, commonArtefact, sharedArtefact, commonPotion, sharedPotion, commonBanner, sharedBanner);
 const arcCompCommon = {
-    "weapon": commonWeapon,
-    "armour": commonArmour,
-    "shield": commonShield,
-    "artefact": commonArtefact,
-    "potion": commonPotion,
-    "banner": commonBanner,
+    "Weapon": commonWeapon,
+    "Armour": commonArmour,
+    "Shield": commonShield,
+    "Artefact": commonArtefact,
+    "Potion": commonPotion,
+    "Banner": commonBanner,
 };
 
 
 const arcCompShared = {
-    "weapon": sharedWeapon,
-    "armour": sharedArmour,
-    "shield": sharedShield,
-    "artefact": sharedArtefact,
-    "potion": sharedPotion,
-    "banner": sharedBanner,
+    "Weapon": sharedWeapon,
+    "Armour": sharedArmour,
+    "Shield": sharedShield,
+    "Artefact": sharedArtefact,
+    "Potion": sharedPotion,
+    "Banner": sharedBanner,
 };
 
 const sharedItems = {
-    "weapon": {
-        "eldritch inscriptions": ["he", "ok", "ong", "sa", "se", "vc", "vs",],
-        "hero's heart": ["bh", "de", "eos", "id", "koe", "ok", "ud", "wdg",],
-        "shield breaker": ["de", "id", "koe", "ok", "ong", "sa", "wdg",],
-        "supernatural dexterity": ["bh", "de", "he", "se", "vc", "wdg",],
+    "Weapon": {
+        "Eldritch Inscriptions": ["he", "ok", "ong", "sa", "se", "vc", "vs",],
+        "Hero's Heart": ["bh", "de", "eos", "id", "koe", "ok", "ud", "wdg",],
+        "Shield Breaker": ["de", "id", "koe", "ok", "ong", "sa", "wdg",],
+        "Supernatural Dexterity": ["bh", "de", "he", "se", "vc", "wdg",],
     },
-    "armour": {
-        "death cheater": ["bh", "de", "ok", "ong", "sa", "vc", "vs", "wdg",],
-        "ghostly guard": ["eos", "he", "id", "koe", "sa", "se", "ud", "vc",],
+    "Armour": {
+        "Death Cheater": ["bh", "de", "ok", "ong", "sa", "vc", "vs", "wdg",],
+        "Ghostly Guard": ["eos", "he", "id", "koe", "sa", "se", "ud", "vc",],
     },
-    "shield": {
-        "dusk forged": ["eos", "he", "id", "koe", "sa", "vc", "wdg",],
-        "sigil of protection": ["eos", "he", "id", "koe", "wdg",],
+    "Shield": {
+        "Dusk Forged": ["eos", "he", "id", "koe", "sa", "vc", "wdg",],
+        "Sigil of Protection": ["eos", "he", "id", "koe", "wdg",],
     },
-    "artefact": {
-        "essence of a free mind": ["eos", "he", "id", "sa", "se", "ud", "vc",],
-        "mask of mindless violence": ["bh", "de", "ong", "sa", "vc", "wdg",],
-        "obsidian rock": ["he", "id", "sa", "se", "ud", "vc", "vs",],
-        "rod of battle": ["he", "ok", "se", "vc", "vs", "wdg",],
+    "Artefact": {
+        "Essence of a Free Mind": ["eos", "he", "id", "sa", "se", "ud", "vc",],
+        "Mask of Mindless Violence": ["bh", "de", "ong", "sa", "vc", "wdg",],
+        "Obsidian Rock": ["he", "id", "sa", "se", "ud", "vc", "vs",],
+        "Rod of Battle": ["he", "ok", "se", "vc", "vs", "wdg",],
     },
-    "potion": {
-        "potion of healing": ["bh", "de", "koe", "ok", "ong", "se", "vs",],
-        "scroll of draining": ["eos", "koe", "ok", "ong", "se", "ud",],
-        "scroll of power": ["bh", "de", "eos", "he", "ok", "sa", "ud", "vs",],
-        "spell scroll": ["bh", "de", "eos", "id", "ong", "se", "ud", "vs", "wdg",],
+    "Potion": {
+        "Potion of Healing": ["bh", "de", "koe", "ok", "ong", "se", "vs",],
+        "Scroll of Draining": ["eos", "koe", "ok", "ong", "se", "ud",],
+        "Scroll of Power": ["bh", "de", "eos", "he", "ok", "sa", "ud", "vs",],
+        "Spell Scroll": ["bh", "de", "eos", "id", "ong", "se", "ud", "vs", "wdg",],
     },
-    "banner": {
-        "banner of courage": ["bh", "de", "id", "koe", "ok", "ong", "vs",],
-        "banner of speed": ["bh", "de", "koe", "ok", "ong", "ud", "vc", "vs", "wdg",],
-        "distortion emblem": ["bh", "eos", "he", "koe", "ong", "ud", "vs",],
-        "rending banner": ["eos", "id", "sa", "se",],
+    "Banner": {
+        "Banner of Courage": ["bh", "de", "id", "koe", "ok", "ong", "vs",],
+        "Banner of Speed": ["bh", "de", "koe", "ok", "ong", "ud", "vc", "vs", "wdg",],
+        "Distortion Emblem": ["bh", "eos", "he", "koe", "ong", "ud", "vs",],
+        "Rending Banner": ["eos", "id", "sa", "se",],
     }
 };
 
 // BH
 const bhItems = {
-    "weapon": ["hawthorne curse", "ancestral carvings", "fatal folly", "twin hungers",],
-    "armour": ["aaghor's affliction", "trickster's cunning", "wild form",],
-    "shield": ["obscuring fog",],
-    "artefact": ["pillager icon", "crown of madness", "horn of bragh", "eye of dominance",],
-    "potion": ["rain augur brew", "seed of the dark forest",],
-    "banner": ["banner of the wild herd",],
+    "Weapon": ["Hawthorne Curse", "Ancestral Carvings", "Fatal Folly", "Twin Hungers",],
+    "Armour": ["Aaghor's Affliction", "Trickster's Cunning", "Wild Form",],
+    "Shield": ["Obscuring Fog",],
+    "Artefact": ["Pillager Icon", "Crown of Madness", "Horn of Bragh", "Eye of Dominance",],
+    "Potion": ["Rain Augur Brew", "Seed of the Dark Forest",],
+    "Banner": ["Banner of the Wild Herd",],
 };
 
 // DE
 const deItems = {
-    "weapon": ["mastery of slaughter", "height of hubris", "lacerating touch", "transcendence", "pride of gar daecos",],
-    "armour": ["seal of the republic",],
-    "shield": [],
-    "artefact": ["ceinran's scales", "moithir's mirror", "ring of the obsidian thrones",],
-    "potion": ["beastmaster's vial",],
-    "banner": ["caedhren's pennon", "banner of urlain", "eye of the gorgon",],
+    "Weapon": ["Mastery of Slaughter", "Height of Hubris", "Lacerating Touch", "Transcendence", "Pride of Gar Daecos",],
+    "Armour": ["Seal of the Republic",],
+    "Shield": [],
+    "Artefact": ["Ceinran's Scales", "Moithir's Mirror", "Ring of the Obsidian Thrones",],
+    "Potion": ["Beastmaster's Vial",],
+    "Banner": ["Caedhren's Pennon", "Banner of Urlain", "Eye of the Gorgon",],
 };
 
 // DH
 const dhItems = {
-    "weapon": ["rune of destruction", "rune of smashing", "rune of quickening", "rune of might", "rune of penetration", "rune of anger", "rune of precision", "rune of craftmanship", "rune of lightning", "rune of fire", "rune of returning",],
-    "armour": ["rune of steel", "rune of resistance", "rune of iron", "rune of retribution", "rune of the forge",],
-    "shield": [],
-    "artefact": ["rune of denial", "rune of devouring", "rune of grounding", "rune of harnessing", "rune of channelling", "rune of dragon's breath", "rune of readiness", "rune of shielding", "rune of the courage", "rune of storms", "rune of kinship", "rune of mining",],
-    "potion": [],
-    "banner": ["runic standard of the hold", "runic standard of swiftness", "runic standard of grudges", "runic standard of wisdom", "runic standard of dismay", "runic standard of steadiness", "runic standard of the anvil",],
+    "Weapon": ["Rune of Destruction", "Rune of Smashing", "Rune of Quickening", "Rune of Might", "Rune of Penetration", "Rune of Anger", "Rune of Precision", "Rune of Craftmanship", "Rune of Lightning", "Rune of Fire", "Rune of Returning",],
+    "Armour": ["Rune of Steel", "Rune of Resistance", "Rune of Iron", "Rune of Retribution", "Rune of the Forge",],
+    "Shield": [],
+    "Artefact": ["Rune of Denial", "Rune of Devouring", "Rune of Grounding", "Rune of Harnessing", "Rune of Channelling", "Rune of Dragon's Breath", "Rune of Readiness", "Rune of Shielding", "Rune of the Courage", "Rune of Storms", "Rune of Kinship", "Rune of Mining",],
+    "Potion": [],
+    "Banner": ["Runic Standard of the Hold", "Runic Standard of Swiftness", "Runic Standard of Grudges", "Runic Standard of Wisdom", "Runic Standard of Dismay", "Runic Standard of Steadiness", "Runic Standard of the Anvil",],
 };
 // DL
 // EoS
 const eosItems = {
-    "weapon": ["the light of sonnstahl", "hammer of witches", "death warrant",],
-    "armour": ["imperial seal", "blacksteel",],
-    "shield": ["witchfire guard", "shield of volund",],
-    "artefact": ["locket of sunna", "winter cloak", "exemplar's flame", "ullor's horn",],
-    "potion": ["scroll of conquest",],
-    "banner": ["war college banner", "banner of unity", "marksman's pennant",],
+    "Weapon": ["The Light of Sonnstahl", "Hammer of Witches", "Death Warrant",],
+    "Armour": ["Imperial Seal", "Blacksteel",],
+    "Shield": ["Witchfire Guard", "Shield of Volund",],
+    "Artefact": ["Locket of Sunna", "Winter Cloak", "Exemplar's Flame", "Ullor's Horn",],
+    "Potion": ["Scroll of Conquest",],
+    "Banner": ["War College Banner", "Banner of Unity", "Marksman's Pennant",],
 };
 
 // HE
 const heItems = {
-    "weapon": ["sliver of the blazing dawn", "nova flare", "cadaron's heartwood", /* TODO report this to NR */ "cadaron’s heartwood", "elemental blade",],
-    "armour": ["star metal alloy", "gleaming robe", "protection of dorac", "daemon's bane",],
-    "artefact": ["diadem of protection", "amethyst crystal", "book of meladys",],
-    "potion": ["scroll of the pearl throne",],
-    "banner": ["war banner of rymâ", "navigator's banner", "banner of becalming",],
+    "Weapon": ["Sliver of the Blazing Dawn", "Nova Flare", "Cadaron's Heartwood", /* Todo Report This To Nr */ "Cadaron’S Heartwood", "Elemental Blade",],
+    "Armour": ["Star Metal Alloy", "Gleaming Robe", "Protection of Dorac", "Daemon's Bane",],
+    "Artefact": ["Diadem of Protection", "Amethyst Crystal", "Book of Meladys",],
+    "Potion": ["Scroll of the Pearl Throne",],
+    "Banner": ["War Banner of Rymâ", "Navigator's Banner", "Banner of Becalming",],
 };
 
 // ID
 const idItems = {
-    "weapon": ["onyx core", "flame of the east", "eye of the bull",],
-    "armour": ["blaze of protection",],
-    "shield": ["kadim binding",],
-    "artefact": ["breath of the brass bull", "ring of desiccation", "tablet of vezodinezh", "mask of ages", "golden idol of shamut", "lugar's dice",],
-    "banner": ["banner of shamut", "banner of the twice-branded", "their master's banner",],
+    "Weapon": ["Onyx Core", "Flame of the East", "Eye of the Bull",],
+    "Armour": ["Blaze of Protection",],
+    "Shield": ["Kadim Binding",],
+    "Artefact": ["Breath of the Brass Bull", "Ring of Desiccation", "Tablet of Vezodinezh", "Mask of Ages", "Golden Idol of Shamut", "Lugar's Dice",],
+    "Banner": ["Banner of Shamut", "Banner of the Twice-Branded", "Their Master's Banner",],
 };
 
 // KoE
 const koeItems = {
-    "weapon": ["divine judgment", "tristan's resolve", "mortal reminder", "uther's mettle",],
-    "armour": ["prayer etched", "percival's panoply",],
-    "shield": ["fortress of faith",],
-    "artefact": ["sacred chalice",],
-    "potion": ["black knight's tonic",],
-    "banner": ["relic shroud", "oriflamme", "banner of roland", "castellan's crest", "lady's favour",],
+    "Weapon": ["Divine Judgment", "Tristan's Resolve", "Mortal Reminder", "Uther's Mettle",],
+    "Armour": ["Prayer Etched", "Percival's Panoply",],
+    "Shield": ["Fortress of Faith",],
+    "Artefact": ["Sacred Chalice",],
+    "Potion": ["Black Knight's Tonic",],
+    "Banner": ["Relic Shroud", "Oriflamme", "Banner of Roland", "Castellan's Crest", "Lady's Favour",],
 };
 
 // OK
 const okItems = {
-    "weapon": ["khagadai's legacy", "viper's curse", "ritual bloodletter", "heart-ripper",],
-    "armour": ["wrestler's belt", "mammoth-hide cloak", "aurochs resilience",],
-    "artefact": ["lygur's tongue", "yeti furs", "rampager's chain",],
-    "banner": ["banner of the gyengget", "pennant of the great grass sky", "skull of qenghet",],
+    "Weapon": ["Khagadai's Legacy", "Viper's Curse", "Ritual Bloodletter", "Heart-Ripper",],
+    "Armour": ["Wrestler's Belt", "Mammoth-Hide Cloak", "Aurochs Resilience",],
+    "Artefact": ["Lygur's Tongue", "Yeti Furs", "Rampager's Chain",],
+    "Banner": ["Banner of the Gyengget", "Pennant of the Great Grass Sky", "Skull of Qenghet",],
 };
 
 // OnG
 const ongItems = {
-    "weapon": ["omen of the apocalypse", "attack gnasher",],
-    "armour": ["tazrek's guard",],
-    "artefact": ["skull fetish", "monster munch", "pan of protection pinchin'", "troll hide",],
-    "potion": ["moon shrooms", "gnasher bait",],
-    "banner": ["goga cauldron",],
+    "Weapon": ["Omen of the Apocalypse", "Attack Gnasher",],
+    "Armour": ["Tazrek's Guard",],
+    "Artefact": ["Skull Fetish", "Monster Munch", "Pan of Protection Pinchin'", "Troll Hide",],
+    "Potion": ["Moon Shrooms", "Gnasher Bait",],
+    "Banner": ["Goga Cauldron",],
 };
 
 // SA
 const saItems = {
-    "weapon": ["glory of the dawn age", "alchemical arrows", "serpent's nest charm",],
-    "armour": ["vital essence",],
-    "artefact": ["ancient plaque", "imbued jade", "starfall lodestone", "carved tablet",],
-    "potion": ["stampede resonator crystal", "te aupouri smokestone",],
-    "banner": ["koru stone", "obelisk of collaboration",],
+    "Weapon": ["Glory of the Dawn Age", "Alchemical Arrows", "Serpent's Nest Charm",],
+    "Armour": ["Vital Essence",],
+    "Artefact": ["Ancient Plaque", "Imbued Jade", "Starfall Lodestone", "Carved Tablet",],
+    "Potion": ["Stampede Resonator Crystal", "Te Aupouri Smokestone",],
+    "Banner": ["Koru Stone", "Obelisk of Collaboration",],
 };
 
 // SE
 const seItems = {
-    "weapon": ["bough of wyscan", "hunter's honour", "oaken might", "spirit of the whirlwind", "spirit arrows",],
-    "armour": ["shielding bark",],
-    "artefact": ["hail shot", "mist walker's mirror", "horn of the wild hunt", "glpyh of amryl",],
-    "potion": ["sacred seeds", "song of cenryn",],
-    "banner": ["banner of deception", "predator pennant", "banner of silent mist",],
+    "Weapon": ["Bough of Wyscan", "Hunter's Honour", "Oaken Might", "Spirit of the Whirlwind", "Spirit Arrows",],
+    "Armour": ["Shielding Bark",],
+    "Artefact": ["Hail Shot", "Mist Walker's Mirror", "Horn of the Wild Hunt", "Glpyh of Amryl",],
+    "Potion": ["Sacred Seeds", "Song of Cenryn",],
+    "Banner": ["Banner of Deception", "Predator Pennant", "Banner of Silent Mist",],
 };
 
 // UD
 const udItems = {
-    "weapon": ["godslayer", "scourge of kings",],
-    "armour": ["jackal's blessing", "sandstorm cloak",],
-    "shield": ["sun's embrace",],
-    "artefact": ["sacred hourglass", "crown of the pharaohs", "death mask of teput", "book of the dead", "kherp sceptre", "blessed wrappings",],
-    "potion": ["scroll of desiccation",],
-    "banner": ["icon of reflection", "sigil of the closed gates", "banner of the entombed",],
+    "Weapon": ["Godslayer", "Scourge of Kings",],
+    "Armour": ["Jackal's Blessing", "Sandstorm Cloak",],
+    "Shield": ["Sun's Embrace",],
+    "Artefact": ["Sacred Hourglass", "Crown of the Pharaohs", "Death Mask of Teput", "Book of the Dead", "Kherp Sceptre", "Blessed Wrappings",],
+    "Potion": ["Scroll of Desiccation",],
+    "Banner": ["Icon of Reflection", "Sigil of the Closed Gates", "Banner of the Entombed",],
 };
 
 // VC
 const vcItems = {
-    "weapon": ["reaper's harvest", "true thirst",],
-    "armour": ["legend of the black king",],
-    "artefact": ["necromantic staff", "night's crown", "hypnotic pendant", "eternity gem", "cursed medallion",],
-    "banner": ["black standard of zagvozd", "banner of eldritch might",],
+    "Weapon": ["Reaper's Harvest", "True Thirst",],
+    "Armour": ["Legend of the Black King",],
+    "Artefact": ["Necromantic Staff", "Night's Crown", "Hypnotic Pendant", "Eternity Gem", "Cursed Medallion",],
+    "Banner": ["Black Standard of Zagvozd", "Banner of Eldritch Might",],
 };
 
 // VS
 const vsItems = {
-    "weapon": ["secrets of the doom blade", "storm rocket", "rodentium bullets", "swarm master",],
-    "armour": ["plague-hermit's blessing",],
-    "artefact": ["crown of hubris", "crown of the usurper", "darkstone detonator", "tome of the ratking", "tarina's lyre",],
-    "potion": ["favanite powder", "potion of rat form",],
-    "banner": ["sacred aquila", "bell of the deep roads",],
+    "Weapon": ["Secrets of the Doom Blade", "Storm Rocket", "Rodentium Bullets", "Swarm Master",],
+    "Armour": ["Plague-Hermit's Blessing",],
+    "Artefact": ["Crown of Hubris", "Crown of the Usurper", "Darkstone Detonator", "Tome of the Ratking", "Tarina's Lyre",],
+    "Potion": ["Favanite Powder", "Potion of Rat Form",],
+    "Banner": ["Sacred Aquila", "Bell of the Deep Roads",],
 };
 
 // WDG
 const wdgItems = {
-    "weapon": ["burning portent", "symbol of slaughter",],
-    "armour": ["thrice-forged", "gladiator's spirit",],
-    "artefact": ["veilgate orb", "dark familiar", "immortal gauntlets", "lord of the damned",],
-    "potion": ["wyrd stone"],
-    "banner": ["zealots' banner", "icon of the infinite", "wasteland torch",],
+    "Weapon": ["Burning Portent", "Symbol of Slaughter",],
+    "Armour": ["Thrice-Forged", "Gladiator's Spirit",],
+    "Artefact": ["Veilgate Orb", "Dark Familiar", "Immortal Gauntlets", "Lord of the Damned",],
+    "Potion": ["Wyrd Stone"],
+    "Banner": ["Zealots' Banner", "Icon of the Infinite", "Wasteland Torch",],
 };
 
 const allItems = arcCompAll.concat(Object.values(bhItems).flat(), Object.values(deItems).flat(), Object.values(dhItems).flat(), Object.values(eosItems).flat(), Object.values(heItems).flat(), Object.values(idItems).flat(), Object.values(koeItems).flat(), Object.values(okItems).flat(), Object.values(ongItems).flat(), Object.values(saItems).flat(), Object.values(seItems).flat(), Object.values(udItems).flat(), Object.values(vcItems).flat(), Object.values(vsItems).flat(), Object.values(wdgItems).flat());
 
-const allWeapon = arcCompCommon.weapon.concat(sharedWeapon, bhItems.weapon, deItems.weapon, dhItems.weapon, eosItems.weapon, heItems.weapon, idItems.weapon, koeItems.weapon, okItems.weapon, ongItems.weapon, saItems.weapon, seItems.weapon, udItems.weapon, vcItems.weapon, vsItems.weapon, wdgItems.weapon);
-const allArmour = arcCompCommon.armour.concat(sharedArmour, bhItems.armour, deItems.armour, dhItems.armour, eosItems.armour, heItems.armour, idItems.armour, koeItems.armour, okItems.armour, ongItems.armour, saItems.armour, seItems.armour, udItems.armour, vcItems.armour, vsItems.armour, wdgItems.armour);
-const allShield = arcCompCommon.shield.concat(sharedShield, bhItems.shield, deItems.shield, dhItems.shield, eosItems.shield, heItems.shield, idItems.shield, koeItems.shield, okItems.shield, ongItems.shield, saItems.shield, seItems.shield, udItems.shield, vcItems.shield, vsItems.shield, wdgItems.shield);
-const allArtefact = arcCompCommon.artefact.concat(sharedArtefact, bhItems.artefact, deItems.artefact, dhItems.artefact, eosItems.artefact, heItems.artefact, idItems.artefact, koeItems.artefact, okItems.artefact, ongItems.artefact, saItems.artefact, seItems.artefact, udItems.artefact, vcItems.artefact, vsItems.artefact, wdgItems.artefact);
-const allPotion = arcCompCommon.potion.concat(sharedPotion, bhItems.potion, deItems.potion, dhItems.potion, eosItems.potion, heItems.potion, idItems.potion, koeItems.potion, okItems.potion, ongItems.potion, saItems.potion, seItems.potion, udItems.potion, vcItems.potion, vsItems.potion, wdgItems.potion);
-const allBanner = arcCompCommon.banner.concat(sharedBanner, bhItems.banner, deItems.banner, dhItems.banner, eosItems.banner, heItems.banner, idItems.banner, koeItems.banner, okItems.banner, ongItems.banner, saItems.banner, seItems.banner, udItems.banner, vcItems.banner, vsItems.banner, wdgItems.banner);
+const allWeapon = arcCompCommon.Weapon.concat(sharedWeapon, bhItems.Weapon, deItems.Weapon, dhItems.Weapon, eosItems.Weapon, heItems.Weapon, idItems.Weapon, koeItems.Weapon, okItems.Weapon, ongItems.Weapon, saItems.Weapon, seItems.Weapon, udItems.Weapon, vcItems.Weapon, vsItems.Weapon, wdgItems.Weapon);
+const allArmour = arcCompCommon.Armour.concat(sharedArmour, bhItems.Armour, deItems.Armour, dhItems.Armour, eosItems.Armour, heItems.Armour, idItems.Armour, koeItems.Armour, okItems.Armour, ongItems.Armour, saItems.Armour, seItems.Armour, udItems.Armour, vcItems.Armour, vsItems.Armour, wdgItems.Armour);
+const allShield = arcCompCommon.Shield.concat(sharedShield, bhItems.Shield, deItems.Shield, dhItems.Shield, eosItems.Shield, heItems.shield, idItems.Shield, koeItems.Shield, okItems.shield, ongItems.shield, saItems.shield, seItems.shield, udItems.Shield, vcItems.shield, vsItems.shield, wdgItems.shield);
+const allArtefact = arcCompCommon.Artefact.concat(sharedArtefact, bhItems.Artefact, deItems.Artefact, dhItems.Artefact, eosItems.Artefact, heItems.Artefact, idItems.Artefact, koeItems.Artefact, okItems.Artefact, ongItems.Artefact, saItems.Artefact, seItems.Artefact, udItems.Artefact, vcItems.Artefact, vsItems.Artefact, wdgItems.Artefact);
+const allPotion = arcCompCommon.Potion.concat(sharedPotion, bhItems.Potion, deItems.Potion, dhItems.Potion, eosItems.Potion, heItems.Potion, idItems.potion, koeItems.Potion, okItems.potion, ongItems.Potion, saItems.Potion, seItems.Potion, udItems.Potion, vcItems.potion, vsItems.Potion, wdgItems.Potion);
+const allBanner = arcCompCommon.Banner.concat(sharedBanner, bhItems.Banner, deItems.Banner, dhItems.Banner, eosItems.Banner, heItems.Banner, idItems.Banner, koeItems.Banner, okItems.Banner, ongItems.Banner, saItems.Banner, seItems.Banner, udItems.Banner, vcItems.Banner, vsItems.Banner, wdgItems.Banner);
 
 // exports
 module.exports = {
