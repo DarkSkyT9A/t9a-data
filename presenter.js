@@ -4,6 +4,7 @@
 const fs = require("node:fs");
 const args = require('yargs').argv;
 const { arcCompAll, arcCompCommon, arcCompShared} = require("./old/specialItems");
+const units = require("./old/units.js");
 
 // Constants
 const DEFAULT_START_DATE = "2025-03-05";
@@ -43,6 +44,7 @@ let armies = {
     "pointsSecond": [],
     "pointsUnknown": [],
     "core" : [],
+    "units" : units.BH,
     "vs": {
       "BH": {
         "results": []
@@ -95,11 +97,11 @@ let armies = {
     }
   },
   "DE": {
-    
     "points": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.DE,
     "vs": {
       "BH": {
         "results": []
@@ -157,6 +159,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.DH,
     "vs": {
       "BH": {
         "results": []
@@ -214,6 +217,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.DL,    
     "vs": {
       "BH": {
         "results": []
@@ -271,6 +275,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.EoS,
     "vs": {
       "BH": {
         "results": []
@@ -328,6 +333,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.HE,
     "vs": {
       "BH": {
         "results": []
@@ -385,6 +391,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.ID,
     "vs": {
       "BH": {
         "results": []
@@ -442,6 +449,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.KoE,
     "vs": {
       "BH": {
         "results": []
@@ -499,6 +507,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.OK,
     "vs": {
       "BH": {
         "results": []
@@ -556,6 +565,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.OnG,
     "vs": {
       "BH": {
         "results": []
@@ -613,6 +623,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.SA,
     "vs": {
       "BH": {
         "results": []
@@ -670,6 +681,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.SE,
     "vs": {
       "BH": {
         "results": []
@@ -727,6 +739,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.UD,
     "vs": {
       "BH": {
         "results": []
@@ -784,6 +797,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.VC,
     "vs": {
       "BH": {
         "results": []
@@ -841,6 +855,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.VS,
     "vs": {
       "BH": {
         "results": []
@@ -898,6 +913,7 @@ let armies = {
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
+    "units" : units.WDG,
     "vs": {
       "BH": {
         "results": []
@@ -950,7 +966,6 @@ let armies = {
     }
   },
 };
-
 
 fs.readdirSync("data").forEach(folder => {
   // Read metadata and decide whether to go on or not with this tournament
@@ -1022,8 +1037,8 @@ fs.readdirSync("data").forEach(folder => {
     }
 
     // Count Options
-    countOptionsForList(report?.armyListOne?.units);
-    countOptionsForList(report?.armyListTwo?.units);
+    countOptionsForList(report?.armyListOne?.units, report.armyOne);
+    countOptionsForList(report?.armyListTwo?.units, report.armyTwo);
   });
 });
 
@@ -1098,6 +1113,9 @@ displayCoreShares();
 // Display global special item pick rates
 displayGlobalItems();
 
+// Display unit pick rates
+displayUnitPickRates();
+
 
 
 
@@ -1105,15 +1123,25 @@ displayGlobalItems();
 //      Helper Functions
 // #################################################################################################################
 
-function countOptionsForList(list) {
+function countOptionsForList(list, army) {
   if(undefined === list) {
     return;
   }
 
+  armies[army].listCount = armies[army].listCount || 0;
+  armies[army].listCount++;
+
+  let unitsInList = {};
+
   for(let u of list) {
     // TODO Count this unit once towards its army (make sure to count multiples correctly)
+    // console.log(`Entry: ${JSON.stringify(u, null, 4)}`);
+    unitsInList[u.name] = unitsInList[u.name] || 0;
+    unitsInList[u.name] = unitsInList[u.name] + 1;
+
     for(let o of u.options) {
       // TODO Count each open once towards its army
+      // console.log(`Entry: ${JSON.stringify(o, null, 4)}`);
       
       // Count Special Items towards global counters
       if(arcCompAll.includes(o.name)) {
@@ -1122,6 +1150,15 @@ function countOptionsForList(list) {
       }
     }
   }
+
+  // console.log(`Counts for units in list: ${JSON.stringify(unitsInList, null, 4)}`);
+  for(let unitName in unitsInList) {
+    let unitEntry = armies[army].units.find(u => u.name === unitName);
+    unitEntry.count = unitEntry.count || [];
+    unitEntry.count.push(unitsInList[unitName]);
+  }
+  // console.log(`BH counts: ${JSON.stringify(armies[army].units, null, 4)}`);
+
 }
 
 function evaluateTournamentInclusion(metaData) {
@@ -1305,4 +1342,30 @@ function displayGlobalItems() {
   console.log(`┗━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━┷━━━━━━━━┛`);
 
   // console.log(JSON.stringify(globalStats.specialItems, null, 4));
+}
+
+function displayUnitPickRates() {
+  for(let army in armies) {
+    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┓`);
+    console.log(`┃ \x1b[1mCategory                   │ ${army.padEnd(3, " ")} - Units                        ┃     Ø     ┃   1   │   2   │   3   │   4+  │ ØPts \x1b[0m ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┫`);
+
+    let lastCategory = "nothing";
+    for(let unitEntry of armies[army].units) {
+      if(unitEntry.count) {
+        let pick1 = (unitEntry.count.filter(u => u === 1).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+        let pick2 = (unitEntry.count.filter(u => u === 2).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+        let pick3 = (unitEntry.count.filter(u => u === 3).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+        let pick4 = (unitEntry.count.filter(u => u >=  4).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+        let pickTotal = (unitEntry.count.reduce((a, b) => a + b, 0) / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+          if(unitEntry.category !== lastCategory) {
+            console.log(`┃                            │                                    ┃           ┃       │       │       │       │       ┃`);
+          }
+          console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(34, " ")} ┃   ${pickTotal}   ┃ ${pick1} │ ${pick2} │ ${pick3} │ ${pick4} │  TBD  ┃`);
+          lastCategory = unitEntry.category;
+        }
+      }
+      console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┛`);
+      console.log(`\n`);
+  }
 }
