@@ -1,6 +1,6 @@
 "use strict";
 
-const units = require("./old/units.js");
+const units = require("./units.js");
 const optionsNew = require("./options.json");
 const allItems = require("./old/specialItems.js").allItems;
 
@@ -6434,6 +6434,7 @@ function transformArmyList(input, army) {
                 // console.log(JSON.stringify(unitEntry, null, 4));
                 // Categorize and optimize options
                 if (option === unitEntry.name) {
+                    // console.log(`Recognized ${option} as model option for ${unitEntry.name}`);
                     unitEntry.models = optionEntry.amount;
                 } else {
                     // console.log(JSON.stringify(optionsNew));

@@ -146,25 +146,25 @@ const BH = [
   },
   {
     "name" : "Cyclops",
-    "category" : "terrors of the wild",
+    "category" : "Terrors of the Wild",
     "sticksandstones" : 0,
     "bigrocks" : 1,
   },
   {
     "name" : "Gortach",
-    "category" : "terrors of the wild",
+    "category" : "Terrors of the Wild",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
   {
     "name" : "Jabberwock",
-    "category" : "terrors of the wild",
+    "category" : "Terrors of the Wild",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
   {
     "name" : "Beast Giant",
-    "category" : "terrors of the wild",
+    "category" : "Terrors of the Wild",
     "sticksandstones" : 0,
     "bigrocks" : 0,
   },
@@ -332,19 +332,19 @@ const DE = [
   },
   {
     "name" : "Kraken",
-    "category" : "the menagerie",
+    "category" : "The Menagerie",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
     "name" : "Hydra",
-    "category" : "the menagerie",
+    "category" : "The Menagerie",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
   {
     "name" : "Mist Leviathan",
-    "category" : "the menagerie",
+    "category" : "The Menagerie",
     "raiders" : 0,
     "boltThrowers" : 0,
   },
@@ -647,21 +647,21 @@ const DL = [
   },
   {
     "name" : "Furies",
-    "category" : "aves",
+    "category" : "Aves",
     "magicShooting" : 0,
     "min" : 5,
     "max" : 15,
   },
   {
     "name" : "Veil Serpents",
-    "category" : "aves",
+    "category" : "Aves",
     "magicShooting" : 0,
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "Bloat Flies",
-    "category" : "aves",
+    "category" : "Aves",
     "magicShooting" : 0,
     "min" : 3,
     "max" : 5,
@@ -832,7 +832,7 @@ const EoS = [
   },
   {
     "name" : "Flagellants",
-    "category" : "sunna's fury",
+    "category" : "Sunna's Fury",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
     "min" : 15,
@@ -840,7 +840,7 @@ const EoS = [
   },
   {
     "name" : "Steam Tank",
-    "category" : "sunna's fury",
+    "category" : "Sunna's Fury",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 1,
   },
@@ -1173,19 +1173,19 @@ const ID = [
   },
   {
     "name" : "Infernal Engine",
-    "category" : "instruments of destruction",
+    "category" : "Instruments of Destruction",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "Kadim Titan",
-    "category" : "instruments of destruction",
+    "category" : "Instruments of Destruction",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
   {
     "name" : "Citizen Giant",
-    "category" : "instruments of destruction",
+    "category" : "Instruments of Destruction",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
   },
@@ -1511,19 +1511,19 @@ const OK = [
   },
   {
     "name" : "Rock Aurochs",
-    "category" : "chained beasts",
+    "category" : "Chained Beasts",
     "hiredGuns" : 0,
     "powderKeg" : 0,
   },
   {
     "name" : "Frost Mammoth",
-    "category" : "chained beasts",
+    "category" : "Chained Beasts",
     "hiredGuns" : 0,
     "powderKeg" : 0,
   },
   {
     "name" : "Mercenary Giant",
-    "category" : "chained beasts",
+    "category" : "Chained Beasts",
     "hiredGuns" : 0,
     "powderKeg" : 0,
   },
@@ -1895,24 +1895,24 @@ const SA = [
   },
   {
     "name" : "Stygiosaur Pack",
-    "category" : "magna sauria",
+    "category" : "Magna Sauria",
     "saurianShooting" : 0,
     "min" : 2,
     "max" : 4,
   },
   {
     "name" : "Carnosaur",
-    "category" : "magna sauria",
+    "category" : "Magna Sauria",
     "saurianShooting" : 0,
   },
   {
     "name" : "Taurosaur",
-    "category" : "magna sauria",
+    "category" : "Magna Sauria",
     "saurianShooting" : 0,
   },
   {
     "name" : "Titanopod",
-    "category" : "magna sauria",
+    "category" : "Magna Sauria",
     "saurianShooting" : 0,
   },
 ];
@@ -2049,7 +2049,7 @@ const SE = [
   },
   {
     "name" : "Briar Maidens",
-    "category" : "unseen arrows",
+    "category" : "Unseen Arrows",
     "sylvanShooting" : 0.5,
     "sylvanBeasts" : 0,
     "min" : 5,
@@ -2057,7 +2057,7 @@ const SE = [
   },
   {
     "name" : "Sylvan Sentinels",
-    "category" : "unseen arrows",
+    "category" : "Unseen Arrows",
     "sylvanShooting" : 2,
     "sylvanBeasts" : 0,
     "min" : 5,
@@ -2065,7 +2065,7 @@ const SE = [
   },
   {
     "name" : "Pathfinders",
-    "category" : "unseen arrows",
+    "category" : "Unseen Arrows",
     "sylvanShooting" : 2,
     "sylvanBeasts" : 0,
     "min" : 5,
@@ -2203,25 +2203,25 @@ const UD = [
   },
   {
     "name" : "Sand Scorpion",
-    "category" : "entombed",
+    "category" : "Entombed",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
   },
   {
     "name" : "Battle Sphinx",
-    "category" : "mason's menagerie",
+    "category" : "Mason's Menagerie",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
   },
   {
     "name" : "Dread Sphinx",
-    "category" : "mason's menagerie",
+    "category" : "Mason's Menagerie",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
   },
   {
     "name" : "Tomb Reapers",
-    "category" : "mason's menagerie",
+    "category" : "Mason's Menagerie",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
     "min" : 2,
@@ -2229,7 +2229,7 @@ const UD = [
   },
   {
     "name" : "Colossus",
-    "category" : "mason's menagerie",
+    "category" : "Mason's Menagerie",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
   },
@@ -2329,47 +2329,47 @@ const VC = [
   },
   {
     "name" : "Phantom Hosts",
-    "category" : "the suffering",
+    "category" : "The Suffering",
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "Wraiths",
-    "category" : "the suffering",
+    "category" : "The Suffering",
     "min" : 5,
     "max" : 10,
   },
   {
     "name" : "Spectral Hunters",
-    "category" : "the suffering",
+    "category" : "The Suffering",
     "min" : 5,
     "max" : 10,
   },
   {
     "name" : "Vampire Knights",
-    "category" : "swift death",
+    "category" : "Swift Death",
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "Vampire Spawn",
-    "category" : "swift death",
+    "category" : "Swift Death",
     "min" : 3,
     "max" : 6,
   },
   {
     "name" : "Varkolak",
-    "category" : "swift death",
+    "category" : "Swift Death",
   },
   {
     "name" : "Winged Reapers",
-    "category" : "swift death",
+    "category" : "Swift Death",
     "min" : 2,
     "max" : 4,
   },
   {
     "name" : "Shrieking Horror",
-    "category" : "swift death",
+    "category" : "Swift Death",
   },
 ];
 
@@ -2519,7 +2519,9 @@ const VS = [
   {
     "name" : "Ignifier Grenadiers",
     "category" : "Special",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "min": 5,
+    "max": 10,
   },
   {
     "name" : "Experimental Weapon Teams",
@@ -2535,19 +2537,19 @@ const VS = [
   },
   {
     "name" : "Stygian Earthbreaker",
-    "category" : "bread and games",
+    "category" : "Bread and Games",
     "experimentalWeapon" : 0
   },
   {
     "name" : "Dreadmill Chariots",
-    "category" : "bread and games",
+    "category" : "Bread and Games",
     "experimentalWeapon" : 0,
     "min" : 1,
     "max" : 3,
   },
   {
     "name" : "Arena Beast",
-    "category" : "bread and games",
+    "category" : "Bread and Games",
     "experimentalWeapon" : 0
   },
 

@@ -4,7 +4,7 @@
 const fs = require("node:fs");
 const args = require('yargs').argv;
 const { arcCompAll, arcCompCommon, arcCompShared, allItems } = require("./old/specialItems");
-const units = require("./old/units.js");
+const units = require("./units.js");
 
 // Constants
 const DEFAULT_START_DATE = "2025-03-05";
@@ -1157,10 +1157,16 @@ function countOptionsForList(list, army) {
     // console.log(`Entry: ${JSON.stringify(u, null, 4)}`);
     unitsInList[unitInList.name] = unitsInList[unitInList.name] || 0;
     unitsInList[unitInList.name] = unitsInList[unitInList.name] + 1;
+    let armyUnitEntry = armies[army].units.find(u => u.name === unitInList.name);
+
+    // Count models
+    if(unitInList.models) {
+      armyUnitEntry.models = armyUnitEntry.models || [];
+      armyUnitEntry.models.push(unitInList.models);
+    }
 
     for (let o of unitInList.options) {
       // console.log(`Entry: ${JSON.stringify(o, null, 4)}`);
-      let armyUnitEntry = armies[army].units.find(u => u.name === unitInList.name);
       armyUnitEntry.options = armyUnitEntry.options || {};
       armyUnitEntry.options[o.type] = armyUnitEntry.options[o.type] || {};
       armyUnitEntry.options[o.type][o.name] = (armyUnitEntry.options[o.type][o.name] || 0) + 1;
@@ -1467,6 +1473,27 @@ function displayUnitOptions() {
       console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
       console.log(`┃ \x1b[1mOptions: ${unit.name.padEnd(48, " ")}\x1b[0m ┃`);
       console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
+
+      if(unit.models) {
+        // console.log(JSON.stringify(unit.models));
+        let average = (unit.models.reduce((a, b) => a + b, 0) / unit.models.length).toFixed(1).padStart(4, " ");
+        let min = units[army].find((e) => e.name === unit.name)?.min;
+        let max = units[army].find((e) => e.name === unit.name)?.max;
+        // console.log(` ${min}   ${max}`);
+        let smallUntil = Math.floor(min + (max-min)/4);
+        let mediumUntil = Math.floor(min + (max-min)*2/3);
+        let small = (unit.models.filter(m => m <= smallUntil).length / unit.models.length * 100).toFixed(0).padStart(3, " ");
+        let medium = (unit.models.filter(m => m > smallUntil && m <= mediumUntil).length / unit.models.length * 100).toFixed(0).padStart(3, " ");
+        let large = (unit.models.filter(m => m > mediumUntil).length / unit.models.length * 100).toFixed(0).padStart(3, " ");
+        console.log(`┃\x1b[34m Unit Size                                                 \x1b[0m┃`);
+        console.log(`┠───────────────────────────────────────────────────────────┨`);
+        console.log(`┃ Ø                                            -  ${average}      ┃`);
+        console.log(`┃ Small  (${(""+min).padStart(2, " ")} - ${(smallUntil).toFixed(0).padStart(2, " ")})                             -  ${small} %     ┃`);
+        console.log(`┃ Medium (${(smallUntil+1).toFixed(0).padStart(2, " ")} - ${(mediumUntil).toFixed(0).padStart(2, " ")})                             -  ${medium} %     ┃`);
+        console.log(`┃ Large  (${(mediumUntil+1).toFixed(0).padStart(2, " ")} - ${(+max).toFixed(0).padStart(2, " ")})                             -  ${large} %     ┃`);
+        console.log(`┠───────────────────────────────────────────────────────────┨`);
+        
+      }
 
       for (let category in unit?.options) {
         console.log(`┃\x1b[34m ${category.padEnd(49, " ")}         \x1b[0m┃`);
