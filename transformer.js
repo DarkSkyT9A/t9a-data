@@ -2,7 +2,7 @@
 
 const units = require("./old/units.js");
 const optionsNew = require("./options.json");
-const allItems = require("./old/specialItems.js").arcCompAll;
+const allItems = require("./old/specialItems.js").allItems;
 
 // Constants
 const SPECIAL = "Special";
@@ -6436,6 +6436,7 @@ function transformArmyList(input, army) {
                 if (option === unitEntry.name) {
                     unitEntry.models = optionEntry.amount;
                 } else {
+                    // console.log(JSON.stringify(optionsNew));
                     categorizeOption(unitEntry, option);
                 }
             }
@@ -6454,14 +6455,20 @@ function transformArmyList(input, army) {
 
 function categorizeOption(unitEntry, option) {
     // console.log("Categorize Option: " + option);
-    // console.log(JSON.stringify(optionsNew));
+    // console.log(JSON.stringify(allItems, null, 4));
     let optionLower = option.toLowerCase();
     // Try to find it in options first
     let type = "Other";
     if (optionsNew.find(o => o.name.toLowerCase() === optionLower)) {
-        type = optionsNew.find(o => o.name === optionLower)?.type;
+        type = optionsNew.find(o => o.name.toLowerCase() === optionLower)?.type;
+        // console.log(`Found out the type: ${type}`);
+        // Skip all spells
+        if(type === "Spell") {
+            // console.log("Skipping because it is a spell");
+            return;
+        }
     } else if (allItems.find(s => s.toLowerCase() === optionLower)) {
-        type = "Special Items";
+        type = "Magic Items";
     }
     // console.log("Type is " + type);
 
@@ -6518,9 +6525,9 @@ function determineCategory(unit, army) {
 }
 
 function summarizeCategoryPoints(list, army) {
-    let coreFactor = army === "WDG" ? 1.25 : 1.00;
+    let coreFactor = (army === "WDG" || army === "BH") ? 1.25 : 1.00;
     if (army === "OK" && list.units.some(u => u.options.some(o => o.name ==="Wildheart"))) {
-        console.log(`Found wilheart list for OK`);
+        console.log(`Found Wildheart list for OK`);
         coreFactor = 1.25;
     }
     list.pointsPerCategory = {

@@ -112,7 +112,7 @@ const eosItems = {
 
 // HE
 const heItems = {
-    "Weapon": ["Sliver of the Blazing Dawn", "Nova Flare", "Cadaron's Heartwood", /* Todo Report This To Nr */ "Cadaron’S Heartwood", "Elemental Blade",],
+    "Weapon": ["Sliver of the Blazing Dawn", "Nova Flare", "Cadaron's Heartwood", /* Todo Report This To Nr */ "Cadaron’s Heartwood", "Elemental Blade",],
     "Armour": ["Star Metal Alloy", "Gleaming Robe", "Protection of Dorac", "Daemon's Bane",],
     "Artefact": ["Diadem of Protection", "Amethyst Crystal", "Book of Meladys",],
     "Potion": ["Scroll of the Pearl Throne",],
