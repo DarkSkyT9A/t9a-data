@@ -3,6 +3,7 @@
 const units = require("./units.js");
 const optionsNew = require("./options.json");
 const allItems = require("./old/specialItems.js").allItems;
+const magicalness = require("./magicalness.js").magicalness;
 
 // Constants
 const SPECIAL = "Special";
@@ -6451,6 +6452,8 @@ function transformArmyList(input, army) {
 
     summarizeCategoryPoints(r, army);
 
+    calculateMagicalness(r);
+
     return r;
 }
 
@@ -6527,7 +6530,7 @@ function determineCategory(unit, army) {
 
 function summarizeCategoryPoints(list, army) {
     let coreFactor = (army === "WDG" || army === "BH") ? 1.25 : 1.00;
-    if (army === "OK" && list.units.some(u => u.options.some(o => o.name ==="Wildheart"))) {
+    if (army === "OK" && list.units.some(u => u.options.some(o => o.name ==="General, Disciplined and Wildheart"))) {
         console.log(`Found Wildheart list for OK`);
         coreFactor = 1.25;
     }
@@ -6541,6 +6544,20 @@ function summarizeCategoryPoints(list, army) {
     // if(list.pointsPerCategory.Core < 1000) {
     //     console.error(`Core Error for ${army}: ${JSON.stringify(list, null, 4)}`);
     // }
+}
+
+function calculateMagicalness(list) {
+    let magicInList = 0;
+
+    for(let unit of list.units) {
+        for(let option of unit.options) {
+            if(magicalness[option.name.toLowerCase()]) {
+                magicInList = magicInList + magicalness[option.name.toLowerCase()];
+            }
+        }
+    }
+
+    list.magicalness = magicInList;
 }
 
 module.exports = {

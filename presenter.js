@@ -39,7 +39,8 @@ let globalStats = {
 
 let armies = {
   "BH": {
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -98,7 +99,8 @@ let armies = {
     }
   },
   "DE": {
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -157,7 +159,8 @@ let armies = {
   },
   "DH": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -216,7 +219,8 @@ let armies = {
   },
   "DL": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -275,7 +279,8 @@ let armies = {
   },
   "EoS": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -334,7 +339,8 @@ let armies = {
   },
   "HE": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -393,7 +399,8 @@ let armies = {
   },
   "ID": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -452,7 +459,8 @@ let armies = {
   },
   "KoE": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -511,7 +519,8 @@ let armies = {
   },
   "OK": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -570,7 +579,8 @@ let armies = {
   },
   "OnG": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -629,7 +639,8 @@ let armies = {
   },
   "SA": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -688,7 +699,8 @@ let armies = {
   },
   "SE": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -747,7 +759,8 @@ let armies = {
   },
   "UD": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -806,7 +819,8 @@ let armies = {
   },
   "VC": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -865,7 +879,8 @@ let armies = {
   },
   "VS": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -924,7 +939,8 @@ let armies = {
   },
   "WDG": {
 
-    "points": [],
+    "points": [], 
+    "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
     "pointsUnknown": [],
@@ -1009,6 +1025,11 @@ fs.readdirSync("data").forEach(folder => {
     // General points
     armies[report.armyOne].points.push(report.scoreOne);
     armies[report.armyTwo].points.push(report.scoreTwo);
+    // General points without mirrors
+    if(report.armyOne !== report.armyTwo) {
+      armies[report.armyOne].pointsWithoutMirror.push(report.scoreOne);
+      armies[report.armyTwo].pointsWithoutMirror.push(report.scoreTwo);
+    }
     // Games player versus specific enemy for each army
     armies[report.armyOne].vs[report.armyTwo].results.push(report.scoreOne);
     armies[report.armyTwo].vs[report.armyOne].results.push(report.scoreTwo);
@@ -1072,9 +1093,19 @@ for (let army in armies) {
   // console.log(JSON.stringify(armies[army].points, null, 4));
   // console.log(armies[army].points.reduce((a, b) => a + b, 0));
   armies[army].avg = (armies[army].points.reduce((a, b) => a + b, 0) / totalCount).toFixed(1).padStart(4, " ");
+  armies[army].avgWithoutMirror = (armies[army].pointsWithoutMirror.reduce((a, b) => a + b, 0) / armies[army].pointsWithoutMirror.length).toFixed(1).padStart(4, " ");
   armies[army].first = (armies[army].pointsFirst.reduce((a, b) => a + b, 0) / firstCount).toFixed(1).padStart(4, " ");
   armies[army].second = (armies[army].pointsSecond.reduce((a, b) => a + b, 0) / secondCount).toFixed(1).padStart(4, " ");
   armies[army].games = `${totalCount}`.padStart(4, " ");
+
+  let sum = armies[army].points.reduce((a, b) => a + b, 0);
+	let mean = sum/totalCount;
+	let sqerrs = armies[army].points.map(function(n) { return (n - mean)*(n - mean); });
+	let std = Math.sqrt(sqerrs.reduce((a, b)=> a + b, 0) / totalCount);
+	let interval = 1.959964 * std/Math.sqrt(totalCount);
+  armies[army].interval = interval;
+  armies[army].intervalLower = mean - interval;
+  armies[army].intervalUpper = mean + interval;
 
   for (let opponent in armies[army].vs) {
     // console.log(`${army} - ${opponent} - ${JSON.stringify(armies[army].vs)}`);
@@ -1108,6 +1139,23 @@ for (let army in armies) {
   armies[army].core.morePercent = (armies[army].core.more / total * 100).toFixed(0).padStart(3, " ") + " %";
   // console.log(JSON.stringify(armies[army].core, null, 4));
 
+  // Calculate amount of characters
+  // console.log(JSON.stringify(armies[army].pointsPerCategory, null, 4));
+  armies[army].chars = {
+    "ten": armies[army].pointsPerCategory.Characters.filter(c => c < 400).length,
+    "twenty": armies[army].pointsPerCategory.Characters.filter(c => c >= 400 && c < 800).length,
+    "thirty": armies[army].pointsPerCategory.Characters.filter(c => c >= 800 && c < 1200).length,
+    "fourty": armies[army].pointsPerCategory.Characters.filter(c => c >= 1200).length
+  };
+
+  // Convert into percentages
+  let totalChar = armies[army].chars.ten + armies[army].chars.twenty + armies[army].chars.thirty + armies[army].chars.fourty;
+  armies[army].chars.tenPercent = (armies[army].chars.ten / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
+  armies[army].chars.twentyPercent = (armies[army].chars.twenty / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
+  armies[army].chars.thirtyPercent = (armies[army].chars.thirty / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
+  armies[army].chars.fourtyPercent = (armies[army].chars.fourty / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
+  // console.log(JSON.stringify(armies[army].chars, null, 4));
+
 }
 
 // #################################################################################################################
@@ -1123,8 +1171,14 @@ displayGlobalStats();
 // Display army stats
 displayArmyStats();
 
+// Display external balance
+displayExternalBalance();
+
 // Display core percentages
 displayCoreShares();
+
+// Display character percentages
+displayCharacterShares();
 
 // Display global special item pick rates
 displayGlobalItems();
@@ -1163,6 +1217,12 @@ function countOptionsForList(list, army) {
     if(unitInList.models) {
       armyUnitEntry.models = armyUnitEntry.models || [];
       armyUnitEntry.models.push(unitInList.models);
+    }
+
+    // Count points
+    if(unitInList.cost) {
+      armyUnitEntry.cost = armyUnitEntry.cost || [];
+      armyUnitEntry.cost.push(unitInList.cost);
     }
 
     for (let o of unitInList.options) {
@@ -1256,19 +1316,21 @@ function displayGlobalStats() {
 
 function displayArmyStats() {
 
-  const emptyLine = `┃\x1b[0m      ┃       │      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      │      \x1b[0m┃`;
+  const emptyLine = `┃\x1b[0m      ┃       │      ┃      │      │      │      │      │      │      │      │      │      │      │      │      │      │      │      ┃      │      ┃      │      \x1b[0m┃`;
 
-  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
-  console.log(`┃ \x1b[1m Army Results – Average Points per Match\x1b[0m                                                                                                          ┃`);
-  console.log(`┣━━━━━━┳━━━━━━━┯━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┳━━━━━━┯━━━━━━┫`);
-  console.log(`┃ ARMY ┃\x1b[1;106m TOTAL \x1b[0m│ RANK ┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃ 1st  │ 2nd  ┃`);
-  console.log(`┣━━━━━━╋━━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┫`);
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1m Army Results – Average Points per Match\x1b[0m                                                                                                          ┃  95% conf   ┃`);
+  console.log(`┣━━━━━━┳━━━━━━━┯━━━━━━┳━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┯━━━━━━┳━━━━━━┯━━━━━━╋━━━━━━┯━━━━━━┫`);
+  console.log(`┃ ARMY ┃\x1b[1;106m TOTAL \x1b[0m│ RANK ┃  BH  │  DE  │  DH  │  DL  │  EoS │  HE  │  ID  │  KoE │  OK  │  OnG │  SA  │  SE  │  UD  │  VC  │  VS  │  WDG ┃ 1st  │ 2nd  ┃ Low  │ High ┃`);
+  console.log(`┣━━━━━━╋━━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┫`);
 
   for (let a in armies) {
-    console.log(`┃ ${a.padEnd(3, " ")}  ┃\x1b[1;106m  ${armies[a].avg} \x1b[0m│  ${armies[a].rank}  ┃ ${armies[a].vs.BH.avg} │ ${armies[a].vs.DE.avg} │ ${armies[a].vs.DH.avg} │ ${armies[a].vs.DL.avg} │ ${armies[a].vs.EoS.avg} │ ${armies[a].vs.HE.avg} │ ${armies[a].vs.ID.avg} │ ${armies[a].vs.KoE.avg} │ ${armies[a].vs.OK.avg} │ ${armies[a].vs.OnG.avg} │ ${armies[a].vs.SA.avg} │ ${armies[a].vs.SE.avg} │ ${armies[a].vs.UD.avg} │ ${armies[a].vs.VC.avg} │ ${armies[a].vs.VS.avg} │ ${armies[a].vs.WDG.avg} ┃ ${armies[a].first} │ ${armies[a].second} ┃`);
+    let lower = (armies[a].intervalLower).toFixed(1).padStart(4, " ");
+    let upper = (armies[a].intervalUpper).toFixed(1).padStart(4, " ");
+    console.log(`┃ ${a.padEnd(3, " ")}  ┃\x1b[1;106m  ${armies[a].avg} \x1b[0m│  ${armies[a].rank}  ┃ ${armies[a].vs.BH.avg} │ ${armies[a].vs.DE.avg} │ ${armies[a].vs.DH.avg} │ ${armies[a].vs.DL.avg} │ ${armies[a].vs.EoS.avg} │ ${armies[a].vs.HE.avg} │ ${armies[a].vs.ID.avg} │ ${armies[a].vs.KoE.avg} │ ${armies[a].vs.OK.avg} │ ${armies[a].vs.OnG.avg} │ ${armies[a].vs.SA.avg} │ ${armies[a].vs.SE.avg} │ ${armies[a].vs.UD.avg} │ ${armies[a].vs.VC.avg} │ ${armies[a].vs.VS.avg} │ ${armies[a].vs.WDG.avg} ┃ ${armies[a].first} │ ${armies[a].second} ┃ ${lower} │ ${upper} ┃`);
 
     if (a === "WDG") {
-      console.log(`┗━━━━━━┻━━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┛`);
+      console.log(`┗━━━━━━┻━━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┛`);
     }
     else {
       console.log(emptyLine);
@@ -1291,6 +1353,30 @@ function displayArmyStats() {
   console.log(`┗━━━━━━━┻━━━━━━━━┻━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┷━━━━━━┛`);
 }
 
+function displayExternalBalance() {
+
+  const emptyLine = `┃\x1b[0m      ┃       │      ┃      │      ┃      │      \x1b[0m┃`;
+
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1m External Balance\x1b[0m                 ┃  95% conf   ┃`);
+  console.log(`┣━━━━━━┳━━━━━━━┯━━━━━━┳━━━━━━┯━━━━━━╋━━━━━━┯━━━━━━┫`);
+  console.log(`┃ ARMY ┃\x1b[1;106m TOTAL \x1b[0m│ RANK ┃ 1st  │ 2nd  ┃ Low  │ High ┃ Ø no mirrors ┃`);
+  console.log(`┣━━━━━━╋━━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┫`);
+
+  for (let a in armies) {
+    let lower = (armies[a].intervalLower).toFixed(1).padStart(4, " ");
+    let upper = (armies[a].intervalUpper).toFixed(1).padStart(4, " ");
+    console.log(`┃ ${a.padEnd(3, " ")}  ┃\x1b[1;106m  ${armies[a].avg} \x1b[0m│  ${armies[a].rank}  ┃ ${armies[a].first} │ ${armies[a].second} ┃ ${lower} │ ${upper} ┃ \x1b[1;106m${armies[a].avgWithoutMirror}\x1b[0m ┃`);
+
+    if (a === "WDG") {
+      console.log(`┗━━━━━━┻━━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┛`);
+    }
+    else {
+      console.log(emptyLine);
+    }
+  }
+}
+
 
 function displayCoreShares() {
 
@@ -1304,6 +1390,20 @@ function displayCoreShares() {
     console.log(`┃ ${army.padEnd(3, " ")}          │ ${("" + armies[army].core.error).padStart(5, " ")} │ ${armies[army].core.minimalPercent} │ ${armies[army].core.somePercent} │ ${armies[army].core.morePercent} ┃`);
   }
   console.log(`┗━━━━━━━━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┛`);
+}
+
+function displayCharacterShares() {
+
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ Amount of Characters by Army                     ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┯━━━━━━━━┯━━━━━━━━┯━━━━━━━━┯━━━━━━━━┫`);
+  console.log(`┃ Army         │  0-10% │ 10-20% │ 20-30% │  30%+  ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┿━━━━━━━━┿━━━━━━━━┿━━━━━━━━┿━━━━━━━━┫`);
+
+  for (let army in armies) {
+    console.log(`┃ ${army.padEnd(3, " ")}          │  ${("" + armies[army].chars.tenPercent).padStart(5, " ")} │  ${armies[army].chars.twentyPercent} │  ${armies[army].chars.thirtyPercent} │  ${armies[army].chars.fourtyPercent} ┃`);
+  }
+  console.log(`┗━━━━━━━━━━━━━━┷━━━━━━━━┷━━━━━━━━┷━━━━━━━━┷━━━━━━━━┛`);
 }
 
 
@@ -1386,6 +1486,9 @@ function displayUnitPickRates() {
 
     let lastCategory = "nothing";
     for (let unitEntry of armies[army].units) {
+      // console.log(`Unit ${unitEntry.name}: ${JSON.stringify(unitEntry.cost)}`);
+      let pointsPerList = unitEntry.cost ? (unitEntry.cost.reduce((a,b) => a + b, 0) / armies[army].listCount).toFixed(0).padStart(3, " ") : "  0";
+      
       if (unitEntry.count) {
         let pick1 = (unitEntry.count.filter(u => u === 1).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
         let pick2 = (unitEntry.count.filter(u => u === 2).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
@@ -1395,7 +1498,7 @@ function displayUnitPickRates() {
         if (unitEntry.category !== lastCategory) {
           console.log(`┃                            │                                    ┃           ┃       │       │       │       │       ┃`);
         }
-        console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(34, " ")} ┃   ${pickTotal}   ┃ ${pick1} │ ${pick2} │ ${pick3} │ ${pick4} │  TBD  ┃`);
+        console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(34, " ")} ┃   ${pickTotal}   ┃ ${pick1} │ ${pick2} │ ${pick3} │ ${pick4} │  ${pointsPerList}  ┃`);
         lastCategory = unitEntry.category;
       }
     }
