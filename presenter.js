@@ -1046,6 +1046,18 @@ fs.readdirSync("data").forEach(folder => {
       armies[report.armyTwo].pointsUnknown.push(report.scoreTwo);
     }
 
+    // Magicalness
+    console.log(report?.armyListOne?.magicalness);
+    if (typeof report?.armyListOne?.magicalness !== "undefined") {
+      armies[report.armyOne].magicalness = armies[report.armyOne].magicalness || [];
+      armies[report.armyOne].magicalness.push(report.armyListOne.magicalness);
+    }
+
+    if (typeof report?.armyListTwo?.magicalness !== "undefined") {
+      armies[report.armyTwo].magicalness = armies[report.armyTwo].magicalness || [];
+      armies[report.armyTwo].magicalness.push(report.armyListTwo.magicalness);
+    }
+
     // Global:
     globalStats.tournamentsWithReports.push(folder);
     globalStats.games++;
@@ -1179,6 +1191,9 @@ displayCoreShares();
 
 // Display character percentages
 displayCharacterShares();
+
+// Display magicalness
+displayMagicalness();
 
 // Display global special item pick rates
 displayGlobalItems();
@@ -1404,6 +1419,21 @@ function displayCharacterShares() {
     console.log(`┃ ${army.padEnd(3, " ")}          │  ${("" + armies[army].chars.tenPercent).padStart(5, " ")} │  ${armies[army].chars.twentyPercent} │  ${armies[army].chars.thirtyPercent} │  ${armies[army].chars.fourtyPercent} ┃`);
   }
   console.log(`┗━━━━━━━━━━━━━━┷━━━━━━━━┷━━━━━━━━┷━━━━━━━━┷━━━━━━━━┛`);
+}
+
+function displayMagicalness() {
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ Amount of Magic by Army                    ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┫`);
+  console.log(`┃ Army         │  0  │ 1-4 │ 5-9 │10-12│ 13+ ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┫`);
+
+  for (let army in armies) {
+
+    armies[army].magicalness.filter(m => m === 1).length;
+    console.log(`┃ ${army.padEnd(3, " ")}          │ ${armies[army].magicalness.filter(m => m === 0).length.toString().padStart(3, " ")} │ ${armies[army].magicalness.filter(m => m >= 1 && m < 5).length.toString().padStart(3, " ")} │ ${armies[army].magicalness.filter(m => m >= 5 && m < 10).length.toString().padStart(3, " ")} │ ${armies[army].magicalness.filter(m => m >= 10 && m < 13).length.toString().padStart(3, " ")} │ ${armies[army].magicalness.filter(m => m >= 13).length.toString().padStart(3, " ")} ┃`);
+  }
+  console.log(`┗━━━━━━━━━━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┛`);
 }
 
 
