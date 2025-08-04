@@ -6531,7 +6531,7 @@ function determineCategory(unit, army) {
 function summarizeCategoryPoints(list, army) {
     let coreFactor = (army === "WDG" || army === "BH") ? 1.25 : 1.00;
     if (army === "OK" && list.units.some(u => u.options.some(o => o.name ==="General, Disciplined and Wildheart"))) {
-        console.log(`Found Wildheart list for OK`);
+        // console.log(`Found Wildheart list for OK`);
         coreFactor = 1.25;
     }
     list.pointsPerCategory = {

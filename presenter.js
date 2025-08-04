@@ -1047,7 +1047,7 @@ fs.readdirSync("data").forEach(folder => {
     }
 
     // Magicalness
-    console.log(report?.armyListOne?.magicalness);
+    // console.log(report?.armyListOne?.magicalness);
     if (typeof report?.armyListOne?.magicalness !== "undefined") {
       armies[report.armyOne].magicalness = armies[report.armyOne].magicalness || [];
       armies[report.armyOne].magicalness.push(report.armyListOne.magicalness);

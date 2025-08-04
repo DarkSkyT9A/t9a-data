@@ -240,21 +240,3 @@ function getArmyStringForId(id, uppercase) {
   }
 }
 
-// console.log(`Getting individual game reports for tournament: ${tournament.name}`);
-// const reportsResponse = superagent
-//   .post('https://www.newrecruit.eu/api/reports')
-//   .send({
-//     "id_tournament": tournament._id
-//   })
-//   .set("accept", "json")
-//   .set("user-agent", "t9a-data/0.0.2")
-//   .set("NR-User", user)
-//   .set("NR-Password", password);
-// let reports = reportsResponse.body;
-
-// reports.forEach(report => {
-//   console.log(JSON.stringify(report, null, 4));
-//   process.exit();
-// });
-// console.log(JSON.stringify(tournamentsData, null, 4));
-
