@@ -39,7 +39,7 @@ let globalStats = {
 
 let armies = {
   "BH": {
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -99,7 +99,7 @@ let armies = {
     }
   },
   "DE": {
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -159,7 +159,7 @@ let armies = {
   },
   "DH": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -219,7 +219,7 @@ let armies = {
   },
   "DL": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -279,7 +279,7 @@ let armies = {
   },
   "EoS": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -339,7 +339,7 @@ let armies = {
   },
   "HE": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -399,7 +399,7 @@ let armies = {
   },
   "ID": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -459,7 +459,7 @@ let armies = {
   },
   "KoE": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -519,7 +519,7 @@ let armies = {
   },
   "OK": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -579,7 +579,7 @@ let armies = {
   },
   "OnG": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -639,7 +639,7 @@ let armies = {
   },
   "SA": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -699,7 +699,7 @@ let armies = {
   },
   "SE": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -759,7 +759,7 @@ let armies = {
   },
   "UD": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -819,7 +819,7 @@ let armies = {
   },
   "VC": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -879,7 +879,7 @@ let armies = {
   },
   "VS": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -939,7 +939,7 @@ let armies = {
   },
   "WDG": {
 
-    "points": [], 
+    "points": [],
     "pointsWithoutMirror": [],
     "pointsFirst": [],
     "pointsSecond": [],
@@ -1026,7 +1026,7 @@ fs.readdirSync("data").forEach(folder => {
     armies[report.armyOne].points.push(report.scoreOne);
     armies[report.armyTwo].points.push(report.scoreTwo);
     // General points without mirrors
-    if(report.armyOne !== report.armyTwo) {
+    if (report.armyOne !== report.armyTwo) {
       armies[report.armyOne].pointsWithoutMirror.push(report.scoreOne);
       armies[report.armyTwo].pointsWithoutMirror.push(report.scoreTwo);
     }
@@ -1111,10 +1111,10 @@ for (let army in armies) {
   armies[army].games = `${totalCount}`.padStart(4, " ");
 
   let sum = armies[army].points.reduce((a, b) => a + b, 0);
-	let mean = sum/totalCount;
-	let sqerrs = armies[army].points.map(function(n) { return (n - mean)*(n - mean); });
-	let std = Math.sqrt(sqerrs.reduce((a, b)=> a + b, 0) / totalCount);
-	let interval = 1.959964 * std/Math.sqrt(totalCount);
+  let mean = sum / totalCount;
+  let sqerrs = armies[army].points.map(function (n) { return (n - mean) * (n - mean); });
+  let std = Math.sqrt(sqerrs.reduce((a, b) => a + b, 0) / totalCount);
+  let interval = 1.959964 * std / Math.sqrt(totalCount);
   armies[army].interval = interval;
   armies[army].intervalLower = mean - interval;
   armies[army].intervalUpper = mean + interval;
@@ -1229,13 +1229,13 @@ function countOptionsForList(list, army) {
     let armyUnitEntry = armies[army].units.find(u => u.name === unitInList.name);
 
     // Count models
-    if(unitInList.models) {
+    if (unitInList.models) {
       armyUnitEntry.models = armyUnitEntry.models || [];
       armyUnitEntry.models.push(unitInList.models);
     }
 
     // Count points
-    if(unitInList.cost) {
+    if (unitInList.cost) {
       armyUnitEntry.cost = armyUnitEntry.cost || [];
       armyUnitEntry.cost.push(unitInList.cost);
     }
@@ -1517,20 +1517,18 @@ function displayUnitPickRates() {
     let lastCategory = "nothing";
     for (let unitEntry of armies[army].units) {
       // console.log(`Unit ${unitEntry.name}: ${JSON.stringify(unitEntry.cost)}`);
-      let pointsPerList = unitEntry.cost ? (unitEntry.cost.reduce((a,b) => a + b, 0) / armies[army].listCount).toFixed(0).padStart(3, " ") : "  0";
-      
-      if (unitEntry.count) {
-        let pick1 = (unitEntry.count.filter(u => u === 1).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-        let pick2 = (unitEntry.count.filter(u => u === 2).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-        let pick3 = (unitEntry.count.filter(u => u === 3).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-        let pick4 = (unitEntry.count.filter(u => u >= 4).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-        let pickTotal = (unitEntry.count.reduce((a, b) => a + b, 0) / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-        if (unitEntry.category !== lastCategory) {
-          console.log(`┃                            │                                    ┃           ┃       │       │       │       │       ┃`);
-        }
-        console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(34, " ")} ┃   ${pickTotal}   ┃ ${pick1} │ ${pick2} │ ${pick3} │ ${pick4} │  ${pointsPerList}  ┃`);
-        lastCategory = unitEntry.category;
+      let pointsPerList = unitEntry.cost ? (unitEntry.cost.reduce((a, b) => a + b, 0) / armies[army].listCount).toFixed(0).padStart(3, " ") : "  0";
+      unitEntry.count = unitEntry.count || [];
+      let pick1 = (unitEntry.count.filter(u => u === 1).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+      let pick2 = (unitEntry.count.filter(u => u === 2).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+      let pick3 = (unitEntry.count.filter(u => u === 3).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+      let pick4 = (unitEntry.count.filter(u => u >= 4).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+      let pickTotal = (unitEntry.count.reduce((a, b) => a + b, 0) / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+      if (unitEntry.category !== lastCategory) {
+        console.log(`┃                            │                                    ┃           ┃       │       │       │       │       ┃`);
       }
+      console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(34, " ")} ┃   ${pickTotal}   ┃ ${pick1} │ ${pick2} │ ${pick3} │ ${pick4} │  ${pointsPerList}  ┃`);
+      lastCategory = unitEntry.category;
     }
     console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┛`);
     console.log(`\n`);
@@ -1607,25 +1605,25 @@ function displayUnitOptions() {
       console.log(`┃ \x1b[1mOptions: ${unit.name.padEnd(48, " ")}\x1b[0m ┃`);
       console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
 
-      if(unit.models) {
+      if (unit.models) {
         // console.log(JSON.stringify(unit.models));
         let average = (unit.models.reduce((a, b) => a + b, 0) / unit.models.length).toFixed(1).padStart(4, " ");
         let min = units[army].find((e) => e.name === unit.name)?.min;
         let max = units[army].find((e) => e.name === unit.name)?.max;
         // console.log(` ${min}   ${max}`);
-        let smallUntil = Math.floor(min + (max-min)/4);
-        let mediumUntil = Math.floor(min + (max-min)*2/3);
+        let smallUntil = Math.floor(min + (max - min) / 4);
+        let mediumUntil = Math.floor(min + (max - min) * 2 / 3);
         let small = (unit.models.filter(m => m <= smallUntil).length / unit.models.length * 100).toFixed(0).padStart(3, " ");
         let medium = (unit.models.filter(m => m > smallUntil && m <= mediumUntil).length / unit.models.length * 100).toFixed(0).padStart(3, " ");
         let large = (unit.models.filter(m => m > mediumUntil).length / unit.models.length * 100).toFixed(0).padStart(3, " ");
         console.log(`┃\x1b[34m Unit Size                                                 \x1b[0m┃`);
         console.log(`┠───────────────────────────────────────────────────────────┨`);
         console.log(`┃ Ø                                            -  ${average}      ┃`);
-        console.log(`┃ Small  (${(""+min).padStart(2, " ")} - ${(smallUntil).toFixed(0).padStart(2, " ")})                             -  ${small} %     ┃`);
-        console.log(`┃ Medium (${(smallUntil+1).toFixed(0).padStart(2, " ")} - ${(mediumUntil).toFixed(0).padStart(2, " ")})                             -  ${medium} %     ┃`);
-        console.log(`┃ Large  (${(mediumUntil+1).toFixed(0).padStart(2, " ")} - ${(+max).toFixed(0).padStart(2, " ")})                             -  ${large} %     ┃`);
+        console.log(`┃ Small  (${("" + min).padStart(2, " ")} - ${(smallUntil).toFixed(0).padStart(2, " ")})                             -  ${small} %     ┃`);
+        console.log(`┃ Medium (${(smallUntil + 1).toFixed(0).padStart(2, " ")} - ${(mediumUntil).toFixed(0).padStart(2, " ")})                             -  ${medium} %     ┃`);
+        console.log(`┃ Large  (${(mediumUntil + 1).toFixed(0).padStart(2, " ")} - ${(+max).toFixed(0).padStart(2, " ")})                             -  ${large} %     ┃`);
         console.log(`┠───────────────────────────────────────────────────────────┨`);
-        
+
       }
 
       for (let category in unit?.options) {
