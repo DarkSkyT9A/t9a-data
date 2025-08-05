@@ -166,10 +166,10 @@ const saItems = {
 
 // SE
 const seItems = {
-    "Weapon": ["Bough of Wyscan", "Hunter's Honour", "Oaken Might", "Spirit of the Whirlwind", "Spirit Arrows",],
+    "Weapon": ["Bough Of Wyscan", "Bough of Wyscan", "Hunter's Honour", "Oaken Might", "Spirit of the Whirlwind", "Spirit Arrows",],
     "Armour": ["Shielding Bark",],
-    "Artefact": ["Hail Shot", "Mist Walker's Mirror", "Horn of the Wild Hunt", "Glpyh of Amryl",],
-    "Potion": ["Sacred Seeds", "Song of Cenryn",],
+    "Artefact": ["Hail Shot", "Mist Walker's Mirror", "Horn of the Wild Hunt", "Glyph of Amryl",],
+    "Potion": ["Sacred Seeds", "Song of Cenyrn",],
     "Banner": ["Banner of Deception", "Predator Pennant", "Banner of Silent Mist",],
 };
 
