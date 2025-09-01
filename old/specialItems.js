@@ -92,7 +92,7 @@ const deItems = {
 
 // DH
 const dhItems = {
-    "Weapon": ["Rune of Destruction", "Rune of Smashing", "Rune of Quickening", "Rune of Might", "Rune of Penetration", "Rune of Anger", "Rune of Precision", "Rune of Craftmanship", "Rune of Lightning", "Rune of Fire", "Rune of Returning",],
+    "Weapon": ["Rune of Destruction", "Rune of Smashing", "Rune of Quickening", "Rune of Might", "Rune of Penetration", "Rune of Anger", "Rune of Precision", "Rune of Craftsmanship", "Rune of Lightning", "Rune of Fire", "Rune of Returning",],
     "Armour": ["Rune of Steel", "Rune of Resistance", "Rune of Iron", "Rune of Retribution", "Rune of the Forge",],
     "Shield": [],
     "Artefact": ["Rune of Denial", "Rune of Devouring", "Rune of Grounding", "Rune of Harnessing", "Rune of Channelling", "Rune of Dragon's Breath", "Rune of Readiness", "Rune of Shielding", "Rune of the Courage", "Rune of Storms", "Rune of Kinship", "Rune of Mining",],
