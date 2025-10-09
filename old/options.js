@@ -104,7 +104,7 @@ const heroicTraits = [ "quin", "minstrel", "cleric", "castellan", "bannerman", ]
 const bigName = [ "godspeaker", "gut roarer", "hoardmaster", "trolleater", "spinesplitter", "firebrand", "headhunter", "scraplord", "rottenjaw", ];
 
 // OnG
-const trollRace = [ "bridge troll", "forest troll", "river troll", ];
+const trollRace = [ "bridge troll", "forest troll", "cave troll", ];
 
 // SA
 const howdah = [ "monolith of vitalism", "lodestone shield", "magnetic great bow", "venomous fortress", "carved wisdom", "suncatcher crystal", ];
