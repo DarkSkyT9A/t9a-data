@@ -195,7 +195,7 @@ const vcItems = {
 const vsItems = {
     "Weapon": ["Secrets of the Doom Blade", "Storm Rocket", "Rodentium Bullets", "Swarm Master",],
     "Armour": ["Plague-Hermit's Blessing",],
-    "Artefact": ["Crown of Hubris", "Crown of the Usurper", "Darkstone Detonator", "Tome of the Ratking", "Tarina's Lyre",],
+    "Artefact": ["Crown of Hubris", "Scepter of the Usurper", "Darkstone Detonator", "Tome of the Ratking", "Tarina's Lyre",],
     "Potion": ["Favanite Powder", "Potion of Rat Form",],
     "Banner": ["Sacred Aquila", "Bell of the Deep Roads",],
 };
