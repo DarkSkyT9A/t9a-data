@@ -15,19 +15,7 @@ const BH = [
     "bigrocks" : 0,
   },
   {
-    "name" : "Beast Lord",
-    "category" : "Characters",
-    "sticksandstones" : 0,
-    "bigrocks" : 0,
-  },
-  {
     "name" : "Wildhorn Lord",
-    "category" : "Characters",
-    "sticksandstones" : 0,
-    "bigrocks" : 0,
-  },
-  {
-    "name" : "Beast Chieftain",
     "category" : "Characters",
     "sticksandstones" : 0,
     "bigrocks" : 0,
@@ -765,14 +753,6 @@ const EoS = [
     "imperialArmory" : 0,
   },
   {
-    "name" : "Heavy Infantry",
-    "category" : "Core",
-    "imperialAuxiliaries" : 0,
-    "imperialArmory" : 0,
-    "min" : 20,
-    "max" : 40,
-  },
-  {
     "name" : "State Infantry",
     "category" : "Core",
     "imperialAuxiliaries" : 0,
@@ -789,23 +769,7 @@ const EoS = [
     "max" : 20,
   },
   {
-    "name" : "State Detatchment",
-    "category" : "Core",
-    "imperialAuxiliaries" : 0,
-    "imperialArmory" : 0,
-    "min" : 15,
-    "max" : 20,
-  },
-  {
     "name" : "State Marksmen",
-    "category" : "Core",
-    "imperialAuxiliaries" : 1,
-    "imperialArmory" : 0,
-    "min" : 15,
-    "max" : 20,
-  },
-  {
-    "name" : "Light Infantry",
     "category" : "Core",
     "imperialAuxiliaries" : 1,
     "imperialArmory" : 0,
