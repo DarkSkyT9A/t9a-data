@@ -1370,21 +1370,21 @@ function displayArmyStats() {
 
 function displayExternalBalance() {
 
-  const emptyLine = `┃\x1b[0m      ┃       │      ┃      │      ┃      │      \x1b[0m┃`;
+  const emptyLine = `┃\x1b[0m      ┃         │      ┃      │      ┃      │      \x1b[0m┃`;
 
-  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓`);
-  console.log(`┃ \x1b[1m External Balance\x1b[0m                 ┃  95% conf   ┃`);
-  console.log(`┣━━━━━━┳━━━━━━━┯━━━━━━┳━━━━━━┯━━━━━━╋━━━━━━┯━━━━━━┫`);
-  console.log(`┃ ARMY ┃\x1b[1;106m TOTAL \x1b[0m│ RANK ┃ 1st  │ 2nd  ┃ Low  │ High ┃ Ø no mirrors ┃`);
-  console.log(`┣━━━━━━╋━━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┫`);
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1mExternal Balance (without Mirrors)\x1b[0m  ┃  95% conf   ┃`);
+  console.log(`┣━━━━━━┳━━━━━━━━━┯━━━━━━┳━━━━━━┯━━━━━━╋━━━━━━┯━━━━━━┫`);
+  console.log(`┃ ARMY ┃\x1b[1;106m  TOTAL  \x1b[0m│ RANK ┃ 1st  │ 2nd  ┃ Low  │ High ┃`);
+  console.log(`┣━━━━━━╋━━━━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━╋━━━━━━┿━━━━━━┫`);
 
   for (let a in armies) {
     let lower = (armies[a].intervalLower).toFixed(1).padStart(4, " ");
     let upper = (armies[a].intervalUpper).toFixed(1).padStart(4, " ");
-    console.log(`┃ ${a.padEnd(3, " ")}  ┃\x1b[1;106m  ${armies[a].avg} \x1b[0m│  ${armies[a].rank}  ┃ ${armies[a].first} │ ${armies[a].second} ┃ ${lower} │ ${upper} ┃ \x1b[1;106m${armies[a].avgWithoutMirror}\x1b[0m ┃`);
+    console.log(`┃ ${a.padEnd(3, " ")}  ┃\x1b[1;106m   ${armies[a].avgWithoutMirror}  \x1b[0m│  ${armies[a].rank}  ┃ ${armies[a].first} │ ${armies[a].second} ┃ ${lower} │ ${upper} ┃`);
 
     if (a === "WDG") {
-      console.log(`┗━━━━━━┻━━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┛`);
+      console.log(`┗━━━━━━┻━━━━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┻━━━━━━┷━━━━━━┛`);
     }
     else {
       console.log(emptyLine);
