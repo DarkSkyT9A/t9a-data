@@ -3,6 +3,18 @@
 // BH
 const BH = [
   {
+    "name" : "Moohoarrgh, the Perpetuator of Heroes",
+    "category" : "Characters",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "Ghaa, THE Quiet Muzzle",
+    "category" : "Characters",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
     "name" : "Beast Lord",
     "category" : "Characters",
     "sticksandstones" : 0,
@@ -172,6 +184,18 @@ const BH = [
 
 // DE
 const DE = [
+  {
+    "name" : "Techainin and Blaishoi",
+    "category" : "Characters",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "The Black Rose",
+    "category" : "Characters",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
   {
     "name" : "Dread Prince",
     "category" : "Characters",
@@ -353,6 +377,18 @@ const DE = [
 // DH
 const DH = [
   {
+    "name" : "Dinaz Betegoz, Master of the Guild of Lorekeepers",
+    "category" : "Characters",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "Tador Berafrig",
+    "category" : "Characters",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
     "name" : "King",
     "category" : "Characters",
     "clansThunder" : 0,
@@ -506,6 +542,16 @@ const DH = [
 
 // DL
 const DL = [
+  {
+    "name" : "Tristitia",
+    "category" : "Characters",
+    "magicShooting" : 0,
+  },
+  {
+    "name" : "Tergon Khan",
+    "category" : "Characters",
+    "magicShooting" : 0,
+  },
   {
     "name" : "Harbinger of Father Chaos",
     "category" : "Characters",
@@ -670,6 +716,18 @@ const DL = [
 
 // EoS
 const EoS = [
+  {
+    "name" : "Heinrich Falkenbach",
+    "category" : "Characters",
+    "imperialAuxiliaries" : 0,
+    "imperialArmory" : 0,
+  },
+  {
+    "name" : "Brother Tomaz",
+    "category" : "Characters",
+    "imperialAuxiliaries" : 0,
+    "imperialArmory" : 0,
+  },
   {
     "name" : "Marshal",
     "category" : "Characters",
@@ -849,6 +907,20 @@ const EoS = [
 // HE
 const HE = [
   {
+    "name" : "Acadnath, the Scholar",
+    "category" : "Characters",
+    "queensBows" : 0,
+    "navalOrdnance" : 0,
+    "ancientAllies" : 0,
+  },
+  {
+    "name" : "Tenacla and Baluruth",
+    "category" : "Characters",
+    "queensBows" : 0,
+    "navalOrdnance" : 0,
+    "ancientAllies" : 0,
+  },
+  {
     "name" : "High Prince",
     "category" : "Characters",
     "queensBows" : 0,
@@ -1026,6 +1098,18 @@ const HE = [
 // ID
 const ID = [
   {
+    "name" : "Abazzalem, the Mechanical Lamassu",
+    "category" : "Characters",
+    "firesOfIndustry" : 0,
+    "blackPowder" : 0,
+  },
+  {
+    "name" : "Ibat-Sokavum, the Flying Charioteer",
+    "category" : "Characters",
+    "firesOfIndustry" : 0,
+    "blackPowder" : 0,
+  },
+  {
     "name" : "Overlord",
     "category" : "Characters",
     "firesOfIndustry" : 0,
@@ -1193,6 +1277,20 @@ const ID = [
 
 // KoE
 const KoE = [
+  {
+    "name" : "King Henry the Young",
+    "category" : "Characters",
+    "gallantry" : 0,
+    "smallArmsFire" : 0,
+    "siegeEngines" : 0,
+  },
+  {
+    "name" : "Hernaut Le Rouquin",
+    "category" : "Characters",
+    "gallantry" : 0,
+    "smallArmsFire" : 0,
+    "siegeEngines" : 0,
+  },
   {
     "name" : "Damsel",
     "category" : "Characters",
@@ -1387,6 +1485,18 @@ const KoE = [
 // OK
 const OK = [
   {
+    "name" : "Ganzorig, the Ironbond",
+    "category" : "Characters",
+    "hiredGuns" : 0,
+    "powderKeg" : 0,
+  },
+  {
+    "name" : "Valish, the Chefling",
+    "category" : "Characters",
+    "hiredGuns" : 0,
+    "powderKeg" : 0,
+  },
+  {
     "name" : "Great Khan",
     "category" : "Characters",
     "hiredGuns" : 0,
@@ -1531,6 +1641,27 @@ const OK = [
 
 // OnG
 const OnG = [
+  {
+    "name" : "Lerrgog, the Smart Troll",
+    "category" : "Characters",
+    "bigAndNasty" : 0,
+    "deathFromAbove" : 0,
+    "archerBroods" : 0,
+  },
+  {
+    "name" : "Amokek, the Only King?",
+    "category" : "Characters",
+    "bigAndNasty" : 0,
+    "deathFromAbove" : 0,
+    "archerBroods" : 0,
+  },
+  {
+    "name" : "The Splendid Leader",
+    "category" : "Characters",
+    "bigAndNasty" : 0,
+    "deathFromAbove" : 0,
+    "archerBroods" : 0,
+  },
   {
     "name" : "Orc Warlord",
     "category" : "Characters",
@@ -1769,6 +1900,16 @@ const OnG = [
 // SA
 const SA = [
   {
+    "name" : "Anurarch Destined",
+    "category" : "Characters",
+    "saurianShooting" : 0,
+  },
+  {
+    "name" : "Shade and Stone",
+    "category" : "Characters",
+    "saurianShooting" : 0,
+  },
+  {
     "name" : "Anurarch Archmage",
     "category" : "Characters",
     "saurianShooting" : 0,
@@ -1919,6 +2060,18 @@ const SA = [
 
 // SE
 const SE = [
+  {
+    "name" : "Dwatobel, The World-Wandering Tree",
+    "category" : "Characters",
+    "sylvanShooting" : 0,
+    "sylvanBeasts" : 0
+  },
+  {
+    "name" : "Domethloc, The Unicorn Shapeshifter",
+    "category" : "Characters",
+    "sylvanShooting" : 0,
+    "sylvanBeasts" : 0
+  },
   {
     "name" : "Forest Prince",
     "category" : "Characters",
@@ -2075,6 +2228,18 @@ const SE = [
 
 // UD
 const UD = [
+  {
+    "name" : "Rehnepeh, the Undying Sun",
+    "category" : "Characters",
+    "aspisArrows" : 0,
+    "deathFromAfar" : 0,
+  },
+  {
+    "name" : "Ashotet, Custodian of Souls",
+    "category" : "Characters",
+    "aspisArrows" : 0,
+    "deathFromAfar" : 0,
+  },
   {
     "name" : "Pharaoh",
     "category" : "Characters",
@@ -2238,6 +2403,14 @@ const UD = [
 // VC
 const VC = [
   {
+    "name" : "Lady Chryselie",
+    "category" : "Characters",
+  },
+  {
+    "name" : "The Collective of Varyag",
+    "category" : "Characters",
+  },
+  {
     "name" : "Vampire Count",
     "category" : "Characters",
   },
@@ -2375,6 +2548,16 @@ const VC = [
 
 // VS
 const VS = [
+  {
+    "name" : "Professor Mauss",
+    "category" : "Characters",
+    "experimentalWeapon" : 0,
+  },
+  {
+    "name" : "The Shadowslice Stalker",
+    "category" : "Characters",
+    "experimentalWeapon" : 0,
+  },
   {
     "name" : "Ruinous Dictator",
     "category" : "Characters",
@@ -2557,6 +2740,16 @@ const VS = [
 
 // WDG
 const WDG = [
+    {
+    "name" : "Klaas, the Giving",
+    "category" : "Characters",
+    "legendaryBeast" : 3
+  },
+  {
+    "name" : "Ook, the Ape King",
+    "category" : "Characters",
+    "legendaryBeast" : 2
+  },
   {
     "name" : "Exalted Herald",
     "category" : "Characters",
@@ -2721,7 +2914,6 @@ const WDG = [
     "category" : "Special",
     "legendaryBeast" : 2
   },
-
 ];
 
 // exports

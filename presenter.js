@@ -7,7 +7,7 @@ const { arcCompAll, arcCompCommon, arcCompShared, allItems } = require("./old/sp
 const units = require("./units.js");
 
 // Constants
-const DEFAULT_START_DATE = "2025-03-05";
+const DEFAULT_START_DATE = "2025-10-01";
 
 // Class Variables
 const date = new Date();
@@ -1510,9 +1510,9 @@ function displayGlobalItems() {
 
 function displayUnitPickRates() {
   for (let army in armies) {
-    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┓`);
-    console.log(`┃ \x1b[1mCategory                   │ ${army.padEnd(3, " ")} - Units                        ┃     Ø     ┃   1   │   2   │   3   │   4+  │ ØPts \x1b[0m ┃`);
-    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┫`);
+    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┯━━━━━━━┓`);
+    console.log(`┃ \x1b[1mCategory                   │ ${army.padEnd(3, " ")} - Units                           ┃     Ø     ┃   1   │   2   │   3   │   4+  │ ØPts \x1b[0m ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┿━━━━━━━┫`);
 
     let lastCategory = "nothing";
     for (let unitEntry of armies[army].units) {
@@ -1525,12 +1525,12 @@ function displayUnitPickRates() {
       let pick4 = (unitEntry.count.filter(u => u >= 4).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
       let pickTotal = (unitEntry.count.reduce((a, b) => a + b, 0) / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
       if (unitEntry.category !== lastCategory) {
-        console.log(`┃                            │                                    ┃           ┃       │       │       │       │       ┃`);
+        console.log(`┃                            │                                       ┃           ┃       │       │       │       │       ┃`);
       }
-      console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(34, " ")} ┃   ${pickTotal}   ┃ ${pick1} │ ${pick2} │ ${pick3} │ ${pick4} │  ${pointsPerList}  ┃`);
+      console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(37, " ")} ┃   ${pickTotal}   ┃ ${pick1} │ ${pick2} │ ${pick3} │ ${pick4} │  ${pointsPerList}  ┃`);
       lastCategory = unitEntry.category;
     }
-    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┛`);
+    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┛`);
     console.log(`\n`);
   }
 }

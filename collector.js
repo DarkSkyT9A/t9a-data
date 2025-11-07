@@ -184,6 +184,11 @@ function transformReport(report, tournamentId) {
   r.armyOne = getArmyStringForId(report.players[0].id_book, true);
   r.armyTwo = getArmyStringForId(report.players[1].id_book, true);
 
+  // Unidentified army
+  if(r.armyOne === "n/a" || r.armyTwo === "n/a") {
+    return undefined;
+  }
+
   // console.log(report.players[0].report_list.exported_list);
   if(report.players[0].report_list) {
     r.armyListOne = transformArmyList(report.players[0].report_list, r.armyOne);
