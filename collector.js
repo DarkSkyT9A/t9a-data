@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 "use strict";
 
 // Imports
@@ -6,7 +7,7 @@ const fs = require("node:fs");
 const { transformArmyList } = require("./transformer.js");
 // Secrets
 const { user, password } = require("./secrets.json");
-
+const setupMappings = require("./setupMappings.json");
 
 // Constants
 const DEFAULT_START_DATE = "2025-03-05";
@@ -47,7 +48,6 @@ let skippedGames = 0;
     }
     while (tournamentsResponse.body.tournaments.length > 0);
 
-    // eslint-disable-next-line no-console
     console.log(`Collecting data from ${tournamentsData.length} tournaments`);
 
     for (let tournament of tournamentsData) {
@@ -105,7 +105,13 @@ let skippedGames = 0;
       // console.log(`# of Tournament reports for ${tournament.name} (${tournament._id}): ${reports.length}`);
       for(let report of reports) {
         // console.log(report.id_match);
-        // console.log(JSON.stringify(report, [ "first_turn", "type", "score", "setup", "scoring"], 4));
+        // console.log(JSON.stringify(report, [ "first_turn", "type", "score", "setup", "scoring" ], 4));
+        // console.log(JSON.stringify(report.first_turn, null, 4));
+        // console.log(JSON.stringify(report.type, null, 4));
+        // console.log(JSON.stringify(report.score, null, 4));
+        // console.log(JSON.stringify(report.setup, null, 4));
+        // console.log(JSON.stringify(report.scoring, null, 4));
+
         // Write to disc
         if (!fs.existsSync(`./data/${tournament._id}/report_${report.id_match}.json`)) {
           report = transformReport(report, tournament._id);
@@ -169,6 +175,15 @@ function transformReport(report, tournamentId) {
   // First turn
   // console.log(`${tournamentId}/report_${report.id_match}.json - First turn: ${report.first_turn}`);
   r.firstTurn = undefined !== report.first_turn ? report.first_turn : -1;
+  // Primary Objective
+  if(report.score[0].Obj === 1) {
+    r.primary = 0;
+  } else if(report.score[1].Obj === 1) {
+    r.primary = 1;
+  } else {
+    r.primary = 2;
+  }
+
   // Type (what is type?)
   r.type = report.type;
   // ID
@@ -181,6 +196,7 @@ function transformReport(report, tournamentId) {
     console.error("### Faulty report, VP do not align to 20 ###");
   }
 
+  // Armies played
   r.armyOne = getArmyStringForId(report.players[0].id_book, true);
   r.armyTwo = getArmyStringForId(report.players[1].id_book, true);
 
@@ -188,6 +204,17 @@ function transformReport(report, tournamentId) {
   if(r.armyOne === "n/a" || r.armyTwo === "n/a") {
     return undefined;
   }
+
+  // Setup
+  let mapId = report?.setup?.map ? (typeof report?.setup?.map === "object" ? report.setup.map.pop() : report.setup.map) : undefined;
+  let deploymentId = report?.setup?.deployment ? (typeof report?.setup?.deployment === "object" ? report.setup.deployment.pop() : report.setup.deployment) : undefined;
+  let primaryId = report?.setup?.primary_objective ? (typeof report?.setup?.primary_objective === "object" ? report.setup.primary_objective.pop() : report.setup.primary_objective) : undefined;
+
+  r.setup = {
+    "map": setupMappings.map[mapId],
+    "deployment": setupMappings.deployment[deploymentId],
+    "primary": setupMappings.primary[primaryId]
+  };
 
   // console.log(report.players[0].report_list.exported_list);
   if(report.players[0].report_list) {

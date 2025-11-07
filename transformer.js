@@ -6487,6 +6487,7 @@ function determineCategory(unit, army) {
 
     let unitEntry = units[army].find(u => u.name === unit.name);
     if (undefined === unitEntry) {
+        // eslint-disable-next-line no-console
         console.error(`Could not find unit entry for ${unit.name}`);
         // console.error(JSON.stringify(input, null, 4));
     }
