@@ -6453,6 +6453,7 @@ function transformArmyList(input, army) {
     summarizeCategoryPoints(r, army);
 
     calculateMagicalness(r);
+    calculateModelCounts(r);
 
     return r;
 }
@@ -6559,6 +6560,19 @@ function calculateMagicalness(list) {
     }
 
     list.magicalness = magicInList;
+}
+
+function calculateModelCounts(list) {
+    let modelCount = 0;
+
+    for(let unit of list.units) {
+        if(unit.models) {
+            modelCount += unit.models;
+        } else {
+            modelCount++;
+        }
+    }
+    list.modelCount = modelCount;
 }
 
 module.exports = {

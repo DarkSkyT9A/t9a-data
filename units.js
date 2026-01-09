@@ -2874,6 +2874,11 @@ const WDG = [
     "legendaryBeast" : 1
   },
   {
+    "name" : "Supplement Marauding Giant",
+    "category" : "Special",
+    "legendaryBeast" : 1
+  },
+  {
     "name" : "Feldrak Elder",
     "category" : "Special",
     "legendaryBeast" : 2

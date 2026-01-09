@@ -9,7 +9,16 @@ const magicalness = {
         "eidolons" : 3,
         "veil serpents" : 3,
         "naiads" : 3,
-        // TODO Continue here: OK, OnG, SA, SE, …
+        "tegu warriors" : 1,
+        "skink warriors": 1,
+        "skink hunters": 1,
+        "caiman warriors": 1,
+        "tegu mystics": 3,
+        "caiman elders": 3,
+        "pteradon riders": 3,
+        "stygiosaur pack": 3,
+        "briar maidens": 3,
+        "spectral hunters": 3,
     },
 
     // BH
@@ -96,7 +105,7 @@ const magicalness = {
     "icon of the infinite" : 1,
     "exalted herald" : 4,
     "dark prelate" : 2,
-    "battleshrine" : 1,
+    "battleshrine" : 3,
     "monstrous familiar" : 1,
 
 };
