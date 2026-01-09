@@ -6468,7 +6468,7 @@ function categorizeOption(unitEntry, option) {
         type = optionsNew.find(o => o.name.toLowerCase() === optionLower)?.type;
         // console.log(`Found out the type: ${type}`);
         // Skip all spells
-        if(type === "Spell") {
+        if (type === "Spell") {
             // console.log("Skipping because it is a spell");
             return;
         }
@@ -6521,7 +6521,7 @@ function determineCategory(unit, army) {
     // Conditional Core
     else if (unitEntry.conditionalCore) {
         // console.log(`Found unit with conditional core, checking: ${JSON.stringify(unit)}`);
-        if(unit.models >= unitEntry.conditionalCore) {
+        if (unit.models >= unitEntry.conditionalCore) {
             // console.log(`Treating the following unit as core: ${JSON.stringify(unit, null, 4)}`);
             return CORE;
         }
@@ -6532,7 +6532,7 @@ function determineCategory(unit, army) {
 
 function summarizeCategoryPoints(list, army) {
     let coreFactor = (army === "WDG" || army === "BH") ? 1.25 : 1.00;
-    if (army === "OK" && list.units.some(u => u.options.some(o => o.name ==="General, Disciplined and Wildheart"))) {
+    if (army === "OK" && list.units.some(u => u.options.some(o => o.name === "General, Disciplined and Wildheart"))) {
         // console.log(`Found Wildheart list for OK`);
         coreFactor = 1.25;
     }
@@ -6551,10 +6551,18 @@ function summarizeCategoryPoints(list, army) {
 function calculateMagicalness(list) {
     let magicInList = 0;
 
-    for(let unit of list.units) {
-        for(let option of unit.options) {
-            if(magicalness[option.name.toLowerCase()]) {
-                magicInList = magicInList + magicalness[option.name.toLowerCase()];
+    for (let unit of list.units) {
+        if (magicalness[unit.name.toLowerCase()]) {
+            magicInList = magicInList + magicalness[unit.name.toLowerCase()];
+        } else {
+            for (let option of unit.options) {
+                if (magicalness[option.name.toLowerCase()]) {
+                    if (option.name.toLowerCase() === "wizard conclave") {
+                        magicInList = magicInList + magicalness["wizard conclave"][unit.name.toLowerCase()];
+                    } else {
+                        magicInList = magicInList + magicalness[option.name.toLowerCase()];
+                    }
+                }
             }
         }
     }
@@ -6565,8 +6573,8 @@ function calculateMagicalness(list) {
 function calculateModelCounts(list) {
     let modelCount = 0;
 
-    for(let unit of list.units) {
-        if(unit.models) {
+    for (let unit of list.units) {
+        if (unit.models) {
             modelCount += unit.models;
         } else {
             modelCount++;
