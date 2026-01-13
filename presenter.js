@@ -8,7 +8,7 @@ const { arcCompAll, arcCompCommon, arcCompShared, allItems } = require("./old/sp
 const units = require("./units.js");
 
 // Constants
-const DEFAULT_START_DATE = "2025-10-01";
+const DEFAULT_START_DATE = "2026-01-06";
 
 // Class Variables
 const date = new Date();
@@ -1059,6 +1059,65 @@ fs.readdirSync("data").forEach(folder => {
       armies[report.armyTwo].magicalness.push(report.armyListTwo.magicalness);
     }
 
+    // Model counts
+    if (typeof report?.armyListOne?.modelCount !== "undefined") {
+      armies[report.armyOne].modelCount0 = armies[report.armyOne].modelCount0 || [];
+      armies[report.armyOne].modelCount1 = armies[report.armyOne].modelCount1 || [];
+      armies[report.armyOne].modelCount2 = armies[report.armyOne].modelCount2 || [];
+      armies[report.armyOne].modelCount3 = armies[report.armyOne].modelCount3 || [];
+      armies[report.armyOne].modelCount4 = armies[report.armyOne].modelCount4 || [];
+      armies[report.armyOne].modelCount5 = armies[report.armyOne].modelCount5 || [];
+      armies[report.armyOne].modelCountTotal = armies[report.armyOne].modelCountTotal || [];
+      armies[report.armyOne].modelCount0.push(report.armyListOne.modelCount.height0);
+      armies[report.armyOne].modelCount1.push(report.armyListOne.modelCount.height1);
+      armies[report.armyOne].modelCount2.push(report.armyListOne.modelCount.height2);
+      armies[report.armyOne].modelCount3.push(report.armyListOne.modelCount.height3);
+      armies[report.armyOne].modelCount4.push(report.armyListOne.modelCount.height4);
+      armies[report.armyOne].modelCount5.push(report.armyListOne.modelCount.height5);
+      armies[report.armyOne].modelCountTotal.push(report.armyListOne.modelCount.total);
+    }
+
+    if (typeof report?.armyListTwo?.modelCount !== "undefined") {
+      armies[report.armyTwo].modelCount0 = armies[report.armyTwo].modelCount0 || [];
+      armies[report.armyTwo].modelCount1 = armies[report.armyTwo].modelCount1 || [];
+      armies[report.armyTwo].modelCount2 = armies[report.armyTwo].modelCount2 || [];
+      armies[report.armyTwo].modelCount3 = armies[report.armyTwo].modelCount3 || [];
+      armies[report.armyTwo].modelCount4 = armies[report.armyTwo].modelCount4 || [];
+      armies[report.armyTwo].modelCount5 = armies[report.armyTwo].modelCount5 || [];
+      armies[report.armyTwo].modelCountTotal = armies[report.armyTwo].modelCountTotal || [];
+      armies[report.armyTwo].modelCount0.push(report.armyListTwo.modelCount.height0);
+      armies[report.armyTwo].modelCount1.push(report.armyListTwo.modelCount.height1);
+      armies[report.armyTwo].modelCount2.push(report.armyListTwo.modelCount.height2);
+      armies[report.armyTwo].modelCount3.push(report.armyListTwo.modelCount.height3);
+      armies[report.armyTwo].modelCount4.push(report.armyListTwo.modelCount.height4);
+      armies[report.armyTwo].modelCount5.push(report.armyListTwo.modelCount.height5);
+      armies[report.armyTwo].modelCountTotal.push(report.armyListTwo.modelCount.total);
+    }
+
+    // Unit Counts
+    if (typeof report?.armyListOne?.unitCount !== "undefined") {
+      armies[report.armyOne].unitCountChars = armies[report.armyOne].unitCountChars || [];
+      armies[report.armyOne].unitCountSingle = armies[report.armyOne].unitCountSingle || [];
+      armies[report.armyOne].unitCountRnf = armies[report.armyOne].unitCountRnf || [];
+      armies[report.armyOne].unitCountTotal = armies[report.armyOne].unitCountTotal || [];
+      armies[report.armyOne].unitCountChars.push(report.armyListOne.unitCount.characters);
+      armies[report.armyOne].unitCountSingle.push(report.armyListOne.unitCount.singleModel);
+      armies[report.armyOne].unitCountRnf.push(report.armyListOne.unitCount.rankAndFile);
+      armies[report.armyOne].unitCountTotal.push(report.armyListOne.unitCount.total);
+    }
+
+    if (typeof report?.armyListTwo?.unitCount !== "undefined") {
+      armies[report.armyTwo].unitCountChars = armies[report.armyTwo].unitCountChars || [];
+      armies[report.armyTwo].unitCountSingle = armies[report.armyTwo].unitCountSingle || [];
+      armies[report.armyTwo].unitCountRnf = armies[report.armyTwo].unitCountRnf || [];
+      armies[report.armyTwo].unitCountTotal = armies[report.armyTwo].unitCountTotal || [];
+      armies[report.armyTwo].unitCountChars.push(report.armyListTwo.unitCount.characters);
+      armies[report.armyTwo].unitCountSingle.push(report.armyListTwo.unitCount.singleModel);
+      armies[report.armyTwo].unitCountRnf.push(report.armyListTwo.unitCount.rankAndFile);
+      armies[report.armyTwo].unitCountTotal.push(report.armyListTwo.unitCount.total);
+    }
+
+
     // Global:
     globalStats.tournamentsWithReports.push(folder);
     globalStats.games++;
@@ -1169,6 +1228,22 @@ for (let army in armies) {
   armies[army].chars.fourtyPercent = (armies[army].chars.fourty / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
   // console.log(JSON.stringify(armies[army].chars, null, 4));
 
+  // Calculate model counts
+  let count = armies[army].modelCountTotal.length;
+  armies[army].modelCountTotal = (armies[army].modelCountTotal.reduce((a, b) => a + b, 0) / count).toFixed(0).padStart(4, " ");
+  armies[army].modelCount0 = (armies[army].modelCount0.reduce((a, b) => a + b, 0) / count).toFixed(1).padStart(3, " ");
+  armies[army].modelCount1 = (armies[army].modelCount1.reduce((a, b) => a + b, 0) / count).toFixed(0).padStart(3, " ");
+  armies[army].modelCount2 = (armies[army].modelCount2.reduce((a, b) => a + b, 0) / count).toFixed(0).padStart(3, " ");
+  armies[army].modelCount3 = (armies[army].modelCount3.reduce((a, b) => a + b, 0) / count).toFixed(0).padStart(3, " ");
+  armies[army].modelCount4 = (armies[army].modelCount4.reduce((a, b) => a + b, 0) / count).toFixed(1).padStart(3, " ");
+  armies[army].modelCount5 = (armies[army].modelCount5.reduce((a, b) => a + b, 0) / count).toFixed(1).padStart(3, " ");
+
+    // Calculate unit counts
+  let unitCountLists = armies[army].unitCountTotal.length;
+  armies[army].unitCountTotal = (armies[army].unitCountTotal.reduce((a, b) => a + b, 0) / unitCountLists).toFixed(1).padStart(4, " ");
+  armies[army].unitCountChars = (armies[army].unitCountChars.reduce((a, b) => a + b, 0) / unitCountLists).toFixed(1).padStart(3, " ");
+  armies[army].unitCountRnf = (armies[army].unitCountRnf.reduce((a, b) => a + b, 0) / unitCountLists).toFixed(1).padStart(3, " ");
+  armies[army].unitCountSingle = (armies[army].unitCountSingle.reduce((a, b) => a + b, 0) / unitCountLists).toFixed(1).padStart(3, " ");
 }
 
 // #################################################################################################################
@@ -1195,6 +1270,9 @@ displayCharacterShares();
 
 // Display magicalness
 displayMagicalness();
+
+// Display model counts
+displayModelCounts();
 
 // Display global special item pick rates
 displayGlobalItems();
@@ -1435,6 +1513,20 @@ function displayMagicalness() {
     console.log(`┃ ${army.padEnd(3, " ")}          │ ${armies[army].magicalness.filter(m => m === 0).length.toString().padStart(3, " ")} │ ${armies[army].magicalness.filter(m => m >= 1 && m < 5).length.toString().padStart(3, " ")} │ ${armies[army].magicalness.filter(m => m >= 5 && m < 10).length.toString().padStart(3, " ")} │ ${armies[army].magicalness.filter(m => m >= 10 && m < 13).length.toString().padStart(3, " ")} │ ${armies[army].magicalness.filter(m => m >= 13).length.toString().padStart(3, " ")} ┃`);
   }
   console.log(`┗━━━━━━━━━━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┛`);
+}
+
+function displayModelCounts() {
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ Models and units by Army                                                                  ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┯━━━━━━━━┯━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┫`);
+  console.log(`┃ Army         │ Models │ Units ┃      Models by Height             ┃    Units by Type      ┃`);
+  console.log(`┃              │        │       ┃  0  │  1  │  2  │  3  │  4  │  5  ┃ Chars │  RnF  │ Solo  ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┿━━━━━━━━┿━━━━━━━╋━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━╋━━━━━━━┿━━━━━━━┿━━━━━━━┫`);
+
+  for (let army in armies) {
+    console.log(`┃ ${army.padEnd(3, " ")}          │  ${armies[army].modelCountTotal}  │  ${armies[army].unitCountTotal} ┃ ${armies[army].modelCount0} │ ${armies[army].modelCount1} │ ${armies[army].modelCount2} │ ${armies[army].modelCount3} │ ${armies[army].modelCount4} │ ${armies[army].modelCount5} ┃  ${armies[army].unitCountChars}  │  ${armies[army].unitCountRnf}  │  ${armies[army].unitCountSingle}  ┃`);
+  }
+  console.log(`┗━━━━━━━━━━━━━━┷━━━━━━━━┷━━━━━━━┻━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┻━━━━━━━┷━━━━━━━┷━━━━━━━┛`);
 }
 
 

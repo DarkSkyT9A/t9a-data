@@ -6453,7 +6453,7 @@ function transformArmyList(input, army) {
     summarizeCategoryPoints(r, army);
 
     calculateMagicalness(r);
-    calculateModelCounts(r);
+    calculateModelCounts(r, army);
 
     return r;
 }
@@ -6570,17 +6570,66 @@ function calculateMagicalness(list) {
     list.magicalness = magicInList;
 }
 
-function calculateModelCounts(list) {
-    let modelCount = 0;
+function calculateModelCounts(list, army) {
+    let modelCount = {
+        characters: 0,
+        height0: 0,
+        height1: 0,
+        height2: 0,
+        height3: 0,
+        height4: 0,
+        height5: 0,
+        total: 0,
+    };
+
+    let unitCount = {
+        characters: 0,
+        singleModel: 0,
+        rankAndFile: 0,
+        total: 0,
+    };
 
     for (let unit of list.units) {
-        if (unit.models) {
-            modelCount += unit.models;
+        if(unit.category === CHARACTERS) {
+            modelCount.characters++;
+            unitCount.characters++;
         } else {
-            modelCount++;
+            let c = unit.models || 1;
+            let unitEntry = units[army].find(u => u.name === unit.name);
+            let height = unitEntry.height;
+            switch(height) {
+                case 0: 
+                    modelCount.height0 = modelCount.height0 + c;
+                    break;
+                case 1: 
+                    modelCount.height1 = modelCount.height1 + c;
+                    break;
+                case 2: 
+                    modelCount.height2 = modelCount.height2 + c;
+                    break;
+                case 3: 
+                    modelCount.height3 = modelCount.height3 + c;
+                    break;
+                case 4: 
+                    modelCount.height4 = modelCount.height4 + c;
+                    break;
+                case 5: 
+                    modelCount.height5 = modelCount.height5 + c;
+                    break;
+            }
+
+            if(c===1) {
+                unitCount.singleModel++;
+            } else {
+                unitCount.rankAndFile++;
+            }
         }
     }
+    modelCount.total = modelCount.characters + modelCount.height0 + modelCount.height1 + modelCount.height2 + modelCount.height3 + modelCount.height4 + modelCount.height5;
+    unitCount.total = unitCount.characters + unitCount.singleModel + unitCount.rankAndFile;
+
     list.modelCount = modelCount;
+    list.unitCount = unitCount;
 }
 
 module.exports = {

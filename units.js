@@ -2,6 +2,19 @@
 
 // BH
 const BH = [
+  // NR workarounds
+  {
+    "name" : "Beast Lord",
+    "category" : "Characters",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
+    "name" : "Beast Chieftain",
+    "category" : "Characters",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
   {
     "name" : "Moohoarrgh, the Perpetuator of Heroes",
     "category" : "Characters",
@@ -57,6 +70,7 @@ const BH = [
     "bigrocks" : 0,
     "min" : 15,
     "max" : 50,
+    "height": 1,
   },
   {
     "name" : "Mongrel Herd",
@@ -65,6 +79,7 @@ const BH = [
     "bigrocks" : 0,
     "min" : 25,
     "max" : 50,
+    "height": 1,
   },
   {
     "name" : "Mongrel Raiders",
@@ -73,6 +88,7 @@ const BH = [
     "bigrocks" : 0,
     "min" : 10,
     "max" : 20,
+    "height": 1,
   },
   {
     "name" : "Feral Hounds",
@@ -82,6 +98,7 @@ const BH = [
     "bigrocks" : 0,
     "min" : 5,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Longhorn Herd",
@@ -90,6 +107,7 @@ const BH = [
     "bigrocks" : 0,
     "min" : 10,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Minotaurs",
@@ -98,6 +116,7 @@ const BH = [
     "bigrocks" : 0,
     "min" : 3,
     "max" : 10,
+    "height": 3,
   },
   {
     "name" : "Centaurs",
@@ -106,6 +125,7 @@ const BH = [
     "bigrocks" : 0,
     "min" : 5,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Raiding Chariots",
@@ -115,6 +135,7 @@ const BH = [
     "bigrocks" : 0,
     "min" : 1,
     "max" : 3,
+    "height": 4,
   },
   {
     "name" : "Razortusk Herd",
@@ -123,18 +144,21 @@ const BH = [
     "bigrocks" : 0,
     "min" : 3,
     "max" : 10,
+    "height": 3,
   },
   {
     "name" : "Razortusk Chariot",
     "category" : "Special",
     "sticksandstones" : 0,
     "bigrocks" : 0,
+    "height": 4,
   },
   {
     "name" : "Briar Beast",
     "category" : "Special",
     "sticksandstones" : 0,
     "bigrocks" : 0,
+    "height": 3,
   },
   {
     "name" : "Gargoyles",
@@ -143,30 +167,35 @@ const BH = [
     "bigrocks" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 1,
   },
   {
     "name" : "Cyclops",
     "category" : "Terrors of the Wild",
     "sticksandstones" : 0,
     "bigrocks" : 1,
+    "height": 5,
   },
   {
     "name" : "Gortach",
     "category" : "Terrors of the Wild",
     "sticksandstones" : 0,
     "bigrocks" : 0,
+    "height": 5,
   },
   {
     "name" : "Jabberwock",
     "category" : "Terrors of the Wild",
     "sticksandstones" : 0,
     "bigrocks" : 0,
+    "height": 5,
   },
   {
     "name" : "Beast Giant",
     "category" : "Terrors of the Wild",
     "sticksandstones" : 0,
     "bigrocks" : 0,
+    "height": 5,
   },
 ];
 
@@ -174,6 +203,12 @@ const BH = [
 const DE = [
   {
     "name" : "Techainin and Blaishoi",
+    "category" : "Characters",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+  },
+  {
+    "name" : "Tethaen, the Ocean Terror",
     "category" : "Characters",
     "raiders" : 0,
     "boltThrowers" : 0,
@@ -221,6 +256,7 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 15,
     "max" : 35,
+    "height": 1,
   },
   {
     "name" : "Silexian Auxiliaries",
@@ -229,6 +265,7 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Temple Militants",
@@ -237,6 +274,7 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Corsairs",
@@ -244,7 +282,8 @@ const DE = [
     "raiders" : 0,
     "boltThrowers" : 0,
     "min" : 10,
-    "max" : 30,
+    "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Shadow Riders",
@@ -253,6 +292,7 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Dread Acolytes",
@@ -261,6 +301,7 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 5,
     "max" : 12,
+    "height": 2,
   },
   {
     "name" : "Dread Knights",
@@ -269,6 +310,7 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Obsidian Guard",
@@ -277,6 +319,16 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
+  },
+  {
+    "name" : "Dancers of Yema",
+    "category" : "Special",
+    "raiders" : 0,
+    "boltThrowers" : 0,
+    "min" : 10,
+    "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Judicators",
@@ -285,6 +337,7 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Harpies",
@@ -293,6 +346,7 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 5,
     "max" : 12,
+    "height": 1,
   },
   {
     "name" : "Gorgons",
@@ -301,6 +355,7 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 2,
     "max" : 4,
+    "height": 3,
   },
   {
     "name" : "Thunder Pack",
@@ -309,30 +364,35 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Raptor Chariot",
     "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
+    "height": 4,
   },
   {
     "name" : "Divine Altar",
     "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 0,
+    "height": 5,
   },
   {
     "name" : "Hunting Chariot",
     "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 1,
+    "height": 4,
   },
   {
     "name" : "Repeater Battery",
     "category" : "Special",
     "raiders" : 0,
     "boltThrowers" : 1,
+    "height": 2,
   },
   {
     "name" : "Black Cloaks",
@@ -341,24 +401,28 @@ const DE = [
     "boltThrowers" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 1,
   },
   {
     "name" : "Kraken",
     "category" : "The Menagerie",
     "raiders" : 0,
     "boltThrowers" : 0,
+    "height": 5,
   },
   {
     "name" : "Hydra",
     "category" : "The Menagerie",
     "raiders" : 0,
     "boltThrowers" : 0,
+    "height": 5,
   },
   {
     "name" : "Mist Leviathan",
     "category" : "The Menagerie",
     "raiders" : 0,
     "boltThrowers" : 0,
+    "height": 5,
   },
 ];
 
@@ -413,6 +477,7 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 15,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Greybeards",
@@ -421,6 +486,7 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Clan Marksmen",
@@ -429,6 +495,7 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 10,
     "max" : 20,
+    "height": 1,
   },
   {
     "name" : "King's Guard",
@@ -437,6 +504,16 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 15,
     "max" : 25,
+    "height": 1,
+  },
+  {
+    "name" : "King’s Guard",
+    "category" : "Special",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+    "min" : 15,
+    "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Deep Watch",
@@ -445,6 +522,7 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 15,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Seekers",
@@ -453,6 +531,7 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 8,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Brothers of Vengeance",
@@ -461,12 +540,14 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 8,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Vengeance Seeker",
     "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
+    "height": 1,
   },
   {
     "name" : "Hold Guardians",
@@ -475,12 +556,14 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Grudge Buster",
     "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
+    "height": 4,
   },
   {
     "name" : "Miners",
@@ -489,12 +572,14 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 10,
     "max" : 20,
+    "height": 1,
   },
   {
     "name" : "Anvil of Power",
     "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
+    "height": 2,
   },
   {
     "name" : "Rangers",
@@ -503,6 +588,7 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 10,
     "max" : 20,
+    "height": 1,
   },
   {
     "name" : "Forge Wardens",
@@ -511,6 +597,7 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 10,
     "max" : 16,
+    "height": 1,
   },
   {
     "name" : "Steam Copters",
@@ -519,12 +606,14 @@ const DH = [
     "enginesOfWar" : 0,
     "min" : 1,
     "max" : 2,
+    "height": 2,
   },
   {
     "name" : "Field Artillery",
     "category" : "Special",
     "clansThunder" : 0,
     "enginesOfWar" : 1,
+    "height": 2,
   },
 ];
 
@@ -547,6 +636,11 @@ const DL = [
   },
   {
     "name" : "Kuulima's Deceiver",
+    "category" : "Characters",
+    "magicShooting" : 0,
+  },
+  {
+    "name" : "Kuulima’s Deceiver",
     "category" : "Characters",
     "magicShooting" : 0,
   },
@@ -581,11 +675,17 @@ const DL = [
     "magicShooting" : 0,
   },
   {
+    "name" : "Vanadra’s Scourge",
+    "category" : "Characters",
+    "magicShooting" : 0,
+  },
+  {
     "name" : "Imps",
     "category" : "Core",
     "magicShooting" : 1,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Succubi",
@@ -593,6 +693,7 @@ const DL = [
     "magicShooting" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Lemures",
@@ -600,6 +701,7 @@ const DL = [
     "magicShooting" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Myrmidons",
@@ -607,6 +709,7 @@ const DL = [
     "magicShooting" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Eidolons",
@@ -614,6 +717,7 @@ const DL = [
     "magicShooting" : 3,
     "min" : 5,
     "max" : 10,
+    "height": 1,
   },
   {
     "name" : "Hellhounds",
@@ -621,6 +725,7 @@ const DL = [
     "magicShooting" : 0,
     "min" : 5,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Threshing Engine",
@@ -628,11 +733,13 @@ const DL = [
     "magicShooting" : 0,
     "min" : 1,
     "max" : 3,
+    "height": 4,
   },
   {
     "name" : "Titanslayer Chariot",
     "category" : "Special",
     "magicShooting" : 0,
+    "height": 4,
   },
   {
     "name" : "Mageblight Gremlins",
@@ -640,6 +747,7 @@ const DL = [
     "magicShooting" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 0,
   },
   {
     "name" : "Clawed Fiends",
@@ -647,6 +755,7 @@ const DL = [
     "magicShooting" : 0,
     "min" : 3,
     "max" : 8,
+    "height": 3,
   },
   {
     "name" : "Hoarders",
@@ -654,6 +763,7 @@ const DL = [
     "magicShooting" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Succubi Tempters",
@@ -661,16 +771,19 @@ const DL = [
     "magicShooting" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Blazing Glory",
     "category" : "Special",
     "magicShooting" : 0,
+    "height": 4,
   },
   {
     "name" : "Hope Harvester",
     "category" : "Special",
     "magicShooting" : 5,
+    "height": 3,
   },
   {
     "name" : "Brazen Beasts",
@@ -678,6 +791,7 @@ const DL = [
     "magicShooting" : 0,
     "min" : 3,
     "max" : 5,
+    "height": 4,
   },
   {
     "name" : "Furies",
@@ -685,6 +799,7 @@ const DL = [
     "magicShooting" : 0,
     "min" : 5,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Veil Serpents",
@@ -692,6 +807,7 @@ const DL = [
     "magicShooting" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Bloat Flies",
@@ -699,11 +815,50 @@ const DL = [
     "magicShooting" : 0,
     "min" : 3,
     "max" : 5,
+    "height": 4,
   },
 ];
 
 // EoS
 const EoS = [
+  // Workaround for NR bug
+  {
+    "name" : "State Detatchment",
+    "category" : "core",
+    "imperialAuxiliaries" : 0,
+    "imperialArmory" : 0,
+    "min" : 15,
+    "max" : 20,
+    "height": 1,
+  },
+  // Workaround for older EoS lists
+  {
+    "name" : "Light Infantry",
+    "category" : "core",
+    "imperialAuxiliaries" : 1,
+    "imperialArmory" : 0,
+    "min" : 15,
+    "max" : 20,
+    "height": 1,
+  },
+  {
+    "name" : "Heavy Infantry",
+    "category" : "core",
+    "imperialAuxiliaries" : 0,
+    "imperialArmory" : 0,
+    "min" : 20,
+    "max" : 40,
+    "height": 1,
+  },
+  {
+    "name" : "State Militia",
+    "category" : "core",
+    "imperialAuxiliaries" : 1,
+    "imperialArmory" : 0,
+    "min" : 15,
+    "max" : 25,
+    "height": 1,
+  },
   {
     "name" : "Heinrich Falkenbach",
     "category" : "Characters",
@@ -759,6 +914,7 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 20,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "State Detachment",
@@ -767,6 +923,7 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 15,
     "max" : 20,
+    "height": 1,
   },
   {
     "name" : "State Marksmen",
@@ -775,6 +932,7 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 15,
     "max" : 20,
+    "height": 1,
   },
   {
     "name" : "Local Militia",
@@ -783,6 +941,7 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 15,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Electoral Cavalry",
@@ -791,6 +950,7 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 8,
     "max" : 20,
+    "height": 2,
   },
   {
     "name" : "Knightly Orders",
@@ -799,6 +959,7 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 5,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Imperial Guard",
@@ -807,6 +968,7 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 15,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Imperial Detachment",
@@ -815,6 +977,7 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 15,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Knights of the Sun Griffon",
@@ -823,12 +986,14 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 3,
     "max" : 5,
+    "height": 3,
   },
   {
     "name" : "Arcane Engine",
     "category" : "Special",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 0,
+    "height": 4,
   },
   {
     "name" : "Imperial Rangers",
@@ -837,6 +1002,7 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 8,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Reiters",
@@ -845,12 +1011,14 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Blackpowder Artillery",
     "category" : "Special",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 1,
+    "height": 2,
   },
   {
     "name" : "Flagellants",
@@ -859,12 +1027,14 @@ const EoS = [
     "imperialArmory" : 0,
     "min" : 15,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Steam Tank",
     "category" : "Sunna's Fury",
     "imperialAuxiliaries" : 0,
     "imperialArmory" : 1,
+    "height": 5,
   },
 ];
 
@@ -913,6 +1083,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 15,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Citizen Spears",
@@ -922,6 +1093,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 20,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Sea Guard",
@@ -931,6 +1103,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 15,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Highborn Lancers",
@@ -940,6 +1113,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 5,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Erlein Reavers",
@@ -949,6 +1123,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Sword Masters",
@@ -958,6 +1133,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Lion Guard",
@@ -967,6 +1143,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Flame Wardens",
@@ -976,6 +1153,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Knights of Rymâ",
@@ -985,6 +1163,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Reaver Chariots",
@@ -994,6 +1173,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 2,
     "max" : 3,
+    "height": 4,
   },
   {
     "name" : "Lion Chariot",
@@ -1001,6 +1181,7 @@ const HE = [
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 0,
+    "height": 4,
   },
   {
     "name" : "Giant Eagles",
@@ -1010,6 +1191,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 1,
     "max" : 5,
+    "height": 3,
   },
   {
     "name" : "Initiate of the Fiery Heart",
@@ -1017,6 +1199,7 @@ const HE = [
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 1,
+    "height": 4,
   },
   {
     "name" : "Phoenix",
@@ -1024,6 +1207,7 @@ const HE = [
     "queensBows" : 0,
     "navalOrdnance" : 0,
     "ancientAllies" : 1,
+    "height": 5,
   },
   {
     "name" : "Sea Guard Reaper",
@@ -1031,6 +1215,7 @@ const HE = [
     "queensBows" : 0,
     "navalOrdnance" : 1,
     "ancientAllies" : 0,
+    "height": 2,
   },
   {
     "name" : "Sky Sloop",
@@ -1038,6 +1223,7 @@ const HE = [
     "queensBows" : 0,
     "navalOrdnance" : 1,
     "ancientAllies" : 0,
+    "height": 4,
   },
   {
     "name" : "Queen's Guard",
@@ -1047,6 +1233,17 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 10,
     "max" : 20,
+    "height": 1,
+  },
+  {
+    "name" : "Queen’s Guard",
+    "category" : "Special",
+    "queensBows" : 1,
+    "navalOrdnance" : 0,
+    "ancientAllies" : 0,
+    "min" : 10,
+    "max" : 20,
+    "height": 1,
   },
   {
     "name" : "Grey Watchers",
@@ -1056,6 +1253,7 @@ const HE = [
     "ancientAllies" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 1,
   },
 ];
 
@@ -1116,6 +1314,7 @@ const ID = [
     "blackPowder" : 0,
     "min" : 20,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Citadel Guard",
@@ -1124,6 +1323,7 @@ const ID = [
     "blackPowder" : 0,
     "min" : 15,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Vassal Levies",
@@ -1132,6 +1332,7 @@ const ID = [
     "blackPowder" : 0,
     "min" : 20,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Shackled Slaves",
@@ -1140,6 +1341,7 @@ const ID = [
     "blackPowder" : 0,
     "min" : 20,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Kadim Incarnates",
@@ -1148,12 +1350,14 @@ const ID = [
     "blackPowder" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Kadim Chariot",
     "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
+    "height": 4,
   },
   {
     "name" : "Immortals",
@@ -1162,6 +1366,7 @@ const ID = [
     "blackPowder" : 0,
     "min" : 15,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Disciples of Lugar",
@@ -1170,6 +1375,7 @@ const ID = [
     "blackPowder" : 0,
     "min" : 15,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Taurukh Enforcers",
@@ -1178,6 +1384,7 @@ const ID = [
     "blackPowder" : 0,
     "min" : 5,
     "max" : 12,
+    "height": 2,
   },
   {
     "name" : "Taurukh Anointed",
@@ -1186,6 +1393,7 @@ const ID = [
     "blackPowder" : 0,
     "min" : 3,
     "max" : 5,
+    "height": 4,
   },
   {
     "name" : "Vassal Cavalry",
@@ -1194,48 +1402,56 @@ const ID = [
     "blackPowder" : 0,
     "min" : 5,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Vassal Slingshot",
     "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
+    "height": 2,
   },
   {
     "name" : "Gunnery Team",
     "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
+    "height": 3,
   },
   {
     "name" : "Infernal Artillery",
     "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
+    "height": 3,
   },
   {
     "name" : "Infernal Bastion",
     "category" : "Special",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
+    "height": 5,
   },
   {
     "name" : "Infernal Engine",
     "category" : "Instruments of Destruction",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
+    "height": 5,
   },
   {
     "name" : "Kadim Titan",
     "category" : "Instruments of Destruction",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
+    "height": 5,
   },
   {
     "name" : "Citizen Giant",
     "category" : "Instruments of Destruction",
     "firesOfIndustry" : 0,
     "blackPowder" : 0,
+    "height": 5,
   },
 ];
 
@@ -1291,6 +1507,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 6,
     "max" : 12,
+    "height": 2,
   },
   {
     "name" : "Hedge Knights",
@@ -1300,6 +1517,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 6,
     "max" : 9,
+    "height": 2,
   },
   {
     "name" : "Mounted Serjeants",
@@ -1309,6 +1527,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 8,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Lowborn Levies",
@@ -1318,6 +1537,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 30,
     "max" : 50,
+    "height": 1,
   },
   {
     "name" : "Lowborn Archers",
@@ -1327,6 +1547,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 15,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Men-at-Arms",
@@ -1336,6 +1557,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 15,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Sacred Reliquary",
@@ -1343,6 +1565,7 @@ const KoE = [
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
+    "height": 3,
   },
   {
     "name" : "Knights of the Court",
@@ -1352,6 +1575,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 6,
     "max" : 12,
+    "height": 2,
   },
   {
     "name" : "Knights Penitent",
@@ -1361,6 +1585,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 3,
     "max" : 9,
+    "height": 2,
   },
   {
     "name" : "Knights of the Quest",
@@ -1370,6 +1595,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 6,
     "max" : 9,
+    "height": 2,
   },
   {
     "name" : "Yeoman Outriders",
@@ -1379,6 +1605,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 5,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Enlisted Outlaws",
@@ -1388,6 +1615,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 10,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Siege Weapon",
@@ -1395,6 +1623,7 @@ const KoE = [
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 1,
+    "height": 2,
   },
   {
     "name" : "Pegasus Knights",
@@ -1404,6 +1633,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 3,
     "max" : 5,
+    "height": 3,
   },
   {
     "name" : "Sky Heralds",
@@ -1413,6 +1643,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 2,
   },
   {
     "name" : "Naiads",
@@ -1422,6 +1653,7 @@ const KoE = [
     "siegeEngines" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 1,
   },
   {
     "name" : "Friar's Lantern",
@@ -1429,6 +1661,15 @@ const KoE = [
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
+    "height": 0,
+  },
+  {
+    "name" : "Friar’s Lantern",
+    "category" : "Fey",
+    "gallantry" : 0,
+    "smallArmsFire" : 0,
+    "siegeEngines" : 0,
+    "height": 0,
   },
   {
     "name" : "The Lady's Courtier",
@@ -1436,6 +1677,15 @@ const KoE = [
     "gallantry" : 0,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
+    "height": 4,
+  },
+  {
+    "name" : "The Lady’s Courtier",
+    "category" : "Fey",
+    "gallantry" : 0,
+    "smallArmsFire" : 0,
+    "siegeEngines" : 0,
+    "height": 4,
   },
   {
     "name" : "Fey Knight",
@@ -1443,6 +1693,7 @@ const KoE = [
     "gallantry" : 1,
     "smallArmsFire" : 0,
     "siegeEngines" : 0,
+    "height": 4,
   },
 ];
 
@@ -1491,6 +1742,7 @@ const OK = [
     "powderKeg" : 0,
     "min" : 4,
     "max" : 15,
+    "height": 3,
   },
   {
     "name" : "Bruisers",
@@ -1499,6 +1751,7 @@ const OK = [
     "powderKeg" : 0,
     "min" : 3,
     "max" : 10,
+    "height": 3,
   },
   {
     "name" : "Scraplings",
@@ -1507,6 +1760,7 @@ const OK = [
     "powderKeg" : 0,
     "min" : 20,
     "max" : 60,
+    "height": 1,
   },
   {
     "name" : "Sabretooth Tigers",
@@ -1516,6 +1770,7 @@ const OK = [
     "powderKeg" : 0,
     "min" : 3,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Scrapling Trappers",
@@ -1524,6 +1779,7 @@ const OK = [
     "powderKeg" : 0,
     "min" : 8,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Yetis",
@@ -1532,12 +1788,14 @@ const OK = [
     "powderKeg" : 0,
     "min" : 2,
     "max" : 5,
+    "height": 3,
   },
   {
     "name" : "Kin-Eater",
     "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 0,
+    "height": 3,
   },
   {
     "name" : "Tusker Cavalry",
@@ -1546,6 +1804,7 @@ const OK = [
     "powderKeg" : 0,
     "min" : 3,
     "max" : 5,
+    "height": 4,
   },
   {
     "name" : "Mercenary Veterans",
@@ -1554,6 +1813,7 @@ const OK = [
     "powderKeg" : 0,
     "min" : 3,
     "max" : 9,
+    "height": 3,
   },
   {
     "name" : "Mercenary Gunners",
@@ -1562,6 +1822,7 @@ const OK = [
     "powderKeg" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Bombardiers",
@@ -1570,36 +1831,42 @@ const OK = [
     "powderKeg" : 0,
     "min" : 3,
     "max" : 8,
+    "height": 3,
   },
   {
     "name" : "Thunder Cannon",
     "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 1,
+    "height": 4,
   },
   {
     "name" : "Scratapult",
     "category" : "Special",
     "hiredGuns" : 0,
     "powderKeg" : 1,
+    "height": 4,
   },
   {
     "name" : "Rock Aurochs",
     "category" : "Chained Beasts",
     "hiredGuns" : 0,
     "powderKeg" : 0,
+    "height": 5,
   },
   {
     "name" : "Frost Mammoth",
     "category" : "Chained Beasts",
     "hiredGuns" : 0,
     "powderKeg" : 0,
+    "height": 5,
   },
   {
     "name" : "Mercenary Giant",
     "category" : "Chained Beasts",
     "hiredGuns" : 0,
     "powderKeg" : 0,
+    "height": 5,
   },
 ];
 
@@ -1690,6 +1957,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 25,
     "max" : 60,
+    "height": 1,
   },
   {
     "name" : "Goblin Reavers",
@@ -1699,6 +1967,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 8,
     "max" : 25,
+    "height": 2,
   },
   {
     "name" : "Feral Orcs",
@@ -1708,6 +1977,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 25,
     "max" : 50,
+    "height": 1,
   },
   {
     "name" : "Feral Orc Marauders",
@@ -1717,6 +1987,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 2,
   },
   {
     "name" : "Veteran Orcs",
@@ -1726,6 +1997,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 20,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Veteran Orc Marauders",
@@ -1735,6 +2007,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 5,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Iron Orcs",
@@ -1744,6 +2017,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 15,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Iron Orc Chariots",
@@ -1753,6 +2027,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 1,
     "max" : 2,
+    "height": 4,
   },
   {
     "name" : "Gogtuk Neophytes",
@@ -1762,6 +2037,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 10,
     "max" : 20,
+    "height": 1,
   },
   {
     "name" : "Goblin Chariots",
@@ -1771,6 +2047,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 2,
     "max" : 3,
+    "height": 4,
   },
   {
     "name" : "Grotlings",
@@ -1780,6 +2057,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 0,
   },
   {
     "name" : "Grotling Scrap Wagon",
@@ -1787,6 +2065,7 @@ const OnG = [
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
+    "height": 4,
   },
   {
     "name" : "Gnashers",
@@ -1796,6 +2075,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 15,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Gnashers Dashers",
@@ -1805,6 +2085,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 10,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Gnasher Dashers",
@@ -1814,6 +2095,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 10,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Wrecking Team",
@@ -1821,6 +2103,7 @@ const OnG = [
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
+    "height": 3,
   },
   {
     "name" : "Trolls",
@@ -1830,6 +2113,7 @@ const OnG = [
     "archerBroods" : 0,
     "min" : 3,
     "max" : 9,
+    "height": 3,
   },
   {
     "name" : "Goblin Artillery",
@@ -1837,6 +2121,7 @@ const OnG = [
     "bigAndNasty" : 0,
     "deathFromAbove" : 1,
     "archerBroods" : 0,
+    "height": 2,
   },
   {
     "name" : "Giant",
@@ -1844,6 +2129,7 @@ const OnG = [
     "bigAndNasty" : 1,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
+    "height": 5,
   },
   {
     "name" : "Guardian Behemoth",
@@ -1851,6 +2137,7 @@ const OnG = [
     "bigAndNasty" : 1,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
+    "height": 5,
   },
   {
     "name" : "Great Green Idol",
@@ -1858,6 +2145,7 @@ const OnG = [
     "bigAndNasty" : 1,
     "deathFromAbove" : 0,
     "archerBroods" : 0,
+    "height": 5,
   },
 ];
 
@@ -1899,6 +2187,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 15,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Skink Warriors",
@@ -1906,6 +2195,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 20,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Skink Hunters",
@@ -1913,6 +2203,7 @@ const SA = [
     "saurianShooting" : 1,
     "min" : 12,
     "max" : 20,
+    "height": 1,
   },
   {
     "name" : "Caiman Warriors",
@@ -1920,6 +2211,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 4,
     "max" : 8,
+    "height": 3,
   },
   {
     "name" : "Tegu Guards",
@@ -1927,6 +2219,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 15,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Tegu Mystics",
@@ -1934,6 +2227,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 10,
     "max" : 20,
+    "height": 1,
   },
   {
     "name" : "Raptor Pack",
@@ -1941,6 +2235,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 6,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Raptor Riders",
@@ -1948,6 +2243,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 8,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Caiman Elders",
@@ -1955,6 +2251,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Thyroscutus Herd",
@@ -1962,6 +2259,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 1,
     "max" : 3,
+    "height": 4,
   },
   {
     "name" : "Rhamphodon Riders",
@@ -1969,6 +2267,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Saurian Swarms",
@@ -1976,6 +2275,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 0,
   },
   {
     "name" : "Skink Guerrillas",
@@ -1983,6 +2283,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 8,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Weapon Beasts",
@@ -1990,6 +2291,7 @@ const SA = [
     "saurianShooting" : 2,
     "min" : 2,
     "max" : 4,
+    "height": 3,
   },
   {
     "name" : "Pteradon Riders",
@@ -1997,6 +2299,7 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Stygiosaur Pack",
@@ -2004,21 +2307,25 @@ const SA = [
     "saurianShooting" : 0,
     "min" : 2,
     "max" : 4,
+    "height": 4,
   },
   {
     "name" : "Carnosaur",
     "category" : "Magna Sauria",
     "saurianShooting" : 0,
+    "height": 5,
   },
   {
     "name" : "Taurosaur",
     "category" : "Magna Sauria",
     "saurianShooting" : 0,
+    "height": 5,
   },
   {
     "name" : "Titanopod",
     "category" : "Magna Sauria",
     "saurianShooting" : 0,
+    "height": 5,
   },
 ];
 
@@ -2085,6 +2392,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 15,
     "max" : 35,
+    "height": 1,
   },
   {
     "name" : "Sylvan Archers",
@@ -2093,6 +2401,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Heath Riders",
@@ -2101,6 +2410,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 5,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Dryads",
@@ -2109,6 +2419,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Forest Rangers",
@@ -2117,6 +2428,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Thicket Beasts",
@@ -2125,6 +2437,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 4,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Forest Eagles",
@@ -2133,6 +2446,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 1,
     "max" : 5,
+    "height": 3,
   },
   {
     "name" : "Blade Dancers",
@@ -2141,12 +2455,14 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 7,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Treefather",
     "category" : "Special",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 1,
+    "height": 5,
   },
   {
     "name" : "Wild Huntsmen",
@@ -2155,6 +2471,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Kestrel Knights",
@@ -2163,6 +2480,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 3,
     "max" : 4,
+    "height": 3,
   },
   {
     "name" : "Briar Maidens",
@@ -2171,6 +2489,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Sylvan Sentinels",
@@ -2179,6 +2498,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 1,
   },
   {
     "name" : "Pathfinders",
@@ -2187,6 +2507,7 @@ const SE = [
     "sylvanBeasts" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 1,
   },
 ];
 
@@ -2229,6 +2550,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 20,
     "max" : 60,
+    "height": 1,
   },
   {
     "name" : "Skeleton Archers",
@@ -2237,6 +2559,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 15,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Skeleton Cavalry",
@@ -2245,6 +2568,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 10,
     "max" : 24,
+    "height": 2,
   },
   {
     "name" : "Skeleton Scouts",
@@ -2253,6 +2577,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Skeleton Chariots",
@@ -2261,6 +2586,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 3,
     "max" : 7,
+    "height": 4,
   },
   {
     "name" : "Necropolis Guard",
@@ -2269,6 +2595,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 15,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Tomb Cataphracts",
@@ -2277,6 +2604,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 3,
     "max" : 5,
+    "height": 4,
   },
   {
     "name" : "Shabtis",
@@ -2285,6 +2613,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 3,
     "max" : 8,
+    "height": 3,
   },
   {
     "name" : "Shabti Archers",
@@ -2293,6 +2622,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Great Vultures",
@@ -2301,6 +2631,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 3,
     "max" : 9,
+    "height": 1,
   },
   {
     "name" : "Scarab Swarms",
@@ -2309,6 +2640,7 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 0,
   },
   {
     "name" : "Sand Stalkers",
@@ -2317,36 +2649,42 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 3,
     "max" : 4,
+    "height": 3,
   },
   {
     "name" : "Casket of Phatep",
     "category" : "Special",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "height": 2,
   },
   {
     "name" : "Charnel Catapult",
     "category" : "Special",
     "aspisArrows" : 0,
     "deathFromAfar" : 1,
+    "height": 3,
   },
   {
     "name" : "Sand Scorpion",
     "category" : "Entombed",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "height": 3,
   },
   {
     "name" : "Battle Sphinx",
     "category" : "Mason's Menagerie",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "height": 5,
   },
   {
     "name" : "Dread Sphinx",
     "category" : "Mason's Menagerie",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "height": 5,
   },
   {
     "name" : "Tomb Reapers",
@@ -2355,12 +2693,14 @@ const UD = [
     "deathFromAfar" : 0,
     "min" : 2,
     "max" : 4,
+    "height": 4,
   },
   {
     "name" : "Colossus",
     "category" : "Mason's Menagerie",
     "aspisArrows" : 0,
     "deathFromAfar" : 0,
+    "height": 5,
   },
 ];
 
@@ -2399,114 +2739,135 @@ const VC = [
     "category" : "Core",
     "min" : 20,
     "max" : 80,
+    "height": 1,
   },
   {
     "name" : "Skeletons",
     "category" : "Core",
     "min" : 20,
     "max" : 60,
+    "height": 1,
   },
   {
     "name" : "Ghouls",
     "category" : "Core",
     "min" : 15,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Bat Swarms",
     "category" : "Core",
     "min" : 3,
     "max" : 6,
+    "height": 0,
   },
   {
     "name" : "Dire Wolves",
     "category" : "Core",
     "min" : 8,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Great Bats",
     "category" : "Special",
     "min" : 2,
     "max" : 9,
+    "height": 1,
   },
   {
     "name" : "Ghasts",
     "category" : "Special",
     "min" : 3,
     "max" : 8,
+    "height": 3,
   },
   {
     "name" : "Barrow Guard",
     "category" : "Special",
     "min" : 15,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Barrow Knights",
     "category" : "Special",
     "min" : 5,
     "max" : 15,
+    "height": 2,
   },
   {
     "name" : "Cadaver Wagon",
     "category" : "Special",
+    "height": 4,
   },
   {
     "name" : "Dark Coach",
     "category" : "Special",
+    "height": 4,
   },
   {
     "name" : "Court of the Damned",
     "category" : "Special",
+    "height": 4,
   },
   {
     "name" : "Altar of Undeath",
     "category" : "Special",
+    "height": 4,
   },
   {
     "name" : "Phantom Hosts",
     "category" : "The Suffering",
     "min" : 3,
     "max" : 6,
+    "height": 1,
   },
   {
     "name" : "Wraiths",
     "category" : "The Suffering",
     "min" : 5,
     "max" : 10,
+    "height": 1,
   },
   {
     "name" : "Spectral Hunters",
     "category" : "The Suffering",
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Vampire Knights",
     "category" : "Swift Death",
     "min" : 3,
     "max" : 6,
+    "height": 2,
   },
   {
     "name" : "Vampire Spawn",
     "category" : "Swift Death",
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Varkolak",
     "category" : "Swift Death",
+    "height": 4,
   },
   {
     "name" : "Winged Reapers",
     "category" : "Swift Death",
     "min" : 2,
     "max" : 4,
+    "height": 4,
   },
   {
     "name" : "Shrieking Horror",
     "category" : "Swift Death",
+    "height": 5,
   },
 ];
 
@@ -2558,6 +2919,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 20,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Vermin Legionaries",
@@ -2565,6 +2927,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 25,
     "max" : 60,
+    "height": 1,
   },
   {
     "name" : "Blackfur Veterans",
@@ -2572,6 +2935,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 20,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Vermin Slaves",
@@ -2579,6 +2943,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 30,
     "max" : 60,
+    "height": 1,
   },
   {
     "name" : "Plague Cultists",
@@ -2586,6 +2951,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 20,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Plague Disciples",
@@ -2593,6 +2959,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 15,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Giant Rats",
@@ -2600,6 +2967,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 10,
     "max" : 30,
+    "height": 1,
   },
   {
     "name" : "Fire Rats",
@@ -2607,6 +2975,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 10,
     "max" : 20,
+    "height": 1,
   },
   {
     "name" : "Bloodfur Praetorians",
@@ -2614,6 +2983,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 20,
     "max" : 40,
+    "height": 1,
   },
   {
     "name" : "Rat Swarm",
@@ -2621,6 +2991,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 3,
     "max" : 6,
+    "height": 0,
   },
   {
     "name" : "Vermin Brutes",
@@ -2629,6 +3000,7 @@ const VS = [
     "bruteForce" : 1,
     "min" : 6,
     "max" : 12,
+    "height": 3,
   },
   {
     "name" : "Gladiator Brutes",
@@ -2637,11 +3009,13 @@ const VS = [
     "bruteForce" : 1,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Legionary Drill Team",
     "category" : "Special",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "height": 3,
   },
   {
     "name" : "Shadowfur Stalkers",
@@ -2649,11 +3023,13 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 10,
     "max" : 15,
+    "height": 1,
   },
   {
     "name" : "Doomspark Device",
     "category" : "Special",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "height": 4,
   },
   {
     "name" : "Thunder Brutes",
@@ -2662,6 +3038,7 @@ const VS = [
     "bruteForce" : 1,
     "min" : 3,
     "max" : 6,
+    "height": 3,
   },
   {
     "name" : "Ignifier Grenadiers",
@@ -2669,6 +3046,7 @@ const VS = [
     "experimentalWeapon" : 0,
     "min": 5,
     "max": 10,
+    "height": 1,
   },
   {
     "name" : "Experimental Weapon Teams",
@@ -2676,16 +3054,19 @@ const VS = [
     "experimentalWeapon" : 1,
     "min" : 3,
     "max" : 6,
+    "height": 1,
   },
   {
     "name" : "Vermin Artillery",
     "category" : "Special",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "height": 3,
   },
   {
     "name" : "Stygian Earthbreaker",
     "category" : "Bread and Games",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "height": 4,
   },
   {
     "name" : "Dreadmill Chariots",
@@ -2693,11 +3074,13 @@ const VS = [
     "experimentalWeapon" : 0,
     "min" : 1,
     "max" : 3,
+    "height": 4,
   },
   {
     "name" : "Arena Beast",
     "category" : "Bread and Games",
-    "experimentalWeapon" : 0
+    "experimentalWeapon" : 0,
+    "height": 5,
   },
 
 ];
@@ -2750,6 +3133,7 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 10,
     "max" : 25,
+    "height": 1,
   },
   {
     "name" : "Fallen",
@@ -2757,7 +3141,7 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 15,
-
+    "height": 1,
   },
   {
     "name" : "Barbarians",
@@ -2765,7 +3149,7 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 15,
     "max" : 40,
-
+    "height": 1,
   },
   {
     "name" : "Barbarian Horsemen",
@@ -2773,7 +3157,7 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 15,
-
+    "height": 2,
   },
   {
     "name" : "Warhounds",
@@ -2782,7 +3166,7 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 15,
-
+    "height": 1,
   },
   {
     "name" : "Warrior Knights",
@@ -2790,12 +3174,13 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 10,
-
+    "height": 2,
   },
   {
     "name" : "Warrior Chariot",
     "category" : "Special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "height": 4,
   },
   {
     "name" : "Chosen",
@@ -2803,7 +3188,7 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 10,
-
+    "height": 1,
   },
   {
     "name" : "Chosen Knights",
@@ -2811,17 +3196,19 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 3,
     "max" : 4,
-
+    "height": 4,
   },
   {
     "name" : "Chosen Chariot",
     "category" : "Special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "height": 4,
   },
   {
     "name" : "Chimera",
     "category" : "Special",
-    "legendaryBeast" : 1
+    "legendaryBeast" : 1,
+    "height": 4,
   },
   {
     "name" : "Wretched Ones",
@@ -2829,7 +3216,7 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 1,
     "max" : 6,
-
+    "height": 3,
   },
   {
     "name" : "Forsworn",
@@ -2837,7 +3224,7 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 3,
     "max" : 9,
-
+    "height": 3,
   },
   {
     "name" : "Feldraks",
@@ -2845,11 +3232,13 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 3,
     "max" : 5,
+    "height": 4,
   },
   {
     "name" : "Battleshrine",
     "category" : "Special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "height": 4,
   },
   {
     "name" : "Flayers",
@@ -2857,31 +3246,37 @@ const WDG = [
     "legendaryBeast" : 0,
     "min" : 5,
     "max" : 10,
+    "height": 2,
   },
   {
     "name" : "Hellmaw",
     "category" : "Special",
-    "legendaryBeast" : 0
+    "legendaryBeast" : 0,
+    "height": 5,
   },
   {
     "name" : "Forsaken One",
     "category" : "Special",
-    "legendaryBeast" : 2
+    "legendaryBeast" : 2,
+    "height": 5,
   },
   {
     "name" : "Marauding Giant",
     "category" : "Special",
-    "legendaryBeast" : 1
+    "legendaryBeast" : 1,
+    "height": 5,
   },
   {
     "name" : "Supplement Marauding Giant",
     "category" : "Special",
-    "legendaryBeast" : 1
+    "legendaryBeast" : 1,
+    "height": 5,
   },
   {
     "name" : "Feldrak Elder",
     "category" : "Special",
-    "legendaryBeast" : 2
+    "legendaryBeast" : 2,
+    "height": 5,
   },
 ];
 
