@@ -28,6 +28,12 @@ const BH = [
     "bigrocks" : 0,
   },
   {
+    "name" : "Ghaa!, THE Quiet Muzzle",
+    "category" : "Characters",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
     "name" : "Wildhorn Lord",
     "category" : "Characters",
     "sticksandstones" : 0,
@@ -430,6 +436,12 @@ const DE = [
 const DH = [
   {
     "name" : "Dinaz Betegoz, Master of the Guild of Lorekeepers",
+    "category" : "Characters",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
+    "name" : "Duna Bregold, Master of the Guild of Lorekeepers",
     "category" : "Characters",
     "clansThunder" : 0,
     "enginesOfWar" : 0,
@@ -1040,6 +1052,13 @@ const EoS = [
 
 // HE
 const HE = [
+  {
+    "name" : "Master Acadnath, the Asfad Scholar",
+    "category" : "Characters",
+    "queensBows" : 0,
+    "navalOrdnance" : 0,
+    "ancientAllies" : 0,
+  },
   {
     "name" : "Acadnath, the Scholar",
     "category" : "Characters",
@@ -1706,6 +1725,12 @@ const OK = [
     "powderKeg" : 0,
   },
   {
+    "name" : "Ganzorig Ironbond",
+    "category" : "Characters",
+    "hiredGuns" : 0,
+    "powderKeg" : 0,
+  },
+  {
     "name" : "Valish, the Chefling",
     "category" : "Characters",
     "hiredGuns" : 0,
@@ -2333,6 +2358,12 @@ const SA = [
 const SE = [
   {
     "name" : "Dwatobel, The World-Wandering Tree",
+    "category" : "Characters",
+    "sylvanShooting" : 0,
+    "sylvanBeasts" : 0
+  },
+  {
+    "name" : "Ancient Dawael, the World Tree",
     "category" : "Characters",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0
