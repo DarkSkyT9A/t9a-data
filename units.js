@@ -22,6 +22,12 @@ const BH = [
     "bigrocks" : 0,
   },
   {
+    "name" : "Mooarrgh,The Perpetuator of Heroes",
+    "category" : "Characters",
+    "sticksandstones" : 0,
+    "bigrocks" : 0,
+  },
+  {
     "name" : "Ghaa, THE Quiet Muzzle",
     "category" : "Characters",
     "sticksandstones" : 0,
@@ -1291,6 +1297,12 @@ const ID = [
     "blackPowder" : 0,
   },
   {
+    "name" : "Ibat-Sokavum,the Flying Charioteer",
+    "category" : "Characters",
+    "firesOfIndustry" : 0,
+    "blackPowder" : 0,
+  },
+  {
     "name" : "Overlord",
     "category" : "Characters",
     "firesOfIndustry" : 0,
@@ -1906,6 +1918,13 @@ const OnG = [
   },
   {
     "name" : "Amokek, the Only King?",
+    "category" : "Characters",
+    "bigAndNasty" : 0,
+    "deathFromAbove" : 0,
+    "archerBroods" : 0,
+  },
+  {
+    "name" : "Mokrog, the Only King?",
     "category" : "Characters",
     "bigAndNasty" : 0,
     "deathFromAbove" : 0,
@@ -2742,6 +2761,10 @@ const VC = [
     "category" : "Characters",
   },
   {
+    "name" : "Lady Chrysélie",
+    "category" : "Characters",
+  },
+  {
     "name" : "The Collective of Varyag",
     "category" : "Characters",
   },
@@ -3125,6 +3148,11 @@ const WDG = [
   },
   {
     "name" : "Ook, the Ape King",
+    "category" : "Characters",
+    "legendaryBeast" : 2
+  },
+  {
+    "name" : "Mraven, the Chimerical",
     "category" : "Characters",
     "legendaryBeast" : 2
   },
