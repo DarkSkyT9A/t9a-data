@@ -459,6 +459,12 @@ const DH = [
     "enginesOfWar" : 0,
   },
   {
+    "name" : "Brewmaster Tador Berafrig",
+    "category" : "Characters",
+    "clansThunder" : 0,
+    "enginesOfWar" : 0,
+  },
+  {
     "name" : "King",
     "category" : "Characters",
     "clansThunder" : 0,
