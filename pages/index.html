@@ -1,1 +1,14 @@
-
+<html>
+  <title>T9A Data - Global Statistics</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $.getJSON('../output/globalStats.json', function(data) {  // Change file name as needed
+          let content = `<p>Tournaments with Reports: ${data.tournamentsWithReports}</p>`;
+          $('#data-container').html(content);
+          let games = `<p>Games in Report: ${data.games}</p>`;
+          $('#data-container').html(games);
+        });
+    });
+</script>
+</html>
