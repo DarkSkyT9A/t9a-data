@@ -4,7 +4,7 @@
 // Imports
 const fs = require("node:fs");
 const args = require('yargs').argv;
-const { arcCompAll, arcCompCommon, arcCompShared, allItems } = require("./old/specialItems");
+const { arcCompAll, arcCompCommon, arcCompShared, allItems } = require("./specialItems");
 const units = require("./units.js");
 
 // Constants
@@ -1654,7 +1654,7 @@ function displayArmySpecialItems() {
     console.log(`┃ Shared Items                                                  ┃`);
     console.log(`┣━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┫`);
 
-    const sharedItems = require("./old/specialItems.js").sharedItems;
+    const sharedItems = require("./specialItems.js").sharedItems;
     // console.log(JSON.stringify(sharedItems, null, 4));
     for (let category in sharedItems) {
       for (let item in sharedItems[category]) {
@@ -1673,7 +1673,7 @@ function displayArmySpecialItems() {
     console.log(`┃ Army Specific Items                                           ┃`);
     console.log(`┣━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┫`);
 
-    const armyItems = require("./old/specialItems.js")[army.toLowerCase()];
+    const armyItems = require("./specialItems.js")[army.toLowerCase()];
     for (let category in armyItems) {
       for (let item of armyItems[category]) {
         let name = `${item.padEnd(34, " ")}`;

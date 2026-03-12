@@ -2,7 +2,7 @@
 
 const units = require("./units.js");
 const optionsNew = require("./options.json");
-const allItems = require("./old/specialItems.js").allItems;
+const allItems = require("./specialItems.js").allItems;
 const magicalness = require("./magicalness.js").magicalness;
 
 // Constants
