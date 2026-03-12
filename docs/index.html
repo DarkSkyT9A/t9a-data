@@ -13,10 +13,10 @@
     });
 </script>
   <table>
-    <th>
-      <td>Global Statistics</td>
-      <td>Amount</td>
-    </th>
+    <tr>
+      <th>Global Statistics</th>
+      <th>Amount</th>
+    </tr>
     <tr>
       <td>Tournaments</td>
       <td>...</td>
@@ -25,5 +25,15 @@
       <td>Games</td>
       <td>...</td>
     </tr>
+    <script>
+      $(document).ready(function () {
+        $.getJSON("../output/globalStats.json", function (data) {
+          let tournaments = `<tr><td>Tournaments</td><td>${data.tournamentsWithReports}</td></tr>`;
+          $('#table').append(tournaments);
+          let games = `<tr><td>Games</td><td>${data.games}</td></tr>`;
+          $('#table').append(games);
+        });
+      });
+    </script>
   </table>
 </html>
