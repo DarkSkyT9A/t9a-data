@@ -3147,8 +3147,13 @@ const VS = [
 
 // WDG
 const WDG = [
-    {
+  {
     "name" : "Klaas, the Giving",
+    "category" : "Characters",
+    "legendaryBeast" : 3
+  },
+  {
+    "name" : "Joulgrim, the Giving",
     "category" : "Characters",
     "legendaryBeast" : 3
   },

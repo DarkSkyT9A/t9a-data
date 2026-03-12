@@ -111,6 +111,7 @@ let skippedGames = 0;
         // console.log(JSON.stringify(report.score, null, 4));
         // console.log(JSON.stringify(report.setup, null, 4));
         // console.log(JSON.stringify(report.scoring, null, 4));
+        // console.log(JSON.stringify(report, null, 4));
 
         // Write to disc
         if (!fs.existsSync(`./data/${tournament._id}/report_${report.id_match}.json`)) {
@@ -183,6 +184,17 @@ function transformReport(report, tournamentId) {
   } else {
     r.primary = 2;
   }
+  // Secondary Objective
+  if(report.score[0].Sec === 1 ) {
+    r.secondaryPlayerOne = true;
+  } else {
+    r.secondaryPlayerOne = false;
+  }
+  if(report.score[1].Sec === 1 ) {
+    r.secondaryPlayerTwo = true;
+  } else {
+    r.secondaryPlayerTwo = false;
+  }
 
   // Type (what is type?)
   r.type = report.type;
@@ -195,6 +207,10 @@ function transformReport(report, tournamentId) {
   if(20 !== r.scoreOne+r.scoreTwo) {
     console.error("### Faulty report, VP do not align to 20 ###");
   }
+
+  // Player IDs
+  r.playerOneId = report.players[0].id_member;
+  r.playerTwoId = report.players[1].id_member;
 
   // Armies played
   r.armyOne = getArmyStringForId(report.players[0].id_book, true);
@@ -209,11 +225,15 @@ function transformReport(report, tournamentId) {
   let mapId = report?.setup?.map ? (typeof report?.setup?.map === "object" ? report.setup.map.pop() : report.setup.map) : undefined;
   let deploymentId = report?.setup?.deployment ? (typeof report?.setup?.deployment === "object" ? report.setup.deployment.pop() : report.setup.deployment) : undefined;
   let primaryId = report?.setup?.primary_objective ? (typeof report?.setup?.primary_objective === "object" ? report.setup.primary_objective.pop() : report.setup.primary_objective) : undefined;
+  let secondaryPlayerOneId = report?.setup?.["secondary_objective-1"] ? (typeof report?.setup?.["secondary_objective-1"] === "object" ? report.setup["secondary_objective-1"].pop() : report.setup["secondary_objective-1"]) : undefined;
+  let secondaryPlayerTwoId = report?.setup?.["secondary_objective-2"] ? (typeof report?.setup?.["secondary_objective-2"] === "object" ? report.setup["secondary_objective-2"].pop() : report.setup["secondary_objective-2"]) : undefined;
 
   r.setup = {
     "map": setupMappings.map[mapId],
     "deployment": setupMappings.deployment[deploymentId],
-    "primary": setupMappings.primary[primaryId]
+    "primary": setupMappings.primary[primaryId],
+    "secondaryPlayerOne": setupMappings.secondary[secondaryPlayerOneId],
+    "secondaryPlayerTwo": setupMappings.secondary[secondaryPlayerTwoId]
   };
 
   // console.log(report.players[0].report_list.exported_list);

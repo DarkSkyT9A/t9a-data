@@ -1,27 +1,4552 @@
 {
+    "_id": "69998199e597661379702ade",
+    "submitter_id": "5f88b9ea4a48af0288132900",
+    "type": 1,
+    "date": "2026-02-21T09:58:54.857Z",
+    "id_tourny": "67fa195e054d6a5aae0fb4e1",
+    "id_match": "6999817c3f069283506288a4",
+    "first_turn": 0,
+    "handshake": false,
     "setup": {
-        "map": 1,
-        "deployment": 21,
-        "primary_objective": 32,
-        "secondary_objective-1": 49,
-        "secondary_objective-2": 49
+        "deployment": [
+            34
+        ],
+        "primary_objective": [
+            51
+        ],
+        "secondary_objective-1": [
+            64
+        ],
+        "secondary_objective-2": [
+            62
+        ]
     },
-    "score": [
+    "scoring": {
+        "_id": "67eff65103404e864869e224",
+        "name": "T9A 3rd Edition",
+        "points": [
+            {
+                "_id": "69998163e597661379702ad1",
+                "name": "Victory Points",
+                "short": "VP",
+                "editable": true,
+                "type": "number",
+                "drawText": "Drawn",
+                "main": false,
+                "kill": true,
+                "hide": false,
+                "team": false
+            },
+            {
+                "_id": "69998163e597661379702ad2",
+                "name": "Battle Points",
+                "short": "BPObj",
+                "editable": false,
+                "type": "number",
+                "drawText": "Drawn",
+                "main": true,
+                "kill": false,
+                "hide": false,
+                "team": false
+            },
+            {
+                "_id": "69998163e597661379702ad3",
+                "name": "Objective",
+                "short": "Obj",
+                "editable": true,
+                "type": "player",
+                "drawText": "Drawn",
+                "main": false,
+                "kill": false,
+                "hide": false,
+                "team": false
+            },
+            {
+                "_id": "69998163e597661379702ad4",
+                "name": "Secondary",
+                "short": "Sec",
+                "editable": true,
+                "type": "2player",
+                "drawText": "Drawn",
+                "main": false,
+                "kill": false,
+                "hide": false,
+                "team": false
+            },
+            {
+                "_id": "69998163e597661379702ad5",
+                "name": "Turns Played",
+                "short": "Turns",
+                "editable": true,
+                "type": "number",
+                "drawText": "Drawn",
+                "main": false,
+                "kill": false,
+                "hide": false,
+                "team": false
+            }
+        ],
+        "template": false,
+        "automaticCalculation": [
+            {
+                "condition": [
+                    {
+                        "operation": "difference",
+                        "comparison": ">=",
+                        "value": 0,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "pointType": "VP",
+                        "oppPointType": "VP"
+                    },
+                    {
+                        "operation": "difference",
+                        "comparison": "<=",
+                        "value": 5,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "pointType": "VP",
+                        "oppPointType": "VP"
+                    }
+                ],
+                "action": [
+                    {
+                        "value": 10,
+                        "operation": "set",
+                        "target": 0,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    },
+                    {
+                        "value": 10,
+                        "operation": "set",
+                        "target": 1,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    }
+                ]
+            },
+            {
+                "condition": [
+                    {
+                        "operation": "difference",
+                        "comparison": ">",
+                        "value": 5,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "pointType": "VP",
+                        "oppPointType": "VP"
+                    },
+                    {
+                        "operation": "difference",
+                        "comparison": "<=",
+                        "value": 10,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "pointType": "VP",
+                        "oppPointType": "VP"
+                    }
+                ],
+                "action": [
+                    {
+                        "value": 11,
+                        "operation": "set",
+                        "target": 0,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    },
+                    {
+                        "value": 9,
+                        "operation": "set",
+                        "target": 1,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    }
+                ]
+            },
+            {
+                "condition": [
+                    {
+                        "operation": "difference",
+                        "comparison": ">",
+                        "value": 10,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "pointType": "VP",
+                        "oppPointType": "VP"
+                    },
+                    {
+                        "operation": "difference",
+                        "comparison": "<=",
+                        "value": 20,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "oppPointType": "VP",
+                        "pointType": "VP"
+                    }
+                ],
+                "action": [
+                    {
+                        "value": 12,
+                        "operation": "set",
+                        "target": 0,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    },
+                    {
+                        "value": 8,
+                        "operation": "set",
+                        "target": 1,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    }
+                ]
+            },
+            {
+                "condition": [
+                    {
+                        "operation": "difference",
+                        "comparison": ">",
+                        "value": 20,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "pointType": "VP",
+                        "oppPointType": "VP"
+                    },
+                    {
+                        "operation": "difference",
+                        "comparison": "<=",
+                        "value": 30,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "pointType": "VP",
+                        "oppPointType": "VP"
+                    }
+                ],
+                "action": [
+                    {
+                        "value": 13,
+                        "operation": "set",
+                        "target": 0,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    },
+                    {
+                        "value": 7,
+                        "operation": "set",
+                        "target": 1,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    }
+                ]
+            },
+            {
+                "condition": [
+                    {
+                        "operation": "difference",
+                        "comparison": ">",
+                        "value": 30,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "pointType": "VP",
+                        "oppPointType": "VP"
+                    },
+                    {
+                        "operation": "difference",
+                        "comparison": "<=",
+                        "value": 40,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "oppPointType": "VP",
+                        "pointType": "VP"
+                    }
+                ],
+                "action": [
+                    {
+                        "value": 14,
+                        "operation": "set",
+                        "target": 0,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    },
+                    {
+                        "value": 6,
+                        "operation": "set",
+                        "target": 1,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    }
+                ]
+            },
+            {
+                "condition": [
+                    {
+                        "operation": "difference",
+                        "comparison": ">",
+                        "value": 40,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "pointType": "VP",
+                        "oppPointType": "VP"
+                    },
+                    {
+                        "operation": "difference",
+                        "comparison": "<=",
+                        "value": 50,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "oppPointType": "VP",
+                        "pointType": "VP"
+                    }
+                ],
+                "action": [
+                    {
+                        "value": 15,
+                        "operation": "set",
+                        "target": 0,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    },
+                    {
+                        "value": 5,
+                        "operation": "set",
+                        "target": 1,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    }
+                ]
+            },
+            {
+                "condition": [
+                    {
+                        "operation": "difference",
+                        "comparison": ">",
+                        "value": 50,
+                        "percent": true,
+                        "costLimit": "pts",
+                        "pointType": "VP",
+                        "oppPointType": "VP"
+                    }
+                ],
+                "action": [
+                    {
+                        "value": 16,
+                        "operation": "set",
+                        "target": 0,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    },
+                    {
+                        "value": 4,
+                        "operation": "set",
+                        "target": 1,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    }
+                ]
+            },
+            {
+                "condition": [
+                    {
+                        "operation": "value",
+                        "comparison": ">=",
+                        "value": 1,
+                        "percent": false,
+                        "costLimit": "pts",
+                        "pointType": "Obj"
+                    }
+                ],
+                "action": [
+                    {
+                        "value": 3,
+                        "operation": "add",
+                        "target": 0,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    },
+                    {
+                        "value": -3,
+                        "operation": "add",
+                        "target": 1,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    }
+                ]
+            },
+            {
+                "condition": [
+                    {
+                        "operation": "value",
+                        "comparison": ">=",
+                        "value": 1,
+                        "percent": false,
+                        "costLimit": "pts",
+                        "pointType": "Sec"
+                    }
+                ],
+                "action": [
+                    {
+                        "value": 1,
+                        "operation": "add",
+                        "target": 0,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    },
+                    {
+                        "value": -1,
+                        "operation": "add",
+                        "target": 1,
+                        "pointType": "BPObj",
+                        "valueType": "fixed"
+                    }
+                ]
+            }
+        ],
+        "winConditions": [
+            {
+                "operation": "difference",
+                "comparison": ">=",
+                "value": 1,
+                "action": "win",
+                "pointType": "BPObj",
+                "oppPointType": "BPObj"
+            },
+            {
+                "operation": "difference",
+                "comparison": "<=",
+                "value": -1,
+                "action": "loss",
+                "pointType": "BPObj",
+                "oppPointType": "BPObj"
+            }
+        ],
+        "teamWinConditions": [],
+        "pairingsTieBreakers": [],
+        "rankingsTieBreakers": [
+            {
+                "name": "Battle Points",
+                "short": "BPObj",
+                "index": "pts_BPObj",
+                "pointType": {
+                    "_id": "69998163e597661379702ad2",
+                    "name": "Battle Points",
+                    "short": "BPObj",
+                    "editable": false,
+                    "type": "number",
+                    "drawText": "Drawn",
+                    "main": true,
+                    "kill": false,
+                    "hide": false,
+                    "team": false
+                }
+            }
+        ],
+        "usePairingTiebreakers": false
+    },
+    "ignore_stats": false,
+    "round": 1,
+    "id_game_system": 6,
+    "players": [
         {
-            "VP": 2765,
-            "Diff": 2000,
-            "Turns": 5,
-            "BP": 15,
-            "BPObj": 18,
-            "Obj": 1
+            "alias": "Simon Pfefferle (Sparta)",
+            "id_member": "5f88b9ea4a48af0288132900",
+            "id_list": "699981dee597661379702adf",
+            "id_book": 15,
+            "id_participant": "686a4217509955e99763c675",
+            "report_list": {
+                "units": {
+                    "Death Cult Hierarch": [
+                        {
+                            "totalCost": 505,
+                            "amount": 1
+                        }
+                    ],
+                    "Nomarch": [
+                        {
+                            "totalCost": 185,
+                            "amount": 1
+                        },
+                        {
+                            "totalCost": 140,
+                            "amount": 1
+                        }
+                    ],
+                    "Skeleton Chariots": [
+                        {
+                            "totalCost": 450,
+                            "amount": 1
+                        }
+                    ],
+                    "Skeleton Cavalry": [
+                        {
+                            "totalCost": 315,
+                            "amount": 1
+                        }
+                    ],
+                    "Skeleton Archers": [
+                        {
+                            "totalCost": 235,
+                            "amount": 1
+                        }
+                    ],
+                    "Tomb Reapers": [
+                        {
+                            "totalCost": 570,
+                            "amount": 1
+                        }
+                    ],
+                    "Colossus": [
+                        {
+                            "totalCost": 425,
+                            "amount": 1
+                        },
+                        {
+                            "totalCost": 425,
+                            "amount": 1
+                        }
+                    ],
+                    "Sand Stalkers": [
+                        {
+                            "totalCost": 350,
+                            "amount": 1
+                        }
+                    ],
+                    "Shabti Archers": [
+                        {
+                            "totalCost": 200,
+                            "amount": 1
+                        },
+                        {
+                            "totalCost": 200,
+                            "amount": 1
+                        }
+                    ]
+                },
+                "options": {
+                    "General": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 1,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Light Troops": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Skeletal Horse": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Ark of Ages": [
+                        {
+                            "totalCost": 100,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        }
+                    ],
+                    "Wizard Adept": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        }
+                    ],
+                    "Wizard Master": [
+                        {
+                            "totalCost": 150,
+                            "amount": 1,
+                            "parentUnit": "Death Cult Hierarch"
+                        }
+                    ],
+                    "Cosmology": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Altered Sight": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Truth of Time": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Weal and Woe": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Ice and Fire": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Cosmic Scales": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Thunder and Lightning": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Divination": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Foresight": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Immortal's Bane": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "The Stars Align": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Fate's Judgement": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Augury of Triumph": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Inescapable Doom": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Evocation": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Whispers of the Veil": [
+                        {
+
+ "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Danse Macabre": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Chorus of the Damned": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Touch of the Reaper": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Spectral Blades": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Soul Blight": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Destiny's Call": [
+                        {
+                            "totalCost": 90,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 90,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 90,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Jackal's Blessing": [
+                        {
+                            "totalCost": 80,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 80,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 80,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Warding of Unity": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Basalt Infusion": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Sandstorm Cloak": [
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Ghostly Guard": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Touch of Greatness": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Vorpal Binding": [
+                        {
+                            "totalCost": 50,
+
+                   "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Hero's Heart": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "King Slayer": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Scourge of Kings": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Giant Slayer": [
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Talisman of the Void": [
+                        {
+                            "totalCost": 65,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 65,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 65,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Mimic Cloak": [
+                        {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Sacred Hourglass": [
+                        {
+                            "totalCost": 60,
+                            "amount": 1,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Crown of the Pharaohs": [
+                        {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 60,
+                            "amount": 1,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Talisman of Shielding": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Book of the Dead": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Death Mask of Teput": [
+                        {
+                            "totalCost": 45,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 45,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 45,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Magical Heirloom": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Kherp Sceptre": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Obsidian Rock": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Blessed Wrappings": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Crown of the Wizard King": [
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Binding Scroll": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Spell Scroll": [
+
+       {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Scroll of a Free Mind": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Dragon's Brew": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Scroll of Power": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Potion of Power Preservation": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Scroll of Desiccation": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Scroll of Draining": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Potion of Swiftness": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Soul Conduit and Hierophant": [
+                        {
+                            "totalCost": 25,
+                            "amount": 1,
+                            "parentUnit": "Death Cult Hierarch"
+                        }
+                    ],
+                    "Terracotta Army": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 2,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 1,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Sand Stalkers"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Shabti Archers"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Shabti Archers"
+                        }
+                    ],
+                    "Barrow Legion": [
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Death Cult Hierarch"
+                        },
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 2,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 1,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Tomb Reapers"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Sand Stalkers"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Shabti Archers"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Shabti Archers"
+                        }
+                    ],
+                    "Captain and Attached": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Solitary": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Battle Standard Bearer": [
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Tomb Harbinger": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Deathless Noble": [
+                        {
+                            "totalCost": 40,
+                            "amount": 1,
+
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Tomb Architect": [
+                        {
+                            "totalCost": 75,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 75,
+                            "amount": 1,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Skeleton Chariot": [
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Chariot of Nephet-Râ": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Amuut": [
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Sha Guardian": [
+                        {
+                            "totalCost": 300,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 300,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Longbow": [
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 2,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Shield": [
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Wild Warding": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Sun's Embrace": [
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Stalker's Standard": [
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Banner of the Entombed": [
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Envoy's Banner": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Sigil of the Closed Gates": [
+                        {
+                            "totalCost": 45,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 45,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 45,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 45,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 45,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Flaming Standard": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Banner of Speed": [
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 1,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Sheltering Standard": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Distortion Emblem": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Aether Icon": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Paired Weapons": [
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Tomb Reapers"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Halberd": [
+                        {
+                            "totalCost": 5,
+                            "amount": 1,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 1,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 6,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 4,
+                            "parentUnit": "Tomb Reapers"
+                        }
+                    ],
+                    "Great Weapon": [
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Godslayer": [
+                        {
+                            "totalCost": 80,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 80,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        }
+                    ],
+                    "Lance": [
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Nomarch"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        }
+                    ],
+                    "Skeleton Chariots": [
+                        {
+                            "totalCost": 70,
+                            "amount": 6,
+                            "parentUnit": "Skeleton Chariots"
+                        }
+                    ],
+                    "Aspis Arrows and Bow": [
+                        {
+                            "totalCost": 0,
+                            "amount": 6,
+                            "parentUnit": "Skeleton Chariots"
+                        }
+                    ],
+                    "Legion Charioteers": [
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        }
+                    ],
+                    "Standard Bearer": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 1,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 1,
+                            "parentUnit": "Skeleton Archers"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 1,
+                            "parentUnit": "Shabti Archers"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 1,
+                            "parentUnit": "Shabti Archers"
+                        }
+                    ],
+                    "Musician": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Chariots"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 1,
+                            "parentUnit": "Skeleton Cavalry"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Skeleton Archers"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 1,
+                            "parentUnit": "Sand Stalkers"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Shabti Archers"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Shabti Archers"
+                        }
+                    ],
+                    "Skeleton Cavalry": [
+                        {
+                            "totalCost": 11,
+                            "amount": 20,
+                            "parentUnit": "Skeleton Cavalry"
+                        }
+                    ],
+                    "Skeleton Archers": [
+                        {
+                            "totalCost": 8,
+                            "amount": 25,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Bow": [
+                        {
+                            "totalCost": 0,
+                            "amount": 25,
+                            "parentUnit": "Skeleton Archers"
+                        }
+                    ],
+                    "Tomb Reapers": [
+                        {
+                            "totalCost": 150,
+                            "amount": 4,
+                            "parentUnit": "Tomb Reapers"
+                        }
+                    ],
+                    "Scales of Destiny": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Giant Aspis Bow": [
+                        {
+                            "totalCost": 45,
+                            "amount": 1,
+                            "parentUnit": "Colossus"
+                        },
+                        {
+                            "totalCost": 45,
+                            "amount": 1,
+                            "parentUnit": "Colossus"
+                        }
+                    ],
+                    "Sand Stalkers": [
+                        {
+                            "totalCost": 70,
+                            "amount": 4,
+                            "parentUnit": "Sand Stalkers"
+                        }
+
+                 ],
+                    "Ambush": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Sand Stalkers"
+                        }
+                    ],
+                    "Shabti Archers": [
+                        {
+                            "totalCost": 85,
+                            "amount": 3,
+                            "parentUnit": "Shabti Archers"
+                        },
+                        {
+                            "totalCost": 85,
+                            "amount": 3,
+                            "parentUnit": "Shabti Archers"
+                        }
+                    ]
+                },
+                "refs": {
+                    "perso": 1,
+                    "deathCultHierarch": 1,
+                    "tag_Skeleton": 14,
+                    "deathculthierarch": 1,
+                    "wizard": 3,
+                    "general": 3,
+                    "army_general": 3,
+                    "leadershipSkills": 3,
+                    "lightTroops": 3,
+                    "lighttroops": 3,
+                    "skeletalHorse": 3,
+                    "skeletalhorse": 3,
+                    "skeletalHorseMount": 3,
+                    "tag_Mount": 12,
+                    "mount": 10,
+                    "skeletalhorsemount": 3,
+                    "skeletalHorse_mount_unit": 3,
+                    "arkOfAges": 1,
+                    "arkofages": 1,
+                    "aspis_arrows": 26,
+                    "arkOfAgesMount": 1,
+                    "tag_Spirit": 1,
+                    "tag_Construct": 4,
+                    "arkofagesmount": 1,
+                    "arkOfAges_mount_unit": 1,
+                    "wizardAdept": 1,
+                    "wizardadept": 1,
+                    "wizardMaster": 1,
+                    "wizardmaster": 1,
+                    "cosmology": 3,
+                    "spell": 54,
+                    "divination": 3,
+                    "evocation": 3,
+                    "ae_destiny": 3,
+                    "jackalsBlessing": 3,
+                    "ae_ud_jackal": 3,
+                    "ae_warding_unity": 3,
+                    "ae_basalt_inject": 3,
+                    "sandstormCloak": 3,
+                    "art_ud_sandstorm": 3,
+                    "ae_phantom": 3,
+                    "army_unique": 55,
+                    "weaponEnchantUni": 56,
+                    "we_grace_touched": 11,
+                    "we_vorpal_binding": 11,
+                    "we_hero_heart": 5,
+                    "we_king_slayer": 11,
+                    "scourgeOfKings": 5,
+                    "we_ud_scourge_king": 5,
+                    "we_giant_slayer": 11,
+                    "art_void_talis": 3,
+                    "art_mimic_cloak": 3,
+                    "sacredHourglass": 3,
+                    "we_ud_hourglass": 3,
+                    "dominant": 3,
+                    "crownOfThePharaohs": 3,
+                    "we_ud_crown_phar": 3,
+                    "protect_talis": 3,
+                    "bookOfTheDead": 3,
+                    "we_ud_bookdead": 3,
+                    "deathMaskOfTeput": 3,
+                    "art_ud_teput": 3,
+                    "art_magical_inh": 3,
+                    "kherpSceptre": 3,
+                    "we_ud_nephetra": 3,
+                    "tag_Hierophant": 6,
+                    "art_obsi_roc": 3,
+                    "blessedWrappings": 3,
+                    "we_ud_wrappings": 3,
+                    "art_wizard_crown": 3,
+                    "art_blocking_scroll": 3,
+                    "scroll_spell": 3,
+                    "scroll_of_a_free_mind": 3,
+                    "dragons_brew": 3,
+                    "scroll_power": 3,
+                    "pot_preservation": 3,
+                    "scrollOfDesiccation": 3,
+                    "art_ud_scroll": 3,
+                    "pot_negation": 3,
+                    "art_speed_pot": 3,
+                    "one_use_item": 3,
+                    "soulConduitAndHierophant": 1,
+                    "soulConduit": 1,
+                    "hierophant": 1,
+                    "soulconduitandhierophant": 1,
+                    "death_cult_hierarch_amount": 2,
+                    "terracottaArmy": 11,
+                    "terracottaarmy": 10,
+                    "barrowLegion": 12,
+                    "barrowlegion": 11,
+                    "nomarch": 2,
+                    "tag_Light Armour": 5,
+                    "captainAndAttached": 2,
+                    "captain": 2,
+                    "attached": 2,
+                    "captainandattached": 2,
+                    "solitary": 2,
+                    "battleStandardBearer": 2,
+                    "battlestandardbearer": 2,
+                    "army_bsb": 2,
+                    "not_a_leader": 2,
+                    "tombHarbinger": 2,
+                    "tombharbinger": 2,
+                    "tomb_harbinger": 2,
+                    "deathlessNoble": 2,
+                    "deathlessnoble": 2,
+                    "deathless_noble": 2,
+                    "tombArchitect": 2,
+                    "tombarchitect": 2,
+                    "tomb_architect": 2,
+                    "skeletonChariot": 2,
+                    "skeletonchariot": 2,
+                    "skeletonChariotMount": 2,
+                    "skeletonchariotmount": 2,
+                    "skeletonChariot_mount_unit": 2,
+                    "chariotOfNephetRa": 2,
+                    "chariotofnephetra": 2,
+                    "amuut": 2,
+                    "harbinger_amuut": 2,
+                    "amuutMount": 2,
+                    "tag_Statue": 10,
+                    "amuutmount": 2,
+                    "amuut_mount_unit": 2,
+                    "large_cavalry": 2,
+                    "shaGuardian": 2,
+                    "shaGuardianMount": 2,
+                    "shaguardianmount": 2,
+                    "shaGuardian_mount_unit": 2,
+                    "longbow": 3,
+                    "shield": 2,
+                    "se_wild_warding": 2,
+                    "sunsEmbrace": 2,
+                    "ae_ud_sun": 2,
+                    "be_ranger": 5,
+                    "bannerOfTheEntombed": 5,
+                    "be_ud_entombed": 5,
+                    "underground_ambush": 6,
+                    "iconOfReflection": 5,
+                    "iconofreflection": 5,
+                    "sigilOfTheClosedGates": 5,
+                    "be_ud_sigil": 5,
+                    "be_burning": 5,
+                    "be_speed": 5,
+                    "be_sheltering": 5,
+                    "be_distortion": 5,
+                    "be_ether": 5,
+                    "pairedWeapons": 5,
+                    "pairedweapons": 5,
+                    "halberd": 4,
+                    "greatWeapon": 4,
+                    "greatweapon": 4,
+                    "godslayer": 2,
+                    "we_ud_godslayer": 2,
+                    "lance": 3,
+                    "nomarch_amount": 4,
+                    "base": 1,
+                    "skeletonChariots": 1,
+                    "skeletonchariots": 1,
+                    "skeleton_chariots": 1,
+                    "core_unit": 3,
+                    "skeleton_chariots_amount": 1,
+                    "aspisArrowsAndBow": 1,
+                    "aspisArrows": 1,
+                    "bow": 2,
+                    "aspisarrowsandbow": 1,
+                    "legionCharioteers": 1,
+                    "legioncharioteers": 1,
+                    "legion_charioteers": 1,
+                    "standardBearer": 5,
+                    "standardbearer": 5,
+                    "musician": 6,
+                    "skeletonCavalry": 1,
+                    "skeletoncavalry": 1,
+                    "skeleton_cavalry": 1,
+                    "skeleton_cavalry_amount": 1,
+                    "skeletonArchers": 1,
+                    "skeletonarchers": 1,
+                    "skeleton_archers_amount": 1,
+                    "archer_longbow": 1,
+                    "special": 1,
+                    "tombReapers": 1,
+                    "tombreapers": 1,
+                    "tomb_reapers": 1,
+                    "tomb_reapers_amount": 1,
+                    "colossus": 2,
+                    "colossus_amount": 2,
+                    "scalesOfDestiny": 2,
+                    "scalesofdestiny": 2,
+                    "wizardApprentice": 2,
+                    "giantAspisBow": 2,
+                    "giantaspisbow": 2,
+                    "giant_aspen_bow": 2,
+                    "death_from_afar": 2,
+                    "sandStalkers": 1,
+                    "tag_Beast": 1,
+                    "sandstalkers": 1,
+                    "sand_stalkers": 1,
+                    "sand_stalkers_number": 1,
+                    "ambushopenTerrain": 1,
+                    "ambushopenterrain": 1,
+                    "terracottaArmyAndLoseAmbush": 1,
+                    "loseAmbush": 2,
+                    "terracottaarmyandloseambush": 1,
+                    "barrowLegionAndLoseAmbush": 1,
+                    "barrowlegionandloseambush": 1,
+                    "shabtiArchers": 2,
+                    "shabtiarchers": 2,
+                    "shabti_archers": 2,
+                    "shabti_archers_amount": 2,
+                    "entombed": 1,
+                    "mounts": 1
+                },
+                "forces": {}
+            },
+            "name": "Sparta",
+            "elo": {
+                "friendly": 4.5,
+                "tourny": 4.5
+            },
+            "exported_list": "Simon Pfefferle (Sparta) - Undying Dynasties\n505 - Death Cult Hierarch, Light Troops, Wizard Master, Divination (Foresight, The Stars Align, Fate's Judgement, Augury of Triumph, Inescapable Doom), Sacred Hourglass, Soul Conduit and Hierophant\n185 - Nomarch, General, Deathless Noble, Light Troops, Halberd, Crown of the Pharaohs\n140 - Nomarch, Captain and Attached, Tomb Architect, Light Troops, Halberd\n450 - 6 Skeleton Chariots, Halberd, Aspis Arrows and Bow\n315 - 20 Skeleton Cavalry, Standard Bearer (Banner of Speed), Musician\n235 - 25 Skeleton Archers, Bow, Standard Bearer\n570 - 4 Tomb Reapers, Halberd\n425 - Colossus, Giant Aspis Bow\n425 - Colossus, Giant Aspis Bow\n350 - 4 Sand Stalkers, Musician\n200 - 3 Shabti Archers, Standard Bearer\n200 - 3 Shabti Archers, Standard Bearer\n4000\n"
         },
         {
-            "VP": 765,
-            "Diff": -2000,
-            "Turns": 5,
-            "BP": 5,
-            "BPObj": 2,
-            "Obj": null
+            "alias": "Christian (Wulfgart)",
+            "id_member": "647c927c70b52923fc2ae461",
+            "id_list": "699981dee597661379702ae1",
+            "id_book": 8,
+            "id_participant": "69071047ec57bfeadb9d8ff7",
+            "report_list": {
+                "units": {
+                    "Prophet": [
+                        {
+                            "totalCost": 415,
+                            "amount": 1
+                        }
+                    ],
+                    "Vizier": [
+                        {
+                            "totalCost": 270,
+                            "amount": 1
+                        }
+                    ],
+                    "Citadel Guard": [
+                        {
+                            "totalCost": 570,
+                            "amount": 1
+                        },
+                        {
+                            "totalCost": 460,
+                            "amount": 1
+                        }
+                    ],
+                    "Immortals": [
+                        {
+                            "totalCost": 414,
+                            "amount": 1
+                        }
+                    ],
+                    "Taurukh Enforcers": [
+                        {
+                            "totalCost": 400,
+                            "amount": 1
+                        }
+                    ],
+                    "Infernal Artillery": [
+                        {
+                            "totalCost": 295,
+                            "amount": 1
+                        },
+                        {
+                            "totalCost": 295,
+                            "amount": 1
+                        }
+                    ],
+                    "Kadim Chariot": [
+                        {
+                            "totalCost": 225,
+                            "amount": 1
+                        },
+                        {
+                            "totalCost": 220,
+                            "amount": 1
+                        }
+                    ],
+                    "Infernal Engine": [
+                        {
+                            "totalCost": 435,
+                            "amount": 1
+                        }
+                    ]
+                },
+                "options": {
+                    "General": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Prophet of Shamut": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Prophet of Ashuruk": [
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Prophet of Lugar": [
+                        {
+                            "totalCost": 35,
+                            "amount": 1,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Prophet of Nezibkesh": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Light Troops": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Taurukh Ritual": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Light Troops, Ghost Step, Cha 4\" and Mob 6\"": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Seat of Authority": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 80,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Kadim Chariot": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Bull of Shamut": [
+                        {
+                            "totalCost": 150,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 190,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Infernal Bastion": [
+                        {
+                            "totalCost": 220,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 230,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Flintlock Axe": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 3,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 3,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        }
+                    ],
+                    "Great Weapon": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 1,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 2,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 1,
+                            "parentUnit": "Kadim Chariot"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Kadim Chariot"
+                        }
+                    ],
+                    "Great Bull of Shamut": [
+                        {
+                            "totalCost": 340,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Wizard Adept": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Wizard Master": [
+                        {
+                            "totalCost": 150,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Alchemy": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Living Steel": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Corruption of Tin": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Chalice of Gold": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Silver Spike": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Word of Iron": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Quicksilver Lash": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Pyromancy": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Fireball": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Flaming Swords": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Dragon's Roar": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Pyroclastic Flow": [
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Pillars of Fire": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Tidal Flame": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Occultism": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "The Devouring Dark": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Blood Curse": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Hand of Glory": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Pentagram of Pain": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Umbral Majesty": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "The Grave Calls": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        }
+                    ],
+                    "Shield": [
+                        {
+                            "totalCost": 15,
+                            "amount": 1,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 2,
+                            "amount": 10,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Dusk Forged": [
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Wild Warding": [
+                        {
+                            "totalCost": 40,
+                            "amount": 1,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Sigil of Protection": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Kadim Binding": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Destiny's Call": [
+                        {
+                            "totalCost": 90,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 90,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Blaze of Protection": [
+                        {
+                            "totalCost": 65,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 65,
+                            "amount": 1,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Warding of Unity": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Basalt Infusion": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Ghostly Guard": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Blunderbuss": [
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 3,
+                            "amount": 10,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Eye of the Bull": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Paired Weapons": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+
+              "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Kadim Chariot"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 1,
+                            "parentUnit": "Kadim Chariot"
+                        }
+                    ],
+                    "Flame of the East": [
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 55,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Touch of Greatness": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Vorpal Binding": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Hero's Heart": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "King Slayer": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Shield Breaker": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Giant Slayer": [
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Infernal Weapon": [
+                        {
+                            "totalCost": 5,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 19,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 2,
+                            "amount": 10,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Onyx Core": [
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Talisman of the Void": [
+                        {
+                            "totalCost": 65,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 65,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Mimic Cloak": [
+                        {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Breath of the Brass Bull": [
+                        {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+
+     {
+                            "totalCost": 60,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Talisman of Shielding": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Ring of Desiccation": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Tablet of Vezodinezh": [
+                        {
+                            "totalCost": 45,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 45,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Mask of Ages": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Golden Idol of Shamut": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 1,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Magical Heirloom": [
+                        {
+                            "totalCost": 35,
+                            "amount": 1,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Lugar's Dice": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Crown of the Wizard King": [
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 25,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Obsidian Rock": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Binding Scroll": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Scroll of a Free Mind": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Dragon's Brew": [
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 35,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Potion of Power Preservation": [
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 30,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+
+                  ],
+                    "Potion of Swiftness": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Spell Scroll": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Prophet"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Captain and Attached": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Solitary": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Battle Standard Bearer": [
+                        {
+                            "totalCost": 70,
+                            "amount": 1,
+                            "parentUnit": "Vizier"
+                        }
+                    ],
+                    "Stalker's Standard": [
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 70,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Rending Banner": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Banner of Shamut": [
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 50,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Flaming Standard": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Banner of the Twice-Branded": [
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 1,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 40,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Sheltering Standard": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Their Master's Banner": [
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Banner of Courage": [
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Aether Icon": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Pistol": [
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 25,
+                            "parentUnit": "Citadel Guard"
+                        }
+                    ],
+                    "Spear": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Vizier"
+                        },
+                        {
+                            "totalCost": 2,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        }
+                    ],
+                    "Citadel Guard": [
+                        {
+                            "totalCost": 15,
+                            "amount": 25,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 15,
+                            "amount": 25,
+                            "parentUnit": "Citadel Guard"
+                        }
+                    ],
+                    "Pistol and Spear": [
+                        {
+                            "totalCost": 6,
+                            "amount": 25,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 6,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+
+                        }
+                    ],
+                    "Standard Bearer": [
+                        {
+                            "totalCost": 10,
+                            "amount": 1,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 1,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 1,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 1,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Musician": [
+                        {
+
+                    "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Citadel Guard"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Immortals"
+                        },
+                        {
+                            "totalCost": 10,
+                            "amount": 0,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Immortals": [
+                        {
+                            "totalCost": 21,
+                            "amount": 19,
+                            "parentUnit": "Immortals"
+                        }
+                    ],
+                    "Taurukh Enforcers": [
+                        {
+                            "totalCost": 24,
+                            "amount": 10,
+                            "parentUnit": "Taurukh Enforcers"
+                        }
+                    ],
+                    "Naphtha Thrower": [
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Infernal Artillery"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Infernal Artillery"
+                        },
+                        {
+                            "totalCost": 15,
+                            "amount": 1,
+                            "parentUnit": "Infernal Engine"
+                        }
+                    ],
+                    "Titan Mortar": [
+                        {
+                            "totalCost": 75,
+                            "amount": 0,
+                            "parentUnit": "Infernal Artillery"
+                        },
+                        {
+                            "totalCost": 75,
+                            "amount": 0,
+                            "parentUnit": "Infernal Artillery"
+                        },
+                        {
+                            "totalCost": 0,
+                            "amount": 0,
+                            "parentUnit": "Infernal Engine"
+                        }
+                    ],
+                    "Rocket Battery": [
+                        {
+                            "totalCost": 105,
+                            "amount": 1,
+                            "parentUnit": "Infernal Artillery"
+                        },
+                        {
+                            "totalCost": 105,
+                            "amount": 1,
+                            "parentUnit": "Infernal Artillery"
+                        },
+                        {
+                            "totalCost": 20,
+                            "amount": 0,
+                            "parentUnit": "Infernal Engine"
+                        }
+                    ],
+                    "Rock Crusher": [
+                        {
+                            "totalCost": 15,
+                            "amount": 0,
+                            "parentUnit": "Infernal Engine"
+                        }
+                    ]
+                },
+                "refs": {
+                    "perso": 1,
+                    "prophet": 1,
+                    "tag_Dwarf": 12,
+                    "tag_Metal Armour": 14,
+                    "wizard": 1,
+                    "general": 2,
+                    "army_general": 2,
+                    "leadershipSkills": 2,
+                    "prophetOfShamut": 1,
+                    "prophetOfAshuruk": 1,
+                    "prophetOfLugar": 1,
+                    "prophetOfNezibkesh": 1,
+                    "prophetofnezibkesh": 1,
+                    "lightTroops": 2,
+                    "lighttroops": 2,
+                    "taurukhRitual": 2,
+                    "taurukhritual": 2,
+                    "taurukh_ritual": 2,
+                    "beast": 2,
+                    "lightTroopsLugar": 1,
+                    "lighttroopslugar": 1,
+                    "seatOfAuthorityMount": 4,
+                    "seatofauthoritymount": 4,
+                    "tag_Mount": 10,
+                    "tag_Vassal": 2,
+                    "mount": 8,
+                    "seatOfAuthority_mount_unit": 2,
+                    "kadimChariotMount": 2,
+                    "kadimchariotmount": 2,
+                    "tag_Kadim": 3,
+                    "tag_Construct": 6,
+                    "kadimChariot_mount_unit": 1,
+                    "kadimChariot": 3,
+                    "bullOfShamutMount": 4,
+                    "bullofshamutmount": 4,
+                    "tag_Beast": 3,
+                    "bull_of_shamut_mount_unit": 2,
+                    "flyer": 3,
+                    "solitary": 3,
+                    "infernalBastionMount": 4,
+                    "infernalbastionmount": 4,
+                    "not_a_leader": 2,
+                    "infernal_bastion": 2,
+                    "infernalBastion_mount_unit": 2,
+                    "exclusiveCitadelGuardAndFlintlockAxes": 2,
+                    "exclusiveCitadelGuard": 2,
+                    "flintlockAxes": 2,
+                    "flintlockAxe": 6,
+                    "exclusivecitadelguardandflintlockaxes": 2,
+                    "black_powder": 24,
+                    "exclusiveinfernalWarriorAndGreatWeapon": 2,
+                    "exclusiveinfernalWarrior": 2,
+                    "greatWeapon": 8,
+                    "exclusiveInfernalWarrior": 2,
+                    "exclusiveinfernalwarriorandgreatweapon": 2,
+                    "greatBullOfShamut": 1,
+                    "greatBullOfShamutMount": 1,
+                    "greatbullofshamutmount": 1,
+                    "great_bull_of_shamut_mount_unit": 1,
+                    "wizardAdept": 1,
+                    "wizardadept": 1,
+                    "wizardMaster": 1,
+                    "wizardmaster": 1,
+                    "alchemy": 1,
+                    "spell": 18,
+                    "pyromancy": 1,
+                    "occultism": 1,
+                    "shield": 3,
+                    "ce_duskforge": 2,
+                    "se_wild_warding": 2,
+                    "se_sigil_of_protection": 2,
+                    "kadimBinding": 2,
+                    "kadim binding_2duxeqy": 2,
+                    "id_special_item": 46,
+                    "ae_destiny": 2,
+                    "blazeOfProtection": 2,
+                    "blaze of protection_g4n0jp9o": 2,
+                    "ae_warding_unity": 2,
+                    "ae_basalt_inject": 2,
+                    "ae_phantom": 2,
+                    "blunderbuss": 3,
+                    "flintlockaxe": 4,
+                    "eyeOfTheBull": 2,
+                    "triple speed_rmcep6qb": 2,
+                    "weaponEnchantUni": 64,
+                    "pairedWeapons": 5,
+                    "pairedweapons": 5,
+                    "flameOfTheEast": 9,
+                    "flame of the east_jfbk6kse": 9,
+                    "army_unique": 53,
+                    "we_grace_touched": 9,
+                    "we_vorpal_binding": 9,
+                    "we_hero_heart": 4,
+                    "we_king_slayer": 9,
+                    "we_shield_breaker": 9,
+                    "we_giant_slayer": 9,
+                    "greatweapon": 6,
+                    "infernalWeapon": 4,
+                    "infernalweapon": 4,
+                    "onyxCore": 4,
+                    "we_id_onyx": 4,
+                    "art_void_talis": 2,
+                    "art_mimic_cloak": 2,
+                    "breathOfTheBrassBull": 2,
+                    "breath of the brass bull_bt3o830n": 2,
+                    "protect_talis": 2,
+                    "ringOfDesiccation": 2,
+                    "ring of desiccation_9k5mrpkc": 2,
+                    "tabletOfVezodinezh": 2,
+                    "tablet of vezodinezh_mygyzo4t": 2,
+                    "dominant": 2,
+                    "maskOfAges": 2,
+                    "mask of ages_vj6or7u": 2,
+                    "goldenIdolOfShamut": 2,
+                    "golden idol of shamut_5zfn92k": 2,
+                    "art_magical_inh": 2,
+                    "lugarsDice": 2,
+                    "lugar's dice_ufc4p9ht": 2,
+                    "art_wizard_crown": 2,
+                    "art_obsi_roc": 2,
+                    "art_blocking_scroll": 2,
+                    "scroll_of_a_free_mind": 2,
+                    "dragons_brew": 2,
+                    "pot_preservation": 2,
+                    "art_speed_pot": 2,
+                    "one_use_item": 2,
+                    "scroll_spell": 2,
+                    "vizier": 1,
+                    "captainAndAttached": 1,
+                    "captain": 1,
+                    "attached": 1,
+                    "captainandattached": 1,
+                    "battleStandardBearer": 1,
+                    "battlestandardbearer": 1,
+                    "army_bsb": 1,
+                    "be_ranger": 5,
+                    "be_rending": 5,
+                    "bannerOfShamut": 5,
+                    "banner_of_shamut": 5,
+                    "be_burning": 5,
+                    "bannerOfTheTwiceBranded": 5,
+                    "id_banner_twice_branded": 5,
+                    "be_sheltering": 5,
+                    "theirMastersBanner": 5,
+                    "their_masters_banner": 5,
+                    "be_discipline": 5,
+                    "be_ether": 5,
+                    "pistol": 5,
+                    "spear": 4,
+                    "base": 1,
+                    "citadelGuard": 2,
+                    "citadelguard": 2,
+                    "core_unit": 2,
+                    "citadel_guard_amount": 2,
+                    "guards_flintock": 2,
+                    "pistolAndSpear": 2,
+                    "pistolandspear": 2,
+                    "standardBearer": 4,
+                    "standardbearer": 4,
+                    "musician": 4,
+                    "special": 1,
+                    "immortals": 1,
+                    "immortals_amount": 1,
+                    "taurukhEnforcers": 1,
+                    "tag_Centauroid": 1,
+                    "taurukhenforcers": 1,
+                    "tall": 1,
+                    "taurukh_enforcers_amount": 1,
+                    "taurukh_blunderbuss": 1,
+                    "infernalArtillery": 2,
+                    "infernalartillery": 2,
+                    "infernal_artillery": 2,
+                    "war_machine": 2,
+                    "naphthaThrower": 3,
+                    "naphthathrower": 3,
+                    "naphta_thrower": 3,
+                    "fires_of_industry": 13,
+                    "titanMortar": 3,
+                    "titanmortar": 3,
+                    "titan_mortar": 3,
+                    "rocketBattery": 3,
+                    "rocketbattery": 3,
+                    "rocket_battery": 3,
+                    "kadimchariot": 2,
+                    "instruments_of_destruction": 1,
+                    "infernalEngine": 1,
+                    "infernalengine": 1,
+                    "infernal_engine": 1,
+                    "rockCrusher": 1,
+                    "rockcrusher": 1,
+                    "engine_rock_crusher": 1,
+                    "mounts": 1
+                },
+                "forces": {}
+            },
+            "name": "Wulfgart",
+            "elo": {
+                "friendly": -4.5,
+                "tourny": -4.5
+            },
+            "exported_list": "Christian (Wulfgart) - Infernal Dwarves\n415 - Prophet, General, Prophet of Lugar, Wizard Adept, Pyromancy (Fireball, Dragon's Roar, Pyroclastic Flow), Shield (Wild Warding), Magical Heirloom\n270 - Vizier, Battle Standard Bearer, Light Troops, Blaze of Protection, Great Weapon, Golden Idol of Shamut\n570 - 25 Citadel Guard, Pistol and Spear, Standard Bearer\n460 - 25 Citadel Guard, Pistol, Standard Bearer (Banner of the Twice-Branded)\n414 - 19 Immortals, Infernal Weapon, Standard Bearer\n400 - 10 Taurukh Enforcers, Infernal Weapon, Shield, Blunderbuss, Standard Bearer\n295 - Infernal Artillery, Rocket Battery\n295 - Infernal Artillery, Rocket Battery\n225 - Kadim Chariot, Great Weapon\n220 - Kadim Chariot, Paired Weapons\n435 - Infernal Engine, Naphtha Thrower\n3999\n"
         }
-    ]
+    ],
+    "score": [
+        {
+            "VP": 2900,
+            "BPObj": 16,
+            "Turns": 6
+        },
+        {
+            "VP": 280,
+            "BPObj": 4,
+            "Turns": 6
+        }
+    ],
+    "id_season": 2,
+    "confirmation_id": "647c927c70b52923fc2ae461"
 }
