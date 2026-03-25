@@ -1059,6 +1059,18 @@ fs.readdirSync("data").forEach(folder => {
       armies[report.armyTwo].magicalness.push(report.armyListTwo.magicalness);
     }
 
+    // Sylvan Shooting
+    if (typeof report?.armyListOne?.sylvanShooting !== "undefined") {
+      armies[report.armyOne].sylvanShooting = armies[report.armyOne].sylvanShooting || [];
+      armies[report.armyOne].sylvanShooting.push(report.armyListOne.sylvanShooting);
+    }
+
+    if (typeof report?.armyListTwo?.sylvanShooting !== "undefined") {
+      armies[report.armyTwo].sylvanShooting = armies[report.armyTwo].sylvanShooting || [];
+      armies[report.armyTwo].sylvanShooting.push(report.armyListTwo.sylvanShooting);
+    }
+
+
     // Model counts
     if (typeof report?.armyListOne?.modelCount !== "undefined") {
       armies[report.armyOne].modelCount0 = armies[report.armyOne].modelCount0 || [];
@@ -1290,6 +1302,9 @@ displayArmySpecialItems();
 
 // Display unit options
 displayUnitOptions();
+
+// Display army specific categories
+displayArmySpecialCategories();
 
 
 // #################################################################################################################
@@ -1742,4 +1757,21 @@ function displayUnitOptions() {
 function storeJsonData() {
     fs.writeFileSync(`./output/globalStats.json`, JSON.stringify(globalStats, null, 4));
     fs.writeFileSync(`./output/armies.json`, JSON.stringify(armies, null, 4));
+}
+
+
+function displayArmySpecialCategories() {
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ Sylvan Shooting                            ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┫`);
+  console.log(`┃              │  0  │ 10+ │ 20+ │ 30+ │ 40+ ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┫`);
+
+  for (let army in armies) {
+    if(armies[army].sylvanShooting) {
+      armies[army].sylvanShooting.filter(m => m === 1).length;
+      console.log(`┃ ${army.padEnd(3, " ")}          │ ${armies[army].sylvanShooting.filter(m => m < 10).length.toString().padStart(3, " ")} │ ${armies[army].sylvanShooting.filter(m => m >= 10 && m < 20).length.toString().padStart(3, " ")} │ ${armies[army].sylvanShooting.filter(m => m >= 20 && m < 30).length.toString().padStart(3, " ")} │ ${armies[army].sylvanShooting.filter(m => m >= 30 && m < 40).length.toString().padStart(3, " ")} │ ${armies[army].sylvanShooting.filter(m => m >= 40).length.toString().padStart(3, " ")} ┃`);
+    }
+  }
+  console.log(`┗━━━━━━━━━━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┛`);
 }

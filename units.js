@@ -1064,6 +1064,7 @@ const EoS = [
 
 // HE
 const HE = [
+  
   {
     "name" : "Master Acadnath, the Asfad Scholar",
     "category" : "Characters",
@@ -1073,6 +1074,13 @@ const HE = [
   },
   {
     "name" : "Acadnath, the Scholar",
+    "category" : "Characters",
+    "queensBows" : 0,
+    "navalOrdnance" : 0,
+    "ancientAllies" : 0,
+  },
+  {
+    "name" : "Dhaenala, the Wyrmkin",
     "category" : "Characters",
     "queensBows" : 0,
     "navalOrdnance" : 0,
@@ -2772,6 +2780,10 @@ const VC = [
   },
   {
     "name" : "The Collective of Varyag",
+    "category" : "Characters",
+  },
+  {
+    "name" : "The Collective of Varyag the Sainted",
     "category" : "Characters",
   },
   {
