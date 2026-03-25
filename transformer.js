@@ -6455,6 +6455,10 @@ function transformArmyList(input, army) {
     calculateMagicalness(r);
     calculateModelCounts(r, army);
 
+    if(army === "SE") {
+        calculateSylvanShooting(r);
+    }
+
     return r;
 }
 
@@ -6631,6 +6635,35 @@ function calculateModelCounts(list, army) {
     list.modelCount = modelCount;
     list.unitCount = unitCount;
 }
+
+function calculateSylvanShooting(list) {
+    let sylvanShooting = 0;
+
+    for(let unit of list.units) {
+        for(let option of unit.options) {
+            if(option?.name === "Pathfinder" && option?.type === "Kindred") {
+                sylvanShooting += 5;
+            } else if(option?.name === "Bough Of Wyscan" && option?.type === "Magic Items") {
+                sylvanShooting += 5;
+            } else if(option?.name === "Sylvan Longbow" || option?.name === "Sylvan Bow") {
+                sylvanShooting += 1;
+            } else if(option?.name === "Heath Hunters" || option?.name === "Skirmisher, Light Lance and Sylvan Bow") {
+                sylvanShooting += unit.models;
+            }
+        }
+
+        if(unit.name === "Sylvan Sentinels" || unit.name === "Pathfinders") {
+            sylvanShooting += (2 * unit.models);
+        } else if(unit.name === "Sylvan Archers") {
+            sylvanShooting += unit.models;
+        } else if(unit.name === "Briar Maidens") {
+            sylvanShooting += (unit.models / 2);
+        }
+        
+    }
+    list.sylvanShooting = sylvanShooting;
+}
+
 
 module.exports = {
     transformArmyList
