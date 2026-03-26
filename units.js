@@ -954,7 +954,7 @@ const EoS = [
     "category" : "Core",
     "imperialAuxiliaries" : 1,
     "imperialArmory" : 0,
-    "min" : 15,
+    "min" : 12,
     "max" : 20,
     "height": 1,
   },
