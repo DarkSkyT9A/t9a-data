@@ -12,7 +12,7 @@ const sharedWeapon = ["Eldritch Inscriptions", "Hero's Heart", "Shield Breaker",
 const sharedArmour = ["Death Cheater", "Ghostly Guard",];
 const sharedShield = ["Dusk Forged", "Sigil of Protection",];
 const sharedArtefact = ["Essence of a Free Mind", "Mask of Mindless Violence", "Obsidian Rock", "Rod of Battle",];
-const sharedPotion = ["Potion of Healing", "Scroll of Draining", "Scroll of Power", "Spell Scroll",];
+const sharedPotion = ["Potion of Healing", "Scroll of Draining", "Scroll of Power", "Spell Scroll", "Scroll of a Free Mind", ];
 const sharedBanner = ["Banner of Courage", "Banner of Speed", "Distortion Emblem", "Rending Banner"];
 
 const arcCompAll = commonWeapon.concat(sharedWeapon, commonArmour, sharedArmour, commonShield, sharedShield, commonArtefact, sharedArtefact, commonPotion, sharedPotion, commonBanner, sharedBanner);
@@ -75,7 +75,7 @@ const bhItems = {
     "Weapon": ["Hawthorne Curse", "Ancestral Carvings", "Fatal Folly", "Twin Hungers",],
     "Armour": ["Aaghor's Affliction", "Trickster's Cunning", "Wild Form",],
     "Shield": ["Obscuring Fog",],
-    "Artefact": ["Pillager Icon", "Crown of Madness", "Horn of Bragh", "Eye of Dominance",],
+    "Artefact": ["Spirit Caller's Charm", "Pillager Icon", "Crown of Madness", "Horn of Bragh", "Eye of Dominance",],
     "Potion": ["Rain Augur Brew", "Seed of the Dark Forest",],
     "Banner": ["Banner of the Wild Herd",],
 };
@@ -85,7 +85,7 @@ const deItems = {
     "Weapon": ["Mastery of Slaughter", "Height of Hubris", "Lacerating Touch", "Transcendence", "Pride of Gar Daecos",],
     "Armour": ["Seal of the Republic",],
     "Shield": [],
-    "Artefact": ["Ceinran's Scales", "Moithir's Mirror", "Ring of the Obsidian Thrones",],
+    "Artefact": ["Ceinran's Scales", "Moithir's Mirror", "Ring of the Obsidian Thrones", "Ring of Obsidian Thrones"],
     "Potion": ["Beastmaster's Vial",],
     "Banner": ["Caedhren's Pennon", "Banner of Urlain", "Eye of the Gorgon",],
 };
@@ -95,7 +95,7 @@ const dhItems = {
     "Weapon": ["Rune of Destruction", "Rune of Smashing", "Rune of Quickening", "Rune of Might", "Rune of Penetration", "Rune of Anger", "Rune of Precision", "Rune of Craftsmanship", "Rune of Lightning", "Rune of Fire", "Rune of Returning",],
     "Armour": ["Rune of Steel", "Rune of Resistance", "Rune of Iron", "Rune of Retribution", "Rune of the Forge",],
     "Shield": [],
-    "Artefact": ["Rune of Denial", "Rune of Devouring", "Rune of Grounding", "Rune of Harnessing", "Rune of Channelling", "Rune of Dragon's Breath", "Rune of Readiness", "Rune of Shielding", "Rune of the Courage", "Rune of Storms", "Rune of Kinship", "Rune of Mining",],
+    "Artefact": ["Rune of Denial", "Rune of Devouring", "Rune of Grounding", "Rune of Harnessing", "Rune of Channeling", "Rune of Dragon's Breath", "Rune of Readiness", "Rune of Shielding", "Rune of Courage", "Rune of Storms", "Rune of Kinship", "Rune of Mining",],
     "Potion": [],
     "Banner": ["Runic Standard of the Hold", "Runic Standard of Swiftness", "Runic Standard of Grudges", "Runic Standard of Wisdom", "Runic Standard of Dismay", "Runic Standard of Steadiness", "Runic Standard of the Anvil",],
 };
