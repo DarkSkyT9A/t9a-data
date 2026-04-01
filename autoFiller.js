@@ -46,25 +46,38 @@ async function doAsyncStuff() {
 
   // Beast Herds
   const bh = doc.sheetsByTitle["BH"];
+  await bh.loadHeaderRow();
+  console.log(JSON.stringify(bh.headerValues));
+
   const bhRows = await bh.getRows();
   let games = armies.BH.listCount;
 
   for(let bhRow of bhRows) {
+    console.log(bhRow.get("Category"));
+
+    if(bhRow.get("Category" === "Complete List")) {
+      continue;
+    }
+
     // Magic Item row
     if(bhRow.get("Category") === "Magic Items" || bhRow.get("Category") === "Shared Items") {
       console.log(`Entry: ${bhRow.get("Entry")}`);
       console.log(`Values: Count: ${armies.BH.specialItems[bhRow.get("Entry")]} / Percent: ${armies.BH.specialItems[bhRow.get("Entry")] / games}`);
-      bhRow.set("Ø Pick Rate", (armies.BH.specialItems[bhRow.get("Entry")] / games));
+      bhRow.set("Ø Pick Rate", (armies.BH.specialItems[bhRow.get("Entry")] / games * 100).toFixed(0));
+      await bhRow.save();
     }
 
     // Units
     let dataEntry = armies.BH.units.find(a => a.name === bhRow.get("Category"));
+    if(undefined === dataEntry) {
+      continue;
+    }
     console.log(JSON.stringify(dataEntry));
     let count = dataEntry.count.reduce((a, b) => a + b, 0);
     
     // Base Cost
     if(bhRow.get("Entry") === "Base Cost") {
-      bhRow.set("Ø Pick Rate", count / games);
+      // bhRow.set("Ø Pick Rate", count / games);
     }
     // All other named options
 
@@ -73,13 +86,5 @@ async function doAsyncStuff() {
 
 }
 
-
-
-//   
-
-// });
-
-  // await doc.loadInfo(); // loads document properties and worksheets
-  
-  // await doc.updateProperties({ title: 'renamed doc' });
-
+// await doc.loadInfo(); // loads document properties and worksheets
+// await doc.updateProperties({ title: 'renamed doc' });
