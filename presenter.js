@@ -1000,6 +1000,13 @@ let armies = {
   },
 };
 
+let setup = {
+  "map": {},
+  "deployment": {},
+  "primary": {},
+  "secondary": {}
+};
+
 fs.readdirSync("data").forEach(folder => {
   // Read metadata and decide whether to go on or not with this tournament
   if (fs.existsSync(`./data/${folder}/metaData.json`)) {
@@ -1047,6 +1054,61 @@ fs.readdirSync("data").forEach(folder => {
       armies[report.armyTwo].pointsUnknown.push(report.scoreTwo);
     }
 
+    // Setup and objectives
+    if(report.setup) {
+      if(report.setup.map) {
+        setup.map[report.setup.map] = setup.map[report.setup.map] ? setup.map[report.setup.map] + 1 : 1;
+      }
+
+      if(report.setup.deployment) {
+        setup.deployment[report.setup.deployment] = setup.deployment[report.setup.deployment] || [];
+        setup.deployment[report.setup.deployment].push(report.firstTurn === 0 ? report.scoreOne : report.scoreTwo);
+      }
+
+      if(report.setup.primary) {
+        setup.primary[report.setup.primary] = setup.primary[report.setup.primary] || { "count" : 0, "attacker": 0, "defender": 0, "none": 0 };
+        setup.primary[report.setup.primary].count = setup.primary[report.setup.primary].count + 1;
+        if(report.primary === 2) {
+          setup.primary[report.setup.primary].none = setup.primary[report.setup.primary].none + 1;
+        } else if(report.primary === report.firstTurn) {
+          setup.primary[report.setup.primary].attacker = setup.primary[report.setup.primary].attacker + 1;
+        } else {
+          setup.primary[report.setup.primary].defender = setup.primary[report.setup.primary].defender + 1;
+        }
+      }
+
+      if(undefined !== report.setup.secondaryPlayerOne && undefined !== report.setup.secondaryPlayerTwo) {
+        setup.secondary[report.setup.secondaryPlayerOne] = setup.secondary[report.setup.secondaryPlayerOne] || { "count" : 0, "attackerWon": 0, "defenderWon": 0, "attackerLost": 0, "defenderLost": 0 };
+        setup.secondary[report.setup.secondaryPlayerTwo] = setup.secondary[report.setup.secondaryPlayerTwo] || { "count" : 0, "attackerWon": 0, "defenderWon": 0, "attackerLost": 0, "defenderLost": 0 };
+        setup.secondary[report.setup.secondaryPlayerOne].count = setup.secondary[report.setup.secondaryPlayerOne].count + 1;
+        setup.secondary[report.setup.secondaryPlayerTwo].count = setup.secondary[report.setup.secondaryPlayerTwo].count + 1;
+        
+        if(report.firstTurn === 0) {
+          if(report.secondaryPlayerOne) {
+            setup.secondary[report.setup.secondaryPlayerOne].attackerWon = setup.secondary[report.setup.secondaryPlayerOne].attackerWon + 1;
+          } else {
+            setup.secondary[report.setup.secondaryPlayerOne].attackerLost = setup.secondary[report.setup.secondaryPlayerOne].attackerLost + 1;
+          }
+          if(report.secondaryPlayerTwo) {
+            setup.secondary[report.setup.secondaryPlayerTwo].defenderWon = setup.secondary[report.setup.secondaryPlayerTwo].defenderWon + 1;
+          } else {
+            setup.secondary[report.setup.secondaryPlayerTwo].defenderLost = setup.secondary[report.setup.secondaryPlayerTwo].defenderLost + 1;
+          }
+        } else {
+          if(report.secondaryPlayerOne) {
+            setup.secondary[report.setup.secondaryPlayerOne].defenderWon = setup.secondary[report.setup.secondaryPlayerOne].defenderWon + 1;
+          } else {
+            setup.secondary[report.setup.secondaryPlayerOne].defenderLost = setup.secondary[report.setup.secondaryPlayerOne].defenderLost + 1;
+          }
+          if(report.secondaryPlayerTwo) {
+            setup.secondary[report.setup.secondaryPlayerTwo].attackerWon = setup.secondary[report.setup.secondaryPlayerTwo].attackerWon + 1;
+          } else {
+            setup.secondary[report.setup.secondaryPlayerTwo].attackerLost = setup.secondary[report.setup.secondaryPlayerTwo].attackerLost + 1;
+          }
+        }
+      }
+    }
+
     // Magicalness
     // console.log(report?.armyListOne?.magicalness);
     if (typeof report?.armyListOne?.magicalness !== "undefined") {
@@ -1058,6 +1120,18 @@ fs.readdirSync("data").forEach(folder => {
       armies[report.armyTwo].magicalness = armies[report.armyTwo].magicalness || [];
       armies[report.armyTwo].magicalness.push(report.armyListTwo.magicalness);
     }
+
+    // Sylvan Shooting
+    if (typeof report?.armyListOne?.sylvanShooting !== "undefined") {
+      armies[report.armyOne].sylvanShooting = armies[report.armyOne].sylvanShooting || [];
+      armies[report.armyOne].sylvanShooting.push(report.armyListOne.sylvanShooting);
+    }
+
+    if (typeof report?.armyListTwo?.sylvanShooting !== "undefined") {
+      armies[report.armyTwo].sylvanShooting = armies[report.armyTwo].sylvanShooting || [];
+      armies[report.armyTwo].sylvanShooting.push(report.armyListTwo.sylvanShooting);
+    }
+
 
     // Model counts
     if (typeof report?.armyListOne?.modelCount !== "undefined") {
@@ -1261,6 +1335,9 @@ displayMetaData();
 // Display global stats
 displayGlobalStats();
 
+// Display objectives
+displayObjectives();
+
 // Display army stats
 displayArmyStats();
 
@@ -1290,6 +1367,9 @@ displayArmySpecialItems();
 
 // Display unit options
 displayUnitOptions();
+
+// Display army specific categories
+displayArmySpecialCategories();
 
 
 // #################################################################################################################
@@ -1739,7 +1819,76 @@ function displayUnitOptions() {
   }
 }
 
+function displayObjectives() {
+
+  // console.log(JSON.stringify(setup, null, 4));
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1mMap                              ┃  Games played \x1b[0m ┃`);
+  console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━┫`);
+
+  let keys = Object.keys(setup.map).sort();
+  // console.log(JSON.stringify(keys, null, 4));
+  
+  for (let map of keys) {
+    console.log(`┃ ${map.padEnd(32, " ")} ┃ ${setup.map[map].toFixed(0).padStart(14, " ")} ┃`);
+  }
+  console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━┛`);
+
+  let depKeys = Object.keys(setup.deployment);
+
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1mDeployment                       ┃  Games played  │  1st turn ØPts \x1b[0m┃`);
+  console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━┫`);
+
+  for(let dep of depKeys) {
+    console.log(`┃ ${dep.padEnd(32, " ")} ┃ ${setup.deployment[dep].length.toFixed(0).padStart(14, " ")} │ ${(setup.deployment[dep].reduce((a, b) => a + b, 0) / setup.deployment[dep].length).toFixed(1).padStart(14, " ")} ┃`);
+  }
+  console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━┛`);
+
+  let primaryKeys = Object.keys(setup.primary);
+
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┯━━━━━━━━━━┯━━━━━━━━━━┯━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1mPrimary                          ┃  Total   │ Attacker │ Defender │   None   \x1b[0m┃`);
+  console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━┿━━━━━━━━━━┿━━━━━━━━━━┿━━━━━━━━━━┫`);
+
+  for(let pri of primaryKeys) {
+    console.log(`┃ ${pri.padEnd(32, " ")} ┃ ${setup.primary[pri].count.toFixed(0).padStart(8, " ")} │ ${setup.primary[pri].attacker.toFixed(0).padStart(8, " ")} │ ${setup.primary[pri].defender.toFixed(0).padStart(8, " ")} │ ${setup.primary[pri].none.toFixed(0).padStart(8, " ")} ┃`);
+  }
+  console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┛`);
+
+  let secondaryKeys = Object.keys(setup.secondary);
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┯━━━━━━━━━━┯━━━━━━━━━━┯━━━━━━━━━━┓`);
+  console.log(`┃ \x1b[1mSecondary                        ┃  Total   │ Achieved │ Attacker │ Defender \x1b[0m┃`);
+  console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━━━━┿━━━━━━━━━━┿━━━━━━━━━━┿━━━━━━━━━━┫`);
+
+  for(let sec of secondaryKeys) {
+    let total = setup.secondary[sec].count;
+    let achieved = (setup.secondary[sec].attackerWon + setup.secondary[sec].defenderWon)/setup.secondary[sec].count * 100;
+    let atkAchieved = setup.secondary[sec].attackerWon / (setup.secondary[sec].attackerWon + setup.secondary[sec].attackerLost) * 100;
+    let defAchieved = setup.secondary[sec].defenderWon / (setup.secondary[sec].defenderWon + setup.secondary[sec].defenderLost) * 100;
+    console.log(`┃ ${sec.padEnd(32, " ")} ┃ ${total.toFixed(0).padStart(8, " ")} │ ${achieved.toFixed(0).padStart(7, " ")}% │ ${atkAchieved.toFixed(0).padStart(7, " ")}% │ ${defAchieved.toFixed(0).padStart(7, " ")}% ┃`);
+  }
+  console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┷━━━━━━━━━━┛`);
+}
+
 function storeJsonData() {
     fs.writeFileSync(`./output/globalStats.json`, JSON.stringify(globalStats, null, 4));
     fs.writeFileSync(`./output/armies.json`, JSON.stringify(armies, null, 4));
+}
+
+
+function displayArmySpecialCategories() {
+  console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`);
+  console.log(`┃ Sylvan Shooting                            ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┯━━━━━┫`);
+  console.log(`┃              │  0  │ 10+ │ 20+ │ 30+ │ 40+ ┃`);
+  console.log(`┣━━━━━━━━━━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┫`);
+
+  for (let army in armies) {
+    if(armies[army].sylvanShooting) {
+      armies[army].sylvanShooting.filter(m => m === 1).length;
+      console.log(`┃ ${army.padEnd(3, " ")}          │ ${armies[army].sylvanShooting.filter(m => m < 10).length.toString().padStart(3, " ")} │ ${armies[army].sylvanShooting.filter(m => m >= 10 && m < 20).length.toString().padStart(3, " ")} │ ${armies[army].sylvanShooting.filter(m => m >= 20 && m < 30).length.toString().padStart(3, " ")} │ ${armies[army].sylvanShooting.filter(m => m >= 30 && m < 40).length.toString().padStart(3, " ")} │ ${armies[army].sylvanShooting.filter(m => m >= 40).length.toString().padStart(3, " ")} ┃`);
+    }
+  }
+  console.log(`┗━━━━━━━━━━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┷━━━━━┛`);
 }
