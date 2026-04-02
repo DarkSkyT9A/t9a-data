@@ -5,7 +5,7 @@ const { GoogleSpreadsheet } = require("google-spreadsheet");
 const { JWT } = require('google-auth-library');
 const { gmail, gPrivateKey } = require("./secrets.json");
 const armies = require("./output/armies.json");
-
+const armiesShort = [ "BH", "DE", "DH", "DL", "EoS", "ID", "HE", "KoE", "OK", "OnG", "SA", "SE", "UD", "VC", "VS", "WDG" ];
 const SCOPES = [
   'https://www.googleapis.com/auth/spreadsheets',
   'https://www.googleapis.com/auth/drive.file',
@@ -40,9 +40,42 @@ doAsyncStuff();
 async function doAsyncStuff() {
   await doc.loadInfo();
   console.log(doc.title);
-  const sheet = doc.sheetsByIndex[0]; // or use `doc.sheetsById[id]` or `doc.sheetsByTitle[title]`
-  console.log(sheet.title);
-  console.log(sheet.rowCount);
+  // const sheet = doc.sheetsByIndex[0]; // or use `doc.sheetsById[id]` or `doc.sheetsByTitle[title]`
+  // console.log(sheet.title);
+  // console.log(sheet.rowCount);
+
+  // Iterate over Army Sheets
+  for(let armyShort of armiesShort) {
+    const armySheet = doc.sheetsByTitle(armyShort);
+    await armySheet.loadHeaderRow();
+    console.log(armySheet.title);
+    console.log(JSON.stringify(armySheet.headerValues));
+
+    const rows = await armySheet.getRows();
+    let games = armies[armyShort].listCount;
+    // Get base file from GDT
+    const armyBaseFile = require(`../GDT/books/${armyShort.toLowerCase}/armyBaseFile.json`);
+
+    for(let row of rows) {
+      console.log(row.get("Category") + " / " + row.get("Entry"));
+
+      if(row.get("Category" === "Complete List")) {
+        continue;
+      }
+
+      // Magic Item row
+      if(row.get("Category") === "Magic Items" || row.get("Category") === "Shared Items") {
+        console.log(`Values: Count: ${armies[armyShort].specialItems[row.get("Entry")]} / Percent: ${armies[armyShort].specialItems[row.get("Entry")] / games}`);
+        // Calculate play rate
+        row.set("Ø Pick Rate", (armies[armyShort].specialItems[row.get("Entry")] / games * 100).toFixed(0));        
+        // Get price from GDT
+        row.set("Points", Object.values(armyBaseFile.magicItems).flat().find(item => item.name === row.get("Entry")).cost);
+        // Save row
+        await row.save();
+      }
+    }
+
+  }
 
   // Beast Herds
   const bh = doc.sheetsByTitle["BH"];
@@ -57,14 +90,6 @@ async function doAsyncStuff() {
 
     if(bhRow.get("Category" === "Complete List")) {
       continue;
-    }
-
-    // Magic Item row
-    if(bhRow.get("Category") === "Magic Items" || bhRow.get("Category") === "Shared Items") {
-      console.log(`Entry: ${bhRow.get("Entry")}`);
-      console.log(`Values: Count: ${armies.BH.specialItems[bhRow.get("Entry")]} / Percent: ${armies.BH.specialItems[bhRow.get("Entry")] / games}`);
-      bhRow.set("Ø Pick Rate", (armies.BH.specialItems[bhRow.get("Entry")] / games * 100).toFixed(0));
-      await bhRow.save();
     }
 
     // Units
