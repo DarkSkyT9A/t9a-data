@@ -8,7 +8,7 @@ const { arcCompAll, arcCompCommon, arcCompShared, allItems } = require("./specia
 const units = require("./units.js");
 
 // Constants
-const DEFAULT_START_DATE = "2026-01-06";
+const DEFAULT_START_DATE = "2026-04-20";
 
 // Class Variables
 const date = new Date();
