@@ -1487,9 +1487,9 @@ function displayGlobalStats() {
   console.log(`┃ Average points going first:  ${firstAvg}                                           ┃`);
   console.log(`┃ Average points going second: ${secondAvg}                                           ┃`);
   console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
-  console.log(`┃ Decisive Games (18-20): ${decisive} / ${(decisive * 100 / globalStats.games).toFixed(0).padStart(3, " ")}%                                        ┃`);
-  console.log(`┃ 'Normal' Games (14-17): ${normal} / ${(normal * 100 / globalStats.games).toFixed(0).padStart(3, " ")}%                                        ┃`);
-  console.log(`┃ Close    Games (10-13): ${close} / ${(close * 100 / globalStats.games).toFixed(0).padStart(3, " ")}%                                        ┃`);
+  console.log(`┃ Decisive Games (18-20): ${decisive} / ${(decisive * 100 / globalWithTurnKnown).toFixed(0).padStart(3, " ")}%                                        ┃`);
+  console.log(`┃ 'Normal' Games (14-17): ${normal} / ${(normal * 100 / globalWithTurnKnown).toFixed(0).padStart(3, " ")}%                                        ┃`);
+  console.log(`┃ Close    Games (10-13): ${close} / ${(close * 100 / globalWithTurnKnown).toFixed(0).padStart(3, " ")}%                                        ┃`);
   console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
 }
 
