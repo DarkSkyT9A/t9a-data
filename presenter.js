@@ -5,7 +5,8 @@
 const fs = require("node:fs");
 const args = require('yargs').argv;
 const { arcCompAll, arcCompCommon, arcCompShared, allItems } = require("./specialItems");
-const units = require("./units.js");
+const options = require("./options");
+const units = require("./units");
 
 // Constants
 const DEFAULT_START_DATE = "2026-04-20";
@@ -48,6 +49,7 @@ let armies = {
     "core": [],
     "units": units.BH,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -107,6 +109,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.DE,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -167,6 +170,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.DH,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -227,6 +231,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.DL,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -287,6 +292,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.EoS,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -347,6 +353,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.HE,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -407,6 +414,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.ID,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -467,6 +475,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.KoE,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -527,6 +536,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.OK,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -587,6 +597,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.OnG,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -647,6 +658,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.SA,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -707,6 +719,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.SE,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -767,6 +780,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.UD,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -827,6 +841,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.VC,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -887,6 +902,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.VS,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -947,6 +963,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.WDG,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -1365,6 +1382,9 @@ displayUnitPickRates();
 // Display army pick rates for special items
 displayArmySpecialItems();
 
+// Display army pick rates for shared upgrades and options
+displayArmyOptions();
+
 // Display unit options
 displayUnitOptions();
 
@@ -1420,6 +1440,26 @@ function countOptionsForList(list, army) {
 
         armies[army].specialItems[o.name] = armies[army].specialItems[o.name] || 0;
         armies[army].specialItems[o.name] = armies[army].specialItems[o.name] + 1;
+      }
+
+      // Count army wide upgrades towards global counters
+      let armyOption = options.find(opt => opt.army === army && opt.name.toLowerCase() == o.name.toLowerCase());
+      if(armyOption) {
+        armies[army].armyOptions[o.name] = armies[army].armyOptions[o.name] || 0;
+
+        // Do not count Unit Manifestations for DL
+        if(armyOption.army === "DL" && unitInList.models) {
+          // console.log(`Skipping entry for ${unitInList.name}`);
+        }
+        // Extra code for some options that can be taken multiple times and then count more than once
+        else if(armyOption.type === "Howdah" && unitInList.models) {
+          // console.log(`Howdah detected increasing by ${unitInList.models} instead`);
+          armies[army].armyOptions[o.name] = armies[army].armyOptions[o.name] + unitInList.models;
+        } 
+        // Default case
+        else {
+          armies[army].armyOptions[o.name] = armies[army].armyOptions[o.name] + 1;
+        }
       }
     }
   }
@@ -1770,6 +1810,43 @@ function displayArmySpecialItems() {
       if (category !== "banner") console.log(`┃          │                                    ┃       │       ┃`);
     }
     console.log(`┗━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┛`);
+    console.log(`\n`);
+  }
+
+}
+
+function displayArmyOptions() {
+
+  for (let army in armies) {
+
+    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┓`);
+    console.log(`┃ \x1b[1mCategory                      │ ${army.padEnd(3, " ")} - Army Wide Options            ┃   #   │   %\x1b[0m   ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━┿━━━━━━━┫`);
+    
+    let armyOptions = options.filter(opt => opt.army === army);
+    let categories = [...(new Set(armyOptions.map(opt => opt.type)))];
+    if(army === "DL") {
+      let deities = [...(new Set(armyOptions.map(opt => opt.deity)))];
+      categories = [];
+      for(let deity of deities) {
+        categories.push(`Manifestations (${deity})`);
+      }
+    }
+
+    for (let category of categories) {
+      // console.log(category);
+      for (let armyOption of armyOptions) {
+        // console.log(upgrade);
+        if(armyOption.type === category || (army === "DL" && category.includes(armyOption.deity))) {
+          let name = `${armyOption.name.padEnd(34, " ")}`;
+          let cat = `${category.padEnd(29, " ")}`;
+          let count = `${armies[army].armyOptions?.[armyOption.name] || 0}`.padStart(3, " ");
+          let percent = `${((count / armies[army].listCount * 100).toFixed(0) || "0").padStart(4, " ")}%`;
+          console.log(`┃ ${cat} │ ${name} ┃  ${count}  │ ${percent} ┃`);
+        }
+      }
+    }
+    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┛`);
     console.log(`\n`);
   }
 
