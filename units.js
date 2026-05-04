@@ -2408,6 +2408,12 @@ const SE = [
     "sylvanBeasts" : 0
   },
   {
+    "name" : "Domethil, the Unicorn Shapeshifter",
+    "category" : "Characters",
+    "sylvanShooting" : 0,
+    "sylvanBeasts" : 0
+  },
+  {
     "name" : "Forest Prince",
     "category" : "Characters",
     "sylvanShooting" : 0,
