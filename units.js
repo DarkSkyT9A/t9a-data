@@ -1709,6 +1709,14 @@ const KoE = [
     "height": 0,
   },
   {
+    "name" : "Friar's Lanterns",
+    "category" : "Fey",
+    "gallantry" : 0,
+    "smallArmsFire" : 0,
+    "siegeEngines" : 0,
+    "height": 0,
+  },
+  {
     "name" : "Friar’s Lantern",
     "category" : "Fey",
     "gallantry" : 0,
