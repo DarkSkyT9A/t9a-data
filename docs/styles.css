@@ -1,0 +1,44 @@
+#globalStatsTable,
+#gameWideStatsTable {
+  width: 80%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+#globalStatsTable th,
+#gameWideStatsTable th {
+  background-color: #87CEEB;
+  color: #333;
+  padding: 12px;
+  text-align: left;
+  border: 2px solid #5F9EA0;
+  font-weight: bold;
+}
+
+#globalStatsTable td,
+#gameWideStatsTable td {
+  padding: 10px 12px;
+  border: 1px solid #B0C4DE;
+}
+
+#globalStatsTable td:first-child,
+#gameWideStatsTable td:first-child {
+  background-color: #FFFDD0;
+}
+
+#globalStatsTable td:last-child,
+#gameWideStatsTable td:last-child {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+#globalStatsTable tr:hover,
+#gameWideStatsTable tr:hover {
+  background-color: #E0F6FF;
+}
+
+/* Made with Bob */

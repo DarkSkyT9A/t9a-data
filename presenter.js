@@ -36,7 +36,10 @@ let globalStats = {
   "pointsSecondTurn": [],
   "turns": [],
   "games": 0,
-  "specialItems": {}
+  "specialItems": {},
+  "startDate": start,
+  "endDate": end,
+  "tournamentType": tournamentType
 };
 
 let armies = {
@@ -1951,6 +1954,8 @@ function displayObjectives() {
 function storeJsonData() {
     fs.writeFileSync(`./output/globalStats.json`, JSON.stringify(globalStats, null, 4));
     fs.writeFileSync(`./output/armies.json`, JSON.stringify(armies, null, 4));
+    fs.writeFileSync(`./docs/globalStats.json`, JSON.stringify(globalStats, null, 4));
+    fs.writeFileSync(`./docs/armies.json`, JSON.stringify(armies, null, 4));
 }
 
 

@@ -1,39 +1,64 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>T9A Data - Global Statistics</title>
-  <h1>T9A Data - Global Statistics</h1>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(document).ready(function() {
-        $.getJSON('../output/globalStats.json', function(data) {  // Change file name as needed
-          let content = `<p>Tournaments with Reports: ${data.tournamentsWithReports}</p>`;
-          $('#data-container').html(content);
-          let games = `<p>Games in Report: ${data.games}</p>`;
-          $('#data-container').html(games);
+    $(document).ready(function () {
+      $.getJSON("globalStats.json")
+        .done(function (data) {
+          let globalStatsHtml = '';
+          globalStatsHtml += `<tr><td>Tournament Types</td><td>${data.tournamentType}</td></tr>`;
+          globalStatsHtml += `<tr><td>Tournaments</td><td>${data.tournamentsWithReports}</td></tr>`;
+          globalStatsHtml += `<tr><td>Games</td><td>${data.games}</td></tr>`;
+          globalStatsHtml += `<tr><td>From</td><td>${data.startDate}</td></tr>`;
+          globalStatsHtml += `<tr><td>To</td><td>${data.endDate}</td></tr>`;
+          $('#globalStatsTable').html('<tr><th>Metric</th><th>Value</th></tr>' + globalStatsHtml);
+
+          let gameWideStatsHtml = '';
+          const avgFirst = (data.pointsFirstTurn.reduce((a, b) => a + b, 0) / data.pointsFirstTurn.length).toFixed(1);
+          const avgSecond = (data.pointsSecondTurn.reduce((a, b) => a + b, 0) / data.pointsSecondTurn.length).toFixed(1);
+          const decisive = data.pointsFirstTurn.filter(p => p >= 18 && p <= 20).length + data.pointsSecondTurn.filter(p => p >= 18 && p <= 20).length;
+          const normal = data.pointsFirstTurn.filter(p => p >= 14 && p <= 17).length + data.pointsSecondTurn.filter(p => p >= 14 && p <= 17).length;
+          const close = data.pointsFirstTurn.filter(p => p >= 10 && p <= 13).length + data.pointsSecondTurn.filter(p => p >= 10 && p <= 13).length;
+          const total = data.pointsFirstTurn.length;
+          
+          gameWideStatsHtml += `<tr><td>Average points going first</td><td>${avgFirst}</td></tr>`;
+          gameWideStatsHtml += `<tr><td>Average points going second</td><td>${avgSecond}</td></tr>`;
+          gameWideStatsHtml += `<tr><td>Decisive Games (18-20)</td><td>${decisive} / ${Math.round(decisive / total * 100)}%</td></tr>`;
+          gameWideStatsHtml += `<tr><td>'Normal' Games (14-17)</td><td>${normal} / ${Math.round(normal / total * 100)}%</td></tr>`;
+          gameWideStatsHtml += `<tr><td>Close    Games (10-13)</td><td>${close} / ${Math.round(close / total * 100)}%</td></tr>`;
+          $('#gameWideStatsTable').html('<tr><th>Metric</th><th>Value</th></tr>' + gameWideStatsHtml);
+
+
+        })
+        .fail(function (jqxhr, textStatus, error) {
+          console.log("Request Failed: " + textStatus + ", " + error);
         });
     });
-</script>
-  <table>
+  </script>
+</head>
+<body>
+  <h1>T9A Data - Global Statistics</h1>
+  
+  <table id="globalStatsTable">
     <tr>
-      <th>Global Statistics</th>
-      <th>Amount</th>
+      <th>Metric</th>
+      <th>Value</th>
     </tr>
-    <tr>
-      <td>Tournaments</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>Games</td>
-      <td>...</td>
-    </tr>
-    <script>
-      $(document).ready(function () {
-        $.getJSON("../output/globalStats.json", function (data) {
-          let tournaments = `<tr><td>Tournaments</td><td>${data.tournamentsWithReports}</td></tr>`;
-          $('#table').append(tournaments);
-          let games = `<tr><td>Games</td><td>${data.games}</td></tr>`;
-          $('#table').append(games);
-        });
-      });
-    </script>
   </table>
+
+  <h1>Game Wide Data</h1>
+
+  <table id="gameWideStatsTable">
+    <tr>
+      <th>Metric</th>
+      <th>Value</th>
+    </tr>
+  </table>
+
+</body>
 </html>
