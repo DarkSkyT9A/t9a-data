@@ -13,14 +13,20 @@
   color: #333;
   padding: 12px;
   text-align: left;
-  border: 2px solid #5F9EA0;
+  border-left: 2px solid #4682B4;
+  border-right: 2px solid #4682B4;
+  border-top: 2px solid #4682B4;
+  border-bottom: 2px solid #4682B4;
   font-weight: bold;
 }
 
 #globalStatsTable td,
 #gameWideStatsTable td {
   padding: 10px 12px;
-  border: 1px solid #B0C4DE;
+  border-left: 1px solid #87CEEB;
+  border-right: 1px solid #87CEEB;
+  border-top: none;
+  border-bottom: none;
 }
 
 #globalStatsTable td:first-child,
@@ -36,9 +42,9 @@
   font-weight: bold;
 }
 
-#globalStatsTable tr:hover,
-#gameWideStatsTable tr:hover {
-  background-color: #E0F6FF;
+#globalStatsTable tr:hover td,
+#gameWideStatsTable tr:hover td {
+  background-color: #E0F6FF !important;
 }
 
 /* Made with Bob */
