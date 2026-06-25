@@ -33,6 +33,61 @@
           gameWideStatsHtml += `<tr><td>Close    Games (10-13)</td><td>${close} / ${Math.round(close / total * 100)}%</td></tr>`;
           $('#gameWideStatsTable').html('<tr><th>Metric</th><th>Value</th></tr>' + gameWideStatsHtml);
 
+          // Setup Map Statistics
+          let setupMapHtml = '';
+          const mapData = data.setup.map;
+          
+          // Calculate Vetia and Taphria totals
+          let vetiaTotal = 0;
+          let taphriaTotal = 0;
+          
+          // Sort map entries to group Vetia and Taphria together
+          const sortedMaps = Object.entries(mapData).sort((a, b) => {
+            // Extract map type and number
+            const aType = a[0].split(' ')[0];
+            const bType = b[0].split(' ')[0];
+            const aNum = parseInt(a[0].split(' ')[1]);
+            const bNum = parseInt(b[0].split(' ')[1]);
+            
+            // Sort by type first, then by number
+            if (aType !== bType) {
+              return aType.localeCompare(bType);
+            }
+            return aNum - bNum;
+          });
+          
+          // Build table rows and calculate totals
+          sortedMaps.forEach(([mapName, count]) => {
+            setupMapHtml += `<tr><td>${mapName}</td><td>${count}</td></tr>`;
+            
+            if (mapName.startsWith('Vetia')) {
+              vetiaTotal += count;
+            } else if (mapName.startsWith('Taphria')) {
+              taphriaTotal += count;
+            }
+          });
+          
+          // Add summary rows for Vetia and Taphria
+          setupMapHtml += `<tr style="font-weight: bold; border-top: 2px solid #4682B4;"><td>Taphria Total</td><td>${taphriaTotal}</td></tr>`;
+          setupMapHtml += `<tr style="font-weight: bold;"><td>Vetia Total</td><td>${vetiaTotal}</td></tr>`;
+          
+          $('#setupMapTable').html('<tr><th>Map</th><th>Count</th></tr>' + setupMapHtml);
+
+          // Setup Deployment Statistics
+          let setupDeploymentHtml = '';
+          const deploymentData = data.setup.deployment;
+          
+          // Sort deployment entries alphabetically
+          const sortedDeployments = Object.entries(deploymentData).sort((a, b) => a[0].localeCompare(b[0]));
+          
+          // Build table rows with deployment name, games played, and average points
+          sortedDeployments.forEach(([deploymentName, pointsArray]) => {
+            const gamesPlayed = pointsArray.length;
+            const avgPoints = (pointsArray.reduce((a, b) => a + b, 0) / gamesPlayed).toFixed(1);
+            setupDeploymentHtml += `<tr><td>${deploymentName}</td><td>${gamesPlayed}</td><td>${avgPoints}</td></tr>`;
+          });
+          
+          $('#setupDeploymentTable').html('<tr><th>Deployment</th><th>Games played</th><th>1st turn ØPts</th></tr>' + setupDeploymentHtml);
 
         })
         .fail(function (jqxhr, textStatus, error) {
@@ -57,6 +112,25 @@
     <tr>
       <th>Metric</th>
       <th>Value</th>
+    </tr>
+  </table>
+
+  <h1>Setup - Map Statistics</h1>
+
+  <table id="setupMapTable">
+    <tr>
+      <th>Map</th>
+      <th>Count</th>
+    </tr>
+  </table>
+
+  <h1>Setup - Deployment Statistics</h1>
+
+  <table id="setupDeploymentTable">
+    <tr>
+      <th>Deployment</th>
+      <th>Games played</th>
+      <th>1st turn ØPts</th>
     </tr>
   </table>
 

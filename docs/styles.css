@@ -1,5 +1,7 @@
 #globalStatsTable,
-#gameWideStatsTable {
+#gameWideStatsTable,
+#setupMapTable,
+#setupDeploymentTable {
   width: 80%;
   max-width: 800px;
   border-collapse: collapse;
@@ -8,7 +10,9 @@
 }
 
 #globalStatsTable th,
-#gameWideStatsTable th {
+#gameWideStatsTable th,
+#setupMapTable th,
+#setupDeploymentTable th {
   background-color: #87CEEB;
   color: #333;
   padding: 12px;
@@ -21,7 +25,9 @@
 }
 
 #globalStatsTable td,
-#gameWideStatsTable td {
+#gameWideStatsTable td,
+#setupMapTable td,
+#setupDeploymentTable td {
   padding: 10px 12px;
   border-left: 1px solid #87CEEB;
   border-right: 1px solid #87CEEB;
@@ -30,12 +36,16 @@
 }
 
 #globalStatsTable td:first-child,
-#gameWideStatsTable td:first-child {
+#gameWideStatsTable td:first-child,
+#setupMapTable td:first-child,
+#setupDeploymentTable td:first-child {
   background-color: #FFFDD0;
 }
 
 #globalStatsTable td:last-child,
-#gameWideStatsTable td:last-child {
+#gameWideStatsTable td:last-child,
+#setupMapTable td:last-child,
+#setupDeploymentTable td:last-child {
   background-color: #FFF8DC;
   text-align: right;
   font-family: 'Courier New', Courier, monospace;
@@ -43,8 +53,18 @@
 }
 
 #globalStatsTable tr:hover td,
-#gameWideStatsTable tr:hover td {
+#gameWideStatsTable tr:hover td,
+#setupMapTable tr:hover td,
+#setupDeploymentTable tr:hover td {
   background-color: #E0F6FF !important;
+}
+
+/* Special styling for middle column in 3-column tables */
+#setupDeploymentTable td:nth-child(2) {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 /* Made with Bob */

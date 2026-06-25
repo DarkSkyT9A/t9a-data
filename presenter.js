@@ -30,6 +30,13 @@ const showOptionRates = args.o ? true : false;
 const showPricingActions = args.z ? true : false;
 
 // External Balance Data Set
+let setup = {
+  "map": {},
+  "deployment": {},
+  "primary": {},
+  "secondary": {}
+};
+
 let globalStats = {
   "tournamentsWithReports": [],
   "pointsFirstTurn": [],
@@ -39,7 +46,8 @@ let globalStats = {
   "specialItems": {},
   "startDate": start,
   "endDate": end,
-  "tournamentType": tournamentType
+  "tournamentType": tournamentType,
+  "setup": setup
 };
 
 let armies = {
@@ -1020,12 +1028,6 @@ let armies = {
   },
 };
 
-let setup = {
-  "map": {},
-  "deployment": {},
-  "primary": {},
-  "secondary": {}
-};
 
 fs.readdirSync("data").forEach(folder => {
   // Read metadata and decide whether to go on or not with this tournament
