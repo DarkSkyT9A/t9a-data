@@ -1,18 +1,121 @@
+/* Container and Layout */
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-divider {
+  width: 100%;
+  text-align: center;
+  margin: 40px 0 30px 0;
+  padding: 20px 0;
+  border-top: 3px solid #4682B4;
+  border-bottom: 3px solid #4682B4;
+  background-color: #E0F6FF;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+
+.section-divider:hover {
+  background-color: #d0ecff;
+}
+
+.section-divider h1 {
+  margin: 0;
+  color: #333;
+  font-size: 2em;
+  display: inline-block;
+  pointer-events: none;
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 40px;
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  min-width: 0;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .container {
+    padding: 10px;
+  }
+  
+  .section-divider {
+    margin: 20px 0 15px 0;
+    padding: 15px 0;
+  }
+  
+  .section-divider h1 {
+    font-size: 1.5em;
+  }
+  
+  .column h2 {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 500px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-divider h1 {
+    font-size: 1.2em;
+  }
+  
+  .column h2 {
+    font-size: 1.1em;
+  }
+}
+
+.column h2 {
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.column h2:first-child {
+  margin-top: 0;
+}
+
+/* Table Styles */
 #globalStatsTable,
 #gameWideStatsTable,
 #setupMapTable,
-#setupDeploymentTable {
-  width: 80%;
-  max-width: 800px;
+#setupDeploymentTable,
+#setupPrimaryTable,
+#setupSecondaryTable {
+  width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   font-family: Arial, sans-serif;
 }
 
 #globalStatsTable th,
 #gameWideStatsTable th,
 #setupMapTable th,
-#setupDeploymentTable th {
+#setupDeploymentTable th,
+#setupPrimaryTable th,
+#setupSecondaryTable th {
   background-color: #87CEEB;
   color: #333;
   padding: 12px;
@@ -27,7 +130,9 @@
 #globalStatsTable td,
 #gameWideStatsTable td,
 #setupMapTable td,
-#setupDeploymentTable td {
+#setupDeploymentTable td,
+#setupPrimaryTable td,
+#setupSecondaryTable td {
   padding: 10px 12px;
   border-left: 1px solid #87CEEB;
   border-right: 1px solid #87CEEB;
@@ -38,14 +143,18 @@
 #globalStatsTable td:first-child,
 #gameWideStatsTable td:first-child,
 #setupMapTable td:first-child,
-#setupDeploymentTable td:first-child {
+#setupDeploymentTable td:first-child,
+#setupPrimaryTable td:first-child,
+#setupSecondaryTable td:first-child {
   background-color: #FFFDD0;
 }
 
 #globalStatsTable td:last-child,
 #gameWideStatsTable td:last-child,
 #setupMapTable td:last-child,
-#setupDeploymentTable td:last-child {
+#setupDeploymentTable td:last-child,
+#setupPrimaryTable td:last-child,
+#setupSecondaryTable td:last-child {
   background-color: #FFF8DC;
   text-align: right;
   font-family: 'Courier New', Courier, monospace;
@@ -55,12 +164,34 @@
 #globalStatsTable tr:hover td,
 #gameWideStatsTable tr:hover td,
 #setupMapTable tr:hover td,
-#setupDeploymentTable tr:hover td {
+#setupDeploymentTable tr:hover td,
+#setupPrimaryTable tr:hover td,
+#setupSecondaryTable tr:hover td {
   background-color: #E0F6FF !important;
 }
 
 /* Special styling for middle column in 3-column tables */
 #setupDeploymentTable td:nth-child(2) {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+/* Special styling for numeric columns in 5-column primary table */
+#setupPrimaryTable td:nth-child(2),
+#setupPrimaryTable td:nth-child(3),
+#setupPrimaryTable td:nth-child(4) {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+/* Special styling for numeric columns in 5-column secondary table */
+#setupSecondaryTable td:nth-child(2),
+#setupSecondaryTable td:nth-child(3),
+#setupSecondaryTable td:nth-child(4) {
   background-color: #FFF8DC;
   text-align: right;
   font-family: 'Courier New', Courier, monospace;

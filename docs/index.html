@@ -7,6 +7,20 @@
   <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+    // Toggle section visibility
+    function toggleSection(sectionId) {
+      const content = document.getElementById(sectionId);
+      const header = document.getElementById(sectionId + '-header');
+      
+      if (content.style.display === 'none') {
+        content.style.display = 'flex';
+        header.textContent = header.textContent.replace('▶', '▼');
+      } else {
+        content.style.display = 'none';
+        header.textContent = header.textContent.replace('▼', '▶');
+      }
+    }
+
     $(document).ready(function () {
       $.getJSON("globalStats.json")
         .done(function (data) {
@@ -77,8 +91,11 @@
           let setupDeploymentHtml = '';
           const deploymentData = data.setup.deployment;
           
-          // Sort deployment entries alphabetically
-          const sortedDeployments = Object.entries(deploymentData).sort((a, b) => a[0].localeCompare(b[0]));
+          // Order deployments as they appear in the rulebook
+          const deploymentOrder = ["Frontline Crash", "Bottleneck", "Spearhead", "Encircle", "Refused Flank", "Assault at First Light"];
+          const sortedDeployments = deploymentOrder
+            .filter(name => deploymentData[name])
+            .map(name => [name, deploymentData[name]]);
           
           // Build table rows with deployment name, games played, and average points
           sortedDeployments.forEach(([deploymentName, pointsArray]) => {
@@ -89,6 +106,73 @@
           
           $('#setupDeploymentTable').html('<tr><th>Deployment</th><th>Games played</th><th>1st turn ØPts</th></tr>' + setupDeploymentHtml);
 
+          // Setup Primary Objectives Statistics
+          let setupPrimaryHtml = '';
+          const primaryData = data.setup.primary;
+          
+          // Order primary objectives as they appear in the rulebook
+          const primaryOrder = ["Trophies of War", "Divide and Conquer", "Breakthrough", "Secure Targets", "Hold the Centre", "Skull of Harald Redstub"];
+          const sortedPrimary = primaryOrder
+            .filter(name => primaryData[name])
+            .map(name => [name, primaryData[name]]);
+          
+          // Build table rows with primary name, count, attacker, defender, and none (with percentages)
+          sortedPrimary.forEach(([primaryName, stats]) => {
+            const count = stats.count;
+            const attacker = stats.attacker;
+            const defender = stats.defender;
+            const none = stats.none;
+            
+            const attackerPct = Math.round(attacker / count * 100);
+            const defenderPct = Math.round(defender / count * 100);
+            const nonePct = Math.round(none / count * 100);
+            
+            setupPrimaryHtml += `<tr>
+              <td>${primaryName}</td>
+              <td>${count}</td>
+              <td>${attacker} / ${attackerPct}%</td>
+              <td>${defender} / ${defenderPct}%</td>
+              <td>${none} / ${nonePct}%</td>
+            </tr>`;
+          });
+          
+          $('#setupPrimaryTable').html('<tr><th>Primary Name</th><th>Count</th><th>Attacker</th><th>Defender</th><th>None</th></tr>' + setupPrimaryHtml);
+
+          // Setup Secondary Objectives Statistics
+          let setupSecondaryHtml = '';
+          const secondaryData = data.setup.secondary;
+          
+          // Order secondary objectives as they appear in the rulebook
+          const secondaryOrder = ["Settle the Score", "Demonstrate Superiority", "Slay the Beast", "Assassinate", "Capture their Banners", "Conserve our Numbers"];
+          const sortedSecondary = secondaryOrder
+            .filter(name => secondaryData[name])
+            .map(name => [name, secondaryData[name]]);
+          
+          // Build table rows with secondary name, total count, achieved %, attacker %, defender %
+          // Note: Each game has 2 secondary objectives (one for attacker, one for defender)
+          // So count represents total times chosen, but we divide by 2 for attacker/defender percentages
+          sortedSecondary.forEach(([secondaryName, stats]) => {
+            const count = stats.count;
+            const attackerWon = stats.attackerWon;
+            const defenderWon = stats.defenderWon;
+            const totalAchieved = attackerWon + defenderWon;
+            const gamesPlayed = count / 2; // Each game has 2 secondary objectives
+            
+            const achievedPct = Math.round(totalAchieved / count * 100);
+            const attackerPct = Math.round(attackerWon / gamesPlayed * 100);
+            const defenderPct = Math.round(defenderWon / gamesPlayed * 100);
+            
+            setupSecondaryHtml += `<tr>
+              <td>${secondaryName}</td>
+              <td>${count}</td>
+              <td>${achievedPct}%</td>
+              <td>${attackerPct}%</td>
+              <td>${defenderPct}%</td>
+            </tr>`;
+          });
+          
+          $('#setupSecondaryTable').html('<tr><th>Secondary Name</th><th>Total</th><th>Achieved</th><th>Attacker</th><th>Defender</th></tr>' + setupSecondaryHtml);
+
         })
         .fail(function (jqxhr, textStatus, error) {
           console.log("Request Failed: " + textStatus + ", " + error);
@@ -97,42 +181,84 @@
   </script>
 </head>
 <body>
-  <h1>T9A Data - Global Statistics</h1>
-  
-  <table id="globalStatsTable">
-    <tr>
-      <th>Metric</th>
-      <th>Value</th>
-    </tr>
-  </table>
+  <div class="container">
+    <!-- General Statistics Section -->
+    <div class="section-divider" onclick="toggleSection('generalStats')">
+      <h1 id="generalStats-header">▼ General Statistics</h1>
+    </div>
+    
+    <div class="two-column-layout" id="generalStats">
+      <div class="column">
+        <h2>T9A Data - Global Statistics</h2>
+        <table id="globalStatsTable">
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr>
+        </table>
+      </div>
 
-  <h1>Game Wide Data</h1>
+      <div class="column">
+        <h2>Game Wide Data</h2>
+        <table id="gameWideStatsTable">
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-  <table id="gameWideStatsTable">
-    <tr>
-      <th>Metric</th>
-      <th>Value</th>
-    </tr>
-  </table>
+    <!-- Setup Statistics Section -->
+    <div class="section-divider" onclick="toggleSection('setupStats')">
+      <h1 id="setupStats-header">▼ Setup Statistics</h1>
+    </div>
 
-  <h1>Setup - Map Statistics</h1>
+    <div class="two-column-layout" id="setupStats">
+      <div class="column">
+        <h2>Map Statistics</h2>
+        <table id="setupMapTable">
+          <tr>
+            <th>Map</th>
+            <th>Count</th>
+          </tr>
+        </table>
 
-  <table id="setupMapTable">
-    <tr>
-      <th>Map</th>
-      <th>Count</th>
-    </tr>
-  </table>
+        <h2>Deployment Statistics</h2>
+        <table id="setupDeploymentTable">
+          <tr>
+            <th>Deployment</th>
+            <th>Games played</th>
+            <th>1st turn ØPts</th>
+          </tr>
+        </table>
+      </div>
 
-  <h1>Setup - Deployment Statistics</h1>
+      <div class="column">
+        <h2>Primary Objectives</h2>
+        <table id="setupPrimaryTable">
+          <tr>
+            <th>Primary Name</th>
+            <th>Count</th>
+            <th>Attacker</th>
+            <th>Defender</th>
+            <th>None</th>
+          </tr>
+        </table>
 
-  <table id="setupDeploymentTable">
-    <tr>
-      <th>Deployment</th>
-      <th>Games played</th>
-      <th>1st turn ØPts</th>
-    </tr>
-  </table>
+        <h2>Secondary Objectives</h2>
+        <table id="setupSecondaryTable">
+          <tr>
+            <th>Secondary Name</th>
+            <th>Total</th>
+            <th>Achieved</th>
+            <th>Attacker</th>
+            <th>Defender</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
