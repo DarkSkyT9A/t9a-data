@@ -177,6 +177,66 @@
         .fail(function (jqxhr, textStatus, error) {
           console.log("Request Failed: " + textStatus + ", " + error);
         });
+
+      // Load armies.json for External Balance table
+      $.getJSON("armies.json")
+        .done(function (armiesData) {
+          const armyOrder = ["BH", "DE", "DH", "DL", "EoS", "HE", "ID", "KoE", "OK", "OnG", "SA", "SE", "UD", "VC", "VS", "WDG"];
+          
+          let externalBalanceHtml = '';
+          
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            
+            // Calculate average from pointsWithoutMirror
+            const avgTotal = parseFloat(army.avgWithoutMirror.trim());
+            
+            // Get first and second place averages
+            const avgFirst = parseFloat(army.first.trim());
+            const avgSecond = parseFloat(army.second.trim());
+            
+            // Get confidence interval
+            const intervalLower = army.intervalLower.toFixed(1);
+            const intervalUpper = army.intervalUpper.toFixed(1);
+            
+            // Get rank
+            const rank = army.rank.trim();
+            
+            // Build row
+            externalBalanceHtml += '<tr>';
+            externalBalanceHtml += `<td><strong>${armyCode}</strong></td>`;
+            externalBalanceHtml += `<td>${avgTotal.toFixed(1)}</td>`;
+            externalBalanceHtml += `<td>${rank}</td>`;
+            
+            // Add matchup columns
+            armyOrder.forEach(opponentCode => {
+              const vsData = army.vs[opponentCode];
+              if (vsData && vsData.avg) {
+                const avgValue = vsData.avg.trim();
+                if (avgValue === 'NaN') {
+                  externalBalanceHtml += '<td>—</td>';
+                } else {
+                  externalBalanceHtml += `<td>${avgValue}</td>`;
+                }
+              } else {
+                externalBalanceHtml += '<td>—</td>';
+              }
+            });
+            
+            // Add tournament position and confidence interval
+            externalBalanceHtml += `<td>${avgFirst.toFixed(1)}</td>`;
+            externalBalanceHtml += `<td>${avgSecond.toFixed(1)}</td>`;
+            externalBalanceHtml += `<td>${intervalLower}</td>`;
+            externalBalanceHtml += `<td>${intervalUpper}</td>`;
+            externalBalanceHtml += '</tr>';
+          });
+          
+          $('#externalBalanceTable tbody').html(externalBalanceHtml);
+        })
+        .fail(function (jqxhr, textStatus, error) {
+          console.log("Armies.json Request Failed: " + textStatus + ", " + error);
+        });
     });
   </script>
 </head>
@@ -256,6 +316,56 @@
             <th>Defender</th>
           </tr>
         </table>
+      </div>
+    </div>
+
+    <!-- External Balance Section -->
+    <div class="section-divider" onclick="toggleSection('externalBalance')">
+      <h1 id="externalBalance-header">▼ External Balance</h1>
+    </div>
+
+    <div class="two-column-layout" id="externalBalance" style="display: flex;">
+      <div class="column" style="flex: 1; max-width: 100%;">
+        <h2>Army Results – Average Points per Match</h2>
+        <div style="overflow-x: auto;">
+          <table id="externalBalanceTable" style="font-size: 0.85em;">
+            <thead>
+              <tr>
+                <th rowspan="2">ARMY</th>
+                <th rowspan="2">TOTAL</th>
+                <th rowspan="2">RANK</th>
+                <th colspan="16">Matchups</th>
+                <th colspan="2">Tournament Position</th>
+                <th colspan="2">95% Confidence</th>
+              </tr>
+              <tr>
+                <th>BH</th>
+                <th>DE</th>
+                <th>DH</th>
+                <th>DL</th>
+                <th>EoS</th>
+                <th>HE</th>
+                <th>ID</th>
+                <th>KoE</th>
+                <th>OK</th>
+                <th>OnG</th>
+                <th>SA</th>
+                <th>SE</th>
+                <th>UD</th>
+                <th>VC</th>
+                <th>VS</th>
+                <th>WDG</th>
+                <th>1st</th>
+                <th>2nd</th>
+                <th>Low</th>
+                <th>High</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
