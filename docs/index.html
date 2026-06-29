@@ -203,10 +203,15 @@
             // Get rank
             const rank = army.rank.trim();
             
+            // Colour-code TOTAL based on distance from 10.0
+            const totalClass = avgTotal >= 9.6 && avgTotal <= 10.4 ? 'balance-ok'
+                             : avgTotal >= 9.1 && avgTotal <= 10.9 ? 'balance-warn'
+                             : 'balance-err';
+
             // Build row
             externalBalanceHtml += '<tr>';
             externalBalanceHtml += `<td><strong>${armyCode}</strong></td>`;
-            externalBalanceHtml += `<td>${avgTotal.toFixed(1)}</td>`;
+            externalBalanceHtml += `<td class="${totalClass}">${avgTotal.toFixed(1)}</td>`;
             externalBalanceHtml += `<td>${rank}</td>`;
             
             // Add matchup columns
@@ -233,6 +238,89 @@
           });
           
           $('#externalBalanceTable tbody').html(externalBalanceHtml);
+
+          // Build games count table
+          let gamesCountHtml = '';
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+
+            const totalGames = army.points.length;
+
+            gamesCountHtml += '<tr>';
+            gamesCountHtml += `<td><strong>${armyCode}</strong></td>`;
+            gamesCountHtml += `<td>${totalGames}</td>`;
+
+            armyOrder.forEach(opponentCode => {
+              const vsData = army.vs[opponentCode];
+              if (vsData && vsData.games) {
+                const games = parseInt(vsData.games.trim(), 10);
+                gamesCountHtml += `<td>${isNaN(games) ? '—' : games}</td>`;
+              } else {
+                gamesCountHtml += '<td>—</td>';
+              }
+            });
+
+            gamesCountHtml += '</tr>';
+          });
+
+          $('#gamesCountTable tbody').html(gamesCountHtml);
+
+          // Build core table
+          let coreHtml = '';
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            const c = army.core;
+            coreHtml += `<tr>
+              <td><strong>${armyCode}</strong></td>
+              <td>${c.error}</td>
+              <td>${c.minimalPercent.trim()}</td>
+              <td>${c.somePercent.trim()}</td>
+              <td>${c.morePercent.trim()}</td>
+            </tr>`;
+          });
+          $('#armyCoreTable tbody').html(coreHtml);
+
+          // Build characters table
+          let charsHtml = '';
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            const ch = army.chars;
+            charsHtml += `<tr>
+              <td><strong>${armyCode}</strong></td>
+              <td>${ch.tenPercent.trim()}</td>
+              <td>${ch.twentyPercent.trim()}</td>
+              <td>${ch.thirtyPercent.trim()}</td>
+              <td>${ch.fourtyPercent.trim()}</td>
+            </tr>`;
+          });
+          $('#armyCharsTable tbody').html(charsHtml);
+
+          // Build magic table
+          let magicHtml = '';
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            const mag = army.magicalness;
+            const total = mag.length;
+            const pct = n => Math.round(n / total * 100) + '%';
+            const b0   = mag.filter(v => v === 0).length;
+            const b1   = mag.filter(v => v >= 1  && v <= 4).length;
+            const b5   = mag.filter(v => v >= 5  && v <= 9).length;
+            const b10  = mag.filter(v => v >= 10 && v <= 12).length;
+            const b13  = mag.filter(v => v >= 13).length;
+            magicHtml += `<tr>
+              <td><strong>${armyCode}</strong></td>
+              <td>${pct(b0)}</td>
+              <td>${pct(b1)}</td>
+              <td>${pct(b5)}</td>
+              <td>${pct(b10)}</td>
+              <td>${pct(b13)}</td>
+            </tr>`;
+          });
+          $('#armyMagicTable tbody').html(magicHtml);
         })
         .fail(function (jqxhr, textStatus, error) {
           console.log("Armies.json Request Failed: " + textStatus + ", " + error);
@@ -328,14 +416,14 @@
       <div class="column" style="flex: 1; max-width: 100%;">
         <h2>Army Results – Average Points per Match</h2>
         <div style="overflow-x: auto;">
-          <table id="externalBalanceTable" style="font-size: 0.85em;">
+          <table id="externalBalanceTable">
             <thead>
               <tr>
                 <th rowspan="2">ARMY</th>
                 <th rowspan="2">TOTAL</th>
                 <th rowspan="2">RANK</th>
                 <th colspan="16">Matchups</th>
-                <th colspan="2">Tournament Position</th>
+                <th colspan="2">Turn</th>
                 <th colspan="2">95% Confidence</th>
               </tr>
               <tr>
@@ -366,6 +454,100 @@
             </tbody>
           </table>
         </div>
+
+        <h2>Army Results – Number of Games</h2>
+        <div style="overflow-x: auto;">
+          <table id="gamesCountTable">
+            <thead>
+              <tr>
+                <th rowspan="2">ARMY</th>
+                <th rowspan="2">TOTAL</th>
+                <th colspan="16">Matchups</th>
+              </tr>
+              <tr>
+                <th>BH</th>
+                <th>DE</th>
+                <th>DH</th>
+                <th>DL</th>
+                <th>EoS</th>
+                <th>HE</th>
+                <th>ID</th>
+                <th>KoE</th>
+                <th>OK</th>
+                <th>OnG</th>
+                <th>SA</th>
+                <th>SE</th>
+                <th>UD</th>
+                <th>VC</th>
+                <th>VS</th>
+                <th>WDG</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Army List Statistics Section -->
+    <div class="section-divider" onclick="toggleSection('armyListStats')">
+      <h1 id="armyListStats-header">▼ Army List Statistics</h1>
+    </div>
+
+    <div class="two-column-layout" id="armyListStats" style="display: flex;">
+      <div class="column" style="flex: 1; max-width: 100%;">
+
+        <h2>Amount of Core by Army</h2>
+        <table id="armyCoreTable">
+          <thead>
+            <tr>
+              <th>Army</th>
+              <th>Error</th>
+              <th>Min (&lt;5%)</th>
+              <th>5–15%</th>
+              <th>&gt;15%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be populated by JavaScript -->
+          </tbody>
+        </table>
+
+        <h2>Amount of Characters by Army</h2>
+        <table id="armyCharsTable">
+          <thead>
+            <tr>
+              <th>Army</th>
+              <th>0–10%</th>
+              <th>10–20%</th>
+              <th>20–30%</th>
+              <th>30%+</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be populated by JavaScript -->
+          </tbody>
+        </table>
+
+        <h2>Amount of Magic by Army</h2>
+        <table id="armyMagicTable">
+          <thead>
+            <tr>
+              <th>Army</th>
+              <th>0</th>
+              <th>1–4</th>
+              <th>5–9</th>
+              <th>10–12</th>
+              <th>13+</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be populated by JavaScript -->
+          </tbody>
+        </table>
+
       </div>
     </div>
   </div>

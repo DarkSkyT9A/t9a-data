@@ -103,7 +103,12 @@
 #setupMapTable,
 #setupDeploymentTable,
 #setupPrimaryTable,
-#setupSecondaryTable {
+#setupSecondaryTable,
+#externalBalanceTable,
+#gamesCountTable,
+#armyCoreTable,
+#armyCharsTable,
+#armyMagicTable {
   width: 100%;
   border-collapse: collapse;
   margin: 0 0 20px 0;
@@ -115,7 +120,12 @@
 #setupMapTable th,
 #setupDeploymentTable th,
 #setupPrimaryTable th,
-#setupSecondaryTable th {
+#setupSecondaryTable th,
+#externalBalanceTable th,
+#gamesCountTable th,
+#armyCoreTable th,
+#armyCharsTable th,
+#armyMagicTable th {
   background-color: #87CEEB;
   color: #333;
   padding: 12px;
@@ -132,7 +142,12 @@
 #setupMapTable td,
 #setupDeploymentTable td,
 #setupPrimaryTable td,
-#setupSecondaryTable td {
+#setupSecondaryTable td,
+#externalBalanceTable td,
+#gamesCountTable td,
+#armyCoreTable td,
+#armyCharsTable td,
+#armyMagicTable td {
   padding: 10px 12px;
   border-left: 1px solid #87CEEB;
   border-right: 1px solid #87CEEB;
@@ -145,7 +160,10 @@
 #setupMapTable td:first-child,
 #setupDeploymentTable td:first-child,
 #setupPrimaryTable td:first-child,
-#setupSecondaryTable td:first-child {
+#setupSecondaryTable td:first-child,
+#armyCoreTable td:first-child,
+#armyCharsTable td:first-child,
+#armyMagicTable td:first-child {
   background-color: #FFFDD0;
 }
 
@@ -154,7 +172,10 @@
 #setupMapTable td:last-child,
 #setupDeploymentTable td:last-child,
 #setupPrimaryTable td:last-child,
-#setupSecondaryTable td:last-child {
+#setupSecondaryTable td:last-child,
+#armyCoreTable td:last-child,
+#armyCharsTable td:last-child,
+#armyMagicTable td:last-child {
   background-color: #FFF8DC;
   text-align: right;
   font-family: 'Courier New', Courier, monospace;
@@ -166,8 +187,42 @@
 #setupMapTable tr:hover td,
 #setupDeploymentTable tr:hover td,
 #setupPrimaryTable tr:hover td,
-#setupSecondaryTable tr:hover td {
+#setupSecondaryTable tr:hover td,
+#externalBalanceTable tr:hover td,
+#gamesCountTable tr:hover td,
+#armyCoreTable tr:hover td,
+#armyCharsTable tr:hover td,
+#armyMagicTable tr:hover td {
   background-color: #E0F6FF !important;
+}
+
+/* External balance tables: compact sizing to avoid horizontal scroll */
+#externalBalanceTable,
+#gamesCountTable {
+  font-size: 0.75em;
+}
+
+#externalBalanceTable th,
+#externalBalanceTable td,
+#gamesCountTable th,
+#gamesCountTable td {
+  padding: 5px 6px;
+  white-space: nowrap;
+}
+
+/* Army column styled like other first-child labels */
+#externalBalanceTable td:first-child,
+#gamesCountTable td:first-child {
+  background-color: #FFFDD0;
+}
+
+/* All numeric columns use the same monospaced value style */
+#externalBalanceTable td:not(:first-child),
+#gamesCountTable td:not(:first-child) {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 /* Special styling for middle column in 3-column tables */
@@ -188,6 +243,23 @@
   font-weight: bold;
 }
 
+/* Special styling for numeric columns in army list statistics tables */
+#armyCoreTable td:nth-child(2),
+#armyCoreTable td:nth-child(3),
+#armyCoreTable td:nth-child(4),
+#armyCharsTable td:nth-child(2),
+#armyCharsTable td:nth-child(3),
+#armyCharsTable td:nth-child(4),
+#armyMagicTable td:nth-child(2),
+#armyMagicTable td:nth-child(3),
+#armyMagicTable td:nth-child(4),
+#armyMagicTable td:nth-child(5) {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
 /* Special styling for numeric columns in 5-column secondary table */
 #setupSecondaryTable td:nth-child(2),
 #setupSecondaryTable td:nth-child(3),
@@ -197,5 +269,10 @@
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
 }
+
+/* External balance TOTAL column colour coding */
+.balance-ok  { background-color: #d4edda !important; color: #155724; }
+.balance-warn { background-color: #fff3cd !important; color: #856404; }
+.balance-err  { background-color: #f8d7da !important; color: #721c24; }
 
 /* Made with Bob */
