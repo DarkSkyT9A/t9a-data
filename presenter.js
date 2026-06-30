@@ -1302,9 +1302,9 @@ for (let army in armies) {
   };
   // Convert into percentages
   let total = armies[army].core.minimal + armies[army].core.some + armies[army].core.more;
-  armies[army].core.minimalPercent = (armies[army].core.minimal / total * 100).toFixed(0).padStart(3, " ") + " %";
-  armies[army].core.somePercent = (armies[army].core.some / total * 100).toFixed(0).padStart(3, " ") + " %";
-  armies[army].core.morePercent = (armies[army].core.more / total * 100).toFixed(0).padStart(3, " ") + " %";
+  armies[army].core.minimalPercent = (armies[army].core.minimal / total * 100).toFixed(0).padStart(3, " ") + "%";
+  armies[army].core.somePercent = (armies[army].core.some / total * 100).toFixed(0).padStart(3, " ") + "%";
+  armies[army].core.morePercent = (armies[army].core.more / total * 100).toFixed(0).padStart(3, " ") + "%";
   // console.log(JSON.stringify(armies[army].core, null, 4));
 
   // Calculate amount of characters
@@ -1318,10 +1318,10 @@ for (let army in armies) {
 
   // Convert into percentages
   let totalChar = armies[army].chars.ten + armies[army].chars.twenty + armies[army].chars.thirty + armies[army].chars.fourty;
-  armies[army].chars.tenPercent = (armies[army].chars.ten / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
-  armies[army].chars.twentyPercent = (armies[army].chars.twenty / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
-  armies[army].chars.thirtyPercent = (armies[army].chars.thirty / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
-  armies[army].chars.fourtyPercent = (armies[army].chars.fourty / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
+  armies[army].chars.tenPercent = (armies[army].chars.ten / totalChar * 100).toFixed(0).padStart(3, " ") + "%";
+  armies[army].chars.twentyPercent = (armies[army].chars.twenty / totalChar * 100).toFixed(0).padStart(3, " ") + "%";
+  armies[army].chars.thirtyPercent = (armies[army].chars.thirty / totalChar * 100).toFixed(0).padStart(3, " ") + "%";
+  armies[army].chars.fourtyPercent = (armies[army].chars.fourty / totalChar * 100).toFixed(0).padStart(3, " ") + "%";
   // console.log(JSON.stringify(armies[army].chars, null, 4));
 
   // Calculate model counts
@@ -1742,11 +1742,11 @@ function displayUnitPickRates() {
       // console.log(`Unit ${unitEntry.name}: ${JSON.stringify(unitEntry.cost)}`);
       let pointsPerList = unitEntry.cost ? (unitEntry.cost.reduce((a, b) => a + b, 0) / armies[army].listCount).toFixed(0).padStart(3, " ") : "  0";
       unitEntry.count = unitEntry.count || [];
-      let pick1 = (unitEntry.count.filter(u => u === 1).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-      let pick2 = (unitEntry.count.filter(u => u === 2).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-      let pick3 = (unitEntry.count.filter(u => u === 3).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-      let pick4 = (unitEntry.count.filter(u => u >= 4).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-      let pickTotal = (unitEntry.count.reduce((a, b) => a + b, 0) / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+      let pick1 = (unitEntry.count.filter(u => u === 1).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + "%";
+      let pick2 = (unitEntry.count.filter(u => u === 2).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + "%";
+      let pick3 = (unitEntry.count.filter(u => u === 3).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + "%";
+      let pick4 = (unitEntry.count.filter(u => u >= 4).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + "%";
+      let pickTotal = (unitEntry.count.reduce((a, b) => a + b, 0) / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + "%";
       if (unitEntry.category !== lastCategory) {
         console.log(`┃                            │                                       ┃           ┃       │       │       │       │       ┃`);
       }

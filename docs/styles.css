@@ -108,7 +108,10 @@
 #gamesCountTable,
 #armyCoreTable,
 #armyCharsTable,
-#armyMagicTable {
+#armyMagicTable,
+#armyModelsTable,
+#specialItemsTable,
+.army-units-table {
   width: 100%;
   border-collapse: collapse;
   margin: 0 0 20px 0;
@@ -125,16 +128,34 @@
 #gamesCountTable th,
 #armyCoreTable th,
 #armyCharsTable th,
-#armyMagicTable th {
+#armyMagicTable th,
+#armyModelsTable th,
+#specialItemsTable th,
+.army-units-table th {
   background-color: #87CEEB;
   color: #333;
-  padding: 12px;
+  padding: 5px 6px;
   text-align: left;
   border-left: 2px solid #4682B4;
   border-right: 2px solid #4682B4;
   border-top: 2px solid #4682B4;
   border-bottom: 2px solid #4682B4;
   font-weight: bold;
+}
+
+#globalStatsTable,
+#gameWideStatsTable,
+#setupMapTable,
+#setupDeploymentTable,
+#setupPrimaryTable,
+#setupSecondaryTable,
+#armyCoreTable,
+#armyCharsTable,
+#armyMagicTable,
+#armyModelsTable,
+#specialItemsTable,
+.army-units-table {
+  font-size: 0.75em;
 }
 
 #globalStatsTable td,
@@ -147,8 +168,11 @@
 #gamesCountTable td,
 #armyCoreTable td,
 #armyCharsTable td,
-#armyMagicTable td {
-  padding: 10px 12px;
+#armyMagicTable td,
+#armyModelsTable td,
+#specialItemsTable td,
+.army-units-table td {
+  padding: 5px 6px;
   border-left: 1px solid #87CEEB;
   border-right: 1px solid #87CEEB;
   border-top: none;
@@ -192,8 +216,82 @@
 #gamesCountTable tr:hover td,
 #armyCoreTable tr:hover td,
 #armyCharsTable tr:hover td,
-#armyMagicTable tr:hover td {
+#armyMagicTable tr:hover td,
+#armyModelsTable tr:hover td,
+#specialItemsTable tr:hover td,
+.army-units-table tr:hover td {
   background-color: #E0F6FF !important;
+}
+
+/* Army units tables: category + unit name are labels, numeric columns are values */
+.army-units-table td:nth-child(1),
+.army-units-table td:nth-child(2) {
+  background-color: #FFFDD0;
+}
+
+.army-units-table td:nth-child(3),
+.army-units-table td:nth-child(4),
+.army-units-table td:nth-child(5),
+.army-units-table td:nth-child(6),
+.army-units-table td:nth-child(7),
+.army-units-table td:nth-child(8) {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.army-units-table tr.army-units-separator td {
+  background-color: transparent;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: none;
+}
+
+/* Army units tables: prevent wrapping */
+.army-units-table th,
+.army-units-table td {
+  white-space: nowrap;
+}
+
+/* Special items table: first two columns label style, last two value style */
+#specialItemsTable td:nth-child(1),
+#specialItemsTable td:nth-child(2) {
+  background-color: #FFFDD0;
+}
+
+#specialItemsTable td:nth-child(3),
+#specialItemsTable td:nth-child(4) {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+/* Blank separator rows between category groups */
+#specialItemsTable tr.special-items-separator td {
+  background-color: transparent;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border: none;
+}
+
+/* Models table: prevent header row wrapping */
+#armyModelsTable th,
+#armyModelsTable td {
+  white-space: nowrap;
+}
+
+/* Models table: army column label, all numeric columns value style */
+#armyModelsTable td:first-child {
+  background-color: #FFFDD0;
+}
+
+#armyModelsTable td:not(:first-child) {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 /* External balance tables: compact sizing to avoid horizontal scroll */
