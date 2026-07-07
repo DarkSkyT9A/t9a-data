@@ -373,4 +373,90 @@
 .balance-warn { background-color: #fff3cd !important; color: #856404; }
 .balance-err  { background-color: #f8d7da !important; color: #721c24; }
 
+/* ── Army section two-panel layout (units + items side by side) ──────────── */
+.army-section-layout {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.army-col-units {
+  flex: 0 0 auto;
+  max-width: 60%;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.army-col-items {
+  flex: 1 1 auto;
+  min-width: 280px;
+}
+
+.army-col-items h3 {
+  color: #333;
+  margin: 0 0 8px 0;
+  font-size: 1.1em;
+}
+
+.army-options-block {
+  margin-top: 20px;
+}
+
+/* Items / options tables inside army cards */
+.army-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75em;
+  font-family: Arial, sans-serif;
+  margin-bottom: 0;
+}
+
+.army-items-table th {
+  background-color: #87CEEB;
+  color: #333;
+  padding: 5px 6px;
+  text-align: left;
+  border: 2px solid #4682B4;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.army-items-table td {
+  padding: 4px 6px;
+  border-left: 1px solid #87CEEB;
+  border-right: 1px solid #87CEEB;
+  white-space: nowrap;
+}
+
+.army-items-table td:first-child  { background-color: #FFFDD0; }
+.army-items-table td:nth-child(2) { background-color: #FFFEE8; }
+.army-items-table td:last-child   {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.army-items-table tr:hover td { background-color: #E0F6FF !important; }
+
+/* Section-header rows inside items table (Common / Shared / Army Specific) */
+.army-items-table tr.items-section-header td {
+  background-color: #d0ecff;
+  font-weight: bold;
+  color: #1a3f5f;
+  border-top: 2px solid #4682B4;
+  padding: 4px 6px;
+  font-size: 0.95em;
+}
+
+@media (max-width: 900px) {
+  .army-section-layout {
+    flex-direction: column;
+  }
+  .army-col-units {
+    max-width: 100%;
+  }
+}
+
 /* Made with Bob */

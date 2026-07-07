@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>T9A Data - Global Statistics</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dark-styles.css">
+  <!-- To switch back to the light theme, replace the line above with: -->
+  <!-- <link rel="stylesheet" href="styles.css"> -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     // Toggle section visibility
@@ -913,6 +915,147 @@
             });
             $(`#${armyTableMap[armyCode]} tbody`).html(html);
           });
+
+          // ── Special Items per army ────────────────────────────────────────
+          const commonItemCats = {
+            Weapon:   ["Vorpal Binding","King Slayer","Touch of Greatness","Giant Slayer"],
+            Armour:   ["Destiny's Call","Basalt Infusion","Warding of Unity"],
+            Shield:   ["Wild Warding"],
+            Artefact: ["Talisman of Shielding","Talisman of the Void","Magical Heirloom","Crown of the Wizard King","Mimic Cloak"],
+            Potion:   ["Binding Scroll","Potion of Power Preservation","Dragon's Brew","Potion of Swiftness"],
+            Banner:   ["Stalker's Standard","Sheltering Standard","Flaming Standard","Aether Icon"],
+          };
+          const sharedItemCats = {
+            Weapon:   {
+              "Eldritch Inscriptions":     ["he","ok","ong","sa","se","vc","vs"],
+              "Hero's Heart":              ["bh","de","eos","id","koe","ok","ud","wdg"],
+              "Shield Breaker":            ["de","id","koe","ok","ong","sa","wdg"],
+              "Supernatural Dexterity":    ["bh","de","he","se","vc","wdg"],
+            },
+            Armour: {
+              "Death Cheater":  ["bh","de","ok","ong","sa","vc","vs","wdg"],
+              "Ghostly Guard":  ["eos","he","id","koe","sa","se","ud","vc"],
+            },
+            Shield: {
+              "Dusk Forged":         ["eos","he","id","koe","sa","vc","wdg"],
+              "Sigil of Protection": ["eos","he","id","koe","wdg"],
+            },
+            Artefact: {
+              "Essence of a Free Mind":    ["eos","he","id","sa","se","ud","vc"],
+              "Mask of Mindless Violence": ["bh","de","ong","sa","vc","wdg"],
+              "Obsidian Rock":             ["he","id","sa","se","ud","vc","vs"],
+              "Rod of Battle":             ["he","ok","se","vc","vs","wdg"],
+            },
+            Potion: {
+              "Potion of Healing":      ["bh","de","koe","ok","ong","se","vs"],
+              "Scroll of Draining":     ["eos","koe","ok","ong","se","ud"],
+              "Scroll of Power":        ["bh","de","eos","he","ok","sa","ud","vs"],
+              "Spell Scroll":           ["bh","de","eos","id","ong","se","ud","vs","wdg"],
+              "Scroll of a Free Mind":  ["he","id","sa","vc"],
+            },
+            Banner: {
+              "Banner of Courage":    ["bh","de","id","koe","ok","ong","vs"],
+              "Banner of Speed":      ["bh","de","koe","ok","ong","ud","vc","vs","wdg"],
+              "Distortion Emblem":    ["bh","eos","he","koe","ong","ud","vs"],
+              "Rending Banner":       ["eos","id","sa","se"],
+            },
+          };
+          const armySpecificItems = {
+            BH:  { Weapon:["Hawthorne Curse","Ancestral Carvings","Fatal Folly","Twin Hungers"], Armour:["Aaghor's Affliction","Trickster's Cunning","Wild Form"], Shield:["Obscuring Fog"], Artefact:["Spirit Caller's Charm","Pillager Icon","Crown of Madness","Horn of Bragh","Eye of Dominance"], Potion:["Rain Augur Brew","Seed of the Dark Forest"], Banner:["Banner of the Wild Herd"] },
+            DE:  { Weapon:["Mastery of Slaughter","Height of Hubris","Lacerating Touch","Transcendence","Pride of Gar Daecos"], Armour:["Seal of the Republic"], Artefact:["Ceinran's Scales","Moithir's Mirror","Ring of the Obsidian Thrones","Ring of Obsidian Thrones"], Potion:["Beastmaster's Vial"], Banner:["Caedhren's Pennon","Banner of Urlain","Eye of the Gorgon"] },
+            DH:  { Weapon:["Rune of Destruction","Rune of Smashing","Rune of Quickening","Rune of Might","Rune of Penetration","Rune of Anger","Rune of Precision","Rune of Craftsmanship","Rune of Lightning","Rune of Fire","Rune of Returning"], Armour:["Rune of Steel","Rune of Resistance","Rune of Iron","Rune of Retribution","Rune of the Forge"], Artefact:["Rune of Denial","Rune of Devouring","Rune of Grounding","Rune of Harnessing","Rune of Channeling","Rune of Dragon's Breath","Rune of Readiness","Rune of Shielding","Rune of Courage","Rune of Storms","Rune of Kinship","Rune of Mining"], Banner:["Runic Standard of the Hold","Runic Standard of Swiftness","Runic Standard of Grudges","Runic Standard of Wisdom","Runic Standard of Dismay","Runic Standard of Steadiness","Runic Standard of the Anvil"] },
+            DL:  {},
+            EoS: { Weapon:["The Light of Sonnstahl","Hammer of Witches","Death Warrant"], Armour:["Imperial Seal","Blacksteel"], Shield:["Witchfire Guard","Shield of Volund"], Artefact:["Locket of Sunna","Winter Cloak","Exemplar's Flame","Ullor's Horn"], Potion:["Scroll of Conquest"], Banner:["War College Banner","Banner of Unity","Marksman's Pennant"] },
+            HE:  { Weapon:["Sliver of the Blazing Dawn","Nova Flare","Cadaron's Heartwood","Elemental Blade"], Armour:["Star Metal Alloy","Gleaming Robe","Protection of Dorac","Daemon's Bane"], Artefact:["Diadem of Protection","Amethyst Crystal","Book of Meladys"], Potion:["Scroll of the Pearl Throne"], Banner:["War Banner of Rymâ","Navigator's Banner","Banner of Becalming"] },
+            ID:  { Weapon:["Onyx Core","Flame of the East","Eye of the Bull"], Armour:["Blaze of Protection"], Shield:["Kadim Binding"], Artefact:["Breath of the Brass Bull","Ring of Desiccation","Tablet of Vezodinezh","Mask of Ages","Golden Idol of Shamut","Lugar's Dice"], Banner:["Banner of Shamut","Banner of the Twice-Branded","Their Master's Banner"] },
+            KoE: { Weapon:["Divine Judgement","Tristan's Resolve","Mortal Reminder","Uther's Mettle"], Armour:["Prayer Etched","Percival's Panoply"], Shield:["Fortress of Faith"], Artefact:["Sacred Chalice"], Potion:["Black Knight's Tonic"], Banner:["Relic Shroud","Oriflamme","Banner of Roland","Castellan's Crest","Lady's Favour"] },
+            OK:  { Weapon:["Khagadai's Legacy","Viper's Curse","Ritual Bloodletter","Heart-Ripper"], Armour:["Wrestler's Belt","Mammoth-Hide Cloak","Aurochs Resilience"], Artefact:["Lygur's Tongue","Yeti Furs","Rampager's Chain"], Banner:["Banner of the Gyengget","Pennant of the Great Grass Sky","Skull of Qenghet"] },
+            OnG: { Weapon:["Omen of the Apocalypse","Attack Gnasher"], Armour:["Tazrek's Guard"], Artefact:["Skull Fetish","Monster Munch","Pan of Protection Pinchin'","Troll Hide"], Potion:["Moon Shrooms","Gnasher Bait"], Banner:["Goga Cauldron"] },
+            SA:  { Weapon:["Glory of the Dawn Age","Alchemical Arrows","Serpent's Nest Charm"], Armour:["Vital Essence"], Artefact:["Ancient Plaque","Imbued Jade","Starfall Lodestone","Carved Tablet"], Potion:["Stampede Resonator Crystal","Te Aupouri Smokestone"], Banner:["Koru Stone","Obelisk of Collaboration"] },
+            SE:  { Weapon:["Bough of Wyscan","Hunter's Honour","Oaken Might","Spirit of the Whirlwind","Spirit Arrows"], Armour:["Shielding Bark"], Artefact:["Hail Shot","Mist Walker's Mirror","Horn of the Wild Hunt","Glyph of Amryl"], Potion:["Sacred Seeds","Song of Cenyrn"], Banner:["Banner of Deception","Predator Pennant","Banner of Silent Mist"] },
+            UD:  { Weapon:["Godslayer","Scourge of Kings"], Armour:["Jackal's Blessing","Sandstorm Cloak"], Shield:["Sun's Embrace"], Artefact:["Sacred Hourglass","Crown of the Pharaohs","Death Mask of Teput","Book of the Dead","Kherp Sceptre","Blessed Wrappings"], Potion:["Scroll of Desiccation"], Banner:["Icon of Reflection","Sigil of the Closed Gates","Banner of the Entombed"] },
+            VC:  { Weapon:["Reaper's Harvest","True Thirst"], Armour:["Legend of the Black King"], Artefact:["Necromantic Staff","Night's Crown","Hypnotic Pendant","Eternity Gem","Cursed Medallion"], Banner:["Black Standard of Zagvozd","Banner of Eldritch Might"] },
+            VS:  { Weapon:["Secrets of the Doom Blade","Storm Rocket","Rodentium Bullets","Swarm Master"], Armour:["Plague-Hermit's Blessing"], Artefact:["Crown of Hubris","Scepter of the Usurper","Darkstone Detonator","Tome of the Ratking","Tarina's Lyre"], Potion:["Favanite Powder","Potion of Rat Form"], Banner:["Sacred Aquila","Bell of the Deep Roads"] },
+            WDG: { Weapon:["Burning Portent","Symbol of Slaughter"], Armour:["Thrice-Forged","Gladiator's Spirit"], Artefact:["Veilgate Orb","Dark Familiar","Immortal Gauntlets","Lord of the Damned"], Potion:["Wyrd Stone"], Banner:["Zealots' Banner","Icon of the Infinite","Wasteland Torch"] },
+          };
+
+          const lc = s => s.toLowerCase().replace(/[^a-z0-9]/g,'');
+          const itemsKeyMap = {
+            BH:'bh', DE:'de', DH:'dh', DL:'dl', EoS:'eos', HE:'he', ID:'id', KoE:'koe',
+            OK:'ok', OnG:'ong', SA:'sa', SE:'se', UD:'ud', VC:'vc', VS:'vs', WDG:'wdg',
+          };
+          const optionsTableMap = {
+            BH:'bhOptionsTable', DE:'deOptionsTable', DH:'dhOptionsTable', DL:'dlOptionsTable',
+            EoS:'eosOptionsTable', HE:'heOptionsTable', ID:'idOptionsTable', KoE:'koeOptionsTable',
+            OK:'okOptionsTable', OnG:'ongOptionsTable', SA:'saOptionsTable', SE:'seOptionsTable',
+            UD:'udOptionsTable', VC:'vcOptionsTable', VS:'vsOptionsTable', WDG:'wdgOptionsTable',
+          };
+
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            const numLists = army.listCount;
+            const items = army.specialItems || {};
+            const armyKey = itemsKeyMap[armyCode];
+            const pfx = armyKey; // id prefix e.g. "bh"
+
+            // Helper: build rows for a flat item list (array of names)
+            const itemRows = (catMap, filterFn) => {
+              let html = '';
+              for (const [cat, entries] of Object.entries(catMap)) {
+                const names = Array.isArray(entries) ? entries : Object.keys(entries).filter(filterFn ? n => filterFn(entries[n]) : () => true);
+                names.forEach(name => {
+                  const count = items[name] || 0;
+                  const pct = Math.round(count / numLists * 100) + '%';
+                  html += `<tr><td>${cat}</td><td>${name}</td><td>${count} / ${pct}</td></tr>`;
+                });
+              }
+              return html;
+            };
+
+            // Common items — every army gets all common items
+            const commonHtml = itemRows(commonItemCats);
+            $(`#${pfx}ItemsCommonTable tbody`).html(commonHtml || '<tr><td colspan="3">—</td></tr>');
+
+            // Shared items — filter to this army
+            const sharedHtml = itemRows(sharedItemCats, armies => armies.includes(armyKey));
+            const sharedWrap = document.getElementById(`${pfx}ItemsSharedWrap`);
+            if (sharedWrap) {
+              $(`#${pfx}ItemsSharedTable tbody`).html(sharedHtml || '<tr><td colspan="3">—</td></tr>');
+              if (!sharedHtml) sharedWrap.style.visibility = 'hidden';
+            }
+
+            // Army-specific items
+            const armySpecific = armySpecificItems[armyCode] || {};
+            let specificHtml = '';
+            for (const [cat, nameList] of Object.entries(armySpecific)) {
+              (nameList || []).forEach(name => {
+                const count = items[name] || 0;
+                const pct = Math.round(count / numLists * 100) + '%';
+                specificHtml += `<tr><td>${cat}</td><td>${name}</td><td>${count} / ${pct}</td></tr>`;
+              });
+            }
+            const specificWrap = document.getElementById(`${pfx}ItemsSpecificWrap`);
+            if (specificWrap) {
+              $(`#${pfx}ItemsSpecificTable tbody`).html(specificHtml || '<tr><td colspan="3">—</td></tr>');
+              if (!specificHtml) specificWrap.style.visibility = 'hidden';
+            }
+
+            // Build army options table from flat armyOptions data
+            const flatOpts = army.armyOptions || {};
+            let optHtml = '';
+            for (const [name, count] of Object.entries(flatOpts)) {
+              const pct = Math.round(count / numLists * 100) + '%';
+              optHtml += `<tr><td>${name}</td><td>${count} / ${pct}</td></tr>`;
+            }
+            const optEl = document.getElementById(optionsTableMap[armyCode]);
+            if (optEl) {
+              optEl.querySelector('tbody').innerHTML = optHtml || '';
+              // Hide the whole options block if there are no options
+              if (!optHtml) optEl.closest('.army-options-block').style.display = 'none';
+            }
+          });
+
         })
         .fail(function (jqxhr, textStatus, error) {
           console.log("Armies.json Request Failed: " + textStatus + ", " + error);
@@ -1197,21 +1340,26 @@
 
     <!-- Beast Herds Section -->
     <div class="section-divider" onclick="toggleSection('bhStats')">
-      <h1 id="bhStats-header">▼ Beast Herds</h1>
+      <h1 id="bhStats-header">▶ Beast Herds</h1>
     </div>
-    <div id="bhStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="bhStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="bhUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">BH – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">BH – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="bhItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="bhItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="bhItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="bhItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="bhItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="bhItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="bhOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1219,21 +1367,26 @@
 
     <!-- Daemon Legions Section -->
     <div class="section-divider" onclick="toggleSection('dlStats')">
-      <h1 id="dlStats-header">▼ Daemon Legions</h1>
+      <h1 id="dlStats-header">▶ Daemon Legions</h1>
     </div>
-    <div id="dlStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="dlStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="dlUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">DL – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">DL – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="dlItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="dlItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="dlItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="dlItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="dlItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="dlItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="dlOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1241,21 +1394,26 @@
 
     <!-- Dread Elves Section -->
     <div class="section-divider" onclick="toggleSection('deStats')">
-      <h1 id="deStats-header">▼ Dread Elves</h1>
+      <h1 id="deStats-header">▶ Dread Elves</h1>
     </div>
-    <div id="deStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="deStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="deUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">DE – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">DE – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="deItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="deItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="deItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="deItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="deItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="deItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="deOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1263,21 +1421,26 @@
 
     <!-- Dwarven Holds Section -->
     <div class="section-divider" onclick="toggleSection('dhStats')">
-      <h1 id="dhStats-header">▼ Dwarven Holds</h1>
+      <h1 id="dhStats-header">▶ Dwarven Holds</h1>
     </div>
-    <div id="dhStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="dhStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="dhUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">DH – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">DH – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="dhItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="dhItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="dhItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="dhItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="dhItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="dhItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="dhOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1285,21 +1448,26 @@
 
     <!-- Empire of Sonnstahl Section -->
     <div class="section-divider" onclick="toggleSection('eosStats')">
-      <h1 id="eosStats-header">▼ Empire of Sonnstahl</h1>
+      <h1 id="eosStats-header">▶ Empire of Sonnstahl</h1>
     </div>
-    <div id="eosStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="eosStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="eosUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">EoS – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">EoS – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="eosItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="eosItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="eosItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="eosItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="eosItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="eosItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="eosOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1307,21 +1475,26 @@
 
     <!-- Highborn Elves Section -->
     <div class="section-divider" onclick="toggleSection('heStats')">
-      <h1 id="heStats-header">▼ Highborn Elves</h1>
+      <h1 id="heStats-header">▶ Highborn Elves</h1>
     </div>
-    <div id="heStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="heStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="heUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">HE – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">HE – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="heItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="heItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="heItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="heItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="heItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="heItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="heOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1329,21 +1502,26 @@
 
     <!-- Infernal Dwarves Section -->
     <div class="section-divider" onclick="toggleSection('idStats')">
-      <h1 id="idStats-header">▼ Infernal Dwarves</h1>
+      <h1 id="idStats-header">▶ Infernal Dwarves</h1>
     </div>
-    <div id="idStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="idStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="idUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">ID – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">ID – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="idItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="idItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="idItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="idItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="idItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="idItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="idOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1351,21 +1529,26 @@
 
     <!-- Kingdom of Equitaine Section -->
     <div class="section-divider" onclick="toggleSection('koeStats')">
-      <h1 id="koeStats-header">▼ Kingdom of Equitaine</h1>
+      <h1 id="koeStats-header">▶ Kingdom of Equitaine</h1>
     </div>
-    <div id="koeStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="koeStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="koeUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">KoE – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">KoE – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="koeItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="koeItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="koeItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="koeItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="koeItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="koeItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="koeOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1373,21 +1556,26 @@
 
     <!-- Ogre Khans Section -->
     <div class="section-divider" onclick="toggleSection('okStats')">
-      <h1 id="okStats-header">▼ Ogre Khans</h1>
+      <h1 id="okStats-header">▶ Ogre Khans</h1>
     </div>
-    <div id="okStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="okStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="okUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">OK – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">OK – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="okItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="okItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="okItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="okItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="okItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="okItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="okOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1395,21 +1583,26 @@
 
     <!-- Orcs and Goblins Section -->
     <div class="section-divider" onclick="toggleSection('ongStats')">
-      <h1 id="ongStats-header">▼ Orcs and Goblins</h1>
+      <h1 id="ongStats-header">▶ Orcs and Goblins</h1>
     </div>
-    <div id="ongStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="ongStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="ongUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">OnG – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">OnG – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="ongItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="ongItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="ongItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="ongItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="ongItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="ongItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="ongOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1417,21 +1610,26 @@
 
     <!-- Saurian Ancients Section -->
     <div class="section-divider" onclick="toggleSection('saStats')">
-      <h1 id="saStats-header">▼ Saurian Ancients</h1>
+      <h1 id="saStats-header">▶ Saurian Ancients</h1>
     </div>
-    <div id="saStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="saStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="saUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">SA – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">SA – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="saItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="saItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="saItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="saItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="saItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="saItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="saOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1439,21 +1637,26 @@
 
     <!-- Sylvan Elves Section -->
     <div class="section-divider" onclick="toggleSection('seStats')">
-      <h1 id="seStats-header">▼ Sylvan Elves</h1>
+      <h1 id="seStats-header">▶ Sylvan Elves</h1>
     </div>
-    <div id="seStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="seStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="seUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">SE – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">SE – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="seItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="seItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="seItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="seItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="seItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="seItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="seOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1461,21 +1664,26 @@
 
     <!-- Undying Dynasties Section -->
     <div class="section-divider" onclick="toggleSection('udStats')">
-      <h1 id="udStats-header">▼ Undying Dynasties</h1>
+      <h1 id="udStats-header">▶ Undying Dynasties</h1>
     </div>
-    <div id="udStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="udStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="udUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">UD – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">UD – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="udItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="udItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="udItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="udItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="udItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="udItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="udOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1483,21 +1691,26 @@
 
     <!-- Vampire Covenant Section -->
     <div class="section-divider" onclick="toggleSection('vcStats')">
-      <h1 id="vcStats-header">▼ Vampire Covenant</h1>
+      <h1 id="vcStats-header">▶ Vampire Covenant</h1>
     </div>
-    <div id="vcStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="vcStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="vcUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">VC – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">VC – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="vcItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="vcItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="vcItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="vcItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="vcItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="vcItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="vcOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1505,21 +1718,26 @@
 
     <!-- Vermin Swarm Section -->
     <div class="section-divider" onclick="toggleSection('vsStats')">
-      <h1 id="vsStats-header">▼ Vermin Swarm</h1>
+      <h1 id="vsStats-header">▶ Vermin Swarm</h1>
     </div>
-    <div id="vsStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="vsStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="vsUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">VS – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">VS – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="vsItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="vsItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="vsItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="vsItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="vsItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="vsItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="vsOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -1527,21 +1745,26 @@
 
     <!-- Warriors of the Dark Gods Section -->
     <div class="section-divider" onclick="toggleSection('wdgStats')">
-      <h1 id="wdgStats-header">▼ Warriors of the Dark Gods</h1>
+      <h1 id="wdgStats-header">▶ Warriors of the Dark Gods</h1>
     </div>
-    <div id="wdgStats" style="display: block;">
-      <div style="overflow-x: auto;">
+    <div id="wdgStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
         <table id="wdgUnitsTable" class="army-units-table">
-          <thead>
-            <tr>
-              <th rowspan="2">Category</th>
-              <th rowspan="2">WDG – Units</th>
-              <th rowspan="2">Ø</th>
-              <th colspan="4">Taken in # of lists</th>
-              <th rowspan="2">ØPts</th>
-            </tr>
-            <tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr>
-          </thead>
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">WDG – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="wdgItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="wdgItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="wdgItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="wdgItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="wdgItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="wdgItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="wdgOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>

@@ -1281,16 +1281,6 @@ for (let army in armies) {
     armies[army].vs[opponent].avg = (armies[army].vs[opponent].results.reduce((a, b) => a + b, 0) / armies[army].vs[opponent].games).toFixed(1).padStart(4, " ");
   }
 
-  // Calculate rank
-  const allAverages = [
-    parseFloat(armies.BH.avg), parseFloat(armies.DE.avg), parseFloat(armies.DH.avg), parseFloat(armies.DL.avg),
-    parseFloat(armies.EoS.avg), parseFloat(armies.HE.avg), parseFloat(armies.ID.avg), parseFloat(armies.KoE.avg),
-    parseFloat(armies.OK.avg), parseFloat(armies.OnG.avg), parseFloat(armies.SA.avg), parseFloat(armies.SE.avg),
-    parseFloat(armies.UD.avg), parseFloat(armies.VC.avg), parseFloat(armies.VS.avg), parseFloat(armies.WDG.avg),
-  ];
-  for (let armyString in armies) {
-    armies[armyString].rank = (allAverages.filter(x => x > parseFloat(armies[armyString].avg)).length + 1).toString().padStart(2, " ");
-  }
 
   // Calculate amount of core
   // console.log(JSON.stringify(armies[army].pointsPerCategory, null, 4));
@@ -1340,6 +1330,17 @@ for (let army in armies) {
   armies[army].unitCountChars = (armies[army].unitCountChars.reduce((a, b) => a + b, 0) / unitCountLists).toFixed(1).padStart(3, " ");
   armies[army].unitCountRnf = (armies[army].unitCountRnf.reduce((a, b) => a + b, 0) / unitCountLists).toFixed(1).padStart(3, " ");
   armies[army].unitCountSingle = (armies[army].unitCountSingle.reduce((a, b) => a + b, 0) / unitCountLists).toFixed(1).padStart(3, " ");
+}
+
+// Calculate rank (based on avgWithoutMirror, consistent with the TOTAL column)
+const allAverages = [
+  parseFloat(armies.BH.avgWithoutMirror), parseFloat(armies.DE.avgWithoutMirror), parseFloat(armies.DH.avgWithoutMirror), parseFloat(armies.DL.avgWithoutMirror),
+  parseFloat(armies.EoS.avgWithoutMirror), parseFloat(armies.HE.avgWithoutMirror), parseFloat(armies.ID.avgWithoutMirror), parseFloat(armies.KoE.avgWithoutMirror),
+  parseFloat(armies.OK.avgWithoutMirror), parseFloat(armies.OnG.avgWithoutMirror), parseFloat(armies.SA.avgWithoutMirror), parseFloat(armies.SE.avgWithoutMirror),
+  parseFloat(armies.UD.avgWithoutMirror), parseFloat(armies.VC.avgWithoutMirror), parseFloat(armies.VS.avgWithoutMirror), parseFloat(armies.WDG.avgWithoutMirror),
+];
+for (let armyString in armies) {
+  armies[armyString].rank = (allAverages.filter(x => x > parseFloat(armies[armyString].avgWithoutMirror)).length + 1).toString().padStart(2, " ");
 }
 
 // #################################################################################################################
