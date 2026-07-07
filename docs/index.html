@@ -990,6 +990,27 @@
             OK:'okOptionsTable', OnG:'ongOptionsTable', SA:'saOptionsTable', SE:'seOptionsTable',
             UD:'udOptionsTable', VC:'vcOptionsTable', VS:'vsOptionsTable', WDG:'wdgOptionsTable',
           };
+          const unitOptionsTableMap = {
+            BH:'bhUnitOptionsGrid', DE:'deUnitOptionsGrid', DH:'dhUnitOptionsGrid', DL:'dlUnitOptionsGrid',
+            EoS:'eosUnitOptionsGrid', HE:'heUnitOptionsGrid', ID:'idUnitOptionsGrid', KoE:'koeUnitOptionsGrid',
+            OK:'okUnitOptionsGrid', OnG:'ongUnitOptionsGrid', SA:'saUnitOptionsGrid', SE:'seUnitOptionsGrid',
+            UD:'udUnitOptionsGrid', VC:'vcUnitOptionsGrid', VS:'vsUnitOptionsGrid', WDG:'wdgUnitOptionsGrid',
+          };
+
+          const buildUnitOptionTable = (unitName, categoryMap, totalCount) => {
+            let rows = '';
+            for (const [category, optionMap] of Object.entries(categoryMap || {})) {
+              const optionRows = Object.entries(optionMap || {})
+                .map(([optionName, count]) => `<tr><td>${category}</td><td>${optionName}</td><td>${Math.round(count / totalCount * 100)} %</td></tr>`)
+                .join('');
+              if (!optionRows) continue;
+              rows += optionRows;
+            }
+            if (!rows) {
+              return '';
+            }
+            return `<div class="army-items-col army-unit-options-col"><h4 class="army-items-col-title">${unitName}</h4><table class="army-items-table"><thead><tr><th>Category</th><th>Option</th><th>%</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+          };
 
           armyOrder.forEach(armyCode => {
             const army = armiesData[armyCode];
@@ -1053,6 +1074,16 @@
               optEl.querySelector('tbody').innerHTML = optHtml || '';
               // Hide the whole options block if there are no options
               if (!optHtml) optEl.closest('.army-options-block').style.display = 'none';
+            }
+
+            const unitOptionsEl = document.getElementById(unitOptionsTableMap[armyCode]);
+            if (unitOptionsEl) {
+              const unitOptionsHtml = (army.units || [])
+                .filter(unit => unit.options && unit.count)
+                .map(unit => buildUnitOptionTable(unit.name, unit.options, unit.count.reduce((sum, count) => sum + count, 0)))
+                .filter(Boolean)
+                .join('');
+              unitOptionsEl.innerHTML = unitOptionsHtml;
             }
           });
 
@@ -1363,6 +1394,10 @@
           <tbody></tbody>
         </table>
       </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="bhUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
     </div>
 
     <!-- Daemon Legions Section -->
@@ -1389,6 +1424,10 @@
           <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="dlUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
       </div>
     </div>
 
@@ -1417,6 +1456,10 @@
           <tbody></tbody>
         </table>
       </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="deUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
     </div>
 
     <!-- Dwarven Holds Section -->
@@ -1443,6 +1486,10 @@
           <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="dhUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
       </div>
     </div>
 
@@ -1471,6 +1518,10 @@
           <tbody></tbody>
         </table>
       </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="eosUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
     </div>
 
     <!-- Highborn Elves Section -->
@@ -1497,6 +1548,10 @@
           <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="heUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
       </div>
     </div>
 
@@ -1525,6 +1580,10 @@
           <tbody></tbody>
         </table>
       </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="idUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
     </div>
 
     <!-- Kingdom of Equitaine Section -->
@@ -1551,6 +1610,10 @@
           <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="koeUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
       </div>
     </div>
 
@@ -1579,6 +1642,10 @@
           <tbody></tbody>
         </table>
       </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="okUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
     </div>
 
     <!-- Orcs and Goblins Section -->
@@ -1605,6 +1672,10 @@
           <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="ongUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
       </div>
     </div>
 
@@ -1633,6 +1704,10 @@
           <tbody></tbody>
         </table>
       </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="saUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
     </div>
 
     <!-- Sylvan Elves Section -->
@@ -1659,6 +1734,10 @@
           <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="seUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
       </div>
     </div>
 
@@ -1687,6 +1766,10 @@
           <tbody></tbody>
         </table>
       </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="udUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
     </div>
 
     <!-- Vampire Covenant Section -->
@@ -1713,6 +1796,10 @@
           <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="vcUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
       </div>
     </div>
 
@@ -1741,6 +1828,10 @@
           <tbody></tbody>
         </table>
       </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="vsUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
     </div>
 
     <!-- Warriors of the Dark Gods Section -->
@@ -1767,6 +1858,10 @@
           <thead><tr><th>Option</th><th># / %</th></tr></thead>
           <tbody></tbody>
         </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="wdgUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
       </div>
     </div>
 

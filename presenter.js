@@ -1135,12 +1135,12 @@ fs.readdirSync("data").forEach(folder => {
     // console.log(report?.armyListOne?.magicalness);
     if (typeof report?.armyListOne?.magicalness !== "undefined") {
       armies[report.armyOne].magicalness = armies[report.armyOne].magicalness || [];
-      armies[report.armyOne].magicalness.push(report.armyListOne.magicalness);
+      armies[report.armyOne].magicalness.push(Math.max(0, report.armyListOne.magicalness));
     }
 
     if (typeof report?.armyListTwo?.magicalness !== "undefined") {
       armies[report.armyTwo].magicalness = armies[report.armyTwo].magicalness || [];
-      armies[report.armyTwo].magicalness.push(report.armyListTwo.magicalness);
+      armies[report.armyTwo].magicalness.push(Math.max(0, report.armyListTwo.magicalness));
     }
 
     // Sylvan Shooting

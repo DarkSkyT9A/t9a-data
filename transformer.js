@@ -6558,14 +6558,14 @@ function calculateMagicalness(list) {
     for (let unit of list.units) {
         if (magicalness[unit.name.toLowerCase()]) {
             magicInList = magicInList + magicalness[unit.name.toLowerCase()];
-        } else {
-            for (let option of unit.options) {
-                if (magicalness[option.name.toLowerCase()]) {
-                    if (option.name.toLowerCase() === "wizard conclave") {
-                        magicInList = magicInList + magicalness["wizard conclave"][unit.name.toLowerCase()];
-                    } else {
-                        magicInList = magicInList + magicalness[option.name.toLowerCase()];
-                    }
+        }
+
+        for (let option of unit.options) {
+            if (magicalness[option.name.toLowerCase()]) {
+                if (option.name.toLowerCase() === "wizard conclave") {
+                    magicInList = magicInList + magicalness["wizard conclave"][unit.name.toLowerCase()];
+                } else {
+                    magicInList = magicInList + magicalness[option.name.toLowerCase()];
                 }
             }
         }
