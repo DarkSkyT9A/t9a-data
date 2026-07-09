@@ -1751,7 +1751,7 @@ function displayUnitPickRates() {
       if (unitEntry.category !== lastCategory) {
         console.log(`┃                            │                                       ┃           ┃       │       │       │       │       ┃`);
       }
-      console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(37, " ")} ┃   ${pickTotal}   ┃ ${pick1} │ ${pick2} │ ${pick3} │ ${pick4} │  ${pointsPerList}  ┃`);
+      console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(37, " ")} ┃   ${pickTotal}   ┃ ${pick1}  │ ${pick2}  │ ${pick3}  │ ${pick4}  │  ${pointsPerList}  ┃`);
       lastCategory = unitEntry.category;
     }
     console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┛`);
