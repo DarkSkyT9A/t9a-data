@@ -997,9 +997,25 @@
             UD:'udUnitOptionsGrid', VC:'vcUnitOptionsGrid', VS:'vsUnitOptionsGrid', WDG:'wdgUnitOptionsGrid',
           };
 
-          const buildUnitOptionTable = (unitName, categoryMap, totalCount) => {
+          const HIDE_CHARACTER_MAGIC_ITEMS = true;
+
+          const buildUnitOptionTable = (unitName, categoryMap, totalCount, modelData, unitCategory) => {
             let rows = '';
+            if (modelData && modelData.models && modelData.models.length) {
+              const { models, min, max } = modelData;
+              const avg = (models.reduce((a, b) => a + b, 0) / models.length).toFixed(1);
+              const smallUntil = Math.floor(min + (max - min) / 4);
+              const mediumUntil = Math.floor(min + (max - min) * 2 / 3);
+              const smallPct = Math.round(models.filter(m => m <= smallUntil).length / models.length * 100);
+              const mediumPct = Math.round(models.filter(m => m > smallUntil && m <= mediumUntil).length / models.length * 100);
+              const largePct = Math.round(models.filter(m => m > mediumUntil).length / models.length * 100);
+              rows += `<tr><td>Unit Size</td><td>&#216; Average</td><td>${avg}</td></tr>`;
+              rows += `<tr><td>Unit Size</td><td>Small (${min}&ndash;${smallUntil})</td><td>${smallPct} %</td></tr>`;
+              rows += `<tr><td>Unit Size</td><td>Medium (${smallUntil + 1}&ndash;${mediumUntil})</td><td>${mediumPct} %</td></tr>`;
+              rows += `<tr><td>Unit Size</td><td>Large (${mediumUntil + 1}&ndash;${max})</td><td>${largePct} %</td></tr>`;
+            }
             for (const [category, optionMap] of Object.entries(categoryMap || {})) {
+              if (HIDE_CHARACTER_MAGIC_ITEMS && unitCategory === 'Characters' && category === 'Magic Items') continue;
               const optionRows = Object.entries(optionMap || {})
                 .map(([optionName, count]) => `<tr><td>${category}</td><td>${optionName}</td><td>${Math.round(count / totalCount * 100)} %</td></tr>`)
                 .join('');
@@ -1079,8 +1095,8 @@
             const unitOptionsEl = document.getElementById(unitOptionsTableMap[armyCode]);
             if (unitOptionsEl) {
               const unitOptionsHtml = (army.units || [])
-                .filter(unit => unit.options && unit.count)
-                .map(unit => buildUnitOptionTable(unit.name, unit.options, unit.count.reduce((sum, count) => sum + count, 0)))
+                .filter(unit => (unit.options && unit.count) || unit.models)
+                .map(unit => buildUnitOptionTable(unit.name, unit.options, unit.count ? unit.count.reduce((sum, count) => sum + count, 0) : 0, unit.models ? { models: unit.models, min: unit.min, max: unit.max } : null, unit.category))
                 .filter(Boolean)
                 .join('');
               unitOptionsEl.innerHTML = unitOptionsHtml;
