@@ -395,10 +395,12 @@ body::before {
   font-weight: bold;
 }
 
-/* ── Balance colour coding (dark-friendly) ─────────────────────────────────── */
-.balance-ok   { background-color: #0f2d1a !important; color: #4caf7d !important; }
-.balance-warn { background-color: #2b2208 !important; color: #d4a017 !important; }
-.balance-err  { background-color: #2b0e0e !important; color: #e05c5c !important; }
+/* ── Balance colour coding (dark-friendly, 5-state diverging scale) ─────────── */
+.balance-ok    { background-color: #0f2d1a !important; color: #4caf7d !important; }
+.balance-high1 { background-color: #2b1808 !important; color: #e8924a !important; }
+.balance-high2 { background-color: #2b0e0e !important; color: #e05c5c !important; }
+.balance-low1  { background-color: #082028 !important; color: #4abde8 !important; }
+.balance-low2  { background-color: #0a1e38 !important; color: #5a9fe0 !important; }
 
 /* ── Army section content wrapper ─────────────────────────────────────────── */
 [id$="Stats"]:not(#generalStats):not(#setupStats):not(#externalBalance):not(#armyListStats) {

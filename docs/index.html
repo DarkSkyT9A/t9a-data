@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>T9A Data - Global Statistics</title>
-  <link rel="stylesheet" href="dark-styles.css">
+  <link rel="stylesheet" href="dark-styles.css?v=2">
   <!-- To switch back to the light theme, replace the line above with: -->
   <!-- <link rel="stylesheet" href="styles.css"> -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -245,10 +245,12 @@
             // Get rank
             const rank = army.rank.trim();
             
-            // Colour-code TOTAL based on distance from 10.0
+            // Colour-code TOTAL based on distance from 10.0 (5-state diverging scale)
             const totalClass = avgTotal >= 9.6 && avgTotal <= 10.4 ? 'balance-ok'
-                             : avgTotal >= 9.1 && avgTotal <= 10.9 ? 'balance-warn'
-                             : 'balance-err';
+                             : avgTotal >  10.4 && avgTotal <= 10.9 ? 'balance-high1'
+                             : avgTotal >  10.9                     ? 'balance-high2'
+                             : avgTotal >= 9.1  && avgTotal <  9.6  ? 'balance-low1'
+                             :                                        'balance-low2';
 
             // Build row
             externalBalanceHtml += '<tr>';

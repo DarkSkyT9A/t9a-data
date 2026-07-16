@@ -368,10 +368,12 @@
   font-weight: bold;
 }
 
-/* External balance TOTAL column colour coding */
-.balance-ok  { background-color: #d4edda !important; color: #155724; }
-.balance-warn { background-color: #fff3cd !important; color: #856404; }
-.balance-err  { background-color: #f8d7da !important; color: #721c24; }
+/* External balance TOTAL column colour coding (5-state diverging scale) */
+.balance-ok    { background-color: #d4edda !important; color: #155724; }
+.balance-high1 { background-color: #fde8d0 !important; color: #7a3b0a; }
+.balance-high2 { background-color: #f8d7da !important; color: #721c24; }
+.balance-low1  { background-color: #d0eef5 !important; color: #0a4a5a; }
+.balance-low2  { background-color: #cce0f5 !important; color: #0c3464; }
 
 /* ── Army section two-panel layout (units + items side by side) ──────────── */
 .army-section-layout {
