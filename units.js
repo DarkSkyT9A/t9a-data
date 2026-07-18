@@ -1709,6 +1709,14 @@ const KoE = [
     "height": 0,
   },
   {
+    "name" : "Friar's Lanterns",
+    "category" : "Fey",
+    "gallantry" : 0,
+    "smallArmsFire" : 0,
+    "siegeEngines" : 0,
+    "height": 0,
+  },
+  {
     "name" : "Friar’s Lantern",
     "category" : "Fey",
     "gallantry" : 0,
@@ -2403,6 +2411,12 @@ const SE = [
   },
   {
     "name" : "Domethloc, The Unicorn Shapeshifter",
+    "category" : "Characters",
+    "sylvanShooting" : 0,
+    "sylvanBeasts" : 0
+  },
+  {
+    "name" : "Domethil, the Unicorn Shapeshifter",
     "category" : "Characters",
     "sylvanShooting" : 0,
     "sylvanBeasts" : 0

@@ -10,7 +10,7 @@ const { user, password } = require("./secrets.json");
 const setupMappings = require("./setupMappings.json");
 
 // Constants
-const DEFAULT_START_DATE = "2026-01-01";
+const DEFAULT_START_DATE = "2026-04-20";
 
 
 // Class Variables
@@ -205,7 +205,7 @@ function transformReport(report, tournamentId) {
   r.scoreTwo = report.score[1].BPObj;
 
   if(20 !== r.scoreOne+r.scoreTwo) {
-    console.error("### Faulty report, VP do not align to 20 ###");
+    console.error(`### Faulty report, VP do not align to 20 ###: ${r.scoreOne} and ${r.scoreTwo} - ID: ${r.id}`);
   }
 
   // Player IDs

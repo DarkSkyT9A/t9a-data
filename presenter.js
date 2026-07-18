@@ -5,10 +5,11 @@
 const fs = require("node:fs");
 const args = require('yargs').argv;
 const { arcCompAll, arcCompCommon, arcCompShared, allItems } = require("./specialItems");
-const units = require("./units.js");
+const options = require("./options");
+const units = require("./units");
 
 // Constants
-const DEFAULT_START_DATE = "2026-01-06";
+const DEFAULT_START_DATE = "2026-04-20";
 
 // Class Variables
 const date = new Date();
@@ -29,13 +30,24 @@ const showOptionRates = args.o ? true : false;
 const showPricingActions = args.z ? true : false;
 
 // External Balance Data Set
+let setup = {
+  "map": {},
+  "deployment": {},
+  "primary": {},
+  "secondary": {}
+};
+
 let globalStats = {
   "tournamentsWithReports": [],
   "pointsFirstTurn": [],
   "pointsSecondTurn": [],
   "turns": [],
   "games": 0,
-  "specialItems": {}
+  "specialItems": {},
+  "startDate": start,
+  "endDate": end,
+  "tournamentType": tournamentType,
+  "setup": setup
 };
 
 let armies = {
@@ -48,6 +60,7 @@ let armies = {
     "core": [],
     "units": units.BH,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -107,6 +120,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.DE,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -167,6 +181,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.DH,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -227,6 +242,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.DL,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -287,6 +303,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.EoS,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -347,6 +364,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.HE,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -407,6 +425,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.ID,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -467,6 +486,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.KoE,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -527,6 +547,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.OK,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -587,6 +608,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.OnG,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -647,6 +669,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.SA,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -707,6 +730,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.SE,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -767,6 +791,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.UD,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -827,6 +852,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.VC,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -887,6 +913,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.VS,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -947,6 +974,7 @@ let armies = {
     "pointsUnknown": [],
     "units": units.WDG,
     "specialItems": {},
+    "armyOptions": {},
     "vs": {
       "BH": {
         "results": []
@@ -1000,12 +1028,6 @@ let armies = {
   },
 };
 
-let setup = {
-  "map": {},
-  "deployment": {},
-  "primary": {},
-  "secondary": {}
-};
 
 fs.readdirSync("data").forEach(folder => {
   // Read metadata and decide whether to go on or not with this tournament
@@ -1113,12 +1135,12 @@ fs.readdirSync("data").forEach(folder => {
     // console.log(report?.armyListOne?.magicalness);
     if (typeof report?.armyListOne?.magicalness !== "undefined") {
       armies[report.armyOne].magicalness = armies[report.armyOne].magicalness || [];
-      armies[report.armyOne].magicalness.push(report.armyListOne.magicalness);
+      armies[report.armyOne].magicalness.push(Math.max(0, report.armyListOne.magicalness));
     }
 
     if (typeof report?.armyListTwo?.magicalness !== "undefined") {
       armies[report.armyTwo].magicalness = armies[report.armyTwo].magicalness || [];
-      armies[report.armyTwo].magicalness.push(report.armyListTwo.magicalness);
+      armies[report.armyTwo].magicalness.push(Math.max(0, report.armyListTwo.magicalness));
     }
 
     // Sylvan Shooting
@@ -1259,16 +1281,6 @@ for (let army in armies) {
     armies[army].vs[opponent].avg = (armies[army].vs[opponent].results.reduce((a, b) => a + b, 0) / armies[army].vs[opponent].games).toFixed(1).padStart(4, " ");
   }
 
-  // Calculate rank
-  const allAverages = [
-    parseFloat(armies.BH.avg), parseFloat(armies.DE.avg), parseFloat(armies.DH.avg), parseFloat(armies.DL.avg),
-    parseFloat(armies.EoS.avg), parseFloat(armies.HE.avg), parseFloat(armies.ID.avg), parseFloat(armies.KoE.avg),
-    parseFloat(armies.OK.avg), parseFloat(armies.OnG.avg), parseFloat(armies.SA.avg), parseFloat(armies.SE.avg),
-    parseFloat(armies.UD.avg), parseFloat(armies.VC.avg), parseFloat(armies.VS.avg), parseFloat(armies.WDG.avg),
-  ];
-  for (let armyString in armies) {
-    armies[armyString].rank = (allAverages.filter(x => x > parseFloat(armies[armyString].avg)).length + 1).toString().padStart(2, " ");
-  }
 
   // Calculate amount of core
   // console.log(JSON.stringify(armies[army].pointsPerCategory, null, 4));
@@ -1280,9 +1292,9 @@ for (let army in armies) {
   };
   // Convert into percentages
   let total = armies[army].core.minimal + armies[army].core.some + armies[army].core.more;
-  armies[army].core.minimalPercent = (armies[army].core.minimal / total * 100).toFixed(0).padStart(3, " ") + " %";
-  armies[army].core.somePercent = (armies[army].core.some / total * 100).toFixed(0).padStart(3, " ") + " %";
-  armies[army].core.morePercent = (armies[army].core.more / total * 100).toFixed(0).padStart(3, " ") + " %";
+  armies[army].core.minimalPercent = (armies[army].core.minimal / total * 100).toFixed(0).padStart(3, " ") + "%";
+  armies[army].core.somePercent = (armies[army].core.some / total * 100).toFixed(0).padStart(3, " ") + "%";
+  armies[army].core.morePercent = (armies[army].core.more / total * 100).toFixed(0).padStart(3, " ") + "%";
   // console.log(JSON.stringify(armies[army].core, null, 4));
 
   // Calculate amount of characters
@@ -1296,10 +1308,10 @@ for (let army in armies) {
 
   // Convert into percentages
   let totalChar = armies[army].chars.ten + armies[army].chars.twenty + armies[army].chars.thirty + armies[army].chars.fourty;
-  armies[army].chars.tenPercent = (armies[army].chars.ten / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
-  armies[army].chars.twentyPercent = (armies[army].chars.twenty / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
-  armies[army].chars.thirtyPercent = (armies[army].chars.thirty / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
-  armies[army].chars.fourtyPercent = (armies[army].chars.fourty / totalChar * 100).toFixed(0).padStart(3, " ") + " %";
+  armies[army].chars.tenPercent = (armies[army].chars.ten / totalChar * 100).toFixed(0).padStart(3, " ") + "%";
+  armies[army].chars.twentyPercent = (armies[army].chars.twenty / totalChar * 100).toFixed(0).padStart(3, " ") + "%";
+  armies[army].chars.thirtyPercent = (armies[army].chars.thirty / totalChar * 100).toFixed(0).padStart(3, " ") + "%";
+  armies[army].chars.fourtyPercent = (armies[army].chars.fourty / totalChar * 100).toFixed(0).padStart(3, " ") + "%";
   // console.log(JSON.stringify(armies[army].chars, null, 4));
 
   // Calculate model counts
@@ -1318,6 +1330,17 @@ for (let army in armies) {
   armies[army].unitCountChars = (armies[army].unitCountChars.reduce((a, b) => a + b, 0) / unitCountLists).toFixed(1).padStart(3, " ");
   armies[army].unitCountRnf = (armies[army].unitCountRnf.reduce((a, b) => a + b, 0) / unitCountLists).toFixed(1).padStart(3, " ");
   armies[army].unitCountSingle = (armies[army].unitCountSingle.reduce((a, b) => a + b, 0) / unitCountLists).toFixed(1).padStart(3, " ");
+}
+
+// Calculate rank (based on avgWithoutMirror, consistent with the TOTAL column)
+const allAverages = [
+  parseFloat(armies.BH.avgWithoutMirror), parseFloat(armies.DE.avgWithoutMirror), parseFloat(armies.DH.avgWithoutMirror), parseFloat(armies.DL.avgWithoutMirror),
+  parseFloat(armies.EoS.avgWithoutMirror), parseFloat(armies.HE.avgWithoutMirror), parseFloat(armies.ID.avgWithoutMirror), parseFloat(armies.KoE.avgWithoutMirror),
+  parseFloat(armies.OK.avgWithoutMirror), parseFloat(armies.OnG.avgWithoutMirror), parseFloat(armies.SA.avgWithoutMirror), parseFloat(armies.SE.avgWithoutMirror),
+  parseFloat(armies.UD.avgWithoutMirror), parseFloat(armies.VC.avgWithoutMirror), parseFloat(armies.VS.avgWithoutMirror), parseFloat(armies.WDG.avgWithoutMirror),
+];
+for (let armyString in armies) {
+  armies[armyString].rank = (allAverages.filter(x => x > parseFloat(armies[armyString].avgWithoutMirror)).length + 1).toString().padStart(2, " ");
 }
 
 // #################################################################################################################
@@ -1364,6 +1387,9 @@ displayUnitPickRates();
 
 // Display army pick rates for special items
 displayArmySpecialItems();
+
+// Display army pick rates for shared upgrades and options
+displayArmyOptions();
 
 // Display unit options
 displayUnitOptions();
@@ -1420,6 +1446,26 @@ function countOptionsForList(list, army) {
 
         armies[army].specialItems[o.name] = armies[army].specialItems[o.name] || 0;
         armies[army].specialItems[o.name] = armies[army].specialItems[o.name] + 1;
+      }
+
+      // Count army wide upgrades towards global counters
+      let armyOption = options.find(opt => opt.army === army && opt.name.toLowerCase() == o.name.toLowerCase());
+      if(armyOption) {
+        armies[army].armyOptions[o.name] = armies[army].armyOptions[o.name] || 0;
+
+        // Do not count Unit Manifestations for DL
+        if(armyOption.army === "DL" && unitInList.models) {
+          // console.log(`Skipping entry for ${unitInList.name}`);
+        }
+        // Extra code for some options that can be taken multiple times and then count more than once
+        else if(armyOption.type === "Howdah" && unitInList.models) {
+          // console.log(`Howdah detected increasing by ${unitInList.models} instead`);
+          armies[army].armyOptions[o.name] = armies[army].armyOptions[o.name] + unitInList.models;
+        } 
+        // Default case
+        else {
+          armies[army].armyOptions[o.name] = armies[army].armyOptions[o.name] + 1;
+        }
       }
     }
   }
@@ -1487,9 +1533,9 @@ function displayGlobalStats() {
   console.log(`┃ Average points going first:  ${firstAvg}                                           ┃`);
   console.log(`┃ Average points going second: ${secondAvg}                                           ┃`);
   console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫`);
-  console.log(`┃ Decisive Games (18-20): ${decisive} / ${(decisive * 100 / globalStats.games).toFixed(0).padStart(3, " ")}%                                        ┃`);
-  console.log(`┃ 'Normal' Games (14-17): ${normal} / ${(normal * 100 / globalStats.games).toFixed(0).padStart(3, " ")}%                                        ┃`);
-  console.log(`┃ Close    Games (10-13): ${close} / ${(close * 100 / globalStats.games).toFixed(0).padStart(3, " ")}%                                        ┃`);
+  console.log(`┃ Decisive Games (18-20): ${decisive} / ${(decisive * 100 / globalWithTurnKnown).toFixed(0).padStart(3, " ")}%                                        ┃`);
+  console.log(`┃ 'Normal' Games (14-17): ${normal} / ${(normal * 100 / globalWithTurnKnown).toFixed(0).padStart(3, " ")}%                                        ┃`);
+  console.log(`┃ Close    Games (10-13): ${close} / ${(close * 100 / globalWithTurnKnown).toFixed(0).padStart(3, " ")}%                                        ┃`);
   console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`);
 }
 
@@ -1697,15 +1743,15 @@ function displayUnitPickRates() {
       // console.log(`Unit ${unitEntry.name}: ${JSON.stringify(unitEntry.cost)}`);
       let pointsPerList = unitEntry.cost ? (unitEntry.cost.reduce((a, b) => a + b, 0) / armies[army].listCount).toFixed(0).padStart(3, " ") : "  0";
       unitEntry.count = unitEntry.count || [];
-      let pick1 = (unitEntry.count.filter(u => u === 1).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-      let pick2 = (unitEntry.count.filter(u => u === 2).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-      let pick3 = (unitEntry.count.filter(u => u === 3).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-      let pick4 = (unitEntry.count.filter(u => u >= 4).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
-      let pickTotal = (unitEntry.count.reduce((a, b) => a + b, 0) / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + " %";
+      let pick1 = (unitEntry.count.filter(u => u === 1).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + "%";
+      let pick2 = (unitEntry.count.filter(u => u === 2).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + "%";
+      let pick3 = (unitEntry.count.filter(u => u === 3).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + "%";
+      let pick4 = (unitEntry.count.filter(u => u >= 4).length / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + "%";
+      let pickTotal = (unitEntry.count.reduce((a, b) => a + b, 0) / armies[army].listCount * 100).toFixed(0).padStart(3, " ") + "%";
       if (unitEntry.category !== lastCategory) {
         console.log(`┃                            │                                       ┃           ┃       │       │       │       │       ┃`);
       }
-      console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(37, " ")} ┃   ${pickTotal}   ┃ ${pick1} │ ${pick2} │ ${pick3} │ ${pick4} │  ${pointsPerList}  ┃`);
+      console.log(`┃ ${unitEntry.category.padEnd(26, " ")} │ ${unitEntry.name.padEnd(37, " ")} ┃   ${pickTotal}   ┃ ${pick1}  │ ${pick2}  │ ${pick3}  │ ${pick4}  │  ${pointsPerList}  ┃`);
       lastCategory = unitEntry.category;
     }
     console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┷━━━━━━━┛`);
@@ -1770,6 +1816,43 @@ function displayArmySpecialItems() {
       if (category !== "banner") console.log(`┃          │                                    ┃       │       ┃`);
     }
     console.log(`┗━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┛`);
+    console.log(`\n`);
+  }
+
+}
+
+function displayArmyOptions() {
+
+  for (let army in armies) {
+
+    console.log(`┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━┯━━━━━━━┓`);
+    console.log(`┃ \x1b[1mCategory                      │ ${army.padEnd(3, " ")} - Army Wide Options            ┃   #   │   %\x1b[0m   ┃`);
+    console.log(`┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╋━━━━━━━┿━━━━━━━┫`);
+    
+    let armyOptions = options.filter(opt => opt.army === army);
+    let categories = [...(new Set(armyOptions.map(opt => opt.type)))];
+    if(army === "DL") {
+      let deities = [...(new Set(armyOptions.map(opt => opt.deity)))];
+      categories = [];
+      for(let deity of deities) {
+        categories.push(`Manifestations (${deity})`);
+      }
+    }
+
+    for (let category of categories) {
+      // console.log(category);
+      for (let armyOption of armyOptions) {
+        // console.log(upgrade);
+        if(armyOption.type === category || (army === "DL" && category.includes(armyOption.deity))) {
+          let name = `${armyOption.name.padEnd(34, " ")}`;
+          let cat = `${category.padEnd(29, " ")}`;
+          let count = `${armies[army].armyOptions?.[armyOption.name] || 0}`.padStart(3, " ");
+          let percent = `${((count / armies[army].listCount * 100).toFixed(0) || "0").padStart(4, " ")}%`;
+          console.log(`┃ ${cat} │ ${name} ┃  ${count}  │ ${percent} ┃`);
+        }
+      }
+    }
+    console.log(`┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┻━━━━━━━┷━━━━━━━┛`);
     console.log(`\n`);
   }
 
@@ -1874,6 +1957,8 @@ function displayObjectives() {
 function storeJsonData() {
     fs.writeFileSync(`./output/globalStats.json`, JSON.stringify(globalStats, null, 4));
     fs.writeFileSync(`./output/armies.json`, JSON.stringify(armies, null, 4));
+    fs.writeFileSync(`./docs/globalStats.json`, JSON.stringify(globalStats, null, 4));
+    fs.writeFileSync(`./docs/armies.json`, JSON.stringify(armies, null, 4));
 }
 
 

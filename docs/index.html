@@ -1,39 +1,1889 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>T9A Data - Global Statistics</title>
-  <h1>T9A Data - Global Statistics</h1>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="dark-styles.css?v=2">
+  <!-- To switch back to the light theme, replace the line above with: -->
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(document).ready(function() {
-        $.getJSON('../output/globalStats.json', function(data) {  // Change file name as needed
-          let content = `<p>Tournaments with Reports: ${data.tournamentsWithReports}</p>`;
-          $('#data-container').html(content);
-          let games = `<p>Games in Report: ${data.games}</p>`;
-          $('#data-container').html(games);
+    // Toggle section visibility
+    function toggleSection(sectionId) {
+      const content = document.getElementById(sectionId);
+      const header = document.getElementById(sectionId + '-header');
+      
+      if (content.style.display === 'none') {
+        content.style.display = content.dataset.displayMode || 'block';
+        header.textContent = header.textContent.replace('▶', '▼');
+      } else {
+        content.style.display = 'none';
+        header.textContent = header.textContent.replace('▼', '▶');
+      }
+    }
+
+    $(document).ready(function () {
+      $.getJSON("globalStats.json")
+        .done(function (data) {
+          let globalStatsHtml = '';
+          globalStatsHtml += `<tr><td>Tournament Types</td><td>${data.tournamentType}</td></tr>`;
+          globalStatsHtml += `<tr><td>Tournaments</td><td>${data.tournamentsWithReports}</td></tr>`;
+          globalStatsHtml += `<tr><td>Games</td><td>${data.games}</td></tr>`;
+          globalStatsHtml += `<tr><td>From</td><td>${data.startDate}</td></tr>`;
+          globalStatsHtml += `<tr><td>To</td><td>${data.endDate}</td></tr>`;
+          $('#globalStatsTable').html('<tr><th>Metric</th><th>Value</th></tr>' + globalStatsHtml);
+
+          let gameWideStatsHtml = '';
+          const avgFirst = (data.pointsFirstTurn.reduce((a, b) => a + b, 0) / data.pointsFirstTurn.length).toFixed(1);
+          const avgSecond = (data.pointsSecondTurn.reduce((a, b) => a + b, 0) / data.pointsSecondTurn.length).toFixed(1);
+          const decisive = data.pointsFirstTurn.filter(p => p >= 18 && p <= 20).length + data.pointsSecondTurn.filter(p => p >= 18 && p <= 20).length;
+          const normal = data.pointsFirstTurn.filter(p => p >= 14 && p <= 17).length + data.pointsSecondTurn.filter(p => p >= 14 && p <= 17).length;
+          const close = data.pointsFirstTurn.filter(p => p >= 10 && p <= 13).length + data.pointsSecondTurn.filter(p => p >= 10 && p <= 13).length;
+          const total = data.pointsFirstTurn.length;
+          
+          gameWideStatsHtml += `<tr><td>Average points going first</td><td>${avgFirst}</td></tr>`;
+          gameWideStatsHtml += `<tr><td>Average points going second</td><td>${avgSecond}</td></tr>`;
+          gameWideStatsHtml += `<tr><td>Decisive Games (18-20)</td><td>${decisive} / ${Math.round(decisive / total * 100)}%</td></tr>`;
+          gameWideStatsHtml += `<tr><td>'Normal' Games (14-17)</td><td>${normal} / ${Math.round(normal / total * 100)}%</td></tr>`;
+          gameWideStatsHtml += `<tr><td>Close    Games (10-13)</td><td>${close} / ${Math.round(close / total * 100)}%</td></tr>`;
+          $('#gameWideStatsTable').html('<tr><th>Metric</th><th>Value</th></tr>' + gameWideStatsHtml);
+
+          // Setup Map Statistics
+          let setupMapHtml = '';
+          const mapData = data.setup.map;
+          
+          // Calculate Vetia and Taphria totals
+          let vetiaTotal = 0;
+          let taphriaTotal = 0;
+          
+          // Sort map entries to group Vetia and Taphria together
+          const sortedMaps = Object.entries(mapData).sort((a, b) => {
+            // Extract map type and number
+            const aType = a[0].split(' ')[0];
+            const bType = b[0].split(' ')[0];
+            const aNum = parseInt(a[0].split(' ')[1]);
+            const bNum = parseInt(b[0].split(' ')[1]);
+            
+            // Sort by type first, then by number
+            if (aType !== bType) {
+              return aType.localeCompare(bType);
+            }
+            return aNum - bNum;
+          });
+          
+          // Build table rows and calculate totals
+          sortedMaps.forEach(([mapName, count]) => {
+            setupMapHtml += `<tr><td>${mapName}</td><td>${count}</td></tr>`;
+            
+            if (mapName.startsWith('Vetia')) {
+              vetiaTotal += count;
+            } else if (mapName.startsWith('Taphria')) {
+              taphriaTotal += count;
+            }
+          });
+          
+          // Add summary rows for Vetia and Taphria
+          setupMapHtml += `<tr style="font-weight: bold; border-top: 2px solid #4682B4;"><td>Taphria Total</td><td>${taphriaTotal}</td></tr>`;
+          setupMapHtml += `<tr style="font-weight: bold;"><td>Vetia Total</td><td>${vetiaTotal}</td></tr>`;
+          
+          $('#setupMapTable').html('<tr><th>Map</th><th>Count</th></tr>' + setupMapHtml);
+
+          // Setup Deployment Statistics
+          let setupDeploymentHtml = '';
+          const deploymentData = data.setup.deployment;
+          
+          // Order deployments as they appear in the rulebook
+          const deploymentOrder = ["Frontline Crash", "Bottleneck", "Spearhead", "Encircle", "Refused Flank", "Assault at First Light"];
+          const sortedDeployments = deploymentOrder
+            .filter(name => deploymentData[name])
+            .map(name => [name, deploymentData[name]]);
+          
+          // Build table rows with deployment name, games played, and average points
+          sortedDeployments.forEach(([deploymentName, pointsArray]) => {
+            const gamesPlayed = pointsArray.length;
+            const avgPoints = (pointsArray.reduce((a, b) => a + b, 0) / gamesPlayed).toFixed(1);
+            setupDeploymentHtml += `<tr><td>${deploymentName}</td><td>${gamesPlayed}</td><td>${avgPoints}</td></tr>`;
+          });
+          
+          $('#setupDeploymentTable').html('<tr><th>Deployment</th><th>Games played</th><th>1st turn ØPts</th></tr>' + setupDeploymentHtml);
+
+          // Setup Primary Objectives Statistics
+          let setupPrimaryHtml = '';
+          const primaryData = data.setup.primary;
+          
+          // Order primary objectives as they appear in the rulebook
+          const primaryOrder = ["Trophies of War", "Divide and Conquer", "Breakthrough", "Secure Targets", "Hold the Centre", "Skull of Harald Redstub"];
+          const sortedPrimary = primaryOrder
+            .filter(name => primaryData[name])
+            .map(name => [name, primaryData[name]]);
+          
+          // Build table rows with primary name, count, attacker, defender, and none (with percentages)
+          sortedPrimary.forEach(([primaryName, stats]) => {
+            const count = stats.count;
+            const attacker = stats.attacker;
+            const defender = stats.defender;
+            const none = stats.none;
+            
+            const attackerPct = Math.round(attacker / count * 100);
+            const defenderPct = Math.round(defender / count * 100);
+            const nonePct = Math.round(none / count * 100);
+            
+            setupPrimaryHtml += `<tr>
+              <td>${primaryName}</td>
+              <td>${count}</td>
+              <td>${attacker} / ${attackerPct}%</td>
+              <td>${defender} / ${defenderPct}%</td>
+              <td>${none} / ${nonePct}%</td>
+            </tr>`;
+          });
+          
+          $('#setupPrimaryTable').html('<tr><th>Primary Name</th><th>Count</th><th>Attacker</th><th>Defender</th><th>None</th></tr>' + setupPrimaryHtml);
+
+          // Setup Secondary Objectives Statistics
+          let setupSecondaryHtml = '';
+          const secondaryData = data.setup.secondary;
+          
+          // Order secondary objectives as they appear in the rulebook
+          const secondaryOrder = ["Settle the Score", "Demonstrate Superiority", "Slay the Beast", "Assassinate", "Capture their Banners", "Conserve our Numbers"];
+          const sortedSecondary = secondaryOrder
+            .filter(name => secondaryData[name])
+            .map(name => [name, secondaryData[name]]);
+          
+          // Build table rows with secondary name, total count, achieved %, attacker %, defender %
+          // Note: Each game has 2 secondary objectives (one for attacker, one for defender)
+          // So count represents total times chosen, but we divide by 2 for attacker/defender percentages
+          sortedSecondary.forEach(([secondaryName, stats]) => {
+            const count = stats.count;
+            const attackerWon = stats.attackerWon;
+            const defenderWon = stats.defenderWon;
+            const totalAchieved = attackerWon + defenderWon;
+            const gamesPlayed = count / 2; // Each game has 2 secondary objectives
+            
+            const achievedPct = Math.round(totalAchieved / count * 100);
+            const attackerPct = Math.round(attackerWon / gamesPlayed * 100);
+            const defenderPct = Math.round(defenderWon / gamesPlayed * 100);
+            
+            setupSecondaryHtml += `<tr>
+              <td>${secondaryName}</td>
+              <td>${count}</td>
+              <td>${achievedPct}%</td>
+              <td>${attackerPct}%</td>
+              <td>${defenderPct}%</td>
+            </tr>`;
+          });
+          
+          $('#setupSecondaryTable').html('<tr><th>Secondary Name</th><th>Total</th><th>Achieved</th><th>Attacker</th><th>Defender</th></tr>' + setupSecondaryHtml);
+
+          // Build special items table
+          const specialItemCategories = [
+            { label: 'Common Weapon',   items: ["Vorpal Binding", "King Slayer", "Touch of Greatness", "Giant Slayer"] },
+            { label: 'Shared Weapon',   items: ["Eldritch Inscriptions", "Hero's Heart", "Shield Breaker", "Supernatural Dexterity"] },
+            { label: 'Common Armour',   items: ["Destiny's Call", "Basalt Infusion", "Warding of Unity"] },
+            { label: 'Shared Armour',   items: ["Death Cheater", "Ghostly Guard"] },
+            { label: 'Common Shield',   items: ["Wild Warding"] },
+            { label: 'Shared Shield',   items: ["Dusk Forged", "Sigil of Protection"] },
+            { label: 'Common Artefact', items: ["Talisman of Shielding", "Talisman of the Void", "Magical Heirloom", "Crown of the Wizard King", "Mimic Cloak"] },
+            { label: 'Shared Artefact', items: ["Essence of a Free Mind", "Mask of Mindless Violence", "Obsidian Rock", "Rod of Battle"] },
+            { label: 'Common Potion',   items: ["Binding Scroll", "Potion of Power Preservation", "Dragon's Brew", "Potion of Swiftness"] },
+            { label: 'Shared Potion',   items: ["Potion of Healing", "Scroll of Draining", "Scroll of Power", "Spell Scroll", "Scroll of a Free Mind"] },
+            { label: 'Common Banner',   items: ["Stalker's Standard", "Sheltering Standard", "Flaming Standard", "Aether Icon"] },
+            { label: 'Shared Banner',   items: ["Banner of Courage", "Banner of Speed", "Distortion Emblem", "Rending Banner"] },
+          ];
+          const totalGames = data.games;
+          const itemCounts = data.specialItems || {};
+          let specialItemsHtml = '';
+          specialItemCategories.forEach((group, idx) => {
+            if (idx > 0) {
+              specialItemsHtml += '<tr class="special-items-separator"><td></td><td></td><td></td><td></td></tr>';
+            }
+            const isBanner = group.label.endsWith('Banner');
+            group.items.forEach(itemName => {
+              const count = itemCounts[itemName] || 0;
+              const pctNum = Math.round(count * 50 / totalGames);
+              const pct = pctNum + '%';
+              const pctClass = isBanner
+                ? (pctNum >= 60 ? 'balance-err' : pctNum >= 40 ? 'balance-warn' : '')
+                : (pctNum >= 20 ? 'balance-err' : pctNum >= 15 ? 'balance-warn' : '');
+              specialItemsHtml += `<tr>
+                <td>${group.label}</td>
+                <td>${itemName}</td>
+                <td>${count}</td>
+                <td${pctClass ? ` class="${pctClass}"` : ''}>${pct}</td>
+              </tr>`;
+            });
+          });
+          $('#specialItemsTable tbody').html(specialItemsHtml);
+
+        })
+        .fail(function (jqxhr, textStatus, error) {
+          console.log("Request Failed: " + textStatus + ", " + error);
+        });
+
+      // Load armies.json for External Balance table
+      $.getJSON("armies.json")
+        .done(function (armiesData) {
+          const armyOrder = ["BH", "DE", "DH", "DL", "EoS", "HE", "ID", "KoE", "OK", "OnG", "SA", "SE", "UD", "VC", "VS", "WDG"];
+          
+          let externalBalanceHtml = '';
+          
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            
+            // Calculate average from pointsWithoutMirror
+            const avgTotal = parseFloat(army.avgWithoutMirror.trim());
+            
+            // Get first and second place averages
+            const avgFirst = parseFloat(army.first.trim());
+            const avgSecond = parseFloat(army.second.trim());
+            
+            // Get confidence interval
+            const intervalLower = army.intervalLower.toFixed(1);
+            const intervalUpper = army.intervalUpper.toFixed(1);
+            
+            // Get rank
+            const rank = army.rank.trim();
+            
+            // Colour-code TOTAL based on distance from 10.0 (5-state diverging scale)
+            const totalClass = avgTotal >= 9.6 && avgTotal <= 10.4 ? 'balance-ok'
+                             : avgTotal >  10.4 && avgTotal <= 10.9 ? 'balance-high1'
+                             : avgTotal >  10.9                     ? 'balance-high2'
+                             : avgTotal >= 9.1  && avgTotal <  9.6  ? 'balance-low1'
+                             :                                        'balance-low2';
+
+            // Build row
+            externalBalanceHtml += '<tr>';
+            externalBalanceHtml += `<td><strong>${armyCode}</strong></td>`;
+            externalBalanceHtml += `<td class="${totalClass}">${avgTotal.toFixed(1)}</td>`;
+            externalBalanceHtml += `<td>${rank}</td>`;
+            
+            // Add matchup columns
+            armyOrder.forEach(opponentCode => {
+              const vsData = army.vs[opponentCode];
+              if (vsData && vsData.avg) {
+                const avgValue = vsData.avg.trim();
+                if (avgValue === 'NaN') {
+                  externalBalanceHtml += '<td>—</td>';
+                } else {
+                  externalBalanceHtml += `<td>${avgValue}</td>`;
+                }
+              } else {
+                externalBalanceHtml += '<td>—</td>';
+              }
+            });
+            
+            // Add tournament position and confidence interval
+            externalBalanceHtml += `<td>${avgFirst.toFixed(1)}</td>`;
+            externalBalanceHtml += `<td>${avgSecond.toFixed(1)}</td>`;
+            externalBalanceHtml += `<td>${intervalLower}</td>`;
+            externalBalanceHtml += `<td>${intervalUpper}</td>`;
+            externalBalanceHtml += '</tr>';
+          });
+          
+          $('#externalBalanceTable tbody').html(externalBalanceHtml);
+
+          // Build games count table
+          let gamesCountHtml = '';
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+
+            const totalGames = army.points.length;
+
+            gamesCountHtml += '<tr>';
+            gamesCountHtml += `<td><strong>${armyCode}</strong></td>`;
+            gamesCountHtml += `<td>${totalGames}</td>`;
+
+            armyOrder.forEach(opponentCode => {
+              const vsData = army.vs[opponentCode];
+              if (vsData && vsData.games) {
+                const games = parseInt(vsData.games.trim(), 10);
+                gamesCountHtml += `<td>${isNaN(games) ? '—' : games}</td>`;
+              } else {
+                gamesCountHtml += '<td>—</td>';
+              }
+            });
+
+            gamesCountHtml += '</tr>';
+          });
+
+          $('#gamesCountTable tbody').html(gamesCountHtml);
+
+          // Build core table
+          let coreHtml = '';
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            const c = army.core;
+            coreHtml += `<tr>
+              <td><strong>${armyCode}</strong></td>
+              <td>${c.error}</td>
+              <td>${c.minimalPercent.trim()}</td>
+              <td>${c.somePercent.trim()}</td>
+              <td>${c.morePercent.trim()}</td>
+            </tr>`;
+          });
+          $('#armyCoreTable tbody').html(coreHtml);
+
+          // Build characters table
+          let charsHtml = '';
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            const ch = army.chars;
+            charsHtml += `<tr>
+              <td><strong>${armyCode}</strong></td>
+              <td>${ch.tenPercent.trim()}</td>
+              <td>${ch.twentyPercent.trim()}</td>
+              <td>${ch.thirtyPercent.trim()}</td>
+              <td>${ch.fourtyPercent.trim()}</td>
+            </tr>`;
+          });
+          $('#armyCharsTable tbody').html(charsHtml);
+
+          // Build magic table
+          let magicHtml = '';
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            const mag = army.magicalness;
+            const total = mag.length;
+            const pct = n => Math.round(n / total * 100) + '%';
+            const b0   = mag.filter(v => v === 0).length;
+            const b1   = mag.filter(v => v >= 1  && v <= 4).length;
+            const b5   = mag.filter(v => v >= 5  && v <= 9).length;
+            const b10  = mag.filter(v => v >= 10 && v <= 12).length;
+            const b13  = mag.filter(v => v >= 13).length;
+            magicHtml += `<tr>
+              <td><strong>${armyCode}</strong></td>
+              <td>${pct(b0)}</td>
+              <td>${pct(b1)}</td>
+              <td>${pct(b5)}</td>
+              <td>${pct(b10)}</td>
+              <td>${pct(b13)}</td>
+            </tr>`;
+          });
+          $('#armyMagicTable tbody').html(magicHtml);
+
+          // Build models and units table
+          let modelsHtml = '';
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            modelsHtml += `<tr>
+              <td><strong>${armyCode}</strong></td>
+              <td>${army.modelCountTotal.trim()}</td>
+              <td>${army.unitCountTotal.trim()}</td>
+              <td>${army.modelCount0.trim()}</td>
+              <td>${army.modelCount1.trim()}</td>
+              <td>${army.modelCount2.trim()}</td>
+              <td>${army.modelCount3.trim()}</td>
+              <td>${army.modelCount4.trim()}</td>
+              <td>${army.modelCount5.trim()}</td>
+              <td>${army.unitCountChars.trim()}</td>
+              <td>${army.unitCountRnf.trim()}</td>
+              <td>${army.unitCountSingle.trim()}</td>
+            </tr>`;
+          });
+          $('#armyModelsTable tbody').html(modelsHtml);
+
+          // Generic army units table builder
+          const allArmyUnitDefs = {
+            'BH': [
+              { name: "Beast Lord",                               category: "Characters" },
+              { name: "Beast Chieftain",                         category: "Characters" },
+              { name: "Moohoarrgh, the Perpetuator of Heroes",   category: "Characters" },
+              { name: "Mooarrgh,The Perpetuator of Heroes",      category: "Characters" },
+              { name: "Ghaa, THE Quiet Muzzle",                  category: "Characters" },
+              { name: "Ghaa!, THE Quiet Muzzle",                 category: "Characters" },
+              { name: "Wildhorn Lord",                           category: "Characters" },
+              { name: "Wildhorn Chieftain",                      category: "Characters" },
+              { name: "Soothsayer",                              category: "Characters" },
+              { name: "Centaur Chieftain",                       category: "Characters" },
+              { name: "Minotaur Warlord",                        category: "Characters" },
+              { name: "Minotaur Chieftain",                      category: "Characters" },
+              { name: "Wildhorn Herd",                           category: "Core" },
+              { name: "Mongrel Herd",                            category: "Core" },
+              { name: "Mongrel Raiders",                         category: "Core" },
+              { name: "Feral Hounds",                            category: "Special" },
+              { name: "Longhorn Herd",                           category: "Special" },
+              { name: "Minotaurs",                               category: "Special" },
+              { name: "Centaurs",                                category: "Special" },
+              { name: "Raiding Chariots",                        category: "Special" },
+              { name: "Razortusk Herd",                          category: "Special" },
+              { name: "Razortusk Chariot",                       category: "Special" },
+              { name: "Briar Beast",                             category: "Special" },
+              { name: "Gargoyles",                               category: "Special" },
+              { name: "Cyclops",                                 category: "Terrors of the Wild" },
+              { name: "Gortach",                                 category: "Terrors of the Wild" },
+              { name: "Jabberwock",                              category: "Terrors of the Wild" },
+              { name: "Beast Giant",                             category: "Terrors of the Wild" },
+            ],
+            'DE': [
+              { name: "Techainin and Blaishoi",   category: "Characters" },
+              { name: "Tethaen, the Ocean Terror", category: "Characters" },
+              { name: "The Black Rose",            category: "Characters" },
+              { name: "Dread Prince",              category: "Characters" },
+              { name: "Silexian Officer",          category: "Characters" },
+              { name: "Temple Exarch",             category: "Characters" },
+              { name: "Sanctioned Warlock",        category: "Characters" },
+              { name: "Silent Assassin",           category: "Characters" },
+              { name: "Silexian Spears",           category: "Core" },
+              { name: "Silexian Auxiliaries",      category: "Core" },
+              { name: "Temple Militants",          category: "Core" },
+              { name: "Corsairs",                  category: "Core" },
+              { name: "Shadow Riders",             category: "Core" },
+              { name: "Dread Acolytes",            category: "Special" },
+              { name: "Dread Knights",             category: "Special" },
+              { name: "Obsidian Guard",            category: "Special" },
+              { name: "Dancers of Yema",           category: "Special" },
+              { name: "Judicators",                category: "Special" },
+              { name: "Harpies",                   category: "Special" },
+              { name: "Gorgons",                   category: "Special" },
+              { name: "Thunder Pack",              category: "Special" },
+              { name: "Raptor Chariot",            category: "Special" },
+              { name: "Divine Altar",              category: "Special" },
+              { name: "Hunting Chariot",           category: "Special" },
+              { name: "Repeater Battery",          category: "Special" },
+              { name: "Black Cloaks",              category: "Special" },
+              { name: "Kraken",                    category: "The Menagerie" },
+              { name: "Hydra",                     category: "The Menagerie" },
+              { name: "Mist Leviathan",            category: "The Menagerie" },
+            ],
+            'DH': [
+              { name: "Dinaz Betegoz, Master of the Guild of Lorekeepers", category: "Characters" },
+              { name: "Duna Bregold, Master of the Guild of Lorekeepers",  category: "Characters" },
+              { name: "Tador Berafrig",            category: "Characters" },
+              { name: "Brewmaster Tador Berafrig", category: "Characters" },
+              { name: "King",                      category: "Characters" },
+              { name: "Thane",                     category: "Characters" },
+              { name: "Runic Smith",               category: "Characters" },
+              { name: "Engineer",                  category: "Characters" },
+              { name: "Dragon Seeker",             category: "Characters" },
+              { name: "Clan Warriors",             category: "Core" },
+              { name: "Greybeards",                category: "Core" },
+              { name: "Clan Marksmen",             category: "Core" },
+              { name: "King's Guard",              category: "Special" },
+              { name: "Deep Watch",                category: "Special" },
+              { name: "Seekers",                   category: "Special" },
+              { name: "Brothers of Vengeance",     category: "Special" },
+              { name: "Vengeance Seeker",          category: "Special" },
+              { name: "Hold Guardians",            category: "Special" },
+              { name: "Grudge Buster",             category: "Special" },
+              { name: "Miners",                    category: "Special" },
+              { name: "Anvil of Power",            category: "Special" },
+              { name: "Rangers",                   category: "Special" },
+              { name: "Forge Wardens",             category: "Special" },
+              { name: "Steam Copters",             category: "Special" },
+              { name: "Field Artillery",           category: "Special" },
+            ],
+            'DL': [
+              { name: "Tristitia",                 category: "Characters" },
+              { name: "Tergon Khan",               category: "Characters" },
+              { name: "Harbinger of Father Chaos", category: "Characters" },
+              { name: "Kuulima's Deceiver",        category: "Characters" },
+              { name: "Maw of Akaan",              category: "Characters" },
+              { name: "Miser of Sugulag",          category: "Characters" },
+              { name: "Courtesan of Cibaresh",     category: "Characters" },
+              { name: "Omen of Savar",             category: "Characters" },
+              { name: "Sentinel of Nukuja",        category: "Characters" },
+              { name: "Vanadra's Scourge",         category: "Characters" },
+              { name: "Imps",                      category: "Core" },
+              { name: "Succubi",                   category: "Core" },
+              { name: "Lemures",                   category: "Core" },
+              { name: "Myrmidons",                 category: "Core" },
+              { name: "Eidolons",                  category: "Special" },
+              { name: "Hellhounds",                category: "Special" },
+              { name: "Threshing Engine",          category: "Special" },
+              { name: "Titanslayer Chariot",       category: "Special" },
+              { name: "Mageblight Gremlins",       category: "Special" },
+              { name: "Clawed Fiends",             category: "Special" },
+              { name: "Hoarders",                  category: "Special" },
+              { name: "Succubi Tempters",          category: "Special" },
+              { name: "Blazing Glory",             category: "Special" },
+              { name: "Hope Harvester",            category: "Special" },
+              { name: "Brazen Beasts",             category: "Special" },
+              { name: "Furies",                    category: "Aves" },
+              { name: "Veil Serpents",             category: "Aves" },
+              { name: "Bloat Flies",               category: "Aves" },
+            ],
+            'EoS': [
+              { name: "State Detatchment",         category: "Core" },
+              { name: "Light Infantry",            category: "Core" },
+              { name: "Heavy Infantry",            category: "Core" },
+              { name: "State Militia",             category: "Core" },
+              { name: "Heinrich Falkenbach",       category: "Characters" },
+              { name: "Brother Tomaz",             category: "Characters" },
+              { name: "Marshal",                   category: "Characters" },
+              { name: "Knight Commander",          category: "Characters" },
+              { name: "Battlefield Wizard",        category: "Characters" },
+              { name: "Prelate",                   category: "Characters" },
+              { name: "Artificer",                 category: "Characters" },
+              { name: "Inquisitor",                category: "Characters" },
+              { name: "State Infantry",            category: "Core" },
+              { name: "State Detachment",          category: "Core" },
+              { name: "State Marksmen",            category: "Core" },
+              { name: "Local Militia",             category: "Core" },
+              { name: "Electoral Cavalry",         category: "Core" },
+              { name: "Knightly Orders",           category: "Core" },
+              { name: "Imperial Guard",            category: "Special" },
+              { name: "Imperial Detachment",       category: "Special" },
+              { name: "Knights of the Sun Griffon",category: "Special" },
+              { name: "Arcane Engine",             category: "Special" },
+              { name: "Imperial Rangers",          category: "Special" },
+              { name: "Reiters",                   category: "Special" },
+              { name: "Blackpowder Artillery",     category: "Special" },
+              { name: "Flagellants",               category: "Sunna's Fury" },
+              { name: "Steam Tank",                category: "Sunna's Fury" },
+            ],
+            'HE': [
+              { name: "Master Acadnath, the Asfad Scholar", category: "Characters" },
+              { name: "Acadnath, the Scholar",       category: "Characters" },
+              { name: "Dhaenala, the Wyrmkin",       category: "Characters" },
+              { name: "Tenacla and Baluruth",        category: "Characters" },
+              { name: "High Prince",                 category: "Characters" },
+              { name: "Commander",                   category: "Characters" },
+              { name: "Mage",                        category: "Characters" },
+              { name: "Citizen Archers",             category: "Core" },
+              { name: "Citizen Spears",              category: "Core" },
+              { name: "Sea Guard",                   category: "Core" },
+              { name: "Highborn Lancers",            category: "Core" },
+              { name: "Erlein Reavers",              category: "Core" },
+              { name: "Sword Masters",               category: "Special" },
+              { name: "Lion Guard",                  category: "Special" },
+              { name: "Flame Wardens",               category: "Special" },
+              { name: "Knights of Rymâ",             category: "Special" },
+              { name: "Reaver Chariots",             category: "Special" },
+              { name: "Lion Chariot",                category: "Special" },
+              { name: "Giant Eagles",                category: "Special" },
+              { name: "Initiate of the Fiery Heart", category: "Special" },
+              { name: "Phoenix",                     category: "Special" },
+              { name: "Sea Guard Reaper",            category: "Special" },
+              { name: "Sky Sloop",                   category: "Special" },
+              { name: "Queen's Guard",               category: "Special" },
+              { name: "Grey Watchers",               category: "Special" },
+            ],
+            'ID': [
+              { name: "Abazzalem, the Mechanical Lamassu",    category: "Characters" },
+              { name: "Ibat-Sokavum, the Flying Charioteer",  category: "Characters" },
+              { name: "Ibat-Sokavum,the Flying Charioteer",   category: "Characters" },
+              { name: "Overlord",                             category: "Characters" },
+              { name: "Prophet",                              category: "Characters" },
+              { name: "Vizier",                               category: "Characters" },
+              { name: "Taurukh Commissioner",                 category: "Characters" },
+              { name: "Vassal Conjurer",                      category: "Characters" },
+              { name: "Lamassu Scholar",                      category: "Characters" },
+              { name: "Infernal Warriors",                    category: "Core" },
+              { name: "Citadel Guard",                        category: "Core" },
+              { name: "Vassal Levies",                        category: "Core" },
+              { name: "Shackled Slaves",                      category: "Core" },
+              { name: "Kadim Incarnates",                     category: "Special" },
+              { name: "Kadim Chariot",                        category: "Special" },
+              { name: "Immortals",                            category: "Special" },
+              { name: "Disciples of Lugar",                   category: "Special" },
+              { name: "Taurukh Enforcers",                    category: "Special" },
+              { name: "Taurukh Anointed",                     category: "Special" },
+              { name: "Vassal Cavalry",                       category: "Special" },
+              { name: "Vassal Slingshot",                     category: "Special" },
+              { name: "Gunnery Team",                         category: "Special" },
+              { name: "Infernal Artillery",                   category: "Special" },
+              { name: "Infernal Bastion",                     category: "Special" },
+              { name: "Infernal Engine",                      category: "Instruments of Destruction" },
+              { name: "Kadim Titan",                          category: "Instruments of Destruction" },
+              { name: "Citizen Giant",                        category: "Instruments of Destruction" },
+            ],
+            'KoE': [
+              { name: "King Henry the Young",  category: "Characters" },
+              { name: "Hernaut Le Rouquin",    category: "Characters" },
+              { name: "Damsel",                category: "Characters" },
+              { name: "Duke",                  category: "Characters" },
+              { name: "Paladin",               category: "Characters" },
+              { name: "Folk Hero",             category: "Characters" },
+              { name: "Knights of the Realm",  category: "Core" },
+              { name: "Hedge Knights",         category: "Core" },
+              { name: "Mounted Serjeants",     category: "Core" },
+              { name: "Lowborn Levies",        category: "Core" },
+              { name: "Lowborn Archers",       category: "Core" },
+              { name: "Men-at-Arms",           category: "Special" },
+              { name: "Sacred Reliquary",      category: "Special" },
+              { name: "Knights of the Court",  category: "Special" },
+              { name: "Knights Penitent",      category: "Special" },
+              { name: "Knights of the Quest",  category: "Special" },
+              { name: "Yeoman Outriders",      category: "Special" },
+              { name: "Enlisted Outlaws",      category: "Special" },
+              { name: "Siege Weapon",          category: "Special" },
+              { name: "Pegasus Knights",       category: "Special" },
+              { name: "Sky Heralds",           category: "Special" },
+              { name: "Naiads",                category: "Fey" },
+              { name: "Friar's Lantern",       category: "Fey" },
+              { name: "Friar's Lanterns",      category: "Fey" },
+              { name: "The Lady's Courtier",   category: "Fey" },
+              { name: "Fey Knight",            category: "Fey" },
+            ],
+            'OK': [
+              { name: "Ganzorig, the Ironbond",  category: "Characters" },
+              { name: "Ganzorig Ironbond",        category: "Characters" },
+              { name: "Valish, the Chefling",     category: "Characters" },
+              { name: "Great Khan",               category: "Characters" },
+              { name: "Khan",                     category: "Characters" },
+              { name: "Shaman",                   category: "Characters" },
+              { name: "Mammoth Hunter",           category: "Characters" },
+              { name: "Tribesmen",                category: "Core" },
+              { name: "Bruisers",                 category: "Core" },
+              { name: "Scraplings",               category: "Core" },
+              { name: "Sabretooth Tigers",        category: "Special" },
+              { name: "Scrapling Trappers",       category: "Special" },
+              { name: "Yetis",                    category: "Special" },
+              { name: "Kin-Eater",                category: "Special" },
+              { name: "Tusker Cavalry",           category: "Special" },
+              { name: "Mercenary Veterans",       category: "Special" },
+              { name: "Mercenary Gunners",        category: "Special" },
+              { name: "Bombardiers",              category: "Special" },
+              { name: "Thunder Cannon",           category: "Special" },
+              { name: "Scratapult",               category: "Special" },
+              { name: "Rock Aurochs",             category: "Chained Beasts" },
+              { name: "Frost Mammoth",            category: "Chained Beasts" },
+              { name: "Mercenary Giant",          category: "Chained Beasts" },
+            ],
+            'OnG': [
+              { name: "Lerrgog, the Smart Troll",  category: "Characters" },
+              { name: "Amokek, the Only King?",    category: "Characters" },
+              { name: "Mokrog, the Only King?",    category: "Characters" },
+              { name: "The Splendid Leader",       category: "Characters" },
+              { name: "Orc Warlord",               category: "Characters" },
+              { name: "Iron Orc Loner",            category: "Characters" },
+              { name: "Brood Alpha",               category: "Characters" },
+              { name: "Orc Shaman",                category: "Characters" },
+              { name: "Goblin Demagogue",          category: "Characters" },
+              { name: "Goblin Witch",              category: "Characters" },
+              { name: "Gogtuk Initiate",           category: "Characters" },
+              { name: "Mad Git",                   category: "Characters" },
+              { name: "Goblin Rabble",             category: "Core" },
+              { name: "Goblin Reavers",            category: "Core" },
+              { name: "Feral Orcs",                category: "Core" },
+              { name: "Feral Orc Marauders",       category: "Core" },
+              { name: "Veteran Orcs",              category: "Core" },
+              { name: "Veteran Orc Marauders",     category: "Core" },
+              { name: "Iron Orcs",                 category: "Special" },
+              { name: "Iron Orc Chariots",         category: "Special" },
+              { name: "Gogtuk Neophytes",          category: "Special" },
+              { name: "Goblin Chariots",           category: "Special" },
+              { name: "Grotlings",                 category: "Special" },
+              { name: "Grotling Scrap Wagon",      category: "Special" },
+              { name: "Gnashers",                  category: "Special" },
+              { name: "Gnashers Dashers",          category: "Special" },
+              { name: "Gnasher Dashers",           category: "Special" },
+              { name: "Wrecking Team",             category: "Special" },
+              { name: "Trolls",                    category: "Special" },
+              { name: "Goblin Artillery",          category: "Special" },
+              { name: "Giant",                     category: "Special" },
+              { name: "Guardian Behemoth",         category: "Special" },
+              { name: "Great Green Idol",          category: "Special" },
+            ],
+            'SA': [
+              { name: "Anurarch Destined",   category: "Characters" },
+              { name: "Shade and Stone",     category: "Characters" },
+              { name: "Anurarch Archmage",   category: "Characters" },
+              { name: "Caiman Mentor",       category: "Characters" },
+              { name: "Tegu Veteran",        category: "Characters" },
+              { name: "Skink Veteran",       category: "Characters" },
+              { name: "Tegu Warriors",       category: "Core" },
+              { name: "Skink Warriors",      category: "Core" },
+              { name: "Skink Hunters",       category: "Core" },
+              { name: "Caiman Warriors",     category: "Core" },
+              { name: "Tegu Guards",         category: "Special" },
+              { name: "Tegu Mystics",        category: "Special" },
+              { name: "Raptor Pack",         category: "Special" },
+              { name: "Raptor Riders",       category: "Special" },
+              { name: "Caiman Elders",       category: "Special" },
+              { name: "Thyroscutus Herd",    category: "Special" },
+              { name: "Rhamphodon Riders",   category: "Special" },
+              { name: "Saurian Swarms",      category: "Special" },
+              { name: "Skink Guerrillas",    category: "Special" },
+              { name: "Weapon Beasts",       category: "Special" },
+              { name: "Pteradon Riders",     category: "Special" },
+              { name: "Stygiosaur Pack",     category: "Magna Sauria" },
+              { name: "Carnosaur",           category: "Magna Sauria" },
+              { name: "Taurosaur",           category: "Magna Sauria" },
+              { name: "Titanopod",           category: "Magna Sauria" },
+            ],
+            'SE': [
+              { name: "Dwatobel, The World-Wandering Tree",   category: "Characters" },
+              { name: "Ancient Dawael, the World Tree",        category: "Characters" },
+              { name: "Domethloc, The Unicorn Shapeshifter",  category: "Characters" },
+              { name: "Domethil, the Unicorn Shapeshifter",   category: "Characters" },
+              { name: "Forest Prince",        category: "Characters" },
+              { name: "Chieftain",            category: "Characters" },
+              { name: "Druid",                category: "Characters" },
+              { name: "Dryad Ancient",        category: "Characters" },
+              { name: "Avatar of Nature",     category: "Characters" },
+              { name: "Treefather Ancient",   category: "Characters" },
+              { name: "Thicket Shepherd",     category: "Characters" },
+              { name: "Forest Guard",         category: "Core" },
+              { name: "Sylvan Archers",       category: "Core" },
+              { name: "Heath Riders",         category: "Core" },
+              { name: "Dryads",               category: "Core" },
+              { name: "Forest Rangers",       category: "Special" },
+              { name: "Thicket Beasts",       category: "Special" },
+              { name: "Forest Eagles",        category: "Special" },
+              { name: "Blade Dancers",        category: "Special" },
+              { name: "Treefather",           category: "Special" },
+              { name: "Wild Huntsmen",        category: "Special" },
+              { name: "Kestrel Knights",      category: "Special" },
+              { name: "Briar Maidens",        category: "Unseen Arrows" },
+              { name: "Sylvan Sentinels",     category: "Unseen Arrows" },
+              { name: "Pathfinders",          category: "Unseen Arrows" },
+            ],
+            'UD': [
+              { name: "Rehnepeh, the Undying Sun",    category: "Characters" },
+              { name: "Ashotet, Custodian of Souls",  category: "Characters" },
+              { name: "Pharaoh",               category: "Characters" },
+              { name: "Nomarch",               category: "Characters" },
+              { name: "Death Cult Hierarch",   category: "Characters" },
+              { name: "Skeleton Warriors",     category: "Core" },
+              { name: "Skeleton Archers",      category: "Core" },
+              { name: "Skeleton Cavalry",      category: "Core" },
+              { name: "Skeleton Scouts",       category: "Core" },
+              { name: "Skeleton Chariots",     category: "Core" },
+              { name: "Necropolis Guard",      category: "Special" },
+              { name: "Tomb Cataphracts",      category: "Special" },
+              { name: "Shabtis",               category: "Special" },
+              { name: "Shabti Archers",        category: "Special" },
+              { name: "Great Vultures",        category: "Special" },
+              { name: "Scarab Swarms",         category: "Special" },
+              { name: "Sand Stalkers",         category: "Special" },
+              { name: "Casket of Phatep",      category: "Special" },
+              { name: "Charnel Catapult",      category: "Special" },
+              { name: "Sand Scorpion",         category: "Entombed" },
+              { name: "Battle Sphinx",         category: "Mason's Menagerie" },
+              { name: "Dread Sphinx",          category: "Mason's Menagerie" },
+              { name: "Tomb Reapers",          category: "Mason's Menagerie" },
+              { name: "Colossus",              category: "Mason's Menagerie" },
+            ],
+            'VC': [
+              { name: "Lady Chryselie",                    category: "Characters" },
+              { name: "Lady Chrysélie",                    category: "Characters" },
+              { name: "The Collective of Varyag",          category: "Characters" },
+              { name: "The Collective of Varyag the Sainted", category: "Characters" },
+              { name: "Vampire Count",                     category: "Characters" },
+              { name: "Vampire Courtier",                  category: "Characters" },
+              { name: "Necromancer",                       category: "Characters" },
+              { name: "Barrow King",                       category: "Characters" },
+              { name: "Banshee",                           category: "Characters" },
+              { name: "Zombies",                           category: "Core" },
+              { name: "Skeletons",                         category: "Core" },
+              { name: "Ghouls",                            category: "Core" },
+              { name: "Bat Swarms",                        category: "Core" },
+              { name: "Dire Wolves",                       category: "Core" },
+              { name: "Great Bats",                        category: "Special" },
+              { name: "Ghasts",                            category: "Special" },
+              { name: "Barrow Guard",                      category: "Special" },
+              { name: "Barrow Knights",                    category: "Special" },
+              { name: "Cadaver Wagon",                     category: "Special" },
+              { name: "Dark Coach",                        category: "Special" },
+              { name: "Court of the Damned",               category: "Special" },
+              { name: "Altar of Undeath",                  category: "Special" },
+              { name: "Phantom Hosts",                     category: "The Suffering" },
+              { name: "Wraiths",                           category: "The Suffering" },
+              { name: "Spectral Hunters",                  category: "The Suffering" },
+              { name: "Vampire Knights",                   category: "Swift Death" },
+              { name: "Vampire Spawn",                     category: "Swift Death" },
+              { name: "Varkolak",                          category: "Swift Death" },
+              { name: "Winged Reapers",                    category: "Swift Death" },
+              { name: "Shrieking Horror",                  category: "Swift Death" },
+            ],
+            'VS': [
+              { name: "Professor Mauss",           category: "Characters" },
+              { name: "The Shadowslice Stalker",   category: "Characters" },
+              { name: "Ruinous Dictator",          category: "Characters" },
+              { name: "Vermin Senator",            category: "Characters" },
+              { name: "Bloodfur Legate",           category: "Characters" },
+              { name: "House Prefect",             category: "Characters" },
+              { name: "Swarm Priest",              category: "Characters" },
+              { name: "Duskblade Assassin",        category: "Characters" },
+              { name: "Vermin Slingers",           category: "Core" },
+              { name: "Vermin Legionaries",        category: "Core" },
+              { name: "Blackfur Veterans",         category: "Core" },
+              { name: "Vermin Slaves",             category: "Core" },
+              { name: "Plague Cultists",           category: "Core" },
+              { name: "Plague Disciples",          category: "Core" },
+              { name: "Giant Rats",                category: "Core" },
+              { name: "Fire Rats",                 category: "Special" },
+              { name: "Bloodfur Praetorians",      category: "Special" },
+              { name: "Rat Swarm",                 category: "Special" },
+              { name: "Vermin Brutes",             category: "Special" },
+              { name: "Gladiator Brutes",          category: "Special" },
+              { name: "Legionary Drill Team",      category: "Special" },
+              { name: "Shadowfur Stalkers",        category: "Special" },
+              { name: "Doomspark Device",          category: "Special" },
+              { name: "Thunder Brutes",            category: "Special" },
+              { name: "Ignifier Grenadiers",       category: "Special" },
+              { name: "Experimental Weapon Teams", category: "Special" },
+              { name: "Vermin Artillery",          category: "Special" },
+              { name: "Stygian Earthbreaker",      category: "Bread and Games" },
+              { name: "Dreadmill Chariots",        category: "Bread and Games" },
+              { name: "Arena Beast",               category: "Bread and Games" },
+            ],
+            'WDG': [
+              { name: "Klaas, the Giving",     category: "Characters" },
+              { name: "Joulgrim, the Giving",  category: "Characters" },
+              { name: "Ook, the Ape King",     category: "Characters" },
+              { name: "Mraven, the Chimerical",category: "Characters" },
+              { name: "Exalted Herald",        category: "Characters" },
+              { name: "Chosen Lord",           category: "Characters" },
+              { name: "Doomlord",              category: "Characters" },
+              { name: "Sorcerer",              category: "Characters" },
+              { name: "Barbarian Chief",       category: "Characters" },
+              { name: "Feldrak Ancestor",      category: "Characters" },
+              { name: "Warriors",              category: "Core" },
+              { name: "Fallen",                category: "Core" },
+              { name: "Barbarians",            category: "Core" },
+              { name: "Barbarian Horsemen",    category: "Core" },
+              { name: "Warhounds",             category: "Special" },
+              { name: "Warrior Knights",       category: "Special" },
+              { name: "Warrior Chariot",       category: "Special" },
+              { name: "Chosen",               category: "Special" },
+              { name: "Chosen Knights",        category: "Special" },
+              { name: "Chosen Chariot",        category: "Special" },
+              { name: "Chimera",               category: "Special" },
+              { name: "Wretched Ones",         category: "Special" },
+              { name: "Forsworn",              category: "Special" },
+              { name: "Feldraks",              category: "Special" },
+              { name: "Battleshrine",          category: "Special" },
+              { name: "Flayers",              category: "Special" },
+              { name: "Hellmaw",               category: "Special" },
+              { name: "Forsaken One",          category: "Special" },
+              { name: "Marauding Giant",       category: "Special" },
+              { name: "Supplement Marauding Giant", category: "Special" },
+              { name: "Feldrak Elder",         category: "Special" },
+            ],
+          };
+
+          const armyTableMap = {
+            'BH':  'bhUnitsTable',
+            'DE':  'deUnitsTable',
+            'DH':  'dhUnitsTable',
+            'DL':  'dlUnitsTable',
+            'EoS': 'eosUnitsTable',
+            'HE':  'heUnitsTable',
+            'ID':  'idUnitsTable',
+            'KoE': 'koeUnitsTable',
+            'OK':  'okUnitsTable',
+            'OnG': 'ongUnitsTable',
+            'SA':  'saUnitsTable',
+            'SE':  'seUnitsTable',
+            'UD':  'udUnitsTable',
+            'VC':  'vcUnitsTable',
+            'VS':  'vsUnitsTable',
+            'WDG': 'wdgUnitsTable',
+          };
+
+          Object.entries(allArmyUnitDefs).forEach(([armyCode, unitDefs]) => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            const numLists = army.listCount;
+            const unitMap = {};
+            (army.units || []).forEach(u => { unitMap[u.name] = u; });
+
+            let html = '';
+            let lastCat = null;
+            unitDefs.forEach(unitDef => {
+              if (unitDef.category !== lastCat) {
+                if (lastCat !== null) {
+                  html += '<tr class="army-units-separator"><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>';
+                }
+                lastCat = unitDef.category;
+              }
+              const u = unitMap[unitDef.name];
+              if (!u || !u.count) {
+                html += `<tr><td>${unitDef.category}</td><td>${unitDef.name}</td><td>0 %</td><td>0 %</td><td>0 %</td><td>0 %</td><td>0 %</td><td>0</td></tr>`;
+                return;
+              }
+              const counts = u.count;
+              const costs  = u.cost || [];
+              const total  = counts.reduce((s, c) => s + c, 0);
+              const pct    = n => Math.round(n / numLists * 100) + ' %';
+              html += `<tr>
+                <td>${unitDef.category}</td>
+                <td>${unitDef.name}</td>
+                <td>${Math.round(total / numLists * 100)} %</td>
+                <td>${pct(counts.filter(c => c === 1).length)}</td>
+                <td>${pct(counts.filter(c => c === 2).length)}</td>
+                <td>${pct(counts.filter(c => c === 3).length)}</td>
+                <td>${pct(counts.filter(c => c >= 4).length)}</td>
+                <td>${Math.round(costs.reduce((s, c) => s + c, 0) / numLists)}</td>
+              </tr>`;
+            });
+            $(`#${armyTableMap[armyCode]} tbody`).html(html);
+          });
+
+          // ── Special Items per army ────────────────────────────────────────
+          const commonItemCats = {
+            Weapon:   ["Vorpal Binding","King Slayer","Touch of Greatness","Giant Slayer"],
+            Armour:   ["Destiny's Call","Basalt Infusion","Warding of Unity"],
+            Shield:   ["Wild Warding"],
+            Artefact: ["Talisman of Shielding","Talisman of the Void","Magical Heirloom","Crown of the Wizard King","Mimic Cloak"],
+            Potion:   ["Binding Scroll","Potion of Power Preservation","Dragon's Brew","Potion of Swiftness"],
+            Banner:   ["Stalker's Standard","Sheltering Standard","Flaming Standard","Aether Icon"],
+          };
+          const sharedItemCats = {
+            Weapon:   {
+              "Eldritch Inscriptions":     ["he","ok","ong","sa","se","vc","vs"],
+              "Hero's Heart":              ["bh","de","eos","id","koe","ok","ud","wdg"],
+              "Shield Breaker":            ["de","id","koe","ok","ong","sa","wdg"],
+              "Supernatural Dexterity":    ["bh","de","he","se","vc","wdg"],
+            },
+            Armour: {
+              "Death Cheater":  ["bh","de","ok","ong","sa","vc","vs","wdg"],
+              "Ghostly Guard":  ["eos","he","id","koe","sa","se","ud","vc"],
+            },
+            Shield: {
+              "Dusk Forged":         ["eos","he","id","koe","sa","vc","wdg"],
+              "Sigil of Protection": ["eos","he","id","koe","wdg"],
+            },
+            Artefact: {
+              "Essence of a Free Mind":    ["eos","he","id","sa","se","ud","vc"],
+              "Mask of Mindless Violence": ["bh","de","ong","sa","vc","wdg"],
+              "Obsidian Rock":             ["he","id","sa","se","ud","vc","vs"],
+              "Rod of Battle":             ["he","ok","se","vc","vs","wdg"],
+            },
+            Potion: {
+              "Potion of Healing":      ["bh","de","koe","ok","ong","se","vs"],
+              "Scroll of Draining":     ["eos","koe","ok","ong","se","ud"],
+              "Scroll of Power":        ["bh","de","eos","he","ok","sa","ud","vs"],
+              "Spell Scroll":           ["bh","de","eos","id","ong","se","ud","vs","wdg"],
+              "Scroll of a Free Mind":  ["he","id","sa","vc"],
+            },
+            Banner: {
+              "Banner of Courage":    ["bh","de","id","koe","ok","ong","vs"],
+              "Banner of Speed":      ["bh","de","koe","ok","ong","ud","vc","vs","wdg"],
+              "Distortion Emblem":    ["bh","eos","he","koe","ong","ud","vs"],
+              "Rending Banner":       ["eos","id","sa","se"],
+            },
+          };
+          const armySpecificItems = {
+            BH:  { Weapon:["Hawthorne Curse","Ancestral Carvings","Fatal Folly","Twin Hungers"], Armour:["Aaghor's Affliction","Trickster's Cunning","Wild Form"], Shield:["Obscuring Fog"], Artefact:["Spirit Caller's Charm","Pillager Icon","Crown of Madness","Horn of Bragh","Eye of Dominance"], Potion:["Rain Augur Brew","Seed of the Dark Forest"], Banner:["Banner of the Wild Herd"] },
+            DE:  { Weapon:["Mastery of Slaughter","Height of Hubris","Lacerating Touch","Transcendence","Pride of Gar Daecos"], Armour:["Seal of the Republic"], Artefact:["Ceinran's Scales","Moithir's Mirror","Ring of the Obsidian Thrones","Ring of Obsidian Thrones"], Potion:["Beastmaster's Vial"], Banner:["Caedhren's Pennon","Banner of Urlain","Eye of the Gorgon"] },
+            DH:  { Weapon:["Rune of Destruction","Rune of Smashing","Rune of Quickening","Rune of Might","Rune of Penetration","Rune of Anger","Rune of Precision","Rune of Craftsmanship","Rune of Lightning","Rune of Fire","Rune of Returning"], Armour:["Rune of Steel","Rune of Resistance","Rune of Iron","Rune of Retribution","Rune of the Forge"], Artefact:["Rune of Denial","Rune of Devouring","Rune of Grounding","Rune of Harnessing","Rune of Channeling","Rune of Dragon's Breath","Rune of Readiness","Rune of Shielding","Rune of Courage","Rune of Storms","Rune of Kinship","Rune of Mining"], Banner:["Runic Standard of the Hold","Runic Standard of Swiftness","Runic Standard of Grudges","Runic Standard of Wisdom","Runic Standard of Dismay","Runic Standard of Steadiness","Runic Standard of the Anvil"] },
+            DL:  {},
+            EoS: { Weapon:["The Light of Sonnstahl","Hammer of Witches","Death Warrant"], Armour:["Imperial Seal","Blacksteel"], Shield:["Witchfire Guard","Shield of Volund"], Artefact:["Locket of Sunna","Winter Cloak","Exemplar's Flame","Ullor's Horn"], Potion:["Scroll of Conquest"], Banner:["War College Banner","Banner of Unity","Marksman's Pennant"] },
+            HE:  { Weapon:["Sliver of the Blazing Dawn","Nova Flare","Cadaron's Heartwood","Elemental Blade"], Armour:["Star Metal Alloy","Gleaming Robe","Protection of Dorac","Daemon's Bane"], Artefact:["Diadem of Protection","Amethyst Crystal","Book of Meladys"], Potion:["Scroll of the Pearl Throne"], Banner:["War Banner of Rymâ","Navigator's Banner","Banner of Becalming"] },
+            ID:  { Weapon:["Onyx Core","Flame of the East","Eye of the Bull"], Armour:["Blaze of Protection"], Shield:["Kadim Binding"], Artefact:["Breath of the Brass Bull","Ring of Desiccation","Tablet of Vezodinezh","Mask of Ages","Golden Idol of Shamut","Lugar's Dice"], Banner:["Banner of Shamut","Banner of the Twice-Branded","Their Master's Banner"] },
+            KoE: { Weapon:["Divine Judgement","Tristan's Resolve","Mortal Reminder","Uther's Mettle"], Armour:["Prayer Etched","Percival's Panoply"], Shield:["Fortress of Faith"], Artefact:["Sacred Chalice"], Potion:["Black Knight's Tonic"], Banner:["Relic Shroud","Oriflamme","Banner of Roland","Castellan's Crest","Lady's Favour"] },
+            OK:  { Weapon:["Khagadai's Legacy","Viper's Curse","Ritual Bloodletter","Heart-Ripper"], Armour:["Wrestler's Belt","Mammoth-Hide Cloak","Aurochs Resilience"], Artefact:["Lygur's Tongue","Yeti Furs","Rampager's Chain"], Banner:["Banner of the Gyengget","Pennant of the Great Grass Sky","Skull of Qenghet"] },
+            OnG: { Weapon:["Omen of the Apocalypse","Attack Gnasher"], Armour:["Tazrek's Guard"], Artefact:["Skull Fetish","Monster Munch","Pan of Protection Pinchin'","Troll Hide"], Potion:["Moon Shrooms","Gnasher Bait"], Banner:["Goga Cauldron"] },
+            SA:  { Weapon:["Glory of the Dawn Age","Alchemical Arrows","Serpent's Nest Charm"], Armour:["Vital Essence"], Artefact:["Ancient Plaque","Imbued Jade","Starfall Lodestone","Carved Tablet"], Potion:["Stampede Resonator Crystal","Te Aupouri Smokestone"], Banner:["Koru Stone","Obelisk of Collaboration"] },
+            SE:  { Weapon:["Bough of Wyscan","Hunter's Honour","Oaken Might","Spirit of the Whirlwind","Spirit Arrows"], Armour:["Shielding Bark"], Artefact:["Hail Shot","Mist Walker's Mirror","Horn of the Wild Hunt","Glyph of Amryl"], Potion:["Sacred Seeds","Song of Cenyrn"], Banner:["Banner of Deception","Predator Pennant","Banner of Silent Mist"] },
+            UD:  { Weapon:["Godslayer","Scourge of Kings"], Armour:["Jackal's Blessing","Sandstorm Cloak"], Shield:["Sun's Embrace"], Artefact:["Sacred Hourglass","Crown of the Pharaohs","Death Mask of Teput","Book of the Dead","Kherp Sceptre","Blessed Wrappings"], Potion:["Scroll of Desiccation"], Banner:["Icon of Reflection","Sigil of the Closed Gates","Banner of the Entombed"] },
+            VC:  { Weapon:["Reaper's Harvest","True Thirst"], Armour:["Legend of the Black King"], Artefact:["Necromantic Staff","Night's Crown","Hypnotic Pendant","Eternity Gem","Cursed Medallion"], Banner:["Black Standard of Zagvozd","Banner of Eldritch Might"] },
+            VS:  { Weapon:["Secrets of the Doom Blade","Storm Rocket","Rodentium Bullets","Swarm Master"], Armour:["Plague-Hermit's Blessing"], Artefact:["Crown of Hubris","Scepter of the Usurper","Darkstone Detonator","Tome of the Ratking","Tarina's Lyre"], Potion:["Favanite Powder","Potion of Rat Form"], Banner:["Sacred Aquila","Bell of the Deep Roads"] },
+            WDG: { Weapon:["Burning Portent","Symbol of Slaughter"], Armour:["Thrice-Forged","Gladiator's Spirit"], Artefact:["Veilgate Orb","Dark Familiar","Immortal Gauntlets","Lord of the Damned"], Potion:["Wyrd Stone"], Banner:["Zealots' Banner","Icon of the Infinite","Wasteland Torch"] },
+          };
+
+          const lc = s => s.toLowerCase().replace(/[^a-z0-9]/g,'');
+          const itemsKeyMap = {
+            BH:'bh', DE:'de', DH:'dh', DL:'dl', EoS:'eos', HE:'he', ID:'id', KoE:'koe',
+            OK:'ok', OnG:'ong', SA:'sa', SE:'se', UD:'ud', VC:'vc', VS:'vs', WDG:'wdg',
+          };
+          const optionsTableMap = {
+            BH:'bhOptionsTable', DE:'deOptionsTable', DH:'dhOptionsTable', DL:'dlOptionsTable',
+            EoS:'eosOptionsTable', HE:'heOptionsTable', ID:'idOptionsTable', KoE:'koeOptionsTable',
+            OK:'okOptionsTable', OnG:'ongOptionsTable', SA:'saOptionsTable', SE:'seOptionsTable',
+            UD:'udOptionsTable', VC:'vcOptionsTable', VS:'vsOptionsTable', WDG:'wdgOptionsTable',
+          };
+          const unitOptionsTableMap = {
+            BH:'bhUnitOptionsGrid', DE:'deUnitOptionsGrid', DH:'dhUnitOptionsGrid', DL:'dlUnitOptionsGrid',
+            EoS:'eosUnitOptionsGrid', HE:'heUnitOptionsGrid', ID:'idUnitOptionsGrid', KoE:'koeUnitOptionsGrid',
+            OK:'okUnitOptionsGrid', OnG:'ongUnitOptionsGrid', SA:'saUnitOptionsGrid', SE:'seUnitOptionsGrid',
+            UD:'udUnitOptionsGrid', VC:'vcUnitOptionsGrid', VS:'vsUnitOptionsGrid', WDG:'wdgUnitOptionsGrid',
+          };
+
+          const HIDE_CHARACTER_MAGIC_ITEMS = true;
+
+          const buildUnitOptionTable = (unitName, categoryMap, totalCount, modelData, unitCategory) => {
+            let rows = '';
+            if (modelData && modelData.models && modelData.models.length) {
+              const { models, min, max } = modelData;
+              const avg = (models.reduce((a, b) => a + b, 0) / models.length).toFixed(1);
+              const smallUntil = Math.floor(min + (max - min) / 4);
+              const mediumUntil = Math.floor(min + (max - min) * 2 / 3);
+              const smallPct = Math.round(models.filter(m => m <= smallUntil).length / models.length * 100);
+              const mediumPct = Math.round(models.filter(m => m > smallUntil && m <= mediumUntil).length / models.length * 100);
+              const largePct = Math.round(models.filter(m => m > mediumUntil).length / models.length * 100);
+              rows += `<tr><td>Unit Size</td><td>&#216; Average</td><td>${avg}</td></tr>`;
+              rows += `<tr><td>Unit Size</td><td>Small (${min}&ndash;${smallUntil})</td><td>${smallPct} %</td></tr>`;
+              rows += `<tr><td>Unit Size</td><td>Medium (${smallUntil + 1}&ndash;${mediumUntil})</td><td>${mediumPct} %</td></tr>`;
+              rows += `<tr><td>Unit Size</td><td>Large (${mediumUntil + 1}&ndash;${max})</td><td>${largePct} %</td></tr>`;
+            }
+            for (const [category, optionMap] of Object.entries(categoryMap || {})) {
+              if (HIDE_CHARACTER_MAGIC_ITEMS && unitCategory === 'Characters' && category === 'Magic Items') continue;
+              const optionRows = Object.entries(optionMap || {})
+                .map(([optionName, count]) => `<tr><td>${category}</td><td>${optionName}</td><td>${Math.round(count / totalCount * 100)} %</td></tr>`)
+                .join('');
+              if (!optionRows) continue;
+              rows += optionRows;
+            }
+            if (!rows) {
+              return '';
+            }
+            return `<div class="army-items-col army-unit-options-col"><h4 class="army-items-col-title">${unitName}</h4><table class="army-items-table"><thead><tr><th>Category</th><th>Option</th><th>%</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+          };
+
+          armyOrder.forEach(armyCode => {
+            const army = armiesData[armyCode];
+            if (!army) return;
+            const numLists = army.listCount;
+            const items = army.specialItems || {};
+            const armyKey = itemsKeyMap[armyCode];
+            const pfx = armyKey; // id prefix e.g. "bh"
+
+            // Helper: build rows for a flat item list (array of names)
+            const itemRows = (catMap, filterFn) => {
+              let html = '';
+              for (const [cat, entries] of Object.entries(catMap)) {
+                const names = Array.isArray(entries) ? entries : Object.keys(entries).filter(filterFn ? n => filterFn(entries[n]) : () => true);
+                names.forEach(name => {
+                  const count = items[name] || 0;
+                  const pct = Math.round(count / numLists * 100) + '%';
+                  html += `<tr><td>${cat}</td><td>${name}</td><td>${count} / ${pct}</td></tr>`;
+                });
+              }
+              return html;
+            };
+
+            // Common items — every army gets all common items
+            const commonHtml = itemRows(commonItemCats);
+            $(`#${pfx}ItemsCommonTable tbody`).html(commonHtml || '<tr><td colspan="3">—</td></tr>');
+
+            // Shared items — filter to this army
+            const sharedHtml = itemRows(sharedItemCats, armies => armies.includes(armyKey));
+            const sharedWrap = document.getElementById(`${pfx}ItemsSharedWrap`);
+            if (sharedWrap) {
+              $(`#${pfx}ItemsSharedTable tbody`).html(sharedHtml || '<tr><td colspan="3">—</td></tr>');
+              if (!sharedHtml) sharedWrap.style.visibility = 'hidden';
+            }
+
+            // Army-specific items
+            const armySpecific = armySpecificItems[armyCode] || {};
+            let specificHtml = '';
+            for (const [cat, nameList] of Object.entries(armySpecific)) {
+              (nameList || []).forEach(name => {
+                const count = items[name] || 0;
+                const pct = Math.round(count / numLists * 100) + '%';
+                specificHtml += `<tr><td>${cat}</td><td>${name}</td><td>${count} / ${pct}</td></tr>`;
+              });
+            }
+            const specificWrap = document.getElementById(`${pfx}ItemsSpecificWrap`);
+            if (specificWrap) {
+              $(`#${pfx}ItemsSpecificTable tbody`).html(specificHtml || '<tr><td colspan="3">—</td></tr>');
+              if (!specificHtml) specificWrap.style.visibility = 'hidden';
+            }
+
+            // Build army options table from flat armyOptions data
+            const flatOpts = army.armyOptions || {};
+            let optHtml = '';
+            for (const [name, count] of Object.entries(flatOpts)) {
+              const pct = Math.round(count / numLists * 100) + '%';
+              optHtml += `<tr><td>${name}</td><td>${count} / ${pct}</td></tr>`;
+            }
+            const optEl = document.getElementById(optionsTableMap[armyCode]);
+            if (optEl) {
+              optEl.querySelector('tbody').innerHTML = optHtml || '';
+              // Hide the whole options block if there are no options
+              if (!optHtml) optEl.closest('.army-options-block').style.display = 'none';
+            }
+
+            const unitOptionsEl = document.getElementById(unitOptionsTableMap[armyCode]);
+            if (unitOptionsEl) {
+              const unitOptionsHtml = (army.units || [])
+                .filter(unit => (unit.options && unit.count) || unit.models)
+                .map(unit => buildUnitOptionTable(unit.name, unit.options, unit.count ? unit.count.reduce((sum, count) => sum + count, 0) : 0, unit.models ? { models: unit.models, min: unit.min, max: unit.max } : null, unit.category))
+                .filter(Boolean)
+                .join('');
+              unitOptionsEl.innerHTML = unitOptionsHtml;
+            }
+          });
+
+        })
+        .fail(function (jqxhr, textStatus, error) {
+          console.log("Armies.json Request Failed: " + textStatus + ", " + error);
         });
     });
-</script>
-  <table>
-    <tr>
-      <th>Global Statistics</th>
-      <th>Amount</th>
-    </tr>
-    <tr>
-      <td>Tournaments</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <td>Games</td>
-      <td>...</td>
-    </tr>
-    <script>
-      $(document).ready(function () {
-        $.getJSON("../output/globalStats.json", function (data) {
-          let tournaments = `<tr><td>Tournaments</td><td>${data.tournamentsWithReports}</td></tr>`;
-          $('#table').append(tournaments);
-          let games = `<tr><td>Games</td><td>${data.games}</td></tr>`;
-          $('#table').append(games);
-        });
-      });
-    </script>
-  </table>
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- General Statistics Section -->
+    <div class="section-divider" onclick="toggleSection('generalStats')">
+      <h1 id="generalStats-header">▼ General Statistics</h1>
+    </div>
+    
+    <div class="two-column-layout" id="generalStats">
+      <div class="column">
+        <h2>T9A Data - Global Statistics</h2>
+        <table id="globalStatsTable">
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr>
+        </table>
+      </div>
+
+      <div class="column">
+        <h2>Game Wide Data</h2>
+        <table id="gameWideStatsTable">
+          <tr>
+            <th>Metric</th>
+            <th>Value</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Setup Statistics Section -->
+    <div class="section-divider" onclick="toggleSection('setupStats')">
+      <h1 id="setupStats-header">▼ Setup Statistics</h1>
+    </div>
+
+    <div class="two-column-layout" id="setupStats">
+      <div class="column">
+        <h2>Map Statistics</h2>
+        <table id="setupMapTable">
+          <tr>
+            <th>Map</th>
+            <th>Count</th>
+          </tr>
+        </table>
+
+        <h2>Deployment Statistics</h2>
+        <table id="setupDeploymentTable">
+          <tr>
+            <th>Deployment</th>
+            <th>Games played</th>
+            <th>1st turn ØPts</th>
+          </tr>
+        </table>
+      </div>
+
+      <div class="column">
+        <h2>Primary Objectives</h2>
+        <table id="setupPrimaryTable">
+          <tr>
+            <th>Primary Name</th>
+            <th>Count</th>
+            <th>Attacker</th>
+            <th>Defender</th>
+            <th>None</th>
+          </tr>
+        </table>
+
+        <h2>Secondary Objectives</h2>
+        <table id="setupSecondaryTable">
+          <tr>
+            <th>Secondary Name</th>
+            <th>Total</th>
+            <th>Achieved</th>
+            <th>Attacker</th>
+            <th>Defender</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- External Balance Section -->
+    <div class="section-divider" onclick="toggleSection('externalBalance')">
+      <h1 id="externalBalance-header">▼ External Balance</h1>
+    </div>
+
+    <div class="two-column-layout" id="externalBalance" style="display: flex;" data-display-mode="flex">
+      <div class="column" style="flex: 1; max-width: 100%;">
+        <h2>Army Results – Average Points per Match</h2>
+        <div style="overflow-x: auto;">
+          <table id="externalBalanceTable">
+            <thead>
+              <tr>
+                <th rowspan="2">ARMY</th>
+                <th rowspan="2">TOTAL</th>
+                <th rowspan="2">RANK</th>
+                <th colspan="16">Matchups</th>
+                <th colspan="2">Turn</th>
+                <th colspan="2">95% Confidence</th>
+              </tr>
+              <tr>
+                <th>BH</th>
+                <th>DE</th>
+                <th>DH</th>
+                <th>DL</th>
+                <th>EoS</th>
+                <th>HE</th>
+                <th>ID</th>
+                <th>KoE</th>
+                <th>OK</th>
+                <th>OnG</th>
+                <th>SA</th>
+                <th>SE</th>
+                <th>UD</th>
+                <th>VC</th>
+                <th>VS</th>
+                <th>WDG</th>
+                <th>1st</th>
+                <th>2nd</th>
+                <th>Low</th>
+                <th>High</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Army Results – Number of Games</h2>
+        <div style="overflow-x: auto;">
+          <table id="gamesCountTable">
+            <thead>
+              <tr>
+                <th rowspan="2">ARMY</th>
+                <th rowspan="2">TOTAL</th>
+                <th colspan="16">Matchups</th>
+              </tr>
+              <tr>
+                <th>BH</th>
+                <th>DE</th>
+                <th>DH</th>
+                <th>DL</th>
+                <th>EoS</th>
+                <th>HE</th>
+                <th>ID</th>
+                <th>KoE</th>
+                <th>OK</th>
+                <th>OnG</th>
+                <th>SA</th>
+                <th>SE</th>
+                <th>UD</th>
+                <th>VC</th>
+                <th>VS</th>
+                <th>WDG</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Army List Statistics Section -->
+    <div class="section-divider" onclick="toggleSection('armyListStats')">
+      <h1 id="armyListStats-header">▼ Army List Statistics</h1>
+    </div>
+
+    <div id="armyListStats" style="display: block;">
+
+      <div class="two-column-layout">
+        <div class="column">
+
+          <h2>Special Items – Global Pick Counts</h2>
+          <table id="specialItemsTable">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Item Name</th>
+                <th>#</th>
+                <th>%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be populated by JavaScript -->
+            </tbody>
+          </table>
+
+        </div>
+
+        <div class="column">
+
+          <h2>Amount of Core by Army</h2>
+          <table id="armyCoreTable">
+            <thead>
+              <tr>
+                <th>Army</th>
+                <th>Error</th>
+                <th>Min (&lt;5%)</th>
+                <th>5–15%</th>
+                <th>&gt;15%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be populated by JavaScript -->
+            </tbody>
+          </table>
+
+          <h2>Amount of Characters by Army</h2>
+          <table id="armyCharsTable">
+            <thead>
+              <tr>
+                <th>Army</th>
+                <th>0–10%</th>
+                <th>10–20%</th>
+                <th>20–30%</th>
+                <th>30%+</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be populated by JavaScript -->
+            </tbody>
+          </table>
+
+          <h2>Amount of Magic by Army</h2>
+          <table id="armyMagicTable">
+            <thead>
+              <tr>
+                <th>Army</th>
+                <th>0</th>
+                <th>1–4</th>
+                <th>5–9</th>
+                <th>10–12</th>
+                <th>13+</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data will be populated by JavaScript -->
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+      <h2>Models and Units by Army</h2>
+      <div style="overflow-x: auto;">
+        <table id="armyModelsTable">
+          <thead>
+            <tr>
+              <th rowspan="2">Army</th>
+              <th rowspan="2">Models</th>
+              <th rowspan="2">Units</th>
+              <th colspan="6">Models by Height</th>
+              <th colspan="3">Units by Type</th>
+            </tr>
+            <tr>
+              <th>0</th>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+              <th>Chars</th>
+              <th>RnF</th>
+              <th>Solo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- Beast Herds Section -->
+    <div class="section-divider" onclick="toggleSection('bhStats')">
+      <h1 id="bhStats-header">▶ Beast Herds</h1>
+    </div>
+    <div id="bhStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="bhUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">BH – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="bhItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="bhItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="bhItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="bhItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="bhItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="bhItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="bhOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="bhUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Daemon Legions Section -->
+    <div class="section-divider" onclick="toggleSection('dlStats')">
+      <h1 id="dlStats-header">▶ Daemon Legions</h1>
+    </div>
+    <div id="dlStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="dlUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">DL – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="dlItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="dlItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="dlItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="dlItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="dlItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="dlItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="dlOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="dlUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Dread Elves Section -->
+    <div class="section-divider" onclick="toggleSection('deStats')">
+      <h1 id="deStats-header">▶ Dread Elves</h1>
+    </div>
+    <div id="deStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="deUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">DE – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="deItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="deItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="deItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="deItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="deItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="deItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="deOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="deUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Dwarven Holds Section -->
+    <div class="section-divider" onclick="toggleSection('dhStats')">
+      <h1 id="dhStats-header">▶ Dwarven Holds</h1>
+    </div>
+    <div id="dhStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="dhUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">DH – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="dhItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="dhItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="dhItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="dhItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="dhItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="dhItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="dhOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="dhUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Empire of Sonnstahl Section -->
+    <div class="section-divider" onclick="toggleSection('eosStats')">
+      <h1 id="eosStats-header">▶ Empire of Sonnstahl</h1>
+    </div>
+    <div id="eosStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="eosUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">EoS – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="eosItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="eosItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="eosItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="eosItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="eosItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="eosItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="eosOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="eosUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Highborn Elves Section -->
+    <div class="section-divider" onclick="toggleSection('heStats')">
+      <h1 id="heStats-header">▶ Highborn Elves</h1>
+    </div>
+    <div id="heStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="heUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">HE – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="heItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="heItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="heItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="heItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="heItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="heItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="heOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="heUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Infernal Dwarves Section -->
+    <div class="section-divider" onclick="toggleSection('idStats')">
+      <h1 id="idStats-header">▶ Infernal Dwarves</h1>
+    </div>
+    <div id="idStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="idUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">ID – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="idItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="idItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="idItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="idItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="idItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="idItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="idOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="idUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Kingdom of Equitaine Section -->
+    <div class="section-divider" onclick="toggleSection('koeStats')">
+      <h1 id="koeStats-header">▶ Kingdom of Equitaine</h1>
+    </div>
+    <div id="koeStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="koeUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">KoE – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="koeItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="koeItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="koeItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="koeItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="koeItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="koeItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="koeOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="koeUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Ogre Khans Section -->
+    <div class="section-divider" onclick="toggleSection('okStats')">
+      <h1 id="okStats-header">▶ Ogre Khans</h1>
+    </div>
+    <div id="okStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="okUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">OK – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="okItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="okItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="okItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="okItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="okItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="okItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="okOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="okUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Orcs and Goblins Section -->
+    <div class="section-divider" onclick="toggleSection('ongStats')">
+      <h1 id="ongStats-header">▶ Orcs and Goblins</h1>
+    </div>
+    <div id="ongStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="ongUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">OnG – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="ongItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="ongItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="ongItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="ongItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="ongItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="ongItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="ongOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="ongUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Saurian Ancients Section -->
+    <div class="section-divider" onclick="toggleSection('saStats')">
+      <h1 id="saStats-header">▶ Saurian Ancients</h1>
+    </div>
+    <div id="saStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="saUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">SA – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="saItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="saItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="saItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="saItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="saItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="saItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="saOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="saUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Sylvan Elves Section -->
+    <div class="section-divider" onclick="toggleSection('seStats')">
+      <h1 id="seStats-header">▶ Sylvan Elves</h1>
+    </div>
+    <div id="seStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="seUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">SE – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="seItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="seItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="seItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="seItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="seItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="seItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="seOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="seUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Undying Dynasties Section -->
+    <div class="section-divider" onclick="toggleSection('udStats')">
+      <h1 id="udStats-header">▶ Undying Dynasties</h1>
+    </div>
+    <div id="udStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="udUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">UD – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="udItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="udItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="udItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="udItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="udItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="udItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="udOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="udUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Vampire Covenant Section -->
+    <div class="section-divider" onclick="toggleSection('vcStats')">
+      <h1 id="vcStats-header">▶ Vampire Covenant</h1>
+    </div>
+    <div id="vcStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="vcUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">VC – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="vcItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="vcItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="vcItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="vcItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="vcItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="vcItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="vcOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="vcUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Vermin Swarm Section -->
+    <div class="section-divider" onclick="toggleSection('vsStats')">
+      <h1 id="vsStats-header">▶ Vermin Swarm</h1>
+    </div>
+    <div id="vsStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="vsUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">VS – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="vsItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="vsItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="vsItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="vsItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="vsItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="vsItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="vsOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="vsUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+    <!-- Warriors of the Dark Gods Section -->
+    <div class="section-divider" onclick="toggleSection('wdgStats')">
+      <h1 id="wdgStats-header">▶ Warriors of the Dark Gods</h1>
+    </div>
+    <div id="wdgStats" style="display: none;">
+      <h3 class="army-subsection-title">Unit Pick Rates</h3>
+      <div style="overflow-x: auto; margin-bottom: 24px;">
+        <table id="wdgUnitsTable" class="army-units-table">
+          <thead><tr><th rowspan="2">Category</th><th rowspan="2">WDG – Units</th><th rowspan="2">Ø</th><th colspan="4">Duplication in lists</th><th rowspan="2">ØPts</th></tr><tr><th>1</th><th>2</th><th>3</th><th>4+</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <h3 class="army-subsection-title">Special Items</h3>
+      <div class="army-items-grid">
+        <div class="army-items-col" id="wdgItemsCommonWrap"><h4 class="army-items-col-title">Common Items</h4><table id="wdgItemsCommonTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="wdgItemsSharedWrap"><h4 class="army-items-col-title">Shared Items</h4><table id="wdgItemsSharedTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+        <div class="army-items-col" id="wdgItemsSpecificWrap"><h4 class="army-items-col-title">Army Specific Items</h4><table id="wdgItemsSpecificTable" class="army-items-table"><thead><tr><th>Cat.</th><th>Item</th><th># / %</th></tr></thead><tbody></tbody></table></div>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Army-Wide Options</h3>
+        <table id="wdgOptionsTable" class="army-items-table army-options-table">
+          <thead><tr><th>Option</th><th># / %</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="army-options-block">
+        <h3 class="army-subsection-title">Unit Options</h3>
+        <div id="wdgUnitOptionsGrid" class="army-items-grid army-unit-options-grid"></div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
 </html>
