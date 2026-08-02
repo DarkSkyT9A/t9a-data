@@ -397,10 +397,10 @@ body::before {
 
 /* ── Balance colour coding (dark-friendly, 5-state diverging scale) ─────────── */
 .balance-ok    { background-color: #0f2d1a !important; color: #4caf7d !important; }
-.balance-high1 { background-color: #2b1808 !important; color: #e8924a !important; }
-.balance-high2 { background-color: #2b0e0e !important; color: #e05c5c !important; }
-.balance-low1  { background-color: #082028 !important; color: #4abde8 !important; }
-.balance-low2  { background-color: #0a1e38 !important; color: #5a9fe0 !important; }
+.balance-high1 { background-color: #2b0f22 !important; color: #e87ab0 !important; } /* Pink  (10.5–10.9) */
+.balance-high2 { background-color: #1e0a2e !important; color: #b57bee !important; } /* Violet/Purple (>=11.0) */
+.balance-low1  { background-color: #2b1808 !important; color: #e8924a !important; } /* Orange (9.1–9.5) */
+.balance-low2  { background-color: #2b0e0e !important; color: #e05c5c !important; } /* Red (<=9.0) */
 
 /* ── Army section content wrapper ─────────────────────────────────────────── */
 [id$="Stats"]:not(#generalStats):not(#setupStats):not(#externalBalance):not(#armyListStats) {

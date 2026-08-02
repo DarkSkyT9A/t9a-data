@@ -246,9 +246,14 @@
             const rank = army.rank.trim();
             
             // Colour-code TOTAL based on distance from 10.0 (5-state diverging scale)
+            // >= 11.0 : Violet/Purple (balance-high2)
+            // 10.5–10.9 : Pink       (balance-high1)
+            // 9.6–10.4 : Green/OK    (balance-ok)
+            // 9.1–9.5  : Orange      (balance-low1)
+            // <= 9.0   : Red         (balance-low2)
             const totalClass = avgTotal >= 9.6 && avgTotal <= 10.4 ? 'balance-ok'
-                             : avgTotal >  10.4 && avgTotal <= 10.9 ? 'balance-high1'
-                             : avgTotal >  10.9                     ? 'balance-high2'
+                             : avgTotal >= 10.5 && avgTotal <  11.0 ? 'balance-high1'
+                             : avgTotal >= 11.0                     ? 'balance-high2'
                              : avgTotal >= 9.1  && avgTotal <  9.6  ? 'balance-low1'
                              :                                        'balance-low2';
 
