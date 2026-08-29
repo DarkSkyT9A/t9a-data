@@ -6,8 +6,26 @@ const { JWT } = require('google-auth-library');
 const { gmail, gPrivateKey } = require("./secrets.json");
 const armies = require("./output/armies.json");
 const armiesShort = [ "BH", "DE", "DH", "DL", "EoS", "ID", "HE", "KoE", "OK", "OnG", "SA", "SE", "UD", "VC", "VS", "WDG" ];
+// const armiesShort = [ 
+//   // "BH", 
+//   // "DE", 
+//   // "DH", 
+//   // "DL", 
+//   // "EoS", 
+//   // "ID", 
+//   // "HE", 
+//   // "KoE", 
+//   // "OK", 
+//   // "OnG", 
+//   // "SA", 
+//   // "SE", 
+//   // "UD", 
+//   // "VC", 
+//   // "VS", 
+//   // "WDG" 
+// ];
 const castValueCategory = [ "Hereditary", "Hereditary Spell", "Totems", "Battle Runes", "Blessings"];
-const prestigeClasses = [ "Honours", "Big Names", "Kindreds", "Aspect of Nature", "Ancestral Blood Powers", "Blood Powers"];
+const prestigeClasses = [ "Honours", "Big Names", "Kindreds", "Aspects of Nature", "Ancestral Blood Powers", "Blood Powers", "Howdah Devices"];
 const runicItemsCategory = [ "Runic Weapon Enchantments", "Runic Armour Enchantments", "Runic Banner Enchantments", "Runic Artefacts"];
 const manifestationsCategory = [ "Manifestations of Father Chaos", "Manifestations of Envy", "Manifestations of Gluttony", "Manifestations of Greed", "Manifestations of Lust", "Manifestations of Pride", "Manifestations of Sloth", "Manifestations of Wrath"];
 
@@ -51,15 +69,11 @@ async function doAsyncStuff() {
 
   // Iterate over Army Sheets
   for(let armyShort of armiesShort) {
-    // Activate to only deal with BH for now
-    if(armyShort == "DH") {
-      continue;
-    }
 
     const armySheet = doc.sheetsByTitle[armyShort];
     await armySheet.loadHeaderRow();
     console.log(armySheet.title);
-    console.log(JSON.stringify(armySheet.headerValues));
+    // console.log(JSON.stringify(armySheet.headerValues));
 
     const rows = await armySheet.getRows();
     await armySheet.loadCells();
@@ -98,13 +112,14 @@ async function doAsyncStuff() {
       }
       // Prestige Classes
       else if(prestigeClasses.includes(category)) {
-        console.log(`Prestige class ${category}`);
+        // console.log(`Prestige class ${category}`);
         let categoryId = toCamelCase(category);
         if(undefined === armyBaseFile.special[categoryId]) {
-          console.log(`Prestige Class: Could not find ${categoryId}`);
+          // console.log(`Prestige Class: Could not find ${categoryId}`);
         }
+        // console.log(`Find out what's wrong with ${categoryId} and ${entry}`);
         let points = Object.values(armyBaseFile.special[categoryId].elements).flat().find(item => item.name === entry).cost;
-        console.log(`Points from GDT file: ${points}`);
+        // console.log(`Points from GDT file: ${points}`);
         armySheet.getCell(rowNumber, 2).numberValue = points;
       }
       // Magic Item row
@@ -124,40 +139,29 @@ async function doAsyncStuff() {
         
         // Get price from GDT
         let id = toCamelCase(entry);
-        // TODO Workaround for bug
-        if(id === "blacksteel") {
-          id = "blackSteel";
-        }
         // console.log(id);
+        if(id === "blackSteel") {
+          id = "blacksteel";
+        }
         // console.log(JSON.stringify(Object.values(armyBaseFile.magicItems).flat().find(item => item.id === id), null, 4));
         let points = Object.values(armyBaseFile.magicItems).flat().find(item => item.id === id).cost;
-        console.log(`Points from GDT file: ${points}`);
-        // row.set("Points", points);
+        // console.log(`Points from GDT file: ${points}`);
         armySheet.getCell(rowNumber, 2).numberValue = points;
-        // Save row (don't do this anymore, only use cells)
-        // await row.save();
-        // await armySheet.saveUpdatedCells();
-
       }
       // Dwarven Runic Items
       else if(runicItemsCategory.includes(category)) {
-        let points = Object.values(armyBaseFile.special.runicSpecialItems.elements).flat().find(item => item.name === entry).cost;
-        console.log(`Points for Runic Item ${entry} from GDT file: ${points}`);
+        // Added toLowerCase because of errors in capitalization in source repo
+        let points = Object.values(armyBaseFile.special.runicSpecialItems.elements).flat().find(item => item.name.toLowerCase() === entry.toLowerCase()).cost;
+        // console.log(`Points for Runic Item ${entry} from GDT file: ${points}`);
         armySheet.getCell(rowNumber, 2).numberValue = points;
       }
       // Daemonic Manifestations
       else if(manifestationsCategory.includes(category)) {
         // TODO Consider switching to ID matching
         // Special case bug handling for Whipcrack Tail
-        let points;
-        if(entry === "Whipcrack Tail") {
-          points = Object.values(armyBaseFile.special.daemonicManifestations.elements).flat().find(item => item.id === "whipCrackTail").cost;
-        }
-        else {
-          points = Object.values(armyBaseFile.special.daemonicManifestations.elements).flat().find(item => item.id === toCamelCase(entry)).cost;
-        }
+        let points = Object.values(armyBaseFile.special.daemonicManifestations.elements).flat().find(item => item.id === toCamelCase(entry)).cost;
         // End of special bug handling Whipcrack Tail
-        console.log(`Points for Daemonic Manifestation ${entry} from GDT file: ${points}`);
+        // console.log(`Points for Daemonic Manifestation ${entry} from GDT file: ${points}`);
         armySheet.getCell(rowNumber, 2).numberValue = points;
       }
       else if(category === "Shared Items") {
@@ -176,12 +180,9 @@ async function doAsyncStuff() {
         // console.log(id);
         // console.log(JSON.stringify(Object.values(armyBaseFile.sharedMagicItems).flat().find(item => item.id === id), null, 4));
         let points = Object.values(armyBaseFile.sharedMagicItems).flat().find(item => item.id === id).cost;
-        console.log(`Points from GDT file: ${points}`);
+        // console.log(`Points from GDT file: ${points}`);
         // row.set("Points", points);
         armySheet.getCell(rowNumber, 2).numberValue = points;
-        // Save row
-        // await row.save();
-        // await armySheet.saveUpdatedCells();
       }
       else if(category) {
         // Make sure to not repeatedly read the same entry over and over
@@ -190,10 +191,18 @@ async function doAsyncStuff() {
           let unitId = toCamelCase(category);
           unitFile = require(`../GDT/books/armies/${armyShort.toLowerCase()}/units/${unitId}.json`);
           options = pluckOptionsRecursive(unitFile.options, null);
+          if(unitFile.special) {
+            let specialOptions = pluckOptionsRecursive(unitFile.special, null);
+            if(specialOptions) {
+              // console.log(specialOptions);
+              options = { ...options, ...specialOptions };
+            }
+          }
           // console.log(`options are: ${JSON.stringify(options, null, 4)}`);
         }
         // console.log(JSON.stringify(unitFile, null, 4));
-        let unitEntry = armies[armyShort].units.find(u => u.name == category);
+        // Deal with the fucking stupid â from Knights of Rymâ
+        let unitEntry = armies[armyShort].units.find(u => u.name.replaceAll("â", "a") == category);
         // TODO There are some options, that only differ in what is at the end inside a parenthesis. Write some new functionality which makes this possible
         let optionId = toCamelCase(entry);
         // console.log(`Option as camel case/ID is: ${optionId}`);
@@ -213,7 +222,7 @@ async function doAsyncStuff() {
           armySheet.getCell(rowNumber, 2).numberValue = options[optionId];
         }
         else {
-          console.log(`Did not find ${entry} as ${optionId}`);
+          // console.log(`Did not find ${entry} as ${optionId}`);
           // Try to find an option that fits this one with some extensions
           let alternateOption = fitsAnotherOption(options, optionId, category, entry);
           if(alternateOption) {
@@ -223,8 +232,8 @@ async function doAsyncStuff() {
         }
       }
     }
-    // TODO Temporarily disable
-    // await armySheet.saveUpdatedCells();
+    /******** Write everything **********/ // Comment out to prevent getting rate limited
+    await armySheet.saveUpdatedCells();
 
   }
 
@@ -312,6 +321,11 @@ function fitsAnotherOption(options, optionId, category, entry) {
       console.log(`Found partial match on ${key}`);
       return key;
     }
+  }
+
+  // Special case for Great Weapon and Elven Finesse
+  if(optionId === "greatWeaponAndElvenFinesse") {
+    return "gwAndElvenFinesse";
   }
   console.error(`\x1b[31mDid not find a match for: ${optionId} of ${category}-${entry}\x1b[0m`);
   return null;
