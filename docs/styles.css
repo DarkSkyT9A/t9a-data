@@ -254,6 +254,19 @@
   white-space: nowrap;
 }
 
+/* Secondary objectives table: columns 2–7 are all numeric value columns */
+#setupSecondaryTable td:nth-child(2),
+#setupSecondaryTable td:nth-child(3),
+#setupSecondaryTable td:nth-child(4),
+#setupSecondaryTable td:nth-child(5),
+#setupSecondaryTable td:nth-child(6),
+#setupSecondaryTable td:nth-child(7) {
+  background-color: #FFF8DC;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
 /* Special items table: first two columns label style, last two value style */
 #specialItemsTable td:nth-child(1),
 #specialItemsTable td:nth-child(2) {
@@ -352,16 +365,6 @@
 #armyMagicTable td:nth-child(3),
 #armyMagicTable td:nth-child(4),
 #armyMagicTable td:nth-child(5) {
-  background-color: #FFF8DC;
-  text-align: right;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
-}
-
-/* Special styling for numeric columns in 5-column secondary table */
-#setupSecondaryTable td:nth-child(2),
-#setupSecondaryTable td:nth-child(3),
-#setupSecondaryTable td:nth-child(4) {
   background-color: #FFF8DC;
   text-align: right;
   font-family: 'Courier New', Courier, monospace;

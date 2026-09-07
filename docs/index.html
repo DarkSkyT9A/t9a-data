@@ -150,30 +150,33 @@
             .filter(name => secondaryData[name])
             .map(name => [name, secondaryData[name]]);
           
-          // Build table rows with secondary name, total count, achieved %, attacker %, defender %
-          // Note: Each game has 2 secondary objectives (one for attacker, one for defender)
-          // So count represents total times chosen, but we divide by 2 for attacker/defender percentages
+          // Build table rows with secondary name, total, achieved %, chosen by attacker, achieved by attacker %, chosen by defender, achieved by defender %
           sortedSecondary.forEach(([secondaryName, stats]) => {
             const count = stats.count;
             const attackerWon = stats.attackerWon;
+            const attackerLost = stats.attackerLost;
             const defenderWon = stats.defenderWon;
+            const defenderLost = stats.defenderLost;
             const totalAchieved = attackerWon + defenderWon;
-            const gamesPlayed = count / 2; // Each game has 2 secondary objectives
+            const chosenByAttacker = attackerWon + attackerLost;
+            const chosenByDefender = defenderWon + defenderLost;
             
             const achievedPct = Math.round(totalAchieved / count * 100);
-            const attackerPct = Math.round(attackerWon / gamesPlayed * 100);
-            const defenderPct = Math.round(defenderWon / gamesPlayed * 100);
+            const attackerAchievedPct = Math.round(attackerWon / chosenByAttacker * 100);
+            const defenderAchievedPct = Math.round(defenderWon / chosenByDefender * 100);
             
             setupSecondaryHtml += `<tr>
               <td>${secondaryName}</td>
               <td>${count}</td>
               <td>${achievedPct}%</td>
-              <td>${attackerPct}%</td>
-              <td>${defenderPct}%</td>
+              <td>${chosenByAttacker}</td>
+              <td>${attackerAchievedPct}%</td>
+              <td>${chosenByDefender}</td>
+              <td>${defenderAchievedPct}%</td>
             </tr>`;
           });
           
-          $('#setupSecondaryTable').html('<tr><th>Secondary Name</th><th>Total</th><th>Achieved</th><th>Attacker</th><th>Defender</th></tr>' + setupSecondaryHtml);
+          $('#setupSecondaryTable').html('<tr><th>Secondary Name</th><th>Total</th><th>Achieved</th><th>Attacker</th><th>Achieved</th><th>Defender</th><th>Achieved</th></tr>' + setupSecondaryHtml);
 
           // Build special items table
           const specialItemCategories = [
@@ -1189,8 +1192,10 @@
             <th>Secondary Name</th>
             <th>Total</th>
             <th>Achieved</th>
-            <th>Attacker</th>
-            <th>Defender</th>
+            <th>Chosen by Attacker</th>
+            <th>Achieved by Attacker</th>
+            <th>Chosen by Defender</th>
+            <th>Achieved by Defender</th>
           </tr>
         </table>
       </div>

@@ -37,6 +37,12 @@ let setup = {
   "secondary": {}
 };
 
+// Prevent wrong type
+if(!["all", "team", "single"].includes(tournamentType)) {
+  console.error("Tournament type must be either: 'all', 'single' or 'team'");
+  process.exit(1);
+}
+
 let globalStats = {
   "tournamentsWithReports": [],
   "pointsFirstTurn": [],
@@ -1494,7 +1500,7 @@ function evaluateTournamentInclusion(metaData) {
     return false;
   }
   // Wrong type
-  if (tournamentType === "single" && metaData.type === 1 || tournamentType === "teams" && metaData.type === 0) {
+  if (tournamentType === "single" && metaData.type === 1 || tournamentType === "team" && metaData.type === 0) {
     return false;
   }
   // All good
