@@ -10,7 +10,7 @@ const { user, password } = require("./secrets.json");
 const setupMappings = require("./setupMappings.json");
 
 // Constants
-const DEFAULT_START_DATE = "2026-04-20";
+const DEFAULT_START_DATE = "2026-08-01";
 
 
 // Class Variables
