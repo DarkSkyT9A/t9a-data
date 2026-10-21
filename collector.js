@@ -103,7 +103,7 @@ let skippedGames = 0;
       // console.log(JSON.stringify(reportsResponse, null, 4));
       let reports = reportsResponse.body;
       // console.log(`# of Tournament reports for ${tournament.name} (${tournament._id}): ${reports.length}`);
-      for(let report of reports) {
+      for (let report of reports) {
         // console.log(report.id_match);
         // console.log(JSON.stringify(report, [ "first_turn", "type", "score", "setup", "scoring" ], 4));
         // console.log(JSON.stringify(report.first_turn, null, 4));
@@ -116,14 +116,14 @@ let skippedGames = 0;
         // Write to disc
         if (!fs.existsSync(`./data/${tournament._id}/report_${report.id_match}.json`)) {
           report = transformReport(report, tournament._id);
-          if(report) {
+          if (report) {
             fs.writeFileSync(`./data/${tournament._id}/report_${report.id_match}.json`, JSON.stringify(report, null, 4));
           }
         }
       }
     }
 
-    console.log(`°°°°°°°°° Skipped Games: ${skippedGames} °°°°°°°°°°°°°°` );
+    console.log(`°°°°°°°°° Skipped Games: ${skippedGames} °°°°°°°°°°°°°°`);
   } catch (error) {
     console.error("#### ERROR #####");
     console.error(error);
@@ -136,14 +136,14 @@ let skippedGames = 0;
 /** #################################################################################################################
  *          Transformation
  * #################################################################################################################
- */ 
+ */
 function transformReport(report, tournamentId) {
   // console.log(Object.keys(report));
   // console.log(JSON.stringify(report.score, null, 4));
   let r = {};
   // Check for whether or not to drop
   // Handshake game, do not count
-  if(report.handshake) {
+  if (report.handshake) {
     // console.error(`${tournamentId}/${report.id_match} - Handshake Game, skipping…`);
     skippedGames++;
     return undefined;
@@ -158,14 +158,14 @@ function transformReport(report, tournamentId) {
   // }
 
   // One of the armies is not identifyable
-  if(!report.players[0].id_book || !report.players[1].id_book) {
+  if (!report.players[0].id_book || !report.players[1].id_book) {
     // console.error(`${tournamentId}/report_${report.id_match}.json - Report does not contain armies: ${report.players[0].id_book} // ${report.players[1].id_book} `);
     skippedGames++;
     return undefined;
   }
 
   // No score
-  if(typeof report.score[0]?.BPObj !== "number" || typeof report.score[1].BPObj !== "number") {
+  if (typeof report.score[0]?.BPObj !== "number" || typeof report.score[1].BPObj !== "number") {
     // console.error(`${tournamentId}/report_${report.id_match}.json - Report does not contain a result: ${report.score[0]?.BPObj} // ${report.score[1].BPObj} `);
     skippedGames++;
     return undefined;
@@ -177,20 +177,20 @@ function transformReport(report, tournamentId) {
   // console.log(`${tournamentId}/report_${report.id_match}.json - First turn: ${report.first_turn}`);
   r.firstTurn = undefined !== report.first_turn ? report.first_turn : -1;
   // Primary Objective
-  if(report.score[0].Obj === 1) {
+  if (report.score[0].Obj === 1) {
     r.primary = 0;
-  } else if(report.score[1].Obj === 1) {
+  } else if (report.score[1].Obj === 1) {
     r.primary = 1;
   } else {
     r.primary = 2;
   }
   // Secondary Objective
-  if(report.score[0].Sec === 1 ) {
+  if (report.score[0].Sec === 1) {
     r.secondaryPlayerOne = true;
   } else {
     r.secondaryPlayerOne = false;
   }
-  if(report.score[1].Sec === 1 ) {
+  if (report.score[1].Sec === 1) {
     r.secondaryPlayerTwo = true;
   } else {
     r.secondaryPlayerTwo = false;
@@ -204,7 +204,7 @@ function transformReport(report, tournamentId) {
   r.scoreOne = report.score[0].BPObj;
   r.scoreTwo = report.score[1].BPObj;
 
-  if(20 !== r.scoreOne+r.scoreTwo) {
+  if (20 !== r.scoreOne + r.scoreTwo) {
     console.error(`### Faulty report, VP do not align to 20 ###: ${r.scoreOne} and ${r.scoreTwo} - ID: ${r.id}`);
   }
 
@@ -217,7 +217,9 @@ function transformReport(report, tournamentId) {
   r.armyTwo = getArmyStringForId(report.players[1].id_book, true);
 
   // Unidentified army
-  if(r.armyOne === "n/a" || r.armyTwo === "n/a") {
+  if (r.armyOne === "n/a" || r.armyTwo === "n/a") {
+    console.error(`${tournamentId}/report_${report.id_match}.json - Unknown army id_book, skipping: ${report.players[0].id_book} (${r.armyOne}) // ${report.players[1].id_book} (${r.armyTwo})`);
+    skippedGames++;
     return undefined;
   }
 
@@ -237,13 +239,13 @@ function transformReport(report, tournamentId) {
   };
 
   // console.log(report.players[0].report_list.exported_list);
-  if(report.players[0].report_list) {
+  if (report.players[0].report_list) {
     r.armyListOne = transformArmyList(report.players[0].report_list, r.armyOne);
   } else {
     // console.log(`${tournamentId}/${report.id_match} - has no report list for player one`);
   }
   // console.log(report.players[1].report_list.exported_list);
-  if(report.players[1].report_list) {
+  if (report.players[1].report_list) {
     r.armyListTwo = transformArmyList(report.players[1].report_list, r.armyTwo);
   } else {
     // console.log(`${tournamentId}/${report.id_match} - has no report list for player two`);
@@ -253,42 +255,65 @@ function transformReport(report, tournamentId) {
 }
 
 function getArmyStringForId(id, uppercase) {
-  id = parseInt(id);
-  switch(id) {
+  id = Number.parseInt(id);
+  switch (id) {
     case 2:
-    return uppercase ? "BH" : "bh";
+    case 1527085915:
+      return uppercase ? "BH" : "bh";
     case 3:
-    return uppercase ? "DE" : "de";
+    case 1896522192:
+      return uppercase ? "DE" : "de";
     case 4:
-    return uppercase ? "DH" : "dh";
+    case 3800518779:
+      return uppercase ? "DH" : "dh";
     case 5:
-    return uppercase ? "DL" : "dl";
+    case 1953676454:
+      return uppercase ? "DL" : "dl";
     case 6:
-    return uppercase ? "EoS" : "eos";
+    case 3914548341:
+      return uppercase ? "EoS" : "eos";
     case 7:
-    return uppercase ? "HE" : "he";
+    case 1251789909:
+      return uppercase ? "HE" : "he";
     case 8:
-    return uppercase ? "ID" : "id";
+    case 3294582246:
+      return uppercase ? "ID" : "id";
     case 9:
-    return uppercase ? "KoE" : "koe";
+    case 3373079562:
+      return uppercase ? "KoE" : "koe";
     case 11:
-    return uppercase ? "OK" : "ok";
+    case 3154261049:
+      return uppercase ? "OK" : "ok";
     case 12:
-    return uppercase ? "OnG" : "ong";
+    case 3306638320:
+      return uppercase ? "OnG" : "ong";
     case 13:
-    return uppercase ? "SA" : "sa";
+    case 3350949417:
+      return uppercase ? "SA" : "sa";
     case 14:
-    return uppercase ? "SE" : "se";
+    case 1955230460:
+      return uppercase ? "SE" : "se";
     case 15:
-    return uppercase ? "UD" : "ud";
+    case 3217994748:
+      return uppercase ? "UD" : "ud";
     case 16:
-    return uppercase ? "VC" : "vc";
+    case 441231364:
+      return uppercase ? "VC" : "vc";
     case 21:
-    return uppercase ? "VS" : "vs";
+    case 1114059776:
+      return uppercase ? "VS" : "vs";
     case 18:
-    return uppercase ? "WDG" : "wdg";
+    case 1876010461:
+      return uppercase ? "WDG" : "wdg";
+    // Homebrews
+    /*
+      case 20:
+        return uppercase ? "HG" : "hg";
+      case 25:
+        return uppercase ? "DF" : "df";
+    */
     default:
-    return "n/a";
+      return "n/a";
   }
 }
 
