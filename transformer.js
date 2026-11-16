@@ -6427,9 +6427,18 @@ function transformArmyList(input, army) {
                     // console.error(`~~ Exception Handling for faulty list ~~`);
                     // console.log(`Could not find unit entry for ${optionEntry.parentUnit}/${unitIndex} in ${JSON.stringify(r.units)}`);
                     let unitAmount = r.units.filter(u => u.name === optionEntry.parentUnit).length;
+                    // No such parent unit in the list (e.g. list-wide options with an empty parentUnit), or index ran out of range: cannot be resolved
+                    if (unitAmount === 0 || unitIndex < 0) {
+                        break;
+                    }
                     unitIndex = unitIndex - unitAmount;
                     // console.log(`now checking at index ${unitIndex}`);
                     unitEntry = r.units.find(u => u.name === optionEntry.parentUnit && u.index === unitIndex);
+                }
+
+                // Option cannot be attributed to any unit, ignore it
+                if (unitEntry === undefined) {
+                    continue;
                 }
 
                 // console.log(JSON.stringify(unitEntry, null, 4));
